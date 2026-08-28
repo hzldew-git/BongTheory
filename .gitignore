@@ -1,0 +1,17 @@
+/.lake/
+/.tmp-*/
+/tmp/
+/Scratch/
+/Scratch*.lean
+/BongTheory/
+*.olean
+*.ilean
+*.c
+*.o
+*.obj
+*.out
+*.tmp
+/declarations2009.txt
+/law_classes.txt
+/law_inventory_current.txt
+/remaining_interfaces.txt
