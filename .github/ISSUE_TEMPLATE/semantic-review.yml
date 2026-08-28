@@ -1,0 +1,58 @@
+name: Mathematical semantic review
+description: Record an independent paper-to-Lean theorem or definition review.
+title: "[semantic review] "
+labels: [semantic-review]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Review the frozen paper independently before comparing it with the
+        formal declaration. Compilation alone is not semantic confirmation.
+  - type: input
+    id: paper
+    attributes:
+      label: Paper and exact version
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Full repository commit
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Reviewer role and affiliation or public profile
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Results and definitions reviewed
+    validations:
+      required: true
+  - type: dropdown
+    id: decision
+    attributes:
+      label: Decision
+      options:
+        - VERIFIED_MATCH candidate
+        - Valid formal strengthening
+        - Partial or special-case formalization
+        - Semantic mismatch
+        - Insufficient evidence
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Assumptions, quantifiers, endpoints, normalizations, and evidence
+    validations:
+      required: true
+  - type: textarea
+    id: reservations
+    attributes:
+      label: Reservations, exclusions, and conflicts of interest
+    validations:
+      required: true

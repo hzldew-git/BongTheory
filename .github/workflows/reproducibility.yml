@@ -1,0 +1,71 @@
+name: Release reproducibility
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  clean-clone-build:
+    name: Clean clone (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 180
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Build without a GitHub project cache
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          auto-config: false
+          build: true
+          use-github-cache: false
+          use-mathlib-cache: true
+
+      - name: Run paper-specific audit modules
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $auditDir = Join-Path $env:RUNNER_TEMP 'bong-audit-logs'
+          New-Item -ItemType Directory -Force -Path $auditDir | Out-Null
+          $modules = @(
+            'BongTest/FinalPublicTheoremAudit.lean',
+            'BongTest/Beli2006Audit.lean',
+            'BongTest/Beli2009Audit.lean',
+            'BongTest/Beli2019Audit.lean'
+          )
+          foreach ($module in $modules) {
+            $name = [IO.Path]::GetFileNameWithoutExtension($module)
+            $log = Join-Path $auditDir ($name + '.log')
+            & lake env lean $module *> $log
+            if ($LASTEXITCODE -ne 0) {
+              Get-Content $log -Tail 200
+              exit $LASTEXITCODE
+            }
+          }
+
+      - name: Upload audit logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: audit-logs-${{ matrix.os }}
+          path: ${{ runner.temp }}/bong-audit-logs/*.log
+          if-no-files-found: error
+
+      - name: Verify exact clean worktree
+        shell: pwsh
+        run: |
+          $status = git status --porcelain
+          if ($status) {
+            $status
+            throw 'The checked revision modified tracked or untracked project files.'
+          }

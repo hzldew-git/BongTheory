@@ -1,0 +1,36 @@
+name: Clean-clone reproducibility report
+description: Record an independent build of an exact commit or release tag.
+title: "[reproducibility] "
+labels: [reproducibility]
+body:
+  - type: input
+    id: commit
+    attributes:
+      label: Full repository commit and tag
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Operating system and architecture
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Lean and Lake versions
+    validations:
+      required: true
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands and exit results
+      description: Include the protocol from REPRODUCING.md and final git status.
+    validations:
+      required: true
+  - type: textarea
+    id: failures
+    attributes:
+      label: Warnings, failures, or environmental deviations
+    validations:
+      required: true
