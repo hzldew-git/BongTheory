@@ -1,9 +1,11 @@
 # Reproducibility report
 
-The formal baseline built successfully with 5,555 jobs. Both
-`BongTest/Beli2009Audit.lean` and `BongTest/FinalPublicTheoremAudit.lean`
-completed with exit status zero in the development checkout.
+The formal baseline built successfully with 5,555 jobs.  A separate clone of
+commit `ee826e7a8e67dda053563c01e027b2379bd68e6f` rebuilt the complete default
+target from source.  `BongTest/Beli2009Audit.lean` and
+`BongTest/FinalPublicTheoremAudit.lean` then completed with exit status zero;
+the former printed 65 axiom reports.
 
-Status at packet creation: `PARTIALLY_REPRODUCIBLE`, pending the shared final
-clean-clone receipt and remote CI. The paper PDF is provenance material and is
-not a build dependency.
+Local status: `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES`.
+Cross-platform GitHub CI remains pending.  The paper PDF is provenance
+material and is not a build dependency.

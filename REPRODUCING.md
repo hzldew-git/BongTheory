@@ -6,6 +6,8 @@
 - mathlib and transitive packages: pinned by `lake-manifest.json`.
 - Formal proof-and-test baseline: commit
   `10e8c666bfda81dcac44332cd38f481d8d02e31a`.
+- Audited release-candidate code and CI commit:
+  `ee826e7a8e67dda053563c01e027b2379bd68e6f`.
 - Supported build entry points: `Bong` and `BongTest`.
 
 No paper PDF, generated proof file, environment variable, Mathematica
@@ -22,10 +24,25 @@ git checkout <release-tag-or-full-commit>
 lake exe cache get
 lake build
 lake env lean BongTest/FinalPublicTheoremAudit.lean
+lake env lean BongTest/Beli2006Audit.lean
 lake env lean BongTest/Beli2009Audit.lean
 lake env lean BongTest/Beli2019Audit.lean
 git status --porcelain
 ```
+
+`lake exe cache get` is an optimization, not a trust assumption.  If the
+binary cache is unavailable, let Lake build the pinned dependencies from
+source.  On memory-constrained Windows hosts, use a process-local setting
+before the build:
+
+```powershell
+$env:LEAN_NUM_THREADS = '4'
+lake --log-level=error build
+```
+
+The audited Windows run used that setting after an unbounded-concurrency
+attempt exhausted memory.  It completed from source with 5,555 jobs and did
+not copy any project build artifact from the development checkout.
 
 Success requires all commands to exit with status zero and the last command to
 produce no output. The default build currently contains 5,555 Lake jobs.
@@ -43,6 +60,9 @@ Quot.sound
 The GitHub workflows repeat this protocol from a fresh runner. The local
 clean-clone receipt records the exact operating system, tool versions, commit,
 commands, exit codes, and final worktree status.
+
+The current local receipt is
+[`docs/reproducibility/clean-clone-ee826e7.md`](docs/reproducibility/clean-clone-ee826e7.md).
 
 ## Failure reporting
 

@@ -7,7 +7,8 @@
 - `PROVISIONAL_MATCH`: 3.
 - Partial or mismatched core results: 0 found.
 - Trust boundary: complete proof terms; standard Lean axioms only.
-- Reproducibility: pending final clean-clone receipt when this packet was written.
+- Reproducibility: committed Windows clean-clone source build and focused
+  audit passed; cross-platform GitHub CI remains pending.
 - Project-level grade contribution: B.
 
 Safe claim: Lean accepts project-law-free formal counterparts of the three

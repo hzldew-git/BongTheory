@@ -38,9 +38,10 @@ Current project grade: **B**.
 
 The grade is not A because no independent mathematical reviewer has yet
 confirmed every source-to-Lean quantifier, endpoint convention, and
-normalization, and no clean-clone build from a committed project revision has
-been demonstrated.  The former `FORMALIZATION_WEAKER`, grade-C verdict no
-longer describes the current theorem signatures.
+normalization.  A committed clean-clone build has now been demonstrated, but
+technical reproducibility cannot replace that human semantic decision.  The
+former `FORMALIZATION_WEAKER`, grade-C verdict no longer describes the current
+theorem signatures.
 
 ## Meaning of the field boundary
 
@@ -186,36 +187,48 @@ logical axioms.
 
 ## Build and reproducibility
 
-The verification commands are:
+The release-candidate verification commands are:
 
 ```powershell
 lake --log-level=error build
 lake env lean BongTest\FinalPublicTheoremAudit.lean
+lake env lean BongTest\Beli2006Audit.lean
 lake env lean BongTest\Beli2009Audit.lean
 lake env lean BongTest\Beli2019Audit.lean
 ```
 
-All four commands completed successfully in the audited local working tree.
-The final default run reported:
+All five commands completed successfully in a separate clone of committed
+revision `ee826e7a8e67dda053563c01e027b2379bd68e6f`.  The clone initially had
+no `.lake` directory.  The official binary cache was unavailable, so the
+dependency and project artifacts used by the successful run were generated
+from the pinned sources.  The final default run reported:
 
 ```text
 Build completed successfully (5555 jobs).
 ```
 
-The default build includes both the `Bong` and `BongTest` targets.  An earlier
-high-concurrency run in the same session produced transient Windows file-read
-errors and `std::bad_alloc` failures in 20 old smoke-test modules.  Each of
-those 20 targets then built successfully in a sequential loop, and the exact
-default command above succeeded on the next run.  No Lean source change was
-needed to repair those failures.
+The default build includes both the `Bong` and `BongTest` targets.  An initial
+source-build attempt used effectively unbounded Lake runtime concurrency and
+eventually produced Windows file-read, access-violation, and `std::bad_alloc`
+failures.  It was stopped without deleting the artifacts already generated in
+that clean clone.  A retry with process-local `LEAN_NUM_THREADS=4` rebuilt the
+failed modules and completed all 5,555 jobs without a Lean error.  In
+particular, the three modules that failed during the first attempt have
+explicit successful build records in the retry log.  No Lean source change
+was needed.
 
-Reproducibility status: **`PARTIALLY_REPRODUCIBLE`**.
+The four focused audit modules then exited zero.  They contain 18 final-public,
+2 Beli 2006, 65 Beli 2009, and 555 Beli 2019 axiom reports respectively, with
+no forbidden placeholder or unknown-declaration marker.  The final
+`git status --porcelain` output was empty.
 
-The Lake manifest pins the dependency revisions and the formal snapshot hash
-identifies the checked inputs.  However, the root `master` branch is unborn,
-all project files are untracked, and the cached mathlib, aesop, and batteries
-worktrees contain Windows-side local changes or damaged Git metadata.  A
-fresh clone from a repository commit has therefore not been tested.
+Local reproducibility status:
+**`REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES`**.
+
+The dependency sources remain external network inputs pinned by
+`lake-manifest.json`; cross-platform GitHub CI is pending the first public
+repository run.  The complete receipt and log hashes are recorded in
+`docs/reproducibility/clean-clone-ee826e7.md`.
 
 ## Precise completion claim
 
@@ -228,5 +241,6 @@ The justified claim is:
 > provisional pending independent mathematical sign-off.
 
 This audit does not claim that Lean has independently validated the prose of
-the papers, that every source item has received independent human review, or
-that the current uncommitted working tree is clean-clone reproducible.
+the papers or that every source item has received independent human review.
+It also does not claim cross-platform CI success before the public workflow
+runs are identified.

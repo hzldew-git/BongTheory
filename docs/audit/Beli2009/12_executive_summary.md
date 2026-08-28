@@ -6,7 +6,8 @@
 - `VERIFIED_MATCH`: 0; `PROVISIONAL_MATCH`: 3 core groups.
 - Numbered/formalized results with axiom reports: 65.
 - Trust: standard Lean axioms only; no public law/data boundary.
-- Reproducibility: pending final clean-clone receipt when written.
+- Reproducibility: committed Windows clean-clone source build and 2009 audit
+  passed; cross-platform GitHub CI remains pending.
 - Grade contribution: B.
 
 Safe claim: the mapped paper results have complete, project-law-free Lean

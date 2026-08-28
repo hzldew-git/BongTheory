@@ -1,9 +1,12 @@
 # Reproducibility report
 
 The development checkout built successfully at baseline commit
-`10e8c666bfda81dcac44332cd38f481d8d02e31a`; the default build reported 5,555
-jobs. The final release-candidate clean-clone result is recorded in the shared
-reproducibility receipt and CI, not inferred from this development cache.
+`10e8c666bfda81dcac44332cd38f481d8d02e31a`.  A separate clone of committed
+revision `ee826e7a8e67dda053563c01e027b2379bd68e6f`, initially containing no
+`.lake` directory, then completed a source build with 5,555 jobs.  The final
+public-theorem audit exited zero in that clone.
 
-Status at creation of this packet: `PARTIALLY_REPRODUCIBLE`, pending the final
-committed clean-clone run. See `REPRODUCING.md` for the exact protocol.
+Local status: `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES`.
+Cross-platform GitHub CI remains pending.  See `REPRODUCING.md` and
+`docs/reproducibility/clean-clone-ee826e7.md` for the exact protocol and
+receipt.

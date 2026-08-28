@@ -2,7 +2,9 @@
 
 > Current-scope notice (29 August 2026): the original comparison was made
 > against the 15 August working-tree snapshot. The formal proof-and-test
-> baseline is now commit `10e8c666bfda81dcac44332cd38f481d8d02e31a`.
+> baseline is now commit `10e8c666bfda81dcac44332cd38f481d8d02e31a`,
+> and the committed-source reproducibility run audits release-candidate
+> code/CI commit `ee826e7a8e67dda053563c01e027b2379bd68e6f`.
 > Reports `03`, `05`, `06`, `08`, `09`, and `11`--`14` retain explicitly
 > marked historical stages; report `15` and the current review cards record
 > complete local-law discharge and the remaining human-review boundary.
@@ -14,7 +16,8 @@
 - PDF SHA-256: `1669C626A6D01AF297E07C2CB9584C5BD34F4CEE0F2B188EE0B351BD091C387C`.
 - TeX SHA-256: `00D58B232A331E559D175C2DF383DE82A49BC7B044E035092B7AC96015858292`.
 - Formal project: `BongTheory`, formal baseline commit
-  `10e8c666bfda81dcac44332cd38f481d8d02e31a` on `main`.
+  `10e8c666bfda81dcac44332cd38f481d8d02e31a` on `main`; clean-clone commit
+  `ee826e7a8e67dda053563c01e027b2379bd68e6f`.
 - Principal Lean declarations:
   - `Bong.beli2019Theorem21`;
   - `Bong.beli2019Theorem21_prime`;

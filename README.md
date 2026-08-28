@@ -12,7 +12,10 @@ results are four papers by Constantin N. Beli published or circulated in 2003,
   and `Quot.sound`.
 - Semantic-fidelity status: `PROVISIONAL_MATCH`.
 - Project grade: B.
-- Reproducibility status: pending the release-candidate clean-clone audit.
+- Local reproducibility status:
+  `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES` at commit
+  `ee826e7a8e67dda053563c01e027b2379bd68e6f`.
+- Cross-platform CI status: pending the first public GitHub runs.
 
 Compilation is evidence that Lean accepts the encoded statements.  It is not,
 by itself, evidence that every paper statement has been translated faithfully.
@@ -43,12 +46,14 @@ dependencies in [`lake-manifest.json`](lake-manifest.json).
 lake exe cache get
 lake build
 lake env lean BongTest/FinalPublicTheoremAudit.lean
+lake env lean BongTest/Beli2006Audit.lean
 lake env lean BongTest/Beli2009Audit.lean
 lake env lean BongTest/Beli2019Audit.lean
 ```
 
 For the complete clean-clone protocol and expected output, see
-[`REPRODUCING.md`](REPRODUCING.md).
+[`REPRODUCING.md`](REPRODUCING.md).  The audited Windows source-rebuild receipt
+is [`docs/reproducibility/clean-clone-ee826e7.md`](docs/reproducibility/clean-clone-ee826e7.md).
 
 ## Repository layout
 

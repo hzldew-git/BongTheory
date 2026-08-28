@@ -2,7 +2,9 @@
 
 > Historical snapshot notice (28 August 2026): this report records the M660
 > build.  The current build and snapshot identifiers are in
-> `15_unconditional_completion_audit.md`; reproducibility remains partial.
+> `15_unconditional_completion_audit.md`.  The later committed clean-clone
+> result is in `../../reproducibility/clean-clone-ee826e7.md`; the historical
+> result below is intentionally unchanged.
 
 ## Result
 

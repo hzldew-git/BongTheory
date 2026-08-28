@@ -6,7 +6,8 @@
 - `VERIFIED_MATCH`: 0; `PROVISIONAL_MATCH`: 2; partial/mismatch: 0 found.
 - Trust boundary: complete proof terms and standard Lean axioms only.
 - Proof provenance: 2009 classification and 2019 v2 representation routes.
-- Reproducibility: pending final clean-clone receipt when written.
+- Reproducibility: committed Windows clean-clone source build and 2006 audit
+  passed; cross-platform GitHub CI remains pending.
 - Grade contribution: B.
 
 It is safe to claim that Lean accepts the two project-law-free announcement
