@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79EvenSecondaryInterior
+
+#check Bong.BONG.GoodBONG.lemma79_even_secondaryPrefix_le_add_two_of_leftAlpha
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_left_secondary
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_left_secondary
+
+#print axioms Bong.BONG.GoodBONG.lemma79_even_secondaryPrefix_le_add_two_of_leftAlpha
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_left_secondary
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_left_secondary

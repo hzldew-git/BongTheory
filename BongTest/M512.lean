@@ -1,0 +1,21 @@
+import Bong.Bong.Beli2019Lemma79RightTailParity
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check caseEight_modEq_two_of_add_two_eq
+#check caseEight_comparisonPrefix_parity_dichotomy
+#check caseEight_prefixSum_modEq_comparison_of_strict_defect
+#check beli2019Lemma79_typeI_caseEight_prefix_modEq
+#check beli2019Lemma79_typeII_caseEight_prefix_modEq
+#check beli2019Lemma79_typeIII_caseEight_prefix_modEq
+
+#print axioms caseEight_prefixSum_modEq_comparison_of_strict_defect
+#print axioms beli2019Lemma79_typeI_caseEight_prefix_modEq
+#print axioms beli2019Lemma79_typeII_caseEight_prefix_modEq
+#print axioms beli2019Lemma79_typeIII_caseEight_prefix_modEq
+
+end BONG.GoodBONG
+
+end Bong

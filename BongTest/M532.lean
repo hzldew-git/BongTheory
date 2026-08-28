@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapOneComparison
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check last_entry_ge_reference_add_one_of_even_prefix_odd
+#check last_entry_ge_reference_add_one_of_odd_prefix_modEq
+
+#print axioms last_entry_ge_reference_add_one_of_even_prefix_odd
+#print axioms last_entry_ge_reference_add_one_of_odd_prefix_modEq
+
+end BONG.GoodBONG
+
+end Bong

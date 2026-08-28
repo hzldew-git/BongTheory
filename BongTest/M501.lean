@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityTypeIIIDomination
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check exists_even_domination_order_bound_through_next
+#check exists_even_capped_domination_order_bound_through_next
+
+#print axioms exists_even_domination_order_bound_through_next
+#print axioms exists_even_capped_domination_order_bound_through_next
+
+end BONG.GoodBONG
+
+end Bong

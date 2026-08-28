@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79EvenTargetDomination
+
+#check Bong.BONG.GoodBONG.lemma79_even_targetDefect_of_sourceNext_le
+#check Bong.BONG.GoodBONG.lemma79_even_targetDefect_or_exists_lowWitness
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetDefect_or_exists_lowWitness

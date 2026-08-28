@@ -1,0 +1,8 @@
+import Bong.Bong.Beli2019Lemma79RightTailSource
+
+#check Bong.BONG.GoodBONG.truncatedPrefixDefect_le_source_of_rightAlpha
+#check Bong.BONG.GoodBONG.lemma79_rightTail_halfGap_eq_sourceHalfGap
+#check Bong.BONG.GoodBONG.lemma79_rightTail_primary_le_sourcePrimary
+#check Bong.BONG.GoodBONG.lemma79_rightTail_secondary_le_sourceSecondary
+#check Bong.BONG.GoodBONG.lemma79_rightTail_alpha_le_sourceAlpha
+#print axioms Bong.BONG.GoodBONG.lemma79_rightTail_alpha_le_sourceAlpha

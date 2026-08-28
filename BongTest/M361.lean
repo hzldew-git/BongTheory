@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Proposition62EqualRank
+
+#check Bong.BONG.GoodBONG.weightSequence_eq_reverseNegate_of_orders_alpha
+#check Bong.BONG.GoodBONG.weightSequence_le_of_representationConditions
+
+#print axioms Bong.BONG.GoodBONG.weightSequence_eq_reverseNegate_of_orders_alpha
+#print axioms Bong.BONG.GoodBONG.weightSequence_le_of_representationConditions

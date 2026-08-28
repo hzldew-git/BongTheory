@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoEndpointWeight
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check CaseEightStrictBetaTailConsequences.targetAlpha_add_threeHalves_le_source
+#check CaseEightStrictBetaTailConsequences.endpointEvenWeight_le_add_half
+#check beli2019Lemma79_typeI_caseEight_terminalRightNeighbor
+
+#print axioms CaseEightStrictBetaTailConsequences.targetAlpha_add_threeHalves_le_source
+#print axioms CaseEightStrictBetaTailConsequences.endpointEvenWeight_le_add_half
+#print axioms beli2019Lemma79_typeI_caseEight_terminalRightNeighbor
+
+end BONG.GoodBONG
+
+end Bong

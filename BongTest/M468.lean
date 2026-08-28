@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma76TypeICentralComplete
+
+#check Bong.BONG.GoodBONG.beli2019Lemma76_typeI_central_sourceCapped_complete
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma76_typeI_central_sourceCapped_complete

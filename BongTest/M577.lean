@@ -1,0 +1,14 @@
+/- M577 audit: strict even comparison-prefix transport. -/
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoEvenComparison
+
+namespace Bong
+namespace BONG.GoodBONG
+
+#check truncatedPrefixDefect_comparisonSelf_eq_of_sourceSelf_lt_mixed
+#check beli2019Lemma79_typeI_caseEight_gapTwo_even_comparisonPrefixDefect
+
+#print axioms truncatedPrefixDefect_comparisonSelf_eq_of_sourceSelf_lt_mixed
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_even_comparisonPrefixDefect
+
+end BONG.GoodBONG
+end Bong

@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79OrderTypeIIMiddle
+
+#check Bong.BONG.GoodBONG.beli2019Lemma79_i_typeII_constantMiddle
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_i_typeII_constantMiddle

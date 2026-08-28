@@ -1,0 +1,19 @@
+import Bong.Bong.Beli2019RepresentationTargetHalfGap
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check representationAlpha_le_targetHalfGap_of_compare
+#check representationAlpha_le_targetHalfGap_of_orderCondition
+#check representationAlpha_le_zero_of_targetAlpha_eq_zero
+#check lemma79_caseSix_of_gamma_eq_zero_and_compare
+
+#print axioms representationAlpha_le_targetHalfGap_of_compare
+#print axioms representationAlpha_le_targetHalfGap_of_orderCondition
+#print axioms representationAlpha_le_zero_of_targetAlpha_eq_zero
+#print axioms lemma79_caseSix_of_gamma_eq_zero_and_compare
+
+end BONG.GoodBONG
+
+end Bong

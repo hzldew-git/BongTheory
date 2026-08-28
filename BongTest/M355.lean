@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Proposition62PreviousPrimary
+
+#check Bong.BONG.GoodBONG.representationAlpha_previous_eq_primary
+
+#print axioms Bong.BONG.GoodBONG.representationAlpha_previous_eq_primary

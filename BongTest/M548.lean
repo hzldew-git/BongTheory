@@ -1,0 +1,13 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoPrefixStrict
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_gapTwo_targetPrefix_gt_central
+
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_targetPrefix_gt_central
+
+end BONG.GoodBONG
+
+end Bong

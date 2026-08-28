@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79EvenAlphaShiftLeftOuter
+
+#check Bong.BONG.GoodBONG.lemma79_even_alphaShift_of_noGap_leftOuter
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_left_alphaShift
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_left_alphaShift
+
+#print axioms Bong.BONG.GoodBONG.lemma79_even_alphaShift_of_noGap_leftOuter
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_left_alphaShift
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_left_alphaShift

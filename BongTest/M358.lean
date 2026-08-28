@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Proposition62EvenFirst
+
+#check Bong.BONG.GoodBONG.representationWeightEvenDirect_of_first
+
+#print axioms Bong.BONG.GoodBONG.representationWeightEvenDirect_of_first

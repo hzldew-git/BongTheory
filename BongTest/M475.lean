@@ -1,0 +1,8 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeITargetNonintegralAlpha
+
+namespace Bong.BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_central_even_target_of_previousAlpha_not_integral
+#print axioms beli2019Lemma79_typeI_central_even_target_of_previousAlpha_not_integral
+
+end Bong.BONG.GoodBONG

@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019RepresentationSourceHalfGap
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check representationAlpha_le_sourceHalfGap_of_orderCondition
+#check representationAlphaValue_le_sourceHalfGapValue_of_orderCondition
+#check representationAlphaValue_le_sourceAlpha_of_attainsHalfGap
+
+#print axioms representationAlpha_le_sourceHalfGap_of_orderCondition
+#print axioms representationAlphaValue_le_sourceHalfGapValue_of_orderCondition
+#print axioms representationAlphaValue_le_sourceAlpha_of_attainsHalfGap
+
+end BONG.GoodBONG
+
+end Bong

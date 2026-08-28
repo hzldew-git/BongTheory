@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapOneParity
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check signed_shifted_prefixProduct_order_odd_of_sum_odd
+#check caseEight_gapOne_comparisonAlpha_evidence_of_prefix_odd
+#check caseEight_gapOne_evidence_of_prefix_parity
+
+#print axioms signed_shifted_prefixProduct_order_odd_of_sum_odd
+#print axioms caseEight_gapOne_comparisonAlpha_evidence_of_prefix_odd
+#print axioms caseEight_gapOne_evidence_of_prefix_parity
+
+end BONG.GoodBONG
+
+end Bong

@@ -1,0 +1,19 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityTypeIIIProfile
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeIII_caseSix_thirdPrevious_modEq_sourceLeft
+#check beli2019Lemma79_typeIII_caseSix_sourceLeft_add_two_le_thirdPrevious
+#check beli2019Lemma79_typeIII_caseSix_primaryShift_add_mixedShift_nonpos
+#check beli2019Lemma79_typeIII_caseSix_secondParity_of_mixed_le
+
+#print axioms beli2019Lemma79_typeIII_caseSix_thirdPrevious_modEq_sourceLeft
+#print axioms beli2019Lemma79_typeIII_caseSix_sourceLeft_add_two_le_thirdPrevious
+#print axioms beli2019Lemma79_typeIII_caseSix_primaryShift_add_mixedShift_nonpos
+#print axioms beli2019Lemma79_typeIII_caseSix_secondParity_of_mixed_le
+
+end BONG.GoodBONG
+
+end Bong

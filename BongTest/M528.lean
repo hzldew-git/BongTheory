@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapOneBounds
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check representationAlphaValue_le_order_sub_of_primaryProduct_odd
+#check representationAlphaValue_le_order_sub_of_comparisonAlpha
+#check representationAlphaValue_le_order_sub_of_crossOrderSum
+
+#print axioms representationAlphaValue_le_order_sub_of_primaryProduct_odd
+#print axioms representationAlphaValue_le_order_sub_of_comparisonAlpha
+#print axioms representationAlphaValue_le_order_sub_of_crossOrderSum
+
+end BONG.GoodBONG
+
+end Bong

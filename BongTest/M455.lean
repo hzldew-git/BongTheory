@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeIAlphaShift
+
+#check Bong.BONG.GoodBONG.lemma79_typeI_even_left_shiftedTwoStep
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_left_alphaClose
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_left_alphaShift
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_even_left_shiftedTwoStep
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_left_alphaClose
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_left_alphaShift

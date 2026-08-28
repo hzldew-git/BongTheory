@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeICandidates
+
+#check Bong.BONG.GoodBONG.lemma79_typeI_even_left_halfGap_le_add_two
+#check Bong.BONG.GoodBONG.lemma79_typeI_even_left_primary_le_add_two
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_left_secondary
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_even_left_halfGap_le_add_two
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_even_left_primary_le_add_two
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_left_secondary

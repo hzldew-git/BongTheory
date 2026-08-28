@@ -1,0 +1,13 @@
+import Bong.Bong.Beli2019RepresentationAlphaDual
+
+#check Bong.RepresentationIndex.reverse
+#check Bong.BONG.GoodBONG.representationHalfGap_reverseDual_swap
+#check Bong.BONG.GoodBONG.representationPrimaryDefect_reverseDual_swap
+#check Bong.BONG.GoodBONG.representationSecondaryDefect_reverseDual_swap
+#check Bong.BONG.GoodBONG.representationAlpha_reverseDual_swap
+#check Bong.BONG.GoodBONG.representationAlphaValue_reverseDual_swap
+#check Bong.BONG.GoodBONG.exists_reverseDualPair_with_representationAlpha
+
+#print axioms Bong.BONG.GoodBONG.representationAlpha_reverseDual_swap
+#print axioms Bong.BONG.GoodBONG.representationAlphaValue_reverseDual_swap
+#print axioms Bong.BONG.GoodBONG.exists_reverseDualPair_with_representationAlpha

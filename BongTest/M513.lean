@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailStrict
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_ii_caseEight_of_strict_beta_bound
+#check caseEight_prefixSum_modEq_comparison_of_beta_lt_source
+
+#print axioms beli2019Lemma79_ii_caseEight_of_strict_beta_bound
+#print axioms caseEight_prefixSum_modEq_comparison_of_beta_lt_source
+
+end BONG.GoodBONG
+
+end Bong

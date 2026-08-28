@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityJumpBound
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check caseSix_previousAlpha_le_current_sub_reference_sub_one_of_odd_pair
+#check lemma79_caseSix_secondParity_of_odd_pair_above_reference
+#check beli2019Lemma79_typeII_caseSix_secondParity_of_oddPairAboveReference
+
+#print axioms caseSix_previousAlpha_le_current_sub_reference_sub_one_of_odd_pair
+#print axioms lemma79_caseSix_secondParity_of_odd_pair_above_reference
+#print axioms beli2019Lemma79_typeII_caseSix_secondParity_of_oddPairAboveReference
+
+end BONG.GoodBONG
+
+end Bong

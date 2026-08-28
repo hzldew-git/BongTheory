@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma78TargetAlpha
+
+#check Bong.BONG.GoodBONG.lemma78_typeIII_targetAlpha_ge_mixedShift
+
+#print axioms Bong.BONG.GoodBONG.lemma78_typeIII_targetAlpha_ge_mixedShift

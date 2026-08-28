@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019CappedDefectSharp
+
+#check Bong.BONG.GoodBONG.truncatedPrefixDefect_mul_eq_left_of_lt_right
+#check Bong.BONG.GoodBONG.truncatedPrefixDefect_zero_left_eq_self
+#check Bong.BONG.GoodBONG.truncatedPrefixDefect_zero_right_eq_self
+
+#print axioms Bong.BONG.GoodBONG.truncatedPrefixDefect_mul_eq_left_of_lt_right
+#print axioms Bong.BONG.GoodBONG.truncatedPrefixDefect_zero_left_eq_self
+#print axioms Bong.BONG.GoodBONG.truncatedPrefixDefect_zero_right_eq_self

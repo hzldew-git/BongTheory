@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeIBoundaryAssembly
+
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_leftBoundary_beta
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_leftBoundary
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_leftBoundary_beta
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_leftBoundary

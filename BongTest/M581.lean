@@ -1,0 +1,17 @@
+/- M581 audit: complete type-I case 8, including full rank. -/
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoComplete
+
+namespace Bong
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_gapTwo_strict_beta_bound_complete
+#check beli2019Lemma79_ii_typeI_caseEight_gapTwo_strict
+#check beli2019Lemma79_ii_typeI_caseEight_gapTwo
+#check beli2019Lemma79_ii_typeI_caseEight
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_strict_beta_bound_complete
+#print axioms beli2019Lemma79_ii_typeI_caseEight_gapTwo_strict
+#print axioms beli2019Lemma79_ii_typeI_caseEight_gapTwo
+#print axioms beli2019Lemma79_ii_typeI_caseEight
+
+end BONG.GoodBONG
+end Bong

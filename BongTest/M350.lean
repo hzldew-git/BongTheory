@@ -1,0 +1,6 @@
+import Bong.Bong.Beli2019Proposition62TargetCandidate
+
+#check Bong.BONG.GoodBONG.representationSecondaryTargetAlpha_le_representationAlpha
+#check Bong.BONG.GoodBONG.weightSequence_even_pair_of_secondaryPrevious
+
+#print axioms Bong.BONG.GoodBONG.weightSequence_even_pair_of_secondaryPrevious

@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79RightTailStrictComplete
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_strictData_complete
+#check beli2019Lemma79_typeII_caseEight_strictData_complete
+#check beli2019Lemma79_typeIII_caseEight_strictData_complete
+
+#print axioms beli2019Lemma79_typeI_caseEight_strictData_complete
+#print axioms beli2019Lemma79_typeII_caseEight_strictData_complete
+#print axioms beli2019Lemma79_typeIII_caseEight_strictData_complete
+
+end BONG.GoodBONG
+
+end Bong

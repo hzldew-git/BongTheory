@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma76TypeICentral
+
+#check Bong.BONG.GoodBONG.lemma76_typeI_target_even_order_eq_left
+#check Bong.BONG.GoodBONG.beli2019Lemma76_typeI_central_segment_eq_alpha
+#check Bong.BONG.GoodBONG.beli2019Lemma76_typeI_central_sourceCapped_of_beta
+
+#print axioms Bong.BONG.GoodBONG.lemma76_typeI_target_even_order_eq_left
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma76_typeI_central_segment_eq_alpha
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma76_typeI_central_sourceCapped_of_beta

@@ -1,0 +1,15 @@
+/- M585 audit: odd type-III endpoint and complete beta estimate. -/
+import Bong.Bong.Beli2019Lemma79RightTailGapOneTypeIIINonoverlapOddComplete
+
+namespace Bong
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeIII_nonoverlap_sourcePrefixDefect_at_oddIndex
+#check beli2019Lemma79_typeIII_nonoverlap_targetPrefixDefect_at_oddIndex_complete
+#check beli2019Lemma79_typeIII_nonoverlap_odd_domination_equality_false
+#check beli2019Lemma79_typeIII_nonoverlap_odd_beta_bound
+#print axioms beli2019Lemma79_typeIII_nonoverlap_targetPrefixDefect_at_oddIndex_complete
+#print axioms beli2019Lemma79_typeIII_nonoverlap_odd_beta_bound
+
+end BONG.GoodBONG
+end Bong

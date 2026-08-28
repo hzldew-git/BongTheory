@@ -1,0 +1,6 @@
+import Bong.Bong.Beli2019Lemma79ThirdPrefixParity
+
+#check Bong.BONG.GoodBONG.prefixSum_modEq_mul_of_current_le_reference_le_first
+
+#print axioms
+  Bong.BONG.GoodBONG.prefixSum_modEq_mul_of_current_le_reference_le_first

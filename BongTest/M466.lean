@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma76TypeIBoundaryLower
+
+#check Bong.BONG.GoodBONG.alternatingPrefixDefect_concat_lower
+#check Bong.BONG.GoodBONG.beli2019Lemma76_typeI_boundary_lower
+
+#print axioms Bong.BONG.GoodBONG.alternatingPrefixDefect_concat_lower
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma76_typeI_boundary_lower

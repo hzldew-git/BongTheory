@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79EvenCandidateShift
+
+#check Bong.BONG.GoodBONG.representationAlphaValue_le_add_of_candidate_bounds
+#check Bong.BONG.GoodBONG.lemma79_even_beta_bound_of_candidate_shifts
+
+#print axioms Bong.BONG.GoodBONG.representationAlphaValue_le_add_of_candidate_bounds
+#print axioms Bong.BONG.GoodBONG.lemma79_even_beta_bound_of_candidate_shifts

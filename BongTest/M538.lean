@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailCentralCoefficient
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check CaseEightBetaTailConsequences.centralCoefficient_eq
+#check CaseEightBetaTailConsequences.coe_centralCoefficient_eq
+
+#print axioms CaseEightBetaTailConsequences.centralCoefficient_eq
+#print axioms CaseEightBetaTailConsequences.coe_centralCoefficient_eq
+
+end BONG.GoodBONG
+
+end Bong

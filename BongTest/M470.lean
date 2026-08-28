@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeILowWitnessOrder
+
+#check Bong.BONG.GoodBONG.lemma79_typeI_central_lowWitness_order_eq
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_central_lowWitness_order_eq

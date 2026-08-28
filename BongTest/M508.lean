@@ -1,0 +1,12 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityTypeIIIOpposite
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeIII_caseSix_secondParity_oppositeCurrentParity
+#print axioms beli2019Lemma79_typeIII_caseSix_secondParity_oppositeCurrentParity
+
+end BONG.GoodBONG
+
+end Bong

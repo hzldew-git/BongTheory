@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma69TypeIRightBoundary
+
+#check Bong.BONG.GoodBONG.lemma69_i_typeI_rightBoundary_gt_cutoff
+
+#print axioms Bong.BONG.GoodBONG.lemma69_i_typeI_rightBoundary_gt_cutoff

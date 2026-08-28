@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019Lemma79EvenAlphaCloseLeftOuter
+
+#check Bong.BONG.GoodBONG.currentAlpha_le_add_two_of_shifted_twoStep
+#check Bong.BONG.GoodBONG.lemma79_even_alphaClose_of_noGap_leftOuter
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_left_alphaClose
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_left_alphaClose
+
+#print axioms Bong.BONG.GoodBONG.currentAlpha_le_add_two_of_shifted_twoStep
+#print axioms Bong.BONG.GoodBONG.lemma79_even_alphaClose_of_noGap_leftOuter
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_left_alphaClose
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_left_alphaClose

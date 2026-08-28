@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79OrderTypeIIIComparisonDefect
+
+#check Bong.BONG.GoodBONG.truncatedPrefixDefect_mul_square_scalar
+#check Bong.BONG.GoodBONG.comparisonPrefixDefect_eq_of_self_lt_self
+#check Bong.BONG.GoodBONG.lemma79_typeIII_comparisonPrefix_eq_mixedShift
+
+#print axioms Bong.BONG.GoodBONG.truncatedPrefixDefect_mul_square_scalar
+#print axioms Bong.BONG.GoodBONG.comparisonPrefixDefect_eq_of_self_lt_self
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_comparisonPrefix_eq_mixedShift

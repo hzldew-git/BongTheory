@@ -1,0 +1,4 @@
+import Bong.Bong.Beli2019Lemma79EvenNormFloor
+
+#check Bong.BONG.GoodBONG.lemma79_even_targetDefect_of_sourceNext_eq_normFloor
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetDefect_of_sourceNext_eq_normFloor

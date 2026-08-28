@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityPrimary
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check caseSix_primaryProduct_odd_of_prefix_odd_and_orders_modEq
+#check lemma79_caseSix_secondParity_of_primaryProduct_odd_and_current_le
+#check lemma79_caseSix_secondParity_of_prefix_odd_orders_modEq_current_le
+
+#print axioms caseSix_primaryProduct_odd_of_prefix_odd_and_orders_modEq
+#print axioms lemma79_caseSix_secondParity_of_primaryProduct_odd_and_current_le
+#print axioms lemma79_caseSix_secondParity_of_prefix_odd_orders_modEq_current_le
+
+end BONG.GoodBONG
+
+end Bong

@@ -1,0 +1,13 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoCoincidentAlpha
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_coincidentPreviousAlpha_eq_add_two
+
+#print axioms beli2019Lemma79_typeI_caseEight_coincidentPreviousAlpha_eq_add_two
+
+end BONG.GoodBONG
+
+end Bong

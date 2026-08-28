@@ -1,0 +1,19 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapOneTypes
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check CaseEightStrictBetaTailConsequences.gapOne_formula_of_entryOrZero
+#check beli2019Lemma79_typeI_caseEight_gapOne_formula
+#check beli2019Lemma79_typeII_caseEight_gapOne_formula
+#check beli2019Lemma79_typeIII_caseEight_gapOne_formula
+
+#print axioms CaseEightStrictBetaTailConsequences.gapOne_formula_of_entryOrZero
+#print axioms beli2019Lemma79_typeI_caseEight_gapOne_formula
+#print axioms beli2019Lemma79_typeII_caseEight_gapOne_formula
+#print axioms beli2019Lemma79_typeIII_caseEight_gapOne_formula
+
+end BONG.GoodBONG
+
+end Bong

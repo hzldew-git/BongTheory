@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79DefectOdd
+
+#check Bong.BONG.GoodBONG.comparisonPrefixProduct_order_even_of_prefixSum_modEq
+#check Bong.BONG.GoodBONG.lemma79_ii_of_odd_coordinate_of_order
+
+#print axioms Bong.BONG.GoodBONG.comparisonPrefixProduct_order_even_of_prefixSum_modEq
+#print axioms Bong.BONG.GoodBONG.lemma79_ii_of_odd_coordinate_of_order

@@ -1,0 +1,19 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapOneTypeIIComplete
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_ii_typeI_caseEight_gapOne_strict
+#check beli2019Lemma79_ii_typeII_caseEight_gapOne_strict
+#check beli2019Lemma79_ii_typeI_caseEight_gapOne
+#check beli2019Lemma79_ii_typeII_caseEight_gapOne
+
+#print axioms beli2019Lemma79_ii_typeI_caseEight_gapOne_strict
+#print axioms beli2019Lemma79_ii_typeII_caseEight_gapOne_strict
+#print axioms beli2019Lemma79_ii_typeI_caseEight_gapOne
+#print axioms beli2019Lemma79_ii_typeII_caseEight_gapOne
+
+end BONG.GoodBONG
+
+end Bong

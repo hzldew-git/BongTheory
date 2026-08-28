@@ -1,0 +1,18 @@
+/- M582 audit: the overlapping type-II/III branch of Lemma 7.9 case 8. -/
+import Bong.Bong.Beli2019Lemma79RightTailGapOneTypeIIIOverlapComplete
+
+namespace Bong
+namespace BONG.GoodBONG
+
+#check beli2019Lemma72_typeIII_overlap_target_last_succ
+#check beli2019Lemma79_typeIII_overlap_reference_le_thirdFirst
+#check beli2019Lemma79_typeIII_overlap_lastTarget_eq_left_add_one
+#check beli2019Lemma79_typeIII_overlap_caseEight_gapOne_evidence
+#check beli2019Lemma79_ii_typeIII_caseEight_gapOne_strict_of_overlap
+#check beli2019Lemma79_ii_typeIII_caseEight_gapOne_of_overlap
+#print axioms beli2019Lemma72_typeIII_overlap_target_last_succ
+#print axioms beli2019Lemma79_typeIII_overlap_caseEight_gapOne_evidence
+#print axioms beli2019Lemma79_ii_typeIII_caseEight_gapOne_of_overlap
+
+end BONG.GoodBONG
+end Bong

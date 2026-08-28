@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeIInterior
+
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_left_beta
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_left_interior
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_left_beta
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_left_interior

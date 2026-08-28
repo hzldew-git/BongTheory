@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019Lemma79EvenBetaReduction
+
+#check Bong.BONG.GoodBONG.representationAlphaValue_le_twoE_of_crossGap_le
+#check Bong.BONG.GoodBONG.twoE_le_alphaValue_of_orderGap_ge
+#check Bong.BONG.GoodBONG.lemma79_even_beta_bound_of_large_sourceGap
+#check Bong.BONG.GoodBONG.lemma79_even_beta_bound_of_comparison_shift
+
+#print axioms Bong.BONG.GoodBONG.representationAlphaValue_le_twoE_of_crossGap_le
+#print axioms Bong.BONG.GoodBONG.twoE_le_alphaValue_of_orderGap_ge
+#print axioms Bong.BONG.GoodBONG.lemma79_even_beta_bound_of_large_sourceGap
+#print axioms Bong.BONG.GoodBONG.lemma79_even_beta_bound_of_comparison_shift

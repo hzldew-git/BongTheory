@@ -1,0 +1,13 @@
+/- M580 audit: odd gap-two prefix at the full-rank endpoint. -/
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoOddFullRank
+
+namespace Bong
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_gapTwo_sourcePrefixDefect_at_oddIndex
+#check beli2019Lemma79_typeI_caseEight_gapTwo_targetPrefixDefect_at_oddIndex_complete
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_sourcePrefixDefect_at_oddIndex
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_targetPrefixDefect_at_oddIndex_complete
+
+end BONG.GoodBONG
+end Bong

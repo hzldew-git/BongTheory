@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma69TypeILeftValueLocal
+
+#check Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeI_sourceLeftValue_of_next
+#check Bong.BONG.GoodBONG.lemma69_typeI_left_alpha_eq_terminal
+#check Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeI_sourceLeftValue_complete
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeI_sourceLeftValue_of_next
+#print axioms Bong.BONG.GoodBONG.lemma69_typeI_left_alpha_eq_terminal
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeI_sourceLeftValue_complete

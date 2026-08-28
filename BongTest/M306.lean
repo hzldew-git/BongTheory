@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma69TypeIIIRightValue
+
+#check Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeIII_targetRightValue
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeIII_targetRightValue

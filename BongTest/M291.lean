@@ -1,0 +1,8 @@
+import Bong.Bong.Beli2019DefectConditionDual
+
+#check Bong.BONG.GoodBONG.representationDefectCondition_reverseDual_swap
+#check Bong.BONG.GoodBONG.exists_reverseDualPair_with_representationDefectCondition
+
+#print axioms Bong.BONG.GoodBONG.representationDefectCondition_reverseDual_swap
+#print axioms
+  Bong.BONG.GoodBONG.exists_reverseDualPair_with_representationDefectCondition

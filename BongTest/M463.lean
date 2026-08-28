@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeICentralAlpha
+
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_central_even_alphaShift
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_central_even_alphaShift

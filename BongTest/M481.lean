@@ -1,0 +1,10 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeIRightSwitchCandidates
+
+namespace Bong.BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_rightSwitch_even_primary
+#check beli2019Lemma79_typeI_rightSwitch_even_secondary
+#print axioms beli2019Lemma79_typeI_rightSwitch_even_primary
+#print axioms beli2019Lemma79_typeI_rightSwitch_even_secondary
+
+end Bong.BONG.GoodBONG

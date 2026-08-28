@@ -1,0 +1,26 @@
+import Bong.Bong.Beli2019Lemma79RightTailProfile
+
+namespace Bong
+
+#check BeliOrderSequence.prefixSum_add_totalGap_eq_of_suffix_entries_eq
+#check BeliOrderSequence.IsLastDifferenceAt.prefixSum_add_totalGap_eq_after
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_prefixSum
+#check beli2019Lemma79_typeII_caseEight_prefixSum
+#check beli2019Lemma79_typeIII_caseEight_prefixSum
+#check beli2019Lemma79_typeI_caseEight_suffix
+#check beli2019Lemma79_typeII_caseEight_suffix
+#check beli2019Lemma79_typeIII_caseEight_suffix
+
+#print axioms beli2019Lemma79_typeI_caseEight_prefixSum
+#print axioms beli2019Lemma79_typeII_caseEight_prefixSum
+#print axioms beli2019Lemma79_typeIII_caseEight_prefixSum
+#print axioms beli2019Lemma79_typeI_caseEight_suffix
+#print axioms beli2019Lemma79_typeII_caseEight_suffix
+#print axioms beli2019Lemma79_typeIII_caseEight_suffix
+
+end BONG.GoodBONG
+
+end Bong

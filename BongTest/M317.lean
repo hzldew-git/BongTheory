@@ -1,0 +1,8 @@
+import Bong.Bong.Beli2019Lemma79OrderTypeIIRight
+
+#check Bong.BONG.GoodBONG.lemma79_typeII_rightEven_targetCurrent_le_sourceNext
+#check Bong.BONG.GoodBONG.beli2019Lemma79_i_typeII_rightEven
+
+#print axioms
+  Bong.BONG.GoodBONG.lemma79_typeII_rightEven_targetCurrent_le_sourceNext
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_i_typeII_rightEven

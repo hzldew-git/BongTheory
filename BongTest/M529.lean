@@ -1,0 +1,22 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapOneAssembly
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check caseEightLastAlphaIndex
+#check caseEightLastAlphaIndex_succ
+#check caseEight_gapOne_beta_bound_of_primaryProduct_odd
+#check caseEight_gapOne_beta_bound_of_comparisonAlpha
+#check caseEight_gapOne_beta_bound_of_crossOrderSum
+#check CaseEightGapOneBetaEvidence.beta_bound
+
+#print axioms caseEightLastAlphaIndex_succ
+#print axioms caseEight_gapOne_beta_bound_of_primaryProduct_odd
+#print axioms caseEight_gapOne_beta_bound_of_comparisonAlpha
+#print axioms caseEight_gapOne_beta_bound_of_crossOrderSum
+#print axioms CaseEightGapOneBetaEvidence.beta_bound
+
+end BONG.GoodBONG
+
+end Bong

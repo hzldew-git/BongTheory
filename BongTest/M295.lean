@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma69TypeIIISecondary
+
+#check Bong.BONG.GoodBONG.lemma69_typeIII_secondaryCoefficient_pos
+
+#print axioms Bong.BONG.GoodBONG.lemma69_typeIII_secondaryCoefficient_pos

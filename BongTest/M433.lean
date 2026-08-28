@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019CappedDominationWitness
+
+#check Bong.BONG.GoodBONG.exists_cappedAdjacent_le_alternatingPrefix_pairs
+#check Bong.BONG.GoodBONG.exists_even_cappedAdjacent_le_alternatingPrefix
+
+#print axioms Bong.BONG.GoodBONG.exists_cappedAdjacent_le_alternatingPrefix_pairs
+#print axioms Bong.BONG.GoodBONG.exists_even_cappedAdjacent_le_alternatingPrefix

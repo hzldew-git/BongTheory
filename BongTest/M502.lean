@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityTypeIIIWitness
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check truncatedPrefixDefect_self_one_zero_eq_top
+#check beli2019Lemma79_typeIII_caseSix_exists_dominationWitness
+
+#print axioms truncatedPrefixDefect_self_one_zero_eq_top
+#print axioms beli2019Lemma79_typeIII_caseSix_exists_dominationWitness
+
+end BONG.GoodBONG
+
+end Bong

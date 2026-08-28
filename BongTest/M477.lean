@@ -1,0 +1,8 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeITargetEquality
+
+namespace Bong.BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_central_even_target_of_domination_equality
+#print axioms beli2019Lemma79_typeI_central_even_target_of_domination_equality
+
+end Bong.BONG.GoodBONG

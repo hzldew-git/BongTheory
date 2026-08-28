@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79EvenAssembly
+
+#check Bong.BONG.GoodBONG.min_alternatingSelfCapped_le_comparison
+#check Bong.BONG.GoodBONG.lemma79_ii_of_even_selfCapped_bounds
+
+#print axioms Bong.BONG.GoodBONG.min_alternatingSelfCapped_le_comparison
+#print axioms Bong.BONG.GoodBONG.lemma79_ii_of_even_selfCapped_bounds

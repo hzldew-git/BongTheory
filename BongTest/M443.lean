@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79EvenAlphaShift
+
+#check Bong.BONG.GoodBONG.currentAlpha_eq_order_sub_add_previous_of_twoStep
+#check Bong.BONG.GoodBONG.previousAlpha_eq_one_of_twoStep_of_nextGap_lt_twoE
+#check Bong.BONG.GoodBONG.currentAlpha_eq_add_two_of_shifted_twoStep
+
+#print axioms Bong.BONG.GoodBONG.currentAlpha_eq_order_sub_add_previous_of_twoStep
+#print axioms Bong.BONG.GoodBONG.previousAlpha_eq_one_of_twoStep_of_nextGap_lt_twoE
+#print axioms Bong.BONG.GoodBONG.currentAlpha_eq_add_two_of_shifted_twoStep

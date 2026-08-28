@@ -1,0 +1,14 @@
+/- M569 audit: odd gap-two comparison order growth. -/
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoOddOrder
+
+namespace Bong
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_gapTwo_odd_comparisonOrder_ge_boundary
+#check beli2019Lemma79_typeI_caseEight_gapTwo_odd_targetPrefix_modEq
+
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_odd_comparisonOrder_ge_boundary
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_odd_targetPrefix_modEq
+
+end BONG.GoodBONG
+end Bong

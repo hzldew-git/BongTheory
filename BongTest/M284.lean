@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma69TypeIRightEndpoint
+
+#check Bong.BONG.GoodBONG.adjacentDefect_eq_zero_of_order_sum_odd
+#check Bong.BONG.GoodBONG.lemma69_i_typeI_rightPivotAlpha_of_secondary_of_endpoint
+
+#print axioms Bong.BONG.GoodBONG.adjacentDefect_eq_zero_of_order_sum_odd
+#print axioms Bong.BONG.GoodBONG.lemma69_i_typeI_rightPivotAlpha_of_secondary_of_endpoint

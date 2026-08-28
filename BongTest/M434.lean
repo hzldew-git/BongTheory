@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019CappedDominationOrderBound
+
+#check Bong.BONG.GoodBONG.exists_even_capped_domination_order_bound
+
+#print axioms Bong.BONG.GoodBONG.exists_even_capped_domination_order_bound

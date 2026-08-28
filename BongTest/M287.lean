@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma77TypeINonterminal
+
+#check Bong.BONG.GoodBONG.beli2019Lemma77_typeI_of_rightSwitch_lt_last
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma77_typeI_of_rightSwitch_lt_last

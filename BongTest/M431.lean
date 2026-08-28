@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79EvenLeftOuter
+
+#check Bong.BONG.GoodBONG.lemma79_even_targetDefect_of_noGap_leftOuter
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeII_even_leftOuter
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeIII_even_leftOuter
+
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetDefect_of_noGap_leftOuter
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeII_even_leftOuter
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeIII_even_leftOuter

@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79CaseSixFirstParity
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeII_caseSix_firstParity
+#check beli2019Lemma79_typeIII_caseSix_firstParity
+
+#print axioms beli2019Lemma79_typeII_caseSix_firstParity
+#print axioms beli2019Lemma79_typeIII_caseSix_firstParity
+
+end BONG.GoodBONG
+
+end Bong

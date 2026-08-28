@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma69TypeIRightSecondary
+
+#check Bong.BONG.GoodBONG.lemma69_i_typeI_rightPivot_secondary_pos_of_interior
+#check Bong.BONG.GoodBONG.beli2019Lemma69_i_typeI_rightPivotAlpha_of_boundary_of_interior
+
+#print axioms Bong.BONG.GoodBONG.lemma69_i_typeI_rightPivot_secondary_pos_of_interior
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_i_typeI_rightPivotAlpha_of_boundary_of_interior

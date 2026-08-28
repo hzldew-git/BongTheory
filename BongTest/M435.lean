@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79EvenTargetCapped
+
+#check Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_sourceNext_le
+#check Bong.BONG.GoodBONG.lemma79_even_targetCapped_or_exists_lowWitness
+
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_sourceNext_le
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetCapped_or_exists_lowWitness

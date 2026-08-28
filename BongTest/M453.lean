@@ -1,0 +1,13 @@
+import Bong.Bong.Beli2019Lemma79EvenBoundaryAssembly
+
+#check Bong.BONG.GoodBONG.lemma79_even_leftOuter_beta_of_secondary
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_leftBoundary_beta
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeII_even_leftBoundary
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_leftBoundary_beta
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeIII_even_leftBoundary
+
+#print axioms Bong.BONG.GoodBONG.lemma79_even_leftOuter_beta_of_secondary
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_leftBoundary_beta
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeII_even_leftBoundary
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_leftBoundary_beta
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeIII_even_leftBoundary

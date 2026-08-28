@@ -1,0 +1,14 @@
+/- M575 audit: odd equality prefix propagation and contradiction. -/
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoOddEquality
+
+namespace Bong
+namespace BONG.GoodBONG
+
+#check lemma79_odd_comparisonPrefix_modEq_of_rightEndpoint_eq
+#check beli2019Lemma79_typeI_caseEight_gapTwo_odd_domination_equality_false
+
+#print axioms lemma79_odd_comparisonPrefix_modEq_of_rightEndpoint_eq
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_odd_domination_equality_false
+
+end BONG.GoodBONG
+end Bong

@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79CaseSixGammaZero
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeII_caseSix_firstParity_of_gamma_eq_zero
+#check beli2019Lemma79_typeIII_caseSix_firstParity_of_gamma_eq_zero
+
+#print axioms beli2019Lemma79_typeII_caseSix_firstParity_of_gamma_eq_zero
+#print axioms beli2019Lemma79_typeIII_caseSix_firstParity_of_gamma_eq_zero
+
+end BONG.GoodBONG
+
+end Bong

@@ -1,0 +1,21 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityJumpWitness
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check exists_even_entryPair_sum_odd_of_prefixSum_odd_pairs
+#check exists_even_entryPair_sum_odd_of_prefixSum_odd
+#check caseSix_not_modEq_two_of_add_odd
+#check caseSix_odd_add_of_not_modEq_two
+#check exists_odd_entryPair_above_reference_of_even_prefix_odd
+
+#print axioms exists_even_entryPair_sum_odd_of_prefixSum_odd_pairs
+#print axioms exists_even_entryPair_sum_odd_of_prefixSum_odd
+#print axioms caseSix_not_modEq_two_of_add_odd
+#print axioms caseSix_odd_add_of_not_modEq_two
+#print axioms exists_odd_entryPair_above_reference_of_even_prefix_odd
+
+end BONG.GoodBONG
+
+end Bong

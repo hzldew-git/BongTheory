@@ -1,0 +1,21 @@
+import Bong.Bong.Beli2019Lemma79RightTailFromConditions
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check caseEight_halfGapValue_eq_of_orderSuffix
+#check caseEight_strictBetaTailConsequences_of_conditions
+#check beli2019Lemma79_typeI_caseEight_strictBetaTail
+#check beli2019Lemma79_typeII_caseEight_strictBetaTail
+#check beli2019Lemma79_typeIII_caseEight_strictBetaTail
+
+#print axioms caseEight_halfGapValue_eq_of_orderSuffix
+#print axioms caseEight_strictBetaTailConsequences_of_conditions
+#print axioms beli2019Lemma79_typeI_caseEight_strictBetaTail
+#print axioms beli2019Lemma79_typeII_caseEight_strictBetaTail
+#print axioms beli2019Lemma79_typeIII_caseEight_strictBetaTail
+
+end BONG.GoodBONG
+
+end Bong

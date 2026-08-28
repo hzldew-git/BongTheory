@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Proposition62EvenNoninitial
+
+#check Bong.BONG.GoodBONG.representationWeightEven_direct_or_pair
+
+#print axioms Bong.BONG.GoodBONG.representationWeightEven_direct_or_pair

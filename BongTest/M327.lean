@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79OrderTypeIIISourceAlpha
+
+#check Bong.BONG.GoodBONG.one_le_alphaValue_of_ne_zero
+#check Bong.BONG.GoodBONG.lemma79_typeIII_pair_of_sourceAlpha_le_mixedShift
+
+#print axioms Bong.BONG.GoodBONG.one_le_alphaValue_of_ne_zero
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_pair_of_sourceAlpha_le_mixedShift

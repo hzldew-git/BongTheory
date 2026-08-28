@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79OrderRightAlternating
+
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.right_even_distance
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.target_rightEven_eq_boundary
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.source_rightBoundary_eq_last
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.source_rightEven_eq_boundary
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.source_rightOdd_eq_target_add_one
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.rightOdd_pair_eq
+#check Bong.BeliOrderLE.compare_rightAlternating
+#check Bong.BONG.GoodBONG.beli2019Lemma79_i_typeII_rightAlternating
+#check Bong.BONG.GoodBONG.beli2019Lemma79_i_typeIII_rightAlternating
+
+#print axioms Bong.BeliOrderLE.compare_rightAlternating
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_i_typeII_rightAlternating
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_i_typeIII_rightAlternating

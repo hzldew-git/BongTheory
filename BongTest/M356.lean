@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Proposition62PrimaryPair
+
+#check Bong.BONG.GoodBONG.previousPrimaryCross_eq_targetAdjacent_of_lt_diagonal
+#check Bong.BONG.GoodBONG.representationWeightEvenPair_of_primary
+
+#print axioms Bong.BONG.GoodBONG.previousPrimaryCross_eq_targetAdjacent_of_lt_diagonal
+#print axioms Bong.BONG.GoodBONG.representationWeightEvenPair_of_primary

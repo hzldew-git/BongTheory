@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma78AlphaZero
+
+#check Bong.BONG.GoodBONG.representationAlpha_nonneg_of_candidates
+#check Bong.BONG.GoodBONG.beli2019Lemma78_representationAlpha_eq_zero
+#check Bong.BONG.GoodBONG.beli2019Lemma78_centralMixedDefect_exact
+
+#print axioms Bong.BONG.GoodBONG.representationAlpha_nonneg_of_candidates
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma78_representationAlpha_eq_zero
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma78_centralMixedDefect_exact

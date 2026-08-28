@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019DominationOrderBound
+
+#check Bong.BONG.GoodBONG.order_sub_add_alpha_le_adjacentDefect
+#check Bong.BONG.GoodBONG.exists_even_domination_order_bound
+#print axioms Bong.BONG.GoodBONG.exists_even_domination_order_bound

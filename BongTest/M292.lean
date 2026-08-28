@@ -1,0 +1,16 @@
+import Bong.Bong.Beli2019OrderConditionDual
+
+#check Bong.BeliOrderSequence.reverseNegate_prefixSum_rank
+#check Bong.BeliOrderSequence.reverseNegate_prefixSum_eq_neg_suffixLengthSum
+#check Bong.BeliOrderSequence.prefixGap_reverseNegate_swap
+#check Bong.BONG.GoodBONG.orderSequence_eq_reverseNegate_of_orders
+#check Bong.BONG.GoodBONG.representationOrderCondition_reverseDual_swap
+#check Bong.BONG.GoodBONG.totalOrderSum_reverseDual_swap
+#check Bong.BONG.GoodBONG.orderPrefixGap_reverseDual_swap
+
+#print axioms Bong.BeliOrderSequence.reverseNegate_prefixSum_rank
+#print axioms Bong.BeliOrderSequence.reverseNegate_prefixSum_eq_neg_suffixLengthSum
+#print axioms Bong.BeliOrderSequence.prefixGap_reverseNegate_swap
+#print axioms Bong.BONG.GoodBONG.representationOrderCondition_reverseDual_swap
+#print axioms Bong.BONG.GoodBONG.totalOrderSum_reverseDual_swap
+#print axioms Bong.BONG.GoodBONG.orderPrefixGap_reverseDual_swap

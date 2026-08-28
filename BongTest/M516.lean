@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma69RightTailMinimum
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma69_iv_beta_eq_min_of_weightOrder
+#check beli2019Lemma69_iv_beta_eq_min
+#check beli2019Lemma69_iv_beta_shift_of_lt_sourceAlpha
+
+#print axioms beli2019Lemma69_iv_beta_eq_min_of_weightOrder
+#print axioms beli2019Lemma69_iv_beta_eq_min
+#print axioms beli2019Lemma69_iv_beta_shift_of_lt_sourceAlpha
+
+end BONG.GoodBONG
+
+end Bong

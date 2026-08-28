@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79OrderTypeIIIHalfGap
+
+#check Bong.BONG.GoodBONG.lemma79_typeIII_targetNext_le_sourceNext
+#check Bong.BONG.GoodBONG.lemma79_typeIII_leftTarget_le_sourceNext
+#check Bong.BONG.GoodBONG.lemma79_typeIII_mixedShift_lt_representationHalfGap
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_targetNext_le_sourceNext
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_leftTarget_le_sourceNext
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_mixedShift_lt_representationHalfGap

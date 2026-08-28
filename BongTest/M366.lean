@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79TypeIProfileAlpha
+
+#check Bong.BONG.GoodBONG.lemma79_typeI_target_twoStep_and_alpha
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_target_twoStep_and_alpha

@@ -1,0 +1,20 @@
+import Bong.Bong.Beli2019Lemma79RightTailPropagation
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check CaseEightBetaTailConsequences
+#check caseEight_rightEndpoint_eq_of_beta_shift
+#check caseEight_betaTailConsequences_of_rightEndpoint_eq
+#check caseEight_betaTailConsequences_of_beta_shift
+#check CaseEightBetaTailConsequences.targetAlpha_lt_sourceAlpha
+
+#print axioms caseEight_rightEndpoint_eq_of_beta_shift
+#print axioms caseEight_betaTailConsequences_of_rightEndpoint_eq
+#print axioms caseEight_betaTailConsequences_of_beta_shift
+#print axioms CaseEightBetaTailConsequences.targetAlpha_lt_sourceAlpha
+
+end BONG.GoodBONG
+
+end Bong

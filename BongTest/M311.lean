@@ -1,0 +1,16 @@
+import Bong.Bong.Beli2019Lemma79OrderLeftBoundary
+
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.left_even_of_first_eq_zero
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.source_leftBoundary_eq_first
+#check Bong.BeliOrderLE.NoGapTwoOuterConsequences.target_leftBoundary_le_of_first_add_one_le
+#check Bong.BONG.GoodBONG.beli2019Lemma79_i_typeII_leftBoundary
+#check Bong.BONG.GoodBONG.beli2019Lemma79_i_typeIII_leftBoundary
+
+#print axioms
+  Bong.BeliOrderLE.NoGapTwoOuterConsequences.left_even_of_first_eq_zero
+#print axioms
+  Bong.BeliOrderLE.NoGapTwoOuterConsequences.source_leftBoundary_eq_first
+#print axioms
+  Bong.BeliOrderLE.NoGapTwoOuterConsequences.target_leftBoundary_le_of_first_add_one_le
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_i_typeII_leftBoundary
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_i_typeIII_leftBoundary

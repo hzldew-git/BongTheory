@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma69TypeIILeftAlpha
+
+#check Bong.BONG.GoodBONG.beli2019Lemma69_i_typeII_targetLeftTail
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_i_typeII_targetLeftTail

@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79EvenTargetParity
+
+#check Bong.BONG.GoodBONG.truncatedPrefixDefect_eq_zero_of_odd_order_general
+#check Bong.BONG.GoodBONG.lemma79_typeI_even_primaryProduct_odd_of_modEq
+
+#print axioms Bong.BONG.GoodBONG.truncatedPrefixDefect_eq_zero_of_odd_order_general
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_even_primaryProduct_odd_of_modEq

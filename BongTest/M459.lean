@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeIBoundaryAlpha
+
+#check Bong.BONG.GoodBONG.lemma79_typeI_leftSwitch_gap_le_twoE_add_one
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_leftSwitch_alphaClose
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_leftSwitch_gap_le_twoE_add_one
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_leftSwitch_alphaClose

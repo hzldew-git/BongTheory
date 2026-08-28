@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoCentralDefect
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_previousTarget_lt_source
+#check beli2019Lemma79_typeI_caseEight_boundaryCrossAndShift
+#check beli2019Lemma79_typeI_caseEight_gapTwo_centralDefect_eq
+
+#print axioms beli2019Lemma79_typeI_caseEight_previousTarget_lt_source
+#print axioms beli2019Lemma79_typeI_caseEight_boundaryCrossAndShift
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_centralDefect_eq
+
+end BONG.GoodBONG
+
+end Bong

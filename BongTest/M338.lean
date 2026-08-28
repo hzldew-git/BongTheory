@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79DefectTypeIOddBoundary
+
+#check Bong.BONG.GoodBONG.lemma79_typeI_leftSwitch_nextAlpha
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_odd_boundary
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_leftSwitch_nextAlpha
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_odd_boundary

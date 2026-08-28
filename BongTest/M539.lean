@@ -1,0 +1,18 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoBoundaryAlpha
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check caseEightTypeIBoundaryIndex
+#check beli2019Lemma79_typeI_caseEight_boundaryAlpha_eq
+#check beli2019Lemma79_typeI_caseEight_boundaryHalfGap_eq
+#check beli2019Lemma79_typeI_caseEight_boundaryAlpha_lt_halfGap
+
+#print axioms beli2019Lemma79_typeI_caseEight_boundaryAlpha_eq
+#print axioms beli2019Lemma79_typeI_caseEight_boundaryHalfGap_eq
+#print axioms beli2019Lemma79_typeI_caseEight_boundaryAlpha_lt_halfGap
+
+end BONG.GoodBONG
+
+end Bong

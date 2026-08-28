@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019Lemma79EvenLeftAssembly
+
+#check Bong.BONG.GoodBONG.lemma79_ii_of_noGap_leftOuter_beta
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeII_even_left_of_beta
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeIII_even_left_of_beta
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_left_of_beta
+
+#print axioms Bong.BONG.GoodBONG.lemma79_ii_of_noGap_leftOuter_beta
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeII_even_left_of_beta
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeIII_even_left_of_beta
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_left_of_beta

@@ -1,0 +1,19 @@
+import Bong.Bong.Beli2019Lemma79RightTailBoundaryData
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check caseEight_boundary_strictData
+#check beli2019Lemma79_typeI_caseEight_boundary_strictData
+#check beli2019Lemma79_typeII_caseEight_boundary_strictData
+#check beli2019Lemma79_typeIII_caseEight_boundary_strictData
+
+#print axioms caseEight_boundary_strictData
+#print axioms beli2019Lemma79_typeI_caseEight_boundary_strictData
+#print axioms beli2019Lemma79_typeII_caseEight_boundary_strictData
+#print axioms beli2019Lemma79_typeIII_caseEight_boundary_strictData
+
+end BONG.GoodBONG
+
+end Bong

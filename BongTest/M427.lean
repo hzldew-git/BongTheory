@@ -1,0 +1,6 @@
+import Bong.Bong.Beli2019DominationWitness
+
+#check Bong.BONG.GoodBONG.alternatingPrefixUnit_add_two
+#check Bong.BONG.GoodBONG.exists_adjacentDefect_le_alternatingPrefixDefect_pairs
+#check Bong.BONG.GoodBONG.exists_even_adjacentDefect_le_alternatingPrefixDefect
+#print axioms Bong.BONG.GoodBONG.exists_even_adjacentDefect_le_alternatingPrefixDefect

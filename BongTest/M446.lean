@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019Lemma79EvenSecondaryArithmetic
+
+#check Bong.BONG.GoodBONG.representationSecondaryDefect_le_add_two_of_orderSum_eq
+#check Bong.BONG.GoodBONG.representationSecondaryDefect_le_add_two_of_orderSum_eq_add_one
+#check Bong.BONG.GoodBONG.representationSecondaryDefect_le_add_two_of_orderSum_eq_add_two
+#check Bong.BONG.GoodBONG.lemma79_even_leftOuter_secondary_le_add_two_of_prefix
+
+#print axioms Bong.BONG.GoodBONG.representationSecondaryDefect_le_add_two_of_orderSum_eq
+#print axioms Bong.BONG.GoodBONG.representationSecondaryDefect_le_add_two_of_orderSum_eq_add_one
+#print axioms Bong.BONG.GoodBONG.representationSecondaryDefect_le_add_two_of_orderSum_eq_add_two
+#print axioms Bong.BONG.GoodBONG.lemma79_even_leftOuter_secondary_le_add_two_of_prefix

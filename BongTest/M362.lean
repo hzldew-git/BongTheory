@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma69TypeIFromConditions
+
+#check Bong.BONG.GoodBONG.beli2019Lemma69_v_typeI_of_rightSwitch_lt_last
+#check Bong.BONG.GoodBONG.beli2019Lemma77_typeI_of_rightSwitch_lt_last_from_conditions
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_v_typeI_of_rightSwitch_lt_last
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma77_typeI_of_rightSwitch_lt_last_from_conditions

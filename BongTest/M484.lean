@@ -1,0 +1,23 @@
+import Bong.Bong.Beli2019Lemma79CaseSixProfile
+
+namespace Bong
+
+#check BeliOrderLE.NoGapTwoOuterConsequences.target_rightEven_eq_source_add_one
+
+namespace BONG.GoodBONG
+
+#check caseSix_comparisonPrefix_parity_dichotomy
+#check beli2019Lemma79_typeII_caseSix_prefix_opposite
+#check beli2019Lemma79_typeIII_caseSix_prefix_opposite
+#check beli2019Lemma79_typeII_caseSix_beta_eq_one
+#check beli2019Lemma79_typeIII_caseSix_beta_eq_one
+
+#print axioms caseSix_comparisonPrefix_parity_dichotomy
+#print axioms beli2019Lemma79_typeII_caseSix_prefix_opposite
+#print axioms beli2019Lemma79_typeIII_caseSix_prefix_opposite
+#print axioms beli2019Lemma79_typeII_caseSix_beta_eq_one
+#print axioms beli2019Lemma79_typeIII_caseSix_beta_eq_one
+
+end BONG.GoodBONG
+
+end Bong

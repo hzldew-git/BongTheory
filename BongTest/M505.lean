@@ -1,0 +1,12 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityTypeIIIEndpointEquality
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeIII_caseSix_secondParity_of_boundaryEndpoint_eq
+#print axioms beli2019Lemma79_typeIII_caseSix_secondParity_of_boundaryEndpoint_eq
+
+end BONG.GoodBONG
+
+end Bong

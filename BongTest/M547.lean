@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoPreviousAlpha
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_previousAlpha_eq_add_two_of_gap_le
+#check beli2019Lemma79_typeI_caseEight_centralCoefficient_lt_previousAlpha
+
+#print axioms beli2019Lemma79_typeI_caseEight_previousAlpha_eq_add_two_of_gap_le
+#print axioms beli2019Lemma79_typeI_caseEight_centralCoefficient_lt_previousAlpha
+
+end BONG.GoodBONG
+
+end Bong

@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapOneTypeIITypes
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_gapOne_evidence
+#check beli2019Lemma79_typeII_caseEight_gapOne_evidence
+
+#print axioms beli2019Lemma79_typeI_caseEight_gapOne_evidence
+#print axioms beli2019Lemma79_typeII_caseEight_gapOne_evidence
+
+end BONG.GoodBONG
+
+end Bong

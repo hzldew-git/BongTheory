@@ -1,0 +1,6 @@
+/- M423 smoke test. -/
+import Bong.Bong.Beli2019Lemma79TypeIIRightComparison
+
+#check Bong.BONG.GoodBONG.lemma79_typeII_right_comparisonPrefixes_eq_zero
+#check Bong.BONG.GoodBONG.lemma79_typeII_right_comparisonPrefixes_eq_of_comparison_lt_target
+#print axioms Bong.BONG.GoodBONG.lemma79_typeII_right_comparisonPrefixes_eq_of_comparison_lt_target

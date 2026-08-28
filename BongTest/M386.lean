@@ -1,0 +1,8 @@
+/- M386 smoke test. -/
+import Bong.Bong.Beli2019Lemma69TypeICentralPositiveSeeds
+
+#check Bong.BONG.GoodBONG.lemma69_typeI_centralSeedData_of_leftSwitch_pos_from_conditions
+#check Bong.BONG.GoodBONG.lemma69_typeI_central_values_of_leftSwitch_pos_from_conditions
+#check Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeI_targetValue_of_leftSwitch_pos
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeI_targetValue_of_leftSwitch_pos

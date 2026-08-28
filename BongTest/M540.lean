@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79StrictPrimaryReduction
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check representationPrimaryDefect_le_secondaryTargetAlpha_of_cross
+#check representationPrimaryDefect_le_of_alphaValue_eq_of_lt_halfGap
+
+#print axioms representationPrimaryDefect_le_secondaryTargetAlpha_of_cross
+#print axioms representationPrimaryDefect_le_of_alphaValue_eq_of_lt_halfGap
+
+end BONG.GoodBONG
+
+end Bong

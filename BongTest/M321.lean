@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79OrderTypeIIIThirdDefect
+
+#check Bong.BONG.GoodBONG.lemma79_typeIII_thirdPrefix_gt_mixedShift
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_thirdPrefix_gt_mixedShift

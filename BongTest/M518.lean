@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailDomination
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check CaseEightStrictBetaTailConsequences.local_defect_eq
+#check CaseEightStrictBetaTailConsequences.alternating_defect_ge
+
+#print axioms CaseEightStrictBetaTailConsequences.local_defect_eq
+#print axioms CaseEightStrictBetaTailConsequences.alternating_defect_ge
+
+end BONG.GoodBONG
+
+end Bong

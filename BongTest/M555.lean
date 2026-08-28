@@ -1,0 +1,16 @@
+/- M555 audit: gap-two prefix identities at the current index. -/
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoIndexPrefixes
+
+namespace Bong
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_gapTwo_sourcePrefixDefect_at_evenIndex
+#check beli2019Lemma79_typeI_caseEight_gapTwo_targetPrefixDefect_at_evenIndex
+#check beli2019Lemma79_typeI_caseEight_gapTwo_targetPrefixDefect_at_oddIndex
+
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_sourcePrefixDefect_at_evenIndex
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_targetPrefixDefect_at_evenIndex
+#print axioms beli2019Lemma79_typeI_caseEight_gapTwo_targetPrefixDefect_at_oddIndex
+
+end BONG.GoodBONG
+end Bong

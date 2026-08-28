@@ -1,0 +1,6 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeITargetReduction
+
+#check Bong.BONG.GoodBONG.Lemma79TypeICentralTargetException
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_central_even_target_reduction
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_central_even_target_reduction

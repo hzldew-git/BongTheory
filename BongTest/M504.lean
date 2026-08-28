@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityTypeIIIBoundaryWitness
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check Lemma79CaseSixTypeIIIBoundaryWitness
+#check beli2019Lemma79_typeIII_caseSix_secondParity_or_boundaryWitness
+
+#print axioms Lemma79CaseSixTypeIIIBoundaryWitness
+#print axioms beli2019Lemma79_typeIII_caseSix_secondParity_or_boundaryWitness
+
+end BONG.GoodBONG
+
+end Bong

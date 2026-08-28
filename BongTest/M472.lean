@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma79EvenTargetIntegralSplit
+
+#check Bong.BONG.GoodBONG.lemma79_even_representationAlphaValue_le_primaryCoefficient
+#check Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_not_integral
+#check Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_integral_strict_primary
+
+#print axioms Bong.BONG.GoodBONG.lemma79_even_representationAlphaValue_le_primaryCoefficient
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_not_integral
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_integral_strict_primary

@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79OrderTypeIIINonterminal
+
+#check Bong.BONG.GoodBONG.beli2019Lemma79_i_typeIII_nonterminal
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_i_typeIII_nonterminal

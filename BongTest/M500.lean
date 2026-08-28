@@ -1,0 +1,12 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityTypeIIIThirdPrefix
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeIII_caseSix_thirdPrefixDefect_eq_mixedShift
+#print axioms beli2019Lemma79_typeIII_caseSix_thirdPrefixDefect_eq_mixedShift
+
+end BONG.GoodBONG
+
+end Bong

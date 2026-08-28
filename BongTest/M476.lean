@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeIEqualityParity
+
+namespace Bong.BONG.GoodBONG
+
+#check lemma79_even_rightEndpoint_eq_of_domination_equality
+#check lemma79_typeI_even_thirdPrefix_modEq_of_rightEndpoint_eq
+
+#print axioms lemma79_even_rightEndpoint_eq_of_domination_equality
+#print axioms lemma79_typeI_even_thirdPrefix_modEq_of_rightEndpoint_eq
+
+end Bong.BONG.GoodBONG

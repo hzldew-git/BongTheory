@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79EvenBoundarySecondary
+
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_leftBoundary_secondary
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_leftBoundary_secondary
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeII_even_leftBoundary_secondary
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeIII_even_leftBoundary_secondary

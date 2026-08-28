@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79OrderTypeIIIPrimary
+
+#check Bong.BONG.GoodBONG.lemma79_typeIII_mixedShift_pos_and_odd
+#check Bong.BONG.GoodBONG.lemma79_typeIII_pair_of_primary_le_mixedShift
+
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_mixedShift_pos_and_odd
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_pair_of_primary_le_mixedShift

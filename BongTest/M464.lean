@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeICentralCandidates
+
+#check Bong.BONG.GoodBONG.representationPrimaryDefect_le_add_two_of_order_eq_add_two
+#check Bong.BONG.GoodBONG.lemma79_typeI_central_even_halfGap_le_add_two
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_central_even_primary
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_central_even_secondary
+
+#print axioms Bong.BONG.GoodBONG.representationPrimaryDefect_le_add_two_of_order_eq_add_two
+#print axioms Bong.BONG.GoodBONG.lemma79_typeI_central_even_halfGap_le_add_two
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_central_even_primary
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_central_even_secondary

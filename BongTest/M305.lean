@@ -1,0 +1,9 @@
+import Bong.Bong.Beli2019Lemma69TypeIIILeftValue
+
+#check Bong.BONG.GoodBONG.lemma78_typeIII_left_boundary_orders
+#check Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeIII_sourceLeftValue_of_center
+#check Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeIII_sourceLeftValue
+
+#print axioms Bong.BONG.GoodBONG.lemma78_typeIII_left_boundary_orders
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeIII_sourceLeftValue_of_center
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma69_ii_typeIII_sourceLeftValue

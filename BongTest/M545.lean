@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapTwoTerminalAlpha
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma69_v_typeI_of_rightSwitch_eq_last_caseEight
+#check beli2019Lemma79_typeI_caseEight_terminalPreviousAlpha_eq_add_two
+
+#print axioms beli2019Lemma69_v_typeI_of_rightSwitch_eq_last_caseEight
+#print axioms beli2019Lemma79_typeI_caseEight_terminalPreviousAlpha_eq_add_two
+
+end BONG.GoodBONG
+
+end Bong

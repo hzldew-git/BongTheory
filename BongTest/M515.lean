@@ -1,0 +1,16 @@
+import Bong.Bong.Beli2019Lemma79RightTailBetaProfile
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check CaseEightStrictBetaTailConsequences
+#check CaseEightBetaTailConsequences.alpha_lt_halfGap_of_last
+#check caseEight_strictBetaTailConsequences
+
+#print axioms CaseEightBetaTailConsequences.alpha_lt_halfGap_of_last
+#print axioms caseEight_strictBetaTailConsequences
+
+end BONG.GoodBONG
+
+end Bong

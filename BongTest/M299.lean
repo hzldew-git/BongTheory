@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma78PrefixDefect
+
+#check Bong.BONG.GoodBONG.lemma78_typeIII_targetPrefix_gt_mixedShift
+#check Bong.BONG.GoodBONG.beli2019Lemma78_firstSourcePrefixDefect
+
+#print axioms Bong.BONG.GoodBONG.lemma78_typeIII_targetPrefix_gt_mixedShift
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma78_firstSourcePrefixDefect

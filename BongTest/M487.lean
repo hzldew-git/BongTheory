@@ -1,0 +1,19 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondaryInterior
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check lemma79_caseSix_profile_adjacentSum_eq
+#check lemma79_caseSix_profile_secondary_le_add_one
+#check beli2019Lemma79_typeII_caseSix_secondary_le_add_one
+#check beli2019Lemma79_typeIII_caseSix_secondary_le_add_one
+
+#print axioms lemma79_caseSix_profile_adjacentSum_eq
+#print axioms lemma79_caseSix_profile_secondary_le_add_one
+#print axioms beli2019Lemma79_typeII_caseSix_secondary_le_add_one
+#print axioms beli2019Lemma79_typeIII_caseSix_secondary_le_add_one
+
+end BONG.GoodBONG
+
+end Bong

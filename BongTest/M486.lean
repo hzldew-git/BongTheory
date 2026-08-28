@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79CaseSixPrimaryCandidates
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check lemma79_caseSix_profile_halfGap_le_add_one
+#check beli2019Lemma79_typeII_caseSix_primary_le_add_one
+#check beli2019Lemma79_typeIII_caseSix_primary_le_add_one
+
+#print axioms lemma79_caseSix_profile_halfGap_le_add_one
+#print axioms beli2019Lemma79_typeII_caseSix_primary_le_add_one
+#print axioms beli2019Lemma79_typeIII_caseSix_primary_le_add_one
+
+end BONG.GoodBONG
+
+end Bong

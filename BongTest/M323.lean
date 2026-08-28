@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma79OrderCandidateExtraction
+
+#check Bong.BONG.GoodBONG.representationAlphaPrime_le_of_alphaValue_le_of_lt_halfGap
+#check Bong.BONG.GoodBONG.representationDefectCandidate_le_of_alphaValue_le_of_lt_halfGap
+
+#print axioms Bong.BONG.GoodBONG.representationAlphaPrime_le_of_alphaValue_le_of_lt_halfGap
+#print axioms Bong.BONG.GoodBONG.representationDefectCandidate_le_of_alphaValue_le_of_lt_halfGap

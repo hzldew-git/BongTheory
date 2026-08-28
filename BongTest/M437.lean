@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019Lemma79EvenCappedLeft
+
+#check Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_noGap_leftOuter
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeII_even_leftTargetCapped
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeIII_even_leftTargetCapped
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_leftTargetCapped
+
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_noGap_leftOuter
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeII_even_leftTargetCapped
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeIII_even_leftTargetCapped
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_leftTargetCapped

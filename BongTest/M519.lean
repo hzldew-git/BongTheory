@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailSourceDomination
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check truncatedPrefixDefect_alternating_gt
+#check CaseEightStrictBetaTailConsequences.source_alternating_defect_gt
+
+#print axioms truncatedPrefixDefect_alternating_gt
+#print axioms CaseEightStrictBetaTailConsequences.source_alternating_defect_gt
+
+end BONG.GoodBONG
+
+end Bong

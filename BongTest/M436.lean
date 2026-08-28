@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79EvenCappedNormFloor
+
+#check Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_sourceNext_eq_normFloor
+
+#print axioms Bong.BONG.GoodBONG.lemma79_even_targetCapped_of_sourceNext_eq_normFloor

@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeILeftComplete
+
+#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_beforeLeftSwitch_complete
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_typeI_even_beforeLeftSwitch_complete

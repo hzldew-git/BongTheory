@@ -1,0 +1,7 @@
+import Bong.Bong.Beli2019Lemma78PreviousAlpha
+
+#check Bong.BONG.GoodBONG.lemma78_typeIII_sourcePreviousAlpha_eq_one
+#check Bong.BONG.GoodBONG.lemma78_typeIII_sourcePreviousAlpha_eq_one_of_center
+
+#print axioms Bong.BONG.GoodBONG.lemma78_typeIII_sourcePreviousAlpha_eq_one
+#print axioms Bong.BONG.GoodBONG.lemma78_typeIII_sourcePreviousAlpha_eq_one_of_center

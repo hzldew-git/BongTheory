@@ -1,0 +1,19 @@
+import Bong.Bong.Beli2019Lemma79CaseSixSecondParityCurrent
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check caseSix_thirdPrefix_odd_of_comparison_odd_and_target_even
+#check caseSix_index_even_of_current_lt_and_orders_modEq
+#check caseSix_targetCurrent_le_thirdPrevious_of_modEq_and_prefix_odd
+#check lemma79_caseSix_secondParity_of_prefix_odd_target_even_orders_modEq
+
+#print axioms caseSix_thirdPrefix_odd_of_comparison_odd_and_target_even
+#print axioms caseSix_index_even_of_current_lt_and_orders_modEq
+#print axioms caseSix_targetCurrent_le_thirdPrevious_of_modEq_and_prefix_odd
+#print axioms lemma79_caseSix_secondParity_of_prefix_odd_target_even_orders_modEq
+
+end BONG.GoodBONG
+
+end Bong

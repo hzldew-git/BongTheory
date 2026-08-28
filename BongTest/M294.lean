@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma78Defect
+
+#check Bong.BONG.GoodBONG.representationPrimaryDefect_eq_zero_of_alphaValue_eq_zero
+#check Bong.BONG.GoodBONG.truncatedPrefixDefect_eq_neg_order_of_primary_eq_zero
+#check Bong.BONG.GoodBONG.truncatedPrefixDefect_eq_neg_order_of_alphaValue_eq_zero
+#check Bong.BONG.GoodBONG.representationSecondaryDefect_pos_of_orderCoefficient_pos
+#check Bong.BONG.GoodBONG.lemma78_typeIII_representationHalfGap_pos
+#check Bong.BONG.GoodBONG.beli2019Lemma78_centralMixedDefect
+#check Bong.BONG.GoodBONG.beli2019Lemma78_centralMixedDefect_of_alpha_zero
+
+#print axioms Bong.BONG.GoodBONG.representationPrimaryDefect_eq_zero_of_alphaValue_eq_zero
+#print axioms Bong.BONG.GoodBONG.truncatedPrefixDefect_eq_neg_order_of_primary_eq_zero
+#print axioms Bong.BONG.GoodBONG.truncatedPrefixDefect_eq_neg_order_of_alphaValue_eq_zero
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma78_centralMixedDefect
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma78_centralMixedDefect_of_alpha_zero

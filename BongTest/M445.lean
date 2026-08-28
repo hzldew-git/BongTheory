@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019Lemma79EvenLeftCandidates
+
+#check Bong.BONG.GoodBONG.representationHalfGap_le_add_two_of_order_le_add_four
+#check Bong.BONG.GoodBONG.representationPrimaryDefect_le_add_two_of_order_eq_add_one
+#check Bong.BONG.GoodBONG.lemma79_even_leftOuter_halfGap_le_add_two
+#check Bong.BONG.GoodBONG.lemma79_even_leftOuter_primary_le_add_two
+
+#print axioms Bong.BONG.GoodBONG.representationHalfGap_le_add_two_of_order_le_add_four
+#print axioms Bong.BONG.GoodBONG.representationPrimaryDefect_le_add_two_of_order_eq_add_one
+#print axioms Bong.BONG.GoodBONG.lemma79_even_leftOuter_halfGap_le_add_two
+#print axioms Bong.BONG.GoodBONG.lemma79_even_leftOuter_primary_le_add_two

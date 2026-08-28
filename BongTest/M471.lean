@@ -1,0 +1,11 @@
+import Bong.Bong.Beli2019CappedIntegrality
+
+#check Bong.IsWithTopRationalInteger.coe_le_of_sub_one_lt
+#check Bong.BONG.GoodBONG.defectOrder_eq_top_or_isWithTopRationalInteger
+#check Bong.BONG.GoodBONG.alternatingSelfCapped_integral_or_eq_nonintegral_alpha
+#check Bong.BONG.GoodBONG.twoE_lt_alternatingSelfCapped_of_not_integral
+
+#print axioms Bong.IsWithTopRationalInteger.coe_le_of_sub_one_lt
+#print axioms Bong.BONG.GoodBONG.defectOrder_eq_top_or_isWithTopRationalInteger
+#print axioms Bong.BONG.GoodBONG.alternatingSelfCapped_integral_or_eq_nonintegral_alpha
+#print axioms Bong.BONG.GoodBONG.twoE_lt_alternatingSelfCapped_of_not_integral

@@ -1,0 +1,15 @@
+import Bong.Bong.Beli2019Lemma79RightTailGapOnePrefix
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check CaseEightStrictBetaTailConsequences.tail_order_modEq_reference
+#check CaseEightStrictBetaTailConsequences.targetPrefix_modEq_of_gapOne
+
+#print axioms CaseEightStrictBetaTailConsequences.tail_order_modEq_reference
+#print axioms CaseEightStrictBetaTailConsequences.targetPrefix_modEq_of_gapOne
+
+end BONG.GoodBONG
+
+end Bong

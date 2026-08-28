@@ -1,0 +1,6 @@
+/- M413 smoke test. -/
+import Bong.Bong.Beli2019Lemma79TypeIIIRightComparison
+
+#check Bong.BONG.GoodBONG.lemma79_typeIII_targetComparisonPrefix_eq_mixedShift
+#check Bong.BONG.GoodBONG.lemma79_typeIII_right_comparisonPrefixes_eq_of_comparison_lt_target
+#print axioms Bong.BONG.GoodBONG.lemma79_typeIII_right_comparisonPrefixes_eq_of_comparison_lt_target

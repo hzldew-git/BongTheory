@@ -1,0 +1,17 @@
+import Bong.Bong.Beli2019Lemma79RightTailLastGap
+
+namespace Bong
+
+namespace BONG.GoodBONG
+
+#check beli2019Lemma79_typeI_caseEight_lastGap
+#check beli2019Lemma79_typeII_caseEight_lastGap
+#check beli2019Lemma79_typeIII_caseEight_lastGap
+
+#print axioms beli2019Lemma79_typeI_caseEight_lastGap
+#print axioms beli2019Lemma79_typeII_caseEight_lastGap
+#print axioms beli2019Lemma79_typeIII_caseEight_lastGap
+
+end BONG.GoodBONG
+
+end Bong

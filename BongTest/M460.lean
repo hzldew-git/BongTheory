@@ -1,0 +1,5 @@
+import Bong.Bong.Beli2019Lemma79EvenTypeIBoundarySecondary
+
+#check Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_leftBoundary_secondary
+
+#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_typeI_even_leftBoundary_secondary
