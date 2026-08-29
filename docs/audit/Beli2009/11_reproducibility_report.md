@@ -7,5 +7,5 @@ target from source.  `BongTest/Beli2009Audit.lean` and
 the former printed 65 axiom reports.
 
 Local status: `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES`.
-Cross-platform GitHub CI remains pending.  The paper PDF is provenance
-material and is not a build dependency.
+Exact-tag public Ubuntu and Windows evidence also passed under the documented
+scopes.  The paper PDF is provenance material and is not a build dependency.

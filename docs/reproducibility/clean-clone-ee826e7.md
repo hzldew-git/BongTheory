@@ -10,9 +10,10 @@ separate clone of committed revision
 `ee826e7a8e67dda053563c01e027b2379bd68e6f`.  All four focused audit commands
 then exited zero, and the final Git worktree was clean.
 
-This receipt establishes local committed-source reproducibility.  It does not
-record an independent human semantic sign-off or a completed remote
-cross-platform CI run.
+This receipt establishes local committed-source reproducibility.  Subsequent
+public hosted-run evidence is recorded separately in
+`github-actions-v0.1.0-rc.1.md`.  Neither receipt records an independent human
+semantic sign-off.
 
 ## Host and pinned inputs
 
@@ -124,7 +125,8 @@ git status --porcelain
 <no output>
 ```
 
-Remote Ubuntu and Windows workflow results must be added after the repository
-and release-candidate tag are published.  Independent mathematical and Lean
-review signatures remain intentionally blank in
+The subsequent exact-tag Ubuntu full build and Windows build/audit evidence,
+including downloaded log and artifact hashes, is recorded in
+`github-actions-v0.1.0-rc.1.md`.  Independent mathematical and Lean review
+signatures remain intentionally blank in
 `docs/audit/IndependentReviewSignoff.md`.

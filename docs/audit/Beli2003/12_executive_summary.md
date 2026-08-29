@@ -8,7 +8,7 @@
 - Partial or mismatched core results: 0 found.
 - Trust boundary: complete proof terms; standard Lean axioms only.
 - Reproducibility: committed Windows clean-clone source build and focused
-  audit passed; cross-platform GitHub CI remains pending.
+  audit passed; exact-tag public Ubuntu and Windows evidence also passed.
 - Project-level grade contribution: B.
 
 Safe claim: Lean accepts project-law-free formal counterparts of the three

@@ -6,5 +6,6 @@ public wrappers passed the axiom/signature audit.  A separate clone of commit
 target from source.  `Beli2006Audit.lean` exited zero in 15.13 seconds.
 
 Local status: `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES`.
-Cross-platform GitHub CI remains pending.  No 2006 PDF is needed to compile
-the Lean project; see the shared clean-clone receipt for exact evidence.
+Exact-tag public Ubuntu and Windows evidence also passed under the documented
+scopes.  No 2006 PDF is needed to compile the Lean project; see the shared
+local and GitHub Actions receipts for exact evidence.

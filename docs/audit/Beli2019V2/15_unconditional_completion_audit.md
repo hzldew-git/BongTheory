@@ -226,9 +226,14 @@ Local reproducibility status:
 **`REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES`**.
 
 The dependency sources remain external network inputs pinned by
-`lake-manifest.json`; cross-platform GitHub CI is pending the first public
-repository run.  The complete receipt and log hashes are recorded in
-`docs/reproducibility/clean-clone-ee826e7.md`.
+`lake-manifest.json`.  Public exact-tag evidence subsequently passed on
+Ubuntu and Windows: Ubuntu built the complete default target without a GitHub
+project cache; Windows separately completed a 5,555-job no-project-cache full
+build and a corrected 4,935-job public-audit dependency closure whose four
+audit logs match the local Windows receipt byte for byte.  The complete local
+and hosted receipts and log hashes are recorded in
+`docs/reproducibility/clean-clone-ee826e7.md` and
+`docs/reproducibility/github-actions-v0.1.0-rc.1.md`.
 
 ## Precise completion claim
 
@@ -242,5 +247,5 @@ The justified claim is:
 
 This audit does not claim that Lean has independently validated the prose of
 the papers or that every source item has received independent human review.
-It also does not claim cross-platform CI success before the public workflow
-runs are identified.
+The public hosted technical evidence does not replace the independent human
+semantic sign-off required for `VERIFIED_MATCH` or Grade A.

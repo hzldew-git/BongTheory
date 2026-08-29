@@ -7,7 +7,7 @@
 - Numbered/formalized results with axiom reports: 65.
 - Trust: standard Lean axioms only; no public law/data boundary.
 - Reproducibility: committed Windows clean-clone source build and 2009 audit
-  passed; cross-platform GitHub CI remains pending.
+  passed; exact-tag public Ubuntu and Windows evidence also passed.
 - Grade contribution: B.
 
 Safe claim: the mapped paper results have complete, project-law-free Lean
