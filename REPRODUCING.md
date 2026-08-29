@@ -64,6 +64,19 @@ commands, exit codes, and final worktree status.
 The current local receipt is
 [`docs/reproducibility/clean-clone-ee826e7.md`](docs/reproducibility/clean-clone-ee826e7.md).
 
+## Hosted exact-revision run
+
+To repeat the protocol on GitHub-hosted infrastructure, open **Actions →
+Release reproducibility → Run workflow**.  Select the workflow from `main`,
+enter the release tag or full commit in `checkout_ref`, and choose `both`,
+`ubuntu-latest`, or `windows-latest` as the runner selection.  The workflow
+definition is read from `main`, but its checkout step builds the exact value of
+`checkout_ref`.  Tag pushes continue to run both supported hosted operating
+systems automatically.
+
+Each hosted job has a 300-minute limit, uploads the four theorem-audit logs,
+and rejects a build that leaves the checked worktree dirty.
+
 ## Failure reporting
 
 Open an issue containing the full commit, operating system, `lean --version`,

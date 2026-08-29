@@ -2,6 +2,21 @@ name: Release reproducibility
 
 on:
   workflow_dispatch:
+    inputs:
+      checkout_ref:
+        description: Branch, tag, or full commit to reproduce
+        required: false
+        default: ''
+        type: string
+      runner:
+        description: Runner selection
+        required: true
+        default: both
+        type: choice
+        options:
+          - both
+          - ubuntu-latest
+          - windows-latest
   push:
     tags:
       - 'v*'
@@ -15,13 +30,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: ${{ fromJSON(github.event_name == 'workflow_dispatch' && inputs.runner != 'both' && format('["{0}"]', inputs.runner) || '["ubuntu-latest","windows-latest"]') }}
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 180
+    timeout-minutes: 300
 
     steps:
       - name: Check out the exact revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.checkout_ref || github.sha }}
 
       - name: Build without a GitHub project cache
         uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
