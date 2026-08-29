@@ -74,7 +74,7 @@ definition is read from `main`, but its checkout step builds the exact value of
 `checkout_ref`.  Tag pushes continue to run both supported hosted operating
 systems automatically.
 
-Each hosted job has a 300-minute limit, uploads the four theorem-audit logs,
+Each hosted job has a 360-minute limit, uploads the four theorem-audit logs,
 and rejects a build that leaves the checked worktree dirty.
 
 ## Failure reporting
