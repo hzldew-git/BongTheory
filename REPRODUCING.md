@@ -75,7 +75,17 @@ definition is read from `main`, but its checkout step builds the exact value of
 systems automatically.
 
 Each hosted job has a 360-minute limit, uploads the four theorem-audit logs,
-and rejects a build that leaves the checked worktree dirty.
+and rejects a build that leaves the checked worktree dirty.  Ubuntu builds the
+complete default target.  To stay within the hosted Windows six-hour hard
+limit, Windows builds the complete dependency closure of the four public
+audit modules (currently 4,935 Lake jobs) and then executes those modules.
+This is not substituted for the separate, documented 5,555-job local Windows
+source rebuild; both hosted jobs continue to disable the GitHub project
+cache.
+
+The public release-candidate run history, log hashes, and artifact hashes are
+recorded in
+[`docs/reproducibility/github-actions-v0.1.0-rc.1.md`](docs/reproducibility/github-actions-v0.1.0-rc.1.md).
 
 ## Failure reporting
 

@@ -47,6 +47,7 @@ jobs:
         with:
           auto-config: false
           build: true
+          build-args: ${{ matrix.os == 'windows-latest' && 'BongTest.FinalPublicTheoremAudit BongTest.Beli2006Audit BongTest.Beli2009Audit BongTest.Beli2019Audit' || '' }}
           use-github-cache: false
           use-mathlib-cache: true
 
@@ -54,6 +55,10 @@ jobs:
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
+          $lake = Join-Path $env:USERPROFILE '.elan\bin\lake.exe'
+          if (-not (Test-Path -LiteralPath $lake)) {
+            throw "Lean action did not install Lake at the expected path: $lake"
+          }
           $auditDir = Join-Path $env:RUNNER_TEMP 'bong-audit-logs'
           New-Item -ItemType Directory -Force -Path $auditDir | Out-Null
           $modules = @(
@@ -65,7 +70,7 @@ jobs:
           foreach ($module in $modules) {
             $name = [IO.Path]::GetFileNameWithoutExtension($module)
             $log = Join-Path $auditDir ($name + '.log')
-            & lake env lean $module *> $log
+            & $lake env lean $module *> $log
             if ($LASTEXITCODE -ne 0) {
               Get-Content $log -Tail 200
               exit $LASTEXITCODE
