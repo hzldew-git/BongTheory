@@ -1005,3 +1005,4 @@ import Bong.Lattice.Omeara9328Sufficiency
 import Bong.Lattice.Omeara9310RankFourDeterminantCongruence
 import Bong.Lattice.Omeara9328StrictConditions
 import Bong.Lattice.Omeara9328NecessityStepOneEqualOrder
+import Bong.Bong.BeliUniversalComplete
