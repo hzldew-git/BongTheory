@@ -11,10 +11,17 @@ the exact local copies used for statement extraction and semantic audit.
 | Beli 2009/2010 | Constantin N. Beli, “A new approach to classification of integral quadratic forms over dyadic local fields,” electronically published 2009, *Transactions of the AMS* 362(3), 1599–1617 (2010), DOI [10.1090/S0002-9947-09-04802-8](https://doi.org/10.1090/S0002-9947-09-04802-8) | 19-page publisher PDF | `09ADCDCDD698F96D232C3F46D3901719321FE08FEF5259488D0E3B482F702120` |
 | Beli 2019 v2 | Constantin N. Beli, “Representations of quadratic lattices over dyadic local fields,” [arXiv:1905.04552v2](https://arxiv.org/abs/1905.04552v2), revised 30 May 2022 | 139-page arXiv v2 PDF | `1669C626A6D01AF297E07C2CB9584C5BD34F4CEE0F2B188EE0B351BD091C387C` |
 | Beli 2019 v2 source | Same work and version | arXiv v2 TeX source | `00D58B232A331E559D175C2DF383DE82A49BC7B044E035092B7AC96015858292` |
+| Beli Universal | Constantin-Nicolae Beli, “Universal integral quadratic forms over dyadic local fields,” [arXiv:2008.10113v2](https://arxiv.org/abs/2008.10113v2), revised 26 June 2022 | 19-page arXiv v2 PDF | `35ECB7CB20A42768A6F55D80E69D4699837419854FAB021515020CCC7488986C` |
 
 The revised condition `(iii')` following Theorem 2.1 occurs in the audited
 2019 v2 source. It is represented by the separate public endpoint
 `Bong.beli2019Theorem21_prime` and must not be inferred from an earlier draft.
+
+For Beli Universal, direct substitution into Theorem 2.1 gives coefficient
+`2r_1` in the ideal exponents of Theorem 3.1(3.2.1--2), while the frozen PDF
+prints `r_1`.  Both predicates and their zero-scale comparison are formalized;
+the discrepancy is not silently repaired.  See
+`docs/audit/BeliUniversal/13_completion_audit.md`.
 
 The formal development also uses results from O'Meara's *Introduction to
 Quadratic Forms* where Beli invokes them. Only the results used by the proof

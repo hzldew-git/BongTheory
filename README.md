@@ -2,8 +2,8 @@
 
 `BongTheory` is a Lean 4 formalization of the theory of bases of norm generators
 (BONGs) for quadratic lattices over dyadic local fields.  Its principal source
-results are four papers by Constantin N. Beli published or circulated in 2003,
-2006, 2009/2010, and 2019/2022.
+results are five papers by Constantin N. Beli published or circulated in 2003,
+2006, 2009/2010, 2019/2022, and 2022.
 
 ## Current status
 
@@ -11,6 +11,9 @@ results are four papers by Constantin N. Beli published or circulated in 2003,
   project-specific law parameters and use only `propext`, `Classical.choice`,
   and `Quot.sound`.
 - Semantic-fidelity status: `PROVISIONAL_MATCH`.
+- Beli Universal coverage status:
+  `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY`; its printed Theorem 3.1
+  exponent is kept separate from the exponent derived from Theorem 2.1.
 - Project grade: B.
 - Local reproducibility status:
   `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES` at commit
@@ -35,6 +38,9 @@ The independent mathematical-review package is under [`docs/audit`](docs/audit).
 | Beli 2009/2010 | Theorem 3.1 | `Bong.BONG.GoodBONG.beli2009Theorem31_concrete` |
 | Beli 2019 v2 | Theorem 2.1 | `Bong.beli2019Theorem21` |
 | Beli 2019 v2 | Theorem 2.1 with (iii') | `Bong.beli2019Theorem21_prime` |
+| Beli Universal | Theorem 2.1 | `Bong.BONG.GoodBONG.isUniversal_iff_universalTheorem21Conditions` |
+| Beli Universal | Theorem 3.1, direct derivation | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31DirectConditions` |
+| Beli Universal | Corollary 4.10 | `Bong.BONG.GoodBONG.beliUniversalCorollary410` |
 
 See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 [`SOURCES.md`](SOURCES.md) for the exact paper versions used.
@@ -51,6 +57,7 @@ lake env lean BongTest/FinalPublicTheoremAudit.lean
 lake env lean BongTest/Beli2006Audit.lean
 lake env lean BongTest/Beli2009Audit.lean
 lake env lean BongTest/Beli2019Audit.lean
+lake env lean BongTest/BeliUniversalAudit.lean
 ```
 
 For the complete clean-clone protocol and expected output, see

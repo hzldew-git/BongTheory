@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this formalization, please cite the software and the source papers listed in SOURCES.md."
 title: "BongTheory: BONG formalizations for quadratic lattices over dyadic local fields"
 type: software
-version: 0.1.0-rc.1
-date-released: 2026-08-29
+version: 0.2.0-rc.1
+date-released: 2026-09-01
 authors:
   - name: "BONG Theory contributors"
 license: Apache-2.0
@@ -17,6 +17,6 @@ keywords:
   - formalized mathematics
 abstract: >-
   A Lean 4 formalization of principal results from Constantin N. Beli's
-  2003, 2006, 2009/2010, and 2019 v2 papers on bases of norm generators,
-  classification, representation, and integral spinor norm groups over
-  dyadic local fields.
+  2003, 2006, 2009/2010, 2019 v2, and 2022 papers on bases of norm
+  generators, classification, representation, universality, and integral
+  spinor norm groups over dyadic local fields.
