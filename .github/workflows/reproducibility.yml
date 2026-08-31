@@ -47,7 +47,7 @@ jobs:
         with:
           auto-config: false
           build: true
-          build-args: ${{ matrix.os == 'windows-latest' && 'BongTest.FinalPublicTheoremAudit BongTest.Beli2006Audit BongTest.Beli2009Audit BongTest.Beli2019Audit' || '' }}
+          build-args: ${{ matrix.os == 'windows-latest' && 'BongTest.FinalPublicTheoremAudit BongTest.Beli2006Audit BongTest.Beli2009Audit BongTest.Beli2019Audit BongTest.BeliUniversalAudit' || '' }}
           use-github-cache: false
           use-mathlib-cache: true
 
@@ -65,7 +65,8 @@ jobs:
             'BongTest/FinalPublicTheoremAudit.lean',
             'BongTest/Beli2006Audit.lean',
             'BongTest/Beli2009Audit.lean',
-            'BongTest/Beli2019Audit.lean'
+            'BongTest/Beli2019Audit.lean',
+            'BongTest/BeliUniversalAudit.lean'
           )
           foreach ($module in $modules) {
             $name = [IO.Path]::GetFileNameWithoutExtension($module)
