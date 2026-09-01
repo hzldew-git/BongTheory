@@ -1,5 +1,9 @@
 # GitHub Actions reproducibility receipt for v0.2.0-rc.1
 
+The historical artifact names `BeliUniversalAudit.log` below are preserved
+verbatim. Current paper metadata identifies the paper as Beli 2020 and uses
+`Beli2020` for canonical review entry points.
+
 ## Scope and exact revisions
 
 Receipt finalized: 1 September 2026 (Asia/Shanghai).

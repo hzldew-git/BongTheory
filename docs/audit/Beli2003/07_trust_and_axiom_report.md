@@ -1,6 +1,8 @@
 # Trust and axiom report
 
-`BongTest/FinalPublicTheoremAudit.lean` prints all five public 2003 endpoints.
+`BongTest/Beli2003Audit.lean` is the canonical paper-specific audit and prints
+all five public 2003 endpoints. `BongTest/FinalPublicTheoremAudit.lean` retains
+the same endpoints in the aggregate five-paper audit.
 Each depends only on `propext`, `Classical.choice`, and `Quot.sound`.
 
 Repository scans find no `sorry`, `sorryAx`, project `axiom`, unsafe foreign

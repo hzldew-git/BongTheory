@@ -1,0 +1,186 @@
+name: Paper Review Kits
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'Bong/**'
+      - 'BongTest/**'
+      - 'papers/**'
+      - 'scripts/paper-kits/**'
+      - 'docs/audit/**'
+      - 'lakefile.toml'
+      - 'lake-manifest.json'
+      - 'lean-toolchain'
+      - '.github/workflows/paper-review-kits.yml'
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: paper-review-kits-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  discover-and-package:
+    runs-on: ubuntu-latest
+    outputs:
+      papers: ${{ steps.matrix.outputs.papers }}
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Discover every paper manifest
+        id: matrix
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $papers = @(
+            Get-ChildItem -LiteralPath papers -Directory |
+              Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName 'paper.json') } |
+              Sort-Object Name |
+              ForEach-Object { $_.Name }
+          )
+          if ($papers.Count -eq 0) {
+            throw 'No papers/*/paper.json manifests were found.'
+          }
+          $json = ConvertTo-Json -InputObject @($papers) -Compress
+          "papers=$json" >> $env:GITHUB_OUTPUT
+
+      - name: Generate all source-only Review Kits
+        shell: pwsh
+        env:
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $releaseTag = if ($env:REF_TYPE -eq 'tag') {
+            $env:REF_NAME
+          } else {
+            'ci-' + $env:SOURCE_SHA.Substring(0, 12)
+          }
+          $output = Join-Path $env:RUNNER_TEMP 'paper-review-kits'
+          & ./scripts/paper-kits/Build-AllPaperReviewKits.ps1 `
+            -OutputDirectory $output `
+            -ReleaseTag $releaseTag
+
+      - name: Verify every generated archive structurally
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $output = Join-Path $env:RUNNER_TEMP 'paper-review-kits'
+          foreach ($archive in Get-ChildItem -LiteralPath $output -File -Filter '*.zip') {
+            $extract = Join-Path $env:RUNNER_TEMP ('structure-' + $archive.BaseName)
+            & ./scripts/paper-kits/Test-PaperReviewKit.ps1 `
+              -Archive $archive.FullName `
+              -ExtractionDirectory $extract `
+              -StructureOnly
+          }
+
+      - name: Upload the complete paper-kit release set
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: paper-review-kits-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/paper-review-kits/*.zip
+            ${{ runner.temp }}/paper-review-kits/*SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30
+
+  clean-extract-build:
+    needs: discover-and-package
+    strategy:
+      fail-fast: false
+      matrix:
+        paper: ${{ fromJSON(needs.discover-and-package.outputs.papers) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: '4'
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Generate and extract this paper's Review Kit
+        shell: pwsh
+        env:
+          PAPER: ${{ matrix.paper }}
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $releaseTag = if ($env:REF_TYPE -eq 'tag') {
+            $env:REF_NAME
+          } else {
+            'ci-' + $env:SOURCE_SHA.Substring(0, 12)
+          }
+          $output = Join-Path $env:RUNNER_TEMP ('review-output-' + $env:PAPER)
+          $extract = Join-Path $env:RUNNER_TEMP ('review-extract-' + $env:PAPER)
+          New-Item -ItemType Directory -Path $output | Out-Null
+          & ./scripts/paper-kits/Build-PaperReviewKit.ps1 `
+            -Paper $env:PAPER `
+            -OutputDirectory $output `
+            -ReleaseTag $releaseTag
+          $archive = Get-ChildItem -LiteralPath $output -File -Filter '*.zip'
+          if (@($archive).Count -ne 1) {
+            throw "Expected exactly one Review Kit archive for $env:PAPER."
+          }
+          & ./scripts/paper-kits/Test-PaperReviewKit.ps1 `
+            -Archive $archive.FullName `
+            -ExtractionDirectory $extract `
+            -StructureOnly
+
+      - name: Build the cleanly extracted package
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          auto-config: false
+          build: true
+          lake-package-directory: ${{ runner.temp }}/review-extract-${{ matrix.paper }}
+          use-github-cache: true
+          use-mathlib-cache: false
+
+      - name: Run every audit listed by the paper manifest
+        shell: pwsh
+        env:
+          PAPER: ${{ matrix.paper }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $extract = Join-Path $env:RUNNER_TEMP ('review-extract-' + $env:PAPER)
+          $logs = Join-Path $env:RUNNER_TEMP ('review-logs-' + $env:PAPER)
+          New-Item -ItemType Directory -Path $logs | Out-Null
+          $manifest = Get-Content `
+            -LiteralPath (Join-Path $extract 'paper-manifest.json') `
+            -Raw | ConvertFrom-Json
+          Push-Location $extract
+          try {
+            foreach ($auditModule in @($manifest.formalization.auditModules)) {
+              $auditPath = ([string] $auditModule).Replace('.', '/') + '.lean'
+              $log = Join-Path $logs (([string] $auditModule).Replace('.', '-') + '.log')
+              & lake env lean $auditPath *> $log
+              if ($LASTEXITCODE -ne 0) {
+                Get-Content -LiteralPath $log -Tail 200
+                exit $LASTEXITCODE
+              }
+            }
+          } finally {
+            Pop-Location
+          }
+
+      - name: Upload this paper's archive and audit logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: paper-review-${{ matrix.paper }}-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/review-output-${{ matrix.paper }}/*.zip
+            ${{ runner.temp }}/review-logs-${{ matrix.paper }}/*.log
+          if-no-files-found: error
+          retention-days: 30

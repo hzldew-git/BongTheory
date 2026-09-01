@@ -9,7 +9,8 @@ reproducibility.
 - `Beli2009`: the classification proof and final binary-transformation results.
 - `Beli2019V2`: the complete representation proof, including revised condition
   `(iii')`.
-- `BeliUniversal`: the 2022 universal-forms paper; Theorem 2.1, the arbitrary-
+- `Beli2020`: the 2020 universal-forms paper, using the frozen 2022 v2 revision;
+  Theorem 2.1, the arbitrary-
   Jordan derivation, and every numbered Section 4 result are complete.  The
   printed exponent in Theorem 3.1(3.2.1--2) is retained as a documented source
   discrepancy.
@@ -24,14 +25,14 @@ comparison. Current theorem cards are `PROVISIONAL_MATCH`; none is
 | Beli 2006 | [`Beli2006/12_executive_summary.md`](Beli2006/12_executive_summary.md) | [`Beli2006/10_author_review_cards.md`](Beli2006/10_author_review_cards.md) | `PROVISIONAL_MATCH` |
 | Beli 2009/2010 | [`Beli2009/12_executive_summary.md`](Beli2009/12_executive_summary.md) | [`Beli2009/10_author_review_cards.md`](Beli2009/10_author_review_cards.md) | `PROVISIONAL_MATCH` |
 | Beli 2019 v2 | [`Beli2019V2/15_unconditional_completion_audit.md`](Beli2019V2/15_unconditional_completion_audit.md) | [`Beli2019V2/10_author_review_cards.md`](Beli2019V2/10_author_review_cards.md) | `PROVISIONAL_MATCH` |
-| Beli Universal | [`BeliUniversal/13_completion_audit.md`](BeliUniversal/13_completion_audit.md) | [`BeliUniversal/10_author_review_cards.md`](BeliUniversal/10_author_review_cards.md) | `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY` |
+| Beli 2020 | [`Beli2020/13_completion_audit.md`](Beli2020/13_completion_audit.md) | [`Beli2020/10_author_review_cards.md`](Beli2020/10_author_review_cards.md) | `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY` |
 
 The two independent reviewer roles, required evidence, and intentionally blank
 approval fields are consolidated in
 [`IndependentReviewSignoff.md`](IndependentReviewSignoff.md).  Public review is
 requested in [`semantic-review` issue 4](https://github.com/hzldew-git/BongTheory/issues/4)
 for the preceding four-paper release and
-[`Beli Universal` issue 7](https://github.com/hzldew-git/BongTheory/issues/7)
+[`Beli 2020` issue 7](https://github.com/hzldew-git/BongTheory/issues/7)
 for this release.  Independent reproduction is requested in
 [`issue 8`](https://github.com/hzldew-git/BongTheory/issues/8).
 

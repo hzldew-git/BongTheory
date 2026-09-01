@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "beli2006",
+  "canonicalName": "Beli 2006",
+  "assetStem": "Beli2006",
+  "year": 2006,
+  "title": "Representations of integral quadratic forms over dyadic local fields",
+  "author": "Constantin N. Beli",
+  "sourceUrl": "https://doi.org/10.1090/S1079-6762-06-00165-X",
+  "sourceDescription": "13-page publisher PDF",
+  "sourceSha256": "DB1B681B186F1688FB1C2CF4B03CAB7E78896144D680471F67D6893C82DF2371",
+  "entryModule": "Bong.Papers.Beli2006",
+  "auditModules": [
+    "BongTest.Beli2006Audit"
+  ],
+  "auditDirectory": "docs/audit/Beli2006",
+  "semanticStatus": "PROVISIONAL_MATCH",
+  "grade": "B",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

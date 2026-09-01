@@ -3,7 +3,7 @@
 No independent human sign-off has been recorded as of 1 September 2026.
 
 Current review target: annotated tag `v0.2.0-rc.1`, commit
-`90511e852471ba68bbb375290668c456522b0f9c`.  The Beli Universal mathematical-
+`90511e852471ba68bbb375290668c456522b0f9c`.  The Beli 2020 mathematical-
 review request is [issue 7](https://github.com/hzldew-git/BongTheory/issues/7),
 and the independent clean-clone request is
 [issue 8](https://github.com/hzldew-git/BongTheory/issues/8).

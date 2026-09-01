@@ -601,4 +601,5 @@ import BongTest.DiagonalQuaternaryComplementAudit
 import BongTest.DiagonalLocalClassificationAudit
 import BongTest.DiagonalTernaryRepresentationObstructionAudit
 import BongTest.DiagonalRepresentationParityAudit
-import BongTest.BeliUniversalAudit
+import BongTest.Beli2003Audit
+import BongTest.Beli2020Audit

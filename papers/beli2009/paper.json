@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "beli2009",
+  "canonicalName": "Beli 2009/2010",
+  "assetStem": "Beli2009",
+  "year": 2009,
+  "title": "A new approach to classification of integral quadratic forms over dyadic local fields",
+  "author": "Constantin N. Beli",
+  "sourceUrl": "https://doi.org/10.1090/S0002-9947-09-04802-8",
+  "sourceDescription": "19-page publisher PDF; electronically published 2009, journal issue 2010",
+  "sourceSha256": "09ADCDCDD698F96D232C3F46D3901719321FE08FEF5259488D0E3B482F702120",
+  "entryModule": "Bong.Papers.Beli2009",
+  "auditModules": [
+    "BongTest.Beli2009Audit"
+  ],
+  "auditDirectory": "docs/audit/Beli2009",
+  "coverageStatus": "FULLY_FORMALIZED",
+  "semanticStatus": "PROVISIONAL_MATCH",
+  "grade": "B",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

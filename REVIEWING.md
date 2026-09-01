@@ -10,7 +10,7 @@ review cards. Confirm the mathematical objects, normalization of valuation
 and quadratic defect, source/target orientation, quantifier order, strict
 inequalities, rank conventions, exceptional cases, and one-based to zero-based
 index translation. Record disagreements rather than silently repairing them.
-For Beli Universal, explicitly decide whether the `r_1` coefficient printed in
+For Beli 2020, explicitly decide whether the `r_1` coefficient printed in
 Theorem 3.1(3.2.1--2) agrees with the `2r_1` coefficient obtained by direct
 substitution into Theorem 2.1, or should be recorded as a source correction.
 

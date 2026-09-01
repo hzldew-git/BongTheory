@@ -3,7 +3,8 @@
 `BongTheory` is a Lean 4 formalization of the theory of bases of norm generators
 (BONGs) for quadratic lattices over dyadic local fields.  Its principal source
 results are five papers by Constantin N. Beli published or circulated in 2003,
-2006, 2009/2010, 2019/2022, and 2022.
+2006, 2009/2010, 2019, and 2020. The two arXiv papers use their frozen 2022
+v2 revisions.
 
 ## Current status
 
@@ -11,7 +12,7 @@ results are five papers by Constantin N. Beli published or circulated in 2003,
   project-specific law parameters and use only `propext`, `Classical.choice`,
   and `Quot.sound`.
 - Semantic-fidelity status: `PROVISIONAL_MATCH`.
-- Beli Universal coverage status:
+- Beli 2020 coverage status:
   `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY`; its printed Theorem 3.1
   exponent is kept separate from the exponent derived from Theorem 2.1.
 - Project grade: B.
@@ -40,12 +41,24 @@ The independent mathematical-review package is under [`docs/audit`](docs/audit).
 | Beli 2009/2010 | Theorem 3.1 | `Bong.BONG.GoodBONG.beli2009Theorem31_concrete` |
 | Beli 2019 v2 | Theorem 2.1 | `Bong.beli2019Theorem21` |
 | Beli 2019 v2 | Theorem 2.1 with (iii') | `Bong.beli2019Theorem21_prime` |
-| Beli Universal | Theorem 2.1 | `Bong.BONG.GoodBONG.isUniversal_iff_universalTheorem21Conditions` |
-| Beli Universal | Theorem 3.1, direct derivation | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31DirectConditions` |
-| Beli Universal | Corollary 4.10 | `Bong.BONG.GoodBONG.beliUniversalCorollary410` |
+| Beli 2020 | Theorem 2.1 | `Bong.BONG.GoodBONG.isUniversal_iff_universalTheorem21Conditions` |
+| Beli 2020 | Theorem 3.1, direct derivation | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31DirectConditions` |
+| Beli 2020 | Corollary 4.10 | `Bong.BONG.GoodBONG.beliUniversalCorollary410` |
 
 See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 [`SOURCES.md`](SOURCES.md) for the exact paper versions used.
+
+## Download one paper
+
+Reviewers do not need the complete 2,500-file development tree. The
+[`paper-specific Review Kit index`](papers/INDEX.md) provides one source-only
+ZIP for each paper, together with its canonical Lean entry, axiom audit,
+fidelity package, exact source commit, and checksums. Every kit is generated
+from the local transitive import closure and is built again after extraction.
+
+The metadata-driven procedure in [`papers/SCHEMA.md`](papers/SCHEMA.md) is the
+default distribution requirement for every later BONG-related paper added to
+this repository.
 
 ## Reproduce locally
 
@@ -56,10 +69,11 @@ dependencies in [`lake-manifest.json`](lake-manifest.json).
 lake exe cache get
 lake build
 lake env lean BongTest/FinalPublicTheoremAudit.lean
+lake env lean BongTest/Beli2003Audit.lean
 lake env lean BongTest/Beli2006Audit.lean
 lake env lean BongTest/Beli2009Audit.lean
 lake env lean BongTest/Beli2019Audit.lean
-lake env lean BongTest/BeliUniversalAudit.lean
+lake env lean BongTest/Beli2020Audit.lean
 ```
 
 For the complete clean-clone protocol and expected output, see
@@ -72,7 +86,10 @@ The current public hosted receipt is
 
 ```text
 Bong/                  formal definitions and proofs
+Bong/Papers/           canonical paper-specific import entry points
 BongTest/              compilation, signature, and axiom audits
+papers/                paper manifests, download index, and packaging standard
+scripts/paper-kits/     Review Kit generation and clean-extract verification
 docs/audit/            semantic-fidelity review packages
 docs/DevelopmentHistory.md
                        chronological M0--M... development record

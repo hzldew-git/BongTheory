@@ -44,7 +44,7 @@ until a paper author or independent domain expert and an independent Lean
 expert record their decisions in the review package. Compilation is not an
 independent semantic endorsement.
 
-The Beli Universal package has coverage status
+The Beli 2020 package has coverage status
 `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY`.  Its direct Theorem 3.1
 endpoint uses the coefficient obtained by substitution into Theorem 2.1; the
 paper's printed coefficient is exposed separately and proved equivalent under

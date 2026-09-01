@@ -23,14 +23,14 @@ lake env lean BongTest/FinalPublicTheoremAudit.lean
 lake env lean BongTest/Beli2006Audit.lean
 lake env lean BongTest/Beli2009Audit.lean
 lake env lean BongTest/Beli2019Audit.lean
-lake env lean BongTest/BeliUniversalAudit.lean
-rg -n -g 'BeliUniversal*.lean' -g 'GoodBONGScalarAgreementClassification.lean' -g 'OMaximal*.lean' -g 'Universality.lean' -g 'BeliUniversalAudit.lean' '\bsorry\b|\badmit\b|\bsorryAx\b|^\s*axiom\b|^\s*opaque\b|^\s*unsafe\b|^\s*extern\b|implemented_by|native_decide|run_tac' Bong BongTest
+lake env lean BongTest/Beli2020Audit.lean
+rg -n -g 'BeliUniversal*.lean' -g 'Beli2020.lean' -g 'GoodBONGScalarAgreementClassification.lean' -g 'OMaximal*.lean' -g 'Universality.lean' -g 'Beli2020Audit.lean' '\bsorry\b|\badmit\b|\bsorryAx\b|^\s*axiom\b|^\s*opaque\b|^\s*unsafe\b|^\s*extern\b|implemented_by|native_decide|run_tac' Bong BongTest
 git status --porcelain
 ```
 
 The complete default target exited successfully after 5,597 jobs and
 17,213.742 seconds.  The five focused audit commands then exited zero.
-`BongTest.BeliUniversalAudit` checks the public endpoints for Theorem 2.1,
+`BongTest.Beli2020Audit` checks the public endpoints for Theorem 2.1,
 Theorem 3.1, Lemmas 4.1--4.9, Corollary 4.5(i)--(iv), and Corollary 4.10.
 
 Every reported theorem used only `propext`, `Classical.choice`, and
