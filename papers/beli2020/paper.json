@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "beli2020",
+  "canonicalName": "Beli 2020",
+  "assetStem": "Beli2020",
+  "year": 2020,
+  "title": "Universal integral quadratic forms over dyadic local fields",
+  "author": "Constantin N. Beli",
+  "sourceUrl": "https://arxiv.org/abs/2008.10113v2",
+  "sourceDescription": "19-page arXiv v2 PDF; first submitted 23 August 2020, revised 26 June 2022",
+  "sourceSha256": "35ECB7CB20A42768A6F55D80E69D4699837419854FAB021515020CCC7488986C",
+  "entryModule": "Bong.Papers.Beli2020",
+  "auditModules": [
+    "BongTest.Beli2020Audit"
+  ],
+  "auditDirectory": "docs/audit/Beli2020",
+  "coverageStatus": "FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY",
+  "semanticStatus": "PROVISIONAL_MATCH",
+  "grade": "B",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "legacyImplementationPrefixes": [
+    "BeliUniversal"
+  ],
+  "reviewNotice": "The frozen arXiv v2 source prints r_1 in Theorem 3.1(3.2.1--2), while direct substitution into Theorem 2.1 gives 2r_1. The formalization keeps the direct and literal criteria separate."
+}

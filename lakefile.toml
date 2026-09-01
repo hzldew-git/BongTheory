@@ -1,5 +1,5 @@
 name = "BongTheory"
-version = "0.1.0"
+version = "0.3.0-rc.1"
 keywords = ["math"]
 defaultTargets = ["Bong", "BongTest"]
 

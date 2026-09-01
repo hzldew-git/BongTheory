@@ -1006,3 +1006,8 @@ import Bong.Lattice.Omeara9310RankFourDeterminantCongruence
 import Bong.Lattice.Omeara9328StrictConditions
 import Bong.Lattice.Omeara9328NecessityStepOneEqualOrder
 import Bong.Bong.BeliUniversalComplete
+import Bong.Papers.Beli2003
+import Bong.Papers.Beli2006
+import Bong.Papers.Beli2009
+import Bong.Papers.Beli2019
+import Bong.Papers.Beli2020

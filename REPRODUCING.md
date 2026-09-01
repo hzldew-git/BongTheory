@@ -8,7 +8,7 @@
   `10e8c666bfda81dcac44332cd38f481d8d02e31a`.
 - Audited release-candidate code and CI commit:
   `5befe079dbf3569d1760b8e66bc52aef0de21745`.
-- Current release-candidate target: `v0.2.0-rc.1`.
+- Current paper-kit release-candidate target: `v0.3.0-rc.1`.
 - Supported build entry points: `Bong` and `BongTest`.
 
 No paper PDF, generated proof file, environment variable, Mathematica
@@ -25,10 +25,11 @@ git checkout <release-tag-or-full-commit>
 lake exe cache get
 lake build
 lake env lean BongTest/FinalPublicTheoremAudit.lean
+lake env lean BongTest/Beli2003Audit.lean
 lake env lean BongTest/Beli2006Audit.lean
 lake env lean BongTest/Beli2009Audit.lean
 lake env lean BongTest/Beli2019Audit.lean
-lake env lean BongTest/BeliUniversalAudit.lean
+lake env lean BongTest/Beli2020Audit.lean
 git status --porcelain
 ```
 
@@ -68,6 +69,27 @@ commands, exit codes, and final worktree status.
 The current local receipt is
 [`docs/reproducibility/clean-clone-5befe079.md`](docs/reproducibility/clean-clone-5befe079.md).
 
+## Paper-specific Review Kits
+
+The canonical download table is [`papers/INDEX.md`](papers/INDEX.md). Each
+archive contains a generated `paper-manifest.json`, `FILES.sha256`, the
+paper-specific entry and audit modules, their repository-local transitive
+imports, and the corresponding fidelity materials. It contains neither
+compiled Lean artifacts nor unrelated `BongTest/M*.lean` milestone files.
+
+To generate all current and future manifest-registered papers:
+
+```powershell
+./scripts/paper-kits/Build-AllPaperReviewKits.ps1 `
+  -OutputDirectory <fresh-output-directory> `
+  -ReleaseTag <tag>
+```
+
+The `Paper Review Kits` workflow discovers `papers/*/paper.json` rather than
+using a handwritten paper list. It verifies every archive checksum, extracts
+each package into a clean directory, builds its generated `Bong` and
+`BongTest` roots, and runs every audit named by that paper's manifest.
+
 ## Hosted exact-revision run
 
 To repeat the protocol on GitHub-hosted infrastructure, open **Actions →
@@ -78,11 +100,12 @@ definition is read from `main`, but its checkout step builds the exact value of
 `checkout_ref`.  Tag pushes continue to run both supported hosted operating
 systems automatically.
 
-Each hosted job has a 360-minute limit, uploads the five theorem-audit logs,
+Each hosted job has a 360-minute limit and uploads the aggregate audit plus
+five paper-specific theorem-audit logs,
 and rejects a build that leaves the checked worktree dirty.  Ubuntu builds the
 complete default target.  To stay within the hosted Windows six-hour hard
-limit, Windows builds the complete dependency closure of the five public
-audit modules (4,970 Lake jobs) and then executes those modules.  This is not
+limit, Windows builds the complete dependency closure of the six public
+audit modules and then executes those modules. This is not
 substituted for the separate full local Windows source rebuild; both hosted
 jobs continue to disable the GitHub project cache.
 

@@ -3,7 +3,8 @@
 ## Frozen paper
 
 - Title: *Universal integral quadratic forms over dyadic local fields*
-- Author: Constantin-Nicolae Beli
+- Author: Constantin N. Beli
+- Paper year: 2020 (first submitted 23 August 2020)
 - Version: [arXiv:2008.10113v2](https://arxiv.org/abs/2008.10113v2)
 - Version date: 26 June 2022
 - Frozen PDF length: 19 pages
@@ -12,14 +13,14 @@
 ## Formalization baseline
 
 - Repository: `D:\AI-Workspace\Projects\BongTheory`
-- Base commit: `3b9b0aef8e5882ea750d6e73b872af4ef9ba9044`
+- Released formalization: `v0.2.0-rc.1`, tag target
+  `90511e852471ba68bbb375290668c456522b0f9c`
 - Proof assistant: Lean 4.32.1
 - Mathematical library: mathlib v4.32.1
 - Completion audit date: 1 September 2026
 
-The implementation remains a working-tree overlay until it is committed.  The
-base commit therefore identifies the upstream baseline, not the complete
-formal artifact.
+The release tag identifies the complete formal artifact. Later review-kit
+packaging does not alter the theorem statements or proof terms at that tag.
 
 ## Scope
 

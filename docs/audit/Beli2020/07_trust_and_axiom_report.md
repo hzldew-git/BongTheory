@@ -2,7 +2,7 @@
 
 ## Focused kernel audit
 
-`BongTest/BeliUniversalAudit.lean` checks and prints axioms for:
+`BongTest/Beli2020Audit.lean` checks and prints axioms for:
 
 - the Section 2 preliminary reductions and Theorem 2.1;
 - the arbitrary-Jordan and literal zero-scale Theorem 3.1 endpoints;

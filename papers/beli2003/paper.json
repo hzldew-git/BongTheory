@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "beli2003",
+  "canonicalName": "Beli 2003",
+  "assetStem": "Beli2003",
+  "year": 2003,
+  "title": "Integral spinor norm groups over dyadic local fields",
+  "author": "Constantin N. Beli",
+  "sourceUrl": "https://doi.org/10.1016/S0022-314X(03)00057-X",
+  "sourceDescription": "58-page publisher PDF",
+  "sourceSha256": "BB2C45F06EB2888D75D7030F7E893B5048588B1CA092180A816DA0C2A9F4A055",
+  "entryModule": "Bong.Papers.Beli2003",
+  "auditModules": [
+    "BongTest.Beli2003Audit"
+  ],
+  "auditDirectory": "docs/audit/Beli2003",
+  "semanticStatus": "PROVISIONAL_MATCH",
+  "grade": "B",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

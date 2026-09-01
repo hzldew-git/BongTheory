@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "beli2019",
+  "canonicalName": "Beli 2019 v2",
+  "assetStem": "Beli2019",
+  "year": 2019,
+  "title": "Representations of quadratic lattices over dyadic local fields",
+  "author": "Constantin N. Beli",
+  "sourceUrl": "https://arxiv.org/abs/1905.04552v2",
+  "sourceDescription": "139-page arXiv v2 PDF, revised 30 May 2022",
+  "sourceSha256": "1669C626A6D01AF297E07C2CB9584C5BD34F4CEE0F2B188EE0B351BD091C387C",
+  "entryModule": "Bong.Papers.Beli2019",
+  "auditModules": [
+    "BongTest.Beli2019Audit"
+  ],
+  "auditDirectory": "docs/audit/Beli2019V2",
+  "semanticStatus": "PROVISIONAL_MATCH",
+  "grade": "B",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

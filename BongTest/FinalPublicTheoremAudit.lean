@@ -3,12 +3,11 @@ Copyright (c) 2026 BONG Theory contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
-import Bong.Bong.Beli2006MainTheorems
-import Bong.Bong.Beli2009BinaryConnectivityComplete
-import Bong.Bong.BeliUniversalComplete
-import Bong.Bong.BeliTheoremOneProof
-import Bong.Bong.BeliTheoremTwoProof
-import Bong.Bong.BeliTheoremThreeUnconditional
+import Bong.Papers.Beli2003
+import Bong.Papers.Beli2006
+import Bong.Papers.Beli2009
+import Bong.Papers.Beli2019
+import Bong.Papers.Beli2020
 
 open Bong.Lattice.JordanDecomposition
 
@@ -16,7 +15,7 @@ open Bong.Lattice.JordanDecomposition
 # Public theorem and trust-boundary audit
 
 These are the unconditional endpoints for Beli 2003, 2006, 2009/2010, 2019
-v2, and the directly derived form of Beli's universal-forms criterion.  Their
+v2, and Beli 2020. Their
 printed signatures expose the ambient dyadic-local-field data but no
 project-specific law or data interfaces.
 -/
@@ -44,7 +43,7 @@ project-specific law or data interfaces.
 #check @Bong.beli2019Theorem21
 #check @Bong.beli2019Theorem21_prime
 
--- Beli Universal, Theorems 2.1 and 3.1 and the terminal Section 4 results.
+-- Beli 2020, Theorems 2.1 and 3.1 and the terminal Section 4 results.
 #check @Bong.BONG.GoodBONG.isUniversal_iff_universalTheorem21Conditions
 #check @isUniversal_iff_universalTheorem31DirectConditions
 #check @isUniversal_iff_universalTheorem31Conditions_of_firstScaleOrder_eq_zero

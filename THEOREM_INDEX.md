@@ -16,17 +16,17 @@ additional paper lemmas; the audit packages give the fuller maps.
 | Beli 2009/2010, Section 5 dichotomy | `Bong.beli2009Section5_binaryTransformationDichotomy_proved` | `Bong/Bong/Beli2009BinaryConnectivityComplete.lean` | `PROVISIONAL_MATCH` |
 | Beli 2019 v2, Theorem 2.1 | `Bong.beli2019Theorem21` | `Bong/Bong/Beli2019MainTheorem.lean` | `PROVISIONAL_MATCH` |
 | Beli 2019 v2, Theorem 2.1 with `(iii')` | `Bong.beli2019Theorem21_prime` | `Bong/Bong/Beli2019MainTheorem.lean` | `PROVISIONAL_MATCH` |
-| Beli Universal, Theorem 2.1 | `Bong.BONG.GoodBONG.isUniversal_iff_universalTheorem21Conditions` | `Bong/Bong/BeliUniversalTheorem21.lean` | `PROVISIONAL_MATCH` |
-| Beli Universal, Theorem 3.1, direct derivation | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31DirectConditions` | `Bong/Bong/BeliUniversalTheorem31Proof.lean` | `PROVISIONAL_MATCH` |
-| Beli Universal, Theorem 3.1, literal text at first scale zero | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31Conditions_of_firstScaleOrder_eq_zero` | `Bong/Bong/BeliUniversalTheorem31Proof.lean` | `PROVISIONAL_MATCH` |
-| Beli Universal, Lemma 4.9 | `Bong.BONG.GoodBONG.beliUniversalLemma49` | `Bong/Bong/BeliUniversalLemma49.lean` | `PROVISIONAL_MATCH` |
-| Beli Universal, Corollary 4.10 | `Bong.BONG.GoodBONG.beliUniversalCorollary410` | `Bong/Bong/BeliUniversalCorollary410.lean` | `PROVISIONAL_MATCH` |
+| Beli 2020, Theorem 2.1 | `Bong.BONG.GoodBONG.isUniversal_iff_universalTheorem21Conditions` | `Bong/Bong/BeliUniversalTheorem21.lean` | `PROVISIONAL_MATCH` |
+| Beli 2020, Theorem 3.1, direct derivation | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31DirectConditions` | `Bong/Bong/BeliUniversalTheorem31Proof.lean` | `PROVISIONAL_MATCH` |
+| Beli 2020, Theorem 3.1, literal text at first scale zero | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31Conditions_of_firstScaleOrder_eq_zero` | `Bong/Bong/BeliUniversalTheorem31Proof.lean` | `PROVISIONAL_MATCH` |
+| Beli 2020, Lemma 4.9 | `Bong.BONG.GoodBONG.beliUniversalLemma49` | `Bong/Bong/BeliUniversalLemma49.lean` | `PROVISIONAL_MATCH` |
+| Beli 2020, Corollary 4.10 | `Bong.BONG.GoodBONG.beliUniversalCorollary410` | `Bong/Bong/BeliUniversalCorollary410.lean` | `PROVISIONAL_MATCH` |
 
 All listed endpoints have zero project-specific law/data parameters in their
 public signatures. The theorem-level status is provisional solely because the
 required independent semantic sign-offs have not yet been recorded.
 
-For Beli Universal, `PROVISIONAL_MATCH` also records the frozen source
+For Beli 2020, `PROVISIONAL_MATCH` also records the frozen source
 discrepancy in Theorem 3.1(3.2.1--2): direct substitution gives coefficient
 `2r_1`, whereas the paper prints `r_1`.  No inferred correction is presented
 as author-confirmed text.

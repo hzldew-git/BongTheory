@@ -1,4 +1,8 @@
-# Clean-clone source-rebuild receipt for Beli Universal
+# Clean-clone source-rebuild receipt for Beli 2020
+
+This historical `v0.2.0-rc.1` receipt retains the then-current
+`BeliUniversalAudit` command and log names. Current paper metadata and review
+entry points use the canonical year-based name `Beli2020`.
 
 ## Result
 

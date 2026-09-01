@@ -2,14 +2,16 @@
 
 ## Artifact identity
 
-- Paper: Constantin-Nicolae Beli, *Universal integral quadratic forms over
-  dyadic local fields*.
-- Frozen source: arXiv:2008.10113v2, revised 26 June 2022.
+- Paper: Constantin N. Beli, *Universal integral quadratic forms over dyadic
+  local fields* (2020).
+- Frozen source: arXiv:2008.10113v2, first submitted 23 August 2020 and
+  revised 26 June 2022.
 - PDF SHA-256:
   `35ECB7CB20A42768A6F55D80E69D4699837419854FAB021515020CCC7488986C`.
 - Formalization release candidate: `v0.2.0-rc.1`.
 - Umbrella import: `Bong.Bong.BeliUniversalComplete`.
-- Kernel audit: `BongTest.BeliUniversalAudit`.
+- Canonical paper entry: `Bong.Papers.Beli2020`.
+- Kernel audit: `BongTest.Beli2020Audit`.
 
 ## Machine-checked scope
 
