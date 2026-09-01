@@ -145,7 +145,7 @@ jobs:
           build: true
           lake-package-directory: ${{ runner.temp }}/review-extract-${{ matrix.paper }}
           use-github-cache: true
-          use-mathlib-cache: true
+          use-mathlib-cache: false
 
       - name: Run every audit listed by the paper manifest
         shell: pwsh
