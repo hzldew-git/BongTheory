@@ -18,10 +18,11 @@ results are five papers by Constantin N. Beli published or circulated in 2003,
 - Local reproducibility status:
   `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES` at commit
   `5befe079dbf3569d1760b8e66bc52aef0de21745`.
-- Public hosted reproducibility status: the pull-request audit passed; exact-tag
-  Ubuntu and Windows checks for `v0.2.0-rc.1` remain pending until the tag is
-  published.  The existing `v0.1.0-rc.1` receipt is historical evidence for
-  the preceding four-paper release.
+- Public hosted reproducibility status: exact-tag Ubuntu and Windows checks
+  passed under the scopes and cache boundaries recorded in the public
+  `v0.2.0-rc.1` receipt.  The initial Ubuntu build succeeded but its following
+  audit step exposed a cross-platform workflow-path defect; the failure and
+  corrected exact-tag run are both retained in that receipt.
 
 Compilation is evidence that Lean accepts the encoded statements.  It is not,
 by itself, evidence that every paper statement has been translated faithfully.
@@ -64,9 +65,8 @@ lake env lean BongTest/BeliUniversalAudit.lean
 For the complete clean-clone protocol and expected output, see
 [`REPRODUCING.md`](REPRODUCING.md).  The audited Windows source-rebuild receipt
 is [`docs/reproducibility/clean-clone-5befe079.md`](docs/reproducibility/clean-clone-5befe079.md).
-The exact-tag `v0.2.0-rc.1` hosted receipt will be added after both tag jobs
-finish; the prior four-paper receipt remains available at
-[`docs/reproducibility/github-actions-v0.1.0-rc.1.md`](docs/reproducibility/github-actions-v0.1.0-rc.1.md).
+The current public hosted receipt is
+[`docs/reproducibility/github-actions-v0.2.0-rc.1.md`](docs/reproducibility/github-actions-v0.2.0-rc.1.md).
 
 ## Repository layout
 

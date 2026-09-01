@@ -44,8 +44,9 @@ Exact commands, host and tool versions, dependency revisions, timings, log
 hashes, and cache boundaries are recorded in
 [`../../reproducibility/clean-clone-5befe079.md`](../../reproducibility/clean-clone-5befe079.md).
 This is project-author/AI-run technical evidence, not independent human
-review.  Exact-tag Ubuntu and Windows evidence remains pending until the
-`v0.2.0-rc.1` tag workflows finish.
+review.  Exact-tag Ubuntu and Windows evidence, including the transparent
+initial Ubuntu workflow-path failure and corrected run, is recorded in
+[`../../reproducibility/github-actions-v0.2.0-rc.1.md`](../../reproducibility/github-actions-v0.2.0-rc.1.md).
 
 The successful build does not resolve the frozen paper's documented `r_1`
 versus `2r_1` coefficient discrepancy in Theorem 3.1 and does not upgrade the

@@ -29,13 +29,15 @@ comparison. Current theorem cards are `PROVISIONAL_MATCH`; none is
 The two independent reviewer roles, required evidence, and intentionally blank
 approval fields are consolidated in
 [`IndependentReviewSignoff.md`](IndependentReviewSignoff.md).  Public review is
-also requested in
-[`semantic-review` issue 4](https://github.com/hzldew-git/BongTheory/issues/4).
+requested in [`semantic-review` issue 4](https://github.com/hzldew-git/BongTheory/issues/4)
+for the preceding four-paper release and
+[`Beli Universal` issue 7](https://github.com/hzldew-git/BongTheory/issues/7)
+for this release.  Independent reproduction is requested in
+[`issue 8`](https://github.com/hzldew-git/BongTheory/issues/8).
 
 Local committed-source reproducibility is recorded separately in
 [`../reproducibility/clean-clone-5befe079.md`](../reproducibility/clean-clone-5befe079.md).
-Exact-tag `v0.2.0-rc.1` hosted-run evidence remains pending until publication;
-the preceding four-paper release's historical record is
-[`../reproducibility/github-actions-v0.1.0-rc.1.md`](../reproducibility/github-actions-v0.1.0-rc.1.md).
+Exact-tag `v0.2.0-rc.1` hosted-run evidence is recorded in
+[`../reproducibility/github-actions-v0.2.0-rc.1.md`](../reproducibility/github-actions-v0.2.0-rc.1.md).
 Neither technical record replaces the independent mathematical and
 Lean-review signatures.

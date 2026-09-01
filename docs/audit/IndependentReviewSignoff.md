@@ -2,15 +2,16 @@
 
 No independent human sign-off has been recorded as of 1 September 2026.
 
-Review target: annotated tag `v0.1.0-rc.1`, commit
-`3840b0fabc1142cd55c7b132a62174e732759692`.  The public mathematical-review
-request is [issue 4](https://github.com/hzldew-git/BongTheory/issues/4), and
-the independent clean-clone request is
-[issue 5](https://github.com/hzldew-git/BongTheory/issues/5).
+Current review target: annotated tag `v0.2.0-rc.1`, commit
+`90511e852471ba68bbb375290668c456522b0f9c`.  The Beli Universal mathematical-
+review request is [issue 7](https://github.com/hzldew-git/BongTheory/issues/7),
+and the independent clean-clone request is
+[issue 8](https://github.com/hzldew-git/BongTheory/issues/8).
 
-The next review target is release candidate `v0.2.0-rc.1`, which adds Beli
-Universal and its documented Theorem 3.1 source discrepancy.  Its exact tag
-commit and public review issues are to be recorded after publication.
+The preceding four-paper target remains `v0.1.0-rc.1`, commit
+`3840b0fabc1142cd55c7b132a62174e732759692`, with semantic-review issue
+[4](https://github.com/hzldew-git/BongTheory/issues/4) and reproducibility
+issue [5](https://github.com/hzldew-git/BongTheory/issues/5).
 
 ## Paper author or domain expert
 

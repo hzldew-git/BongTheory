@@ -86,10 +86,10 @@ audit modules (4,970 Lake jobs) and then executes those modules.  This is not
 substituted for the separate full local Windows source rebuild; both hosted
 jobs continue to disable the GitHub project cache.
 
-The exact-tag `v0.2.0-rc.1` run history, log hashes, and artifact hashes will be
-recorded after its Ubuntu and Windows jobs finish.  The prior four-paper
-release's historical record is
-[`docs/reproducibility/github-actions-v0.1.0-rc.1.md`](docs/reproducibility/github-actions-v0.1.0-rc.1.md).
+The exact-tag `v0.2.0-rc.1` run history, including the initial Ubuntu workflow-
+path failure, corrected exact-tag rerun, job-log hashes, artifact hashes, and
+release-asset hashes, is recorded in
+[`docs/reproducibility/github-actions-v0.2.0-rc.1.md`](docs/reproducibility/github-actions-v0.2.0-rc.1.md).
 
 ## Failure reporting
 

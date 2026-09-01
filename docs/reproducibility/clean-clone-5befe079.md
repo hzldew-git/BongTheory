@@ -156,4 +156,5 @@ git status --porcelain
 This technical receipt does not resolve the documented `r_1` versus `2r_1`
 coefficient discrepancy in the frozen paper's Theorem 3.1, and it does not
 replace independent source-to-Lean comparison.  Exact-tag Ubuntu and Windows
-evidence is recorded separately after the release tag workflows finish.
+evidence is recorded separately in
+[`github-actions-v0.2.0-rc.1.md`](github-actions-v0.2.0-rc.1.md).
