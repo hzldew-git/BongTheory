@@ -88,7 +88,10 @@ To generate all current and future manifest-registered papers:
 The `Paper Review Kits` workflow discovers `papers/*/paper.json` rather than
 using a handwritten paper list. It verifies every archive checksum, extracts
 each package into a clean directory, builds its generated `Bong` and
-`BongTest` roots, and runs every audit named by that paper's manifest.
+`BongTest` roots, and runs every audit named by that paper's manifest. The
+per-paper matrix may restore a commit-keyed Lean build cache after extraction;
+the exact-tag `Reproducibility` workflow separately disables the GitHub project
+cache and supplies the aggregate source-rebuild evidence.
 
 ## Hosted exact-revision run
 
