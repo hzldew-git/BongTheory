@@ -4,42 +4,49 @@
 
 - source PDF SHA-256:
   `35ECB7CB20A42768A6F55D80E69D4699837419854FAB021515020CCC7488986C`;
-- repository base: `3b9b0aef8e5882ea750d6e73b872af4ef9ba9044`;
+- audited committed revision:
+  `5befe079dbf3569d1760b8e66bc52aef0de21745`;
 - Lean: `4.32.1`;
 - mathlib: `520045ab14e26149ee970e2e617ca04b09bde5d6`.
 
-The implementation is currently an uncommitted working-tree overlay on that
-base, so the base hash alone does not reproduce the new files. A commit or tag
-is required before external circulation.
+The implementation is committed on
+`release/beli-universal-v0.2.0-rc.1`.  A separate GitHub clone of that branch,
+with no pre-existing `.lake` directory and without invoking the mathlib binary
+cache, was used for the audited source rebuild.
 
 ## Verification commands
 
 ```powershell
 $env:LEAN_NUM_THREADS = '4'
-lake build Bong.Bong.BeliUniversalTheorem31Proof BongTest.BeliUniversalAudit
-lake --quiet build
-rg -n -g 'BeliUniversal*.lean' -g 'OMaximal*.lean' -g 'Universality.lean' '\bsorry\b|\badmit\b|\bsorryAx\b|^\s*axiom\b|^\s*opaque\b|^\s*unsafe\b|^\s*extern\b|implemented_by|native_decide|run_tac' Bong BongTest
+lake --log-level=error build
+lake env lean BongTest/FinalPublicTheoremAudit.lean
+lake env lean BongTest/Beli2006Audit.lean
+lake env lean BongTest/Beli2009Audit.lean
+lake env lean BongTest/Beli2019Audit.lean
+lake env lean BongTest/BeliUniversalAudit.lean
+rg -n -g 'BeliUniversal*.lean' -g 'GoodBONGScalarAgreementClassification.lean' -g 'OMaximal*.lean' -g 'Universality.lean' -g 'BeliUniversalAudit.lean' '\bsorry\b|\badmit\b|\bsorryAx\b|^\s*axiom\b|^\s*opaque\b|^\s*unsafe\b|^\s*extern\b|implemented_by|native_decide|run_tac' Bong BongTest
+git status --porcelain
 ```
 
-The focused build completed successfully with 4883 jobs on 1 September 2026.
+The complete default target exited successfully after 5,597 jobs and
+17,213.742 seconds.  The five focused audit commands then exited zero.
 `BongTest.BeliUniversalAudit` checks the public endpoints for Theorem 2.1,
-Theorem 3.1, Lemmas 4.1--4.9, Corollary 4.5(i)--(iv), and Corollary 4.10. Its
-`#print axioms` output contains only `propext`, `Classical.choice`, and
-`Quot.sound`.
+Theorem 3.1, Lemmas 4.1--4.9, Corollary 4.5(i)--(iv), and Corollary 4.10.
 
-The final repository-wide build, run with four Lean worker threads, exited
-successfully after 5602 jobs. Earlier unrestricted-concurrency attempts on the
-same Windows checkout encountered transient `.olean`/`.olean.private` read
-failures and `bad_alloc` in unrelated `BongTest.M*` modules; the four-thread
-run is the verified result. The remaining output consists of linter warnings,
-not proof errors.
+Every reported theorem used only `propext`, `Classical.choice`, and
+`Quot.sound`.  The trust-boundary scan returned no matches (the expected `rg`
+exit code is 1), and the final worktree was clean.  Thus the audited committed
+implementation contains no `sorry`, `admit`, `sorryAx`, custom `axiom`,
+`opaque`, unsafe/extern declaration, code-generation override,
+`native_decide`, or `run_tac` escape hatch in the stated source scope.
 
-The placeholder/trust-boundary scan returns no matches (the expected `rg` exit
-code is 1). Thus the audited implementation contains no `sorry`, `admit`,
-`sorryAx`, custom `axiom`, `opaque`, unsafe/extern declaration, code-generation
-override, `native_decide`, or `run_tac` escape hatch.
+Exact commands, host and tool versions, dependency revisions, timings, log
+hashes, and cache boundaries are recorded in
+[`../../reproducibility/clean-clone-5befe079.md`](../../reproducibility/clean-clone-5befe079.md).
+This is project-author/AI-run technical evidence, not independent human
+review.  Exact-tag Ubuntu and Windows evidence remains pending until the
+`v0.2.0-rc.1` tag workflows finish.
 
-Lake warns that the mathlib, aesop, and batteries dependency checkouts contain
-local changes. This does not alter the successful kernel check, but a clean
-clone build and a repository commit/tag remain required before an archival
-release.
+The successful build does not resolve the frozen paper's documented `r_1`
+versus `2r_1` coefficient discrepancy in Theorem 3.1 and does not upgrade the
+semantic status beyond `PROVISIONAL_MATCH`.

@@ -25,5 +25,5 @@ Unsafe claims:
 - that the paper's printed `r_1` exponent is unconditionally equivalent to
   the derived `2r_1` exponent;
 - that independent reviewers have certified every source-to-Lean mapping;
-- that an uncommitted working-tree overlay is an archival reproducibility
-  release.
+- that the project-author/AI-run clean-clone receipt is an independent human
+  reproduction or semantic sign-off.

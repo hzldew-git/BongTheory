@@ -7,7 +7,7 @@
 - Formal proof-and-test baseline: commit
   `10e8c666bfda81dcac44332cd38f481d8d02e31a`.
 - Audited release-candidate code and CI commit:
-  `ee826e7a8e67dda053563c01e027b2379bd68e6f`.
+  `5befe079dbf3569d1760b8e66bc52aef0de21745`.
 - Current release-candidate target: `v0.2.0-rc.1`.
 - Supported build entry points: `Bong` and `BongTest`.
 
@@ -42,14 +42,15 @@ $env:LEAN_NUM_THREADS = '4'
 lake --log-level=error build
 ```
 
-The `v0.1.0-rc.1` audited Windows run used that setting after an
-unbounded-concurrency attempt exhausted memory.  It completed from source with
-5,555 jobs and did not copy any project build artifact from the development
-checkout.
+The audited `v0.2.0-rc.1` candidate run used that setting.  A separate clone
+with no pre-existing `.lake` directory completed from source with 5,597 jobs
+and did not copy any project build artifact from the development checkout.
 
 Success requires all commands to exit with status zero and the last command to
-produce no output. The `v0.2.0-rc.1` default build contains 5,589 Lake jobs.
-Lint warnings do not invalidate a successful kernel build; build errors do.
+produce no output.  The cold clean-clone graph contained 5,597 Lake jobs; the
+already-populated development worktree's default graph contained 5,589.  The
+eight additional cold-start tool/dependency jobs are not source changes.  Lint
+warnings do not invalidate a successful kernel build; build errors do.
 
 `FinalPublicTheoremAudit.lean` prints the elaborated public signatures and
 their transitive axiom sets. The expected project-independent axiom set is:
@@ -65,7 +66,7 @@ clean-clone receipt records the exact operating system, tool versions, commit,
 commands, exit codes, and final worktree status.
 
 The current local receipt is
-[`docs/reproducibility/clean-clone-ee826e7.md`](docs/reproducibility/clean-clone-ee826e7.md).
+[`docs/reproducibility/clean-clone-5befe079.md`](docs/reproducibility/clean-clone-5befe079.md).
 
 ## Hosted exact-revision run
 
@@ -85,8 +86,9 @@ audit modules (4,970 Lake jobs) and then executes those modules.  This is not
 substituted for the separate full local Windows source rebuild; both hosted
 jobs continue to disable the GitHub project cache.
 
-The public release-candidate run history, log hashes, and artifact hashes are
-recorded in
+The exact-tag `v0.2.0-rc.1` run history, log hashes, and artifact hashes will be
+recorded after its Ubuntu and Windows jobs finish.  The prior four-paper
+release's historical record is
 [`docs/reproducibility/github-actions-v0.1.0-rc.1.md`](docs/reproducibility/github-actions-v0.1.0-rc.1.md).
 
 ## Failure reporting

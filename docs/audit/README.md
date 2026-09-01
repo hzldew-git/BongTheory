@@ -33,8 +33,9 @@ also requested in
 [`semantic-review` issue 4](https://github.com/hzldew-git/BongTheory/issues/4).
 
 Local committed-source reproducibility is recorded separately in
-[`../reproducibility/clean-clone-ee826e7.md`](../reproducibility/clean-clone-ee826e7.md).
-Public hosted-run evidence is recorded in
+[`../reproducibility/clean-clone-5befe079.md`](../reproducibility/clean-clone-5befe079.md).
+Exact-tag `v0.2.0-rc.1` hosted-run evidence remains pending until publication;
+the preceding four-paper release's historical record is
 [`../reproducibility/github-actions-v0.1.0-rc.1.md`](../reproducibility/github-actions-v0.1.0-rc.1.md).
 Neither technical record replaces the independent mathematical and
 Lean-review signatures.
