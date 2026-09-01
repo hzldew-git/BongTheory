@@ -2,12 +2,14 @@
 
 ## Scope and exact revisions
 
-Receipt prepared: 1 September 2026 (Asia/Shanghai).
+Receipt finalized: 1 September 2026 (Asia/Shanghai).
 
 This receipt records the public hosted-run evidence for release candidate
 `v0.2.0-rc.1`.  The annotated tag object
 `c061d8ac068a5437ac887848f4e8c5af6c7ea182` resolves to merge commit
 `90511e852471ba68bbb375290668c456522b0f9c`.
+The published prerelease is available at
+<https://github.com/hzldew-git/BongTheory/releases/tag/v0.2.0-rc.1>.
 
 The separate local Windows no-cache source rebuild was performed at code-and-
 CI commit `5befe079dbf3569d1760b8e66bc52aef0de21745`.  Between that revision and
@@ -119,8 +121,9 @@ error, unknown declaration, or `sorryAx`.
 
 ## Uploaded release artifacts
 
-The three draft-release assets were downloaded through the authenticated
-GitHub release API after upload.  API sizes and downloaded sizes agreed.
+After publication, the three prerelease assets were downloaded anonymously
+from their public GitHub release URLs.  Public API sizes and downloaded sizes
+agreed.
 
 | Asset | Bytes | Downloaded SHA-256 |
 |---|---:|---|
