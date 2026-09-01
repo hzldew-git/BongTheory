@@ -55,7 +55,19 @@ jobs:
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
-          $lake = Join-Path $env:USERPROFILE '.elan\bin\lake.exe'
+          $lakeCommand = Get-Command lake -ErrorAction SilentlyContinue
+          $lake = if ($lakeCommand) { $lakeCommand.Source } else { $null }
+          if (-not $lake) {
+            $runnerHome = if ($env:USERPROFILE) {
+              $env:USERPROFILE
+            } elseif ($env:HOME) {
+              $env:HOME
+            } else {
+              throw 'Neither USERPROFILE nor HOME identifies the runner home directory.'
+            }
+            $lakeName = if ($IsWindows) { 'lake.exe' } else { 'lake' }
+            $lake = Join-Path (Join-Path $runnerHome '.elan/bin') $lakeName
+          }
           if (-not (Test-Path -LiteralPath $lake)) {
             throw "Lean action did not install Lake at the expected path: $lake"
           }
