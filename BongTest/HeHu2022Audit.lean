@@ -69,6 +69,16 @@ import Bong.Papers.HeHu2022
 #check Bong.heHu2022Lemma314iRepresents
 #check Bong.heHu2022Lemma314i
 #check Bong.heHu2022Lemma314ii
+#check Bong.BONG.GoodBONG.heHu2022Proposition37EvenFirstOne
+#check Bong.BONG.GoodBONG.heHu2022Proposition37EvenFirstDelta
+#check Bong.BONG.GoodBONG.heHu2022Proposition37EvenSecondOne
+#check Bong.BONG.GoodBONG.heHu2022Proposition37EvenSecondDelta
+#check Bong.BONG.GoodBONG.heHu2022Proposition37EvenGeneric
+#check Bong.BONG.GoodBONG.heHu2022Proposition37EvenUnitUniformizer
+#check Bong.BONG.GoodBONG.heHu2022Proposition37OddFirstUnit
+#check Bong.BONG.GoodBONG.heHu2022Proposition37OddFirstUnitUniformizer
+#check Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnit
+#check Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnitUniformizer
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -126,4 +136,14 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.heHu2022Lemma314iRepresents
 #print axioms Bong.heHu2022Lemma314i
 #print axioms Bong.heHu2022Lemma314ii
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37EvenFirstOne
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37EvenFirstDelta
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37EvenSecondOne
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37EvenSecondDelta
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37EvenGeneric
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37EvenUnitUniformizer
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddFirstUnit
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddFirstUnitUniformizer
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnit
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnitUniformizer
 #print axioms Bong.Lattice.heHuMaximalTestingReduction

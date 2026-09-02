@@ -68,6 +68,10 @@
 - `heHu2022Lemma314iRepresents`, `heHu2022Lemma314i`, and
   `heHu2022Lemma314ii`: all representation and nonrepresentation assertions
   of Lemma 3.14, including the undefined `W_2^2(1)` exception.
+- The ten `heHu2022Proposition37*` endpoints: every Table 2 maximality row.
+  Their common strict-over-lattice argument is exposed by the rank-one through
+  rank-four volume lemmas; the three critical binary, ternary, and quaternary
+  endpoint exclusions are separate kernel-checked declarations.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

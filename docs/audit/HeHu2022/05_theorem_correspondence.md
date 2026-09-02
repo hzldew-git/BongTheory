@@ -23,7 +23,8 @@
 | Proposition 3.5(i) | `heHu2022Definition34Proposition35Odd`, `heHu2022Definition34Proposition35Even` | Proved; determinants, nonisometry, and every Table 1 branch |
 | Proposition 3.5(ii) | `heHu2022Proposition35iiOdd`, `heHu2022Proposition35iiEven` | Proved; all determinant classes exhausted |
 | Proposition 3.5(iii) | four `heHu2022Proposition35iii*` endpoints | Proved existence and uniqueness, including `n=2` and square `c`; finite coordinate casts only reconcile arithmetic rank expressions |
-| Definition 3.6 | four `heHu2022Definition36*` endpoints | Proved canonical choice of an `O`-maximal lattice on every defined `W_nu^n(c)`; Proposition 3.7 will identify these intrinsic representatives with Table 2 |
+| Definition 3.6 | four `heHu2022Definition36*` endpoints | Proved canonical choice of an `O`-maximal lattice on every defined `W_nu^n(c)` |
+| Proposition 3.7 | ten `heHu2022Proposition37*` endpoints | Proved every Table 2 row. Strict over-lattices are excluded by sharp volume bounds; the binary critical endpoint uses Proposition 3.5 nonisometry, and the ternary/quaternary endpoints use isotropy-versus-anisotropy contradictions. Literal half-hyperbolic extension is proved from the maximal-lattice splitting theorem. |
 | Lemma 3.9(i) | `heHu2022Lemma39i` | Proved; all three exact binary coefficient lists and the standard endpoint isometries |
 | Lemma 3.9(ii) | `heHu2022Lemma39ii` | Proved; both unit--uniformizer pairs for arbitrary valuation-unit `delta` |
 | Lemma 3.9(iii) | `heHu2022Lemma39iii` | Proved; canonical `kappa#`, exact source model, and literal published ternary coefficient list |

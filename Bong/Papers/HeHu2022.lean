@@ -16,6 +16,7 @@ import Bong.Bong.HeHu2022Lemma310
 import Bong.Bong.HeHu2022Lemma311
 import Bong.Bong.HeHu2022Lemma313
 import Bong.Bong.HeHu2022Lemma314
+import Bong.Bong.HeHu2022Proposition37
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -40,6 +41,11 @@ publisher version of record (2024) is the sole semantic authority.  The
   Lemma 3.11 is proved for every Table 2 row: its even- and odd-rank
   alternatives retain the published endpoint blocks and compute every
   displayed `R_i` order, including the exceptional `2-2e` penultimate term.
+  Proposition 3.7 is proved for every Table 2 row.  The three critical
+  volume endpoints are discharged by the published Table 1 space
+  classification: the binary case uses the two nonisometric determinant
+  classes, while the ternary and quaternary cases contradict anisotropy of
+  the displayed candidate spaces.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.

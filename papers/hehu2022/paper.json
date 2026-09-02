@@ -35,7 +35,7 @@
   ],
   "auditDirectory": "docs/audit/HeHu2022",
   "sourceDelta": "docs/audit/HeHu2022/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_STATEMENT_LAYER_AND_TESTING_CORE",
+  "coverageStatus": "IN_PROGRESS_SECTIONS_2_AND_3_NUMBERED_CORE",
   "semanticStatus": "PARTIAL_NOT_YET_AUDITED",
   "grade": "D",
   "expectedAxioms": [
@@ -45,12 +45,17 @@
   ],
   "formalizedScope": [
     "Theorem 1.1 complete right-hand-side statement layer with one-based to zero-based index translation",
+    "All directly numbered results in Section 2",
+    "Section 3 definitions and propositions through Proposition 3.7, including all Table 1 classification and Table 2 maximality rows",
+    "Lemmas 3.9-3.11 and 3.13-3.14 with literal published endpoint models",
     "Abstract O-maximal testing reduction underlying Theorem 1.2"
   ],
   "excludedScope": [
     "Proof of the Theorem 1.1 equivalence",
     "Theorem 1.2 explicit testing list and minimality proof",
+    "Remarks 3.8 and 3.12 as explicit correspondence endpoints",
+    "Numbered results in Sections 4-6",
     "Independent human semantic sign-off"
   ],
-  "reviewNotice": "Theorem 1.1 is encoded as an unproved proposition target. The proved maximal-testing theorem is only the abstract core of Theorem 1.2, not its explicit list or minimality assertion."
+  "reviewNotice": "Section 2 and the numbered Section 3 core, including Proposition 3.7, are kernel checked. Theorem 1.1 remains an unproved proposition target, and the proved maximal-testing theorem is only the abstract core of Theorem 1.2, not its explicit list or minimality assertion."
 }

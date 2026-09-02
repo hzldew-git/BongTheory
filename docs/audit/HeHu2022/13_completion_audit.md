@@ -11,10 +11,12 @@
 | Definition 3.1 and Propositions 3.2--3.3 | PASS, with Definition 3.1 equivalent-construction review flag |
 | Definition 3.4 and Proposition 3.5 | PASS, including all Table 1 and uniqueness branches |
 | Definition 3.6 | PASS, canonical maximal representatives for every defined Table 1 space |
+| Proposition 3.7 | PASS, all ten Table 2 rows including binary, ternary, and quaternary critical endpoint exclusions |
 | Lemma 3.9 | PASS, all three clauses with literal binary and ternary coefficient lists |
 | Lemma 3.10 | PASS, exact half-hyperbolic pairs and arbitrary tail preservation |
 | Lemma 3.11 | PASS, all even- and odd-rank Table 2 order-profile rows |
 | Lemmas 3.13--3.14 | PASS, both rank alternatives and all stated Table 1 comparisons |
+| Remarks 3.8 and 3.12 | FAIL / pending explicit correspondence endpoints |
 | Theorem 1.1 statement present | PASS |
 | Theorem 1.1 proof | FAIL / pending |
 | Theorem 1.2 explicit list and minimality | FAIL / pending |
