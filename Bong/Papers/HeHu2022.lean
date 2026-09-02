@@ -10,6 +10,7 @@ import Bong.Bong.HeHu2022SectionThreeSharp
 import Bong.Bong.HeHu2022SectionThreeBinary
 import Bong.Bong.HeHu2022SectionThreeSpaces
 import Bong.Bong.HeHu2022Proposition35iii
+import Bong.Bong.HeHu2022Definition36
 import Bong.Bong.HeHu2022Lemma313
 import Bong.Bong.HeHu2022Lemma314
 import Bong.Bong.BeliUniversalMaximal
@@ -30,7 +31,8 @@ publisher version of record (2024) is the sole semantic authority.  The
   are supplied by the first two Section 3 modules.  Definition 3.4 and all
   three clauses of Proposition 3.5, including the unique excluding-space
   assertion and its exceptional binary case, are proved by the space and
-  codimension-two modules. Lemmas 3.13--3.14 are proved by the explicit
+  codimension-two modules. Definition 3.6 is realized by canonical maximal
+  representatives in each displayed space. Lemmas 3.13--3.14 are proved by the explicit
   determinant--Hasse and Table 1 comparison modules. No proof of the
   Theorem 1.1 equivalence is asserted here yet.
 -/

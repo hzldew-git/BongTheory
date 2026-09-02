@@ -42,6 +42,11 @@
   `heHu2022Proposition35iiiEvenFirst`, and
   `heHu2022Proposition35iiiEvenSecond`: existence and uniqueness of the
   `(n+2)`-dimensional space which misses exactly the stated `n`-space.
+- `heHuOMaximalModel`, `heHuEvenFirstMaximalModel`,
+  `heHuEvenSecondMaximalModel`, `heHuOddFirstMaximalModel`, and
+  `heHuOddSecondMaximalModel`: the canonical maximal representatives of
+  Definition 3.6; the four `heHu2022Definition36*` theorems prove their
+  maximality and rank.
 - `HeHuRepresentsExactlyOne`, `heHu2022Lemma313CodimensionOne`, and
   `heHu2022Lemma313CodimensionTwo`: the exclusive representation package of
   Lemma 3.13 in both permitted target ranks.

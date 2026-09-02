@@ -81,6 +81,10 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.heHu2022Proposition35iiiOddSecond
 #print axioms Bong.heHu2022Proposition35iiiEvenFirst
 #print axioms Bong.heHu2022Proposition35iiiEvenSecond
+#print axioms Bong.heHu2022Definition36EvenFirst
+#print axioms Bong.heHu2022Definition36EvenSecond
+#print axioms Bong.heHu2022Definition36OddFirst
+#print axioms Bong.heHu2022Definition36OddSecond
 #print axioms Bong.heHu2022Lemma313CodimensionOne
 #print axioms Bong.heHu2022Lemma313CodimensionTwo
 #print axioms Bong.heHu2022Lemma314iRepresents
