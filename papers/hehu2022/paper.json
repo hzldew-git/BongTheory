@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 2,
+  "id": "hehu2022",
+  "canonicalName": "He-Hu 2022",
+  "assetStem": "HeHu2022",
+  "workYear": 2022,
+  "publicationYear": 2024,
+  "title": "On n-universal quadratic forms over dyadic local fields",
+  "author": "Zilong He and Yong Hu",
+  "citation": "Zilong He and Yong Hu, On n-universal quadratic forms over dyadic local fields, Sci. China Math. 67 (2024), 1481-1506",
+  "doi": "https://doi.org/10.1007/s11425-022-2133-0",
+  "authoritativeSource": {
+    "authority": true,
+    "kind": "publisher-version-of-record",
+    "url": "https://link.springer.com/content/pdf/10.1007/s11425-022-2133-0.pdf",
+    "description": "26-page publisher PDF; version of record published online 25 January 2024",
+    "sha256": "32CBF87286B6580B91DCF051CABF3C31C62D65098B7C75177B00C5FBCF1E24E6",
+    "pageCount": 26,
+    "byteCount": 391090,
+    "versionDate": "2024-01-25",
+    "redistributable": false
+  },
+  "comparisonSources": [
+    {
+      "authority": false,
+      "kind": "arxiv-accepted-manuscript",
+      "url": "https://arxiv.org/abs/2204.01997v2",
+      "description": "31-page arXiv v2 comparison copy, revised 21 March 2023",
+      "sha256": "8CA1029624EC42037562CF1367958F9FCBD6AC4796405828BB97F3421246D677"
+    }
+  ],
+  "entryModule": "Bong.Papers.HeHu2022",
+  "auditModules": [
+    "BongTest.HeHu2022Audit"
+  ],
+  "auditDirectory": "docs/audit/HeHu2022",
+  "sourceDelta": "docs/audit/HeHu2022/SOURCE_DELTA.md",
+  "coverageStatus": "IN_PROGRESS_STATEMENT_LAYER_AND_TESTING_CORE",
+  "semanticStatus": "PARTIAL_NOT_YET_AUDITED",
+  "grade": "D",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "formalizedScope": [
+    "Theorem 1.1 complete right-hand-side statement layer with one-based to zero-based index translation",
+    "Abstract O-maximal testing reduction underlying Theorem 1.2"
+  ],
+  "excludedScope": [
+    "Proof of the Theorem 1.1 equivalence",
+    "Theorem 1.2 explicit testing list and minimality proof",
+    "Independent human semantic sign-off"
+  ],
+  "reviewNotice": "Theorem 1.1 is encoded as an unproved proposition target. The proved maximal-testing theorem is only the abstract core of Theorem 1.2, not its explicit list or minimality assertion."
+}

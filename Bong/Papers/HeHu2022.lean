@@ -1,0 +1,44 @@
+/-
+Copyright (c) 2026 BONG Theory contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BONG Theory contributors
+-/
+import Bong.Bong.HeHu2022Conditions
+import Bong.Bong.BeliUniversalMaximal
+
+/-!
+# He--Hu: n-universal quadratic forms over dyadic local fields
+
+This is the canonical review and distribution entry point for Zilong He and
+Yong Hu, *On n-universal quadratic forms over dyadic local fields*, Sci. China
+Math. 67 (2024), 1481--1506.
+
+The implementation name records the work's 2022 provenance, while the
+publisher version of record (2024) is the sole semantic authority.  The
+Theorem 1.1 criterion is present as an exact statement-layer target in
+`HeHu2022Conditions`; no proof of that equivalence is asserted here.
+-/
+
+namespace Bong
+
+open Dyadic
+
+namespace Lattice
+
+universe u v w
+
+variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
+  [TopologicalSpace K] [DyadicContext K]
+  {V : Type v} [AddCommGroup V] [Module K V]
+
+/-- The maximal-lattice testing reduction underlying the testing-set result
+of He--Hu.  This is not the paper's explicit list or its minimality proof. -/
+theorem heHuMaximalTestingReduction
+    (q : QuadraticSpace K V) (L : Lattice K V) (n : Nat) :
+    IsNUniversal.{u, v, w} q L n ↔
+      IsIntegral q L ∧ RepresentsAllOMaximalOfRank.{u, v, w} q L n :=
+  beliUniversalLemma41 q L n
+
+end Lattice
+
+end Bong

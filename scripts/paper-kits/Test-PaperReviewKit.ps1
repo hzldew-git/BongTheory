@@ -31,8 +31,22 @@ if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf) -or
     throw 'Review Kit lacks paper-manifest.json or FILES.sha256.'
 }
 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
-if ($manifest.schemaVersion -ne 1) {
+if ($manifest.schemaVersion -notin @(1, 2)) {
     throw 'Unsupported Review Kit manifest schema.'
+}
+if ($manifest.schemaVersion -eq 2) {
+    if ($manifest.paper.authoritativeSource.authority -ne $true) {
+        throw 'Schema-2 Review Kit lacks a unique authoritative publisher source.'
+    }
+    foreach ($comparison in @($manifest.paper.comparisonSources)) {
+        if ($comparison.authority -ne $false) {
+            throw 'Schema-2 comparison sources must be explicitly non-authoritative.'
+        }
+    }
+    if ($manifest.formalization.PSObject.Properties.Name -notcontains 'formalizedScope' -or
+        $manifest.formalization.PSObject.Properties.Name -notcontains 'excludedScope') {
+        throw 'Schema-2 Review Kit lacks formalized/excluded scope accounting.'
+    }
 }
 if ($manifest.provenance.sourceTreeState -ne 'clean' -and -not $AllowDirtyKit) {
     throw 'Review Kit was generated from a dirty source tree.'
@@ -79,7 +93,9 @@ $forbidden = @(
     Get-ChildItem -LiteralPath $ExtractionDirectory -Force -Recurse |
         Where-Object {
             $_.Name -eq '.lake' -or
+            $_.Name -eq '.git' -or
             $_.Extension -in @('.olean', '.ilean') -or
+            $_.Extension -eq '.pdf' -or
             $_.FullName -match '[\\/]BongTest[\\/]M\d+\.lean$'
         }
 )

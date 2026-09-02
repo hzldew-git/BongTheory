@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "id": "he2022classic",
+  "canonicalName": "He 2022 Classic",
+  "assetStem": "He2022Classic",
+  "workYear": 2022,
+  "publicationYear": 2024,
+  "title": "On classic n-universal quadratic forms over dyadic local fields",
+  "author": "Zilong He",
+  "citation": "Zilong He, On classic n-universal quadratic forms over dyadic local fields, manuscripta math. 174 (2024), 559-595",
+  "doi": "https://doi.org/10.1007/s00229-023-01516-0",
+  "authoritativeSource": {
+    "authority": true,
+    "kind": "publisher-version-of-record",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00229-023-01516-0.pdf",
+    "description": "37-page publisher PDF; version of record published online 24 October 2023",
+    "sha256": "51F3626A15692E2FF0BAAE62F0EBCC4B8BEE02052C4D3CB1EA579B02E17480C1",
+    "pageCount": 37,
+    "byteCount": 682938,
+    "versionDate": "2023-10-24",
+    "redistributable": false
+  },
+  "comparisonSources": [
+    {
+      "authority": false,
+      "kind": "post-publication-arxiv-revision",
+      "url": "https://arxiv.org/abs/2206.04885v3",
+      "description": "33-page arXiv v3 comparison copy, revised 25 December 2025 after publication",
+      "sha256": "5D1D24B13BDA98223B71A6857D1FD3708255A2158F9A14FEA826A5365646A052"
+    }
+  ],
+  "entryModule": "Bong.Papers.He2022Classic",
+  "auditModules": [
+    "BongTest.He2022ClassicAudit"
+  ],
+  "auditDirectory": "docs/audit/He2022Classic",
+  "sourceDelta": "docs/audit/He2022Classic/SOURCE_DELTA.md",
+  "coverageStatus": "IN_PROGRESS_THEOREM_1_1_STATEMENT_AND_ABSTRACT_TESTING",
+  "semanticStatus": "PARTIAL_NOT_YET_AUDITED",
+  "grade": "D",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "formalizedScope": [
+    "Classic integrality and classic n-universality",
+    "Theorem 1.1 complete proposition and right-hand-side statement layer",
+    "Classic maximality and existence of classic-maximal over-lattices",
+    "Abstract classic-maximal testing reduction"
+  ],
+  "excludedScope": [
+    "Proof of the Theorem 1.1 explicit BONG criterion",
+    "Theorem 1.3 explicit minimal testing sets",
+    "Global consequences and independent human semantic sign-off"
+  ],
+  "reviewNotice": "The arXiv v3 copy postdates publication and is non-authoritative. Theorem 1.1 is encoded as a complete but unproved proposition target; only the abstract maximal-testing reduction is currently proved."
+}

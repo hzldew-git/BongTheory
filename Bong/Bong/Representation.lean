@@ -187,6 +187,22 @@ theorem represents_refl (q : QuadraticSpace K V) (L : Lattice K V) :
     Represents q q L L :=
   ⟨Representation.refl q L⟩
 
+/-- A sublattice inclusion is an integral representation whose ambient map is
+the identity.  This belongs to the common representation API because it is
+used by universality and ADC arguments as well as by Beli's nested-lattice
+arguments. -/
+def Representation.ofLe (q : QuadraticSpace K V) {L M : Lattice K V}
+    (hLM : L ≤ M) : Representation q q L M where
+  toLinearMap := LinearMap.id
+  injective := Function.injective_id
+  map_bilin _ _ := rfl
+  map_mem hx := hLM hx
+
+/-- Every lattice represents each of its sublattices by inclusion. -/
+theorem represents_of_le (q : QuadraticSpace K V) {L M : Lattice K V}
+    (hLM : L ≤ M) : Represents q q M L :=
+  ⟨Representation.ofLe q hLM⟩
+
 /-- A lattice isometry is, in particular, an integral representation. -/
 def Isometry.toRepresentation
     {sourceQ : QuadraticSpace K W} {targetQ : QuadraticSpace K V}

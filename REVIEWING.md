@@ -13,13 +13,18 @@ index translation. Record disagreements rather than silently repairing them.
 For Beli 2020, explicitly decide whether the `r_1` coefficient printed in
 Theorem 3.1(3.2.1--2) agrees with the `2r_1` coefficient obtained by direct
 substitution into Theorem 2.1, or should be recorded as a source correction.
+For the He--Hu, He classic, and He ADC entries, use only the publisher version
+of record named and hashed in `papers/<paper-id>/paper.json`; the listed arXiv
+copies are comparison sources and cannot silently amend the published text.
 
 ## Formalization reviewer
 
 Build a clean clone, inspect the actual declaration signatures rather than
 their names or comments, expand `DyadicContext` and the representation
 definitions, run the axiom audits, and check the import graph for circularity
-or an imported equivalent of a target theorem.
+or an imported equivalent of a target theorem. A reviewer may instead download
+one paper's Review Kit from `papers/INDEX.md`; its manifest records both covered
+and explicitly excluded scope.
 
 ## Required evidence
 

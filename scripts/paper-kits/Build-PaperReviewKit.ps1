@@ -29,19 +29,15 @@ if (-not (Test-Path -LiteralPath $metadataPath -PathType Leaf)) {
     throw "Unknown paper manifest: $metadataPath"
 }
 $metadata = Get-Content -LiteralPath $metadataPath -Raw | ConvertFrom-Json
-if ($metadata.schemaVersion -ne 1 -or $metadata.id -ne $Paper) {
+if ($metadata.schemaVersion -notin @(1, 2) -or $metadata.id -ne $Paper) {
     throw "Unsupported or mismatched paper manifest: $metadataPath"
 }
 
-$requiredProperties = @(
+$commonRequiredProperties = @(
     'canonicalName',
     'assetStem',
-    'year',
     'title',
     'author',
-    'sourceUrl',
-    'sourceDescription',
-    'sourceSha256',
     'entryModule',
     'auditModules',
     'auditDirectory',
@@ -49,13 +45,78 @@ $requiredProperties = @(
     'grade',
     'expectedAxioms'
 )
-foreach ($property in $requiredProperties) {
+foreach ($property in $commonRequiredProperties) {
     if ($metadata.PSObject.Properties.Name -notcontains $property) {
         throw "Paper manifest lacks required property '$property': $metadataPath"
     }
 }
 
-if ($metadata.sourceSha256 -notmatch '^[0-9A-F]{64}$') {
+if ($metadata.schemaVersion -eq 1) {
+    $versionRequiredProperties = @('year', 'sourceUrl', 'sourceDescription', 'sourceSha256')
+} else {
+    $versionRequiredProperties = @(
+        'workYear',
+        'publicationYear',
+        'citation',
+        'doi',
+        'authoritativeSource',
+        'comparisonSources',
+        'formalizedScope',
+        'excludedScope'
+    )
+}
+foreach ($property in $versionRequiredProperties) {
+    if ($metadata.PSObject.Properties.Name -notcontains $property) {
+        throw "Paper manifest lacks schema-$($metadata.schemaVersion) property '$property': $metadataPath"
+    }
+}
+
+$paperYear = if ($metadata.schemaVersion -eq 1) {
+    [int] $metadata.year
+} else {
+    [int] $metadata.publicationYear
+}
+$workYear = if ($metadata.schemaVersion -eq 1) {
+    [int] $metadata.year
+} else {
+    [int] $metadata.workYear
+}
+$sourceUrl = if ($metadata.schemaVersion -eq 1) {
+    [string] $metadata.sourceUrl
+} else {
+    [string] $metadata.authoritativeSource.url
+}
+$sourceDescription = if ($metadata.schemaVersion -eq 1) {
+    [string] $metadata.sourceDescription
+} else {
+    [string] $metadata.authoritativeSource.description
+}
+$sourceSha256 = if ($metadata.schemaVersion -eq 1) {
+    [string] $metadata.sourceSha256
+} else {
+    [string] $metadata.authoritativeSource.sha256
+}
+
+if ($metadata.schemaVersion -eq 2) {
+    foreach ($property in @('url', 'description', 'sha256', 'authority', 'redistributable')) {
+        if ($metadata.authoritativeSource.PSObject.Properties.Name -notcontains $property) {
+            throw "Authoritative source lacks required property '$property': $metadataPath"
+        }
+    }
+    if ($metadata.authoritativeSource.authority -ne $true) {
+        throw "Schema-2 authoritativeSource.authority must be true: $metadataPath"
+    }
+    foreach ($comparison in @($metadata.comparisonSources)) {
+        if ($comparison.authority -ne $false) {
+            throw "Every schema-2 comparison source must have authority=false: $metadataPath"
+        }
+        if ($comparison.sha256 -notmatch '^[0-9A-F]{64}$') {
+            throw "Comparison-source SHA-256 is invalid: $metadataPath"
+        }
+    }
+}
+
+if ($sourceSha256 -notmatch '^[0-9A-F]{64}$') {
     throw "Paper source SHA-256 is not an uppercase 64-digit hexadecimal value: $metadataPath"
 }
 
@@ -237,14 +298,26 @@ $notice = if ($metadata.PSObject.Properties.Name -contains 'reviewNotice') {
 } else {
     ''
 }
+$comparisonLines = if ($metadata.schemaVersion -eq 2 -and @($metadata.comparisonSources).Count -gt 0) {
+    (@($metadata.comparisonSources | ForEach-Object {
+        "- Non-authoritative comparison source: $($_.url) (SHA-256: $($_.sha256))"
+    }) -join "`n") + "`n"
+} else {
+    ''
+}
+$authorityNotice = if ($metadata.schemaVersion -eq 2) {
+    "- Semantic authority: **publisher version of record only**`n- DOI: $($metadata.doi)`n- Work year / publication year: **$workYear / $paperYear**`n"
+} else {
+    ''
+}
 $readme = @"
 # $($metadata.canonicalName) Lean 4 Review Kit
 
-Paper: *$($metadata.title)* ($($metadata.year)), $($metadata.author).
+Paper: *$($metadata.title)* ($paperYear), $($metadata.author).
 
-- Frozen source: $($metadata.sourceUrl)
-- Frozen source SHA-256: **$($metadata.sourceSha256)**
-- Canonical Lean entry: **$($metadata.entryModule)**
+- Frozen source: $sourceUrl
+- Frozen source SHA-256: **$sourceSha256**
+$authorityNotice$comparisonLines- Canonical Lean entry: **$($metadata.entryModule)**
 - Semantic status: **$($metadata.semanticStatus)**
 - Project grade: **$($metadata.grade)**
 $coverageLine
@@ -282,18 +355,34 @@ Release also publishes the SHA-256 of the complete ZIP archive.
 "@
 [IO.File]::WriteAllText((Join-Path $stagingDirectory 'README.md'), $readme, $encoding)
 
-$manifest = [ordered]@{
-    schemaVersion = 1
-    paper = [ordered]@{
+$paperManifest = if ($metadata.schemaVersion -eq 1) {
+    [ordered]@{
         id = $metadata.id
         canonicalName = $metadata.canonicalName
         year = $metadata.year
         title = $metadata.title
         author = $metadata.author
-        sourceUrl = $metadata.sourceUrl
-        sourceDescription = $metadata.sourceDescription
-        sourceSha256 = $metadata.sourceSha256
+        sourceUrl = $sourceUrl
+        sourceDescription = $sourceDescription
+        sourceSha256 = $sourceSha256
     }
+} else {
+    [ordered]@{
+        id = $metadata.id
+        canonicalName = $metadata.canonicalName
+        workYear = $workYear
+        publicationYear = $paperYear
+        title = $metadata.title
+        author = $metadata.author
+        citation = $metadata.citation
+        doi = $metadata.doi
+        authoritativeSource = $metadata.authoritativeSource
+        comparisonSources = @($metadata.comparisonSources)
+    }
+}
+$manifest = [ordered]@{
+    schemaVersion = $metadata.schemaVersion
+    paper = $paperManifest
     formalization = [ordered]@{
         entryModule = $metadata.entryModule
         auditModules = @($metadata.auditModules)
@@ -306,6 +395,16 @@ $manifest = [ordered]@{
         semanticStatus = $metadata.semanticStatus
         grade = $metadata.grade
         expectedAxioms = @($metadata.expectedAxioms)
+        formalizedScope = if ($metadata.schemaVersion -eq 2) {
+            @($metadata.formalizedScope)
+        } else {
+            $null
+        }
+        excludedScope = if ($metadata.schemaVersion -eq 2) {
+            @($metadata.excludedScope)
+        } else {
+            $null
+        }
         reviewNotice = if ($metadata.PSObject.Properties.Name -contains 'reviewNotice') {
             $metadata.reviewNotice
         } else {

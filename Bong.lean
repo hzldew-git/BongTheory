@@ -1011,3 +1011,6 @@ import Bong.Papers.Beli2006
 import Bong.Papers.Beli2009
 import Bong.Papers.Beli2019
 import Bong.Papers.Beli2020
+import Bong.Papers.HeHu2022
+import Bong.Papers.He2022Classic
+import Bong.Papers.He2023ADC
