@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 import Bong.Bong.HeHu2022Conditions
+import Bong.Bong.HeHu2022SectionTwo
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -16,7 +17,10 @@ Math. 67 (2024), 1481--1506.
 The implementation name records the work's 2022 provenance, while the
 publisher version of record (2024) is the sole semantic authority.  The
 Theorem 1.1 criterion is present as an exact statement-layer target in
-`HeHu2022Conditions`; no proof of that equivalence is asserted here.
+`HeHu2022Conditions`.  Direct endpoints for Definition 2.4, Lemma 2.2,
+Corollary 2.3(i), Propositions 2.5--2.6, and Theorem 2.8 are supplied by
+`HeHu2022SectionTwo`.  No proof of the Theorem 1.1 equivalence is asserted
+here yet.
 -/
 
 namespace Bong
