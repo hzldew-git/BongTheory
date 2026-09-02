@@ -22,6 +22,13 @@
 - `heHu2022Lemma211`: the terminal odd-rank defect inequality of Lemma 2.11;
   `heHu2022Lemma211ExceptionalTail` and `heHu2022Lemma211BetaClaim` expose
   the two nontrivial subarguments for audit.
+- `HeHuSharpDomain`, `HeHuSharpData`, and `heHuSharp`: the Definition 3.1
+  domain and a canonical choice satisfying the Proposition 3.2
+  characterization.
+- `heHu2022Proposition32`: unit, complementary-defect, and negative-Hilbert
+  properties of the chosen `c#`.
+- `heHu2022Proposition33`: uniqueness of the other binary isometry class with
+  determinant `-c`.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

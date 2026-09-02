@@ -6,6 +6,8 @@ Authors: BONG Theory contributors
 import Bong.Bong.HeHu2022Conditions
 import Bong.Bong.HeHu2022SectionTwo
 import Bong.Bong.HeHu2022Lemma211
+import Bong.Bong.HeHu2022SectionThreeSharp
+import Bong.Bong.HeHu2022SectionThreeBinary
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -20,8 +22,9 @@ publisher version of record (2024) is the sole semantic authority.  The
   Theorem 1.1 criterion is present as an exact statement-layer target in
   `HeHu2022Conditions`.  Direct endpoints for Definition 2.4, Lemma 2.2,
   Corollary 2.3, Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11 are
-  supplied by the Section 2 modules.  No proof of the Theorem 1.1 equivalence
-  is asserted here yet.
+  supplied by the Section 2 modules.  Definition 3.1 and Propositions 3.2--3.3
+  are supplied by the first two Section 3 modules.  No proof of the Theorem
+  1.1 equivalence is asserted here yet.
 -/
 
 namespace Bong

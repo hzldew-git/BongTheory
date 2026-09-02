@@ -16,5 +16,8 @@
 | Lemma 2.9 | `heHu2022Lemma29` | Proved |
 | Lemma 2.10 | `heHu2022Lemma210i`, `heHu2022Lemma210ii`, `heHu2022Lemma210iii` | Proved; all three clauses |
 | Lemma 2.11 | `heHu2022Lemma211` | Proved; odd source rank represented as `2*t+3` |
+| Definition 3.1 | `HeHuSharpDomain`, `heHuSharp` | `PROVISIONAL_EQUIVALENT_CONSTRUCTION`; canonical choice by Proposition 3.2 properties rather than the literal auxiliary expansion |
+| Proposition 3.2 | `heHu2022Proposition32` | Proved; all three displayed properties |
+| Proposition 3.3 | `heHu2022Proposition33` | Proved; nonisometry and uniqueness of the other binary class |
 
 The abstract core must never be cited as a proof of the full Theorem 1.2.

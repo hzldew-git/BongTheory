@@ -31,6 +31,11 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Lemma210ii
 #check Bong.BONG.GoodBONG.heHu2022Lemma210iii
 #check @Bong.BONG.GoodBONG.heHu2022Lemma211
+#check Bong.HeHuSharpDomain
+#check Bong.HeHuSharpData
+#check Bong.heHuSharp
+#check Bong.heHu2022Proposition32
+#check Bong.heHu2022Proposition33
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -51,4 +56,7 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma211ExceptionalTail
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma211BetaClaim
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma211
+#print axioms Bong.heHuSharpData_sourceDefect_integer
+#print axioms Bong.heHu2022Proposition32
+#print axioms Bong.heHu2022Proposition33
 #print axioms Bong.Lattice.heHuMaximalTestingReduction
