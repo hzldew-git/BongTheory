@@ -20,7 +20,8 @@
 | Section 4 condition and reduction layer | PASS, exact `I1^E`--`I3^E`, generic universality factorization, Theorem 4.1 assembly, and Theorem 4.7 invariant conversion |
 | Lemma 4.2 | PASS, both directions with exact square/discriminant tests and deep completion |
 | Lemma 4.3 | PASS, literal `N_2^n(Delta)` target, both strict defect conclusions, and exact nonrepresentation |
-| Lemmas 4.4 and 4.5 | FAIL / representation-theoretic component equivalences pending |
+| Lemma 4.4 | PASS, both directions, literal necessity test, and all terminal/nonterminal sufficiency branches |
+| Lemma 4.5 | FAIL / final representation-theoretic component equivalence pending |
 | Theorem 1.1 statement present | PASS |
 | Theorem 1.1 proof | FAIL / pending |
 | Theorem 1.2 explicit list and minimality | FAIL / pending |

@@ -95,6 +95,10 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Lemma43_defectTrigger
 #check Bong.BONG.GoodBONG.heHu2022Lemma43_not_represents
 #check Bong.BONG.GoodBONG.heHu2022Lemma43
+#check Bong.BONG.GoodBONG.heHu2022Lemma44Necessity
+#check Bong.BONG.GoodBONG.heHu2022Lemma44Sufficiency
+#check Bong.BONG.GoodBONG.heHu2022Lemma44NecessityAll
+#check Bong.BONG.GoodBONG.heHu2022Lemma44
 #check Bong.BONG.GoodBONG.heHuTheorem41_of_component_equivalences
 #check Bong.Lattice.heHuMaximalTestingReduction
 
@@ -175,5 +179,9 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma43_defectTrigger
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma43_not_represents
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma43
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma44Necessity
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma44Sufficiency
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma44NecessityAll
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma44
 #print axioms Bong.BONG.GoodBONG.heHuTheorem41_of_component_equivalences
 #print axioms Bong.Lattice.heHuMaximalTestingReduction

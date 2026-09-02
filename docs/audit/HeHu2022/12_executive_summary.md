@@ -9,10 +9,11 @@ quadratic-space classification, unique excluding-space theorem, and every
 Table 2 maximality row in Proposition 3.7 are now kernel checked. The
 Section 4 condition layer and the full arithmetic conversion from
 `I1^E`--`I3^E` to the concise Theorem 4.7 invariants are also kernel checked,
-as are Lemma 4.2 in both directions and the complete exceptional-target
-Lemma 4.3, together with the logical assembly of Theorem 4.1
+as are Lemma 4.2 in both directions, the complete exceptional-target
+Lemma 4.3, and the full Lemma 4.4 equivalence for all integral even-rank
+targets, together with the logical assembly of Theorem 4.1
 from Lemmas 4.2, 4.4, and 4.5. The principal mathematical work remains the
-representation-theoretic proofs of Lemmas 4.4 and 4.5, the odd-rank Section
+representation-theoretic proof of Lemma 4.5, the odd-rank Section
 5 chain, Section 6, the two main
 theorems, and the explicit minimal testing set.
 Status is partial, not a verified match.

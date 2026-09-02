@@ -20,6 +20,7 @@ import Bong.Bong.HeHu2022Proposition37
 import Bong.Bong.HeHu2022SectionFour
 import Bong.Bong.HeHu2022Lemma42
 import Bong.Bong.HeHu2022Lemma43
+import Bong.Bong.HeHu2022Lemma44
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -58,8 +59,11 @@ publisher version of record (2024) is the sole semantic authority.  The
   Lemma 4.3 is proved with the literal `N_2^n(Delta)` target: both strict
   defect conclusions and the terminal nonrepresentation assertion are
   checked through the Proposition 2.7(v) and Lemma 3.14(i) normal forms.
-  Lemmas 4.4 and 4.5 remain the visible representation-theoretic obligations
-  needed to instantiate the checked Theorem 4.1 assembly theorem.
+  Lemma 4.4 is proved in both directions: necessity specializes to that
+  literal target, while sufficiency treats every integral even-rank target,
+  including both terminal-order branches. Lemma 4.5 remains the visible
+  representation-theoretic obligation needed to instantiate the checked
+  Theorem 4.1 assembly theorem.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.

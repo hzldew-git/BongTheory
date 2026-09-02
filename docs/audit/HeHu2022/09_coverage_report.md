@@ -1,9 +1,9 @@
 # Coverage report
 
-Coverage status: `SECTIONS_2_3_CORE_AND_LEMMAS_4_2_4_3_COMPLETE`.
+Coverage status: `SECTIONS_2_3_CORE_AND_LEMMAS_4_2_TO_4_4_COMPLETE`.
 
 - Publisher inventory: 47/47 directly numbered items identified.
-- Accounted publisher-result endpoints: 24/47, comprising every numbered
+- Accounted publisher-result endpoints: 25/47, comprising every numbered
   item in Section 2 (Definition 2.4, Lemma 2.2, Corollary 2.3,
   Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11).
 - Section 3 coverage additionally includes Definitions 3.1, 3.4, and 3.6 and
@@ -35,14 +35,17 @@ Coverage status: `SECTIONS_2_3_CORE_AND_LEMMAS_4_2_4_3_COMPLETE`.
   direction uses a deep same-rank integral completion.  Lemma 4.3 is also
   complete: the literal `N_2^n(Delta)` target satisfies both strict defect
   conclusions and is proved not represented by the relevant source prefix
-  through the exact Table 1 normal forms.  Infrastructure also
+  through the exact Table 1 normal forms. Lemma 4.4 now proves the universal
+  central-condition equivalence with `I2^E`: necessity uses that literal
+  target, and sufficiency treats all integral even-rank targets, including
+  both terminal-order branches. Infrastructure also
   includes exact `I1^E`--`I3^E` definitions, a
   proved Theorem 2.8 universality factorization, the checked logical assembly
   of Theorem 4.1, and the complete invariant conversion used in Theorem 4.7.
-  Lemmas 4.4 and 4.5 still have to discharge the remaining representation
-  components before Theorems 4.1 and 4.7 can be counted.
+  Lemma 4.5 still has to discharge the remaining representation component
+  before Theorems 4.1 and 4.7 can be counted.
 
-The accounted coverage ratio is therefore **24/47**: 23 direct checked
+The accounted coverage ratio is therefore **25/47**: 24 direct checked
 publisher items plus the Definition 3.1 equivalent-construction endpoint
 that remains explicitly flagged for independent semantic review. This is a bookkeeping
 statement, not a judgment about how

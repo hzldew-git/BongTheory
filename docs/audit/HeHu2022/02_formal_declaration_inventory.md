@@ -93,10 +93,18 @@
   the source prefix with `W_1^(2k+3)(epsilon)`, and Lemma 3.14(i) proves the
   required nonrepresentation.  `heHu2022Lemma43_defectTrigger` separately
   exposes the two strict numerical conclusions.
+- `heHu2022Lemma44`: the complete Lemma 4.4 equivalence.  Necessity
+  specializes the universal central condition to the literal
+  `N_2^(2k+2)(Delta)` test from Lemma 4.3.  Sufficiency proves the central
+  representation condition for every integral even-rank target; nonterminal
+  indices are excluded by `I1^E`, while the terminal index is split into the
+  published minimal-order endpoint-tower representation and the higher-order
+  contradiction from Lemma 2.10(iii) and `I2^E`.
 - `heHuTheorem41_of_component_equivalences`: checked logical assembly of
   Theorem 4.1; its Lemma 4.2 premise is now discharged by
-  `heHu2022Lemma42`, while the explicit Lemmas 4.4 and 4.5 premises remain
-  open and are not treated as proved hypotheses.
+  `heHu2022Lemma42` and its Lemma 4.4 premise by `heHu2022Lemma44`; the
+  explicit Lemma 4.5 premise remains open and is not treated as a proved
+  hypothesis.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

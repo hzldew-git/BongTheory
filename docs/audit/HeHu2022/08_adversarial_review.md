@@ -12,8 +12,10 @@ For the Section 4 conversion, separately verify that paper
 when `R_(n+3)-R_(n+2)=2e` and `R_(n+2)=2-2e`. For the now-checked Lemma 4.2,
 independently verify the even-rank reparameterization, the final odd-index
 order, and the nonsquare product of the `1` and `Delta` test determinants.
-The checked assembly theorem must not be mistaken for the still-open Lemmas
-4.4 or 4.5.
+For Lemma 4.4, separately inspect the terminal-index cast, the split between
+last target order `-2e` and at least `1-2e`, and the use of `I2^E` only in the
+higher-order contradiction. The checked assembly theorem must not be mistaken
+for the still-open Lemma 4.5.
 
 For Proposition 3.7, independently inspect the even index-two volume drop,
 the `0,-2e`, `0,-2e,0`, and `0,-2e,0,-2e` equality profiles, and the direction

@@ -30,9 +30,30 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   {V : Type v} [AddCommGroup V] [Module K V]
   {q : QuadraticSpace K V} {L : Lattice K V}
 
+/-- Named ambient space of the exceptional Table 2 target.  Naming this
+otherwise large dependent expression prevents downstream theorem interfaces
+from repeatedly unfolding the complete binary endpoint construction. -/
+noncomputable def heHuLemma43TargetSpace
+    [DyadicDiscriminantClassLaws K] (k : Nat) :
+    QuadraticSpace K (Lattice.HyperbolicExtension K (Fin 2 → K) k) :=
+  Lattice.halfHyperbolicExtensionForm
+    (binaryDiagonalModelSpace
+      (heHuDiscriminantEndpointValues (K := K) 1 0)
+      (heHuDiscriminantEndpointValues (K := K) 1 1)
+      (heHuDiscriminantEndpoint_admissible (K := K) 1)) k
+
+/-- Named lattice underlying the exceptional Table 2 target. -/
+noncomputable def heHuLemma43TargetLattice
+    [DyadicDiscriminantClassLaws K] (k : Nat) :
+    Lattice K (Lattice.HyperbolicExtension K (Fin 2 → K) k) :=
+  Lattice.halfHyperbolicExtensionLattice
+    (binaryDiagonalModelLattice (K := K)) k
+
 /-- The exact `N_2^(2k+2)(Delta)` test used in Lemmas 4.3 and 4.4. -/
 noncomputable def heHuLemma43Target
-    [DyadicDiscriminantClassLaws K] (k : Nat) :=
+    [DyadicDiscriminantClassLaws K] (k : Nat) :
+    GoodBONG (heHuLemma43TargetSpace (K := K) k)
+      (heHuLemma43TargetLattice (K := K) k) (2 * k + 2) :=
   (heHuLemma311EvenSecondDeltaBONG (K := K) k).castLength
     (show 1 + 1 + 2 * k = 2 * k + 2 by omega)
 
@@ -43,7 +64,8 @@ theorem heHuLemma43Target_lastOrders
     (heHuLemma43Target (K := K) k).order ⟨2 * k, by omega⟩ = 1 ∧
       (heHuLemma43Target (K := K) k).order ⟨2 * k + 1, by omega⟩ =
         1 - 2 * (ramificationIndex K : Int) := by
-  unfold heHuLemma43Target
+  unfold heHuLemma43Target heHuLemma43TargetSpace
+    heHuLemma43TargetLattice
   simpa only [order_castLength] using
     (heHu2022Lemma311iSecondDelta (K := K) k).2
 
@@ -57,7 +79,8 @@ theorem heHuLemma43Target_hyperbolicValues
         ⟨2 * t.val + 1, by omega⟩ =
           -(uniformizerPowerUnit K
             (-(2 * (ramificationIndex K : Int)))) := by
-  unfold heHuLemma43Target heHuLemma311EvenSecondDeltaBONG
+  unfold heHuLemma43Target heHuLemma43TargetSpace
+    heHuLemma43TargetLattice heHuLemma311EvenSecondDeltaBONG
   simpa only [valueUnit_castLength_heHu] using
     (Bong.heHu2022Lemma310HyperbolicValues
       (heHuDiscriminantEndpointGoodBONG (K := K) 1)
@@ -117,13 +140,15 @@ theorem heHuLemma43Target_lastValues
   have hzero := Bong.heHu2022Lemma310TailValues tail hIntegral k (0 : Fin 2)
   have hone := Bong.heHu2022Lemma310TailValues tail hIntegral k (1 : Fin 2)
   constructor
-  · unfold heHuLemma43Target heHuLemma311EvenSecondDeltaBONG
+  · unfold heHuLemma43Target heHuLemma43TargetSpace
+      heHuLemma43TargetLattice heHuLemma311EvenSecondDeltaBONG
     rw [valueUnit_castLength_heHu]
     change (Bong.heHu2022Lemma310BONG tail hIntegral k).valueUnit
       ⟨2 * k + (0 : Fin 2).val, by omega⟩ = _
     rw [hzero, heHuDiscriminantEndpointGoodBONG_valueUnit,
       heHuDiscriminantEndpointValues_zero]
-  · unfold heHuLemma43Target heHuLemma311EvenSecondDeltaBONG
+  · unfold heHuLemma43Target heHuLemma43TargetSpace
+      heHuLemma43TargetLattice heHuLemma311EvenSecondDeltaBONG
     rw [valueUnit_castLength_heHu]
     change (Bong.heHu2022Lemma310BONG tail hIntegral k).valueUnit
       ⟨2 * k + (1 : Fin 2).val, by omega⟩ = _
@@ -875,6 +900,81 @@ theorem heHu2022Lemma43_not_represents
       (K := K)).discriminantUnit epsilon
     (Or.inr rfl) hepsilonUnit
     (heHuLemma43_evenSecondDefined (K := K) k)).2 hforbidden
+
+/-- The nonrepresentation conclusion of Lemma 4.3 in the literal prefix
+shape used by condition (iii') at its terminal central index. -/
+theorem heHu2022Lemma43_not_represents_atCentralIndex
+    {m : Nat} (a : GoodBONG q L (m + 2)) (k : Nat)
+    (hm : 2 * k + 2 ≤ m)
+    (hAIntegral : Lattice.IsIntegral q L)
+    (hI1 : a.HeHuI1E (2 * k + 2) (by omega)) :
+    let i := heHuLemma43CentralIndex k hm
+    ¬ DiagonalRepresents
+      ((heHuLemma43Target (K := K) k).prefixValues
+        (i.val - 1) (by
+          have := i.le_small_succ
+          omega))
+      (a.prefixValues i.val (by
+        have := i.lt_large
+        omega)) := by
+  dsimp only
+  intro hrep
+  let i := heHuLemma43CentralIndex k hm
+  let hs : i.val - 1 = 2 * k + 2 := by
+    dsimp only [i, heHuLemma43CentralIndex]
+    omega
+  let ht : i.val = 2 * k + 3 := by
+    rfl
+  have hrep' : DiagonalRepresents
+      ((heHuLemma43Target (K := K) k).prefixValues
+        (i.val - 1) (by
+          have := i.le_small_succ
+          omega))
+      (a.prefixValues i.val (by
+        have := i.lt_large
+        omega)) := by
+    simpa only [i] using hrep
+  have hcast := heHuLemma43_diagonalRepresents_castLengths hs ht hrep'
+  have hsourceEq :
+      (fun j : Fin (2 * k + 2) =>
+        (heHuLemma43Target (K := K) k).prefixValues
+          (i.val - 1) (by
+            have := i.le_small_succ
+            omega) (Fin.cast hs.symm j)) =
+        (heHuLemma43Target (K := K) k).prefixValues
+          (2 * k + 2) le_rfl := by
+    funext j
+    unfold prefixValues
+    congr 1
+  have htargetEq :
+      (fun j : Fin (2 * k + 3) =>
+        a.prefixValues i.val (by
+          have := i.lt_large
+          omega) (Fin.cast ht.symm j)) =
+        a.prefixValues (2 * k + 3) (by omega) := by
+    funext j
+    unfold prefixValues
+    congr 1
+  rw [hsourceEq, htargetEq] at hcast
+  exact (a.heHu2022Lemma43_not_represents k hm hAIntegral hI1) hcast
+
+/-- At the terminal central index, the revised condition `(iii')` is
+incompatible with Lemma 4.3.  This interface is kept next to Lemma 4.3 so
+downstream arguments do not have to unfold the dependent type of the special
+Table 2 target. -/
+theorem heHu2022Lemma43_prime_not_terminalTrigger
+    {m : Nat} (a : GoodBONG q L (m + 2)) (k : Nat)
+    (hm : 2 * k + 2 ≤ m)
+    (hAIntegral : Lattice.IsIntegral q L)
+    (hI1 : a.HeHuI1E (2 * k + 2) (by omega))
+    (hPrime : a.CentralRepresentationConditionsPrime
+      (heHuLemma43Target (K := K) k)) :
+    ¬a.centralDefectTrigger (heHuLemma43Target (K := K) k)
+      (heHuLemma43CentralIndex k hm) := by
+  intro htrigger
+  exact (a.heHu2022Lemma43_not_represents_atCentralIndex
+      k hm hAIntegral hI1)
+    (hPrime (heHuLemma43CentralIndex k hm) htrigger)
 
 /-- He--Hu, Lemma 4.3, in zero-based prefix notation.
 
