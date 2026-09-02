@@ -47,6 +47,12 @@
   `heHuOddSecondMaximalModel`: the canonical maximal representatives of
   Definition 3.6; the four `heHu2022Definition36*` theorems prove their
   maximality and rank.
+- `heHuHyperbolicHeadIsometry` and `heHuHyperbolicHeadGoodBONG`: the literal
+  half-hyperbolic plane equipped with the exact pair
+  `<1,-pi^(-2e)>`.
+- `heHu2022Lemma310BONG`, `heHu2022Lemma310HyperbolicValues`,
+  `heHu2022Lemma310TailValues`, and `heHu2022Lemma310`: the recursive
+  construction and both coefficient assertions of Lemma 3.10.
 - `HeHuRepresentsExactlyOne`, `heHu2022Lemma313CodimensionOne`, and
   `heHu2022Lemma313CodimensionTwo`: the exclusive representation package of
   Lemma 3.13 in both permitted target ranks.

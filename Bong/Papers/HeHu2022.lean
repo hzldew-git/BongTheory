@@ -11,6 +11,7 @@ import Bong.Bong.HeHu2022SectionThreeBinary
 import Bong.Bong.HeHu2022SectionThreeSpaces
 import Bong.Bong.HeHu2022Proposition35iii
 import Bong.Bong.HeHu2022Definition36
+import Bong.Bong.HeHu2022Lemma310
 import Bong.Bong.HeHu2022Lemma313
 import Bong.Bong.HeHu2022Lemma314
 import Bong.Bong.BeliUniversalMaximal
@@ -32,8 +33,10 @@ publisher version of record (2024) is the sole semantic authority.  The
   three clauses of Proposition 3.5, including the unique excluding-space
   assertion and its exceptional binary case, are proved by the space and
   codimension-two modules. Definition 3.6 is realized by canonical maximal
-  representatives in each displayed space. Lemmas 3.13--3.14 are proved by the explicit
-  determinant--Hasse and Table 1 comparison modules. No proof of the
+  representatives in each displayed space. Lemma 3.10 is proved by an exact
+  recursive good-BONG construction on the literal half-hyperbolic tower.
+  Lemmas 3.13--3.14 are proved by the explicit determinant--Hasse and Table 1
+  comparison modules. No proof of the
   Theorem 1.1 equivalence is asserted here yet.
 -/
 

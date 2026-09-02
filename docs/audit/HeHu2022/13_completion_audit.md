@@ -11,6 +11,7 @@
 | Definition 3.1 and Propositions 3.2--3.3 | PASS, with Definition 3.1 equivalent-construction review flag |
 | Definition 3.4 and Proposition 3.5 | PASS, including all Table 1 and uniqueness branches |
 | Definition 3.6 | PASS, canonical maximal representatives for every defined Table 1 space |
+| Lemma 3.10 | PASS, exact half-hyperbolic pairs and arbitrary tail preservation |
 | Lemmas 3.13--3.14 | PASS, both rank alternatives and all stated Table 1 comparisons |
 | Theorem 1.1 statement present | PASS |
 | Theorem 1.1 proof | FAIL / pending |

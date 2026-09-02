@@ -184,6 +184,20 @@ theorem candidate_isOMaximal (D : OMaximalMinimalData q L) :
 
 end OMaximalMinimalData
 
+/-- An integral lattice whose volume order is minimal among all integral
+lattices in the same quadratic space is `O`-maximal.  This is the reusable
+volume-minimality argument used in He--Hu, Proposition 3.7. -/
+theorem isOMaximal_of_isIntegral_of_volumeOrder_minimal
+    (hL : IsIntegral q L)
+    (hminimal : ∀ M : Lattice K V, IsIntegral q M →
+      volumeOrder q L ≤ volumeOrder q M) :
+    IsOMaximal q L := by
+  refine ⟨hL, ?_⟩
+  intro M hle hM
+  have hvolEq : volumeOrder q L = volumeOrder q M :=
+    le_antisymm (hminimal M hM) (volumeOrder_mono_of_le q hle)
+  exact (eq_of_le_of_volumeOrder_eq q L M hle hvolEq).symm
+
 /-- O'Meara 82:18: every integral lattice is contained in an `O`-maximal
 integral lattice over the same quadratic space. -/
 theorem exists_oMaximal_superlattice

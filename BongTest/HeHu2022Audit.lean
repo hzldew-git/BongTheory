@@ -44,6 +44,12 @@ import Bong.Papers.HeHu2022
 #check Bong.heHu2022Proposition35iiiOddSecond
 #check Bong.heHu2022Proposition35iiiEvenFirst
 #check Bong.heHu2022Proposition35iiiEvenSecond
+#check Bong.heHuHyperbolicHeadIsometry
+#check Bong.heHuHyperbolicHeadGoodBONG
+#check Bong.heHu2022Lemma310BONG
+#check Bong.heHu2022Lemma310HyperbolicValues
+#check Bong.heHu2022Lemma310TailValues
+#check Bong.heHu2022Lemma310
 #check Bong.HeHuRepresentsExactlyOne
 #check Bong.heHu2022Lemma313CodimensionOne
 #check Bong.heHu2022Lemma313CodimensionTwo
@@ -85,6 +91,10 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.heHu2022Definition36EvenSecond
 #print axioms Bong.heHu2022Definition36OddFirst
 #print axioms Bong.heHu2022Definition36OddSecond
+#print axioms Bong.heHuHyperbolicHeadIsometry
+#print axioms Bong.heHu2022Lemma310HyperbolicValues
+#print axioms Bong.heHu2022Lemma310TailValues
+#print axioms Bong.heHu2022Lemma310
 #print axioms Bong.heHu2022Lemma313CodimensionOne
 #print axioms Bong.heHu2022Lemma313CodimensionTwo
 #print axioms Bong.heHu2022Lemma314iRepresents
