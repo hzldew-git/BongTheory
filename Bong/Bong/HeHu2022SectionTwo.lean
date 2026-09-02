@@ -13,6 +13,8 @@ import Bong.Bong.Beli2019Lemma75PrefixClass
 import Bong.Bong.BeliCorollary44LawsProof
 import Bong.Bong.AlternatingEndpointOddNormalForm
 import Bong.Bong.SelfPrefixDomination
+import Bong.Bong.Beli2019CappedDefectSharp
+import Bong.Bong.Beli2019CappedDefectTriangle
 
 /-!
 # He--Hu (2024), Section 2
@@ -286,6 +288,31 @@ theorem heHu2022Proposition26 {n : Nat}
   · intro hlower hupper
     simpa only [heHuAdjacentCappedDefect] using
       a.alphaValue_eq_one_iff_cappedAdjacent i hlower hupper
+
+/-- A nonzero He--Hu alpha invariant is at least one.  This is the
+discreteness consequence of Proposition 2.6(i) used in Lemma 2.10. -/
+theorem heHuOne_le_alphaValue_of_ne_zero {n : Nat}
+    (a : GoodBONG q L (n + 1)) (i : Fin n)
+    (halphaNe : a.alphaValue i ≠ 0) :
+    1 ≤ a.alphaValue i := by
+  let C := a.heHu2022Proposition26 i
+  rcases C.arithmeticShape with hinteger | hlarge
+  · rcases hinteger.2.2 with ⟨z, hz⟩
+    have hzNonnegative : 0 ≤ z := by
+      exact_mod_cast (show 0 ≤ (z : ℚ) by
+        simpa only [hz] using hinteger.1)
+    have hzNe : z ≠ 0 := by
+      intro hzZero
+      apply halphaNe
+      rw [hz, hzZero]
+      norm_num
+    have hzOne : 1 ≤ z := by omega
+    calc
+      (1 : ℚ) ≤ (z : ℚ) := by exact_mod_cast hzOne
+      _ = a.alphaValue i := hz.symm
+  · have heOne : 1 ≤ (ramificationIndex K : ℚ) := by
+      exact_mod_cast ramificationIndex_pos (K := K)
+    linarith [hlarge.1]
 
 /-- Proposition 2.7(i), with paper-odd indices represented by even
 zero-based indices and paper-even indices by odd zero-based indices. -/
@@ -907,6 +934,522 @@ theorem heHu2022Lemma29 {m n : Nat}
     le_min (hAlphaTwoE.trans hsourcePrefix) htargetPrefix
   rw [hsignSquare] at hdomination
   exact hmin.trans hdomination
+
+/-- Conclusions of He--Hu, Lemma 2.10(i), with the paper's even index
+stored in `i.val`. -/
+structure HeHuLemma210iConclusions {m n : Nat}
+    (a : GoodBONG q L (m + 3))
+    (i : LongRepresentationIndex (m + 3) (n + 1)) : Prop where
+  adjacentLower :
+    (((1 - a.order ⟨i.val + 1, i.succ_lt_large⟩ : Int) : ℚ) :
+        WithTop ℚ) ≤
+      a.truncatedPrefixDefect a (-1) i.val (i.val + 2)
+  equalityConsequences
+      (hequality :
+        a.truncatedPrefixDefect a (-1) i.val (i.val + 2) =
+          (((1 - a.order ⟨i.val + 1, i.succ_lt_large⟩ : Int) : ℚ) :
+            WithTop ℚ)) :
+    a.alphaValue ⟨i.val, by have := i.succ_lt_large; omega⟩ = 1 ∧
+      (a.order ⟨i.val + 1, i.succ_lt_large⟩ = 1 ∨
+        (Even (a.order ⟨i.val + 1, i.succ_lt_large⟩) ∧
+          2 - 2 * (ramificationIndex K : Int) ≤
+            a.order ⟨i.val + 1, i.succ_lt_large⟩ ∧
+          a.order ⟨i.val + 1, i.succ_lt_large⟩ ≤ 0))
+
+/-- He--Hu, Lemma 2.10(i). -/
+theorem heHu2022Lemma210i {m n : Nat}
+    (a : GoodBONG q L (m + 3))
+    (_hIntegral : Lattice.IsIntegral q L)
+    (i : LongRepresentationIndex (m + 3) (n + 1))
+    (_hiEven : Even i.val)
+    (_hiOrder : a.order ⟨i.val - 1, by
+      have := i.succ_lt_large
+      omega⟩ =
+      -(2 * (ramificationIndex K : Int)))
+    (hiNextOrder : a.order ⟨i.val, by
+      have := i.succ_lt_large
+      omega⟩ = 0)
+    (hiNextTwoOrder :
+      -(2 * (ramificationIndex K : Int)) <
+        a.order ⟨i.val + 1, i.succ_lt_large⟩) :
+    HeHuLemma210iConclusions a i := by
+  let gap : Fin (m + 2) := ⟨i.val, by
+    have := i.succ_lt_large
+    omega⟩
+  let nextTwo : Fin (m + 3) :=
+    ⟨i.val + 1, i.succ_lt_large⟩
+  have hgapOrder : a.orderGap gap = a.order nextTwo := by
+    unfold orderGap
+    have hleft : gap.castSucc =
+        (⟨i.val, by
+          have := i.succ_lt_large
+          omega⟩ : Fin (m + 3)) := by
+      apply Fin.ext
+      rfl
+    have hright : gap.succ = nextTwo := by
+      apply Fin.ext
+      rfl
+    rw [hleft, hright, hiNextOrder]
+    simp
+  let C := a.heHu2022Proposition26 gap
+  have halphaNe : a.alphaValue gap ≠ 0 := by
+    intro halpha
+    have hgap := C.alphaZero.mp halpha
+    rw [hgapOrder] at hgap
+    have hgt : -(2 * (ramificationIndex K : Int)) <
+        a.order nextTwo := by
+      simpa only [nextTwo] using hiNextTwoOrder
+    omega
+  have halphaOneLower : 1 ≤ a.alphaValue gap := by
+    exact a.heHuOne_le_alphaValue_of_ne_zero gap halphaNe
+  letI : Beli2006AlphaLaws.{u, v} K := beliUniversalAlphaLaws
+  have hadjacent := a.order_sub_add_alpha_le_cappedAdjacent gap
+  have hthresholdToAdjacentTerm :
+      (((1 - a.order nextTwo : Int) : ℚ) : WithTop ℚ) ≤
+        (((((a.order gap.castSucc - a.order gap.succ : Int) : ℚ) +
+          a.alphaValue gap : ℚ)) : WithTop ℚ) := by
+    norm_cast
+    have hleft : gap.castSucc =
+        (⟨i.val, by
+          have := i.succ_lt_large
+          omega⟩ : Fin (m + 3)) := by
+      apply Fin.ext
+      rfl
+    have hright : gap.succ = nextTwo := by
+      apply Fin.ext
+      rfl
+    rw [hleft, hright, hiNextOrder]
+    push_cast
+    linarith
+  have hadjacentLower :
+      (((1 - a.order nextTwo : Int) : ℚ) : WithTop ℚ) ≤
+        a.truncatedPrefixDefect a (-1) i.val (i.val + 2) := by
+    have h := hthresholdToAdjacentTerm.trans hadjacent
+    simpa only [gap] using h
+  refine
+    { adjacentLower := by simpa only [nextTwo] using hadjacentLower
+      equalityConsequences := ?_ }
+  intro hequality
+  have hequality' :
+      a.truncatedPrefixDefect a (-1) i.val (i.val + 2) =
+        (((1 - a.order nextTwo : Int) : ℚ) : WithTop ℚ) := by
+    simpa only [nextTwo] using hequality
+  have halphaUpperRaw := hadjacent.trans_eq hequality'
+  have halphaUpper : a.alphaValue gap ≤ 1 := by
+    norm_cast at halphaUpperRaw
+    have hleft : gap.castSucc =
+        (⟨i.val, by
+          have := i.succ_lt_large
+          omega⟩ : Fin (m + 3)) := by
+      apply Fin.ext
+      rfl
+    have hright : gap.succ = nextTwo := by
+      apply Fin.ext
+      rfl
+    rw [hleft, hright, hiNextOrder] at halphaUpperRaw
+    push_cast at halphaUpperRaw
+    linarith
+  have halphaOne : a.alphaValue gap = 1 :=
+    le_antisymm halphaUpper halphaOneLower
+  have hcases := (C.alphaOne halphaOne).1
+  rw [hgapOrder] at hcases
+  exact ⟨by simpa only [gap] using halphaOne,
+    by simpa only [nextTwo] using hcases⟩
+
+/-- He--Hu, Lemma 2.10(ii): equality at the last adjacent pair is
+equivalent to equality for the whole alternating prefix. -/
+theorem heHu2022Lemma210ii {m n : Nat}
+    (a : GoodBONG q L (m + 3))
+    (hIntegral : Lattice.IsIntegral q L)
+    (i : LongRepresentationIndex (m + 3) (n + 1))
+    (hiEven : Even i.val)
+    (hiOrder : a.order ⟨i.val - 1, by
+      have := i.succ_lt_large
+      omega⟩ = -(2 * (ramificationIndex K : Int)))
+    (hiNextOrder : a.order ⟨i.val, by
+      have := i.succ_lt_large
+      omega⟩ = 0)
+    (hiNextTwoOrder :
+      -(2 * (ramificationIndex K : Int)) <
+        a.order ⟨i.val + 1, i.succ_lt_large⟩) :
+    let threshold : WithTop ℚ :=
+      (((1 - a.order ⟨i.val + 1, i.succ_lt_large⟩ : Int) : ℚ) :
+        WithTop ℚ)
+    a.truncatedPrefixDefect a (-1) i.val (i.val + 2) = threshold ↔
+      a.truncatedPrefixDefect a ((-1) ^ ((i.val + 2) / 2))
+        0 (i.val + 2) = threshold := by
+  dsimp only
+  rcases hiEven with ⟨pairs, hiPairs⟩
+  have hiFormula : i.val = 2 * pairs := by omega
+  have hpairsPos : 0 < pairs := by
+    have := i.one_lt
+    omega
+  let sourceLast : Fin (m + 3) := ⟨i.val - 1, by
+    have := i.succ_lt_large
+    omega⟩
+  let gap : Fin (m + 2) := ⟨i.val, by
+    have := i.succ_lt_large
+    omega⟩
+  let nextTwo : Fin (m + 3) :=
+    ⟨i.val + 1, i.succ_lt_large⟩
+  let threshold : WithTop ℚ :=
+    (((1 - a.order nextTwo : Int) : ℚ) : WithTop ℚ)
+  let previousSign : Kˣ := (-1) ^ pairs
+  let fullSign : Kˣ := (-1) ^ (pairs + 1)
+  have hsourceLastOdd : Odd sourceLast.val := by
+    refine ⟨pairs - 1, ?_⟩
+    simp only [sourceLast]
+    omega
+  have hpreviousPrefix :
+      ((2 * ramificationIndex K : ℚ) : WithTop ℚ) ≤
+        a.truncatedPrefixDefect a previousSign 0 i.val := by
+    have C := a.heHu2022Proposition27iiiiv hIntegral sourceLast
+      hsourceLastOdd (by simpa only [sourceLast] using hiOrder)
+    have h := C.alternatingPrefixDefect
+    have hend : sourceLast.val - 1 + 2 = i.val := by
+      simp only [sourceLast]
+      omega
+    have hiDiv : i.val / 2 = pairs := by
+      rw [hiFormula]
+      omega
+    simpa only [previousSign, hend, hiDiv] using h
+  have hgapOrder : a.orderGap gap = a.order nextTwo := by
+    unfold orderGap
+    have hleft : gap.castSucc =
+        (⟨i.val, by have := i.succ_lt_large; omega⟩ : Fin (m + 3)) := by
+      apply Fin.ext
+      rfl
+    have hright : gap.succ = nextTwo := by
+      apply Fin.ext
+      rfl
+    rw [hleft, hright, hiNextOrder]
+    simp
+  have hthresholdInt :
+      1 - a.order nextTwo < 2 * (ramificationIndex K : Int) := by
+    by_cases hnonpositive : a.order nextTwo ≤ 0
+    · have heven := (a.heHu2022Corollary23i gap).2 (by
+        rw [hgapOrder]
+        exact hnonpositive)
+      rw [hgapOrder] at heven
+      rcases heven with ⟨z, hz⟩
+      have hgt : -(2 * (ramificationIndex K : Int)) <
+          a.order nextTwo := by
+        simpa only [nextTwo] using hiNextTwoOrder
+      omega
+    · have hpositive : 0 < a.order nextTwo := lt_of_not_ge hnonpositive
+      have hePositive := ramificationIndex_pos (K := K)
+      omega
+  have hthresholdTwoE :
+      threshold < ((2 * ramificationIndex K : ℚ) : WithTop ℚ) := by
+    dsimp only [threshold]
+    exact_mod_cast hthresholdInt
+  have hthresholdPrevious :
+      threshold < a.truncatedPrefixDefect a previousSign 0 i.val :=
+    hthresholdTwoE.trans_le hpreviousPrefix
+  have hfullExponent : (i.val + 2) / 2 = pairs + 1 := by
+    rw [hiFormula]
+    omega
+  have hleftSign : (-1 : Kˣ) * previousSign = fullSign := by
+    simp only [previousSign, fullSign, pow_succ]
+    ac_rfl
+  have hrightSign : fullSign * (-1 : Kˣ) = previousSign := by
+    simp only [fullSign, previousSign, pow_succ]
+    rw [mul_assoc]
+    norm_num
+  have hfullSignSquare : fullSign * fullSign = 1 := by
+    simp only [fullSign]
+    rw [← pow_add]
+    have hsum : pairs + 1 + (pairs + 1) = 2 * (pairs + 1) := by omega
+    rw [hsum, pow_mul]
+    norm_num
+  constructor
+  · intro hlocal
+    have hlocal' :
+        a.truncatedPrefixDefect a (-1) i.val (i.val + 2) = threshold :=
+      hlocal
+    have hlocalStrict :
+        a.truncatedPrefixDefect a (-1) i.val (i.val + 2) <
+          a.truncatedPrefixDefect a previousSign 0 i.val := by
+      rw [hlocal']
+      exact hthresholdPrevious
+    have hstrictReversed :
+        a.truncatedPrefixDefect a (-1) (i.val + 2) i.val <
+          a.truncatedPrefixDefect a previousSign i.val 0 := by
+      rw [a.truncatedPrefixDefect_comm a (-1),
+        a.truncatedPrefixDefect_comm a previousSign]
+      exact hlocalStrict
+    have hsharp := a.truncatedPrefixDefect_mul_eq_left_of_lt_right
+      a a (-1) previousSign (i.val + 2) i.val 0 hstrictReversed
+    rw [hleftSign, a.truncatedPrefixDefect_comm a fullSign,
+      a.truncatedPrefixDefect_comm a (-1)] at hsharp
+    rw [hfullExponent]
+    change a.truncatedPrefixDefect a fullSign 0 (i.val + 2) = threshold
+    exact hsharp.trans hlocal'
+  · intro hfull
+    rw [hfullExponent] at hfull
+    change a.truncatedPrefixDefect a fullSign 0 (i.val + 2) = threshold at hfull
+    have hfullStrict :
+        a.truncatedPrefixDefect a fullSign 0 (i.val + 2) <
+          a.truncatedPrefixDefect a previousSign 0 i.val := by
+      rw [hfull]
+      exact hthresholdPrevious
+    have htriangle := a.truncatedPrefixDefect_eq_middle_of_lt_composite
+      a a fullSign (-1) hfullSignSquare (by norm_num)
+        0 (i.val + 2) i.val (by
+          rw [hrightSign]
+          exact hfullStrict)
+    rw [a.truncatedPrefixDefect_comm a (-1)] at htriangle
+    exact htriangle.symm.trans hfull
+
+/-- He--Hu, Lemma 2.10(iii).  A witness `j` below is the zero-based start
+of the paper's even adjacent pair `[b_(j+1), b_(j+2)]`; hence
+`j.val + 2` is the corresponding paper index. -/
+theorem heHu2022Lemma210iii {m n : Nat}
+    (a : GoodBONG q L (m + 3)) (b : GoodBONG r M (n + 2))
+    (hAIntegral : Lattice.IsIntegral q L)
+    (hBIntegral : Lattice.IsIntegral r M)
+    (i : LongRepresentationIndex (m + 3) (n + 1))
+    (hiEven : Even i.val)
+    (hiOrder : a.order ⟨i.val - 1, by
+      have := i.succ_lt_large
+      omega⟩ = -(2 * (ramificationIndex K : Int)))
+    (hiNextOrder : a.order ⟨i.val, by
+      have := i.succ_lt_large
+      omega⟩ = 0)
+    (hiNextTwoOrder :
+      -(2 * (ramificationIndex K : Int)) <
+        a.order ⟨i.val + 1, i.succ_lt_large⟩)
+    (hlocalEquality :
+      a.truncatedPrefixDefect a (-1) i.val (i.val + 2) =
+        (((1 - a.order ⟨i.val + 1, i.succ_lt_large⟩ : Int) : ℚ) :
+          WithTop ℚ)) :
+    let thresholdValue : ℚ :=
+      ((1 - a.order ⟨i.val + 1, i.succ_lt_large⟩ : Int) : ℚ)
+    let threshold : WithTop ℚ := (thresholdValue : WithTop ℚ)
+    a.truncatedPrefixDefect b (-1) (i.val + 2) i.val = threshold ∨
+      ∃ j : Fin (n + 1),
+        Even j.val ∧ j.val + 1 < i.val ∧
+          a.order ⟨i.val + 1, i.succ_lt_large⟩ ≤ b.order j.succ ∧
+          ∀ k : Fin (n + 1), j ≤ k →
+            b.alphaValue k ≤
+                ((b.order k.succ - b.order j.castSucc : Int) : ℚ) +
+                  thresholdValue ∧
+              ((b.order k.succ - b.order j.castSucc : Int) : ℚ) +
+                  thresholdValue ≤
+                (b.order k.succ : ℚ) + thresholdValue := by
+  dsimp only
+  have hiEvenCopy := hiEven
+  have hsourceEqualityRaw :=
+    (a.heHu2022Lemma210ii hAIntegral i hiEven hiOrder hiNextOrder
+      hiNextTwoOrder).mp hlocalEquality
+  rcases hiEven with ⟨pairs, hiPairs⟩
+  have hiFormula : i.val = 2 * pairs := by omega
+  have hpairsPos : 0 < pairs := by
+    have := i.one_lt
+    omega
+  let nextTwo : Fin (m + 3) :=
+    ⟨i.val + 1, i.succ_lt_large⟩
+  let sourceGap : Fin (m + 2) := ⟨i.val, by
+    have := i.succ_lt_large
+    omega⟩
+  let thresholdValue : ℚ := ((1 - a.order nextTwo : Int) : ℚ)
+  let threshold : WithTop ℚ := (thresholdValue : WithTop ℚ)
+  let previousSign : Kˣ := (-1) ^ pairs
+  let fullSign : Kˣ := (-1) ^ (pairs + 1)
+  have hfullExponent : (i.val + 2) / 2 = pairs + 1 := by
+    rw [hiFormula]
+    omega
+  have hsourceEquality :
+      a.truncatedPrefixDefect a fullSign 0 (i.val + 2) = threshold := by
+    rw [hfullExponent] at hsourceEqualityRaw
+    simpa only [fullSign, threshold, thresholdValue, nextTwo] using
+      hsourceEqualityRaw
+  have hleftSign : (-1 : Kˣ) * previousSign = fullSign := by
+    simp only [previousSign, fullSign, pow_succ]
+    ac_rfl
+  have hrightSign : fullSign * previousSign = (-1 : Kˣ) := by
+    simp only [fullSign, previousSign, pow_succ]
+    rw [mul_assoc]
+    have hsquare : ((-1 : Kˣ) ^ pairs) * ((-1 : Kˣ) ^ pairs) = 1 := by
+      rw [← pow_add]
+      have hsum : pairs + pairs = 2 * pairs := by omega
+      rw [hsum, pow_mul]
+      norm_num
+    rw [mul_comm (-1 : Kˣ), ← mul_assoc, hsquare]
+    simp
+  have hpreviousSignSquare : previousSign * previousSign = 1 := by
+    simp only [previousSign]
+    rw [← pow_add]
+    have hsum : pairs + pairs = 2 * pairs := by omega
+    rw [hsum, pow_mul]
+    norm_num
+  have hfullSignSquare : fullSign * fullSign = 1 := by
+    simp only [fullSign]
+    rw [← pow_add]
+    have hsum : pairs + 1 + (pairs + 1) = 2 * (pairs + 1) := by omega
+    rw [hsum, pow_mul]
+    norm_num
+  let mixed := a.truncatedPrefixDefect b (-1) (i.val + 2) i.val
+  let source := a.truncatedPrefixDefect a fullSign 0 (i.val + 2)
+  let target := b.truncatedPrefixDefect b previousSign 0 i.val
+  by_cases hmixed : mixed = threshold
+  · left
+    exact hmixed
+  · right
+    have hmixedSource : mixed ≠ source := by
+      dsimp only [source]
+      rw [hsourceEquality]
+      exact hmixed
+    have htargetUpper : target ≤ threshold := by
+      rcases lt_or_gt_of_ne hmixedSource with hmixedLt | hsourceLt
+      · have hstrict :
+            a.truncatedPrefixDefect b (-1) (i.val + 2) i.val <
+              a.truncatedPrefixDefect a ((-1) * previousSign)
+                (i.val + 2) 0 := by
+          rw [hleftSign, a.truncatedPrefixDefect_comm a fullSign]
+          exact hmixedLt
+        have htriangle :=
+          a.truncatedPrefixDefect_eq_middle_of_lt_composite
+            b a (-1) previousSign (by norm_num) hpreviousSignSquare
+              (i.val + 2) i.val 0 hstrict
+        have htargetEq : target = mixed := by
+          calc
+            target = b.truncatedPrefixDefect b previousSign i.val 0 :=
+              b.truncatedPrefixDefect_comm b previousSign 0 i.val
+            _ = b.truncatedPrefixDefect a previousSign i.val 0 :=
+              (b.truncatedPrefixDefect_zero_right_eq_self
+                a previousSign i.val).symm
+            _ = mixed := htriangle.symm
+        rw [htargetEq]
+        exact hmixedLt.le.trans_eq hsourceEquality
+      · have hstrict :
+            a.truncatedPrefixDefect a fullSign (i.val + 2) 0 <
+              a.truncatedPrefixDefect b (fullSign * previousSign)
+                (i.val + 2) i.val := by
+          rw [a.truncatedPrefixDefect_comm a fullSign, hrightSign]
+          exact hsourceLt
+        have htriangle :=
+          a.truncatedPrefixDefect_eq_middle_of_lt_composite
+            a b fullSign previousSign hfullSignSquare
+              hpreviousSignSquare (i.val + 2) 0 i.val hstrict
+        have htargetEq : target = source := by
+          calc
+            target = a.truncatedPrefixDefect b previousSign 0 i.val :=
+              (a.truncatedPrefixDefect_zero_left_eq_self
+                b previousSign i.val).symm
+            _ = a.truncatedPrefixDefect a fullSign (i.val + 2) 0 :=
+              htriangle.symm
+            _ = source :=
+              a.truncatedPrefixDefect_comm a fullSign (i.val + 2) 0
+        rw [htargetEq]
+        simpa only [source] using hsourceEquality.le
+    have hiTargetBound : i.val ≤ n + 2 := i.le_small_succ
+    rcases b.exists_even_cappedAdjacent_le_alternatingPrefix i.val
+      (by omega) hiTargetBound hiEvenCopy with
+      ⟨j, hjEven, hjBefore, hjLocalTarget⟩
+    have hiDiv : i.val / 2 = pairs := by
+      rw [hiFormula]
+      omega
+    have hjLocalTarget' :
+        b.truncatedPrefixDefect b (-1) j.val (j.val + 2) ≤ target := by
+      rw [hiDiv] at hjLocalTarget
+      simpa only [target, previousSign] using hjLocalTarget
+    have hjLocalUpper :
+        b.truncatedPrefixDefect b (-1) j.val (j.val + 2) ≤ threshold :=
+      hjLocalTarget'.trans htargetUpper
+    have hsourceGapOrder : a.orderGap sourceGap = a.order nextTwo := by
+      unfold orderGap
+      have hleft : sourceGap.castSucc =
+          (⟨i.val, by have := i.succ_lt_large; omega⟩ : Fin (m + 3)) := by
+        apply Fin.ext
+        rfl
+      have hright : sourceGap.succ = nextTwo := by
+        apply Fin.ext
+        rfl
+      rw [hleft, hright, hiNextOrder]
+      simp
+    have hthresholdInt :
+        1 - a.order nextTwo < 2 * (ramificationIndex K : Int) := by
+      by_cases hnonpositive : a.order nextTwo ≤ 0
+      · have heven := (a.heHu2022Corollary23i sourceGap).2 (by
+          rw [hsourceGapOrder]
+          exact hnonpositive)
+        rw [hsourceGapOrder] at heven
+        rcases heven with ⟨z, hz⟩
+        have hgt : -(2 * (ramificationIndex K : Int)) <
+            a.order nextTwo := by
+          simpa only [nextTwo] using hiNextTwoOrder
+        omega
+      · have hpositive : 0 < a.order nextTwo := lt_of_not_ge hnonpositive
+        have hePositive := ramificationIndex_pos (K := K)
+        omega
+    have hthresholdTwoE :
+        threshold < ((2 * ramificationIndex K : ℚ) : WithTop ℚ) := by
+      dsimp only [threshold, thresholdValue]
+      exact_mod_cast hthresholdInt
+    let targetOrders := b.heHu2022Proposition27i hBIntegral
+    have htargetPreviousNonnegative : 0 ≤ b.order j.castSucc :=
+      (targetOrders.oddIndexed j.castSucc j.castSucc le_rfl
+        hjEven hjEven).1
+    let targetAlpha := b.heHu2022Proposition26 j
+    have htargetAlphaNe : b.alphaValue j ≠ 0 := by
+      intro halphaZero
+      have htwoE := targetAlpha.alphaZeroDefect halphaZero
+      have htwoE' :
+          ((2 * ramificationIndex K : ℚ) : WithTop ℚ) ≤
+            b.truncatedPrefixDefect b (-1) j.val (j.val + 2) := by
+        simpa only [heHuAdjacentCappedDefect] using htwoE
+      have htwoEThreshold := htwoE'.trans hjLocalUpper
+      exact (not_le_of_gt hthresholdTwoE) htwoEThreshold
+    have htargetAlphaOne : 1 ≤ b.alphaValue j :=
+      b.heHuOne_le_alphaValue_of_ne_zero j htargetAlphaNe
+    letI : Beli2006AlphaLaws.{u, w} K := beliUniversalAlphaLaws
+    have hjAdjacent := b.order_sub_add_alpha_le_cappedAdjacent j
+    have hjAdjacentThreshold := hjAdjacent.trans hjLocalUpper
+    have hsourceOrderLe : a.order nextTwo ≤ b.order j.succ := by
+      have hraw := hjAdjacentThreshold
+      dsimp only [threshold, thresholdValue] at hraw ⊢
+      norm_cast at hraw
+      push_cast at hraw
+      have hpreviousQ : 0 ≤ (b.order j.castSucc : ℚ) := by
+        exact_mod_cast htargetPreviousNonnegative
+      have hsourceQ : (a.order nextTwo : ℚ) ≤
+          (b.order j.succ : ℚ) := by
+        linarith
+      exact_mod_cast hsourceQ
+    refine ⟨j, hjEven, hjBefore, by simpa only [nextTwo] using hsourceOrderLe, ?_⟩
+    intro k hjk
+    have hrightMono :=
+      (b.heHu2022Proposition25 j k hjk).rightEndpoint_le
+    have hrightJ :
+        b.alphaRightEndpoint j ≤
+          -(b.order j.castSucc : ℚ) + thresholdValue := by
+      have hraw := hjAdjacentThreshold
+      dsimp only [threshold, thresholdValue] at hraw ⊢
+      norm_cast at hraw
+      unfold alphaRightEndpoint
+      push_cast at hraw ⊢
+      linarith
+    have hrightK :
+        b.alphaRightEndpoint k ≤
+          -(b.order j.castSucc : ℚ) + thresholdValue :=
+      hrightMono.trans hrightJ
+    have hfirst :
+        b.alphaValue k ≤
+          ((b.order k.succ - b.order j.castSucc : Int) : ℚ) +
+            thresholdValue := by
+      unfold alphaRightEndpoint at hrightK
+      push_cast at hrightK ⊢
+      linarith
+    have hsecond :
+        ((b.order k.succ - b.order j.castSucc : Int) : ℚ) +
+            thresholdValue ≤
+          (b.order k.succ : ℚ) + thresholdValue := by
+      have hpreviousQ : 0 ≤ (b.order j.castSucc : ℚ) := by
+        exact_mod_cast htargetPreviousNonnegative
+      push_cast
+      linarith
+    exact ⟨hfirst, hsecond⟩
 
 end BONG.GoodBONG
 
