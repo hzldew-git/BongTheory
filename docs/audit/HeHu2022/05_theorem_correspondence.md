@@ -35,6 +35,7 @@
 | Lemma 3.14(i) | `heHu2022Lemma314iRepresents`, `heHu2022Lemma314i` | Proved; the first endpoint includes the undefined binary exception, while the second adds nonrepresentation of every defined second model |
 | Lemma 3.14(ii) | `heHu2022Lemma314ii` | Proved for every valuation-unit `epsilon` and `mu` in the square classes `1` or `Delta` |
 | Lemma 4.2 | `heHu2022Lemma42` | Proved in both directions.  The necessity proof instantiates the published `N_1^n(1)` and `N_1^n(Delta)` tests and proves their determinant-prefix product nonsquare; the sufficiency proof uses an exact deep same-rank completion. |
+| Lemma 4.3 | `heHu2022Lemma43` | Proved for the literal `N_2^n(Delta)` target.  The endpoint includes both published strict inequalities and the nonrepresentation of `[b_1,...,b_n]` by `[a_1,...,a_(n+1)]`; the latter is reduced exactly to Proposition 2.7(v) and Lemma 3.14(i). |
 | Theorem 4.1 conditions | `HeHuI1E`, `HeHuI2E`, `HeHuI3E`, `HeHuEvenSectionConditions` | Exact statements checked; one-based/zero-based boundary translation explicit |
 | Theorem 4.1 logical assembly | `heHuNUniversality_factorization`, `heHuTheorem41_of_component_equivalences` | Proved reduction and assembly; not a Theorem 4.1 endpoint until Lemmas 4.4 and 4.5 are proved |
 | Theorem 4.7 invariant conversion | `heHuI2E_iff_theorem47BoundaryCondition`, `heHuEvenSectionConditions_iff_theorem47StableConditions` | Proved, including the exceptional raw/capped defect equivalence; ambient rank classification and Theorem 4.1 endpoint still pending |

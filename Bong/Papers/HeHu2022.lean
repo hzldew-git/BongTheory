@@ -19,6 +19,7 @@ import Bong.Bong.HeHu2022Lemma314
 import Bong.Bong.HeHu2022Proposition37
 import Bong.Bong.HeHu2022SectionFour
 import Bong.Bong.HeHu2022Lemma42
+import Bong.Bong.HeHu2022Lemma43
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -54,6 +55,9 @@ publisher version of record (2024) is the sole semantic authority.  The
   is proved in both directions: its necessity uses the literal
   `N_1^n(1)` and `N_1^n(Delta)` models and their separated determinant
   square classes, while its sufficiency uses a deep same-rank completion.
+  Lemma 4.3 is proved with the literal `N_2^n(Delta)` target: both strict
+  defect conclusions and the terminal nonrepresentation assertion are
+  checked through the Proposition 2.7(v) and Lemma 3.14(i) normal forms.
   Lemmas 4.4 and 4.5 remain the visible representation-theoretic obligations
   needed to instantiate the checked Theorem 4.1 assembly theorem.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in

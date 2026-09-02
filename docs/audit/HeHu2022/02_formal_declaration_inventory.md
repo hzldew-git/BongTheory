@@ -87,6 +87,12 @@
   same-rank completion, and their explicitly proved distinct determinant
   square classes; sufficiency uses the deep integral completion and the
   checked endpoint and nonessential-index defect bounds.
+- `heHu2022Lemma43`: the complete exceptional second-column test.  The
+  literal `N_2^(2k+2)(Delta)` good BONG is identified coefficientwise with
+  `W_2^(2k+2)(Delta)` up to explicit squares; Proposition 2.7(v) identifies
+  the source prefix with `W_1^(2k+3)(epsilon)`, and Lemma 3.14(i) proves the
+  required nonrepresentation.  `heHu2022Lemma43_defectTrigger` separately
+  exposes the two strict numerical conclusions.
 - `heHuTheorem41_of_component_equivalences`: checked logical assembly of
   Theorem 4.1; its Lemma 4.2 premise is now discharged by
   `heHu2022Lemma42`, while the explicit Lemmas 4.4 and 4.5 premises remain

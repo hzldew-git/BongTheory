@@ -35,7 +35,7 @@
   ],
   "auditDirectory": "docs/audit/HeHu2022",
   "sourceDelta": "docs/audit/HeHu2022/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_SECTIONS_2_3_CORE_AND_LEMMA_4_2",
+  "coverageStatus": "IN_PROGRESS_SECTIONS_2_3_CORE_AND_LEMMAS_4_2_4_3",
   "semanticStatus": "PARTIAL_NOT_YET_AUDITED",
   "grade": "D",
   "expectedAxioms": [
@@ -49,6 +49,7 @@
     "Section 3 definitions and propositions through Proposition 3.7, including all Table 1 classification and Table 2 maximality rows",
     "Lemmas 3.9-3.11 and 3.13-3.14 with literal published endpoint models",
     "Lemma 4.2 complete equivalence using the exact square/discriminant tests and deep same-rank completion",
+    "Lemma 4.3 complete exceptional N_2^n(Delta) test with both strict defect conclusions and exact nonrepresentation",
     "Section 4 exact I1E-I3E condition layer, generic Theorem 2.8 universality factorization, Theorem 4.1 logical assembly, and Theorem 4.7 invariant conversion",
     "Abstract O-maximal testing reduction underlying Theorem 1.2"
   ],
@@ -56,8 +57,8 @@
     "Proof of the Theorem 1.1 equivalence",
     "Theorem 1.2 explicit testing list and minimality proof",
     "Remarks 3.8 and 3.12 as explicit correspondence endpoints",
-    "Remaining numbered Section 4 endpoints pending Lemmas 4.3-4.5; all numbered results in Sections 5-6",
+    "Remaining numbered Section 4 endpoints pending Lemmas 4.4-4.5; all numbered results in Sections 5-6",
     "Independent human semantic sign-off"
   ],
-  "reviewNotice": "Section 2 and the numbered Section 3 core, including Proposition 3.7, are kernel checked. Lemma 4.2 is now kernel checked in both directions using the exact N_1^n(1) and N_1^n(Delta) tests and a deep same-rank completion. The exact Section 4 conditions, generic universality reduction, Theorem 4.1 assembly, and Theorem 4.7 invariant conversion are also checked, but Lemmas 4.4 and 4.5 remain open, so Theorems 4.1 and 4.7 are not yet claimed. Theorem 1.1 remains an unproved proposition target, and the proved maximal-testing theorem is only the abstract core of Theorem 1.2, not its explicit list or minimality assertion."
+  "reviewNotice": "Section 2 and the numbered Section 3 core, including Proposition 3.7, are kernel checked. Lemma 4.2 is kernel checked in both directions using the exact N_1^n(1) and N_1^n(Delta) tests and a deep same-rank completion. Lemma 4.3 is kernel checked for the literal N_2^n(Delta) target, including both strict defect conclusions and exact nonrepresentation. The exact Section 4 conditions, generic universality reduction, Theorem 4.1 assembly, and Theorem 4.7 invariant conversion are also checked, but Lemmas 4.4 and 4.5 remain open, so Theorems 4.1 and 4.7 are not yet claimed. Theorem 1.1 remains an unproved proposition target, and the proved maximal-testing theorem is only the abstract core of Theorem 1.2, not its explicit list or minimality assertion."
 }

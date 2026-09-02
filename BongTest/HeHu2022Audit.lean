@@ -92,6 +92,9 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHuI2E_iff_theorem47BoundaryCondition
 #check Bong.BONG.GoodBONG.heHuEvenSectionConditions_iff_theorem47StableConditions
 #check Bong.BONG.GoodBONG.heHu2022Lemma42
+#check Bong.BONG.GoodBONG.heHu2022Lemma43_defectTrigger
+#check Bong.BONG.GoodBONG.heHu2022Lemma43_not_represents
+#check Bong.BONG.GoodBONG.heHu2022Lemma43
 #check Bong.BONG.GoodBONG.heHuTheorem41_of_component_equivalences
 #check Bong.Lattice.heHuMaximalTestingReduction
 
@@ -169,5 +172,8 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHuI2E_iff_theorem47BoundaryCondition
 #print axioms Bong.BONG.GoodBONG.heHuEvenSectionConditions_iff_theorem47StableConditions
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma42
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma43_defectTrigger
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma43_not_represents
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma43
 #print axioms Bong.BONG.GoodBONG.heHuTheorem41_of_component_equivalences
 #print axioms Bong.Lattice.heHuMaximalTestingReduction
