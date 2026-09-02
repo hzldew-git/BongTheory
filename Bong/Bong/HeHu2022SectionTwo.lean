@@ -12,6 +12,7 @@ import Bong.Bong.Beli2019Lemma75
 import Bong.Bong.Beli2019Lemma75PrefixClass
 import Bong.Bong.BeliCorollary44LawsProof
 import Bong.Bong.AlternatingEndpointOddNormalForm
+import Bong.Bong.SelfPrefixDomination
 
 /-!
 # He--Hu (2024), Section 2
@@ -717,6 +718,195 @@ theorem heHu2022Theorem28 {m n : Nat}
     (a : GoodBONG q L (m + 1)) (b : GoodBONG r M (n + 1)) :
     Lattice.Represents q r L M ↔ RepresentationConditions a b hRank :=
   beli2019Theorem21 hRank ambient a b
+
+/-- He--Hu, Lemma 2.9.  The paper index `j` is retained as the value of a
+`RepresentationIndex`; hence the two displayed source orders are at the
+zero-based positions `j - 1` and `j`. -/
+theorem heHu2022Lemma29 {m n : Nat}
+    (a : GoodBONG q L (m + 2)) (b : GoodBONG r M (n + 2))
+    (hAIntegral : Lattice.IsIntegral q L)
+    (hBIntegral : Lattice.IsIntegral r M)
+    (j : RepresentationIndex (m + 2) (n + 2))
+    (hjEven : Even j.val)
+    (hjOrder : a.order ⟨j.val - 1, by have := j.lt_large; omega⟩ =
+      -(2 * (ramificationIndex K : Int)))
+    (hjNextOrder : a.order ⟨j.val, j.lt_large⟩ = 0) :
+    a.representationAlpha b j ≤
+      a.truncatedPrefixDefect b 1 j.val j.val := by
+  rcases hjEven with ⟨pairs, hjPairs⟩
+  have hjFormula : j.val = 2 * pairs := by omega
+  have hpairsPos : 0 < pairs := by
+    have := j.pos
+    omega
+  have hjSmall : j.val ≤ n + 2 := j.le_small
+  let sourceLast : Fin (m + 2) := ⟨j.val - 1, by
+    have := j.lt_large
+    omega⟩
+  let targetLast : Fin (n + 2) := ⟨j.val - 1, by omega⟩
+  let targetPairLast : Fin (n + 1) := ⟨j.val - 2, by omega⟩
+  have hsourceLastOdd : Odd sourceLast.val := by
+    refine ⟨pairs - 1, ?_⟩
+    simp only [sourceLast]
+    omega
+  have htargetLastOdd : Odd targetLast.val := by
+    refine ⟨pairs - 1, ?_⟩
+    simp only [targetLast]
+    omega
+  let targetOrders := b.heHu2022Proposition27i hBIntegral
+  have htargetLower :
+      -(2 * (ramificationIndex K : Int)) ≤ b.order targetLast :=
+    (targetOrders.evenIndexed targetLast targetLast le_rfl
+      htargetLastOdd htargetLastOdd).1
+  have hhalfBound :
+      a.representationHalfGap b j ≤
+        ((2 * ramificationIndex K : ℚ) : WithTop ℚ) := by
+    unfold representationHalfGap
+    rw [hjNextOrder]
+    have htargetLowerQ :
+        -(2 * (ramificationIndex K : ℚ)) ≤
+          (b.order targetLast : ℚ) := by
+      exact_mod_cast htargetLower
+    norm_cast
+    simp only [zero_sub]
+    have htargetIndex :
+        (⟨j.val - 1, by omega⟩ : Fin (n + 2)) = targetLast := by
+      apply Fin.ext
+      rfl
+    rw [htargetIndex]
+    rw [Rat.divInt_eq_div]
+    push_cast
+    change (-(b.order targetLast : ℚ)) / 2 +
+      (ramificationIndex K : ℚ) ≤ 2 * (ramificationIndex K : ℚ)
+    have hneg : -(b.order targetLast : ℚ) ≤
+        2 * (ramificationIndex K : ℚ) := by
+      linarith
+    calc
+      (-(b.order targetLast : ℚ)) / 2 +
+          (ramificationIndex K : ℚ) ≤
+          (2 * (ramificationIndex K : ℚ)) / 2 +
+            (ramificationIndex K : ℚ) := by
+        gcongr
+      _ = 2 * (ramificationIndex K : ℚ) := by ring
+  have hAlphaTwoE :
+      a.representationAlpha b j ≤
+        ((2 * ramificationIndex K : ℚ) : WithTop ℚ) :=
+    (a.representationAlpha_le_halfGap b j).trans hhalfBound
+  have hsourcePrefix :
+      ((2 * ramificationIndex K : ℚ) : WithTop ℚ) ≤
+        a.truncatedPrefixDefect a ((-1) ^ pairs) 0 j.val := by
+    have C := a.heHu2022Proposition27iiiiv hAIntegral sourceLast
+      hsourceLastOdd (by simpa only [sourceLast] using hjOrder)
+    have h := C.alternatingPrefixDefect
+    have hend : sourceLast.val - 1 + 2 = j.val := by
+      simp only [sourceLast]
+      omega
+    have hexponent : (sourceLast.val - 1 + 2) / 2 = pairs := by
+      rw [hend, hjFormula]
+      omega
+    have hjDiv : j.val / 2 = pairs := by
+      rw [hjFormula]
+      omega
+    simpa only [hend, hexponent, hjDiv] using h
+  have hrightCap :
+      a.truncatedPrefixDefect b (-1) (j.val + 1) (j.val - 1) ≤
+        (b.alphaValue targetPairLast : WithTop ℚ) := by
+    have hcap := a.truncatedPrefixDefect_le_rightCap b (-1)
+      (j.val + 1) (j.val - 1)
+    have hcapEq := b.prefixAlphaCap_of_internal
+      (i := j.val - 1) (by omega) (by omega)
+    have hindex :
+        (⟨j.val - 1 - 1, by omega⟩ : Fin (n + 1)) = targetPairLast := by
+      apply Fin.ext
+      simp only [targetPairLast]
+      omega
+    rw [hcapEq, hindex] at hcap
+    exact hcap
+  have hAlphaRightLast :
+      a.representationAlpha b j ≤
+        (b.alphaRightEndpoint targetPairLast : WithTop ℚ) := by
+    calc
+      a.representationAlpha b j ≤
+          a.representationPrimaryDefect b j :=
+        a.representationAlpha_le_primary b j
+      _ ≤
+          ((((a.order ⟨j.val, j.lt_large⟩ -
+              b.order ⟨j.val - 1, by omega⟩ : Int) : ℚ) :
+                WithTop ℚ) +
+            (b.alphaValue targetPairLast : WithTop ℚ)) := by
+        unfold representationPrimaryDefect
+        gcongr
+      _ = (b.alphaRightEndpoint targetPairLast : WithTop ℚ) := by
+        rw [hjNextOrder]
+        norm_cast
+        unfold alphaRightEndpoint
+        have htargetIndex :
+            (⟨j.val - 1, by omega⟩ : Fin (n + 2)) =
+              targetPairLast.succ := by
+          apply Fin.ext
+          simp only [targetPairLast, Fin.val_succ]
+          omega
+        rw [htargetIndex]
+        push_cast
+        ring
+  have htargetLocal (t : Nat) (ht : t ≤ pairs - 1) :
+      a.representationAlpha b j ≤
+        b.truncatedPrefixDefect b (-1) (2 * t) (2 * t + 2) := by
+    let pair : Fin (n + 1) := ⟨2 * t, by omega⟩
+    have hpairEven : Even pair.val := by
+      refine ⟨t, ?_⟩
+      simp only [pair]
+      omega
+    have hpairLe : pair ≤ targetPairLast := by
+      apply Fin.mk_le_mk.mpr
+      omega
+    have hrightMono :=
+      (b.heHu2022Proposition25 pair targetPairLast hpairLe).rightEndpoint_le
+    have hAlphaRight :
+        a.representationAlpha b j ≤
+          (b.alphaRightEndpoint pair : WithTop ℚ) :=
+      hAlphaRightLast.trans (by exact_mod_cast hrightMono)
+    have hpreviousNonnegative : 0 ≤ b.order pair.castSucc :=
+      (targetOrders.oddIndexed pair.castSucc pair.castSucc le_rfl
+        hpairEven hpairEven).1
+    have hrightToAdjacent :
+        (b.alphaRightEndpoint pair : WithTop ℚ) ≤
+          (((((b.order pair.castSucc - b.order pair.succ : Int) : ℚ) +
+            b.alphaValue pair : ℚ)) : WithTop ℚ) := by
+      norm_cast
+      unfold alphaRightEndpoint
+      push_cast
+      have hpreviousQ : 0 ≤ (b.order pair.castSucc : ℚ) := by
+        exact_mod_cast hpreviousNonnegative
+      linarith
+    letI : Beli2006AlphaLaws.{u, w} K := beliUniversalAlphaLaws
+    have hadjacent := b.order_sub_add_alpha_le_cappedAdjacent pair
+    have hlocal := hAlphaRight.trans hrightToAdjacent |>.trans hadjacent
+    simpa only [pair] using hlocal
+  have htargetPrefix :
+      a.representationAlpha b j ≤
+        b.truncatedPrefixDefect b ((-1) ^ pairs) 0 j.val := by
+    have h := b.truncatedPrefixDefect_alternating_ge
+      0 (pairs - 1) (by omega) (a.representationAlpha b j)
+        (fun t ht ↦ by
+          simpa only [zero_add] using htargetLocal t ht)
+    have hpairs : pairs - 1 + 1 = pairs := by omega
+    simpa only [zero_add, hpairs, hjFormula] using h
+  have hsignSquare :
+      ((-1 : Kˣ) ^ pairs) * ((-1 : Kˣ) ^ pairs) = 1 := by
+    rw [← pow_add]
+    have hsum : pairs + pairs = 2 * pairs := by omega
+    rw [hsum, pow_mul]
+    norm_num
+  have hdomination :=
+    a.truncatedPrefixDefect_selfPrefixes_domination b
+      ((-1) ^ pairs) ((-1) ^ pairs) j.val j.val
+  have hmin :
+      a.representationAlpha b j ≤
+        min (a.truncatedPrefixDefect a ((-1) ^ pairs) 0 j.val)
+          (b.truncatedPrefixDefect b ((-1) ^ pairs) 0 j.val) :=
+    le_min (hAlphaTwoE.trans hsourcePrefix) htargetPrefix
+  rw [hsignSquare] at hdomination
+  exact hmin.trans hdomination
 
 end BONG.GoodBONG
 
