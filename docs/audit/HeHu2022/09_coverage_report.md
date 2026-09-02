@@ -1,9 +1,9 @@
 # Coverage report
 
-Coverage status: `SECTION_2_COMPLETE_SECTION_3_CORE_RESULTS_COMPLETE_REMARKS_PENDING`.
+Coverage status: `SECTIONS_2_3_CORE_AND_LEMMA_4_2_COMPLETE`.
 
 - Publisher inventory: 47/47 directly numbered items identified.
-- Accounted publisher-result endpoints: 22/47, comprising every numbered
+- Accounted publisher-result endpoints: 23/47, comprising every numbered
   item in Section 2 (Definition 2.4, Lemma 2.2, Corollary 2.3,
   Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11).
 - Section 3 coverage additionally includes Definitions 3.1, 3.4, and 3.6 and
@@ -29,14 +29,17 @@ Coverage status: `SECTION_2_COMPLETE_SECTION_3_CORE_RESULTS_COMPLETE_REMARKS_PEN
 - Supporting proof: the abstract maximal-lattice testing reduction underlying
   Theorem 1.2 is proved, but the explicit family and minimality assertion are
   not yet formalized and therefore do not count as Theorem 1.2 coverage.
-- Section 4 infrastructure now includes exact `I1^E`--`I3^E` definitions, a
+- Section 4 now includes the complete checked Lemma 4.2 equivalence.  Its
+  necessity direction uses the literal `N_1^n(1)` and `N_1^n(Delta)`
+  models and a proved nonsquare determinant-prefix product; its sufficiency
+  direction uses a deep same-rank integral completion.  Infrastructure also
+  includes exact `I1^E`--`I3^E` definitions, a
   proved Theorem 2.8 universality factorization, the checked logical assembly
   of Theorem 4.1, and the complete invariant conversion used in Theorem 4.7.
-  These are supporting declarations, not additional source-numbered
-  endpoints: Lemmas 4.2, 4.4, and 4.5 still have to discharge the three
-  representation components before Theorems 4.1 and 4.7 can be counted.
+  Lemmas 4.4 and 4.5 still have to discharge the remaining representation
+  components before Theorems 4.1 and 4.7 can be counted.
 
-The accounted coverage ratio is therefore **22/47**: 21 direct checked
+The accounted coverage ratio is therefore **23/47**: 22 direct checked
 publisher items plus the Definition 3.1 equivalent-construction endpoint
 that remains explicitly flagged for independent semantic review. This is a bookkeeping
 statement, not a judgment about how

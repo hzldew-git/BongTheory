@@ -419,6 +419,128 @@ theorem heHu2022Lemma310TailValues {n : Nat}
           rw [BONG.GoodBONG.valueUnit_castLength_heHu]
           exact ih
 
+/-- The complete prefix product of the tower factors into the product of
+the prepended hyperbolic segment and the complete product of the original
+tail.  This determinant factorization is used by the two-test argument in
+He--Hu, Lemma 4.2. -/
+theorem heHu2022Lemma310_fullPrefixProduct {n : Nat}
+    (b : BONG.GoodBONG q L (n + 1))
+    (hIntegral : Lattice.IsIntegral q L) (k : Nat) :
+    (heHu2022Lemma310BONG b hIntegral k).prefixProduct
+        ((n + 1) + 2 * k) =
+      (heHu2022Lemma310BONG b hIntegral k).prefixProduct (2 * k) *
+        b.prefixProduct (n + 1) := by
+  let cRaw := heHu2022Lemma310BONG b hIntegral k
+  let c : BONG.GoodBONG _ _ (2 * k + (n + 1)) :=
+    cRaw.castLength (by omega)
+  have hk : 2 * k ≤ (2 * k + n) + 1 := by omega
+  have hfull : c.prefixProduct (2 * k + (n + 1)) =
+      c.prefixProduct (2 * k) * b.prefixProduct (n + 1) := by
+    rw [← c.diagonalUnitDeterminant_prefixValueUnits
+      (2 * k + (n + 1)) le_rfl]
+    rw [← c.diagonalUnitDeterminant_prefixValueUnits (2 * k) hk]
+    rw [← b.diagonalUnitDeterminant_prefixValueUnits (n + 1) le_rfl]
+    unfold BONG.GoodBONG.diagonalUnitDeterminant
+      BONG.GoodBONG.prefixValueUnits
+    rw [Fin.prod_univ_add]
+    apply congrArg₂ (· * ·)
+    · apply Finset.prod_congr rfl
+      intro i _
+      simp only [c, cRaw, BONG.GoodBONG.valueUnit_castLength_heHu]
+      congr 1
+    · apply Finset.prod_congr rfl
+      intro j _
+      rw [BONG.GoodBONG.valueUnit_castLength_heHu]
+      exact heHu2022Lemma310TailValues b hIntegral k j
+  simpa only [c, cRaw, BONG.GoodBONG.prefixProduct_castLength_heHu,
+    show 2 * k + (n + 1) = (n + 1) + 2 * k by omega] using hfull
+
+/-- The prepended hyperbolic prefixes are literally identical for any two
+tails of the same rank.  In particular, their determinant contribution
+cancels as a square in the two-test proof of Lemma 4.2. -/
+theorem heHu2022Lemma310_hyperbolicPrefix_eq
+    {W : Type u} [AddCommGroup W] [Module K W]
+    {r : QuadraticSpace K W} {M : Lattice K W} {n : Nat}
+    (b : BONG.GoodBONG q L (n + 1))
+    (c : BONG.GoodBONG r M (n + 1))
+    (hBIntegral : Lattice.IsIntegral q L)
+    (hCIntegral : Lattice.IsIntegral r M) (k : Nat) :
+    (heHu2022Lemma310BONG b hBIntegral k).prefixProduct (2 * k) =
+      (heHu2022Lemma310BONG c hCIntegral k).prefixProduct (2 * k) := by
+  unfold BONG.GoodBONG.prefixProduct BONG.prefixProduct
+  apply Finset.prod_congr rfl
+  intro i hi
+  simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hi
+  rcases Nat.even_or_odd i.val with hiEven | hiOdd
+  · rcases hiEven with ⟨t, ht⟩
+    have htSmall : t < k := by omega
+    let j : Fin k := ⟨t, htSmall⟩
+    have hb := heHu2022Lemma310HyperbolicValues b hBIntegral k j
+    have hc := heHu2022Lemma310HyperbolicValues c hCIntegral k j
+    have hiIndex : i = (⟨2 * j.val, by omega⟩ :
+        Fin ((n + 1) + 2 * k)) := by
+      apply Fin.ext
+      change i.val = 2 * t
+      omega
+    rw [hiIndex]
+    change
+      (heHu2022Lemma310BONG b hBIntegral k).valueUnit
+          ⟨2 * j.val, by omega⟩ =
+        (heHu2022Lemma310BONG c hCIntegral k).valueUnit
+          ⟨2 * j.val, by omega⟩
+    rw [hb.1, hc.1]
+  · rcases hiOdd with ⟨t, ht⟩
+    have htSmall : t < k := by omega
+    let j : Fin k := ⟨t, htSmall⟩
+    have hb := heHu2022Lemma310HyperbolicValues b hBIntegral k j
+    have hc := heHu2022Lemma310HyperbolicValues c hCIntegral k j
+    have hiIndex : i = (⟨2 * j.val + 1, by omega⟩ :
+        Fin ((n + 1) + 2 * k)) := by
+      apply Fin.ext
+      simpa only [j] using ht
+    rw [hiIndex]
+    change
+      (heHu2022Lemma310BONG b hBIntegral k).valueUnit
+          ⟨2 * j.val + 1, by omega⟩ =
+        (heHu2022Lemma310BONG c hCIntegral k).valueUnit
+          ⟨2 * j.val + 1, by omega⟩
+    rw [hb.2, hc.2]
+
+/-- Prepending the same number of exact hyperbolic pairs preserves a
+nonsquare product of the two complete tail determinants. -/
+theorem heHu2022Lemma310_fullProduct_notSquare_of_tailProduct_notSquare
+    {W : Type u} [AddCommGroup W] [Module K W]
+    {r : QuadraticSpace K W} {M : Lattice K W} {n : Nat}
+    (b : BONG.GoodBONG q L (n + 1))
+    (c : BONG.GoodBONG r M (n + 1))
+    (hBIntegral : Lattice.IsIntegral q L)
+    (hCIntegral : Lattice.IsIntegral r M) (k : Nat)
+    (hTailNotSquare :
+      ¬IsSquare (b.prefixProduct (n + 1) * c.prefixProduct (n + 1))) :
+    ¬IsSquare
+      ((heHu2022Lemma310BONG b hBIntegral k).prefixProduct
+          ((n + 1) + 2 * k) *
+        (heHu2022Lemma310BONG c hCIntegral k).prefixProduct
+          ((n + 1) + 2 * k)) := by
+  intro hsquare
+  rw [heHu2022Lemma310_fullPrefixProduct b hBIntegral k,
+    heHu2022Lemma310_fullPrefixProduct c hCIntegral k,
+    heHu2022Lemma310_hyperbolicPrefix_eq b c hBIntegral hCIntegral k]
+      at hsquare
+  let H := (heHu2022Lemma310BONG c hCIntegral k).prefixProduct (2 * k)
+  let B := b.prefixProduct (n + 1)
+  let C := c.prefixProduct (n + 1)
+  have hH2 : IsSquare (H ^ 2) := ⟨H, by simp only [pow_two]⟩
+  have hquotient : IsSquare (((H * B) * (H * C)) / H ^ 2) := by
+    exact hsquare.div hH2
+  have hcancel : ((H * B) * (H * C)) / H ^ 2 = B * C := by
+    apply Units.ext
+    simp only [Units.val_div_eq_div_val, Units.val_mul,
+      Units.val_pow_eq_pow_val]
+    field_simp [Units.ne_zero H]
+  rw [hcancel] at hquotient
+  exact hTailNotSquare (by simpa only [B, C] using hquotient)
+
 /-- Order form of the hyperbolic part of Lemma 3.10.  These are precisely
 the alternating `0,-2e` entries used throughout Lemma 3.11. -/
 theorem heHu2022Lemma310HyperbolicOrders {n : Nat}

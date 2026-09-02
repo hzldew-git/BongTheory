@@ -354,6 +354,85 @@ theorem heHu2022Lemma311iFirstDelta
   · simpa using
       heHuDiscriminantEndpointGoodBONG_order (K := K) 0 (1 : Fin 2)
 
+/-- The products of the two binary endpoint tests differ by the
+distinguished discriminant class times an explicit square. -/
+theorem heHuEvenFirstEndpoint_prefixProducts_eq_discriminant_mul_square
+    [laws : DyadicDiscriminantClassLaws K] :
+    (Bong.heHuHyperbolicHeadGoodBONG (K := K)).prefixProduct 2 *
+        (heHuDiscriminantEndpointGoodBONG (K := K) 0).prefixProduct 2 =
+      laws.discriminantUnit *
+        uniformizerPowerUnit K
+            (-(2 * (ramificationIndex K : Int))) ^ 2 := by
+  unfold GoodBONG.prefixProduct
+  rw [BONG.prefixProduct_succ _ 1 (by omega),
+    BONG.prefixProduct_succ _ 0 (by omega),
+    BONG.prefixProduct_succ _ 1 (by omega),
+    BONG.prefixProduct_succ _ 0 (by omega),
+    BONG.prefixProduct_zero, BONG.prefixProduct_zero]
+  simp only [one_mul]
+  change
+    ((Bong.heHuHyperbolicHeadGoodBONG (K := K)).valueUnit 0 *
+        (Bong.heHuHyperbolicHeadGoodBONG (K := K)).valueUnit 1) *
+      ((heHuDiscriminantEndpointGoodBONG (K := K) 0).valueUnit 0 *
+        (heHuDiscriminantEndpointGoodBONG (K := K) 0).valueUnit 1) = _
+  rw [Bong.heHuHyperbolicHeadGoodBONG_value_zero,
+    Bong.heHuHyperbolicHeadGoodBONG_value_one,
+    heHuDiscriminantEndpointGoodBONG_valueUnit,
+    heHuDiscriminantEndpointGoodBONG_valueUnit]
+  simp [heHuDiscriminantEndpointValues, pow_two]
+  simp [uniformizerPowerUnit]
+  ac_rfl
+
+/-- The two binary endpoint tests have different determinant square
+classes. -/
+theorem heHuEvenFirstEndpoint_prefixProducts_not_isSquare
+    [laws : DyadicDiscriminantClassLaws K] :
+    ¬IsSquare
+      ((Bong.heHuHyperbolicHeadGoodBONG (K := K)).prefixProduct 2 *
+        (heHuDiscriminantEndpointGoodBONG (K := K) 0).prefixProduct 2) := by
+  intro hsquare
+  rw [heHuEvenFirstEndpoint_prefixProducts_eq_discriminant_mul_square]
+      at hsquare
+  let U := uniformizerPowerUnit K
+    (-(2 * (ramificationIndex K : Int)))
+  have hU2 : IsSquare (U ^ 2) := ⟨U, by simp only [pow_two]⟩
+  have hdelta : IsSquare laws.discriminantUnit := by
+    have hquotient := hsquare.div hU2
+    have hcancel : (laws.discriminantUnit * U ^ 2) / U ^ 2 =
+        laws.discriminantUnit := by
+      apply Units.ext
+      simp only [Units.val_div_eq_div_val, Units.val_mul,
+        Units.val_pow_eq_pow_val]
+      field_simp [Units.ne_zero U]
+    rw [hcancel] at hquotient
+    exact hquotient
+  have htop := quadraticDefect_eq_top_of_isSquare (K := K) hdelta
+  rw [laws.discriminant_defect] at htop
+  exact ENat.coe_ne_top (2 * ramificationIndex K) htop
+
+/-- Prepending any number of hyperbolic planes preserves the separation of
+the square and discriminant test classes. -/
+theorem heHuLemma311EvenFirst_prefixProducts_not_isSquare
+    [laws : DyadicDiscriminantClassLaws K] (k : Nat) :
+    ¬IsSquare
+      ((heHuLemma311EvenFirstOneBONG (K := K) k).prefixProduct
+          (2 + 2 * k) *
+        (heHuLemma311EvenFirstDeltaBONG (K := K) k).prefixProduct
+          (2 + 2 * k)) := by
+  unfold heHuLemma311EvenFirstOneBONG
+    heHuLemma311EvenFirstDeltaBONG
+  exact Bong.heHu2022Lemma310_fullProduct_notSquare_of_tailProduct_notSquare
+    (Bong.heHuHyperbolicHeadGoodBONG (K := K))
+    (heHuDiscriminantEndpointGoodBONG (K := K) 0)
+    (heHuIntegral_of_firstOrder_nonneg
+      (Bong.heHuHyperbolicHeadGoodBONG (K := K)) (by
+        rw [Bong.heHuHyperbolicHeadGoodBONG_order_zero]))
+    (heHuIntegral_of_firstOrder_nonneg
+      (heHuDiscriminantEndpointGoodBONG (K := K) 0) (by
+        rw [heHuDiscriminantEndpointGoodBONG_order]
+        norm_num))
+    k heHuEvenFirstEndpoint_prefixProducts_not_isSquare
+
 /-- The Table 2 candidate
 `N_tilde_2^(2k+2)(Delta)=H^k ⊥ 2^-1*pi*A(2,2rho)`. -/
 noncomputable def heHuLemma311EvenSecondDeltaBONG

@@ -82,9 +82,15 @@
   `heHuEvenSectionConditions_iff_theorem47StableConditions`: proved complete
   capped-defect/raw-defect conversion behind Theorem 4.7(iii), including the
   exceptional `R_(n+2)=2-2e` boundary.
+- `heHu2022Lemma42`: the complete Lemma 4.2 equivalence.  Necessity uses
+  the exact `N_1^n(1)` and `N_1^n(Delta)` models, Corollary 2.10 after a
+  same-rank completion, and their explicitly proved distinct determinant
+  square classes; sufficiency uses the deep integral completion and the
+  checked endpoint and nonessential-index defect bounds.
 - `heHuTheorem41_of_component_equivalences`: checked logical assembly of
-  Theorem 4.1; its three explicit premises remain the still-open contents of
-  Lemmas 4.2, 4.4, and 4.5 and are not treated as proved hypotheses.
+  Theorem 4.1; its Lemma 4.2 premise is now discharged by
+  `heHu2022Lemma42`, while the explicit Lemmas 4.4 and 4.5 premises remain
+  open and are not treated as proved hypotheses.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

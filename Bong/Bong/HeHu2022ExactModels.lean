@@ -42,6 +42,16 @@ theorem valueUnit_castLength_heHu
   subst n
   rfl
 
+/-- Reindexing only the length also preserves every prefix product. -/
+@[simp]
+theorem prefixProduct_castLength_heHu
+    {V : Type u} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V} {m n : Nat}
+    (b : GoodBONG q L m) (h : m = n) (i : Nat) :
+    (b.castLength h).prefixProduct i = b.prefixProduct i := by
+  subst n
+  rfl
+
 end BONG.GoodBONG
 
 /-- Beli's constructive exact realization of an admissible good-BONG

@@ -18,6 +18,7 @@ import Bong.Bong.HeHu2022Lemma313
 import Bong.Bong.HeHu2022Lemma314
 import Bong.Bong.HeHu2022Proposition37
 import Bong.Bong.HeHu2022SectionFour
+import Bong.Bong.HeHu2022Lemma42
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -49,8 +50,11 @@ publisher version of record (2024) is the sole semantic authority.  The
   the displayed candidate spaces.
   The Section 4 module fixes the exact `I1^E`, `I2^E`, and `I3^E`
   conditions, proves the generic Theorem 2.8 universality factorization, and
-  proves the complete invariant conversion used in Theorem 4.7.  Lemmas
-  4.2, 4.4, and 4.5 remain the visible representation-theoretic obligations
+  proves the complete invariant conversion used in Theorem 4.7.  Lemma 4.2
+  is proved in both directions: its necessity uses the literal
+  `N_1^n(1)` and `N_1^n(Delta)` models and their separated determinant
+  square classes, while its sufficiency uses a deep same-rank completion.
+  Lemmas 4.4 and 4.5 remain the visible representation-theoretic obligations
   needed to instantiate the checked Theorem 4.1 assembly theorem.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
