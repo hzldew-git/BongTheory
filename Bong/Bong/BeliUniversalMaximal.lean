@@ -3,7 +3,7 @@ Copyright (c) 2026 BONG Theory contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
-import Bong.Lattice.Universality
+import Bong.Bong.BeliUniversalMain
 import Bong.Lattice.OMaximal
 
 /-!
