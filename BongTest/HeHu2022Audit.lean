@@ -46,6 +46,9 @@ import Bong.Papers.HeHu2022
 #check Bong.heHu2022Proposition35iiiEvenSecond
 #check Bong.heHuHyperbolicHeadIsometry
 #check Bong.heHuHyperbolicHeadGoodBONG
+#check Bong.BONG.GoodBONG.heHu2022Lemma39i
+#check Bong.BONG.GoodBONG.heHu2022Lemma39ii
+#check Bong.BONG.GoodBONG.heHu2022Lemma39iii
 #check Bong.heHu2022Lemma310BONG
 #check Bong.heHu2022Lemma310HyperbolicValues
 #check Bong.heHu2022Lemma310TailValues
@@ -91,6 +94,9 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.heHu2022Definition36EvenSecond
 #print axioms Bong.heHu2022Definition36OddFirst
 #print axioms Bong.heHu2022Definition36OddSecond
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma39i
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma39ii
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma39iii
 #print axioms Bong.heHuHyperbolicHeadIsometry
 #print axioms Bong.heHu2022Lemma310HyperbolicValues
 #print axioms Bong.heHu2022Lemma310TailValues

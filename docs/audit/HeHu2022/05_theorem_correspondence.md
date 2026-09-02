@@ -24,6 +24,9 @@
 | Proposition 3.5(ii) | `heHu2022Proposition35iiOdd`, `heHu2022Proposition35iiEven` | Proved; all determinant classes exhausted |
 | Proposition 3.5(iii) | four `heHu2022Proposition35iii*` endpoints | Proved existence and uniqueness, including `n=2` and square `c`; finite coordinate casts only reconcile arithmetic rank expressions |
 | Definition 3.6 | four `heHu2022Definition36*` endpoints | Proved canonical choice of an `O`-maximal lattice on every defined `W_nu^n(c)`; Proposition 3.7 will identify these intrinsic representatives with Table 2 |
+| Lemma 3.9(i) | `heHu2022Lemma39i` | Proved; all three exact binary coefficient lists and the standard endpoint isometries |
+| Lemma 3.9(ii) | `heHu2022Lemma39ii` | Proved; both unit--uniformizer pairs for arbitrary valuation-unit `delta` |
+| Lemma 3.9(iii) | `heHu2022Lemma39iii` | Proved; canonical `kappa#`, exact source model, and literal published ternary coefficient list |
 | Lemma 3.10 | `heHu2022Lemma310` | Proved for an arbitrary integral tail good BONG and every number of prepended `2^-1 A(0,0)` blocks; separate endpoints verify every exact hyperbolic pair and preservation of every tail coefficient |
 | Lemma 3.13 | `heHu2022Lemma313CodimensionOne`, `heHu2022Lemma313CodimensionTwo` | Proved; determinant equality is encoded invariantly by equality of square classes, and both rank alternatives conclude an exclusive disjunction |
 | Lemma 3.14(i) | `heHu2022Lemma314iRepresents`, `heHu2022Lemma314i` | Proved; the first endpoint includes the undefined binary exception, while the second adds nonrepresentation of every defined second model |

@@ -50,6 +50,11 @@
 - `heHuHyperbolicHeadIsometry` and `heHuHyperbolicHeadGoodBONG`: the literal
   half-hyperbolic plane equipped with the exact pair
   `<1,-pi^(-2e)>`.
+- `heHu2022Lemma39i`, `heHu2022Lemma39ii`, and `heHu2022Lemma39iii`: all
+  three clauses of Lemma 3.9, realized by exact good-BONG models.  Clause
+  (iii) keeps the literal published coefficients
+  `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>` and proves the
+  required canonical `kappa#` domain from `d(kappa)=2e-1`.
 - `heHu2022Lemma310BONG`, `heHu2022Lemma310HyperbolicValues`,
   `heHu2022Lemma310TailValues`, and `heHu2022Lemma310`: the recursive
   construction and both coefficient assertions of Lemma 3.10.
