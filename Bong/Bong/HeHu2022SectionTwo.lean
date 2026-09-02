@@ -133,7 +133,7 @@ theorem heHu2022Corollary23i {n : Nat}
 /-- Corollary 2.3(ii), including the raw adjacent-defect bound and the two
 concrete endpoint lattice models.  The two branches are the coordinate-free
 versions of the paper's scaled `A(0,0)` and `A(2,2rho)` lattices. -/
-structure HeHuCorollary23iiConclusions [DyadicDiscriminantClassLaws K]
+structure HeHuCorollary23iiConclusions
     {n : Nat} (a : GoodBONG q L (n + 1)) (i : Fin n) : Prop where
   rawDefectLower :
     ((2 * ramificationIndex K : ℚ) : WithTop ℚ) ≤ a.adjacentDefect i
@@ -154,7 +154,7 @@ structure HeHuCorollary23iiConclusions [DyadicDiscriminantClassLaws K]
           w.lattice (binaryModelLattice (K := K)))
 
 /-- He--Hu, Corollary 2.3(ii). -/
-theorem heHu2022Corollary23ii [DyadicDiscriminantClassLaws K]
+theorem heHu2022Corollary23ii
     {n : Nat} (a : GoodBONG q L (n + 1)) (i : Fin n)
     (hgap : a.orderGap i =
       -(2 * (ramificationIndex K : Int))) :
