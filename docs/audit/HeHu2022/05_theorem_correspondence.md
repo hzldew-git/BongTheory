@@ -28,6 +28,8 @@
 | Lemma 3.9(ii) | `heHu2022Lemma39ii` | Proved; both unit--uniformizer pairs for arbitrary valuation-unit `delta` |
 | Lemma 3.9(iii) | `heHu2022Lemma39iii` | Proved; canonical `kappa#`, exact source model, and literal published ternary coefficient list |
 | Lemma 3.10 | `heHu2022Lemma310` | Proved for an arbitrary integral tail good BONG and every number of prepended `2^-1 A(0,0)` blocks; separate endpoints verify every exact hyperbolic pair and preservation of every tail coefficient |
+| Lemma 3.11(i) | six `heHu2022Lemma311i*` endpoints | Proved for every even-rank Table 2 row, including the four-dimensional `N_2(1)` tail, both `Delta` endpoints, both generic unit columns, and both unit--uniformizer columns |
+| Lemma 3.11(ii) | four `heHu2022Lemma311ii*` endpoints | Proved for every odd-rank Table 2 row; the `N_2(delta)` endpoint reuses the exact Lemma 3.9(iii) coefficient list and obtains the published `2-2e` penultimate order |
 | Lemma 3.13 | `heHu2022Lemma313CodimensionOne`, `heHu2022Lemma313CodimensionTwo` | Proved; determinant equality is encoded invariantly by equality of square classes, and both rank alternatives conclude an exclusive disjunction |
 | Lemma 3.14(i) | `heHu2022Lemma314iRepresents`, `heHu2022Lemma314i` | Proved; the first endpoint includes the undefined binary exception, while the second adds nonrepresentation of every defined second model |
 | Lemma 3.14(ii) | `heHu2022Lemma314ii` | Proved for every valuation-unit `epsilon` and `mu` in the square classes `1` or `Delta` |

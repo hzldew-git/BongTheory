@@ -13,6 +13,7 @@
 | Definition 3.6 | PASS, canonical maximal representatives for every defined Table 1 space |
 | Lemma 3.9 | PASS, all three clauses with literal binary and ternary coefficient lists |
 | Lemma 3.10 | PASS, exact half-hyperbolic pairs and arbitrary tail preservation |
+| Lemma 3.11 | PASS, all even- and odd-rank Table 2 order-profile rows |
 | Lemmas 3.13--3.14 | PASS, both rank alternatives and all stated Table 1 comparisons |
 | Theorem 1.1 statement present | PASS |
 | Theorem 1.1 proof | FAIL / pending |

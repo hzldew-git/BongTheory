@@ -58,6 +58,10 @@
 - `heHu2022Lemma310BONG`, `heHu2022Lemma310HyperbolicValues`,
   `heHu2022Lemma310TailValues`, and `heHu2022Lemma310`: the recursive
   construction and both coefficient assertions of Lemma 3.10.
+- The ten `heHu2022Lemma311i*` and `heHu2022Lemma311ii*` endpoints cover
+  every even- and odd-rank row in Lemma 3.11.  The auxiliary named tails
+  are exact good-BONG realizations of the Table 2 blocks, not numerical
+  profile assumptions.
 - `HeHuRepresentsExactlyOne`, `heHu2022Lemma313CodimensionOne`, and
   `heHu2022Lemma313CodimensionTwo`: the exclusive representation package of
   Lemma 3.13 in both permitted target ranks.

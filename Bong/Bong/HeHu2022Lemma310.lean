@@ -419,6 +419,60 @@ theorem heHu2022Lemma310TailValues {n : Nat}
           rw [BONG.GoodBONG.valueUnit_castLength_heHu]
           exact ih
 
+/-- Order form of the hyperbolic part of Lemma 3.10.  These are precisely
+the alternating `0,-2e` entries used throughout Lemma 3.11. -/
+theorem heHu2022Lemma310HyperbolicOrders {n : Nat}
+    (b : BONG.GoodBONG q L (n + 1))
+    (hIntegral : Lattice.IsIntegral q L) (k : Nat) (t : Fin k) :
+    (heHu2022Lemma310BONG b hIntegral k).order
+        ⟨2 * t.val, by omega⟩ = 0 ∧
+      (heHu2022Lemma310BONG b hIntegral k).order
+        ⟨2 * t.val + 1, by omega⟩ =
+          -(2 * (ramificationIndex K : Int)) := by
+  have hvalues := heHu2022Lemma310HyperbolicValues b hIntegral k t
+  constructor
+  · calc
+      (heHu2022Lemma310BONG b hIntegral k).order
+          ⟨2 * t.val, by omega⟩ =
+          ordUnit K
+            ((heHu2022Lemma310BONG b hIntegral k).valueUnit
+              ⟨2 * t.val, by omega⟩) :=
+        (heHu2022Lemma310BONG b hIntegral k).toBONG.order_eq_ordUnit _
+      _ = ordUnit K (1 : Kˣ) := by rw [hvalues.1]
+      _ = 0 := by
+        have h := ordUnit_mul K (1 : Kˣ) 1
+        simp only [mul_one] at h
+        omega
+  · calc
+      (heHu2022Lemma310BONG b hIntegral k).order
+          ⟨2 * t.val + 1, by omega⟩ =
+          ordUnit K
+            ((heHu2022Lemma310BONG b hIntegral k).valueUnit
+              ⟨2 * t.val + 1, by omega⟩) :=
+        (heHu2022Lemma310BONG b hIntegral k).toBONG.order_eq_ordUnit _
+      _ = ordUnit K
+          (-(uniformizerPowerUnit K
+            (-(2 * (ramificationIndex K : Int))))) := by rw [hvalues.2]
+      _ = -(2 * (ramificationIndex K : Int)) := by
+        rw [ordUnit_neg, ordUnit_uniformizerPowerUnit]
+
+/-- Order form of tail preservation in Lemma 3.10. -/
+theorem heHu2022Lemma310TailOrders {n : Nat}
+    (b : BONG.GoodBONG q L (n + 1))
+    (hIntegral : Lattice.IsIntegral q L) (k : Nat) (j : Fin (n + 1)) :
+    (heHu2022Lemma310BONG b hIntegral k).order
+        ⟨2 * k + j.val, by omega⟩ = b.order j := by
+  calc
+    (heHu2022Lemma310BONG b hIntegral k).order
+        ⟨2 * k + j.val, by omega⟩ =
+        ordUnit K
+          ((heHu2022Lemma310BONG b hIntegral k).valueUnit
+            ⟨2 * k + j.val, by omega⟩) :=
+      (heHu2022Lemma310BONG b hIntegral k).toBONG.order_eq_ordUnit _
+    _ = ordUnit K (b.valueUnit j) := by
+      rw [heHu2022Lemma310TailValues]
+    _ = b.order j := (b.toBONG.order_eq_ordUnit j).symm
+
 /-- Direct checked endpoint for He--Hu, Lemma 3.10. -/
 theorem heHu2022Lemma310 {n : Nat}
     (b : BONG.GoodBONG q L (n + 1))

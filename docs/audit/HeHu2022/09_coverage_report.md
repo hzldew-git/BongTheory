@@ -3,7 +3,7 @@
 Coverage status: `SECTION_2_COMPLETE_SECTION_3_IN_PROGRESS`.
 
 - Publisher inventory: 47/47 directly numbered items identified.
-- Accounted publisher-result endpoints: 20/47, comprising every numbered
+- Accounted publisher-result endpoints: 21/47, comprising every numbered
   item in Section 2 (Definition 2.4, Lemma 2.2, Corollary 2.3,
   Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11).
 - Section 3 coverage additionally includes Definitions 3.1, 3.4, and 3.6 and
@@ -19,6 +19,9 @@ Coverage status: `SECTION_2_COMPLETE_SECTION_3_IN_PROGRESS`.
   Lemma 3.10 supplies the exact recursive coefficient list for every
   prepended half-hyperbolic block and proves that the original tail is
   unchanged.
+  Lemma 3.11 computes every published even- and odd-rank `R_i` profile from
+  exact Table 2 good-BONG tails; no row is represented merely by an assumed
+  order vector.
   Lemmas 3.13--3.14 additionally cover the two higher-rank exactly-one
   representation alternatives and all first-column comparisons used later.
 - Statement encoding: the complete right-hand side of Theorem 1.1 is encoded,
@@ -27,7 +30,7 @@ Coverage status: `SECTION_2_COMPLETE_SECTION_3_IN_PROGRESS`.
   Theorem 1.2 is proved, but the explicit family and minimality assertion are
   not yet formalized and therefore do not count as Theorem 1.2 coverage.
 
-The accounted coverage ratio is therefore **20/47**: 19 direct checked
+The accounted coverage ratio is therefore **21/47**: 20 direct checked
 publisher items plus the Definition 3.1 equivalent-construction endpoint
 that remains explicitly flagged for independent semantic review. This is a bookkeeping
 statement, not a judgment about how

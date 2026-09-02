@@ -13,6 +13,7 @@ import Bong.Bong.HeHu2022Proposition35iii
 import Bong.Bong.HeHu2022Definition36
 import Bong.Bong.HeHu2022Lemma39
 import Bong.Bong.HeHu2022Lemma310
+import Bong.Bong.HeHu2022Lemma311
 import Bong.Bong.HeHu2022Lemma313
 import Bong.Bong.HeHu2022Lemma314
 import Bong.Bong.BeliUniversalMaximal
@@ -36,6 +37,9 @@ publisher version of record (2024) is the sole semantic authority.  The
   codimension-two modules. Definition 3.6 is realized by canonical maximal
   representatives in each displayed space. Lemma 3.10 is proved by an exact
   recursive good-BONG construction on the literal half-hyperbolic tower.
+  Lemma 3.11 is proved for every Table 2 row: its even- and odd-rank
+  alternatives retain the published endpoint blocks and compute every
+  displayed `R_i` order, including the exceptional `2-2e` penultimate term.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.

@@ -53,6 +53,16 @@ import Bong.Papers.HeHu2022
 #check Bong.heHu2022Lemma310HyperbolicValues
 #check Bong.heHu2022Lemma310TailValues
 #check Bong.heHu2022Lemma310
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iFirstOne
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iFirstDelta
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iSecondOne
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iSecondDelta
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iGeneric
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iUnitUniformizer
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iiFirstUnit
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iiFirstUnitUniformizer
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iiSecondUnit
+#check Bong.BONG.GoodBONG.heHu2022Lemma311iiSecondUnitUniformizer
 #check Bong.HeHuRepresentsExactlyOne
 #check Bong.heHu2022Lemma313CodimensionOne
 #check Bong.heHu2022Lemma313CodimensionTwo
@@ -101,6 +111,16 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.heHu2022Lemma310HyperbolicValues
 #print axioms Bong.heHu2022Lemma310TailValues
 #print axioms Bong.heHu2022Lemma310
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iFirstOne
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iFirstDelta
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iSecondOne
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iSecondDelta
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iGeneric
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iUnitUniformizer
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iiFirstUnit
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iiFirstUnitUniformizer
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iiSecondUnit
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma311iiSecondUnitUniformizer
 #print axioms Bong.heHu2022Lemma313CodimensionOne
 #print axioms Bong.heHu2022Lemma313CodimensionTwo
 #print axioms Bong.heHu2022Lemma314iRepresents
