@@ -42,6 +42,12 @@
   `heHu2022Proposition35iiiEvenFirst`, and
   `heHu2022Proposition35iiiEvenSecond`: existence and uniqueness of the
   `(n+2)`-dimensional space which misses exactly the stated `n`-space.
+- `HeHuRepresentsExactlyOne`, `heHu2022Lemma313CodimensionOne`, and
+  `heHu2022Lemma313CodimensionTwo`: the exclusive representation package of
+  Lemma 3.13 in both permitted target ranks.
+- `heHu2022Lemma314iRepresents`, `heHu2022Lemma314i`, and
+  `heHu2022Lemma314ii`: all representation and nonrepresentation assertions
+  of Lemma 3.14, including the undefined `W_2^2(1)` exception.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

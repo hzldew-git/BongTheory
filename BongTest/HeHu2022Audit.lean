@@ -44,6 +44,12 @@ import Bong.Papers.HeHu2022
 #check Bong.heHu2022Proposition35iiiOddSecond
 #check Bong.heHu2022Proposition35iiiEvenFirst
 #check Bong.heHu2022Proposition35iiiEvenSecond
+#check Bong.HeHuRepresentsExactlyOne
+#check Bong.heHu2022Lemma313CodimensionOne
+#check Bong.heHu2022Lemma313CodimensionTwo
+#check Bong.heHu2022Lemma314iRepresents
+#check Bong.heHu2022Lemma314i
+#check Bong.heHu2022Lemma314ii
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -75,4 +81,9 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.heHu2022Proposition35iiiOddSecond
 #print axioms Bong.heHu2022Proposition35iiiEvenFirst
 #print axioms Bong.heHu2022Proposition35iiiEvenSecond
+#print axioms Bong.heHu2022Lemma313CodimensionOne
+#print axioms Bong.heHu2022Lemma313CodimensionTwo
+#print axioms Bong.heHu2022Lemma314iRepresents
+#print axioms Bong.heHu2022Lemma314i
+#print axioms Bong.heHu2022Lemma314ii
 #print axioms Bong.Lattice.heHuMaximalTestingReduction
