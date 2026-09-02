@@ -7,6 +7,10 @@ Lemmas 3.9--3.11 and 3.13--3.14, and a proved general maximal-testing
 reduction. In particular, the complete
 quadratic-space classification, unique excluding-space theorem, and every
 Table 2 maximality row in Proposition 3.7 are now kernel checked. The
-principal mathematical work remains in Sections 4--6: the detailed BONG
-equivalence, the two main theorems, and the explicit minimal testing set.
+Section 4 condition layer and the full arithmetic conversion from
+`I1^E`--`I3^E` to the concise Theorem 4.7 invariants are also kernel checked,
+as is the logical assembly of Theorem 4.1 from Lemmas 4.2, 4.4, and 4.5. The
+principal mathematical work remains the representation-theoretic proofs of
+those three lemmas, the odd-rank Section 5 chain, Section 6, the two main
+theorems, and the explicit minimal testing set.
 Status is partial, not a verified match.

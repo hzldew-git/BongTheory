@@ -79,6 +79,16 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Proposition37OddFirstUnitUniformizer
 #check Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnit
 #check Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnitUniformizer
+#check Bong.Lattice.AmbientlyNUniversal
+#check Bong.BONG.GoodBONG.HeHuI1E
+#check Bong.BONG.GoodBONG.HeHuI2E
+#check Bong.BONG.GoodBONG.HeHuI3E
+#check Bong.BONG.GoodBONG.heHuNUniversality_factorization
+#check Bong.BONG.GoodBONG.heHuAllRepresentationConditions_iff_components
+#check Bong.BONG.GoodBONG.heHuI1E_iff_alternatingInitialOrders_and_boundary
+#check Bong.BONG.GoodBONG.heHuI2E_iff_theorem47BoundaryCondition
+#check Bong.BONG.GoodBONG.heHuEvenSectionConditions_iff_theorem47StableConditions
+#check Bong.BONG.GoodBONG.heHuTheorem41_of_component_equivalences
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -146,4 +156,10 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddFirstUnitUniformizer
 #print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnit
 #print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnitUniformizer
+#print axioms Bong.BONG.GoodBONG.heHuNUniversality_factorization
+#print axioms Bong.BONG.GoodBONG.heHuAllRepresentationConditions_iff_components
+#print axioms Bong.BONG.GoodBONG.heHuI1E_iff_alternatingInitialOrders_and_boundary
+#print axioms Bong.BONG.GoodBONG.heHuI2E_iff_theorem47BoundaryCondition
+#print axioms Bong.BONG.GoodBONG.heHuEvenSectionConditions_iff_theorem47StableConditions
+#print axioms Bong.BONG.GoodBONG.heHuTheorem41_of_component_equivalences
 #print axioms Bong.Lattice.heHuMaximalTestingReduction

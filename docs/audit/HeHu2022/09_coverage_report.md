@@ -29,6 +29,12 @@ Coverage status: `SECTION_2_COMPLETE_SECTION_3_CORE_RESULTS_COMPLETE_REMARKS_PEN
 - Supporting proof: the abstract maximal-lattice testing reduction underlying
   Theorem 1.2 is proved, but the explicit family and minimality assertion are
   not yet formalized and therefore do not count as Theorem 1.2 coverage.
+- Section 4 infrastructure now includes exact `I1^E`--`I3^E` definitions, a
+  proved Theorem 2.8 universality factorization, the checked logical assembly
+  of Theorem 4.1, and the complete invariant conversion used in Theorem 4.7.
+  These are supporting declarations, not additional source-numbered
+  endpoints: Lemmas 4.2, 4.4, and 4.5 still have to discharge the three
+  representation components before Theorems 4.1 and 4.7 can be counted.
 
 The accounted coverage ratio is therefore **22/47**: 21 direct checked
 publisher items plus the Definition 3.1 equivalent-construction endpoint

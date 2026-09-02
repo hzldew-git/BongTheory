@@ -72,6 +72,19 @@
   Their common strict-over-lattice argument is exposed by the rank-one through
   rank-four volume lemmas; the three critical binary, ternary, and quaternary
   endpoint exclusions are separate kernel-checked declarations.
+- `HeHuI1E`, `HeHuI2E`, and `HeHuI3E`: exact Section 4 conditions with the
+  one-based paper indices translated explicitly.
+- `heHuNUniversality_factorization` and
+  `heHuAllRepresentationConditions_iff_components`: proved reduction of
+  lattice universality to ambient universality and the four conditions of
+  Theorem 2.8, split exactly as Lemmas 4.2, 4.4, and 4.5 require.
+- `heHuI2E_iff_theorem47BoundaryCondition` and
+  `heHuEvenSectionConditions_iff_theorem47StableConditions`: proved complete
+  capped-defect/raw-defect conversion behind Theorem 4.7(iii), including the
+  exceptional `R_(n+2)=2-2e` boundary.
+- `heHuTheorem41_of_component_equivalences`: checked logical assembly of
+  Theorem 4.1; its three explicit premises remain the still-open contents of
+  Lemmas 4.2, 4.4, and 4.5 and are not treated as proved hypotheses.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

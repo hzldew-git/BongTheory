@@ -48,14 +48,15 @@
     "All directly numbered results in Section 2",
     "Section 3 definitions and propositions through Proposition 3.7, including all Table 1 classification and Table 2 maximality rows",
     "Lemmas 3.9-3.11 and 3.13-3.14 with literal published endpoint models",
+    "Section 4 exact I1E-I3E condition layer, generic Theorem 2.8 universality factorization, Theorem 4.1 logical assembly, and Theorem 4.7 invariant conversion",
     "Abstract O-maximal testing reduction underlying Theorem 1.2"
   ],
   "excludedScope": [
     "Proof of the Theorem 1.1 equivalence",
     "Theorem 1.2 explicit testing list and minimality proof",
     "Remarks 3.8 and 3.12 as explicit correspondence endpoints",
-    "Numbered results in Sections 4-6",
+    "Numbered Section 4 endpoints pending Lemmas 4.2, 4.4, and 4.5; all numbered results in Sections 5-6",
     "Independent human semantic sign-off"
   ],
-  "reviewNotice": "Section 2 and the numbered Section 3 core, including Proposition 3.7, are kernel checked. Theorem 1.1 remains an unproved proposition target, and the proved maximal-testing theorem is only the abstract core of Theorem 1.2, not its explicit list or minimality assertion."
+  "reviewNotice": "Section 2 and the numbered Section 3 core, including Proposition 3.7, are kernel checked. The exact Section 4 conditions, the generic universality reduction, the Theorem 4.1 assembly, and the Theorem 4.7 invariant conversion are checked supporting work, but Lemmas 4.2, 4.4, and 4.5 remain open, so no numbered Section 4 endpoint is claimed. Theorem 1.1 remains an unproved proposition target, and the proved maximal-testing theorem is only the abstract core of Theorem 1.2, not its explicit list or minimality assertion."
 }

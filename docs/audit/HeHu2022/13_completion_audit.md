@@ -17,6 +17,8 @@
 | Lemma 3.11 | PASS, all even- and odd-rank Table 2 order-profile rows |
 | Lemmas 3.13--3.14 | PASS, both rank alternatives and all stated Table 1 comparisons |
 | Remarks 3.8 and 3.12 | FAIL / pending explicit correspondence endpoints |
+| Section 4 condition and reduction layer | PASS, exact `I1^E`--`I3^E`, generic universality factorization, Theorem 4.1 assembly, and Theorem 4.7 invariant conversion |
+| Lemmas 4.2, 4.4, and 4.5 | FAIL / representation-theoretic component equivalences pending |
 | Theorem 1.1 statement present | PASS |
 | Theorem 1.1 proof | FAIL / pending |
 | Theorem 1.2 explicit list and minimality | FAIL / pending |

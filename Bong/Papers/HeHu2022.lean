@@ -17,6 +17,7 @@ import Bong.Bong.HeHu2022Lemma311
 import Bong.Bong.HeHu2022Lemma313
 import Bong.Bong.HeHu2022Lemma314
 import Bong.Bong.HeHu2022Proposition37
+import Bong.Bong.HeHu2022SectionFour
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -46,6 +47,11 @@ publisher version of record (2024) is the sole semantic authority.  The
   classification: the binary case uses the two nonisometric determinant
   classes, while the ternary and quaternary cases contradict anisotropy of
   the displayed candidate spaces.
+  The Section 4 module fixes the exact `I1^E`, `I2^E`, and `I3^E`
+  conditions, proves the generic Theorem 2.8 universality factorization, and
+  proves the complete invariant conversion used in Theorem 4.7.  Lemmas
+  4.2, 4.4, and 4.5 remain the visible representation-theoretic obligations
+  needed to instantiate the checked Theorem 4.1 assembly theorem.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.
