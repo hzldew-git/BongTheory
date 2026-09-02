@@ -29,6 +29,19 @@
   properties of the chosen `c#`.
 - `heHu2022Proposition33`: uniqueness of the other binary isometry class with
   determinant `-c`.
+- `heHuEvenFirst`, `heHuEvenSecond`, `heHuOddFirst`, and `heHuOddSecond`:
+  the complete Table 1 family from Definition 3.4, including the sole
+  undefined binary case.
+- `heHu2022Definition34Proposition35Odd` and
+  `heHu2022Definition34Proposition35Even`: fixed-determinant classification,
+  nonisometry, and exhaustion for every defined Table 1 pair.
+- `heHu2022Proposition35iiOdd` and `heHu2022Proposition35iiEven`: global
+  exhaustion of all diagonal quadratic spaces of the required dimension.
+- `heHu2022Proposition35iiiOddFirst`,
+  `heHu2022Proposition35iiiOddSecond`,
+  `heHu2022Proposition35iiiEvenFirst`, and
+  `heHu2022Proposition35iiiEvenSecond`: existence and uniqueness of the
+  `(n+2)`-dimensional space which misses exactly the stated `n`-space.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

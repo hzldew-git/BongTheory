@@ -8,6 +8,8 @@ import Bong.Bong.HeHu2022SectionTwo
 import Bong.Bong.HeHu2022Lemma211
 import Bong.Bong.HeHu2022SectionThreeSharp
 import Bong.Bong.HeHu2022SectionThreeBinary
+import Bong.Bong.HeHu2022SectionThreeSpaces
+import Bong.Bong.HeHu2022Proposition35iii
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -23,8 +25,11 @@ publisher version of record (2024) is the sole semantic authority.  The
   `HeHu2022Conditions`.  Direct endpoints for Definition 2.4, Lemma 2.2,
   Corollary 2.3, Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11 are
   supplied by the Section 2 modules.  Definition 3.1 and Propositions 3.2--3.3
-  are supplied by the first two Section 3 modules.  No proof of the Theorem
-  1.1 equivalence is asserted here yet.
+  are supplied by the first two Section 3 modules.  Definition 3.4 and all
+  three clauses of Proposition 3.5, including the unique excluding-space
+  assertion and its exceptional binary case, are proved by the space and
+  codimension-two modules.  No proof of the Theorem 1.1 equivalence is
+  asserted here yet.
 -/
 
 namespace Bong

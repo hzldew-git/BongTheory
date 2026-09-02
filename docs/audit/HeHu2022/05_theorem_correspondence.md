@@ -19,5 +19,9 @@
 | Definition 3.1 | `HeHuSharpDomain`, `heHuSharp` | `PROVISIONAL_EQUIVALENT_CONSTRUCTION`; canonical choice by Proposition 3.2 properties rather than the literal auxiliary expansion |
 | Proposition 3.2 | `heHu2022Proposition32` | Proved; all three displayed properties |
 | Proposition 3.3 | `heHu2022Proposition33` | Proved; nonisometry and uniqueness of the other binary class |
+| Definition 3.4 | `heHuEvenFirst`, `heHuEvenSecond`, `heHuOddFirst`, `heHuOddSecond` | Direct Table 1 coefficient families, with `HeHuEvenSecondDefined` recording the sole exception |
+| Proposition 3.5(i) | `heHu2022Definition34Proposition35Odd`, `heHu2022Definition34Proposition35Even` | Proved; determinants, nonisometry, and every Table 1 branch |
+| Proposition 3.5(ii) | `heHu2022Proposition35iiOdd`, `heHu2022Proposition35iiEven` | Proved; all determinant classes exhausted |
+| Proposition 3.5(iii) | four `heHu2022Proposition35iii*` endpoints | Proved existence and uniqueness, including `n=2` and square `c`; finite coordinate casts only reconcile arithmetic rank expressions |
 
 The abstract core must never be cited as a proof of the full Theorem 1.2.

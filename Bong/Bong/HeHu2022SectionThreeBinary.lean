@@ -22,10 +22,16 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
 /-- The paper's binary space `[1,-c]`, represented by its diagonal units. -/
 def heHuBinaryFirst (c : Kˣ) : Fin 2 → Kˣ := ![1, -c]
 
+/-- The binary twist `[eta,-eta*c]`.  Proposition 3.3 is the specialization
+`eta = c#`; the discriminant square-class row of Table 1 uses a different
+negative Hilbert partner. -/
+def heHuBinaryTwist (c eta : Kˣ) : Fin 2 → Kˣ :=
+  ![eta, -(eta * c)]
+
 /-- The paper's binary space `[c#, -c# c]`. -/
 noncomputable def heHuBinarySecond (c : Kˣ) (hc : HeHuSharpDomain c) :
     Fin 2 → Kˣ :=
-  ![heHuSharp c hc, -(heHuSharp c hc * c)]
+  heHuBinaryTwist c (heHuSharp c hc)
 
 omit [CharZero K] [ValuativeRel K] [TopologicalSpace K]
   [DyadicContext K] in
@@ -38,7 +44,8 @@ theorem diagonalUnitDeterminant_heHuBinarySecond
     (c : Kˣ) (hc : HeHuSharpDomain c) :
     diagonalUnitDeterminant (heHuBinarySecond c hc) =
       -(heHuSharp c hc * heHuSharp c hc * c) := by
-  simp [heHuBinarySecond, diagonalUnitDeterminant, Fin.prod_univ_two]
+  simp [heHuBinarySecond, heHuBinaryTwist,
+    diagonalUnitDeterminant, Fin.prod_univ_two]
   group
 
 /-- The two displayed binaries have the same determinant square class. -/
@@ -136,6 +143,92 @@ theorem heHu2022Proposition33 (c : Kˣ) (hc : HeHuSharpDomain c) :
     simpa only [first, second] using
       heHuBinarySecond_not_represents_first c hc
   refine ⟨hsecondNot, ?_⟩
+  intro w hwDet hwNot
+  have hsecondHasseNe :
+      diagonalHasseSymbol K second ≠ diagonalHasseSymbol K first := by
+    intro hhasse
+    exact hsecondNot
+      (diagonalUnitBinary_represents_of_invariants
+        second first hsecondDet hhasse)
+  have hwHasseNe :
+      diagonalHasseSymbol K w ≠ diagonalHasseSymbol K first := by
+    intro hhasse
+    exact hwNot
+      (diagonalUnitBinary_represents_of_invariants
+        w first hwDet hhasse)
+  have hwHasse : diagonalHasseSymbol K w =
+      diagonalHasseSymbol K second :=
+    intUnit_eq_of_ne_same hwHasseNe hsecondHasseNe
+  have hfirstSecond : IsSquare
+      (diagonalUnitDeterminant first *
+        diagonalUnitDeterminant second) := by
+    simpa only [mul_comm] using hsecondDet
+  have hwSecondDet : IsSquare
+      (diagonalUnitDeterminant w *
+        diagonalUnitDeterminant second) :=
+    isSquare_mul_trans
+      (diagonalUnitDeterminant w)
+      (diagonalUnitDeterminant first)
+      (diagonalUnitDeterminant second) hwDet hfirstSecond
+  exact diagonalUnitBinary_represents_of_invariants
+    w second hwSecondDet hwHasse
+
+/-- A binary twist by any negative Hilbert partner is the unique other
+binary isometry class in determinant class `-c`. -/
+theorem heHuBinaryTwist_classification (c eta : Kˣ)
+    (hnegative : hilbertSymbol K eta c = -1) :
+    IsSquare
+        (diagonalUnitDeterminant (heHuBinaryTwist c eta) *
+          diagonalUnitDeterminant (heHuBinaryFirst c)) ∧
+      ¬ DiagonalRepresents
+          (diagonalUnitCoefficients (heHuBinaryTwist c eta))
+          (diagonalUnitCoefficients (heHuBinaryFirst c)) ∧
+      ∀ w : Fin 2 → Kˣ,
+        IsSquare
+            (diagonalUnitDeterminant w *
+              diagonalUnitDeterminant (heHuBinaryFirst c)) →
+        ¬ DiagonalRepresents
+            (diagonalUnitCoefficients w)
+            (diagonalUnitCoefficients (heHuBinaryFirst c)) →
+        DiagonalRepresents
+            (diagonalUnitCoefficients w)
+            (diagonalUnitCoefficients (heHuBinaryTwist c eta)) := by
+  let first := heHuBinaryFirst c
+  let second := heHuBinaryTwist c eta
+  have hsecondDet : IsSquare
+      (diagonalUnitDeterminant second *
+        diagonalUnitDeterminant first) := by
+    refine ⟨eta * c, ?_⟩
+    dsimp only [first, second]
+    simp only [heHuBinaryTwist, heHuBinaryFirst,
+      diagonalUnitDeterminant, Fin.prod_univ_two]
+    apply Units.ext
+    simp
+    ring
+  have hsecondNot : ¬ DiagonalRepresents
+      (diagonalUnitCoefficients second)
+      (diagonalUnitCoefficients first) := by
+    intro hrep
+    have hlineOther : DiagonalRepresents
+        (fun _ : Fin 1 => (eta : K))
+        (diagonalUnitCoefficients second) := by
+      convert (DiagonalRepresents.prefixSucc
+        (diagonalUnitCoefficients second)) using 1
+      funext i
+      fin_cases i
+      rfl
+    have hlineFirst := hlineOther.trans hrep
+    have hhilbert :=
+      (DiagonalRepresents.unary_binary_iff_hilbertSymbol_one
+        (K := K) (1 : Kˣ) (-c) eta).mp (by
+          convert hlineFirst using 1
+          funext i
+          fin_cases i <;> rfl)
+    have hone : hilbertSymbol K eta c = 1 := by
+      simpa using hhilbert
+    rw [hnegative] at hone
+    norm_num at hone
+  refine ⟨hsecondDet, hsecondNot, ?_⟩
   intro w hwDet hwNot
   have hsecondHasseNe :
       diagonalHasseSymbol K second ≠ diagonalHasseSymbol K first := by

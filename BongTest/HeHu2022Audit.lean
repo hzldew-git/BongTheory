@@ -36,6 +36,14 @@ import Bong.Papers.HeHu2022
 #check Bong.heHuSharp
 #check Bong.heHu2022Proposition32
 #check Bong.heHu2022Proposition33
+#check Bong.heHu2022Definition34Proposition35Odd
+#check Bong.heHu2022Definition34Proposition35Even
+#check Bong.heHu2022Proposition35iiOdd
+#check Bong.heHu2022Proposition35iiEven
+#check Bong.heHu2022Proposition35iiiOddFirst
+#check Bong.heHu2022Proposition35iiiOddSecond
+#check Bong.heHu2022Proposition35iiiEvenFirst
+#check Bong.heHu2022Proposition35iiiEvenSecond
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -59,4 +67,12 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.heHuSharpData_sourceDefect_integer
 #print axioms Bong.heHu2022Proposition32
 #print axioms Bong.heHu2022Proposition33
+#print axioms Bong.heHu2022Definition34Proposition35Odd
+#print axioms Bong.heHu2022Definition34Proposition35Even
+#print axioms Bong.heHu2022Proposition35iiOdd
+#print axioms Bong.heHu2022Proposition35iiEven
+#print axioms Bong.heHu2022Proposition35iiiOddFirst
+#print axioms Bong.heHu2022Proposition35iiiOddSecond
+#print axioms Bong.heHu2022Proposition35iiiEvenFirst
+#print axioms Bong.heHu2022Proposition35iiiEvenSecond
 #print axioms Bong.Lattice.heHuMaximalTestingReduction

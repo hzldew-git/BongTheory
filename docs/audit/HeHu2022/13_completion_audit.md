@@ -9,6 +9,7 @@
 | Exhaustive 47-item publisher inventory | PASS |
 | Direct Section 2 endpoints | PASS, 10/10 complete |
 | Definition 3.1 and Propositions 3.2--3.3 | PASS, with Definition 3.1 equivalent-construction review flag |
+| Definition 3.4 and Proposition 3.5 | PASS, including all Table 1 and uniqueness branches |
 | Theorem 1.1 statement present | PASS |
 | Theorem 1.1 proof | FAIL / pending |
 | Theorem 1.2 explicit list and minimality | FAIL / pending |

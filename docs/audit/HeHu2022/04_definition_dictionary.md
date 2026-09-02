@@ -12,6 +12,10 @@
 | `c#` | `heHuSharp c hc` (canonical equivalent choice) |
 | `[1,-c]` | `heHuBinaryFirst c` |
 | `[c#,-c#c]` | `heHuBinarySecond c hc` |
+| `W_1^{2p+2}(c)`, `W_2^{2p+2}(c)` | `heHuEvenFirst p c`, `heHuEvenSecond p c hdefined` |
+| `W_1^{2p+3}(c)`, `W_2^{2p+3}(c)` | `heHuOddFirst p c`, `heHuOddSecond p c` |
+| represents every `n`-space except `W` | `HeHuMissesExactly W V` |
+| unique excluding `(n+2)`-space | `HeHuUniqueExcludingTarget W V` |
 | `x in [r,s]_E` | `HeHuInEvenInterval x r s` |
 | `O_F`-maximal | `Bong.Lattice.IsOMaximal` |
 

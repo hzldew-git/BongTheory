@@ -4,5 +4,7 @@
 endpoint in current scope. Expected foundational axioms are `propext`,
 `Classical.choice`, and `Quot.sound`; no project-specific axiom or `sorry` is
 permitted.  The audit now includes the direct Section 2 endpoints,
-Propositions 3.2--3.3, and the abstract maximal-testing theorem.  The unproved
-Theorem 1.1 target is not disguised as an axiom.
+Propositions 3.2--3.5, and the abstract maximal-testing theorem. The
+codimension-two theorem used for Proposition 3.5(iii) is itself proved in
+`DiagonalCodimensionTwoRepresentationProof`; it is not a paper-specific law
+assumption. The unproved Theorem 1.1 target is not disguised as an axiom.
