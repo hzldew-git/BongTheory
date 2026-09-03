@@ -1,6 +1,7 @@
 # Formal declaration inventory
 
-- `Bong.BONG.GoodBONG.HeHuTheorem11Statement`: unproved target proposition.
+- `Bong.BONG.GoodBONG.HeHuTheorem11Statement`: exact target proposition;
+  `heHu2022Theorem11` proves its biconditional.
 - `HeHuTheorem11Conditions`, `HeHuEvenConditions`, `HeHuOddConditions`, and
   `HeHuExceptionalQuaternaryConditions`: publisher criterion statement layer.
 - `heHuOrder`, `heHuAdjacentDefect`, and `heHuPrefixDefect`: explicit index and
@@ -161,6 +162,20 @@
   candidate before specializing to the printed even and odd inequalities.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
+- `IsHeHuCompleteUnitRepresentativeSystem` and
+  `HeHuPublishedSquareClassIndex.parameter`: the finite normalized `U` and
+  its literal `delta`/`delta*pi` parameters.
+- `heHu2022Theorem12PublishedEvenLiteral` and
+  `heHu2022Theorem12PublishedOddLiteral`: the full finite Table 2 testing
+  sets and literal proper-subset minimality.
+- `card_heHuPublishedOddTestingIndex`,
+  `card_heHuPublishedEvenTestingIndex_of_pos`, and
+  `card_heHuPublishedEvenTestingIndex_zero`: the printed table counts in
+  terms of `|U|`, including the unique rank-two omission.
+- `heHu2022Corollary46` and `heHu2022Theorem47Even`: the ambient rank
+  classification and concise even-rank criterion.
+- `heHu2022Theorem11`: the complete main criterion, including all rank
+  branches.
 
 The canonical import is `Bong.Papers.HeHu2022`; the audit import is
 `BongTest.HeHu2022Audit`.

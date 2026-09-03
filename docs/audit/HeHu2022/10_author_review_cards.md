@@ -5,8 +5,9 @@
 2. Confirm the exceptional quaternary hyperbolic-space formulation.
 3. Confirm that the repository convention `Q(x)=B(x,x)` matches every use of
    defect and hyperbolic notation.
-4. Do not approve semantic completion until the biconditional is proved and the
-   explicit testing list/minimality are formalized.
+4. Independently compare the proved Theorem 1.1 biconditional and the finite
+   `U`-indexed Theorem 1.2 list/minimality endpoints with the publisher text;
+   kernel completion is not a substitute for this semantic sign-off.
 5. For Lemma 5.10, verify the simultaneous two-test quantifier, the existential
    exceptional ternary parameter, and the one-based terminal index against
    publisher pages 1501--1502.

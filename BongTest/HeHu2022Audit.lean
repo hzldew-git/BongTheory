@@ -151,6 +151,13 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Theorem11
 #check @Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12Even
 #check @Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12Odd
+#check @Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedEven
+#check @Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedOdd
+#check @Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedEvenLiteral
+#check @Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedOddLiteral
+#check @Bong.card_heHuPublishedOddTestingIndex
+#check @Bong.card_heHuPublishedEvenTestingIndex_of_pos
+#check @Bong.card_heHuPublishedEvenTestingIndex_zero
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -271,4 +278,11 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Theorem11
 #print axioms Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12Even
 #print axioms Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12Odd
+#print axioms Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedEven
+#print axioms Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedOdd
+#print axioms Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedEvenLiteral
+#print axioms Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedOddLiteral
+#print axioms Bong.card_heHuPublishedOddTestingIndex
+#print axioms Bong.card_heHuPublishedEvenTestingIndex_of_pos
+#print axioms Bong.card_heHuPublishedEvenTestingIndex_zero
 #print axioms Bong.Lattice.heHuMaximalTestingReduction

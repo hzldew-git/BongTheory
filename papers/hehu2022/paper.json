@@ -35,9 +35,9 @@
   ],
   "auditDirectory": "docs/audit/HeHu2022",
   "sourceDelta": "docs/audit/HeHu2022/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_THROUGH_LEMMA_5_9",
-  "semanticStatus": "PARTIAL_NOT_YET_AUDITED",
-  "grade": "D",
+  "coverageStatus": "FULLY_FORMALIZED",
+  "semanticStatus": "PROVISIONAL_MATCH_PENDING_INDEPENDENT_REVIEW",
+  "grade": "B",
   "expectedAxioms": [
     "propext",
     "Classical.choice",
@@ -51,16 +51,14 @@
     "Lemma 4.2 complete equivalence using the exact square/discriminant tests and deep same-rank completion",
     "Lemma 4.3 complete exceptional N_2^n(Delta) test with both strict defect conclusions and exact nonrepresentation",
     "Lemmas 4.4-4.5 and Theorem 4.1 complete, together with the exact I1E-I3E condition layer and Theorem 4.7 invariant conversion",
-    "Remark 5.2 and Lemmas 5.4 and 5.6-5.9, including both literal Lemma 5.9 tests and the exact at-least-one failure conclusion",
-    "Abstract O-maximal testing reduction underlying Theorem 1.2"
+    "Remark 5.2, Theorems 5.1 and 5.3, Proposition 5.5, and Lemmas 5.4 and 5.6-5.11",
+    "All numbered results in Section 6",
+    "Corollary 4.6 and Theorem 4.7 as direct endpoints",
+    "Full Theorem 1.1 equivalence at the published rank and parity scope",
+    "Theorem 1.2 in the literal finite normalized-U form, including cardinalities, pairwise nonisometry, the unique binary omission, and proper-subset minimality"
   ],
   "excludedScope": [
-    "Proof of the Theorem 1.1 equivalence",
-    "Theorem 1.2 explicit testing list and minimality proof",
-    "Remarks 3.8 and 3.12 as explicit correspondence endpoints",
-    "Corollary 4.6 and Theorem 4.7 as direct endpoints",
-    "Theorem 5.1, Theorem 5.3, Proposition 5.5, Lemmas 5.10-5.11, and all numbered results in Section 6",
     "Independent human semantic sign-off"
   ],
-  "reviewNotice": "Sections 2 and 3 and the complete Theorem 4.1 proof chain are kernel checked. Section 5 is checked through Lemma 5.9. Its clause (ii) excludes simultaneous representation of the two literal tests and therefore gives failure for at least one test; it does not assert separate failure for both. Corollary 4.6, Theorem 4.7, the remaining Section 5 results, Section 6, and both main theorems remain incomplete. Theorem 1.1 is still an unproved proposition target, and the proved maximal-testing theorem is only the abstract core of Theorem 1.2, not its explicit list or minimality assertion."
+  "reviewNotice": "All 47 directly numbered publisher items are accounted for and every mathematical assertion has a kernel-checked endpoint. Theorem 1.2 is checked in the literal finite normalized-U form, including table cardinalities and proper-subset minimality. Definition 3.1 uses a canonical equivalent construction characterized by Proposition 3.2 and remains explicitly flagged for independent semantic review; no independent human sign-off is claimed."
 }

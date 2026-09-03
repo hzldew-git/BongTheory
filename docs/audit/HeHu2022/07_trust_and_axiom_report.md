@@ -1,17 +1,18 @@
 # Trust and axiom report
 
-`BongTest.HeHu2022Audit` prints the transitive axioms of every proved public
-endpoint in current scope. Expected foundational axioms are `propext`,
-`Classical.choice`, and `Quot.sound`; no project-specific axiom or `sorry` is
-permitted.  The audit now includes the direct Section 2 endpoints,
-Propositions 3.2--3.7, Lemmas 3.9--3.11, Lemmas 3.13--3.14, the abstract
-maximal-testing theorem, and the proved Section 4 reduction and invariant
-conversion declarations, including the complete Lemmas 4.2--4.5 and Theorem
-4.1 endpoints.  It also checks Remark 5.2 and Lemmas 5.4, 5.6--5.10;
-each reports only `propext`, `Classical.choice`, and `Quot.sound`. The
-codimension-two theorem used for Proposition 3.5(iii) is itself proved in
-`DiagonalCodimensionTwoRepresentationProof`; it is not a paper-specific law
-assumption. The unproved Theorem 1.1 target is not disguised as an axiom.
-Likewise, `heHuTheorem41_of_component_equivalences` quantifies its component
-equivalences explicitly, and `heHu2022Theorem41Even` supplies all three from
-the proved Lemmas 4.2, 4.4, and 4.5.
+`BongTest.HeHu2022Audit` prints the transitive axioms of every public paper
+endpoint, including Corollary 4.6, Theorem 4.7, Theorems 1.1--1.2, the
+finite-table cardinality theorems, and literal proper-subset minimality.
+
+The observed dependencies are only Lean's expected foundational axioms:
+`propext`, `Classical.choice`, and `Quot.sound`. No project-specific `axiom`,
+`sorry`, or `opaque` declaration occurs in the scoped source closure.
+
+Deep inputs that were formerly exposed as interfaces—notably diagonal local
+classification, the codimension-two representation theorem, and maximal
+lattice uniqueness—are discharged by proved repository modules before the
+paper endpoints are assembled. The audit therefore does not treat a
+paper-specific assumption as a proof of the same paper assertion.
+
+Independent human semantic review remains outside the Lean trust report and
+is not self-certified here.

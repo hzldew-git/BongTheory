@@ -39,6 +39,7 @@ import Bong.Bong.HeHu2022Theorem53
 import Bong.Bong.HeHu2022SectionSix
 import Bong.Bong.HeHu2022Theorem11
 import Bong.Bong.HeHu2022Theorem12
+import Bong.Bong.HeHu2022PublishedTestingSet
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -54,6 +55,13 @@ publisher version of record (2024) is the sole semantic authority.  The
   statement in `HeHu2022Theorem11`.  Theorem 1.2 is proved as a minimal
   family of isometry classes of the two canonical maximal-lattice columns;
   the exceptional undefined binary entry is excluded in its index type.
+  Its literal published finite form is also proved for every finite complete
+  normalized system `U` of unit square-class representatives: the index is
+  exactly the two rows `delta` and `delta*pi`, and the proof derives their
+  completeness from valuation parity rather than assuming table coverage.
+  The formal cardinalities are `4*|U|` in odd rank and even rank at least
+  four, and `4*|U|-1` in rank two.  Irredundancy of `U` is also used to
+  upgrade isometry-class minimality to literal proper-subset minimality.
   Direct endpoints for Definition 2.4, Lemma 2.2,
   Corollary 2.3, Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11 are
   supplied by the Section 2 modules.  Definition 3.1 and Propositions 3.2--3.3

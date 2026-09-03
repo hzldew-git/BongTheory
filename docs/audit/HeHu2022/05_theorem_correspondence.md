@@ -2,10 +2,10 @@
 
 | Source | Formal endpoint | Correspondence |
 |---|---|---|
-| Theorem 1.1 | `HeHuTheorem11Statement` | Statement target only; `UNPROVED` |
-| Theorem 1.1 RHS | `HeHuTheorem11Conditions` | Full branch transcription; `PENDING_HUMAN_CHECK` |
+| Theorem 1.1 | `heHu2022Theorem11` | Proved equivalence between `n`-universality and the complete published case split, including the small-rank impossibility and exceptional binary/quaternary branch |
+| Theorem 1.1 RHS | `HeHuTheorem11Conditions` | Full branch transcription with explicit one-based/zero-based translations |
 | Theorem 1.2 maximal-testing principle | `heHuMaximalTestingReduction` | Abstract core proved |
-| Theorem 1.2 explicit list/minimality | none | `NOT_FORMALIZED` |
+| Theorem 1.2 explicit list/minimality | `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | Proved for every finite complete normalized unit representative system `U`; the finite `delta`/`delta*pi` table, the missing `N_2^2(1)` row, irredundancy, cardinalities, and literal deletion-minimality are all checked |
 | Definition 2.4 | `heHuAlpha`, `heHuTruncatedSegmentDefect` | Direct finite-minimum and capped-defect definitions |
 | Lemma 2.2 | `heHu2022Lemma22` | Proved; displayed order-and-defect criterion |
 | Corollary 2.3 | `heHu2022Corollary23i`, `heHu2022Corollary23ii` | Proved; both clauses |
@@ -25,6 +25,8 @@
 | Proposition 3.5(iii) | four `heHu2022Proposition35iii*` endpoints | Proved existence and uniqueness, including `n=2` and square `c`; finite coordinate casts only reconcile arithmetic rank expressions |
 | Definition 3.6 | four `heHu2022Definition36*` endpoints | Proved canonical choice of an `O`-maximal lattice on every defined `W_nu^n(c)` |
 | Proposition 3.7 | ten `heHu2022Proposition37*` endpoints | Proved every Table 2 row. Strict over-lattices are excluded by sharp volume bounds; the binary critical endpoint uses Proposition 3.5 nonisometry, and the ternary/quaternary endpoints use isotropy-versus-anisotropy contradictions. Literal half-hyperbolic extension is proved from the maximal-lattice splitting theorem. |
+| Remark 3.8 | `exists_heHuNormalizedUnitRepresentative`, `heHu2022Remark38_binaryRows` | Proved existence of normalized representatives with `d(delta)=ord(delta-1)` (including the infinite square-class case) and the two generic displayed BONG rows |
+| Remark 3.12 | documentation in `Bong.Papers.HeHu2022` | Methodological observation only; it introduces no proposition used by the paper |
 | Lemma 3.9(i) | `heHu2022Lemma39i` | Proved; all three exact binary coefficient lists and the standard endpoint isometries |
 | Lemma 3.9(ii) | `heHu2022Lemma39ii` | Proved; both unit--uniformizer pairs for arbitrary valuation-unit `delta` |
 | Lemma 3.9(iii) | `heHu2022Lemma39iii` | Proved; canonical `kappa#`, exact source model, and literal published ternary coefficient list |
@@ -41,7 +43,8 @@
 | Theorem 4.1 conditions | `HeHuI1E`, `HeHuI2E`, `HeHuI3E`, `HeHuEvenSectionConditions` | Exact statements checked; one-based/zero-based boundary translation explicit |
 | Theorem 4.1 | `heHu2022Theorem41Even` | Proved for every even `n=2k+2`: ambient universality and `I1^E`--`I3^E` are equivalent to lattice `n`-universality, by the checked Theorem 2.8 factorization and Lemmas 4.2, 4.4, and 4.5. |
 | Theorem 4.1 logical assembly | `heHuNUniversality_factorization`, `heHuTheorem41_of_component_equivalences` | Proved reusable reduction and component assembly used by the direct endpoint. |
-| Theorem 4.7 invariant conversion | `heHuI2E_iff_theorem47BoundaryCondition`, `heHuEvenSectionConditions_iff_theorem47StableConditions` | Proved, including the exceptional raw/capped defect equivalence; ambient rank classification and Theorem 4.1 endpoint still pending |
+| Corollary 4.6 | `heHu2022Corollary46` | Proved, including the unique binary/quaternary hyperbolic exception |
+| Theorem 4.7 | `heHu2022Theorem47Even` | Proved at the published ambient-rank scope; the invariant conversion includes the exceptional raw/capped defect equivalence |
 | Remark 5.2 | `heHu2022Remark52` | Proved; the implication `R_(n+1)=1 -> R_(n+2)>=1` is derived from Proposition 2.7(i) and Corollary 2.3(i), with the paper's one-based indices exposed in the endpoint |
 | Lemma 5.4 | `heHu2022Lemma54` | Proved; clause (i) and all three assertions of clause (ii), including the exceptional `R_(n+1)=2-2e` alpha value |
 | Lemma 5.6 | `heHu2022Lemma56` | Proved at the paper's full quantified strength for every integral rank-`n` target; clauses (i) and (ii) are the exact first two components of Theorem 2.8 |
@@ -57,4 +60,6 @@
 | Corollary 6.2 | `HeHuTheorem11OddInitialConditions`, `heHu2022Corollary62` | Proved in both directions; the endpoint is exactly Theorem 1.1(i) plus (iii)(1), including the quantified middle-interval defect clause. |
 | Lemma 6.3 | `HeHuI2OSecondPart`, `HeHuTheorem11OddClause2`, `heHu2022Lemma63` | Proved in both directions. The full finite minimum defining `alpha_(n+2)` is reduced to the half-gap or tail candidates, and the parity parameter is then specialized to the two inequalities in Theorem 1.1(iii)(2). |
 
-The abstract core must never be cited as a proof of the full Theorem 1.2.
+`heHuMaximalTestingReduction` remains only the abstract core; the full
+published Theorem 1.2 is represented by the two `Published*Literal`
+endpoints above.
