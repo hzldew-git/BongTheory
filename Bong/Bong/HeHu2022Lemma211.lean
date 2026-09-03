@@ -35,9 +35,10 @@ namespace BONG.GoodBONG
 
 /-- He--Hu, Lemma 2.11.  The source has rank `n + 1` and the target rank
 `n`, where the paper's odd `n ≥ 3` is represented by `2 * t + 3`. -/
-theorem heHu2022Lemma211 (t : Nat)
-    (a : GoodBONG q L (2 * t + 4))
+theorem heHu2022Lemma211LongSource {m : Nat} (t : Nat)
+    (a : GoodBONG q L (m + 3))
     (b : GoodBONG r M (2 * t + 3))
+    (hm : 2 * t + 4 ≤ m + 3)
     (hAIntegral : Lattice.IsIntegral q L)
     (hBIntegral : Lattice.IsIntegral r M)
     (hRBefore : a.order ⟨2 * t + 1, by omega⟩ =
@@ -54,13 +55,13 @@ theorem heHu2022Lemma211 (t : Nat)
       a.truncatedPrefixDefect b 1 (2 * t + 3) (2 * t + 3) := by
   let alphaV : Beli2006AlphaLaws.{u, v} K := beliUniversalAlphaLaws
   let alphaW : Beli2006AlphaLaws.{u, w} K := beliUniversalAlphaLaws
-  let idx : LongRepresentationIndex (2 * t + 4) (2 * t + 2) :=
+  let idx : LongRepresentationIndex (m + 3) (2 * t + 2) :=
     { val := 2 * t + 2
       one_lt := by omega
       succ_lt_large := by omega
       le_small_succ := by omega }
-  let sourceGap : Fin (2 * t + 3) := ⟨2 * t + 2, by omega⟩
-  let sourceNext : Fin (2 * t + 4) := ⟨2 * t + 3, by omega⟩
+  let sourceGap : Fin (m + 2) := ⟨2 * t + 2, by omega⟩
+  let sourceNext : Fin (m + 3) := ⟨2 * t + 3, by omega⟩
   have hSourceGap : a.orderGap sourceGap = a.order sourceNext := by
     unfold orderGap
     have hleft : sourceGap.castSucc = ⟨2 * t + 2, by omega⟩ := by
@@ -89,7 +90,7 @@ theorem heHu2022Lemma211 (t : Nat)
     (by simpa only [idx] using hRAt)
     (by simpa only [idx, sourceNext] using hNextGreater)
     (by simpa only [idx] using hLocal)
-  let sourceLast : Fin (2 * t + 4) := ⟨2 * t + 1, by omega⟩
+  let sourceLast : Fin (m + 3) := ⟨2 * t + 1, by omega⟩
   have hSourceLastOdd : Odd sourceLast.val := by
     refine ⟨t, ?_⟩
     simp only [sourceLast]
@@ -97,7 +98,7 @@ theorem heHu2022Lemma211 (t : Nat)
     hSourceLastOdd (by simpa only [sourceLast] using hRBefore)
   have hSourceOrdersEven (k : Nat) (hk : k < 2 * t + 3) :
       Even (a.orderSequence.entryOrZero k) := by
-    let kFin : Fin (2 * t + 4) := ⟨k, by omega⟩
+    let kFin : Fin (m + 3) := ⟨k, by omega⟩
     rw [a.orderSequence_entryOrZero_eq_order kFin]
     by_cases hkFinal : k = 2 * t + 2
     · have hkFinEq : kFin = ⟨2 * t + 2, by omega⟩ := by
@@ -106,7 +107,7 @@ theorem heHu2022Lemma211 (t : Nat)
       rw [hkFinEq, hRAt]
       exact Even.zero
     · rcases Nat.even_or_odd k with hkEven | hkOdd
-      · let oddIndex : Fin (2 * t + 4) := ⟨k + 1, by omega⟩
+      · let oddIndex : Fin (m + 3) := ⟨k + 1, by omega⟩
         have hoddIndex : Odd oddIndex.val := by
           rcases hkEven with ⟨d, hd⟩
           refine ⟨d, ?_⟩
@@ -119,7 +120,7 @@ theorem heHu2022Lemma211 (t : Nat)
         have hpair := sourcePattern.pairOrdersAndDefects oddIndex hoddLe
           hoddIndex
         have hprevious :
-            (⟨oddIndex.val - 1, by omega⟩ : Fin (2 * t + 4)) = kFin := by
+            (⟨oddIndex.val - 1, by omega⟩ : Fin (m + 3)) = kFin := by
           apply Fin.ext
           simp only [oddIndex, kFin]
           omega
@@ -212,7 +213,7 @@ theorem heHu2022Lemma211 (t : Nat)
               rw [hMixed]
               norm_cast
               have hSourceNextEq :
-                  (⟨2 * t + 3, by omega⟩ : Fin (2 * t + 4)) =
+                  (⟨2 * t + 3, by omega⟩ : Fin (m + 3)) =
                     sourceNext := by rfl
               have hTargetLastEq :
                   (⟨2 * t + 2, by omega⟩ : Fin (2 * t + 3)) =
@@ -231,7 +232,7 @@ theorem heHu2022Lemma211 (t : Nat)
               rw [hMixed]
               norm_cast
               have hSourceNextEq :
-                  (⟨2 * t + 3, by omega⟩ : Fin (2 * t + 4)) =
+                  (⟨2 * t + 3, by omega⟩ : Fin (m + 3)) =
                     sourceNext := by rfl
               have hTargetLastEq :
                   (⟨2 * t + 2, by omega⟩ : Fin (2 * t + 3)) =
@@ -261,7 +262,7 @@ theorem heHu2022Lemma211 (t : Nat)
         rfl
       have hIdxNext :
           (⟨idx.val + 1, by have := idx.succ_lt_large; omega⟩ :
-            Fin (2 * t + 4)) = sourceNext := by
+            Fin (m + 3)) = sourceNext := by
         apply Fin.ext
         rfl
       rw [hLastGapSucc, hIdxNext] at hBetaRaw
@@ -285,7 +286,7 @@ theorem heHu2022Lemma211 (t : Nat)
         (((a.order sourceNext - b.order targetLast : Int) : ℚ) :
             WithTop ℚ) + (b.alphaValue lastGap : WithTop ℚ) ≤
           a.truncatedPrefixDefect b 1 (2 * t + 3) (2 * t + 3) := by
-      have hClaimRaw := a.heHu2022Lemma211BetaClaim t b hBIntegral j
+      have hClaimRaw := a.heHu2022Lemma211BetaClaimLong t b hm hBIntegral j
         hjEven (by simpa only [idx] using hjBefore) hSourcePrefixOrderEven
         (by simpa only [idx, sourceNext] using hSourceLeJ)
         (by simpa only [sourceNext, targetLast, lastGap] using hBetaBound)
@@ -299,7 +300,7 @@ theorem heHu2022Lemma211 (t : Nat)
           (((a.order sourceNext - b.order targetLast : Int) : ℚ) :
             WithTop ℚ) + (b.alphaValue lastGap : WithTop ℚ) := by
               have hSourceNextEq :
-                  (⟨2 * t + 3, by omega⟩ : Fin (2 * t + 4)) =
+                  (⟨2 * t + 3, by omega⟩ : Fin (m + 3)) =
                     sourceNext := by rfl
               have hTargetLastEq :
                   (⟨2 * t + 2, by omega⟩ : Fin (2 * t + 3)) =
@@ -307,6 +308,27 @@ theorem heHu2022Lemma211 (t : Nat)
               rw [hSourceNextEq, hTargetLastEq]
               exact add_le_add_right hMixedLeBeta _
       _ ≤ a.truncatedPrefixDefect b 1 (2 * t + 3) (2 * t + 3) := hClaim
+
+/-- Exact-rank specialization retained for downstream users. -/
+theorem heHu2022Lemma211 (t : Nat)
+    (a : GoodBONG q L (2 * t + 4))
+    (b : GoodBONG r M (2 * t + 3))
+    (hAIntegral : Lattice.IsIntegral q L)
+    (hBIntegral : Lattice.IsIntegral r M)
+    (hRBefore : a.order ⟨2 * t + 1, by omega⟩ =
+      -(2 * (ramificationIndex K : Int)))
+    (hRAt : a.order ⟨2 * t + 2, by omega⟩ = 0)
+    (hAlpha : a.alphaValue ⟨2 * t + 2, by omega⟩ = 1)
+    (hLocal :
+      a.truncatedPrefixDefect a (-1) (2 * t + 2) (2 * t + 4) =
+        (((1 - a.order ⟨2 * t + 3, by omega⟩ : Int) : ℚ) :
+          WithTop ℚ)) :
+    (((a.order ⟨2 * t + 3, by omega⟩ -
+          b.order ⟨2 * t + 2, by omega⟩ : Int) : ℚ) : WithTop ℚ) +
+        a.truncatedPrefixDefect b (-1) (2 * t + 4) (2 * t + 2) ≤
+      a.truncatedPrefixDefect b 1 (2 * t + 3) (2 * t + 3) := by
+  exact a.heHu2022Lemma211LongSource (m := 2 * t + 1) t b (by omega)
+    hAIntegral hBIntegral hRBefore hRAt hAlpha hLocal
 
 end BONG.GoodBONG
 

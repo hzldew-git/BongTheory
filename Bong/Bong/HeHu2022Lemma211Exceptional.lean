@@ -28,9 +28,10 @@ namespace BONG.GoodBONG
 set_option maxHeartbeats 500000 in
 -- The finite-tail construction merits its own checking budget and unit.
 /-- The exceptional parity calculation inside He--Hu, Lemma 2.11. -/
-theorem heHu2022Lemma211ExceptionalTail (t : Nat)
-    (a : GoodBONG q L (2 * t + 4))
+theorem heHu2022Lemma211ExceptionalTailLong {m : Nat} (t : Nat)
+    (a : GoodBONG q L (m + 1))
     (b : GoodBONG r M (2 * t + 3))
+    (hm : 2 * t + 4 ≤ m + 1)
     (hBIntegral : Lattice.IsIntegral r M)
     (j : Fin (2 * t + 2))
     (hjEven : Even j.val)
@@ -46,7 +47,7 @@ theorem heHu2022Lemma211ExceptionalTail (t : Nat)
         b.alphaValue ⟨2 * t + 1, by omega⟩ ≤ 0 := by
   let targetLast : Fin (2 * t + 3) := ⟨2 * t + 2, by omega⟩
   let lastGap : Fin (2 * t + 2) := ⟨2 * t + 1, by omega⟩
-  let sourceNext : Fin (2 * t + 4) := ⟨2 * t + 3, by omega⟩
+  let sourceNext : Fin (m + 1) := ⟨2 * t + 3, by omega⟩
   have hTargetPrefixOrderOdd :
       Odd (ordUnit K (b.prefixProduct (2 * t + 3))) := by
     rw [ordUnit_mul] at hProductOdd
@@ -139,6 +140,27 @@ theorem heHu2022Lemma211ExceptionalTail (t : Nat)
       (b.order ellGap.castSucc : ℚ) := by
     exact_mod_cast hSourceLeEll
   linarith
+
+/-- Exact-rank specialization of the long-source exceptional calculation. -/
+theorem heHu2022Lemma211ExceptionalTail (t : Nat)
+    (a : GoodBONG q L (2 * t + 4))
+    (b : GoodBONG r M (2 * t + 3))
+    (hBIntegral : Lattice.IsIntegral r M)
+    (j : Fin (2 * t + 2))
+    (hjEven : Even j.val)
+    (hjBefore : j.val + 1 < 2 * t + 2)
+    (hJZero : b.order j.castSucc = 0)
+    (hSourcePrefixOrderEven :
+      Even (ordUnit K (a.prefixProduct (2 * t + 3))))
+    (hProductOdd : Odd (ordUnit K
+      (a.prefixProduct (2 * t + 3) * b.prefixProduct (2 * t + 3))))
+    (hSourceLeJ : a.order ⟨2 * t + 3, by omega⟩ ≤ b.order j.succ) :
+    ((a.order ⟨2 * t + 3, by omega⟩ -
+        b.order ⟨2 * t + 2, by omega⟩ : Int) : ℚ) +
+        b.alphaValue ⟨2 * t + 1, by omega⟩ ≤ 0 := by
+  exact a.heHu2022Lemma211ExceptionalTailLong t b (by omega)
+    hBIntegral j hjEven hjBefore hJZero hSourcePrefixOrderEven
+    hProductOdd hSourceLeJ
 
 end BONG.GoodBONG
 
