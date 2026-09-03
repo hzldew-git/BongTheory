@@ -82,6 +82,8 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Proposition37OddFirstUnitUniformizer
 #check Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnit
 #check Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnitUniformizer
+#check Bong.exists_heHuNormalizedUnitRepresentative
+#check Bong.BONG.GoodBONG.heHu2022Remark38_binaryRows
 #check Bong.Lattice.AmbientlyNUniversal
 #check Bong.BONG.GoodBONG.HeHuI1E
 #check Bong.BONG.GoodBONG.HeHuI2E
@@ -219,6 +221,8 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddFirstUnitUniformizer
 #print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnit
 #print axioms Bong.BONG.GoodBONG.heHu2022Proposition37OddSecondUnitUniformizer
+#print axioms Bong.exists_heHuNormalizedUnitRepresentative
+#print axioms Bong.BONG.GoodBONG.heHu2022Remark38_binaryRows
 #print axioms Bong.BONG.GoodBONG.heHuNUniversality_factorization
 #print axioms Bong.BONG.GoodBONG.heHuAllRepresentationConditions_iff_components
 #print axioms Bong.BONG.GoodBONG.heHuI1E_iff_alternatingInitialOrders_and_boundary

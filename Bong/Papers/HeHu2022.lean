@@ -18,6 +18,7 @@ import Bong.Bong.HeHu2022Lemma313
 import Bong.Bong.HeHu2022AmbientRank
 import Bong.Bong.HeHu2022Lemma314
 import Bong.Bong.HeHu2022Proposition37
+import Bong.Bong.HeHu2022Remark38
 import Bong.Bong.HeHu2022SectionFour
 import Bong.Bong.HeHu2022Lemma42
 import Bong.Bong.HeHu2022Lemma43
@@ -70,6 +71,9 @@ publisher version of record (2024) is the sole semantic authority.  The
   classification: the binary case uses the two nonisometric determinant
   classes, while the ternary and quaternary cases contradict anisotropy of
   the displayed candidate spaces.
+  Remark 3.8's normalized unit-square-class representatives and its two
+  generic binary coefficient rows are recorded directly; Remark 3.12 is
+  methodological prose and introduces no additional mathematical assertion.
   The Section 4 module fixes the exact `I1^E`, `I2^E`, and `I3^E`
   conditions, proves the generic Theorem 2.8 universality factorization, and
   proves the complete invariant conversion used in Theorem 4.7.  Lemma 4.2
