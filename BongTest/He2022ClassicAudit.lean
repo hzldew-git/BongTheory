@@ -48,6 +48,23 @@ import Bong.Papers.He2022Classic
 #check Bong.heClassicOddC2Even_alpha_eq_one
 #check Bong.he2022ClassicProposition210
 #check Bong.he2022ClassicProposition210_anisotropic
+#check Bong.HeClassicDefectOneIndex
+#check Bong.HeClassicExceptionalIndex
+#check Bong.HeClassicPublishedEvenTestingIndex
+#check Bong.HeClassicPublishedOddTestingIndex
+#check Bong.HeClassicPublishedCountingLaws
+#check Bong.card_heClassicExceptionalIndex
+#check Bong.card_heClassicPublishedEvenTestingIndex
+#check Bong.he2022ClassicProposition28ii_even_gt_one
+#check Bong.he2022ClassicProposition28ii_even_eq_one
+#check Bong.he2022ClassicProposition28ii_odd
+#check Bong.HeClassicOmegaData
+#check Bong.HeClassicPublishedEvenTestingIndex.model
+#check Bong.HeClassicPublishedEvenTestingIndex.model_rank
+#check Bong.HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+#check Bong.HeClassicPublishedOddTestingIndex.model
+#check Bong.HeClassicPublishedOddTestingIndex.model_rank
+#check Bong.HeClassicPublishedOddTestingIndex.model_isClassicIntegral
 
 #print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
 #print axioms Bong.Lattice.exists_classicMaximal_superlattice
@@ -70,3 +87,9 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.heClassicOddC2Odd_alpha_eq_one
 #print axioms Bong.heClassicOddC2Even_alpha_eq_one
 #print axioms Bong.he2022ClassicProposition210
+#print axioms Bong.card_heClassicPublishedEvenTestingIndex
+#print axioms Bong.he2022ClassicProposition28ii_even_gt_one
+#print axioms Bong.he2022ClassicProposition28ii_even_eq_one
+#print axioms Bong.he2022ClassicProposition28ii_odd
+#print axioms Bong.HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+#print axioms Bong.HeClassicPublishedOddTestingIndex.model_isClassicIntegral
