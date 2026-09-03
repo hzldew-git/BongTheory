@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 import Bong.Bong.He2022ClassicConditions
+import Bong.Bong.He2022ClassicModels
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -14,10 +15,10 @@ n-universal quadratic forms over dyadic local fields*, manuscripta math. 174
 authority.
 
 This layer formalizes the complete Theorem 1.1 proposition, classic integrality,
-classic `n`-universality,
-classic maximality, existence of classic-maximal over-lattices, and the
-abstract maximal testing reduction.  It does not claim the paper's explicit
-proof of that BONG criterion or the minimal testing-set classification.
+classic `n`-universality, classic maximality, existence of classic-maximal
+over-lattices, the abstract maximal testing reduction, and the proved Section 2
+BONG core through Proposition 2.10.  It does not yet claim the paper's explicit
+proof of the main BONG criterion or the minimal testing-set classification.
 -/
 
 namespace Bong

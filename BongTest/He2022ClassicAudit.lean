@@ -17,7 +17,24 @@ import Bong.Papers.He2022Classic
 #check Bong.BONG.GoodBONG.HeClassicOddConditions
 #check Bong.BONG.GoodBONG.HeClassicTheorem11Conditions
 #check Bong.BONG.GoodBONG.HeClassicTheorem11Statement
+#check Bong.BONG.GoodBONG.he2022ClassicProposition22
+#check Bong.BONG.GoodBONG.he2022ClassicProposition23
+#check Bong.BONG.GoodBONG.he2022ClassicProposition24
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem25
+#check Bong.heClassicEvenH
+#check Bong.heClassicEvenC1
+#check Bong.heClassicEvenC2
+#check Bong.heClassicOddC1
+#check Bong.heClassicOddC2Odd
+#check Bong.heClassicOddC2Even
+#check Bong.he2022ClassicProposition210
+#check Bong.he2022ClassicProposition210_anisotropic
 
 #print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
 #print axioms Bong.Lattice.exists_classicMaximal_superlattice
 #print axioms Bong.Lattice.heClassicMaximalTestingReduction
+#print axioms Bong.BONG.GoodBONG.he2022ClassicProposition22
+#print axioms Bong.BONG.GoodBONG.he2022ClassicProposition23
+#print axioms Bong.BONG.GoodBONG.he2022ClassicProposition24
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem25
+#print axioms Bong.he2022ClassicProposition210
