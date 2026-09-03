@@ -39,6 +39,13 @@ import Bong.Papers.He2022Classic
 #check Bong.heClassicOddC2Odd_isClassicIntegral
 #check Bong.heClassicOddC2Even_isClassicIntegral
 #check Bong.heClassicEvenH_isClassicIntegral
+#check Bong.BONG.GoodBONG.he2022ClassicLemma29iii_alpha
+#check Bong.BONG.GoodBONG.he2022ClassicLemma29iii_alpha_of_zero_orders
+#check Bong.heClassicEvenC1_alpha_eq_one
+#check Bong.heClassicEvenC2_alpha_eq_one
+#check Bong.heClassicOddC1_alpha_eq_one
+#check Bong.heClassicOddC2Odd_alpha_eq_one
+#check Bong.heClassicOddC2Even_alpha_eq_one
 #check Bong.he2022ClassicProposition210
 #check Bong.he2022ClassicProposition210_anisotropic
 
@@ -55,4 +62,11 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.heClassicOddC2OddGoodBONG
 #print axioms Bong.heClassicOddC2EvenGoodBONG
 #print axioms Bong.heClassicEvenHGoodBONG
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma29iii_alpha
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma29iii_alpha_of_zero_orders
+#print axioms Bong.heClassicEvenC1_alpha_eq_one
+#print axioms Bong.heClassicEvenC2_alpha_eq_one
+#print axioms Bong.heClassicOddC1_alpha_eq_one
+#print axioms Bong.heClassicOddC2Odd_alpha_eq_one
+#print axioms Bong.heClassicOddC2Even_alpha_eq_one
 #print axioms Bong.he2022ClassicProposition210

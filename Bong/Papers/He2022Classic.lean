@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 import Bong.Bong.He2022ClassicConditions
 import Bong.Bong.He2022ClassicModels
 import Bong.Bong.He2022ClassicProfiles
+import Bong.Bong.He2022ClassicLemma29
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -18,8 +19,8 @@ authority.
 This layer formalizes the complete Theorem 1.1 proposition, classic integrality,
 classic `n`-universality, classic maximality, existence of classic-maximal
 over-lattices, the abstract maximal testing reduction, and the proved Section 2
-BONG core through Proposition 2.10, including exact good-BONG realizations and
-order profiles for every row in Definition 2.6.  It does not yet claim the
+BONG core through Proposition 2.10, including exact good-BONG realizations,
+order profiles, and alpha profiles for every row in Definition 2.6.  It does not yet claim the
 paper's explicit proof of the main BONG criterion or the minimal testing-set
 classification.
 -/
