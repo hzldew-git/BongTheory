@@ -27,6 +27,18 @@ import Bong.Papers.He2022Classic
 #check Bong.heClassicOddC1
 #check Bong.heClassicOddC2Odd
 #check Bong.heClassicOddC2Even
+#check Bong.heClassicEvenC1GoodBONG
+#check Bong.heClassicEvenC2GoodBONG
+#check Bong.heClassicOddC1GoodBONG
+#check Bong.heClassicOddC2OddGoodBONG
+#check Bong.heClassicOddC2EvenGoodBONG
+#check Bong.heClassicEvenHGoodBONG
+#check Bong.heClassicEvenC1_isClassicIntegral
+#check Bong.heClassicEvenC2_isClassicIntegral
+#check Bong.heClassicOddC1_isClassicIntegral
+#check Bong.heClassicOddC2Odd_isClassicIntegral
+#check Bong.heClassicOddC2Even_isClassicIntegral
+#check Bong.heClassicEvenH_isClassicIntegral
 #check Bong.he2022ClassicProposition210
 #check Bong.he2022ClassicProposition210_anisotropic
 
@@ -37,4 +49,10 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.BONG.GoodBONG.he2022ClassicProposition23
 #print axioms Bong.BONG.GoodBONG.he2022ClassicProposition24
 #print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem25
+#print axioms Bong.heClassicEvenC1GoodBONG
+#print axioms Bong.heClassicEvenC2GoodBONG
+#print axioms Bong.heClassicOddC1GoodBONG
+#print axioms Bong.heClassicOddC2OddGoodBONG
+#print axioms Bong.heClassicOddC2EvenGoodBONG
+#print axioms Bong.heClassicEvenHGoodBONG
 #print axioms Bong.he2022ClassicProposition210
