@@ -45,6 +45,7 @@
 | Remark 5.2 | `heHu2022Remark52` | Proved; the implication `R_(n+1)=1 -> R_(n+2)>=1` is derived from Proposition 2.7(i) and Corollary 2.3(i), with the paper's one-based indices exposed in the endpoint |
 | Lemma 5.4 | `heHu2022Lemma54` | Proved; clause (i) and all three assertions of clause (ii), including the exceptional `R_(n+1)=2-2e` alpha value |
 | Lemma 5.6 | `heHu2022Lemma56` | Proved at the paper's full quantified strength for every integral rank-`n` target; clauses (i) and (ii) are the exact first two components of Theorem 2.8 |
+| Lemma 5.7 | `heHu2022Lemma57`, `heHu2022Lemma57_not_centralRepresentationConditionsPrime` | Proved for the literal `N_2^3(delta*pi)` test. The endpoint derives the revised central trigger at paper index 4, the preceding defect bound from the two alternating Proposition 2.7 inequalities, and nonrepresentation by the first four source coefficients through the exclusive `W_1^3`/`W_2^3` classification of Lemma 3.13. |
 | Lemma 5.8 | `heHu2022Lemma58` | Proved; the zero-based endpoint uses paper rank `N=n+2` and returns all three published conclusions: exact raw defect of the signed prefix, defined sharp witness that is a valuation unit, and complementary sharp defect |
 
 The abstract core must never be cited as a proof of the full Theorem 1.2.

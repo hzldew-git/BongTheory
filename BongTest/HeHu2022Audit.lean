@@ -110,6 +110,8 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Lemma54
 #check Bong.BONG.GoodBONG.heHu2022Lemma56
 #check Bong.BONG.GoodBONG.heHu2022Remark52
+#check Bong.BONG.GoodBONG.heHu2022Lemma57
+#check Bong.BONG.GoodBONG.heHu2022Lemma57_not_centralRepresentationConditionsPrime
 #check Bong.BONG.GoodBONG.heHu2022Lemma58
 #check Bong.Lattice.heHuMaximalTestingReduction
 
@@ -202,5 +204,7 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma54
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma56
 #print axioms Bong.BONG.GoodBONG.heHu2022Remark52
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma57
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma57_not_centralRepresentationConditionsPrime
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma58
 #print axioms Bong.Lattice.heHuMaximalTestingReduction
