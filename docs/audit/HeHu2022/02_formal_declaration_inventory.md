@@ -137,6 +137,15 @@
   unit--uniformizer Table 1 rows.  The necessity proof derives the terminal
   order parity and applies the codimension-two exclusive alternative of
   Lemma 3.13, while sufficiency reduces every nonterminal index to Lemma 4.5.
+- `Lattice.IsNUniversal.pred` and `heHu2022Proposition55`: the paper's
+  implicit descent from `n`- to `(n-1)`-universality, followed by the exact
+  assembly of ambient universality, `I1^E`--`I3^E`, `I2^O`, and `I3^O`.
+- `heHu2022Theorem51Odd`: the complete odd-rank criterion, with the two
+  alpha cases of Lemma 5.4 used explicitly to recover the even-prefix
+  conditions in the reverse direction.
+- `HeHuTheorem53Conditions` and `heHu2022Theorem53Odd`: the compact
+  Theorem 5.3 case split.  Separate endpoints prove `alpha_N=0` iff
+  `R_(N+1)=-2e` and `R_(N+2)<=1` iff `R_(N+2)` is zero or one.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

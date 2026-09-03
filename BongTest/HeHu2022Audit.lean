@@ -126,6 +126,17 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Lemma511Tests_to_i3O
 #check Bong.BONG.GoodBONG.heHu2022Lemma511I3O_to_universal
 #check Bong.BONG.GoodBONG.heHu2022Lemma511
+#check Bong.Lattice.IsNUniversal.pred
+#check Bong.BONG.GoodBONG.heHu2022Proposition55
+#check Bong.BONG.GoodBONG.heHuI1E_i2E_to_i1O
+#check Bong.BONG.GoodBONG.heHuI1O_i2O_to_i2E
+#check Bong.BONG.GoodBONG.heHuI1O_i2O_to_i3E
+#check Bong.BONG.GoodBONG.heHu2022Theorem51Odd
+#check Bong.BONG.GoodBONG.HeHuTheorem53Conditions
+#check Bong.BONG.GoodBONG.heHuTheorem53_alpha_zero_iff_boundaryOrder
+#check Bong.BONG.GoodBONG.heHuTheorem53_nextOrder_le_one_iff_zero_or_one
+#check Bong.BONG.GoodBONG.heHuOddSectionConditions_iff_theorem53Conditions
+#check Bong.BONG.GoodBONG.heHu2022Theorem53Odd
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -228,4 +239,11 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma511Tests_to_i3O
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma511I3O_to_universal
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma511
+#print axioms Bong.Lattice.IsNUniversal.pred
+#print axioms Bong.BONG.GoodBONG.heHu2022Proposition55
+#print axioms Bong.BONG.GoodBONG.heHu2022Theorem51Odd
+#print axioms Bong.BONG.GoodBONG.heHuTheorem53_alpha_zero_iff_boundaryOrder
+#print axioms Bong.BONG.GoodBONG.heHuTheorem53_nextOrder_le_one_iff_zero_or_one
+#print axioms Bong.BONG.GoodBONG.heHuOddSectionConditions_iff_theorem53Conditions
+#print axioms Bong.BONG.GoodBONG.heHu2022Theorem53Odd
 #print axioms Bong.Lattice.heHuMaximalTestingReduction

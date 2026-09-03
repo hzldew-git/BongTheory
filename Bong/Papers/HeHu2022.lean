@@ -29,6 +29,9 @@ import Bong.Bong.HeHu2022Lemma58
 import Bong.Bong.HeHu2022Lemma59
 import Bong.Bong.HeHu2022Lemma510
 import Bong.Bong.HeHu2022Lemma511
+import Bong.Bong.HeHu2022Proposition55
+import Bong.Bong.HeHu2022Theorem51
+import Bong.Bong.HeHu2022Theorem53
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -88,8 +91,11 @@ publisher version of record (2024) is the sole semantic authority.  The
   test is constructed separately in the even- and odd-valuation rows of
   Table 1, its terminal large-gap implication uses the exact threshold
   `G_n`, and the reverse contradiction is the codimension-two exclusive
-  representation statement of Lemma 3.13.  The remaining odd-rank theorem
-  endpoints are still in progress.
+  representation statement of Lemma 3.13.  Proposition 5.5 now assembles
+  the five even-prefix and odd-boundary conditions, with the paper's implicit
+  descent from `n`-universality to `(n-1)`-universality proved by adjoining
+  an integral unit line.  Theorems 5.1 and 5.3 are direct proved endpoints;
+  the latter also proves both parenthetical equivalences in its first case.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.

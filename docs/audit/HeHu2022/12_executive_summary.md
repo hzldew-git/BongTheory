@@ -16,7 +16,8 @@ targets.  The direct Theorem 4.1 endpoint now assembles Lemmas 4.2, 4.4, and
 Section 5 foundation is also checked through Remark 5.2 and Lemmas 5.4,
 5.6--5.11, including the two-test Hilbert-symbol obstruction with its exact
 at-least-one quantifier and the complete Lemmas 5.10--5.11 three-way
-equivalences. The principal mathematical work remains the Section 5 theorem
-endpoints, Section 6, the two main
-theorems, and the explicit minimal testing set.
+equivalences. Proposition 5.5 and Theorems 5.1 and 5.3 are now also checked,
+so every numbered item in Section 5 is covered. The principal mathematical
+work remains Section 6, Corollary 4.6, Theorem 4.7, the two main theorems,
+the two Section 3 remarks, and the explicit minimal testing set.
 Status is partial, not a verified match.

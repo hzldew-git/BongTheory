@@ -1,9 +1,9 @@
 # Coverage report
 
-Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_LEMMAS_5_10_5_11_COMPLETE`.
+Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_SECTION_5_COMPLETE`.
 
 - Publisher inventory: 47/47 directly numbered items identified.
-- Accounted publisher-result endpoints: 35/47, comprising every numbered
+- Accounted publisher-result endpoints: 38/47, comprising every numbered
   item in Section 2 (Definition 2.4, Lemma 2.2, Corollary 2.3,
   Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11).
 - Section 3 coverage additionally includes Definitions 3.1, 3.4, and 3.6 and
@@ -61,10 +61,14 @@ Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_LEMMAS_5_10_5_11_COMPLETE`.
   three-way equivalence: both parity rows of the second maximal test are
   constructed explicitly, the large-gap direction uses the exact `G_n`
   threshold and Lemma 3.13 determinant class, and the universal direction
-  treats every integral target. Proposition 5.5 and Theorems 5.1 and 5.3
-  remain pending.
+  treats every integral target. Proposition 5.5 proves the complete
+  five-condition reduction, including the paper's implicit descent from
+  `n`- to `(n-1)`-universality. Theorem 5.1 then reconstructs both missing
+  even-prefix conditions from Lemma 5.4, and Theorem 5.3 proves the compact
+  case split together with both printed parenthetical equivalences. Thus all
+  eleven directly numbered Section 5 items have checked endpoints.
 
-The accounted coverage ratio is therefore **35/47**: 34 direct checked
+The accounted coverage ratio is therefore **38/47**: 37 direct checked
 publisher items plus the Definition 3.1 equivalent-construction endpoint
 that remains explicitly flagged for independent semantic review. This is a bookkeeping
 statement, not a judgment about how

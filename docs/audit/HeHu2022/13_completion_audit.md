@@ -25,7 +25,7 @@
 | Theorem 4.1 | PASS, direct even-rank endpoint assembled from Lemmas 4.2, 4.4, and 4.5 |
 | Corollary 4.6 and Theorem 4.7 | FAIL / direct endpoints pending |
 | Remark 5.2 and Lemmas 5.4, 5.6--5.11 | PASS, all published clauses and quantified target families included; Lemma 5.9 preserves the simultaneous nonrepresentation quantifier and Lemmas 5.10--5.11 prove their full three-way equivalences |
-| Proposition 5.5, Theorems 5.1 and 5.3 | FAIL / pending |
+| Proposition 5.5, Theorems 5.1 and 5.3 | PASS, including universality descent, both Lemma 5.4 reconstruction branches, and both parenthetical equivalences in Theorem 5.3(i) |
 | Theorem 1.1 statement present | PASS |
 | Theorem 1.1 proof | FAIL / pending |
 | Theorem 1.2 explicit list and minimality | FAIL / pending |
