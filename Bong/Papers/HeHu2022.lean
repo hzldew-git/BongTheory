@@ -37,6 +37,7 @@ import Bong.Bong.HeHu2022Theorem51
 import Bong.Bong.HeHu2022Theorem53
 import Bong.Bong.HeHu2022SectionSix
 import Bong.Bong.HeHu2022Theorem11
+import Bong.Bong.HeHu2022Theorem12
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -49,7 +50,10 @@ Math. 67 (2024), 1481--1506.
 The implementation name records the work's 2022 provenance, while the
 publisher version of record (2024) is the sole semantic authority.  The
   Theorem 1.1 criterion is proved at its exact arbitrary-source-rank
-  statement in `HeHu2022Theorem11`.  Direct endpoints for Definition 2.4, Lemma 2.2,
+  statement in `HeHu2022Theorem11`.  Theorem 1.2 is proved as a minimal
+  family of isometry classes of the two canonical maximal-lattice columns;
+  the exceptional undefined binary entry is excluded in its index type.
+  Direct endpoints for Definition 2.4, Lemma 2.2,
   Corollary 2.3, Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11 are
   supplied by the Section 2 modules.  Definition 3.1 and Propositions 3.2--3.3
   are supplied by the first two Section 3 modules.  Definition 3.4 and all

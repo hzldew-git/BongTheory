@@ -144,6 +144,11 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Lemma61
 #check Bong.BONG.GoodBONG.heHu2022Corollary62
 #check Bong.BONG.GoodBONG.heHu2022Lemma63
+#check Bong.BONG.GoodBONG.heHu2022Corollary46
+#check Bong.BONG.GoodBONG.heHu2022Theorem47Even
+#check Bong.BONG.GoodBONG.heHu2022Theorem11
+#check @Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12Even
+#check @Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12Odd
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -257,4 +262,9 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma61
 #print axioms Bong.BONG.GoodBONG.heHu2022Corollary62
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma63
+#print axioms Bong.BONG.GoodBONG.heHu2022Corollary46
+#print axioms Bong.BONG.GoodBONG.heHu2022Theorem47Even
+#print axioms Bong.BONG.GoodBONG.heHu2022Theorem11
+#print axioms Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12Even
+#print axioms Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12Odd
 #print axioms Bong.Lattice.heHuMaximalTestingReduction
