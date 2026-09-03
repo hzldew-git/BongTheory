@@ -14,8 +14,14 @@ independently verify the even-rank reparameterization, the final odd-index
 order, and the nonsquare product of the `1` and `Delta` test determinants.
 For Lemma 4.4, separately inspect the terminal-index cast, the split between
 last target order `-2e` and at least `1-2e`, and the use of `I2^E` only in the
-higher-order contradiction. The checked assembly theorem must not be mistaken
-for the still-open Lemma 4.5.
+higher-order contradiction. The direct Theorem 4.1 endpoint now depends on
+the separately checked Lemmas 4.2, 4.4, and 4.5.
+
+For Lemma 5.9, check both determinant square-class transports, the common
+hyperbolic prefix in the case-III parity cycle, and the final quantifier. The
+proved assertion excludes simultaneous representation and yields failure for
+at least one test; it must not be read as proving that both tests separately
+fail.
 
 For Proposition 3.7, independently inspect the even index-two volume drop,
 the `0,-2e`, `0,-2e,0`, and `0,-2e,0,-2e` equality profiles, and the direction

@@ -119,6 +119,10 @@
 - `heHu2022Lemma58`: the raw signed-prefix defect, existence of the published
   sharp operation on that square class, its unit property, and its
   complementary defect.
+- `heHu2022Lemma59i`, `heHu2022Lemma59ii`, and `heHu2022Lemma59`: the two
+  literal first-column maximal tests, both strict numerical triggers, the
+  Hilbert-symbol obstruction to their simultaneous representation, and the
+  resulting failure of condition (iii') for at least one test.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 
