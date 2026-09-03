@@ -7,3 +7,6 @@
    defect and hyperbolic notation.
 4. Do not approve semantic completion until the biconditional is proved and the
    explicit testing list/minimality are formalized.
+5. For Lemma 5.10, verify the simultaneous two-test quantifier, the existential
+   exceptional ternary parameter, and the one-based terminal index against
+   publisher pages 1501--1502.

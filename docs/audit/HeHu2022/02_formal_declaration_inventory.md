@@ -123,6 +123,14 @@
   literal first-column maximal tests, both strict numerical triggers, the
   Hilbert-symbol obstruction to their simultaneous representation, and the
   resulting failure of condition (iii') for at least one test.
+- `HeHuLemma510TestConditions` and `heHu2022Lemma510`: the exact three-way
+  Lemma 5.10 equivalence.  The test predicate retains the published
+  simultaneous pair of first-column tests and the existential
+  `N_2^3(delta*pi)` exception.  The reverse implication handles all integral
+  rank-`n` targets: nonterminal indices descend to Lemma 4.4, the
+  `alpha_n=0` terminal branch uses the Proposition 2.7 endpoint models and
+  Lemma 3.14(ii), and the `alpha_n=1` terminal branch is ruled out by the
+  Lemma 2.11 inequality and the parity split in equation (5.1).
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

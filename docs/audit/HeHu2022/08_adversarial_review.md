@@ -23,6 +23,14 @@ proved assertion excludes simultaneous representation and yields failure for
 at least one test; it must not be read as proving that both tests separately
 fail.
 
+For Lemma 5.10, independently check that its condition (ii) uses one common
+sharp witness for the two first-column tests and says "some" rather than
+"every" exceptional ternary test.  In the reverse implication, inspect the
+terminal-index conversion, the use of Lemma 2.11 in equation (5.5), and both
+branches of the parity definition of `G_n`.  The `alpha_n=0` normal-form
+composition must point from the target `W_1^n(epsilon)` into the source
+`W_1^(n+1)(1 or Delta)` in the direction stated by Lemma 3.14(ii).
+
 For Proposition 3.7, independently inspect the even index-two volume drop,
 the `0,-2e`, `0,-2e,0`, and `0,-2e,0,-2e` equality profiles, and the direction
 of every same-rank diagonal representation used in the three endpoint

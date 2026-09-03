@@ -830,23 +830,25 @@ theorem heHuLemma44_original_iff_prime
       b (by omega) hOD.1 hOD.2
   exact a.centralRepresentationConditions_iff_prime b htriggers
 
-/-- Lemma 4.4, implication `(iii) -> (i)`: condition `I2^E(n)` implies
-Theorem 2.8(iii) for every integral target of even rank `n=2k+2`. -/
-theorem heHu2022Lemma44Sufficiency
+/-- The revised-condition core of Lemma 4.4, implication `(iii) -> (i)`.
+This version is separated from the final Lemma 2.16 conversion so that the
+even prefix of an odd-rank target can reuse the actual representation proof
+in Lemma 5.10 without requiring an ambient-universality hypothesis at the
+smaller rank. -/
+theorem heHu2022Lemma44SufficiencyPrime
     [sourceLaws : Beli2006AlphaLaws.{u, v} K]
     [QuadraticDefectLaws K]
     {m k : Nat} (a : GoodBONG q L ((m + 1) + 2))
+    {W : Type w} [AddCommGroup W] [Module K W]
+    {r : QuadraticSpace K W} {M : Lattice K W}
+    (b : GoodBONG r M (2 * k + 2))
     (hm : 2 * k + 2 ≤ m + 1)
     (hAIntegral : Lattice.IsIntegral q L)
-    (hAmbient : Lattice.AmbientlyNUniversal.{u, v, w} q (2 * k + 2))
+    (hBIntegral : Lattice.IsIntegral r M)
     (hI1 : a.HeHuI1E (2 * k + 2) (by omega))
     (hI2 : a.HeHuI2E (2 * k + 2) (by omega)) :
-    HeHuAllCentralRepresentationConditions.{u, v, w}
-      (n := 2 * k + 1) a := by
-  intro W _ _ r M b hBIntegral
+    a.CentralRepresentationConditionsPrime b := by
   let targetLaws : Beli2006AlphaLaws.{u, w} K := beliUniversalAlphaLaws
-  apply (a.heHuLemma44_original_iff_prime sourceLaws targetLaws b hm
-    hAIntegral hAmbient hI1 hBIntegral).mpr
   intro i htrigger
   by_cases hiTerminal : i.val = 2 * k + 3
   · let terminal := heHuLemma44TerminalIndex k hm
@@ -894,6 +896,26 @@ theorem heHu2022Lemma44Sufficiency
       ⟨k + 1, by omega⟩ hI1 hBIntegral (i := i.val)
         (by have := i.one_lt; omega) hiLast
     exact (not_lt_of_ge hbound htrigger.1).elim
+
+/-- Lemma 4.4, implication `(iii) -> (i)`: condition `I2^E(n)` implies
+Theorem 2.8(iii) for every integral target of even rank `n=2k+2`. -/
+theorem heHu2022Lemma44Sufficiency
+    [sourceLaws : Beli2006AlphaLaws.{u, v} K]
+    [QuadraticDefectLaws K]
+    {m k : Nat} (a : GoodBONG q L ((m + 1) + 2))
+    (hm : 2 * k + 2 ≤ m + 1)
+    (hAIntegral : Lattice.IsIntegral q L)
+    (hAmbient : Lattice.AmbientlyNUniversal.{u, v, w} q (2 * k + 2))
+    (hI1 : a.HeHuI1E (2 * k + 2) (by omega))
+    (hI2 : a.HeHuI2E (2 * k + 2) (by omega)) :
+    HeHuAllCentralRepresentationConditions.{u, v, w}
+      (n := 2 * k + 1) a := by
+  intro W _ _ r M b hBIntegral
+  let targetLaws : Beli2006AlphaLaws.{u, w} K := beliUniversalAlphaLaws
+  apply (a.heHuLemma44_original_iff_prime sourceLaws targetLaws b hm
+    hAIntegral hAmbient hI1 hBIntegral).mpr
+  exact a.heHu2022Lemma44SufficiencyPrime (sourceLaws := sourceLaws)
+    b hm hAIntegral hBIntegral hI1 hI2
 
 /-- Lemma 4.4, implication `(i) -> (iii)`, obtained by specializing the
 universal central condition to the published test lattice

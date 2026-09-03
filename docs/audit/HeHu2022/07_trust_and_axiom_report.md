@@ -7,7 +7,7 @@ permitted.  The audit now includes the direct Section 2 endpoints,
 Propositions 3.2--3.7, Lemmas 3.9--3.11, Lemmas 3.13--3.14, the abstract
 maximal-testing theorem, and the proved Section 4 reduction and invariant
 conversion declarations, including the complete Lemmas 4.2--4.5 and Theorem
-4.1 endpoints.  It also checks Remark 5.2 and Lemmas 5.4, 5.6--5.9;
+4.1 endpoints.  It also checks Remark 5.2 and Lemmas 5.4, 5.6--5.10;
 each reports only `propext`, `Classical.choice`, and `Quot.sound`. The
 codimension-two theorem used for Proposition 3.5(iii) is itself proved in
 `DiagonalCodimensionTwoRepresentationProof`; it is not a paper-specific law
