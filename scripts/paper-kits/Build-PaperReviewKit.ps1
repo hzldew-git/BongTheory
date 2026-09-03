@@ -18,6 +18,11 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
+# Windows PowerShell 5 does not always preload the assembly that exposes
+# System.IO.Compression.ZipFile.  Loading it explicitly keeps local review-kit
+# generation aligned with PowerShell 7 and the GitHub Actions runner.
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+
 if (-not $RepositoryRoot) {
     $RepositoryRoot = Join-Path $PSScriptRoot '../..'
 }
