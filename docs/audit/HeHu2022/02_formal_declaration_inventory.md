@@ -146,6 +146,19 @@
 - `HeHuTheorem53Conditions` and `heHu2022Theorem53Odd`: the compact
   Theorem 5.3 case split.  Separate endpoints prove `alpha_N=0` iff
   `R_(N+1)=-2e` and `R_(N+2)<=1` iff `R_(N+2)` is zero or one.
+- `heHu2022Lemma61_equation61`, `heHu2022Lemma61i`,
+  `heHu2022Lemma61ii`, and `heHu2022Lemma61`: the complete two-clause
+  Lemma 6.1. The exceptional branch proves the raw-defect/next-order
+  disjunction from the three defining caps; the nonexceptional branch
+  expands the full finite alpha-candidate set and retains the quantified
+  tail index from `n+1` through the last adjacent pair.
+- `HeHuTheorem11OddInitialConditions` and `heHu2022Corollary62`: the exact
+  equivalence between Theorem 1.1(i),(iii)(1) and `I1^O(n)`.
+- `HeHuI2OSecondPart`, `HeHuTheorem11OddClause2`, and
+  `heHu2022Lemma63`: the complete Lemma 6.3 equivalence. The auxiliary
+  checked minimum lemma accounts for the half-gap candidate, every early
+  left candidate, both middle candidates, and every permitted tail
+  candidate before specializing to the printed even and odd inequalities.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

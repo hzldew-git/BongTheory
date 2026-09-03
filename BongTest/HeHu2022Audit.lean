@@ -137,6 +137,13 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHuTheorem53_nextOrder_le_one_iff_zero_or_one
 #check Bong.BONG.GoodBONG.heHuOddSectionConditions_iff_theorem53Conditions
 #check Bong.BONG.GoodBONG.heHu2022Theorem53Odd
+#check Bong.BONG.GoodBONG.heHu2022Lemma61_equation61
+#check Bong.BONG.GoodBONG.heHu2022Lemma61i
+#check Bong.BONG.GoodBONG.heHu2022Lemma61ii_middle
+#check Bong.BONG.GoodBONG.heHu2022Lemma61ii
+#check Bong.BONG.GoodBONG.heHu2022Lemma61
+#check Bong.BONG.GoodBONG.heHu2022Corollary62
+#check Bong.BONG.GoodBONG.heHu2022Lemma63
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -246,4 +253,8 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHuTheorem53_nextOrder_le_one_iff_zero_or_one
 #print axioms Bong.BONG.GoodBONG.heHuOddSectionConditions_iff_theorem53Conditions
 #print axioms Bong.BONG.GoodBONG.heHu2022Theorem53Odd
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma61_equation61
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma61
+#print axioms Bong.BONG.GoodBONG.heHu2022Corollary62
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma63
 #print axioms Bong.Lattice.heHuMaximalTestingReduction

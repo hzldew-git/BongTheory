@@ -1,9 +1,9 @@
 # Coverage report
 
-Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_SECTION_5_COMPLETE`.
+Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_SECTIONS_5_6_COMPLETE`.
 
 - Publisher inventory: 47/47 directly numbered items identified.
-- Accounted publisher-result endpoints: 38/47, comprising every numbered
+- Accounted publisher-result endpoints: 41/47, comprising every numbered
   item in Section 2 (Definition 2.4, Lemma 2.2, Corollary 2.3,
   Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11).
 - Section 3 coverage additionally includes Definitions 3.1, 3.4, and 3.6 and
@@ -67,8 +67,14 @@ Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_SECTION_5_COMPLETE`.
   even-prefix conditions from Lemma 5.4, and Theorem 5.3 proves the compact
   case split together with both printed parenthetical equivalences. Thus all
   eleven directly numbered Section 5 items have checked endpoints.
+- Section 6 is complete. Lemma 6.1 proves equation (6.1), the exceptional
+  raw-defect/next-order disjunction, and the nonexceptional tail-candidate
+  existential from the literal finite definition of alpha. Corollary 6.2
+  proves the equivalence of Theorem 1.1(i),(iii)(1) with `I1^O(n)`.
+  Lemma 6.3 expands every candidate in `alpha_(n+2)` and proves both printed
+  parity rows of Theorem 1.1(iii)(2).
 
-The accounted coverage ratio is therefore **38/47**: 37 direct checked
+The accounted coverage ratio is therefore **41/47**: 40 direct checked
 publisher items plus the Definition 3.1 equivalent-construction endpoint
 that remains explicitly flagged for independent semantic review. This is a bookkeeping
 statement, not a judgment about how

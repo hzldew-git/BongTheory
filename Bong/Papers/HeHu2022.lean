@@ -32,6 +32,7 @@ import Bong.Bong.HeHu2022Lemma511
 import Bong.Bong.HeHu2022Proposition55
 import Bong.Bong.HeHu2022Theorem51
 import Bong.Bong.HeHu2022Theorem53
+import Bong.Bong.HeHu2022SectionSix
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -96,6 +97,11 @@ publisher version of record (2024) is the sole semantic authority.  The
   descent from `n`-universality to `(n-1)`-universality proved by adjoining
   an integral unit line.  Theorems 5.1 and 5.3 are direct proved endpoints;
   the latter also proves both parenthetical equivalences in its first case.
+  Section 6 is complete: Lemma 6.1 eliminates the even boundary alpha by an
+  explicit finite-minimum calculation (including equation (6.1)); Corollary
+  6.2 identifies Theorem 1.1(i),(iii)(1) with `I1^O`; and Lemma 6.3 expands
+  `alpha_(n+2) <= G_n` into both printed parity rows of
+  Theorem 1.1(iii)(2).
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.
