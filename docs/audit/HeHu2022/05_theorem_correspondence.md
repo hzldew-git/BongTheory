@@ -42,5 +42,9 @@
 | Theorem 4.1 | `heHu2022Theorem41Even` | Proved for every even `n=2k+2`: ambient universality and `I1^E`--`I3^E` are equivalent to lattice `n`-universality, by the checked Theorem 2.8 factorization and Lemmas 4.2, 4.4, and 4.5. |
 | Theorem 4.1 logical assembly | `heHuNUniversality_factorization`, `heHuTheorem41_of_component_equivalences` | Proved reusable reduction and component assembly used by the direct endpoint. |
 | Theorem 4.7 invariant conversion | `heHuI2E_iff_theorem47BoundaryCondition`, `heHuEvenSectionConditions_iff_theorem47StableConditions` | Proved, including the exceptional raw/capped defect equivalence; ambient rank classification and Theorem 4.1 endpoint still pending |
+| Remark 5.2 | `heHu2022Remark52` | Proved; the implication `R_(n+1)=1 -> R_(n+2)>=1` is derived from Proposition 2.7(i) and Corollary 2.3(i), with the paper's one-based indices exposed in the endpoint |
+| Lemma 5.4 | `heHu2022Lemma54` | Proved; clause (i) and all three assertions of clause (ii), including the exceptional `R_(n+1)=2-2e` alpha value |
+| Lemma 5.6 | `heHu2022Lemma56` | Proved at the paper's full quantified strength for every integral rank-`n` target; clauses (i) and (ii) are the exact first two components of Theorem 2.8 |
+| Lemma 5.8 | `heHu2022Lemma58` | Proved; the zero-based endpoint uses paper rank `N=n+2` and returns all three published conclusions: exact raw defect of the signed prefix, defined sharp witness that is a valuation unit, and complementary sharp defect |
 
 The abstract core must never be cited as a proof of the full Theorem 1.2.

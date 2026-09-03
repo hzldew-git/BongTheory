@@ -13,6 +13,8 @@ as are Lemma 4.2 in both directions, the complete exceptional-target
 Lemma 4.3, and the full Lemmas 4.4--4.5 equivalences for all integral even-rank
 targets.  The direct Theorem 4.1 endpoint now assembles Lemmas 4.2, 4.4, and
 4.5 through the checked Theorem 2.8 factorization. The principal mathematical
-work remains the odd-rank Section 5 chain, Section 6, the two main
+Section 5 foundation is also checked through Remark 5.2 and Lemmas 5.4, 5.6,
+and 5.8.  The principal mathematical work remains Lemmas 5.7 and 5.9--5.11,
+the Section 5 equivalence and theorem endpoints, Section 6, the two main
 theorems, and the explicit minimal testing set.
 Status is partial, not a verified match.

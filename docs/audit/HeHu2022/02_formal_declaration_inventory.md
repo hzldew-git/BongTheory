@@ -108,6 +108,17 @@
   Theorem 4.1.
 - `heHu2022Theorem41Even`: direct proved Theorem 4.1 endpoint, with all three
   component equivalences discharged by Lemmas 4.2, 4.4, and 4.5.
+- `HeHuI1O`, `HeHuI2O`, and `HeHuI3O`: exact Section 5 odd-rank conditions,
+  including the parity-sensitive integer `G_n`.
+- `heHu2022Remark52`: the equivalent trigger formulations used in the
+  nonzero boundary-alpha branch.
+- `heHu2022Lemma54`: both clauses of Lemma 5.4, including the capped defect
+  equality and exceptional next-alpha value.
+- `heHu2022Lemma56`: both universally quantified Theorem 2.8 order and defect
+  conditions for every integral odd-rank target.
+- `heHu2022Lemma58`: the raw signed-prefix defect, existence of the published
+  sharp operation on that square class, its unit property, and its
+  complementary defect.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

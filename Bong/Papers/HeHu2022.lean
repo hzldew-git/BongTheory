@@ -23,6 +23,8 @@ import Bong.Bong.HeHu2022Lemma43
 import Bong.Bong.HeHu2022Lemma44
 import Bong.Bong.HeHu2022Lemma45
 import Bong.Bong.HeHu2022Theorem41
+import Bong.Bong.HeHu2022SectionFive
+import Bong.Bong.HeHu2022Lemma58
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -67,6 +69,9 @@ publisher version of record (2024) is the sole semantic authority.  The
   both directions, including the exceptional binary defect branch.  The three
   component equivalences are assembled into the proved even-rank Theorem 4.1
   endpoint in `HeHu2022Theorem41`.
+  Section 5 currently includes the exact odd-rank conditions, Lemmas 5.4 and
+  5.6, Remark 5.2, and the three defect and sharp-element conclusions of
+  Lemma 5.8.  The remaining odd-rank equivalences are still in progress.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.
