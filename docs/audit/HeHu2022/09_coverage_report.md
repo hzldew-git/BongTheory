@@ -1,9 +1,9 @@
 # Coverage report
 
-Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_LEMMA_5_10_COMPLETE`.
+Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_LEMMAS_5_10_5_11_COMPLETE`.
 
 - Publisher inventory: 47/47 directly numbered items identified.
-- Accounted publisher-result endpoints: 34/47, comprising every numbered
+- Accounted publisher-result endpoints: 35/47, comprising every numbered
   item in Section 2 (Definition 2.4, Lemma 2.2, Corollary 2.3,
   Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11).
 - Section 3 coverage additionally includes Definitions 3.1, 3.4, and 3.6 and
@@ -57,10 +57,14 @@ Coverage status: `SECTIONS_2_3_CORE_THEOREM_4_1_AND_LEMMA_5_10_COMPLETE`.
   conclusion from the Hilbert-symbol parity cycle. Lemma 5.10 proves the
   three-way equivalence at full quantified strength, including both literal
   first-column tests, the existential ternary exception, every integral
-  target, and both terminal alpha branches. Lemma 5.11, Proposition 5.5, and
-  Theorems 5.1 and 5.3 remain pending.
+  target, and both terminal alpha branches. Lemma 5.11 likewise proves its
+  three-way equivalence: both parity rows of the second maximal test are
+  constructed explicitly, the large-gap direction uses the exact `G_n`
+  threshold and Lemma 3.13 determinant class, and the universal direction
+  treats every integral target. Proposition 5.5 and Theorems 5.1 and 5.3
+  remain pending.
 
-The accounted coverage ratio is therefore **34/47**: 33 direct checked
+The accounted coverage ratio is therefore **35/47**: 34 direct checked
 publisher items plus the Definition 3.1 equivalent-construction endpoint
 that remains explicitly flagged for independent semantic review. This is a bookkeeping
 statement, not a judgment about how

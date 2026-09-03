@@ -14,9 +14,9 @@ Lemma 4.3, and the full Lemmas 4.4--4.5 equivalences for all integral even-rank
 targets.  The direct Theorem 4.1 endpoint now assembles Lemmas 4.2, 4.4, and
 4.5 through the checked Theorem 2.8 factorization. The principal mathematical
 Section 5 foundation is also checked through Remark 5.2 and Lemmas 5.4,
-5.6--5.10, including the two-test Hilbert-symbol obstruction with its exact
-at-least-one quantifier and the complete Lemma 5.10 three-way equivalence.
-The principal mathematical work remains Lemma 5.11,
-the Section 5 equivalence and theorem endpoints, Section 6, the two main
+5.6--5.11, including the two-test Hilbert-symbol obstruction with its exact
+at-least-one quantifier and the complete Lemmas 5.10--5.11 three-way
+equivalences. The principal mathematical work remains the Section 5 theorem
+endpoints, Section 6, the two main
 theorems, and the explicit minimal testing set.
 Status is partial, not a verified match.

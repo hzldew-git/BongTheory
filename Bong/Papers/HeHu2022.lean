@@ -28,6 +28,7 @@ import Bong.Bong.HeHu2022Lemma57
 import Bong.Bong.HeHu2022Lemma58
 import Bong.Bong.HeHu2022Lemma59
 import Bong.Bong.HeHu2022Lemma510
+import Bong.Bong.HeHu2022Lemma511
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -83,7 +84,12 @@ publisher version of record (2024) is the sole semantic authority.  The
   it retains both literal first-column tests and the existential exceptional
   ternary test, reduces nonterminal indices to Lemma 4.4, and checks both
   terminal alpha branches through Lemmas 2.11, 5.4, and 3.14.
-  The remaining odd-rank equivalences are still in progress.
+  Lemma 5.11 is also proved in all three directions.  Its second-column
+  test is constructed separately in the even- and odd-valuation rows of
+  Table 1, its terminal large-gap implication uses the exact threshold
+  `G_n`, and the reverse contradiction is the codimension-two exclusive
+  representation statement of Lemma 3.13.  The remaining odd-rank theorem
+  endpoints are still in progress.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.

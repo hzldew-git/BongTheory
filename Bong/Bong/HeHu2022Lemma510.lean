@@ -612,14 +612,16 @@ theorem heHuLemma510_alphaOne_terminalTrigger_false
   have hRBefore : a.order ⟨2 * k + 1, by omega⟩ =
       -(2 * (ramificationIndex K : Int)) := by
     have h := hI1.evenOrder
-      (⟨2 * k + 1, by omega⟩ : Fin (2 * k + 2)) ⟨k + 1, by omega⟩
-    convert h using 1
-    congr 1
+      (⟨2 * k + 1, by omega⟩ : Fin (2 * k + 2)) (by
+        change Even (2 * k + 2)
+        exact ⟨k + 1, by omega⟩)
+    exact h
   have hRAt : a.order ⟨2 * k + 2, by omega⟩ = 0 := by
     have h := hI1.oddOrder
-      (⟨2 * k + 2, by omega⟩ : Fin (2 * k + 3)) ⟨k + 1, by omega⟩
-    convert h using 1
-    congr 1
+      (⟨2 * k + 2, by omega⟩ : Fin (2 * k + 3)) (by
+        change Odd (2 * k + 3)
+        exact ⟨k + 1, by omega⟩)
+    exact h
   have hGapUpper :
       a.order ⟨2 * k + 4, by omega⟩ -
           a.order ⟨2 * k + 3, by omega⟩ ≤
@@ -688,6 +690,13 @@ theorem heHuLemma510_alphaOne_terminalTrigger_false
     have h := htrigger.2
     rw [hTargetIndex, hSourceIndex] at h
     exact h
+  have hDefectTriggerInt :
+      ((((2 * (ramificationIndex K : Int) +
+          b.order targetLast -
+          a.order ⟨2 * k + 4, by omega⟩ : Int) : ℚ) :
+            WithTop ℚ)) <
+        a.centralPreviousDefect b i + a.centralCurrentDefect b i := by
+    convert hDefectTrigger using 1 <;> norm_cast <;> ring
   have h211Central :
       ((((a.order ⟨2 * k + 3, by omega⟩ -
           b.order targetLast : Int) : ℚ) : WithTop ℚ) +
@@ -729,7 +738,7 @@ theorem heHuLemma510_alphaOne_terminalTrigger_false
                 b.order targetLast : Int) : ℚ) : WithTop ℚ) +
               (a.centralPreviousDefect b i +
                 a.centralCurrentDefect b i)) :=
-          WithTop.add_lt_add_left (by simp) hDefectTrigger
+          WithTop.add_lt_add_left (by simp) hDefectTriggerInt
         _ = (((((a.order ⟨2 * k + 3, by omega⟩ -
                 b.order targetLast : Int) : ℚ) : WithTop ℚ) +
               a.centralPreviousDefect b i) +
@@ -901,7 +910,7 @@ theorem heHuLemma510_alphaOne_terminalTrigger_false
               b.order targetLast : Int) : ℚ) : WithTop ℚ) +
             (a.centralPreviousDefect b i +
               a.centralCurrentDefect b i)) :=
-        WithTop.add_lt_add_left (by simp) hDefectTrigger
+        WithTop.add_lt_add_left (by simp) hDefectTriggerInt
       _ = (((((a.order ⟨2 * k + 3, by omega⟩ -
               b.order targetLast : Int) : ℚ) : WithTop ℚ) +
             a.centralPreviousDefect b i) +
@@ -952,8 +961,7 @@ theorem heHuLemma510_alphaOne_terminalTrigger_false
       2 * (ramificationIndex K : Int) -
         a.order ⟨2 * k + 4, by omega⟩ +
         a.order ⟨2 * k + 3, by omega⟩ := by
-    simp only [heHuOddThreshold, sourceGap, hGapNotEven, if_neg]
-    ring
+    simp [heHuOddThreshold, sourceGap, hGapNotEven]
   have hCommonNonnegative : (0 : WithTop ℚ) ≤
       a.truncatedPrefixDefect b 1 (2 * k + 3) (2 * k + 3) :=
     a.truncatedPrefixDefect_nonneg
@@ -1228,7 +1236,8 @@ theorem heHu2022Lemma510I2O_to_universal
     hAIntegral hBIntegral hI1 hI2).mpr
   intro i htrigger
   by_cases hiNonterminal : i.val ≤ 2 * k + 3
-  · exact a.heHuLemma510_nonterminal_representation b hm hAIntegral
+  · exact a.heHuLemma510_nonterminal_representation
+      (sourceLaws := sourceLaws) b hm hAIntegral
       hBIntegral hI1 hI2 i hiNonterminal htrigger
   · have hiTerminal : i.val = 2 * k + 4 := by
       have := i.le_small_succ
@@ -1236,9 +1245,11 @@ theorem heHu2022Lemma510I2O_to_universal
     have hI2Cases := hI2
     dsimp only [HeHuI2E] at hI2Cases
     rcases hI2Cases with hAlphaZero | ⟨hAlphaOne, _hAdjacent⟩
-    · exact a.heHuLemma510_alphaZero_terminal_representation b hm
+    · exact a.heHuLemma510_alphaZero_terminal_representation
+        (sourceLaws := sourceLaws) b hm
         hAIntegral hBIntegral hI1 hOdd hAlphaZero i hiTerminal htrigger
-    · exact (a.heHuLemma510_alphaOne_terminalTrigger_false b hm
+    · exact (a.heHuLemma510_alphaOne_terminalTrigger_false
+        (sourceLaws := sourceLaws) b hm
         hAIntegral hBIntegral hI1 hOdd hAlphaOne i hiTerminal htrigger).elim
 
 /-- He--Hu, Lemma 5.10, complete equivalence of the universal form of
@@ -1269,14 +1280,16 @@ theorem heHu2022Lemma510
     · intro hTests
       have hOdd := a.heHu2022Lemma510Tests_to_i2O hm hAIntegral hI1 hI2 hI3
         hTests
-      exact a.heHu2022Lemma510I2O_to_universal hm hAIntegral hI1 hI2 hOdd
+      intro X _ _ s N b hB
+      exact (a.heHu2022Lemma510I2O_to_universal
+        (sourceLaws := sourceLaws) hm hAIntegral hI1 hI2 hOdd) b hB
   · constructor
     · exact a.heHu2022Lemma510Tests_to_i2O hm hAIntegral hI1 hI2 hI3
     · intro hOdd
-      have hAll : HeHuAllCentralRepresentationConditions.{u, v, u}
-          (n := 2 * k + 2) a :=
-        a.heHu2022Lemma510I2O_to_universal hm hAIntegral hI1 hI2 hOdd
-      exact a.heHu2022Lemma510Universal_to_tests hm hAIntegral hI1 hI2 hAll
+      apply a.heHu2022Lemma510Universal_to_tests hm hAIntegral hI1 hI2
+      intro X _ _ s N b hB
+      exact (a.heHu2022Lemma510I2O_to_universal
+        (sourceLaws := sourceLaws) hm hAIntegral hI1 hI2 hOdd) b hB
 
 end BONG.GoodBONG
 

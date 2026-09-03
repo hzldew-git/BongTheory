@@ -10,3 +10,6 @@
 5. For Lemma 5.10, verify the simultaneous two-test quantifier, the existential
    exceptional ternary parameter, and the one-based terminal index against
    publisher pages 1501--1502.
+6. For Lemma 5.11, verify the two parity rows used to realize `N_2^n(c)`, the
+   sign in `det(V)=-D`, and the terminal `R_(n+3)-R_(n+2)` index translation
+   against publisher pages 1502--1503.

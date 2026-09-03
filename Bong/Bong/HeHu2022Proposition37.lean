@@ -778,19 +778,23 @@ theorem heHuLemma712Source_diagonalRepresents_oddSecondTailEven
     exact hrotate
   exact hscale.trans hrotate'
 
-/-- The ternary candidate in the unit row of the odd second column is the
-anisotropic Table 1 space `[pi,-Delta*pi,Delta*delta]`. -/
-theorem heHuLemma311OddSecondUnitTail_anisotropic
+/-- The literal unit-row candidate of Lemma 3.11(ii) has the quadratic
+space printed in the even-valuation row of Table 1.  This equal-rank
+identification is separated from anisotropy so that Lemma 5.11 can lift it
+through Lemma 3.10 to the full odd-dimensional test lattice. -/
+theorem heHuLemma311OddSecondUnitTail_represents_oddSecondTailEven
     [GoodBONGClassificationLaws.{u, u, u} K]
     (δ κ : Kˣ)
     (hδ : IsValuationUnit K (δ : K))
     (hκ : IsValuationUnit K (κ : K))
     (hκDefect : defectOrder (K := K) κ =
       (((2 * (ramificationIndex K : ℚ) - 1 : ℚ)) : WithTop ℚ)) :
-    DiagonalAnisotropic
+    DiagonalRepresents
       (diagonalUnitCoefficients
         (heHuLemma311OddSecondUnitTail
-          δ κ hδ hκ hκDefect).valueUnit) := by
+          δ κ hδ hκ hκDefect).valueUnit)
+      (diagonalUnitCoefficients
+        (heHuOddSecondTailEven (K := K) δ)) := by
   let hc := heHuSharpDomain_of_defect_twoE_sub_one κ hκDefect
   let κSharp := heHuSharp κ hc
   let a := heHuLemma39iiiSourceUnary (K := K) δ
@@ -850,10 +854,28 @@ theorem heHuLemma311OddSecondUnitTail_anisotropic
       (diagonalUnitCoefficients (heHuOddSecondTailEven (K := K) δ)) := by
     simpa only [a, p] using
       hcandidateSource.trans_exact hsourceTarget
+  exact hcandidateTarget
+
+/-- The ternary candidate in the unit row of the odd second column is the
+anisotropic Table 1 space `[pi,-Delta*pi,Delta*delta]`. -/
+theorem heHuLemma311OddSecondUnitTail_anisotropic
+    [GoodBONGClassificationLaws.{u, u, u} K]
+    (δ κ : Kˣ)
+    (hδ : IsValuationUnit K (δ : K))
+    (hκ : IsValuationUnit K (κ : K))
+    (hκDefect : defectOrder (K := K) κ =
+      (((2 * (ramificationIndex K : ℚ) - 1 : ℚ)) : WithTop ℚ)) :
+    DiagonalAnisotropic
+      (diagonalUnitCoefficients
+        (heHuLemma311OddSecondUnitTail
+          δ κ hδ hκ hκDefect).valueUnit) := by
+  have hcandidateTarget :=
+    heHuLemma311OddSecondUnitTail_represents_oddSecondTailEven
+      δ κ hδ hκ hκDefect
   apply hcandidateTarget.anisotropic_of
   apply heHuOddSecondTailEven_anisotropic δ
   refine ⟨0, ?_⟩
-  rw [hδOrder]
+  rw [(isValuationUnit_iff_ordUnit_eq_zero K δ).1 hδ]
   norm_num
 
 /-- Every integral rank-three BONG with profile `0,-2e,0` is isotropic.

@@ -31,6 +31,12 @@ branches of the parity definition of `G_n`.  The `alpha_n=0` normal-form
 composition must point from the target `W_1^n(epsilon)` into the source
 `W_1^(n+1)(1 or Delta)` in the direction stated by Lemma 3.14(ii).
 
+For Lemma 5.11, check both valuation-parity constructions of the second test,
+the conversion from `ord(c)` to `R_(n+2)-R_(n+1)`, and the determinant sign in
+the codimension-two Lemma 3.13 application.  Also inspect that only the
+terminal index is eliminated by `I3^O`; every earlier index must descend to
+the rank-`n-1` prefix and Lemma 4.5.
+
 For Proposition 3.7, independently inspect the even index-two volume drop,
 the `0,-2e`, `0,-2e,0`, and `0,-2e,0,-2e` equality profiles, and the direction
 of every same-rank diagonal representation used in the three endpoint

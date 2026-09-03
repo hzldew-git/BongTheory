@@ -131,6 +131,12 @@
   `alpha_n=0` terminal branch uses the Proposition 2.7 endpoint models and
   Lemma 3.14(ii), and the `alpha_n=1` terminal branch is ruled out by the
   Lemma 2.11 inequality and the parity split in equation (5.1).
+- `HeHuLemma511TestConditions` and `heHu2022Lemma511`: the exact three-way
+  Lemma 5.11 equivalence.  Both published maximal tests are realized by
+  literal good BONGs; the second test splits into the unit and
+  unit--uniformizer Table 1 rows.  The necessity proof derives the terminal
+  order parity and applies the codimension-two exclusive alternative of
+  Lemma 3.13, while sufficiency reduces every nonterminal index to Lemma 4.5.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

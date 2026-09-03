@@ -121,6 +121,11 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Lemma510Tests_to_i2O
 #check Bong.BONG.GoodBONG.heHu2022Lemma510I2O_to_universal
 #check Bong.BONG.GoodBONG.heHu2022Lemma510
+#check Bong.BONG.GoodBONG.HeHuLemma511TestConditions
+#check Bong.BONG.GoodBONG.heHu2022Lemma511Universal_to_tests
+#check Bong.BONG.GoodBONG.heHu2022Lemma511Tests_to_i3O
+#check Bong.BONG.GoodBONG.heHu2022Lemma511I3O_to_universal
+#check Bong.BONG.GoodBONG.heHu2022Lemma511
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -219,4 +224,8 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma59ii
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma59
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma510
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma511Universal_to_tests
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma511Tests_to_i3O
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma511I3O_to_universal
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma511
 #print axioms Bong.Lattice.heHuMaximalTestingReduction
