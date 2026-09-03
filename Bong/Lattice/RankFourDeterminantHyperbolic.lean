@@ -24,13 +24,16 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   [TopologicalSpace K] [DyadicContext K]
   {V : Type v} [AddCommGroup V] [Module K V]
 
-/-- A rank-four space of determinant class one that represents a hyperbolic
-plane is the orthogonal sum of two hyperbolic planes. -/
-theorem rankFour_isIsometric_hyperbolicPair_of_determinantClass_eq_one
+/-- A rank-four space whose ordinary diagonal determinant is a square and
+which represents a hyperbolic plane is the orthogonal sum of two hyperbolic
+planes.  This is the space-level form of the exceptional case used by
+He--Hu, Theorem 1.1. -/
+theorem rankFour_isIsometric_hyperbolicPair_of_diagonalDeterminant_isSquare
     [FiniteDimensional K V]
-    (q : QuadraticSpace K V) (L : Lattice K V)
+    (q : QuadraticSpace K V)
     (hrank : finrank K V = 4)
-    (hdet : Lattice.determinantClass q L = 1)
+    (hdet : IsSquare
+      (BONG.GoodBONG.diagonalUnitDeterminant q.diagonalUnits))
     (hrep : q.Represents (hyperbolicPlane (1 : Kˣ))) :
     q.IsIsometric
       ((hyperbolicPlane (1 : Kˣ)).orthogonalSum
@@ -94,21 +97,9 @@ theorem rankFour_isIsometric_hyperbolicPair_of_determinantClass_eq_one
       diagonalUnitDeterminant q.diagonalUnits := by
     unfold diagonalUnitDeterminant d
     exact e.prod_comp q.diagonalUnits
-  have hdClass : squareClass K (diagonalUnitDeterminant d) =
-      squareClass K (1 : Kˣ) := by
-    rw [hdProduct]
-    calc
-      squareClass K (diagonalUnitDeterminant q.diagonalUnits) =
-          unitSquareClassToSquareClass K
-            (Lattice.determinantClass q L) :=
-        Lattice.squareClass_diagonalUnitDeterminant_eq_determinantClass_toSquareClass
-          q L
-      _ = unitSquareClassToSquareClass K 1 := by rw [hdet]
-      _ = squareClass K (1 : Kˣ) := by rfl
   have hdSquare : IsSquare (diagonalUnitDeterminant d) := by
-    simpa using
-      (isSquare_mul_of_squareClass_eq
-        (diagonalUnitDeterminant d) (1 : Kˣ) hdClass)
+    rw [hdProduct]
+    exact hdet
   rcases DiagonalRepresents.exists_prod_eq_mul_square_of_sameRank hfull with
     ⟨p, hp⟩
   have hfullDet : diagonalUnitDeterminant (Fin.append b c) =
@@ -162,6 +153,37 @@ theorem rankFour_isIsometric_hyperbolicPair_of_determinantClass_eq_one
   let splitAppend := (finiteDiagonalOrthogonalSumIsometry b c).symm
   exact ⟨qToD.trans <| fullToD.symm.trans <|
     splitAppend.trans (bToHyperbolic.orthogonalSum cToHyperbolic)⟩
+
+/-- A rank-four space of refined determinant class one that represents a
+hyperbolic plane is split.  This lattice-level wrapper retains the original
+O'Meara-facing statement while delegating the geometric argument to the
+ordinary determinant criterion above. -/
+theorem rankFour_isIsometric_hyperbolicPair_of_determinantClass_eq_one
+    [FiniteDimensional K V]
+    (q : QuadraticSpace K V) (L : Lattice K V)
+    (hrank : finrank K V = 4)
+    (hdet : Lattice.determinantClass q L = 1)
+    (hrep : q.Represents (hyperbolicPlane (1 : Kˣ))) :
+    q.IsIsometric
+      ((hyperbolicPlane (1 : Kˣ)).orthogonalSum
+        (hyperbolicPlane (1 : Kˣ))) := by
+  apply rankFour_isIsometric_hyperbolicPair_of_diagonalDeterminant_isSquare
+    q hrank
+  · have hdClass :
+        squareClass K (diagonalUnitDeterminant q.diagonalUnits) =
+          squareClass K (1 : Kˣ) := by
+      calc
+        squareClass K (diagonalUnitDeterminant q.diagonalUnits) =
+            unitSquareClassToSquareClass K
+              (Lattice.determinantClass q L) :=
+          Lattice.squareClass_diagonalUnitDeterminant_eq_determinantClass_toSquareClass
+            q L
+        _ = unitSquareClassToSquareClass K 1 := by rw [hdet]
+        _ = squareClass K (1 : Kˣ) := by rfl
+    simpa using
+      (isSquare_mul_of_squareClass_eq
+        (diagonalUnitDeterminant q.diagonalUnits) (1 : Kˣ) hdClass)
+  · exact hrep
 
 end QuadraticSpace
 

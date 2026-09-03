@@ -15,6 +15,7 @@ import Bong.Bong.HeHu2022Lemma39
 import Bong.Bong.HeHu2022Lemma310
 import Bong.Bong.HeHu2022Lemma311
 import Bong.Bong.HeHu2022Lemma313
+import Bong.Bong.HeHu2022AmbientRank
 import Bong.Bong.HeHu2022Lemma314
 import Bong.Bong.HeHu2022Proposition37
 import Bong.Bong.HeHu2022SectionFour
@@ -23,6 +24,8 @@ import Bong.Bong.HeHu2022Lemma43
 import Bong.Bong.HeHu2022Lemma44
 import Bong.Bong.HeHu2022Lemma45
 import Bong.Bong.HeHu2022Theorem41
+import Bong.Bong.HeHu2022Corollary46
+import Bong.Bong.HeHu2022Theorem47
 import Bong.Bong.HeHu2022SectionFive
 import Bong.Bong.HeHu2022Lemma57
 import Bong.Bong.HeHu2022Lemma58
@@ -33,6 +36,7 @@ import Bong.Bong.HeHu2022Proposition55
 import Bong.Bong.HeHu2022Theorem51
 import Bong.Bong.HeHu2022Theorem53
 import Bong.Bong.HeHu2022SectionSix
+import Bong.Bong.HeHu2022Theorem11
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -44,8 +48,8 @@ Math. 67 (2024), 1481--1506.
 
 The implementation name records the work's 2022 provenance, while the
 publisher version of record (2024) is the sole semantic authority.  The
-  Theorem 1.1 criterion is present as an exact statement-layer target in
-  `HeHu2022Conditions`.  Direct endpoints for Definition 2.4, Lemma 2.2,
+  Theorem 1.1 criterion is proved at its exact arbitrary-source-rank
+  statement in `HeHu2022Theorem11`.  Direct endpoints for Definition 2.4, Lemma 2.2,
   Corollary 2.3, Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11 are
   supplied by the Section 2 modules.  Definition 3.1 and Propositions 3.2--3.3
   are supplied by the first two Section 3 modules.  Definition 3.4 and all
@@ -102,12 +106,16 @@ publisher version of record (2024) is the sole semantic authority.  The
   6.2 identifies Theorem 1.1(i),(iii)(1) with `I1^O`; and Lemma 6.3 expands
   `alpha_(n+2) <= G_n` into both printed parity rows of
   Theorem 1.1(iii)(2).
+  The ambient-space rank classification used in Corollary 4.6, Theorem 4.7,
+  and Theorem 1.1 is also proved: the stable range is exactly `m >= n+3`,
+  apart from the published binary/quaternary `H perp H` exception.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.
   Lemmas 3.13--3.14 are proved by the explicit determinant--Hasse and Table 1
-  comparison modules. No proof of the
-  Theorem 1.1 equivalence is asserted here yet.
+  comparison modules. Corollary 4.6, Theorem 4.7, and the complete
+  Theorem 1.1 equivalence (including impossible small source ranks) are
+  checked endpoints.
 -/
 
 namespace Bong
