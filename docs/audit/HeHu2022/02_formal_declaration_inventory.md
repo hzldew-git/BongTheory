@@ -100,11 +100,14 @@
   indices are excluded by `I1^E`, while the terminal index is split into the
   published minimal-order endpoint-tower representation and the higher-order
   contradiction from Lemma 2.10(iii) and `I2^E`.
+- `heHu2022Lemma45`: the complete Lemma 4.5 equivalence. Necessity checks the
+  published terminal test families, including the binary `d=2e` class split;
+  sufficiency proves the long representation condition for every integral
+  even-rank target.
 - `heHuTheorem41_of_component_equivalences`: checked logical assembly of
-  Theorem 4.1; its Lemma 4.2 premise is now discharged by
-  `heHu2022Lemma42` and its Lemma 4.4 premise by `heHu2022Lemma44`; the
-  explicit Lemma 4.5 premise remains open and is not treated as a proved
-  hypothesis.
+  Theorem 4.1.
+- `heHu2022Theorem41Even`: direct proved Theorem 4.1 endpoint, with all three
+  component equivalences discharged by Lemmas 4.2, 4.4, and 4.5.
 - `Bong.Lattice.heHuMaximalTestingReduction`: proved abstract maximal-lattice
   testing equivalence.
 

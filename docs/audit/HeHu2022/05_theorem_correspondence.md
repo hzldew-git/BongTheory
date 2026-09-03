@@ -37,8 +37,10 @@
 | Lemma 4.2 | `heHu2022Lemma42` | Proved in both directions.  The necessity proof instantiates the published `N_1^n(1)` and `N_1^n(Delta)` tests and proves their determinant-prefix product nonsquare; the sufficiency proof uses an exact deep same-rank completion. |
 | Lemma 4.3 | `heHu2022Lemma43` | Proved for the literal `N_2^n(Delta)` target.  The endpoint includes both published strict inequalities and the nonrepresentation of `[b_1,...,b_n]` by `[a_1,...,a_(n+1)]`; the latter is reduced exactly to Proposition 2.7(v) and Lemma 3.14(i). |
 | Lemma 4.4 | `heHu2022Lemma44` | Proved in both directions. Necessity uses the literal Lemma 4.3 test; sufficiency handles every integral even-rank target, with the terminal minimal-order case represented by the endpoint-tower model and the higher-order case ruled out by Lemma 2.10(iii) together with `I2^E`. |
+| Lemma 4.5 | `heHu2022Lemma45` | Proved in both directions. Necessity uses the two published terminal test families, including the binary `d=2e` branch where the square class is excluded and only `Delta` remains; sufficiency treats every integral even-rank target and both terminal-order alternatives. |
 | Theorem 4.1 conditions | `HeHuI1E`, `HeHuI2E`, `HeHuI3E`, `HeHuEvenSectionConditions` | Exact statements checked; one-based/zero-based boundary translation explicit |
-| Theorem 4.1 logical assembly | `heHuNUniversality_factorization`, `heHuTheorem41_of_component_equivalences` | Proved reduction and assembly; not a Theorem 4.1 endpoint until Lemma 4.5 is proved |
+| Theorem 4.1 | `heHu2022Theorem41Even` | Proved for every even `n=2k+2`: ambient universality and `I1^E`--`I3^E` are equivalent to lattice `n`-universality, by the checked Theorem 2.8 factorization and Lemmas 4.2, 4.4, and 4.5. |
+| Theorem 4.1 logical assembly | `heHuNUniversality_factorization`, `heHuTheorem41_of_component_equivalences` | Proved reusable reduction and component assembly used by the direct endpoint. |
 | Theorem 4.7 invariant conversion | `heHuI2E_iff_theorem47BoundaryCondition`, `heHuEvenSectionConditions_iff_theorem47StableConditions` | Proved, including the exceptional raw/capped defect equivalence; ambient rank classification and Theorem 4.1 endpoint still pending |
 
 The abstract core must never be cited as a proof of the full Theorem 1.2.

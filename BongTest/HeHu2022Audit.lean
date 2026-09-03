@@ -99,7 +99,11 @@ import Bong.Papers.HeHu2022
 #check Bong.BONG.GoodBONG.heHu2022Lemma44Sufficiency
 #check Bong.BONG.GoodBONG.heHu2022Lemma44NecessityAll
 #check Bong.BONG.GoodBONG.heHu2022Lemma44
+#check Bong.BONG.GoodBONG.heHu2022Lemma45Necessity
+#check Bong.BONG.GoodBONG.heHu2022Lemma45SufficiencyAll
+#check Bong.BONG.GoodBONG.heHu2022Lemma45
 #check Bong.BONG.GoodBONG.heHuTheorem41_of_component_equivalences
+#check Bong.BONG.GoodBONG.heHu2022Theorem41Even
 #check Bong.Lattice.heHuMaximalTestingReduction
 
 #print Bong.BONG.GoodBONG.HeHuTheorem11Statement
@@ -183,5 +187,9 @@ import Bong.Papers.HeHu2022
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma44Sufficiency
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma44NecessityAll
 #print axioms Bong.BONG.GoodBONG.heHu2022Lemma44
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma45Necessity
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma45SufficiencyAll
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma45
 #print axioms Bong.BONG.GoodBONG.heHuTheorem41_of_component_equivalences
+#print axioms Bong.BONG.GoodBONG.heHu2022Theorem41Even
 #print axioms Bong.Lattice.heHuMaximalTestingReduction

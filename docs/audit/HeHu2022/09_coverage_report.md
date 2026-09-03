@@ -1,9 +1,9 @@
 # Coverage report
 
-Coverage status: `SECTIONS_2_3_CORE_AND_LEMMAS_4_2_TO_4_4_COMPLETE`.
+Coverage status: `SECTIONS_2_3_CORE_AND_THEOREM_4_1_COMPLETE`.
 
 - Publisher inventory: 47/47 directly numbered items identified.
-- Accounted publisher-result endpoints: 25/47, comprising every numbered
+- Accounted publisher-result endpoints: 27/47, comprising every numbered
   item in Section 2 (Definition 2.4, Lemma 2.2, Corollary 2.3,
   Propositions 2.5--2.7, Theorem 2.8, and Lemmas 2.9--2.11).
 - Section 3 coverage additionally includes Definitions 3.1, 3.4, and 3.6 and
@@ -42,10 +42,12 @@ Coverage status: `SECTIONS_2_3_CORE_AND_LEMMAS_4_2_TO_4_4_COMPLETE`.
   includes exact `I1^E`--`I3^E` definitions, a
   proved Theorem 2.8 universality factorization, the checked logical assembly
   of Theorem 4.1, and the complete invariant conversion used in Theorem 4.7.
-  Lemma 4.5 still has to discharge the remaining representation component
-  before Theorems 4.1 and 4.7 can be counted.
+  Lemma 4.5 now discharges the final long-representation component, including
+  the exceptional binary defect branch.  These three component equivalences
+  are instantiated in `heHu2022Theorem41Even`, so Theorem 4.1 is now counted.
+  Corollary 4.6 and Theorem 4.7 still require direct theorem endpoints.
 
-The accounted coverage ratio is therefore **25/47**: 24 direct checked
+The accounted coverage ratio is therefore **27/47**: 26 direct checked
 publisher items plus the Definition 3.1 equivalent-construction endpoint
 that remains explicitly flagged for independent semantic review. This is a bookkeeping
 statement, not a judgment about how

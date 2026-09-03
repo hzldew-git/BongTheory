@@ -21,6 +21,8 @@ import Bong.Bong.HeHu2022SectionFour
 import Bong.Bong.HeHu2022Lemma42
 import Bong.Bong.HeHu2022Lemma43
 import Bong.Bong.HeHu2022Lemma44
+import Bong.Bong.HeHu2022Lemma45
+import Bong.Bong.HeHu2022Theorem41
 import Bong.Bong.BeliUniversalMaximal
 
 /-!
@@ -61,9 +63,10 @@ publisher version of record (2024) is the sole semantic authority.  The
   checked through the Proposition 2.7(v) and Lemma 3.14(i) normal forms.
   Lemma 4.4 is proved in both directions: necessity specializes to that
   literal target, while sufficiency treats every integral even-rank target,
-  including both terminal-order branches. Lemma 4.5 remains the visible
-  representation-theoretic obligation needed to instantiate the checked
-  Theorem 4.1 assembly theorem.
+  including both terminal-order branches. Lemma 4.5 is likewise proved in
+  both directions, including the exceptional binary defect branch.  The three
+  component equivalences are assembled into the proved even-rank Theorem 4.1
+  endpoint in `HeHu2022Theorem41`.
   All three clauses of Lemma 3.9 are proved by exact good-BONG models; in
   particular clause (iii) retains the published coefficient list
   `<delta*kappa#, -delta*kappa#*kappa*pi^(2-2e), delta*kappa>`.

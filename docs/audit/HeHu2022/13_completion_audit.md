@@ -21,7 +21,9 @@
 | Lemma 4.2 | PASS, both directions with exact square/discriminant tests and deep completion |
 | Lemma 4.3 | PASS, literal `N_2^n(Delta)` target, both strict defect conclusions, and exact nonrepresentation |
 | Lemma 4.4 | PASS, both directions, literal necessity test, and all terminal/nonterminal sufficiency branches |
-| Lemma 4.5 | FAIL / final representation-theoretic component equivalence pending |
+| Lemma 4.5 | PASS, both directions, all target branches, and the binary `d=2e` endpoint |
+| Theorem 4.1 | PASS, direct even-rank endpoint assembled from Lemmas 4.2, 4.4, and 4.5 |
+| Corollary 4.6 and Theorem 4.7 | FAIL / direct endpoints pending |
 | Theorem 1.1 statement present | PASS |
 | Theorem 1.1 proof | FAIL / pending |
 | Theorem 1.2 explicit list and minimality | FAIL / pending |
