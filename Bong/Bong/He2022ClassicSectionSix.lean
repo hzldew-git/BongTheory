@@ -713,6 +713,426 @@ theorem he2022ClassicLemma61 {m n : Nat}
       hmStable hJ1 hBoundaryZero heLarge).mp (by
         simpa only [current] using hAlphaCurrent)
 
+/-! ## The odd-rank condition in Theorem 1.1(iii)(2) -/
+
+/-- One parity row of the printed odd-rank condition.  The parameter `t`
+is one for an even boundary gap and zero for an odd boundary gap. -/
+def HeClassicLemma62Branch {m : Nat}
+    (a : GoodBONG q L (m + 1)) (n : Nat)
+    (hmStable : n + 2 ≤ m) (t : Int) : Prop :=
+  a.order ⟨n + 2, by omega⟩ + a.order ⟨n + 1, by omega⟩ -
+        2 * a.order ⟨n, by omega⟩ ≤
+      2 * (ramificationIndex K : Int) - 2 * t ∨
+    ∃ j : Fin m, n + 1 ≤ j.1 ∧
+      a.heClassicAdjacentDefectAt j ≤
+        ((2 * (ramificationIndex K : Int) +
+          a.order ⟨n, by omega⟩ -
+          a.heClassicOrderAfterAdjacent j - t : Int) : ℚ)
+
+/-- The finite-minimum calculation in He, Lemma 6.2.  The discarded left
+candidates are controlled by equations (6.1)--(6.2); only the half-gap
+candidate and the tail candidates can attain the required upper bound. -/
+theorem heClassicLemma62_alphaNext_le_iff_branch {m n : Nat}
+    (a : GoodBONG q L (m + 1)) (hnThree : 3 ≤ n) (hnOdd : Odd n)
+    (hmStable : n + 2 ≤ m) (hClassic : Lattice.IsClassicIntegral q L)
+    (hJ1 : a.HeClassicJ1O n hnThree hmStable)
+    (hAlpha : a.alphaValue ⟨n - 1, by omega⟩ = 1)
+    (hTrigger : a.order ⟨n, by omega⟩ = 1 ∨
+      1 < a.order ⟨n + 1, by omega⟩)
+    (t : Int) (htNonnegative : 0 ≤ t) (htOne : t ≤ 1)
+    (hThreshold : a.heClassicOddThreshold n hmStable =
+      2 * (ramificationIndex K : Int) - a.order ⟨n + 1, by omega⟩ +
+        a.order ⟨n, by omega⟩ - t)
+    (hMiddleRaw : (((t : Int) : ℚ) : WithTop ℚ) ≤
+      a.adjacentDefect ⟨n, by omega⟩) :
+    a.alphaValue ⟨n + 1, by omega⟩ ≤
+        (a.heClassicOddThreshold n hmStable : ℚ) ↔
+      a.HeClassicLemma62Branch n hmStable t := by
+  let alphaBoundary : Fin m := ⟨n - 1, by omega⟩
+  let middle : Fin m := ⟨n, by omega⟩
+  let pivot : Fin m := ⟨n + 1, by omega⟩
+  let threshold : Int := a.heClassicOddThreshold n hmStable
+  have hRn : a.order ⟨n - 1, by omega⟩ = 0 :=
+    hJ1.1 ⟨n - 1, by omega⟩
+  have hR1Nonnegative : 0 ≤ a.order ⟨n, by omega⟩ := by
+    have hmono := a.orderSequence.twoStep (n - 2) (by omega)
+    change a.order ⟨n - 2, by omega⟩ ≤
+      a.order ⟨n - 2 + 2, by omega⟩ at hmono
+    have hzero : a.order ⟨n - 2, by omega⟩ = 0 :=
+      hJ1.1 ⟨n - 2, by omega⟩
+    have hindex : n - 2 + 2 = n := by omega
+    simpa only [hzero, hindex] using hmono
+  have hR3GeR1 : a.order ⟨n, by omega⟩ ≤
+      a.order ⟨n + 2, by omega⟩ := by
+    have hmono := a.orderSequence.twoStep n (by omega)
+    change a.order ⟨n, by omega⟩ ≤ a.order ⟨n + 2, by omega⟩ at hmono
+    exact hmono
+  have hR2GeOne : 1 ≤ a.order ⟨n + 1, by omega⟩ := by
+    rcases hTrigger with hR1One | hR2Gt
+    · exact a.heHu2022Remark52_order_ge_one hnThree hnOdd hmStable
+        hClassic.isIntegral hR1One
+    · omega
+  have hPivotGap : a.orderGap pivot =
+      a.order ⟨n + 2, by omega⟩ - a.order ⟨n + 1, by omega⟩ := by
+    rfl
+  have hThresholdValue : threshold =
+      2 * (ramificationIndex K : Int) - a.order ⟨n + 1, by omega⟩ +
+        a.order ⟨n, by omega⟩ - t := hThreshold
+  have hHalfIff :
+      a.halfGapCandidate pivot ≤ (((threshold : Int) : ℚ) : WithTop ℚ) ↔
+        a.order ⟨n + 2, by omega⟩ + a.order ⟨n + 1, by omega⟩ -
+              2 * a.order ⟨n, by omega⟩ ≤
+            2 * (ramificationIndex K : Int) - 2 * t := by
+    rw [← a.coe_halfGapValue]
+    constructor
+    · intro h
+      have hQ : a.halfGapValue pivot ≤ (threshold : ℚ) := by
+        exact_mod_cast h
+      unfold halfGapValue at hQ
+      rw [hPivotGap, hThresholdValue] at hQ
+      push_cast at hQ
+      have hQ' :
+          ((a.order ⟨n + 2, by omega⟩ + a.order ⟨n + 1, by omega⟩ -
+              2 * a.order ⟨n, by omega⟩ : Int) : ℚ) ≤
+            ((2 * (ramificationIndex K : Int) - 2 * t : Int) : ℚ) := by
+        push_cast
+        linarith
+      exact_mod_cast hQ'
+    · intro h
+      have hQ :
+          ((a.order ⟨n + 2, by omega⟩ + a.order ⟨n + 1, by omega⟩ -
+              2 * a.order ⟨n, by omega⟩ : Int) : ℚ) ≤
+            ((2 * (ramificationIndex K : Int) - 2 * t : Int) : ℚ) := by
+        exact_mod_cast h
+      have hHalfQ : a.halfGapValue pivot ≤ (threshold : ℚ) := by
+        unfold halfGapValue
+        rw [hPivotGap, hThresholdValue]
+        push_cast at hQ ⊢
+        linarith
+      exact_mod_cast hHalfQ
+  have hRightIff (j : Fin m) :
+      a.rightDefectCandidate pivot j ≤
+          (((threshold : Int) : ℚ) : WithTop ℚ) ↔
+        a.heClassicAdjacentDefectAt j ≤
+          (((2 * (ramificationIndex K : Int) +
+            a.order ⟨n, by omega⟩ -
+            a.heClassicOrderAfterAdjacent j - t : Int) : ℚ) : WithTop ℚ) := by
+    change a.rightDefectCandidate pivot j ≤
+          (((threshold : Int) : ℚ) : WithTop ℚ) ↔
+      a.adjacentDefect j ≤
+        (((2 * (ramificationIndex K : Int) +
+          a.order ⟨n, by omega⟩ - a.order j.succ - t : Int) : ℚ) :
+            WithTop ℚ)
+    let shift : Int := a.order j.succ - a.order ⟨n + 1, by omega⟩
+    let bound : Int := 2 * (ramificationIndex K : Int) +
+      a.order ⟨n, by omega⟩ - a.order j.succ - t
+    have hPivotCast : pivot.castSucc =
+        (⟨n + 1, by omega⟩ : Fin (m + 1)) := by ext; rfl
+    have hShift : a.rightDefectCandidate pivot j =
+        (((shift : Int) : ℚ) : WithTop ℚ) + a.adjacentDefect j := by
+      unfold rightDefectCandidate
+      rw [hPivotCast]
+    have hSum :
+        (((shift : Int) : ℚ) : WithTop ℚ) +
+            (((bound : Int) : ℚ) : WithTop ℚ) =
+          (((threshold : Int) : ℚ) : WithTop ℚ) := by
+      rw [← WithTop.coe_add]
+      apply congrArg (fun x : ℚ ↦ (x : WithTop ℚ))
+      rw [hThresholdValue]
+      dsimp only [shift, bound]
+      push_cast
+      ring
+    rw [hShift]
+    constructor
+    · intro h
+      apply (WithTop.add_le_add_iff_left (x :=
+        (((shift : Int) : ℚ) : WithTop ℚ)) WithTop.coe_ne_top).mp
+      rw [hSum]
+      exact h
+    · intro h
+      have hAdd := (WithTop.add_le_add_iff_left (x :=
+        (((shift : Int) : ℚ) : WithTop ℚ)) WithTop.coe_ne_top).mpr h
+      rw [hSum] at hAdd
+      exact hAdd
+  have hEarlyRaw (j : Fin m) (hj : j.1 < n - 1) :
+      (1 : WithTop ℚ) ≤ a.adjacentDefect j := by
+    have hjCurrent : a.order j.castSucc = 0 := by
+      have h := hJ1.1 ⟨j.1, by omega⟩
+      simpa only [show (⟨j.1, by omega⟩ : Fin (m + 1)) =
+          j.castSucc by ext; rfl] using h
+    have hjNext : a.order j.succ = 0 := by
+      have h := hJ1.1 ⟨j.1 + 1, by omega⟩
+      simpa only [show (⟨j.1 + 1, by omega⟩ : Fin (m + 1)) =
+          j.succ by ext; rfl] using h
+    have hEven : Even (ordUnit K (a.adjacentProduct j)) := by
+      rw [a.ordUnit_adjacentProduct_eq_adjacentOrderSum j,
+        hjCurrent, hjNext]
+      exact Even.zero
+    exact defectOrder_one_le_of_even _ hEven
+  have hFirstMiddleLower :
+      ((((t - a.order ⟨n, by omega⟩ : Int) : ℚ)) : WithTop ℚ) ≤
+        a.adjacentDefect alphaBoundary := by
+    have hAlphaCandidate := a.alpha_le_rightDefectCandidate
+      (i := alphaBoundary) (j := alphaBoundary) (le_refl _)
+    have hAlphaCandidate' : (1 : WithTop ℚ) ≤
+        a.rightDefectCandidate alphaBoundary alphaBoundary := by
+      rw [← a.coe_alphaValue alphaBoundary] at hAlphaCandidate
+      have hAlpha' : a.alphaValue alphaBoundary = 1 := by
+        simpa only [alphaBoundary] using hAlpha
+      rw [hAlpha'] at hAlphaCandidate
+      exact hAlphaCandidate
+    have hCandidateForm : a.rightDefectCandidate alphaBoundary alphaBoundary =
+        (((a.order ⟨n, by omega⟩ : Int) : ℚ) : WithTop ℚ) +
+          a.adjacentDefect alphaBoundary := by
+      unfold rightDefectCandidate
+      rw [show alphaBoundary.succ =
+          (⟨n, by omega⟩ : Fin (m + 1)) by
+            ext
+            simp only [alphaBoundary, Fin.val_succ]
+            omega,
+        show alphaBoundary.castSucc =
+          (⟨n - 1, by omega⟩ : Fin (m + 1)) by ext; rfl,
+        hRn]
+      push_cast
+      norm_num
+    have htLe : (((t : Int) : ℚ) : WithTop ℚ) ≤ (1 : WithTop ℚ) := by
+      exact_mod_cast htOne
+    have hSumLe : (((t : Int) : ℚ) : WithTop ℚ) ≤
+        (((a.order ⟨n, by omega⟩ : Int) : ℚ) : WithTop ℚ) +
+          a.adjacentDefect alphaBoundary := by
+      rw [← hCandidateForm]
+      exact htLe.trans hAlphaCandidate'
+    apply (WithTop.add_le_add_iff_left (x :=
+      (((a.order ⟨n, by omega⟩ : Int) : ℚ) : WithTop ℚ))
+      WithTop.coe_ne_top).mp
+    have hCancel :
+        (((a.order ⟨n, by omega⟩ : Int) : ℚ) : WithTop ℚ) +
+            ((((t - a.order ⟨n, by omega⟩ : Int) : ℚ)) : WithTop ℚ) =
+          (((t : Int) : ℚ) : WithTop ℚ) := by
+      rw [← WithTop.coe_add]
+      congr 2
+      push_cast
+      ring
+    rw [hCancel]
+    exact hSumLe
+  have hDiscardedLower (j : Fin m) (hj : j.1 ≤ n) :
+      ((((t - a.order ⟨n, by omega⟩ + a.order j.castSucc : Int) : ℚ)) :
+          WithTop ℚ) ≤ a.adjacentDefect j := by
+    by_cases hEarly : j.1 < n - 1
+    · have hjOrder : a.order j.castSucc = 0 := by
+        have h := hJ1.1 ⟨j.1, by omega⟩
+        simpa only [show (⟨j.1, by omega⟩ : Fin (m + 1)) =
+            j.castSucc by ext; rfl] using h
+      have hInt : t - a.order ⟨n, by omega⟩ ≤ 1 := by omega
+      have hTop :
+          ((((t - a.order ⟨n, by omega⟩ : Int) : ℚ)) : WithTop ℚ) ≤ 1 := by
+        exact_mod_cast hInt
+      rw [hjOrder, add_zero]
+      exact hTop.trans (hEarlyRaw j hEarly)
+    · by_cases hAtBoundary : j.1 = n - 1
+      · have hjEq : j = alphaBoundary := by
+          apply Fin.ext
+          simpa only [alphaBoundary] using hAtBoundary
+        subst j
+        rw [show alphaBoundary.castSucc =
+            (⟨n - 1, by omega⟩ : Fin (m + 1)) by ext; rfl, hRn,
+          add_zero]
+        exact hFirstMiddleLower
+      · have hjEq : j = middle := by
+          apply Fin.ext
+          simp only [middle]
+          omega
+        subst j
+        rw [show middle.castSucc =
+            (⟨n, by omega⟩ : Fin (m + 1)) by ext; rfl]
+        convert hMiddleRaw using 1
+        congr 2
+        push_cast
+        ring
+  have hDiscardedCandidate (j : Fin m) (hj : j.1 ≤ n)
+      (hCandidate : a.leftDefectCandidate pivot j ≤
+        (((threshold : Int) : ℚ) : WithTop ℚ)) :
+      a.halfGapCandidate pivot ≤
+        (((threshold : Int) : ℚ) : WithTop ℚ) := by
+    have hCandidateForm : a.leftDefectCandidate pivot j =
+        ((((a.order ⟨n + 2, by omega⟩ - a.order j.castSucc : Int) : ℚ)) :
+            WithTop ℚ) + a.adjacentDefect j := by
+      unfold leftDefectCandidate
+      rw [show pivot.succ =
+          (⟨n + 2, by omega⟩ : Fin (m + 1)) by ext; rfl]
+    have hFinite :
+        ((((a.order ⟨n + 2, by omega⟩ + t -
+            a.order ⟨n, by omega⟩ : Int) : ℚ)) : WithTop ℚ) =
+          ((((a.order ⟨n + 2, by omega⟩ - a.order j.castSucc : Int) : ℚ)) :
+              WithTop ℚ) +
+            ((((t - a.order ⟨n, by omega⟩ + a.order j.castSucc : Int) : ℚ)) :
+              WithTop ℚ) := by
+      rw [← WithTop.coe_add]
+      congr 2
+      push_cast
+      ring
+    have hLower :
+        ((((a.order ⟨n + 2, by omega⟩ + t -
+            a.order ⟨n, by omega⟩ : Int) : ℚ)) : WithTop ℚ) ≤
+          a.leftDefectCandidate pivot j := by
+      rw [hFinite, hCandidateForm]
+      exact add_le_add_right (hDiscardedLower j hj)
+        ((((a.order ⟨n + 2, by omega⟩ - a.order j.castSucc : Int) : ℚ)) :
+          WithTop ℚ)
+    have hIntCast :
+        ((((a.order ⟨n + 2, by omega⟩ + t -
+            a.order ⟨n, by omega⟩ : Int) : ℚ)) : WithTop ℚ) ≤
+          (((threshold : Int) : ℚ) : WithTop ℚ) :=
+      hLower.trans hCandidate
+    have hInt : a.order ⟨n + 2, by omega⟩ + t -
+        a.order ⟨n, by omega⟩ ≤ threshold := by
+      exact_mod_cast hIntCast
+    apply hHalfIff.mpr
+    rw [hThresholdValue] at hInt
+    omega
+  constructor
+  · intro hAlphaLe
+    have hAlphaLeTop :
+        (a.alphaValue pivot : WithTop ℚ) ≤
+          (((threshold : Int) : ℚ) : WithTop ℚ) := by
+      exact_mod_cast hAlphaLe
+    have hMinMem := Finset.min'_mem
+      (a.alphaCandidates pivot) (a.alphaCandidates_nonempty pivot)
+    have hCandidateMem :
+        (a.alphaValue pivot : WithTop ℚ) ∈ a.alphaCandidates pivot := by
+      change a.alpha pivot ∈ a.alphaCandidates pivot at hMinMem
+      rw [← a.coe_alphaValue pivot] at hMinMem
+      exact hMinMem
+    simp only [alphaCandidates, Finset.mem_insert, Finset.mem_union,
+      Finset.mem_image, Finset.mem_filter, Finset.mem_univ, true_and] at hCandidateMem
+    unfold HeClassicLemma62Branch
+    rcases hCandidateMem with hHalf | hDefect
+    · left
+      apply hHalfIff.mp
+      exact hHalf.symm.trans_le hAlphaLeTop
+    · rcases hDefect with hLeft | hRight
+      · rcases hLeft with ⟨j, hjLe, hjEq⟩
+        have hCandidateLe : a.leftDefectCandidate pivot j ≤
+            (((threshold : Int) : ℚ) : WithTop ℚ) :=
+          hjEq.trans_le hAlphaLeTop
+        by_cases hDiscarded : j.1 ≤ n
+        · left
+          exact hHalfIff.mp
+            (hDiscardedCandidate j hDiscarded hCandidateLe)
+        · right
+          have hjPivot : j = pivot := by
+            apply Fin.ext
+            have hUpper : j.1 ≤ n + 1 := by
+              have h : j.1 ≤ pivot.1 := hjLe
+              simpa only [pivot] using h
+            simp only [pivot]
+            omega
+          subst j
+          refine ⟨pivot, by simp only [pivot]; exact le_rfl, ?_⟩
+          apply (hRightIff pivot).mp
+          simpa only [leftDefectCandidate, rightDefectCandidate] using
+            hCandidateLe
+      · rcases hRight with ⟨j, hij, hjEq⟩
+        right
+        refine ⟨j, ?_, (hRightIff j).mp (hjEq.trans_le hAlphaLeTop)⟩
+        have h : pivot.1 ≤ j.1 := hij
+        simpa only [pivot] using h
+  · intro hBranch
+    unfold HeClassicLemma62Branch at hBranch
+    rcases hBranch with hFirst | hTail
+    · have hHalfLe := hHalfIff.mpr hFirst
+      have hAlphaCandidate := a.alpha_le_halfGapCandidate pivot
+      rw [← a.coe_alphaValue pivot] at hAlphaCandidate
+      have hTop := hAlphaCandidate.trans hHalfLe
+      exact_mod_cast hTop
+    · rcases hTail with ⟨j, hj, hDefect⟩
+      have hCandidateLe := (hRightIff j).mpr hDefect
+      have hAlphaCandidate := a.alpha_le_rightDefectCandidate
+        (i := pivot) (j := j) (Fin.mk_le_mk.mpr hj)
+      rw [← a.coe_alphaValue pivot] at hAlphaCandidate
+      have hTop := hAlphaCandidate.trans hCandidateLe
+      exact_mod_cast hTop
+
+/-- The parity-specialized finite-minimum calculation in Lemma 6.2. -/
+theorem heClassicLemma62_alphaNext_le_iff_rows {m n : Nat}
+    (a : GoodBONG q L (m + 1)) (hnThree : 3 ≤ n) (hnOdd : Odd n)
+    (hmStable : n + 2 ≤ m) (hClassic : Lattice.IsClassicIntegral q L)
+    (hJ1 : a.HeClassicJ1O n hnThree hmStable)
+    (hAlpha : a.alphaValue ⟨n - 1, by omega⟩ = 1)
+    (hTrigger : a.order ⟨n, by omega⟩ = 1 ∨
+      1 < a.order ⟨n + 1, by omega⟩) :
+    a.alphaValue ⟨n + 1, by omega⟩ ≤
+        (a.heClassicOddThreshold n hmStable : ℚ) ↔
+      ((Even (a.order ⟨n + 1, by omega⟩ - a.order ⟨n, by omega⟩) →
+          a.HeClassicLemma62Branch n hmStable 1) ∧
+        (Odd (a.order ⟨n + 1, by omega⟩ - a.order ⟨n, by omega⟩) →
+          a.HeClassicLemma62Branch n hmStable 0)) := by
+  let middle : Fin m := ⟨n, by omega⟩
+  have hGap : a.orderGap middle =
+      a.order ⟨n + 1, by omega⟩ - a.order ⟨n, by omega⟩ := by rfl
+  rcases Int.even_or_odd
+      (a.order ⟨n + 1, by omega⟩ - a.order ⟨n, by omega⟩) with
+    hEven | hOdd
+  · have hNotOdd : ¬ Odd
+        (a.order ⟨n + 1, by omega⟩ - a.order ⟨n, by omega⟩) :=
+      Int.not_odd_iff_even.mpr hEven
+    have hThreshold : a.heClassicOddThreshold n hmStable =
+        2 * (ramificationIndex K : Int) - a.order ⟨n + 1, by omega⟩ +
+          a.order ⟨n, by omega⟩ - 1 := by
+      simp only [heClassicOddThreshold, heHuOddThreshold, hEven, if_pos]
+    have hProductEven : Even (ordUnit K (a.adjacentProduct middle)) :=
+      a.even_ordUnit_adjacentProduct_of_even_orderGap middle (by
+        simpa only [hGap] using hEven)
+    have hRaw : (((1 : Int) : ℚ) : WithTop ℚ) ≤
+        a.adjacentDefect middle :=
+      defectOrder_one_le_of_even _ hProductEven
+    have hCore := a.heClassicLemma62_alphaNext_le_iff_branch hnThree hnOdd
+      hmStable hClassic hJ1 hAlpha hTrigger 1 (by omega) (by omega)
+      hThreshold (by simpa only [middle] using hRaw)
+    simpa only [hEven, hNotOdd, true_implies, false_implies, and_true]
+      using hCore
+  · have hNotEven : ¬ Even
+        (a.order ⟨n + 1, by omega⟩ - a.order ⟨n, by omega⟩) :=
+      Int.not_even_iff_odd.mpr hOdd
+    have hThreshold : a.heClassicOddThreshold n hmStable =
+        2 * (ramificationIndex K : Int) - a.order ⟨n + 1, by omega⟩ +
+          a.order ⟨n, by omega⟩ - 0 := by
+      simp [heClassicOddThreshold, heHuOddThreshold, hNotEven]
+    have hRaw : ((((0 : Int) : ℚ)) : WithTop ℚ) ≤
+        a.adjacentDefect middle :=
+      defectOrder_nonneg_for_alpha (K := K) (a.adjacentProduct middle)
+    have hCore := a.heClassicLemma62_alphaNext_le_iff_branch hnThree hnOdd
+      hmStable hClassic hJ1 hAlpha hTrigger 0 (by omega) (by omega)
+      hThreshold (by simpa only [middle] using hRaw)
+    simpa only [hOdd, hNotEven, true_implies, false_implies, true_and]
+      using hCore
+
+/-- Theorem 1.1(iii)(2), separated from the other odd-rank clauses. -/
+def HeClassicTheorem11OddClauseTwo {m : Nat}
+    (a : GoodBONG q L (m + 1)) (n : Nat) (hmStable : n + 2 ≤ m) : Prop :=
+  (a.order ⟨n, by omega⟩ = 1 ∨
+      1 < a.order ⟨n + 1, by omega⟩) →
+    ((Even (a.order ⟨n + 1, by omega⟩ - a.order ⟨n, by omega⟩) →
+        a.HeClassicLemma62Branch n hmStable 1) ∧
+      (Odd (a.order ⟨n + 1, by omega⟩ - a.order ⟨n, by omega⟩) →
+        a.HeClassicLemma62Branch n hmStable 0))
+
+/-- He (2024), Lemma 6.2. -/
+theorem he2022ClassicLemma62 {m n : Nat}
+    (a : GoodBONG q L (m + 1)) (hnThree : 3 ≤ n) (hnOdd : Odd n)
+    (hmStable : n + 2 ≤ m) (hClassic : Lattice.IsClassicIntegral q L)
+    (hJ1 : a.HeClassicJ1O n hnThree hmStable) :
+    a.HeClassicTheorem11OddClauseTwo n hmStable ↔
+      a.HeClassicJ2O n hnThree hmStable := by
+  unfold HeClassicTheorem11OddClauseTwo HeClassicJ2O
+  constructor
+  · intro hClause hTrigger
+    exact (a.heClassicLemma62_alphaNext_le_iff_rows hnThree hnOdd hmStable
+      hClassic hJ1 hJ1.2.1 hTrigger).mpr (hClause hTrigger)
+  · intro hJ2 hTrigger
+    exact (a.heClassicLemma62_alphaNext_le_iff_rows hnThree hnOdd hmStable
+      hClassic hJ1 hJ1.2.1 hTrigger).mp (hJ2 hTrigger)
+
 end BONG.GoodBONG
 
 end Bong
