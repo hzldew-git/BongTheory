@@ -80,6 +80,23 @@ import Bong.Papers.He2023ADC
 #check Bong.BONG.GoodBONG.heADC2025Lemma412ii
 #check Bong.BONG.GoodBONG.heADC2025Lemma412iiiFirst
 #check Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecond
+#check Bong.heADCW1Unary
+#check Bong.heADCN1Unary
+#check Bong.BONG.GoodBONG.ambientIsometric_of_diagonalRepresents
+#check Bong.BONG.GoodBONG.isIsometric_publishedModel_iff_orderProfile
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iOnePublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iDeltaPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiOnePublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiDeltaPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitFirstPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitSecondPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUniformizerFirstPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUniformizerSecondPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iiPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iiiFirstPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecondPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412UnaryPublished
 #check Bong.Lattice.QuadraticLatticeModel.IsNADC.representsExactlyOne_of_ambient
 #check Bong.Lattice.QuadraticLatticeModel.IsNADC.represents_every_of_ambient
 #check Bong.Lattice.heADCLemma414LocalDyadic
@@ -113,4 +130,17 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma412ii
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiFirst
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecond
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iOnePublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iDeltaPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiOnePublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiDeltaPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitFirstPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitSecondPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUniformizerFirstPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUniformizerSecondPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiFirstPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecondPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412UnaryPublished
 #print axioms Bong.Lattice.QuadraticLatticeModel.IsNADC.representsExactlyOne_of_ambient
