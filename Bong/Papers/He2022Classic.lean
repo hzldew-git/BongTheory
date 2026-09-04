@@ -16,6 +16,7 @@ import Bong.Bong.He2022ClassicLemma34
 import Bong.Bong.He2022ClassicLemma35
 import Bong.Bong.He2022ClassicLemma36
 import Bong.Bong.He2022ClassicLemma37
+import Bong.Bong.He2022ClassicLemma38
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -39,7 +40,11 @@ branches and the alternating-prefix domination split.  Lemma 3.5's
 mixed-prefix alternative and its quantified target-tail bounds are also
 formalized.  Lemma 3.6's terminal odd-rank inequality and its explicit
 Theorem 2.5(ii) endpoint are formalized as well.  Lemma 3.7's chained
-terminal-defect bounds and strict source-gap consequence are formalized.  The
+terminal-defect bounds and strict source-gap consequence are formalized.
+Lemma 3.8's contradiction proof for the publisher's two-defect trigger in
+Theorem 2.5(iii) is formalized, with the publisher trigger kept distinct from
+the older alpha-trigger formulation until Beli's equivalence hypotheses are
+available.  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 2.8(ii), and classic integrality of every indexed row are also proved.  It
 does not yet claim the paper's explicit proof of the main BONG criterion or

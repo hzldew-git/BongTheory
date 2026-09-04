@@ -52,12 +52,27 @@ noncomputable def HeClassicDefectConditionAt {m n : Nat}
   (a.representationAlphaValue b i : WithTop ℚ) ≤
     a.truncatedPrefixDefect b 1 i.val i.val
 
-/-- Theorem 2.5(iii) at one paper index, in the original alpha-trigger
-form used by `RepresentationConditions`. -/
+/-- The alpha-trigger form of Theorem 2.5(iii) at one paper index, used by
+`RepresentationConditions` and equivalent to the publisher's defect-trigger
+form once conditions (i) and (ii) discharge Beli's Lemma 2.16 hypotheses. -/
 noncomputable def HeClassicCentralConditionAt {m n : Nat}
     (a : GoodBONG q L (m + 2)) (b : GoodBONG r M (n + 2))
     (i : CentralRepresentationIndex (m + 2) (n + 2)) : Prop :=
   a.centralAlphaTrigger b i →
+    DiagonalRepresents
+      (b.prefixValues (i.val - 1) (by
+        have := i.le_small_succ
+        omega))
+      (a.prefixValues i.val (by
+        have := i.lt_large
+        omega))
+
+/-- Theorem 2.5(iii) exactly as printed in the publisher version: its premise
+is the two-capped-defect trigger (2.8). -/
+noncomputable def HeClassicPublishedCentralConditionAt {m n : Nat}
+    (a : GoodBONG q L (m + 2)) (b : GoodBONG r M (n + 2))
+    (i : CentralRepresentationIndex (m + 2) (n + 2)) : Prop :=
+  a.centralDefectTrigger b i →
     DiagonalRepresents
       (b.prefixValues (i.val - 1) (by
         have := i.le_small_succ
@@ -112,6 +127,14 @@ theorem heClassicCentralConditions_iff_forall_at {m n : Nat}
     (a : GoodBONG q L (m + 2)) (b : GoodBONG r M (n + 2)) :
     a.CentralRepresentationConditions b ↔
       ∀ i, a.HeClassicCentralConditionAt b i := by
+  rfl
+
+/-- The publisher's pointwise defect-trigger predicates are exactly the
+fields of `CentralRepresentationConditionsPrime`. -/
+theorem heClassicPublishedCentralConditions_iff_forall_at {m n : Nat}
+    (a : GoodBONG q L (m + 2)) (b : GoodBONG r M (n + 2)) :
+    a.CentralRepresentationConditionsPrime b ↔
+      ∀ i, a.HeClassicPublishedCentralConditionAt b i := by
   rfl
 
 theorem heClassicLongConditions_iff_forall_at {m n : Nat}
