@@ -6,7 +6,9 @@ Authors: BONG Theory contributors
 
 import Bong.Bong.HeHu2022PublishedTestingSet
 import Bong.Bong.HeHu2022Lemma313
+import Bong.Bong.HeHu2022Lemma311
 import Bong.Bong.HeHu2022Proposition37
+import Bong.Bong.DiagonalCodimensionTwoRepresentationProof
 import Bong.Lattice.NADC
 
 /-!
@@ -21,7 +23,7 @@ than recorded as fresh assumptions.
 
 namespace Bong
 
-open Dyadic Module BONG.GoodBONG
+open Dyadic Module BONG.GoodBONG AlternatingEndpointTower
 
 universe u
 
@@ -216,6 +218,51 @@ theorem heADC2025Lemma44iOdd
   · rintro rfl
     exact Lattice.QuadraticLatticeModel.IsAmbientlyIsometric.refl _
 
+/-- He, Lemma 4.4(ii), in the invariant determinant--Hasse form used by
+the repository.  Substituting the two published `W` rows reduces the sign
+on the right to the paper's Hilbert-symbol equation
+`(c',c) = (-1)^(nu'+nu)`. -/
+theorem heADC2025Lemma44ii {n : Nat}
+    (source : Fin n → Kˣ) (target : Fin (n + 1) → Kˣ) :
+    DiagonalRepresents
+        (diagonalUnitCoefficients source)
+        (diagonalUnitCoefficients target) ↔
+      diagonalHasseSymbol K target * diagonalHasseSymbol K source *
+          hilbertSymbol K (diagonalUnitDeterminant source)
+            (diagonalUnitDeterminant target) *
+          hilbertSymbol K (diagonalUnitDeterminant target) (-1) = 1 :=
+  diagonalCodimensionOneRepresents_iff_sign_eq_one source target
+
+/-- He, Lemma 4.4(iii), before substituting the finite `W` table.  In the
+exceptional signed-determinant class, a codimension-two target represents
+the source exactly when it is the source plus a hyperbolic plane; outside
+that class representation is automatic. -/
+theorem heADC2025Lemma44iii {n : Nat}
+    (source : Fin n → Kˣ) (target : Fin (n + 2) → Kˣ) :
+    DiagonalRepresents
+        (diagonalUnitCoefficients source)
+        (diagonalUnitCoefficients target) ↔
+      ¬ IsSquare
+          (-diagonalUnitDeterminant target *
+            diagonalUnitDeterminant source) ∨
+        DiagonalRepresents
+          (diagonalUnitCoefficients
+            (Fin.append source (heHuHyperbolicPair (K := K))))
+          (diagonalUnitCoefficients target) := by
+  constructor
+  · intro hrep
+    by_cases hdet : IsSquare
+        (-diagonalUnitDeterminant target *
+          diagonalUnitDeterminant source)
+    · right
+      exact (diagonalRepresents_target_to_appendHyperbolic_of_negativeDetSquare
+        source target hdet hrep).symm_of_sameRank
+    · exact Or.inl hdet
+  · rintro (hdet | hlift)
+    · exact dyadicDiagonalCodimensionTwo_represents n source target hdet
+    · exact (diagonalRepresents_append_right_prefix source
+        (heHuHyperbolicPair (K := K))).trans hlift
+
 /-- He, Lemma 4.5(i), in codimension one. -/
 theorem heADC2025Lemma45iCodimensionOne {n : Nat}
     (first second : Fin n → Kˣ)
@@ -235,6 +282,142 @@ theorem heADC2025Lemma45iCodimensionTwo {n : Nat}
         diagonalUnitDeterminant first)) :
     HeHuRepresentsExactlyOne first second target :=
   heHu2022Lemma313CodimensionTwo first second pair target hdet
+
+/-- The direction of "represents exactly one" used in He, Lemma 4.5(ii):
+the common smaller space is represented by exactly one member of the
+ordered larger pair. -/
+def HeADCIsRepresentedByExactlyOne {m n : Nat}
+    (source : Fin m → Kˣ) (first second : Fin n → Kˣ) : Prop :=
+  (DiagonalRepresents
+      (diagonalUnitCoefficients source)
+      (diagonalUnitCoefficients first) ∧
+    ¬ DiagonalRepresents
+      (diagonalUnitCoefficients source)
+      (diagonalUnitCoefficients second)) ∨
+  (¬ DiagonalRepresents
+      (diagonalUnitCoefficients source)
+      (diagonalUnitCoefficients first) ∧
+    DiagonalRepresents
+      (diagonalUnitCoefficients source)
+      (diagonalUnitCoefficients second))
+
+private theorem heADCIntUnitsExactlyOneEqOne
+    (x y : ℤˣ) (hxy : x ≠ y) :
+    (x = 1 ∧ y ≠ 1) ∨ (x ≠ 1 ∧ y = 1) := by
+  rcases Int.units_eq_one_or x with hx | hx <;>
+    rcases Int.units_eq_one_or y with hy | hy
+  · exact (hxy (hx.trans hy.symm)).elim
+  · exact Or.inl ⟨hx, by simpa [hy]⟩
+  · exact Or.inr ⟨by simpa [hx], hy⟩
+  · exact (hxy (hx.trans hy.symm)).elim
+
+/-- He, Lemma 4.5(ii), codimension-one case. -/
+theorem heADC2025Lemma45iiCodimensionOne {n : Nat}
+    (source : Fin n → Kˣ)
+    (first second : Fin (n + 1) → Kˣ)
+    (pair : HeHuSpacePairProperties first second) :
+    HeADCIsRepresentedByExactlyOne source first second := by
+  let Hs := diagonalHasseSymbol K source
+  let H1 := diagonalHasseSymbol K first
+  let H2 := diagonalHasseSymbol K second
+  let Ds := diagonalUnitDeterminant source
+  let D1 := diagonalUnitDeterminant first
+  let D2 := diagonalUnitDeterminant second
+  let B1 := hilbertSymbol K Ds D1
+  let B2 := hilbertSymbol K Ds D2
+  let C1 := hilbertSymbol K D1 (-1)
+  let C2 := hilbertSymbol K D2 (-1)
+  let s1 := H1 * Hs * B1 * C1
+  let s2 := H2 * Hs * B2 * C2
+  have hhasse : H1 ≠ H2 := by
+    intro heq
+    apply pair.nonisometric
+    exact dyadicDiagonalClassification_represents (n + 1) second first
+      pair.determinantSquare (by simpa only [H1, H2] using heq.symm)
+  have hB : B1 = B2 := by
+    apply hilbertSymbol_eq_of_isSquare_mul_right
+    simpa only [D1, D2, mul_comm] using pair.determinantSquare
+  have hC : C1 = C2 := by
+    apply hilbertSymbol_eq_of_isSquare_mul_left
+    simpa only [D1, D2, mul_comm] using pair.determinantSquare
+  have hsign : s1 ≠ s2 := by
+    intro heq
+    apply hhasse
+    have hcancel : H1 * (Hs * B1 * C1) =
+        H2 * (Hs * B1 * C1) := by
+      simpa only [s1, s2, hB, hC, mul_assoc, mul_comm,
+        mul_left_comm] using heq
+    exact mul_right_cancel hcancel
+  have hfirst :
+      DiagonalRepresents
+          (diagonalUnitCoefficients source)
+          (diagonalUnitCoefficients first) ↔ s1 = 1 := by
+    simpa only [s1, H1, Hs, B1, C1, Ds, D1] using
+      diagonalCodimensionOneRepresents_iff_sign_eq_one source first
+  have hsecond :
+      DiagonalRepresents
+          (diagonalUnitCoefficients source)
+          (diagonalUnitCoefficients second) ↔ s2 = 1 := by
+    simpa only [s2, H2, Hs, B2, C2, Ds, D2] using
+      diagonalCodimensionOneRepresents_iff_sign_eq_one source second
+  rcases heADCIntUnitsExactlyOneEqOne s1 s2 hsign with hleft | hright
+  · exact Or.inl ⟨hfirst.2 hleft.1,
+      fun h => hleft.2 (hsecond.1 h)⟩
+  · exact Or.inr ⟨(fun h => hright.1 (hfirst.1 h)),
+      hsecond.2 hright.2⟩
+
+/-- He, Lemma 4.5(ii), codimension-two case.  The determinant hypothesis is
+the repository's ordinary-determinant translation of the paper's signed
+determinant equality. -/
+theorem heADC2025Lemma45iiCodimensionTwo {n : Nat}
+    (source : Fin n → Kˣ)
+    (first second : Fin (n + 2) → Kˣ)
+    (pair : HeHuSpacePairProperties first second)
+    (hdet : IsSquare
+      (-diagonalUnitDeterminant first *
+        diagonalUnitDeterminant source)) :
+    HeADCIsRepresentedByExactlyOne source first second := by
+  let hyperbolic := heHuHyperbolicPair (K := K)
+  let extended := Fin.append source hyperbolic
+  have hhyperbolic : diagonalUnitDeterminant hyperbolic = -1 := by
+    simp [hyperbolic, heHuHyperbolicPair, diagonalUnitDeterminant,
+      Fin.prod_univ_two]
+  have hextendedDet : IsSquare
+      (diagonalUnitDeterminant extended *
+        diagonalUnitDeterminant first) := by
+    change IsSquare
+      (diagonalUnitDeterminant (Fin.append source hyperbolic) *
+        diagonalUnitDeterminant first)
+    rw [diagonalUnitDeterminant_append, hhyperbolic]
+    simpa only [mul_neg, neg_mul, one_mul, mul_one, mul_comm,
+      mul_left_comm, mul_assoc] using hdet
+  have hdetSecond : IsSquare
+      (-diagonalUnitDeterminant second *
+        diagonalUnitDeterminant source) := by
+    have h := isSquare_mul_trans
+      (-diagonalUnitDeterminant source)
+      (diagonalUnitDeterminant first)
+      (diagonalUnitDeterminant second)
+      (by simpa [mul_comm] using hdet)
+      (by simpa only [mul_comm] using pair.determinantSquare)
+    simpa [mul_comm] using h
+  have hsourceExtended : DiagonalRepresents
+      (diagonalUnitCoefficients source)
+      (diagonalUnitCoefficients extended) := by
+    exact diagonalRepresents_append_right_prefix source hyperbolic
+  rcases pair.exhaustive extended hextendedDet with hfirst | hsecond
+  · left
+    refine ⟨hsourceExtended.trans hfirst, ?_⟩
+    intro hrepSecond
+    apply pair.nonisometric
+    exact (diagonalRepresents_target_to_appendHyperbolic_of_negativeDetSquare
+      source second hdetSecond hrepSecond).trans hfirst
+  · right
+    refine ⟨?_, hsourceExtended.trans hsecond⟩
+    intro hrepFirst
+    apply pair.nonisometric
+    exact ((diagonalRepresents_target_to_appendHyperbolic_of_negativeDetSquare
+      source first hdet hrepFirst).trans hsecond).symm_of_sameRank
 
 /-! ## The explicit dyadic maximal-lattice table -/
 

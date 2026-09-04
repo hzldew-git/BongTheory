@@ -48,8 +48,13 @@ import Bong.Papers.He2023ADC
 #check Bong.heADC2025Remark43EvenMaximal
 #check Bong.heADC2025Lemma44iOdd
 #check Bong.heADC2025Lemma44iEven
+#check Bong.heADC2025Lemma44ii
+#check Bong.heADC2025Lemma44iii
 #check Bong.heADC2025Lemma45iCodimensionOne
 #check Bong.heADC2025Lemma45iCodimensionTwo
+#check Bong.HeADCIsRepresentedByExactlyOne
+#check Bong.heADC2025Lemma45iiCodimensionOne
+#check Bong.heADC2025Lemma45iiCodimensionTwo
 #check Bong.heADC2025Lemma49EvenFirstOne
 #check Bong.heADC2025Lemma49EvenFirstDelta
 #check Bong.heADC2025Lemma49EvenSecondOne
@@ -73,7 +78,9 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.GlobalLocalLatticeSystem.heADCTheorem13
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem36
 #print axioms Bong.heADC2025Proposition42iiiEvenFirst
+#print axioms Bong.heADC2025Lemma44iii
 #print axioms Bong.heADC2025Lemma45iCodimensionTwo
+#print axioms Bong.heADC2025Lemma45iiCodimensionTwo
 #print axioms Bong.heADC2025Lemma49EvenFirstOne
 #print axioms Bong.heADC2025Lemma49OddSecondUnitUniformizer
 #print axioms Bong.Lattice.QuadraticLatticeModel.IsNADC.representsExactlyOne_of_ambient
