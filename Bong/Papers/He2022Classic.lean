@@ -18,6 +18,7 @@ import Bong.Bong.He2022ClassicLemma36
 import Bong.Bong.He2022ClassicLemma37
 import Bong.Bong.He2022ClassicLemma38
 import Bong.Bong.He2022ClassicLemma39
+import Bong.Bong.He2022ClassicLemma57
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -50,6 +51,10 @@ constructs the truncated target BONG and transports the capped defects into
 Lemma 3.8, while part (ii) proves the terminal parity contradiction through
 Lemma 3.7.  Both parts retain arbitrary source tails as well as exact-rank
 specializations.  The
+odd-rank Section 5 development now includes the exact conditions `J1_O`,
+`J2_O`, and `J3_O`, Lemmas 5.3--5.7, the literal `C₁ⁿ(c)` and
+`C₁ⁿ(c c-tilde-sharp)` tests, and the complete three-way equivalence in
+Lemma 5.7 between all classic targets, those two tests, and `J2_O(n)`.  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 2.8(ii), and classic integrality of every indexed row are also proved.  It
 does not yet claim the paper's explicit proof of the main BONG criterion or
