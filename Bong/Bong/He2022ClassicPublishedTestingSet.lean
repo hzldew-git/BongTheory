@@ -5,9 +5,11 @@ Authors: BONG Theory contributors
 -/
 
 import Bong.Bong.He2022ClassicLemma29
+import Bong.Bong.Beli2009FinalRemarksProof
 import Bong.Bong.HeHu2022PublishedTestingSet
 import Bong.Bong.HeHu2022Lemma45
 import Bong.Dyadic.ResidueArtinSchreier
+import Bong.Dyadic.UnitDefectClassification
 
 /-!
 # He (2024), Definition 2.6 and Proposition 2.8: the finite published table
@@ -426,6 +428,173 @@ structure HeClassicOmegaData where
   omega_order : ordUnit K omega = 0
   omegaSharp_order : ordUnit K omegaSharp = 0
   omega_defect : defectOrder (K := K) omega = (1 : WithTop ℚ)
+
+/-! The paper fixes the two displayed units, rather than merely assuming
+that suitable units exist.  The following construction verifies the exact
+values directly from the selected uniformizer and discriminant datum. -/
+
+private theorem heClassicOmegaRaw_order :
+    ord K (1 + uniformizer K) = 0 := by
+  have hstrict : ord K (1 : K) < ord K (uniformizer K) := by
+    simp only [ord_one, ord_uniformizer]
+    norm_num
+  simpa only [ord_one] using (ord K).map_add_eq_of_lt_left hstrict
+
+private theorem heClassicOmegaRaw_ne_zero :
+    (1 + uniformizer K : K) ≠ 0 := by
+  apply (ord_eq_top_iff K).not.mp
+  rw [heClassicOmegaRaw_order (K := K)]
+  exact WithTop.coe_ne_top
+
+/-- The literal unit `omega = 1 + pi` from Definition 2.6. -/
+noncomputable def heClassicOmega : Kˣ :=
+  Units.mk0 (1 + uniformizer K) (heClassicOmegaRaw_ne_zero (K := K))
+
+@[simp] theorem heClassicOmega_value :
+    (heClassicOmega (K := K) : K) = 1 + uniformizer K := rfl
+
+theorem heClassicOmega_order :
+    ordUnit K (heClassicOmega (K := K)) = 0 := by
+  apply WithTop.coe_injective
+  rw [coe_ordUnit, heClassicOmega_value,
+    heClassicOmegaRaw_order (K := K)]
+  norm_num
+
+/-- The exact quadratic defect of `1 + pi` is one.  This is the `d = 1`
+specialization of the odd-defect construction in the local-field layer,
+retained here with its literal value so Definition 2.6 can be audited. -/
+theorem heClassicOmega_quadraticDefect :
+    quadraticDefect K (heClassicOmega (K := K)) = (1 : ℕ∞) := by
+  let u : Kˣ := heClassicOmega (K := K)
+  have huUnit : IsValuationUnit K (u : K) :=
+    (isValuationUnit_iff_ordUnit_eq_zero K u).2
+      (heClassicOmega_order (K := K))
+  have hlower : (1 : ℕ∞) ≤ quadraticDefect K u := by
+    apply natCast_le_quadraticDefect K
+    refine ⟨1, ?_⟩
+    have hfield : 1 - (1 : K) ^ 2 / (u : K) =
+        uniformizer K / (u : K) := by
+      change 1 - (1 : K) ^ 2 / (1 + uniformizer K) =
+        uniformizer K / (1 + uniformizer K)
+      field_simp [heClassicOmegaRaw_ne_zero (K := K)]
+      ring
+    rw [hfield, div_eq_mul_inv, ord_mul, AddValuation.map_inv,
+      huUnit, ord_uniformizer]
+    norm_num
+  have hupper : quadraticDefect K u ≤ (1 : ℕ∞) := by
+    by_contra hnot
+    have hstrict : (1 : ℕ∞) < quadraticDefect K u :=
+      lt_of_not_ge hnot
+    have hnext : (2 : ℕ∞) ≤ quadraticDefect K u := by
+      have hadd : (1 : ℕ∞) + 1 ≤ quadraticDefect K u :=
+        (ENat.add_one_le_iff (by simp : (1 : ℕ∞) ≠ ⊤)).2 hstrict
+      norm_num at hadd ⊢
+      exact hadd
+    obtain ⟨y, hy⟩ :=
+      (isQuadraticApproximation_iff_le_defect K).2 hnext
+    have hdeep : ((2 : Int) : WithTop Int) ≤
+        ord K ((u : K) - y ^ 2) := by
+      have hfield : 1 - y ^ 2 / (u : K) =
+          ((u : K) - y ^ 2) / (u : K) := by
+        field_simp [Units.ne_zero u]
+      rw [hfield, div_eq_mul_inv, ord_mul, AddValuation.map_inv,
+        huUnit] at hy
+      simp only [neg_zero, add_zero] at hy
+      exact_mod_cast hy
+    have hpiLt : ord K (uniformizer K) <
+        ord K ((u : K) - y ^ 2) := by
+      rw [ord_uniformizer]
+      exact lt_of_lt_of_le (by norm_num) hdeep
+    have horder : ord K (1 - y ^ 2) =
+        ((1 : Int) : WithTop Int) := by
+      have hsub := (ord K).map_sub_eq_of_lt_right hpiLt
+      have hfield : ((u : K) - y ^ 2) - uniformizer K =
+          1 - y ^ 2 := by
+        change (1 + uniformizer K - y ^ 2) - uniformizer K =
+          1 - y ^ 2
+        ring
+      rw [hfield, ord_uniformizer] at hsub
+      convert hsub using 1 <;> norm_num
+    have he := ramificationIndex_pos (K := K)
+    have heven : Even (1 : Int) :=
+      even_order_one_sub_sq_of_lt_two_mul_e_proved y (1 : Int) horder
+        (by norm_num) (by exact_mod_cast (show 1 < 2 * ramificationIndex K by omega))
+    norm_num at heven
+  exact le_antisymm hupper hlower
+
+theorem heClassicOmega_defect :
+    defectOrder (K := K) (heClassicOmega (K := K)) =
+      (1 : WithTop ℚ) := by
+  simpa using
+    (Beli2009FinalRemarksProof.defectOrder_eq_natCast_of_quadraticDefect_eq
+      (K := K) (heClassicOmega (K := K)) 1
+        (heClassicOmega_quadraticDefect (K := K)))
+
+private theorem heClassicOmegaSharpCorrection_order :
+    ord K (4 * (inferInstance : DyadicDiscriminantClassLaws K).rho *
+        (uniformizer K)⁻¹) =
+      (((ramificationIndex K : Int) + (ramificationIndex K : Int) -
+        (1 : Int) : Int) : WithTop Int) := by
+  rw [show (4 : K) = 2 * 2 by norm_num, mul_assoc, ord_mul, ord_mul,
+    ord_mul,
+    ← ramificationIndex_spec,
+    (inferInstance : DyadicDiscriminantClassLaws K).rho_isValuationUnit,
+    AddValuation.map_inv, ord_uniformizer]
+  norm_cast
+
+private theorem heClassicOmegaSharpRaw_order :
+    ord K (1 + 4 * (inferInstance : DyadicDiscriminantClassLaws K).rho *
+        (uniformizer K)⁻¹) = 0 := by
+  have he := ramificationIndex_pos (K := K)
+  have hpositive : (0 : WithTop Int) <
+      ord K (4 * (inferInstance : DyadicDiscriminantClassLaws K).rho *
+        (uniformizer K)⁻¹) := by
+    rw [heClassicOmegaSharpCorrection_order (K := K)]
+    norm_cast
+    rw [Int.subNatNat_eq_coe]
+    omega
+  have hstrict : ord K (1 : K) <
+      ord K (4 * (inferInstance : DyadicDiscriminantClassLaws K).rho *
+        (uniformizer K)⁻¹) := by
+    simpa only [ord_one] using hpositive
+  simpa only [ord_one] using (ord K).map_add_eq_of_lt_left hstrict
+
+private theorem heClassicOmegaSharpRaw_ne_zero :
+    (1 + 4 * (inferInstance : DyadicDiscriminantClassLaws K).rho *
+      (uniformizer K)⁻¹ : K) ≠ 0 := by
+  apply (ord_eq_top_iff K).not.mp
+  rw [heClassicOmegaSharpRaw_order (K := K)]
+  exact WithTop.coe_ne_top
+
+/-- The literal unit `omega# = 1 + 4 rho pi^(-1)` from Definition 2.6. -/
+noncomputable def heClassicOmegaSharp : Kˣ :=
+  Units.mk0
+    (1 + 4 * (inferInstance : DyadicDiscriminantClassLaws K).rho *
+      (uniformizer K)⁻¹)
+    (heClassicOmegaSharpRaw_ne_zero (K := K))
+
+@[simp] theorem heClassicOmegaSharp_value :
+    (heClassicOmegaSharp (K := K) : K) =
+      1 + 4 * (inferInstance : DyadicDiscriminantClassLaws K).rho *
+        (uniformizer K)⁻¹ := rfl
+
+theorem heClassicOmegaSharp_order :
+    ordUnit K (heClassicOmegaSharp (K := K)) = 0 := by
+  apply WithTop.coe_injective
+  rw [coe_ordUnit, heClassicOmegaSharp_value,
+    heClassicOmegaSharpRaw_order (K := K)]
+  norm_num
+
+/-- The canonical pair used by every odd-rank row of Definition 2.6. -/
+noncomputable def heClassicCanonicalOmegaData :
+    HeClassicOmegaData (K := K) where
+  omega := heClassicOmega (K := K)
+  omegaSharp := heClassicOmegaSharp (K := K)
+  omega_value := heClassicOmega_value (K := K)
+  omegaSharp_value := heClassicOmegaSharp_value (K := K)
+  omega_order := heClassicOmega_order (K := K)
+  omegaSharp_order := heClassicOmegaSharp_order (K := K)
+  omega_defect := heClassicOmega_defect (K := K)
 
 namespace HeClassicExceptionalIndex
 

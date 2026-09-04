@@ -59,12 +59,34 @@ import Bong.Papers.He2022Classic
 #check Bong.he2022ClassicProposition28ii_even_eq_one
 #check Bong.he2022ClassicProposition28ii_odd
 #check Bong.HeClassicOmegaData
+#check Bong.heClassicOmega
+#check Bong.heClassicOmega_value
+#check Bong.heClassicOmega_order
+#check Bong.heClassicOmega_quadraticDefect
+#check Bong.heClassicOmega_defect
+#check Bong.heClassicOmegaSharp
+#check Bong.heClassicOmegaSharp_value
+#check Bong.heClassicOmegaSharp_order
+#check Bong.heClassicCanonicalOmegaData
 #check Bong.HeClassicPublishedEvenTestingIndex.model
 #check Bong.HeClassicPublishedEvenTestingIndex.model_rank
 #check Bong.HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
 #check Bong.HeClassicPublishedOddTestingIndex.model
 #check Bong.HeClassicPublishedOddTestingIndex.model_rank
 #check Bong.HeClassicPublishedOddTestingIndex.model_isClassicIntegral
+#check Bong.heClassicRamifiedBinary
+#check Bong.heClassicRamifiedBinary_determinant_order
+#check Bong.heClassicRamifiedSnoc_anisotropic
+#check Bong.heClassicHyperbolicPair_represents_iff_isotropic
+#check Bong.heClassicRamifiedBinary_represents_iff_anisotropic
+#check Bong.he2022ClassicLemma211i_ternary
+#check Bong.he2022ClassicLemma211ii_ternary
+#check Bong.he2022ClassicLemma211iii_ternary
+#check Bong.heClassicLemma211First
+#check Bong.heClassicLemma211Second
+#check Bong.he2022ClassicLemma211i
+#check Bong.he2022ClassicLemma211ii
+#check Bong.he2022ClassicLemma211iii
 
 #print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
 #print axioms Bong.Lattice.exists_classicMaximal_superlattice
@@ -91,5 +113,14 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.he2022ClassicProposition28ii_even_gt_one
 #print axioms Bong.he2022ClassicProposition28ii_even_eq_one
 #print axioms Bong.he2022ClassicProposition28ii_odd
+#print axioms Bong.heClassicOmega_quadraticDefect
+#print axioms Bong.heClassicCanonicalOmegaData
 #print axioms Bong.HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
 #print axioms Bong.HeClassicPublishedOddTestingIndex.model_isClassicIntegral
+#print axioms Bong.heClassicRamifiedBinary_determinant_order
+#print axioms Bong.heClassicRamifiedSnoc_anisotropic
+#print axioms Bong.heClassicHyperbolicPair_represents_iff_isotropic
+#print axioms Bong.heClassicRamifiedBinary_represents_iff_anisotropic
+#print axioms Bong.he2022ClassicLemma211i
+#print axioms Bong.he2022ClassicLemma211ii
+#print axioms Bong.he2022ClassicLemma211iii
