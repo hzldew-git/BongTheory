@@ -145,10 +145,26 @@ theorem he2022ClassicCorollary311iiInitial {m : Nat} (t : Nat)
       (by omega) (by exact ⟨t + 1, by omega⟩) (by omega)
       hzeroToJ i hiTwo hiRange
 
-/-- Corollary 3.11(ii), full assertion through paper index `n`.  The
-publisher explicitly assumes `alpha_(n+1)=1`; it is retained even though
-Lemma 3.4 needs only the preceding alpha under these stronger hypotheses. -/
-theorem he2022ClassicCorollary311ii {m : Nat} (t : Nat)
+/-- An additive `J2'_E` bound is the weak signed-prefix inequality used
+by Lemma 3.4. -/
+theorem truncatedPrefixDefect_le_one_sub_order_of_add_le
+    (R : Int) (D : WithTop ℚ)
+    (hadd : ((((R : Int) : ℚ) : WithTop ℚ)) + D <= 1) :
+    D <= ((((1 - R : Int) : ℚ) : WithTop ℚ)) := by
+  have hDne : D ≠ ⊤ := by
+    intro htop
+    rw [htop] at hadd
+    simp at hadd
+  rw [← WithTop.coe_untop D hDne] at hadd ⊢
+  norm_cast at hadd ⊢
+  push_cast at hadd ⊢
+  linarith
+
+/-- The precise consequence of Corollary 3.11(ii) used in Lemma 4.2.
+Only `alpha_n = 1` and the weak signed-prefix inequality are needed by
+Lemma 3.4 at the final index.  Its additive hypothesis is exactly the
+form printed as `J2'_E(n)` in Section 4. -/
+theorem he2022ClassicCorollary311ii_of_previousAlpha {m : Nat} (t : Nat)
     (a : GoodBONG q L (m + 3))
     (b : GoodBONG r M (2 * t + 2))
     (hNextTwoBound : 2 * t + 3 < m + 3)
@@ -159,13 +175,12 @@ theorem he2022ClassicCorollary311ii {m : Nat} (t : Nat)
     (halpha : forall k : Fin (m + 2), k.val < 2 * t + 2 ->
       a.alphaValue k = 1)
     (hnext : a.order ⟨2 * t + 2, by omega⟩ = 0)
-    (_halphaNext : a.alphaValue ⟨2 * t + 2, by omega⟩ = 1)
     (hfield : ramificationIndex K = 1 ∨
       (1 < ramificationIndex K ∧
-        a.truncatedPrefixDefect a ((-1) ^ (t + 2)) 0
-            (2 * t + 4) =
-          ((((1 - a.order ⟨2 * t + 3, hNextTwoBound⟩ : Int) : ℚ) :
-            WithTop ℚ))))
+        ((((a.order ⟨2 * t + 3, hNextTwoBound⟩ : Int) : ℚ) :
+              WithTop ℚ)) +
+            a.truncatedPrefixDefect a ((-1) ^ (t + 2)) 0
+              (2 * t + 4) <= 1))
     (i : RepresentationIndex (m + 3) (2 * t + 2)) :
     a.HeClassicDefectConditionAt b i := by
   by_cases hiBefore : i.val < 2 * t + 2
@@ -201,7 +216,6 @@ theorem he2022ClassicCorollary311ii {m : Nat} (t : Nat)
     · exact Or.inl heOne
     · right
       refine ⟨heLarge, ?_⟩
-      have hEq := hdefect
       have hiFormula : (i.val + 2) / 2 = t + 2 := by omega
       have hLength : i.val + 2 = 2 * t + 4 := by omega
       rw [hiFormula, hLength]
@@ -212,7 +226,40 @@ theorem he2022ClassicCorollary311ii {m : Nat} (t : Nat)
         change i.val + 1 = 2 * t + 3
         omega
       rw [hOrderIndex]
-      exact le_of_eq hEq
+      exact truncatedPrefixDefect_le_one_sub_order_of_add_le
+        (a.order ⟨2 * t + 3, hNextTwoBound⟩) _ hdefect
+
+/-- Corollary 3.11(ii), literal full assertion through paper index `n`.
+The publisher explicitly assumes `alpha_(n+1)=1` and a signed-prefix
+equality.  Both imply the weaker endpoint data isolated above. -/
+theorem he2022ClassicCorollary311ii {m : Nat} (t : Nat)
+    (a : GoodBONG q L (m + 3))
+    (b : GoodBONG r M (2 * t + 2))
+    (hNextTwoBound : 2 * t + 3 < m + 3)
+    (hAClassic : Lattice.IsClassicIntegral q L)
+    (hBClassic : Lattice.IsClassicIntegral r M)
+    (hzero : forall k : Fin (m + 3), k.val < 2 * t + 2 ->
+      a.order k = 0)
+    (halpha : forall k : Fin (m + 2), k.val < 2 * t + 2 ->
+      a.alphaValue k = 1)
+    (hnext : a.order ⟨2 * t + 2, by omega⟩ = 0)
+    (_halphaNext : a.alphaValue ⟨2 * t + 2, by omega⟩ = 1)
+    (hfield : ramificationIndex K = 1 ∨
+      (1 < ramificationIndex K ∧
+        a.truncatedPrefixDefect a ((-1) ^ (t + 2)) 0
+            (2 * t + 4) =
+          ((((1 - a.order ⟨2 * t + 3, hNextTwoBound⟩ : Int) : ℚ) :
+            WithTop ℚ))))
+    (i : RepresentationIndex (m + 3) (2 * t + 2)) :
+    a.HeClassicDefectConditionAt b i := by
+  apply a.he2022ClassicCorollary311ii_of_previousAlpha t b
+    hNextTwoBound hAClassic hBClassic hzero halpha hnext
+  · rcases hfield with heOne | ⟨heLarge, hdefect⟩
+    · exact Or.inl heOne
+    · refine Or.inr ⟨heLarge, ?_⟩
+      rw [hdefect]
+      norm_cast
+      linarith
 
 /-- Corollary 3.11(iii): for odd `n`, the signed-prefix equality extends
 condition (ii) over all paper indices `1 <= i <= n`. -/
