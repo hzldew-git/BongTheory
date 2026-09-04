@@ -215,6 +215,37 @@ theorem he2022ClassicLemma31iii {m n : Nat}
   exact (not_lt_of_ge htargetNonnegative) (by
     simpa only [previous, hnext] using htrigger.1)
 
+/-- Lemma 3.1(iii) for the two-defect trigger printed in the publisher
+version of Theorem 2.5(iii).  Its first strict inequality is already
+impossible when `R_(j+1)=0`. -/
+theorem he2022ClassicLemma31iiiPublished {m n : Nat}
+    (a : GoodBONG q L (m + 2)) (b : GoodBONG r M (n + 2))
+    (hBClassic : Lattice.IsClassicIntegral r M)
+    (i : CentralRepresentationIndex (m + 2) (n + 2))
+    (hiEven : Even i.val)
+    (hnext : a.order ⟨i.val, i.lt_large⟩ = 0) :
+    a.HeClassicPublishedCentralConditionAt b i := by
+  intro htrigger
+  exfalso
+  have hpreviousEven : Even (i.val - 2) := by
+    rcases hiEven with ⟨t, ht⟩
+    have htPos : 0 < t := by
+      have := i.one_lt
+      omega
+    exact ⟨t - 1, by omega⟩
+  let previous : Fin (n + 2) := ⟨i.val - 2, by
+    have := i.one_lt
+    have := i.le_small_succ
+    omega⟩
+  have hbounds :=
+    (b.he2022ClassicProposition24 hBClassic).oddIndexed
+      0 previous (Fin.zero_le previous) Even.zero (by
+        simpa only [previous] using hpreviousEven)
+  have htargetNonnegative : 0 ≤ b.order previous :=
+    hbounds.1.trans hbounds.2
+  exact (not_lt_of_ge htargetNonnegative) (by
+    simpa only [previous, hnext] using htrigger.1)
+
 /-- At an ordinary central index strictly beyond the first boundary, the
 alpha trigger forces the second strict inequality in Beli's definition of
 an essential index.  This is the unequal-rank form of the numerical
@@ -228,8 +259,12 @@ private theorem pair_lt_of_centralAlphaTrigger_of_ordinary
     (hiThree : 2 < i.val) (hiOrdinary : i.val ≤ n + 2)
     (hiNext : i.val + 1 < m + 2)
     (htrigger : a.centralAlphaTrigger b i) :
-    b.order ⟨i.val - 3, by omega⟩ +
-        b.order ⟨i.val - 2, by omega⟩ <
+    b.order ⟨i.val - 3, by
+        have := i.le_small_succ
+        omega⟩ +
+        b.order ⟨i.val - 2, by
+          have := i.le_small_succ
+          omega⟩ <
       a.order ⟨i.val, i.lt_large⟩ +
         a.order ⟨i.val + 1, hiNext⟩ := by
   let previous : RepresentationIndex (m + 2) (n + 2) := i.previous
@@ -333,6 +368,72 @@ private theorem pair_lt_of_centralAlphaTrigger_of_ordinary
     linarith [hprevious', hcurrent', hsum']
   exact_mod_cast hordersQ
 
+/-- The publisher's two-defect trigger forces the same strict adjacent-pair
+comparison as the alpha trigger.  This is the direct half-gap calculation
+behind the nonessential-index use of Lemma 3.1(iv). -/
+private theorem pair_lt_of_centralDefectTrigger_of_ordinary
+    {m n : Nat} (a : GoodBONG q L (m + 2))
+    (b : GoodBONG r M (n + 2))
+    (i : CentralRepresentationIndex (m + 2) (n + 2))
+    (hiThree : 2 < i.val) (hiNext : i.val + 1 < m + 2)
+    (htrigger : a.centralDefectTrigger b i) :
+    b.order ⟨i.val - 3, by
+        have := i.le_small_succ
+        omega⟩ +
+        b.order ⟨i.val - 2, by
+          have := i.le_small_succ
+          omega⟩ <
+      a.order ⟨i.val, i.lt_large⟩ +
+        a.order ⟨i.val + 1, hiNext⟩ := by
+  have hprevious := a.centralPreviousDefect_le_halfGap b i hiThree
+  have hcurrent := a.centralCurrentDefect_le_halfGap b i hiNext
+  have hsum := htrigger.2.trans_le (add_le_add hprevious hcurrent)
+  unfold halfGapValue orderGap at hsum
+  have hbCast :
+      (⟨i.val - 3, by
+        have := i.le_small_succ
+        omega⟩ : Fin (n + 1)).castSucc =
+        (⟨i.val - 3, by
+          have := i.le_small_succ
+          omega⟩ : Fin (n + 2)) := by
+    apply Fin.ext
+    rfl
+  have hbSucc :
+      (⟨i.val - 3, by
+        have := i.le_small_succ
+        omega⟩ : Fin (n + 1)).succ =
+        (⟨i.val - 2, by
+          have := i.le_small_succ
+          omega⟩ : Fin (n + 2)) := by
+    apply Fin.ext
+    simp only [Fin.val_succ]
+    omega
+  have haCast :
+      (⟨i.val, by omega⟩ : Fin (m + 1)).castSucc =
+        (⟨i.val, i.lt_large⟩ : Fin (m + 2)) := by
+    apply Fin.ext
+    rfl
+  have haSucc :
+      (⟨i.val, by omega⟩ : Fin (m + 1)).succ =
+        (⟨i.val + 1, hiNext⟩ : Fin (m + 2)) := by
+    apply Fin.ext
+    rfl
+  rw [hbCast, hbSucc, haCast, haSucc] at hsum
+  norm_cast at hsum
+  rw [← Rat.intCast_div_eq_divInt, ← Rat.intCast_div_eq_divInt] at hsum
+  push_cast at hsum
+  have hordersQ :
+      (b.order ⟨i.val - 3, by
+          have := i.le_small_succ
+          omega⟩ : ℚ) +
+          (b.order ⟨i.val - 2, by
+            have := i.le_small_succ
+            omega⟩ : ℚ) <
+        (a.order ⟨i.val, i.lt_large⟩ : ℚ) +
+          (a.order ⟨i.val + 1, hiNext⟩ : ℚ) := by
+    linarith
+  exact_mod_cast hordersQ
+
 /-- Lemma 3.1(iv), in the range in which its displayed second essentiality
 inequality exists.  The published lower bound `1 < j` includes `j = 2`,
 where Beli's endpoint convention omits that inequality; the proof and every
@@ -355,15 +456,60 @@ theorem he2022ClassicLemma31iv_corrected
   have hstrict := a.pair_lt_of_centralAlphaTrigger_of_ordinary
     (targetLaws := targetLaws) (sourceLaws := sourceLaws)
     b i hiThree hiOrdinary hiNext htrigger
-  let j : Fin (n + 1) := ⟨i.val - 3, by omega⟩
+  let j : Fin (n + 1) := ⟨i.val - 3, by
+    have := i.le_small_succ
+    omega⟩
   have htarget :=
     (b.he2022ClassicProposition24 hBClassic).adjacentOrderSum j
   have hleft : j.castSucc =
-      (⟨i.val - 3, by omega⟩ : Fin (n + 2)) := by
+      (⟨i.val - 3, by
+        have := i.le_small_succ
+        omega⟩ : Fin (n + 2)) := by
     apply Fin.ext
     rfl
   have hright : j.succ =
-      (⟨i.val - 2, by omega⟩ : Fin (n + 2)) := by
+      (⟨i.val - 2, by
+        have := i.le_small_succ
+        omega⟩ : Fin (n + 2)) := by
+    apply Fin.ext
+    simp only [j, Fin.val_succ]
+    omega
+  unfold adjacentOrderSum at htarget
+  rw [hleft, hright] at htarget
+  omega
+
+/-- Lemma 3.1(iv) for the publisher's two-defect trigger.  As in the alpha
+form, the displayed second essentiality comparison exists only for
+`2 < j`; this is the range used everywhere later in the paper. -/
+theorem he2022ClassicLemma31ivPublished_corrected
+    {m n : Nat} (a : GoodBONG q L (m + 2))
+    (b : GoodBONG r M (n + 2))
+    (hBClassic : Lattice.IsClassicIntegral r M)
+    (i : CentralRepresentationIndex (m + 2) (n + 2))
+    (hiThree : 2 < i.val) (hiNext : i.val + 1 < m + 2)
+    (hpair :
+      a.order ⟨i.val, i.lt_large⟩ +
+          a.order ⟨i.val + 1, hiNext⟩ = 0) :
+    a.HeClassicPublishedCentralConditionAt b i := by
+  intro htrigger
+  exfalso
+  have hstrict := a.pair_lt_of_centralDefectTrigger_of_ordinary
+    b i hiThree hiNext htrigger
+  let j : Fin (n + 1) := ⟨i.val - 3, by
+    have := i.le_small_succ
+    omega⟩
+  have htarget :=
+    (b.he2022ClassicProposition24 hBClassic).adjacentOrderSum j
+  have hleft : j.castSucc =
+      (⟨i.val - 3, by
+        have := i.le_small_succ
+        omega⟩ : Fin (n + 2)) := by
+    apply Fin.ext
+    rfl
+  have hright : j.succ =
+      (⟨i.val - 2, by
+        have := i.le_small_succ
+        omega⟩ : Fin (n + 2)) := by
     apply Fin.ext
     simp only [j, Fin.val_succ]
     omega
