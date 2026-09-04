@@ -144,3 +144,11 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecondPublished
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma412UnaryPublished
 #print axioms Bong.Lattice.QuadraticLatticeModel.IsNADC.representsExactlyOne_of_ambient
+
+#check @Bong.BONG.GoodBONG.exists_heADCOddNormalizedAmbient
+#check @Bong.BONG.GoodBONG.heADCOddMaximal_orders
+#check @Bong.BONG.GoodBONG.heADC2025Proposition413
+#print Bong.BONG.GoodBONG.HeADCProposition413Conclusions
+#print axioms Bong.BONG.GoodBONG.exists_heADCOddNormalizedAmbient
+#print axioms Bong.BONG.GoodBONG.heADCOddMaximal_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Proposition413
