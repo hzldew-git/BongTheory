@@ -41,3 +41,18 @@ that point is only `R_(j+2) >= 0`; it follows directly from good-BONG
 two-step monotonicity `R_j <= R_(j+2)` together with the hypothesis
 `R_j = 0`.  The formal proof uses this valid argument and does not encode
 the typographical parity claim.
+
+## Corollary 3.13(iii): missing preceding-gap premise
+
+The publisher version (p. 575) assumes only
+`R_(n+3)-R_(n+2) <= 2e` in part (iii), then says that the conclusion for
+all `2 <= i <= n+1` is clear from Lemma 3.1(v).  Applying Lemma 3.1(v) at
+`i=n` also requires
+`R_(n+2)-R_(n+1) <= 2e`.  This preceding inequality does not follow from
+the displayed hypotheses `R_1=...=R_n=0` and `R_(n+1) in {0,1}` alone.
+
+The formalization therefore proves parts (i) and (ii) literally, states
+part (iii) with the missing preceding-gap premise exposed, and also proves
+the commonly used specialization in which both `R_(n+1)` and `R_(n+2)`
+belong to `{0,1}`.  No stronger conclusion is attributed to the published
+proof without that additional premise.
