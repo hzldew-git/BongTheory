@@ -8,6 +8,7 @@ import Bong.Bong.HeHu2022PublishedTestingSet
 import Bong.Bong.HeHu2022Lemma313
 import Bong.Bong.HeHu2022Lemma311
 import Bong.Bong.HeHu2022Proposition37
+import Bong.Bong.Beli2009ClassificationProof
 import Bong.Bong.DiagonalCodimensionTwoRepresentationProof
 import Bong.Lattice.NADC
 
@@ -456,8 +457,8 @@ def heADC2025Lemma49OddFirstUnitUniformizer :=
   heHu2022Proposition37OddFirstUnitUniformizer (K := K)
 
 /-- He, Lemma 4.9(i), odd second-column unit row. -/
-def heADC2025Lemma49OddSecondUnit
-    [GoodBONGClassificationLaws.{u, u, u} K] :=
+def heADC2025Lemma49OddSecondUnit :=
+  letI : GoodBONGClassificationLaws.{u, u, u} K := goodBONGClassificationLawsProved K
   heHu2022Proposition37OddSecondUnit (K := K)
 
 /-- He, Lemma 4.9(i), odd second-column unit-uniformizer row. -/
