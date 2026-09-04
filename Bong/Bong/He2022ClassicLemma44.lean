@@ -34,7 +34,7 @@ namespace BONG.GoodBONG
 `{R_j, d[(-1)^(j/2) a_(1,j)]} subset {0,1}`. -/
 theorem he2022ClassicLemma44 {m j : Nat}
     (a : GoodBONG q L (m + 2))
-    (hjFour : 4 <= j) (hjBound : j < m + 2)
+    (hjFour : 4 <= j) (hjBound : j <= m + 2)
     (hPrevious : a.order ⟨j - 3, by omega⟩ = 0)
     (hSum :
       (((a.order ⟨j - 1, by omega⟩ : Int) : ℚ) : WithTop ℚ) +
@@ -84,29 +84,47 @@ theorem he2022ClassicLemma44 {m j : Nat}
         le_add_of_nonneg_left hOrderCastNonnegative
       _ <= 1 := by simpa only [current, capped] using hSum
   have hCappedIntegral : IsWithTopRationalInteger capped := by
-    rcases a.alternatingSelfCapped_integral_or_eq_nonintegral_alpha
-        ((-1) ^ (j / 2)) j (by omega) hjBound with hinteger | hnoninteger
-    · exact hinteger
-    · exfalso
-      have hlarge := a.twoE_lt_alternatingSelfCapped_of_not_integral
-        ((-1) ^ (j / 2)) j (by omega) hjBound (by
-          intro hinteger
-          exact hnoninteger.2 (by
-            rcases hinteger with ⟨z, hz⟩
-            refine ⟨z, ?_⟩
-            rw [hnoninteger.1] at hz
-            exact WithTop.coe_eq_coe.mp hz))
-      have hePositive : 0 < ramificationIndex K :=
-        ramificationIndex_pos (K := K)
-      have hOneLeTwoE : (1 : WithTop ℚ) <=
-          ((2 * (ramificationIndex K : ℚ) : ℚ) : WithTop ℚ) := by
-        exact_mod_cast (show (1 : ℚ) <=
-          2 * (ramificationIndex K : ℚ) by
-            exact_mod_cast (show (1 : Int) <=
-              2 * (ramificationIndex K : Int) by omega))
-      have hOneLt : (1 : WithTop ℚ) < capped :=
-        lt_of_le_of_lt hOneLeTwoE hlarge
-      exact (not_lt_of_ge hCappedLe) hOneLt
+    by_cases hjInternal : j < m + 2
+    · rcases a.alternatingSelfCapped_integral_or_eq_nonintegral_alpha
+          ((-1) ^ (j / 2)) j (by omega) hjInternal with
+        hinteger | hnoninteger
+      · exact hinteger
+      · exfalso
+        have hlarge := a.twoE_lt_alternatingSelfCapped_of_not_integral
+          ((-1) ^ (j / 2)) j (by omega) hjInternal (by
+            intro hinteger
+            exact hnoninteger.2 (by
+              rcases hinteger with ⟨z, hz⟩
+              refine ⟨z, ?_⟩
+              rw [hnoninteger.1] at hz
+              exact WithTop.coe_eq_coe.mp hz))
+        have hePositive : 0 < ramificationIndex K :=
+          ramificationIndex_pos (K := K)
+        have hOneLeTwoE : (1 : WithTop ℚ) <=
+            ((2 * (ramificationIndex K : ℚ) : ℚ) : WithTop ℚ) := by
+          exact_mod_cast (show (1 : ℚ) <=
+            2 * (ramificationIndex K : ℚ) by
+              exact_mod_cast (show (1 : Int) <=
+                2 * (ramificationIndex K : Int) by omega))
+        have hOneLt : (1 : WithTop ℚ) < capped :=
+          lt_of_le_of_lt hOneLeTwoE hlarge
+        exact (not_lt_of_ge hCappedLe) hOneLt
+    · have hjLast : j = m + 2 := by omega
+      have hraw : capped = defectOrder (K := K)
+          (((-1 : Kˣ) ^ (j / 2)) * a.prefixProduct 0 *
+            a.prefixProduct j) := by
+        dsimp only [capped]
+        unfold truncatedPrefixDefect
+        rw [a.prefixAlphaCap_zero, hjLast, a.prefixAlphaCap_last]
+        simp
+      rcases defectOrder_eq_top_or_isWithTopRationalInteger
+          (K := K)
+          (((-1 : Kˣ) ^ (j / 2)) * a.prefixProduct 0 *
+            a.prefixProduct j) with htop | hinteger
+      · exfalso
+        rw [hraw, htop] at hCappedLe
+        simp at hCappedLe
+      · simpa only [hraw] using hinteger
   have hCappedCases : capped = 0 ∨ capped = 1 := by
     rcases hCappedIntegral with ⟨z, hz⟩
     have hzNonnegative : 0 <= z := by

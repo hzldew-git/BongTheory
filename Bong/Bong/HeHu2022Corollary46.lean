@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 
-import Bong.Bong.HeHu2022AmbientRank
+import Bong.Bong.SplitQuaternaryPrefixDeterminant
 import Bong.Bong.HeHu2022Theorem41
 import Bong.Bong.BeliUniversalHalfTower
 import Bong.Bong.BeliUniversalTheorem31
@@ -52,46 +52,6 @@ noncomputable def HeHuCorollary46StandardModel
   letI : AddCommGroup T.Carrier := T.addCommGroup
   letI : Module K T.Carrier := T.module
   exact Lattice.IsIsometric q T.form L T.lattice
-
-private noncomputable def halfTowerTwoToHyperbolicPairIsometry : by
-    let T := Lattice.QuadraticLatticeModel.halfHyperbolicTower (K := K) 2
-    letI : AddCommGroup T.Carrier := T.addCommGroup
-    letI : Module K T.Carrier := T.module
-    exact QuadraticSpace.Isometry T.form
-      ((QuadraticSpace.hyperbolicPlane (K := K) (1 : Kˣ)).orthogonalSum
-        (QuadraticSpace.hyperbolicPlane (K := K) (1 : Kˣ))) := by
-  let ordinaryToHalf :=
-    QuadraticSpace.hyperbolicExtensionToHalfExtensionSpaceIsometry
-      (Lattice.zeroCoordinateQuadraticSpace (K := K)) 2
-  exact ordinaryToHalf.symm.trans
-    (QuadraticSpace.hyperbolicExtensionTwoToHyperbolicPairSpaceIsometry
-      (K := K))
-
-private theorem splitSpace_fullPrefix_isSquare
-    (a : GoodBONG q L 4)
-    (hsplit :
-      q.IsIsometric
-        ((QuadraticSpace.hyperbolicPlane (K := K) (1 : Kˣ)).orthogonalSum
-          (QuadraticSpace.hyperbolicPlane (K := K) (1 : Kˣ)))) :
-    IsSquare (a.prefixProduct 4) := by
-  let T := Lattice.QuadraticLatticeModel.halfHyperbolicTower (K := K) 2
-  letI : AddCommGroup T.Carrier := T.addCommGroup
-  letI : Module K T.Carrier := T.module
-  let b := standardHalfHyperbolicTowerBONG (K := K) 2
-  let qToTower : QuadraticSpace.Isometry q T.form :=
-    (Classical.choice hsplit).trans
-      (halfTowerTwoToHyperbolicPairIsometry (K := K)).symm
-  have hboth : IsSquare (a.prefixProduct 4 * b.prefixProduct 4) := by
-    simpa only [comparisonPrefixUnit] using
-      (fullComparison_isSquare_proof ⟨qToTower⟩ a b)
-  have hbSigned :=
-    standardHalfHyperbolicTowerBONG_signedProduct_isSquare (K := K) 2
-  have hb : IsSquare (b.prefixProduct 4) := by
-    simpa [BONG.signedEvenPrefixProduct, GoodBONG.prefixProduct] using hbSigned
-  have ha : IsSquare (a.prefixProduct 4) := by
-    have hquotient := hboth.div hb
-    simpa using hquotient
-  exact ha
 
 /-- The first equivalence in He--Hu, Corollary 4.6. -/
 theorem heHu2022Corollary46_universal_iff_invariants
@@ -170,7 +130,7 @@ theorem heHu2022Corollary46_universal_iff_invariants
         have hfull :=
           (a.heHu2022Lemma210ii hIntegral idx (by norm_num)
             hprevious hcurrent hnext).mp hlocal
-        have hprefixSquare := splitSpace_fullPrefix_isSquare a hsplit
+        have hprefixSquare := a.splitQuaternary_fullPrefix_isSquare hsplit
         have hprefixSquareRaw :
             IsSquare (a.toBONG.prefixProduct 4) := by
           simpa only [GoodBONG.prefixProduct] using hprefixSquare
@@ -298,7 +258,8 @@ theorem heHu2022Corollary46_invariants_iff_standardModel
     have hambient : q.IsIsometric T.form := by
       rcases h.splitSpace with ⟨f⟩
       exact ⟨f.trans
-        (halfTowerTwoToHyperbolicPairIsometry (K := K)).symm⟩
+        (QuadraticSpace.halfHyperbolicTowerTwoToHyperbolicPairIsometry
+          (K := K)).symm⟩
     exact Lattice.oMaximal_isIsometric_of_isometric hLmax hTmax hambient
   · intro hModel
     change Lattice.IsIsometric q T.form L T.lattice at hModel
@@ -342,7 +303,8 @@ theorem heHu2022Corollary46_invariants_iff_standardModel
       simpa [hthree, neg_mul] using hpair1.2
     exact
       { splitSpace := ⟨f.toQuadraticSpaceIsometry.trans
-          (halfTowerTwoToHyperbolicPairIsometry (K := K))⟩
+          (QuadraticSpace.halfHyperbolicTowerTwoToHyperbolicPairIsometry
+            (K := K))⟩
         order0 := (horders 0).trans hb0
         order2 := (horders 2).trans hb2
         order1 := (horders 1).trans hb1
