@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 import Bong.Lattice.NADC
+import Bong.Lattice.GlobalNADC
 
 /-!
 # He: n-ADC integral quadratic lattices
@@ -58,5 +59,47 @@ theorem heADCProposition415LocalDyadic
   isNADC_iff_isOMaximal_of_finrank_eq q L n hrank
 
 end Lattice
+
+namespace GlobalLocalLatticeSystem
+
+universe u v w
+
+/-- He, Theorem 1.3.  The proof is complete relative to the explicitly
+bundled number-field localization results in `Theorem13Laws`; no such result
+is silently postulated as a project axiom. -/
+theorem heADCTheorem13
+    (S : GlobalLocalLatticeSystem.{u, v, w})
+    (H : S.Theorem13Laws) (M : S.GlobalLattice) (n : Nat) :
+    S.IsGloballyNADC M n ↔ S.IsLocallyNADC M n ∧ S.IsNRegular M n :=
+  H.globallyNADC_iff_locallyNADC_and_nRegular M n
+
+/-- He, Theorem 1.4(i), with the cited stable-range ambient-space
+representation theorem supplied as an explicit premise. -/
+theorem heADCTheorem14i
+    (S : GlobalLocalLatticeSystem.{u, v, w})
+    {M : S.GlobalLattice} {p : S.Place} {n : Nat}
+    (hAmbient : S.RepresentsEveryLocalAmbientAt M p n) :
+    S.IsNADCAt M p n ↔ S.IsNUniversalAt M p n :=
+  S.isNADCAt_iff_isNUniversalAt_of_representsEveryAmbient hAmbient
+
+/-- He, Theorem 1.4(ii). -/
+theorem heADCTheorem14ii
+    (S : GlobalLocalLatticeSystem.{u, v, w})
+    {M : S.GlobalLattice} {n : Nat}
+    (hAmbient : ∀ p : S.Place,
+      S.RepresentsEveryLocalAmbientAt M p n) :
+    S.IsLocallyNADC M n ↔ S.IsLocallyNUniversal M n :=
+  S.locallyNADC_iff_locallyNUniversal_of_representsEveryAmbient hAmbient
+
+/-- He, Theorem 1.4(iii), retaining the compatible-signature condition from
+the published Definition 1.2(i). -/
+theorem heADCTheorem14iii
+    (S : GlobalLocalLatticeSystem.{u, v, w})
+    {M : S.GlobalLattice} {n : Nat}
+    (hAmbient : S.GlobalAmbientIffAdmissibleAtRank M n) :
+    S.IsGloballyNADC M n ↔ S.IsGloballyNUniversal M n :=
+  S.globallyNADC_iff_globallyNUniversal_of_ambient_iff_admissible hAmbient
+
+end GlobalLocalLatticeSystem
 
 end Bong
