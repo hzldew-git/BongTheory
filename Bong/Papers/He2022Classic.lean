@@ -20,6 +20,7 @@ import Bong.Bong.He2022ClassicLemma38
 import Bong.Bong.He2022ClassicLemma39
 import Bong.Bong.He2022ClassicLemma57
 import Bong.Bong.He2022ClassicLemma58
+import Bong.Bong.He2022ClassicTheorem51
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -59,7 +60,10 @@ Lemma 5.7 between all classic targets, those two tests, and `J2_O(n)`.  The
 complete Lemma 5.8 equivalence between condition (iv), the parity-dependent
 literal pair `C₁ⁿ(c), C₂ⁿ(c)`, and `J3_O(n)` is proved as well, including the
 terminal determinant-class contradiction and the corrected explicit
-preceding-gap premise in Corollary 3.13(iii).  The
+preceding-gap premise in Corollary 3.13(iii).  Proposition 5.2 and Theorem 5.1
+are assembled at their full odd-rank endpoints; necessity includes an explicit
+one-rank descent for classic universality, while sufficiency reconstructs all
+four revised Beli representation conditions.  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 2.8(ii), and classic integrality of every indexed row are also proved.  It
 does not yet claim the paper's explicit proof of the main BONG criterion or
