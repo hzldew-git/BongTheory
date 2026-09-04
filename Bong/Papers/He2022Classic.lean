@@ -19,6 +19,7 @@ import Bong.Bong.He2022ClassicLemma37
 import Bong.Bong.He2022ClassicLemma38
 import Bong.Bong.He2022ClassicLemma39
 import Bong.Bong.He2022ClassicLemma57
+import Bong.Bong.He2022ClassicLemma58
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -52,9 +53,13 @@ Lemma 3.8, while part (ii) proves the terminal parity contradiction through
 Lemma 3.7.  Both parts retain arbitrary source tails as well as exact-rank
 specializations.  The
 odd-rank Section 5 development now includes the exact conditions `J1_O`,
-`J2_O`, and `J3_O`, Lemmas 5.3--5.7, the literal `C₁ⁿ(c)` and
+`J2_O`, and `J3_O`, Lemmas 5.3--5.8, the literal `C₁ⁿ(c)` and
 `C₁ⁿ(c c-tilde-sharp)` tests, and the complete three-way equivalence in
 Lemma 5.7 between all classic targets, those two tests, and `J2_O(n)`.  The
+complete Lemma 5.8 equivalence between condition (iv), the parity-dependent
+literal pair `C₁ⁿ(c), C₂ⁿ(c)`, and `J3_O(n)` is proved as well, including the
+terminal determinant-class contradiction and the corrected explicit
+preceding-gap premise in Corollary 3.13(iii).  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 2.8(ii), and classic integrality of every indexed row are also proved.  It
 does not yet claim the paper's explicit proof of the main BONG criterion or
