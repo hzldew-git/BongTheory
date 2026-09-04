@@ -100,6 +100,10 @@ import Bong.Papers.He2022Classic
 #check Bong.BONG.GoodBONG.he2022ClassicLemma31iii
 #check Bong.BONG.GoodBONG.he2022ClassicLemma31iv_corrected
 #check Bong.BONG.GoodBONG.he2022ClassicLemma31v
+#check Bong.BONG.GoodBONG.HeClassicCurrentEssentialAt
+#check Bong.BONG.GoodBONG.HeClassicNextEssentialAt
+#check Bong.BONG.GoodBONG.representationDefectAt_of_not_heClassicEssential
+#check Bong.BONG.GoodBONG.he2022ClassicLemma32
 #check Bong.BONG.GoodBONG.he2022ClassicLemma33
 
 #print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
@@ -143,4 +147,6 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31iii
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31iv_corrected
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31v
+#print axioms Bong.BONG.GoodBONG.representationDefectAt_of_not_heClassicEssential
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma32
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma33

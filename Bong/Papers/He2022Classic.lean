@@ -10,6 +10,7 @@ import Bong.Bong.He2022ClassicLemma29
 import Bong.Bong.He2022ClassicPublishedTestingSet
 import Bong.Bong.He2022ClassicLemma211
 import Bong.Bong.He2022ClassicLemma31
+import Bong.Bong.He2022ClassicLemma32
 import Bong.Bong.He2022ClassicLemma33
 
 /-!
@@ -26,8 +27,9 @@ over-lattices, the abstract maximal testing reduction, and the proved Section 2
 BONG core through Proposition 2.10, including exact good-BONG realizations,
 order profiles, and alpha profiles for every row in Definition 2.6.  Lemma
 2.11 is proved with its original arbitrary-ambient quantifier as well as its
-two common-hyperbolic-head branches.  The pointwise branches of Lemma 3.1 and
-the first-index defect calculation of Lemma 3.3 are also formalized.  The
+two common-hyperbolic-head branches.  The pointwise branches of Lemma 3.1,
+the unequal-rank nonessential-index proof of Lemma 3.2, and the first-index
+defect calculation of Lemma 3.3 are also formalized.  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 2.8(ii), and classic integrality of every indexed row are also proved.  It
 does not yet claim the paper's explicit proof of the main BONG criterion or

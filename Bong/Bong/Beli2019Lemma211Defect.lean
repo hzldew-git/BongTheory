@@ -29,32 +29,33 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   {V : Type v} [AddCommGroup V] [Module K V]
   {W : Type w} [AddCommGroup W] [Module K W]
   {q : QuadraticSpace K V} {r : QuadraticSpace K W}
-  {L : Lattice K V} {M : Lattice K W} {n : Nat}
+  {L : Lattice K V} {M : Lattice K W} {m n : Nat}
 
 /-- Lemma 2.11(i), in the implication used by Lemma 2.13. -/
 theorem representationDefectAt_of_le_nextFallbackAlphaBound
     [sourceLaws : Beli2006AlphaLaws.{u, v} K]
     [targetLaws : Beli2006AlphaLaws.{u, w} K]
-    (a : GoodBONG q L (n + 1)) (b : GoodBONG r M (n + 1))
-    (i : RepresentationIndex (n + 1) (n + 1))
-    (hiTwo : 1 < i.val) (hiNext : i.val + 1 < n + 1)
+    (a : GoodBONG q L (m + 1)) (b : GoodBONG r M (n + 1))
+    (i : RepresentationIndex (m + 1) (n + 1))
+    (hiTwo : 1 < i.val) (hiNext : i.val + 1 < m + 1)
     (hpair :
       a.order ⟨i.val, i.lt_large⟩ + a.order ⟨i.val + 1, hiNext⟩ ≤
-        b.order ⟨i.val - 2, by omega⟩ +
-          b.order ⟨i.val - 1, by omega⟩)
+        b.order ⟨i.val - 2, by have := i.le_small; omega⟩ +
+          b.order ⟨i.val - 1, by have := i.le_small; omega⟩)
     (hleft : a.order ⟨i.val, i.lt_large⟩ ≤
-      b.order ⟨i.val - 2, by omega⟩)
+      b.order ⟨i.val - 2, by have := i.le_small; omega⟩)
     (hbound : a.representationAlpha b i ≤
       a.nextFallbackAlphaBound i hiNext) :
     a.RepresentationDefectAt b i := by
-  let sourcePair : Fin n := ⟨i.val, by omega⟩
+  have hiSmall := i.le_small
+  let sourcePair : Fin m := ⟨i.val, by omega⟩
   let targetPair : Fin n := ⟨i.val - 2, by omega⟩
   have hsourceCast : sourcePair.castSucc =
-      (⟨i.val, i.lt_large⟩ : Fin (n + 1)) := by
+      (⟨i.val, i.lt_large⟩ : Fin (m + 1)) := by
     apply Fin.ext
     rfl
   have hsourceSucc : sourcePair.succ =
-      (⟨i.val + 1, hiNext⟩ : Fin (n + 1)) := by
+      (⟨i.val + 1, hiNext⟩ : Fin (m + 1)) := by
     apply Fin.ext
     rfl
   have htargetCast : targetPair.castSucc =
@@ -169,24 +170,26 @@ identifies its threshold with the shifted source alpha. -/
 theorem le_nextFallbackAlphaBound_of_representationDefectAt
     [sourceLaws : Beli2006AlphaLaws.{u, v} K]
     [targetLaws : Beli2006AlphaLaws.{u, w} K]
-    (a : GoodBONG q L (n + 1)) (b : GoodBONG r M (n + 1))
-    (i : RepresentationIndex (n + 1) (n + 1))
-    (hiTwo : 1 < i.val) (hiNext : i.val + 1 < n + 1)
+    (a : GoodBONG q L (m + 1)) (b : GoodBONG r M (n + 1))
+    (i : RepresentationIndex (m + 1) (n + 1))
+    (hiTwo : 1 < i.val) (hiNext : i.val + 1 < m + 1)
     (hpair :
       a.order ⟨i.val, i.lt_large⟩ + a.order ⟨i.val + 1, hiNext⟩ ≤
-        b.order ⟨i.val - 2, by omega⟩ + b.order ⟨i.val - 1, by omega⟩)
+        b.order ⟨i.val - 2, by have := i.le_small; omega⟩ +
+          b.order ⟨i.val - 1, by have := i.le_small; omega⟩)
     (hleft : a.order ⟨i.val, i.lt_large⟩ ≤
-      b.order ⟨i.val - 2, by omega⟩)
+      b.order ⟨i.val - 2, by have := i.le_small; omega⟩)
     (hdefect : a.RepresentationDefectAt b i) :
     a.representationAlpha b i ≤ a.nextFallbackAlphaBound i hiNext := by
-  let sourcePair : Fin n := ⟨i.val, by omega⟩
+  have hiSmall := i.le_small
+  let sourcePair : Fin m := ⟨i.val, by omega⟩
   let targetPair : Fin n := ⟨i.val - 2, by omega⟩
   have hsourceCast : sourcePair.castSucc =
-      (⟨i.val, i.lt_large⟩ : Fin (n + 1)) := by
+      (⟨i.val, i.lt_large⟩ : Fin (m + 1)) := by
     apply Fin.ext
     rfl
   have hsourceSucc : sourcePair.succ =
-      (⟨i.val + 1, hiNext⟩ : Fin (n + 1)) := by
+      (⟨i.val + 1, hiNext⟩ : Fin (m + 1)) := by
     apply Fin.ext
     rfl
   have htargetCast : targetPair.castSucc =
@@ -341,26 +344,27 @@ theorem le_nextFallbackAlphaBound_of_representationDefectAt
 theorem representationDefectAt_of_le_currentFallbackAlphaBound
     [sourceLaws : Beli2006AlphaLaws.{u, v} K]
     [targetLaws : Beli2006AlphaLaws.{u, w} K]
-    (a : GoodBONG q L (n + 1)) (b : GoodBONG r M (n + 1))
-    (i : RepresentationIndex (n + 1) (n + 1))
-    (hiTwo : 1 < i.val) (hiNext : i.val + 1 < n + 1)
+    (a : GoodBONG q L (m + 1)) (b : GoodBONG r M (n + 1))
+    (i : RepresentationIndex (m + 1) (n + 1))
+    (hiTwo : 1 < i.val) (hiNext : i.val + 1 < m + 1)
     (hpair :
       a.order ⟨i.val, i.lt_large⟩ + a.order ⟨i.val + 1, hiNext⟩ ≤
-        b.order ⟨i.val - 2, by omega⟩ +
-          b.order ⟨i.val - 1, by omega⟩)
+        b.order ⟨i.val - 2, by have := i.le_small; omega⟩ +
+          b.order ⟨i.val - 1, by have := i.le_small; omega⟩)
     (hright : a.order ⟨i.val + 1, hiNext⟩ ≤
-      b.order ⟨i.val - 1, by omega⟩)
+      b.order ⟨i.val - 1, by have := i.le_small; omega⟩)
     (hbound : a.representationAlpha b i ≤
       a.currentFallbackAlphaBound b i hiTwo) :
     a.RepresentationDefectAt b i := by
-  let sourcePair : Fin n := ⟨i.val, by omega⟩
+  have hiSmall := i.le_small
+  let sourcePair : Fin m := ⟨i.val, by omega⟩
   let targetPair : Fin n := ⟨i.val - 2, by omega⟩
   have hsourceCast : sourcePair.castSucc =
-      (⟨i.val, i.lt_large⟩ : Fin (n + 1)) := by
+      (⟨i.val, i.lt_large⟩ : Fin (m + 1)) := by
     apply Fin.ext
     rfl
   have hsourceSucc : sourcePair.succ =
-      (⟨i.val + 1, hiNext⟩ : Fin (n + 1)) := by
+      (⟨i.val + 1, hiNext⟩ : Fin (m + 1)) := by
     apply Fin.ext
     rfl
   have htargetCast : targetPair.castSucc =
@@ -373,7 +377,7 @@ theorem representationDefectAt_of_le_currentFallbackAlphaBound
     simp only [targetPair, Fin.val_succ]
     omega
   have hsourceAlpha :
-      (⟨i.val + 1 - 1, by omega⟩ : Fin n) = sourcePair := by
+      (⟨i.val + 1 - 1, by omega⟩ : Fin m) = sourcePair := by
     apply Fin.ext
     simp only [sourcePair]
     omega
