@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 import Bong.Lattice.NADC
 import Bong.Lattice.GlobalNADC
 import Bong.Bong.He2023ADCSectionThree
+import Bong.Bong.He2023ADCSectionFour
 
 /-!
 # He: n-ADC integral quadratic lattices
@@ -16,9 +17,9 @@ integral quadratic lattices over algebraic number fields*, Doc. Math. 30
 semantic authority.
 
 The present layer covers the local dyadic specialization of Definition 1.1,
-Lemma 2.1, Lemma 4.14, and Proposition 4.15.  Global localization,
-`n`-regularity, and the remaining classification theorems are separate proof
-obligations.
+Lemma 2.1, Section 3, and the checked Section 4 endpoints, together with the
+logical local--global reductions in Theorems 1.3--1.4.  Number-field
+localization laws remain explicit proof data rather than hidden axioms.
 -/
 
 namespace Bong

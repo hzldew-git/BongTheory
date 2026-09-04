@@ -158,6 +158,55 @@ theorem isNADC_iff_isOMaximal_of_finrank_eq
   · exact fun h => h.isOMaximal_of_finrank_eq hrank
   · exact fun h => IsOMaximal.isNADC h n
 
+namespace QuadraticLatticeModel
+
+/-- Ambient-space representability between bundled quadratic lattices. -/
+def AmbientlyRepresents
+    (X Y : QuadraticLatticeModel (K := K)) : Prop := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  letI : AddCommGroup Y.Carrier := Y.addCommGroup
+  letI : Module K Y.Carrier := Y.module
+  exact X.form.Represents Y.form
+
+/-- `n`-ADC-ness of a bundled quadratic lattice. -/
+def IsNADC (X : QuadraticLatticeModel (K := K)) (n : Nat) : Prop := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  exact Lattice.IsNADC.{u, u, u} X.form X.lattice n
+
+/-- A bundled maximal lattice is locally `n`-ADC. -/
+theorem IsOMaximal.isNADC
+    {X : QuadraticLatticeModel (K := K)}
+    (hX : X.IsOMaximal) (n : Nat) : X.IsNADC n := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  exact Lattice.IsOMaximal.isNADC hX n
+
+/-- Elimination rule for bundled `n`-ADC-ness. -/
+theorem IsNADC.represents
+    {X Y : QuadraticLatticeModel (K := K)} {n : Nat}
+    (hX : X.IsNADC n) (hRank : Y.rank = n)
+    (hIntegral : Y.IsIntegral) (hAmbient : X.AmbientlyRepresents Y) :
+    X.Represents Y := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  letI : AddCommGroup Y.Carrier := Y.addCommGroup
+  letI : Module K Y.Carrier := Y.module
+  exact hX.2 Y.form Y.lattice hRank hIntegral hAmbient
+
+/-- Integral representation implies ambient-space representation. -/
+theorem Represents.ambient
+    {X Y : QuadraticLatticeModel (K := K)}
+    (h : X.Represents Y) : X.AmbientlyRepresents Y := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  letI : AddCommGroup Y.Carrier := Y.addCommGroup
+  letI : Module K Y.Carrier := Y.module
+  exact Lattice.Represents.ambient h
+
+end QuadraticLatticeModel
+
 end Lattice
 
 end Bong
