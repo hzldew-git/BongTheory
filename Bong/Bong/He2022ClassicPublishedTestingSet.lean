@@ -596,6 +596,22 @@ noncomputable def heClassicCanonicalOmegaData :
   omegaSharp_order := heClassicOmegaSharp_order (K := K)
   omega_defect := heClassicOmega_defect (K := K)
 
+/-- The value fields make the printed choice of `omega` propositionally
+unique.  Keeping this as a named lemma avoids repeating the coercion-level
+`Units.ext` argument whenever a literal table row is recovered. -/
+theorem HeClassicOmegaData.omega_eq (omegaData : HeClassicOmegaData (K := K)) :
+    omegaData.omega = heClassicOmega (K := K) := by
+  apply Units.ext
+  exact omegaData.omega_value.trans (heClassicOmega_value (K := K)).symm
+
+/-- The value fields likewise identify the printed `omega#` literally. -/
+theorem HeClassicOmegaData.omegaSharp_eq
+    (omegaData : HeClassicOmegaData (K := K)) :
+    omegaData.omegaSharp = heClassicOmegaSharp (K := K) := by
+  apply Units.ext
+  exact omegaData.omegaSharp_value.trans
+    (heClassicOmegaSharp_value (K := K)).symm
+
 namespace HeClassicExceptionalIndex
 
 /-- The determinant parameter of an exceptional row. -/

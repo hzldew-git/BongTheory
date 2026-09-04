@@ -123,6 +123,87 @@ theorem heClassicEvenC1Model_isIsometric_of_mul_square
     (heClassicEvenC1_weakTwoStep pairs d (by omega))
     hsourceMono htargetMono hscaleUnit hcoeff
 
+/-- The diagonal change of basis between square-equivalent odd `C₁`
+rows is trivial except at the final coefficient. -/
+def heClassicOddC1SquareScale (pairs : Nat) (s : Kˣ) :
+    Fin (2 * pairs + 3) → Kˣ := fun i =>
+  if i.val = 2 * pairs + 2 then s else 1
+
+theorem heClassicOddC1_coefficients_mul_square
+    (pairs : Nat) (c d s : Kˣ) (h : c = d * s ^ 2)
+    (i : Fin (2 * pairs + 3)) :
+    heClassicOddC1 (K := K) pairs c i =
+      heClassicOddC1 (K := K) pairs d i *
+        heClassicOddC1SquareScale pairs s i ^ 2 := by
+  by_cases hlast : i.val = 2 * pairs + 2
+  · have hi : i = Fin.last (2 * pairs + 2) := Fin.ext hlast
+    rw [hi, heClassicOddC1_last, heClassicOddC1_last]
+    simp [heClassicOddC1SquareScale, h]
+  · have hhead : i.val < 2 * (pairs + 1) := by omega
+    let j : Fin (2 * (pairs + 1)) := ⟨i.val, hhead⟩
+    have hi : i = j.castSucc := Fin.ext rfl
+    rw [hi, heClassicOddC1_head, heClassicOddC1_head]
+    have hj : j.val ≠ 2 * pairs + 2 := by omega
+    simp [heClassicOddC1SquareScale, hj]
+
+/-- Square-equivalent unit parameters give isometric literal odd `C₁`
+lattices.  This is the integral, rather than merely ambient, transport
+needed to recover the paper's distinguished `C₁(omega)` test. -/
+theorem heClassicOddC1Model_isIsometric_of_mul_square
+    (pairs : Nat) (c d s : Kˣ)
+    (hc : ordUnit K c = 0) (hd : ordUnit K d = 0)
+    (hsUnit : IsValuationUnit K (s : K))
+    (h : c = d * s ^ 2) :
+    (heClassicOddC1Model (K := K) pairs c (by omega)).IsIntegrallyIsometric
+      (heClassicOddC1Model (K := K) pairs d (by omega)) := by
+  let source := heClassicOddC1 (K := K) pairs c
+  let target := heClassicOddC1 (K := K) pairs d
+  let scale := heClassicOddC1SquareScale pairs s
+  have hsourceMono : ∀ i j, i ≤ j →
+      ordUnit K (source i) ≤ ordUnit K (source j) := by
+    intro i j _hij
+    rw [show ordUnit K (source i) = 0 by
+      simp only [source, heClassicOddC1_order, hc]
+      split <;> rfl,
+      show ordUnit K (source j) = 0 by
+        simp only [source, heClassicOddC1_order, hc]
+        split <;> rfl]
+  have htargetMono : ∀ i j, i ≤ j →
+      ordUnit K (target i) ≤ ordUnit K (target j) := by
+    intro i j _hij
+    rw [show ordUnit K (target i) = 0 by
+      simp only [target, heClassicOddC1_order, hd]
+      split <;> rfl,
+      show ordUnit K (target j) = 0 by
+        simp only [target, heClassicOddC1_order, hd]
+        split <;> rfl]
+  have hscaleUnit : ∀ i, IsValuationUnit K (scale i : K) := by
+    intro i
+    unfold scale heClassicOddC1SquareScale
+    split
+    · exact hsUnit
+    · simp [IsValuationUnit]
+  have hcoeff : ∀ i, source i = target i * scale i ^ 2 := by
+    intro i
+    exact heClassicOddC1_coefficients_mul_square pairs c d s h i
+  unfold IsIntegrallyIsometric
+  change Lattice.IsIsometric
+    (BONG.coefficientDiagonalSpace source)
+    (BONG.coefficientDiagonalSpace target)
+    (heHuExactRealization source
+      (heClassicOddC1_adjacentAdmissible pairs c (by omega))
+      (heClassicOddC1_weakTwoStep pairs c (by omega))).lattice
+    (heHuExactRealization target
+      (heClassicOddC1_adjacentAdmissible pairs d (by omega))
+      (heClassicOddC1_weakTwoStep pairs d (by omega))).lattice
+  exact heHuExactModel_isIsometric_of_pointwise_unit_square
+    source target scale
+    (heClassicOddC1_adjacentAdmissible pairs c (by omega))
+    (heClassicOddC1_weakTwoStep pairs c (by omega))
+    (heClassicOddC1_adjacentAdmissible pairs d (by omega))
+    (heClassicOddC1_weakTwoStep pairs d (by omega))
+    hsourceMono htargetMono hscaleUnit hcoeff
+
 /-- Match the two-column He--Hu odd table with the parity/column layout of
 the literal classic table. -/
 def classicOddIndexOfHeHu {I : Type u} :
@@ -395,14 +476,10 @@ theorem classicOddModel_isAmbientlyIsometric_heHuModel
         (K := K) U hU omegaData pairs (classicOddIndexOfHeHu j))
       (HeHuPublishedOddTestingIndex.model
         (K := K) (U := U) (pairs := pairs) j) := by
-  have homega : omegaData.omega = heClassicOmega (K := K) := by
-    apply Units.ext
-    exact omegaData.omega_value.trans (heClassicOmega_value (K := K)).symm
+  have homega : omegaData.omega = heClassicOmega (K := K) :=
+    omegaData.omega_eq
   have homegaSharp : omegaData.omegaSharp =
-      heClassicOmegaSharp (K := K) := by
-    apply Units.ext
-    exact omegaData.omegaSharp_value.trans
-      (heClassicOmegaSharp_value (K := K)).symm
+      heClassicOmegaSharp (K := K) := omegaData.omegaSharp_eq
   rcases j with p | p
   · rcases p with ⟨i, parity⟩
     cases parity
@@ -655,6 +732,95 @@ theorem represents_literalEvenC1Omega_of_all
   rcases hXD with ⟨f⟩
   rcases hCD with ⟨g⟩
   exact ⟨f.trans g.toRepresentation⟩
+
+/-- Completeness of the unit square-class representatives also recovers
+the literal odd-rank `C₁(omega)` row. -/
+theorem represents_literalOddC1Omega_of_all
+    [QuadraticDefectLaws K] [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (omegaData : HeClassicOmegaData (K := K))
+    (pairs : Nat) (X : QuadraticLatticeModel (K := K))
+    (hAll : forall i : HeClassicPublishedOddTestingIndex I,
+      X.Represents
+        (HeClassicPublishedOddTestingIndex.model
+          (K := K) U hU omegaData pairs i)) :
+    X.Represents
+      (heClassicOddC1Model (K := K) pairs
+        (heClassicOmega (K := K)) (by
+          rw [heClassicOmega_order (K := K)])) := by
+  have homegaUnit : IsValuationUnit K ((heClassicOmega (K := K) : K)) :=
+    (isValuationUnit_iff_ordUnit_eq_zero K _).2
+      (heClassicOmega_order (K := K))
+  obtain ⟨i, s, hsUnit, hfactor⟩ :=
+    hU.complete (heClassicOmega (K := K)) homegaUnit
+  let idx : HeClassicPublishedOddTestingIndex I := ((i, false), false)
+  let C := heClassicOddC1Model (K := K) pairs
+    (heClassicOmega (K := K)) (by
+      rw [heClassicOmega_order (K := K)])
+  let D := heClassicOddC1Model (K := K) pairs (U i) (by
+    exact (isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit i) ▸ le_rfl)
+  have hXD : X.Represents D := by
+    simpa [D, idx, HeClassicPublishedOddTestingIndex.model] using hAll idx
+  have hCD : C.IsIntegrallyIsometric D := by
+    simpa [C, D] using
+      (heClassicOddC1Model_isIsometric_of_mul_square
+        (K := K) pairs (heClassicOmega (K := K)) (U i) s
+        (heClassicOmega_order (K := K))
+        ((isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit i))
+        hsUnit hfactor)
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  letI : AddCommGroup C.Carrier := C.addCommGroup
+  letI : Module K C.Carrier := C.module
+  letI : AddCommGroup D.Carrier := D.addCommGroup
+  letI : Module K D.Carrier := D.module
+  change Lattice.Represents X.form C.form X.lattice C.lattice
+  change Lattice.Represents X.form D.form X.lattice D.lattice at hXD
+  change Lattice.IsIsometric C.form D.form C.lattice D.lattice at hCD
+  rcases hXD with ⟨f⟩
+  rcases hCD with ⟨g⟩
+  exact ⟨f.trans g.toRepresentation⟩
+
+/-- The represented literal odd `C₁(omega)` row supplies the exact
+condition-level premise of Lemma 5.4. -/
+theorem literalLemma54Test_of_all_publishedOdd
+    [QuadraticDefectLaws K] [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (omegaData : HeClassicOmegaData (K := K))
+    (pairs : Nat) (X : QuadraticLatticeModel (K := K))
+    {m : Nat}
+    (a : @BONG.GoodBONG K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice (m + 5))
+    (hSource : 2 * pairs + 5 <= m + 5)
+    (hAll : forall i : HeClassicPublishedOddTestingIndex I,
+      X.Represents
+        (HeClassicPublishedOddTestingIndex.model
+          (K := K) U hU omegaData pairs i)) :
+    (by
+      letI : AddCommGroup X.Carrier := X.addCommGroup (K := K)
+      letI : Module K X.Carrier := X.module (K := K)
+      exact a.HeClassicLemma54PublishedTest pairs (by omega)) := by
+  let C := heClassicOddC1Model (K := K) pairs
+    (heClassicOmega (K := K)) (by
+      rw [heClassicOmega_order (K := K)])
+  have hXC : X.Represents C := by
+    simpa only [C] using
+      represents_literalOddC1Omega_of_all U hU omegaData pairs X hAll
+  letI : AddCommGroup X.Carrier := X.addCommGroup (K := K)
+  letI : Module K X.Carrier := X.module (K := K)
+  letI : AddCommGroup C.Carrier := C.addCommGroup
+  letI : Module K C.Carrier := C.module
+  let b := heClassicOddC1GoodBONG (K := K) pairs
+    (heClassicOmega (K := K)) (by
+      rw [heClassicOmega_order (K := K)])
+  have hrep : Lattice.Represents X.form C.form X.lattice C.lattice := hXC
+  have hconditions := a.representationConditionsPrime_of_represents
+    b (by omega) hrep
+  unfold BONG.GoodBONG.HeClassicLemma54PublishedTest
+  dsimp only
+  exact ⟨hconditions.orderCondition, hconditions.defectCondition⟩
 
 /-- Actual representation of the finite even table supplies the two literal
 condition-level tests used in Lemma 4.2. -/
