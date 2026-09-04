@@ -169,7 +169,7 @@ def HeClassicJ1E {m : Nat} (a : GoodBONG q L (m + 1))
 /-- `J2_E(n)` from Theorem 4.1.  The final implication is the printed
 binary-rank requirement `n=2 -> m>=5`. -/
 noncomputable def HeClassicJ2E {m : Nat}
-    (a : GoodBONG q L (m + 1)) (n : Nat) (hm : n + 2 <= m) : Prop :=
+    (a : GoodBONG q L (m + 1)) (n : Nat) (hm : n + 1 <= m) : Prop :=
   a.alphaValue ⟨n, by omega⟩ = 1 ∧
     (((a.order ⟨n + 1, by omega⟩ : Int) : ℚ) : WithTop ℚ) +
         a.truncatedPrefixDefect a ((-1) ^ ((n + 2) / 2)) 0 (n + 2) = 1 ∧
@@ -177,25 +177,26 @@ noncomputable def HeClassicJ2E {m : Nat}
 
 /-- `J3_E(n)` from Theorem 4.1. -/
 def HeClassicJ3E {m : Nat} (a : GoodBONG q L (m + 1))
-    (n : Nat) (hm : n + 2 <= m) : Prop :=
-  a.order ⟨n + 2, by omega⟩ - a.order ⟨n + 1, by omega⟩ <=
-    2 * (ramificationIndex K : Int)
+    (n : Nat) (_hm : n + 1 <= m) : Prop :=
+  forall hmStable : n + 2 <= m,
+    a.order ⟨n + 2, by omega⟩ - a.order ⟨n + 1, by omega⟩ <=
+      2 * (ramificationIndex K : Int)
 
 structure HeClassicEvenSectionConditions {m : Nat}
-    (a : GoodBONG q L (m + 1)) (n : Nat) (hm : n + 2 <= m) : Prop where
-  j1 : a.HeClassicJ1E n (by omega)
+    (a : GoodBONG q L (m + 1)) (n : Nat) (hm : n + 1 <= m) : Prop where
+  j1 : a.HeClassicJ1E n hm
   j2 : a.HeClassicJ2E n hm
   j3 : a.HeClassicJ3E n hm
 
 /-- Equation (4.3): `J1_E` and `J2_E` imply the strengthened alpha part of
 `J1'_E`; the reverse implication is immediate. -/
 theorem he2022ClassicEquation43 {m n : Nat}
-    (a : GoodBONG q L (m + 1)) (hm : n + 2 <= m)
+    (a : GoodBONG q L (m + 1)) (hm : n + 1 <= m)
     (hClassic : Lattice.IsClassicIntegral q L) :
-    (a.HeClassicJ1EPrime n (by omega) ∧
-        a.HeClassicJ2EPrime n (by omega) ∧
+    (a.HeClassicJ1EPrime n hm ∧
+        a.HeClassicJ2EPrime n hm ∧
         a.HeClassicJ2E n hm) ↔
-      (a.HeClassicJ1E n (by omega) ∧ a.HeClassicJ2E n hm) := by
+      (a.HeClassicJ1E n hm ∧ a.HeClassicJ2E n hm) := by
   constructor
   · rintro ⟨hJ1Prime, _hJ2Prime, hJ2⟩
     exact ⟨hJ1Prime.1, hJ2⟩
