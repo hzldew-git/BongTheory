@@ -19,3 +19,11 @@ endpoints and the odd second-column endpoint of Lemma 4.9 now have no
 undischarged `GoodBONGClassificationLaws` parameter: they use the checked
 Beli classification proof. Ordinary field, integrality, unit, defect, and
 rank hypotheses remain part of the mathematical statements.
+
+The publisher's standing convention on page 986 assumes integrality for
+all subsequent lattices. Thus the explicit integrality premise of the new
+published-family criteria does not narrow Lemmas 4.11--4.12. Nonexceptional
+unit rows use the square-class domain excluding squares and the discriminant
+class. Their finite defect, oddness and upper bound are derived. The final
+odd second-column criterion has no auxiliary `kappa` parameter: its existence
+at defect `2e-1` is proved. See checkpoint `976883e` and report 14.

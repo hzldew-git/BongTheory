@@ -18,6 +18,13 @@ the converse does not assume the conclusion or merely verify a canonical
 example. Rank one is included in the unary-tail criteria; the second-column
 square model begins at rank four.
 
+The thirteen `*Published` endpoints additionally discharge the formerly
+missing `W/N` transport. The integrality premise is the standing source
+convention on page 986. The nonexceptional unit rows derive their finite
+odd defect and sharp partner; the odd second unit row constructs the
+auxiliary defect-`2e-1` unit. None of those arithmetic facts is left as a
+new public premise. See report 14 for the precise row domains.
+
 Several Section 4 interfaces remain more general in their linear-algebra
 parameters but narrower in their field scope than the published wording.
 The correspondence table records these distinctions. No statement-strength

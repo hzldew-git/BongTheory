@@ -14,6 +14,11 @@ Additional concrete declaration groups are:
 - `OMaximalVolume`: maximality and isometry characterized by volume order.
 - `He2023ADCMaximalProfiles`: Remark 4.10 and ten canonical-model branches of
   the arbitrary-lattice criteria in Lemmas 4.11--4.12.
+- `He2023ADCPublishedProfiles`: whole-space and maximal-lattice transport,
+  the exceptional even rows, all odd rows, and the unary boundary on the
+  published `W/N` families; the auxiliary `kappa` is constructed internally.
+- `He2023ADCGenericProfiles`: both nonexceptional unit and unit-uniformizer
+  columns, with defect parity and the sharp partner derived from the domain.
 - `heADCLemma414LocalDyadic`, `heADCProposition415LocalDyadic`: maximality and ADC.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,

@@ -12,8 +12,14 @@
 | `n`-regular | `GlobalLocalLatticeSystem.IsNRegular` (abstract system) |
 | alternating orders followed by a table tail | `heADCMaximalOrderProfile` |
 | arbitrary-lattice equivalence on a specified table space | `GoodBONG.HeADCMaximalProfileCriterion` |
+| unary `W_1^1(c)` and its maximal lattice | `heADCW1Unary`, `heADCN1Unary` |
+| finite integral defect index `d(c)` in the nonexceptional unit rows | integer cast of `(quadraticDefect K c).toNat`, with finiteness proved from `HeHuSharpDomain` |
 
-The last predicate expands to: for every good BONG `a` of `L`, if `L` is
+The `*Published` endpoints use the named `heADCW*` and `heADCN*` families
+directly. `isIsometric_publishedModel_iff_orderProfile` transports the concrete
+model by an equal-rank space isometry and maximal-lattice uniqueness.
+
+The concrete-model predicate expands to: for every good BONG `a` of `L`, if `L` is
 integral and its space is isometric to the reference space, then `L` is
 integrally isometric to the reference lattice if and only if every order of
 `a` equals the displayed profile. Its BONG argument identifies the reference

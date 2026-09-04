@@ -10,6 +10,7 @@
 | Direct Section 3 endpoints | PASS for the listed types; semantic and boundary audit provisional |
 | Dyadic Section 4 space/table/representation interfaces | PARTIAL; exact scopes listed in correspondence |
 | Remark 4.10 and ten model-profile criteria for Lemmas 4.11--4.12 | PASS kernel and axiom checks; source-model correspondence review provisional |
+| Thirteen published-family branches of Lemmas 4.11--4.12 | PASS kernel and axiom checks; `W/N` transport and arithmetic side conditions proved; human approval pending |
 | Dyadic Lemma 4.14 and Proposition 4.15 | PASS |
 | No `sorry`, project axiom, or `opaque` declaration in scoped files | PASS, local audit |
 | Global Definition 1.2 and regularity | Abstract definitions present; concrete number-field realization pending |

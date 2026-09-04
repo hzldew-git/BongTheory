@@ -16,5 +16,8 @@ GitHub workflow run `33924619385` builds freshly extracted paper-specific
 archives for the earlier head `94c4dcfd81ef4924c0b5ee66cf3700233e962991`.
 The result for that earlier revision must not be used to certify the new
 profile commit. A new exact-revision clean-extract run is required after
-publishing these changes. Current status: `PARTIALLY_REPRODUCIBLE` until that
+publishing these changes. The subsequent `W/N` transport checkpoint
+`976883e6cda7c17402c4c1f0bc768db555460eae` also passed both new module
+checks, the paper entry and the expanded audit. It likewise requires its
+own exact-revision clean-kit build. Current status: `PARTIALLY_REPRODUCIBLE` until that
 new run and its audit logs have been inspected.

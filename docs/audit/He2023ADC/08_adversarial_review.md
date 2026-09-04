@@ -32,6 +32,16 @@ existence component of Remark 4.10 remain to be assembled at this snapshot.
 Thus these are complete concrete-model proofs, not yet fully connected
 paper-definition endpoints. No sign error or false converse was found.
 
+That finding applies to checkpoint `2a151a8`. The subsequent checkpoint
+`976883e6cda7c17402c4c1f0bc768db555460eae` adds the whole-row transport
+and all thirteen published-family endpoints. The follow-up independent
+review found no blocking semantic issue in all thirteen public endpoints.
+It confirmed the named `W/N` linkage, the source's standing integrality
+convention, the rank boundaries, finite-defect arithmetic and absence of
+undischarged auxiliary-unit or project-law premises. It recommends
+`FULLY_FORMALIZED` coverage for these two lemmas with `PROVISIONAL_MATCH`
+semantics pending human confirmation. Its scope is recorded in report 14.
+
 Other open checks include the rank-one portion of Lemma 4.9(ii) and the
 remaining small-rank clauses of Section 3. This AI review is not human
 author or expert sign-off, and did not perform a clean-environment build.
