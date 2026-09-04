@@ -45,6 +45,13 @@ def HeClassicOrderConditionAt {m n : Nat}
           a.order ⟨i.val + 1, hiLarge⟩ ≤
         b.order ⟨i.val - 1, by have := i.isLt; omega⟩ + b.order i
 
+/-- Theorem 2.5(ii) at one paper index. -/
+noncomputable def HeClassicDefectConditionAt {m n : Nat}
+    (a : GoodBONG q L (m + 2)) (b : GoodBONG r M (n + 2))
+    (i : RepresentationIndex (m + 2) (n + 2)) : Prop :=
+  (a.representationAlphaValue b i : WithTop ℚ) ≤
+    a.truncatedPrefixDefect b 1 i.val i.val
+
 /-- Theorem 2.5(iii) at one paper index, in the original alpha-trigger
 form used by `RepresentationConditions`. -/
 noncomputable def HeClassicCentralConditionAt {m n : Nat}
@@ -93,6 +100,12 @@ theorem heClassicOrderCondition_iff_forall_at {m n : Nat}
     (hRank : n + 1 ≤ m + 1) :
     a.RepresentationOrderCondition b hRank ↔
       ∀ i, a.HeClassicOrderConditionAt b hRank i := by
+  rfl
+
+theorem heClassicDefectCondition_iff_forall_at {m n : Nat}
+    (a : GoodBONG q L (m + 2)) (b : GoodBONG r M (n + 2)) :
+    a.RepresentationDefectCondition b ↔
+      ∀ i, a.HeClassicDefectConditionAt b i := by
   rfl
 
 theorem heClassicCentralConditions_iff_forall_at {m n : Nat}
