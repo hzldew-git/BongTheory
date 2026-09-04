@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 
 import Bong.Bong.HeHu2022PublishedTestingSet
 import Bong.Bong.HeHu2022Lemma313
+import Bong.Bong.HeHu2022Proposition37
 import Bong.Lattice.NADC
 
 /-!
@@ -234,6 +235,53 @@ theorem heADC2025Lemma45iCodimensionTwo {n : Nat}
         diagonalUnitDeterminant first)) :
     HeHuRepresentsExactlyOne first second target :=
   heHu2022Lemma313CodimensionTwo first second pair target hdet
+
+/-! ## The explicit dyadic maximal-lattice table -/
+
+set_option linter.defProp false
+
+/-- He, Lemma 4.9(i), even first-column square row. -/
+def heADC2025Lemma49EvenFirstOne :=
+  heHu2022Proposition37EvenFirstOne (K := K)
+
+/-- He, Lemma 4.9(i), even first-column discriminant row. -/
+def heADC2025Lemma49EvenFirstDelta :=
+  heHu2022Proposition37EvenFirstDelta (K := K)
+
+/-- He, Lemma 4.9(i), even second-column square row. -/
+def heADC2025Lemma49EvenSecondOne :=
+  heHu2022Proposition37EvenSecondOne (K := K)
+
+/-- He, Lemma 4.9(i), even second-column discriminant row. -/
+def heADC2025Lemma49EvenSecondDelta :=
+  heHu2022Proposition37EvenSecondDelta (K := K)
+
+/-- He, Lemma 4.9(i), the two generic even unit rows. -/
+def heADC2025Lemma49EvenGeneric :=
+  heHu2022Proposition37EvenGeneric (K := K)
+
+/-- He, Lemma 4.9(i), the two even unit-uniformizer rows. -/
+def heADC2025Lemma49EvenUnitUniformizer :=
+  heHu2022Proposition37EvenUnitUniformizer (K := K)
+
+/-- He, Lemma 4.9(i), odd first-column unit row. -/
+def heADC2025Lemma49OddFirstUnit :=
+  heHu2022Proposition37OddFirstUnit (K := K)
+
+/-- He, Lemma 4.9(i), odd first-column unit-uniformizer row. -/
+def heADC2025Lemma49OddFirstUnitUniformizer :=
+  heHu2022Proposition37OddFirstUnitUniformizer (K := K)
+
+/-- He, Lemma 4.9(i), odd second-column unit row. -/
+def heADC2025Lemma49OddSecondUnit
+    [GoodBONGClassificationLaws.{u, u, u} K] :=
+  heHu2022Proposition37OddSecondUnit (K := K)
+
+/-- He, Lemma 4.9(i), odd second-column unit-uniformizer row. -/
+def heADC2025Lemma49OddSecondUnitUniformizer :=
+  heHu2022Proposition37OddSecondUnitUniformizer (K := K)
+
+set_option linter.defProp true
 
 namespace Lattice.QuadraticLatticeModel
 

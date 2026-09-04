@@ -48,6 +48,16 @@ import Bong.Papers.He2023ADC
 #check Bong.heADC2025Lemma44iEven
 #check Bong.heADC2025Lemma45iCodimensionOne
 #check Bong.heADC2025Lemma45iCodimensionTwo
+#check Bong.heADC2025Lemma49EvenFirstOne
+#check Bong.heADC2025Lemma49EvenFirstDelta
+#check Bong.heADC2025Lemma49EvenSecondOne
+#check Bong.heADC2025Lemma49EvenSecondDelta
+#check Bong.heADC2025Lemma49EvenGeneric
+#check Bong.heADC2025Lemma49EvenUnitUniformizer
+#check Bong.heADC2025Lemma49OddFirstUnit
+#check Bong.heADC2025Lemma49OddFirstUnitUniformizer
+#check Bong.heADC2025Lemma49OddSecondUnit
+#check Bong.heADC2025Lemma49OddSecondUnitUniformizer
 #check Bong.Lattice.QuadraticLatticeModel.IsNADC.representsExactlyOne_of_ambient
 #check Bong.Lattice.QuadraticLatticeModel.IsNADC.represents_every_of_ambient
 #check Bong.Lattice.heADCLemma414LocalDyadic
@@ -60,4 +70,6 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem36
 #print axioms Bong.heADC2025Proposition42iiiEvenFirst
 #print axioms Bong.heADC2025Lemma45iCodimensionTwo
+#print axioms Bong.heADC2025Lemma49EvenFirstOne
+#print axioms Bong.heADC2025Lemma49OddSecondUnitUniformizer
 #print axioms Bong.Lattice.QuadraticLatticeModel.IsNADC.representsExactlyOne_of_ambient
