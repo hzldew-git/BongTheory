@@ -328,7 +328,7 @@ def IsLiteralMinimalUniversalityTestingFamily {J : Type u}
       M.IsIntegral ∧ ¬ M.Represents (family i) ∧
         ∀ j, j ≠ i -> M.Represents (family j)
 
-private theorem heHuBinaryFirst_represents_of_mul_square
+theorem heHuBinaryFirst_represents_of_mul_square
     (c d s : Kˣ) (h : c = d * s ^ 2) :
     DiagonalRepresents
       (diagonalUnitCoefficients (heHuBinaryFirst c))
@@ -340,7 +340,7 @@ private theorem heHuBinaryFirst_represents_of_mul_square
   · simp [heHuBinaryFirst]
   · simp [heHuBinaryFirst, h]
 
-private theorem heHuOddFirstTail_represents_of_mul_square
+theorem heHuOddFirstTail_represents_of_mul_square
     (c d s : Kˣ) (h : c = d * s ^ 2) :
     DiagonalRepresents
       (diagonalUnitCoefficients (heHuOddFirstTail c))
@@ -353,7 +353,7 @@ private theorem heHuOddFirstTail_represents_of_mul_square
   · simp [heHuOddFirstTail]
   · simp [heHuOddFirstTail, h]
 
-private theorem heHuEvenFirst_represents_of_mul_square
+theorem heHuEvenFirst_represents_of_mul_square
     (pairs : Nat) (c d s : Kˣ) (h : c = d * s ^ 2) :
     DiagonalRepresents
       (diagonalUnitCoefficients (heHuEvenFirst pairs c))
@@ -389,7 +389,7 @@ private theorem heHuEvenFirst_represents_of_mul_square
           (heHuEvenFirstTail d))).2
       simpa only [diagonalUnitCoefficients_append] using hfull
 
-private theorem heHuOddFirst_represents_of_mul_square
+theorem heHuOddFirst_represents_of_mul_square
     (pairs : Nat) (c d s : Kˣ) (h : c = d * s ^ 2) :
     DiagonalRepresents
       (diagonalUnitCoefficients (heHuOddFirst pairs c))
@@ -406,7 +406,7 @@ private theorem heHuOddFirst_represents_of_mul_square
 
 /-- In a fixed determinant square class, the non-first member of a
 two-class package is unique. -/
-private theorem HeHuSpacePairProperties.second_represents_second
+theorem HeHuSpacePairProperties.second_represents_second
     {n : Nat} {firstC secondC firstD secondD : Fin n -> Kˣ}
     (PC : HeHuSpacePairProperties firstC secondC)
     (PD : HeHuSpacePairProperties firstD secondD)
@@ -431,7 +431,7 @@ private theorem HeHuSpacePairProperties.second_represents_second
       htoFirst.trans hfirst.symm_of_sameRank
   · exact htoSecond
 
-private theorem heHuEvenSecondDefined_of_mul_square
+theorem heHuEvenSecondDefined_of_mul_square
     {pairs : Nat} {c d s : Kˣ}
     (hc : HeHuEvenSecondDefined pairs c) (h : c = d * s ^ 2) :
     HeHuEvenSecondDefined pairs d := by
@@ -444,7 +444,7 @@ private theorem heHuEvenSecondDefined_of_mul_square
       exact hd.mul ⟨s, pow_two s⟩
   | succ pairs => exact Or.inl (by omega)
 
-private theorem heHuEvenSecond_represents_of_mul_square
+theorem heHuEvenSecond_represents_of_mul_square
     (pairs : Nat) (c d s : Kˣ)
     (hc : HeHuEvenSecondDefined pairs c) (h : c = d * s ^ 2) :
     let hd := heHuEvenSecondDefined_of_mul_square hc h
@@ -458,7 +458,7 @@ private theorem heHuEvenSecond_represents_of_mul_square
       (heHuEvenSecondDefined_of_mul_square hc h))
   exact heHuEvenFirst_represents_of_mul_square pairs c d s h
 
-private theorem heHuOddSecond_represents_of_mul_square
+theorem heHuOddSecond_represents_of_mul_square
     (pairs : Nat) (c d s : Kˣ) (h : c = d * s ^ 2) :
     DiagonalRepresents
       (diagonalUnitCoefficients (heHuOddSecond pairs c))

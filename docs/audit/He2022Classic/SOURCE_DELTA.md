@@ -56,3 +56,18 @@ part (iii) with the missing preceding-gap premise exposed, and also proves
 the commonly used specialization in which both `R_(n+1)` and `R_(n+2)`
 belong to `{0,1}`.  No stronger conclusion is attributed to the published
 proof without that additional premise.
+
+## Lemma 3.14 / Lemma 7.1: incompatible parity in the cited application
+
+Lemma 3.14 of the publisher version (p. 575) assumes that its target rank
+`n` is odd and uses the sign `(-1)^((n+1)/2)`.  Lemma 7.1 (p. 587), however,
+assumes that the target rank `n` is even and applies Lemma 3.14 with the same
+letter `n`; its displayed sign is again `(-1)^((n+1)/2)`, whose exponent is
+not an integer under that hypothesis.  Thus the invocation, as printed,
+does not instantiate the cited lemma.
+
+The formalization does not add a parity coercion or an unproved replacement
+lemma.  The rank exclusions needed in Section 7 are instead derived from
+the independently formalized He--Hu ambient-space classification together
+with the equal-rank and codimension-one representation obstructions.  This
+keeps the publisher statement visible while avoiding a silent repair.
