@@ -466,6 +466,34 @@ def heADC2025Lemma49OddSecondUnitUniformizer :=
 
 set_option linter.defProp true
 
+/-! ### Minimality of the dyadic testing table -/
+
+/-- He, Lemma 4.9(ii), even rank: the finite published table is a
+literal deletion-minimal testing set for `n`-universality. -/
+theorem heADC2025Lemma49iiEven
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) :
+    Lattice.QuadraticLatticeModel.IsLiteralMinimalUniversalityTestingFamily
+      (HeHuPublishedEvenTestingIndex.model
+        (K := K) (U := U) (pairs := pairs))
+      (2 * pairs + 2) :=
+  Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedEvenLiteral
+    U hU pairs
+
+/-- He, Lemma 4.9(ii), odd rank: the finite published table is a
+literal deletion-minimal testing set for `n`-universality. -/
+theorem heADC2025Lemma49iiOdd
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) :
+    Lattice.QuadraticLatticeModel.IsLiteralMinimalUniversalityTestingFamily
+      (HeHuPublishedOddTestingIndex.model
+        (K := K) (U := U) (pairs := pairs))
+      (2 * pairs + 3) :=
+  Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedOddLiteral
+    U hU pairs
+
 namespace Lattice.QuadraticLatticeModel
 
 /-- Lattice-level version of representing exactly one of two objects. -/
