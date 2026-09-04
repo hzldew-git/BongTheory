@@ -15,5 +15,20 @@
 - `HeClassicTheorem11Statement`: the publisher theorem proposition, recorded
   as a definition and not asserted as a theorem.
 
-No proved declaration is currently presented as Theorem 1.1 or the full
-Theorem 1.3.
+The proposition-valued definition remains separate from its proof:
+
+- `Bong.BONG.GoodBONG.he2022ClassicTheorem11`: proves the complete equivalence
+  for n >= 2 and arbitrary source rank.
+- `Bong.BONG.GoodBONG.he2022ClassicTheorem41` and
+  `he2022ClassicTheorem51`: even and odd local criteria used by that proof.
+- `Bong.BONG.GoodBONG.he2022ClassicTheorem15`: proves e = 1 for a fixed dyadic
+  field, n >= 2, source rank at least n + 3, classic n-universality, and all
+  unsigned adjacent defects greater than one. It has no global conclusion.
+- `Bong.BONG.GoodBONG.he2022ClassicCorollary63_even`: even branch only.
+- `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
+  testing equivalence, not the full minimality theorem.
+- `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails`:
+  a refutation of the literal publisher disjunction, not its formal proof.
+
+`BongTest/He2022ClassicAudit.lean` exposes additional branch endpoints and
+their transitive axiom reports. No endpoint is claimed for full Theorem 1.3.

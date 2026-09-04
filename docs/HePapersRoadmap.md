@@ -18,27 +18,34 @@ arXiv copies are non-authoritative comparison sources.
 | Work package | Current endpoint | State |
 |---|---|---|
 | Shared representation API | inclusion representations and maximal extensions | proved |
-| He--Hu Theorem 1.1 | complete proposition and condition layer | statement only |
-| He--Hu Theorem 1.2 | abstract maximal-testing reduction | proved core; explicit list pending |
-| He classic Theorem 1.1 | complete proposition and condition layer | statement only |
-| He classic Theorem 1.3 | abstract classic-maximal testing reduction | proved core; explicit list pending |
+| He--Hu Theorem 1.1 | complete published equivalence | proved; provisional semantic review |
+| He--Hu Theorem 1.2 | literal finite normalized-unit table, counts, and deletion-minimality | proved; human review pending |
+| He classic Theorem 1.1 | complete local equivalence for n >= 2 | proved; human review pending |
+| He classic Theorem 1.3 | literal table and even testing equivalence | partial; odd sufficiency and full minimality/counting remain |
+| He classic Theorem 1.5 | local implication for n >= 2 | special case; unary and global clauses remain |
 | He ADC Definition 1.1(ii) | local dyadic predicate | formalized |
 | He ADC Lemma 2.1 | local dyadic maximal-testing reduction | proved specialization |
+| He ADC Lemmas 4.11-4.12 | public W/N families and all maximal order-profile branches | proved; independent AI review completed, human review pending |
+
+The current milestone is not whole-project completion. The Classic publisher
+Lemma 7.1(ii) has a checked refutation when e > 1; affected statements remain
+excluded until an explicit source resolution or separately justified route is
+available. ADC even/odd classifications and concrete global consequences
+remain active proof work. Exact-commit clean-kit CI and release publication
+are separate gates from local kernel acceptance.
 
 ## Proof order
 
-1. Complete the He--Hu local proof chain in publisher order: representation
-   criterion bridges, even branch, odd branch, exceptional quaternary case,
-   and then Theorem 1.1. Formalize the explicit maximal lattices and minimality
-   in Theorem 1.2 only after the classification equivalence is kernel checked.
-2. Reuse the verified He--Hu/Beli bridges for the classic paper, while keeping
-   scale integrality separate from norm integrality. Prove the even and odd
-   branches of Theorem 1.1 before formalizing the explicit minimal testing sets
-   of Theorem 1.3 and the global consequences.
-3. Extend the ADC layer from the proved local Lemma 2.1 to localization,
-   global `n`-ADC, and `n`-regularity. Then follow the publisher dependency
-   order through Theorems 1.3--1.11; do not import a local classification as a
-   substitute for proving its stated hypotheses.
+1. Preserve the checked He--Hu proof chain and finish its independent-review
+   and exact-release-commit reproducibility gates.
+2. Complete the remaining Classic testing and global obligations, keeping
+   scale integrality distinct from norm integrality and source corrections
+   distinct from literal publisher claims. Do not replace a missing odd-rank
+   proof with an unproved lower-even condition.
+3. Continue ADC through the remaining Section 4 structural results, local
+   Sections 5-7 classifications, and the concrete number-field consequences.
+   Abstract local-to-global predicates and conditional law packages are not
+   substitutes for proving the arithmetic hypotheses in Sections 1 and 8.
 
 ## Gate for every promoted theorem
 
