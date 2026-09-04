@@ -5,6 +5,7 @@ Authors: BONG Theory contributors
 -/
 import Bong.Lattice.NADC
 import Bong.Lattice.GlobalNADC
+import Bong.Bong.He2023ADCSectionThree
 
 /-!
 # He: n-ADC integral quadratic lattices
