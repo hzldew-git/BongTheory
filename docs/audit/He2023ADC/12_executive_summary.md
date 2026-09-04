@@ -3,8 +3,8 @@
 Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
-Proof assistant: Lean 4.32.1. The new profile proof checkpoint is
-`976883e6cda7c17402c4c1f0bc768db555460eae`.
+Proof assistant: Lean 4.32.1. The current proof checkpoint is
+`9c432a685c96c134b12664800464ae4b1d0d6eec`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -15,6 +15,11 @@ The formerly missing space/lattice correspondence is now proved, and the
 auxiliary defect and unit facts are derived internally. Their focused kernel
 and axiom checks pass. See report 14 for the exact scope.
 
+Proposition 4.13 is now proved in all three parts for arbitrary odd-rank
+maximal lattices. The ternary boundary, the omission of the nonexistent
+leftmost alpha cap, and the finite equality at 2e-1 passed separate AI review.
+See report 15. No unit representative or order-profile premise was added.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
 have not been supplied. Non-dyadic results, the ADC classifications in
@@ -23,6 +28,7 @@ Sections 6--7, global classifications and enumeration remain incomplete.
 Semantic status: provisional, with unsigned human review cards and remaining
 semantic checks elsewhere in the paper. Trust status: the new concrete endpoints use only the
 standard logical axioms; conditional global inputs remain explicit.
-Reproducibility status: incremental checks passed; exact-revision clean-kit
-validation remains required. Coverage grade: C. Whole-paper verdict:
+Reproducibility status: the published-profile tree passed clean-kit CI in run
+33929872783; the later Proposition 4.13 checkpoint has passed local checks but
+still requires its own clean-kit run. Coverage grade: C. Whole-paper verdict:
 `NOT_COMPLETE`.

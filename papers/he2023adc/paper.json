@@ -54,12 +54,13 @@
     "Dyadic space classification, codimension-one and codimension-two representation, and ADC lifting endpoints in Section 4",
     "Dyadic maximal table and literal minimal universality testing sets in ranks at least two",
     "The coordinate formula in Remark 4.10, ten concrete-model profile criteria, and thirteen published W/N branches for Lemmas 4.11-4.12 including rank one, with auxiliary defect and unit conditions proved",
+    "All three clauses of Proposition 4.13 for arbitrary odd-rank maximal lattices, including rank three and the capped-defect equalities",
     "Dyadic maximal-implies-ADC and equal-rank equivalence in Lemma 4.14 and Proposition 4.15"
   ],
   "excludedScope": [
     "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
     "Non-dyadic local results, Section 6-7 ADC classification, and Section 8 global and enumerative proofs",
-    "Remaining Section 4 clauses including Proposition 4.13, Proposition 4.16, and unary minimality",
+    "Remaining Section 4 clauses including Proposition 4.16 and unary minimality",
     "Completion of theorem-by-theorem semantic review and independent human sign-off"
   ],
   "reviewNotice": "This is an in-progress paper kit. Concrete proofs currently cover the dyadic foundations and selected Section 4 results. Global reductions still require explicit arithmetic premises; the local ADC classifications and enumeration are not complete. See the correspondence report for exact endpoint scope."

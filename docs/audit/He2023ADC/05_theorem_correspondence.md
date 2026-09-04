@@ -22,7 +22,7 @@
 | Lemma 4.11(iii) | `GoodBONG.heADC2025Lemma411iiiUnitFirstPublished`, `UnitSecondPublished`, `UniformizerFirstPublished`, `UniformizerSecondPublished` with the same prefix | All four `W/N` branches; finite-defect and sharp-unit arithmetic are proved internally |
 | Lemma 4.12(i)(ii) | `GoodBONG.heADC2025Lemma412iPublished`, `heADC2025Lemma412iiPublished`, `heADC2025Lemma412UnaryPublished` | Both `W/N` columns; rank one included; final second-column theorem has no `kappa` premise |
 | Lemma 4.12(iii) | `GoodBONG.heADC2025Lemma412iiiFirstPublished`, `heADC2025Lemma412iiiSecondPublished`, `heADC2025Lemma412UnaryPublished` | Both `W/N` unit-uniformizer columns, including rank one |
-| Proposition 4.13 | none | Pending |
+| Proposition 4.13 | `Bong.BONG.GoodBONG.heADC2025Proposition413` | `FULLY_FORMALIZED`, semantic `PROVISIONAL_MATCH`: all three clauses for every odd rank at least three; exact capped-defect bounds and equality retained |
 | Lemma 4.14, Proposition 4.15 | `heADCLemma414LocalDyadic`, `heADCProposition415LocalDyadic` | Proved dyadic specializations |
 | Proposition 4.16, Sections 5--8, remaining Section 1 results | none | Pending |
 

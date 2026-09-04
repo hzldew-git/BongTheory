@@ -1,5 +1,11 @@
 # Adversarial review
 
+The focused independent review of Proposition 4.13 at `9c432a6` found no
+blocking mismatch. It checked all three clauses, the n=3 and e=1 boundaries,
+the capped rather than raw defect, finite rational embedding into `WithTop`,
+all derived auxiliary data, and absence of circularity. Report 15 records
+the evidence and remaining human-review and clean-build obligations.
+
 Primary risks are omitting the ambient-space representation hypothesis,
 confusing local with global `n`-ADC, replacing integral representation by space
 representation, and overstating the dyadic specialization. Boundary ranks and

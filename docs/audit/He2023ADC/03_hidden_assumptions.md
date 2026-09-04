@@ -27,3 +27,8 @@ unit rows use the square-class domain excluding squares and the discriminant
 class. Their finite defect, oddness and upper bound are derived. The final
 odd second-column criterion has no auxiliary `kappa` parameter: its existence
 at defect `2e-1` is proved. See checkpoint `976883e` and report 14.
+
+Proposition 4.13 at checkpoint `9c432a6` assumes only the source's dyadic
+context, good BONG, and norm maximality. It derives the unit normalization,
+ambient row, actual maximal-lattice isometry, and order profile internally.
+There is no additional representative-system or profile premise; see report 15.

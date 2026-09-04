@@ -20,6 +20,9 @@ Additional concrete declaration groups are:
 - `He2023ADCGenericProfiles`: both nonexceptional unit and unit-uniformizer
   columns, with defect parity and the sharp partner derived from the domain.
 - `heADCLemma414LocalDyadic`, `heADCProposition415LocalDyadic`: maximality and ADC.
+- `He2023ADCOddMaximalStructure`: normalized ambient exhaustion, the complete
+  order profile of an arbitrary odd-rank maximal lattice, and
+  `heADC2025Proposition413`, proving all order, alpha, and capped-defect clauses.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

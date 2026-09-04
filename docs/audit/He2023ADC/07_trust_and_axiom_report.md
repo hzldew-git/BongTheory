@@ -1,5 +1,12 @@
 # Trust and axiom report
 
+At the later checkpoint `9c432a685c96c134b12664800464ae4b1d0d6eec`,
+`exists_heADCOddNormalizedAmbient`, `heADCOddMaximal_orders`, and
+`heADC2025Proposition413` also report exactly `propext`, `Classical.choice`,
+and `Quot.sound`. Their full types contain no separate project-law parameter
+or assumed order profile. An independent cached audit passed; clean-kit CI
+for this addition remains separate from the earlier profile checkpoint.
+
 `BongTest.He2023ADCAudit` prints public signatures and the transitive axiom
 sets of selected endpoints. Expected foundational axioms are `propext`, `Classical.choice`, and
 `Quot.sound`; no project-specific axiom or `sorry` is permitted. Successful

@@ -9,7 +9,9 @@ Coverage status: `IN_PROGRESS_SECTION_3_AND_DYADIC_SECTION_4`.
 - Section 4 has the space and maximal-table endpoints, representation
   reductions, rank-at-least-two minimal testing sets, the coordinate component
   of Remark 4.10, ten concrete-model profile criteria, and all thirteen
-  published-family branches covering Lemmas 4.11--4.12.
+  published-family branches covering Lemmas 4.11--4.12. Proposition 4.13 now
+  has a complete endpoint for arbitrary odd-rank maximal lattices, including
+  all alpha and bracketed-defect conclusions and the ternary boundary.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 
