@@ -276,6 +276,225 @@ theorem diagonalRepresents_goodBONG_of_represents_coefficientDiagonal
   simpa only [BONG.coefficientDiagonalSpace,
     QuadraticSpace.finiteDiagonal_quadratic_apply] using f.map_quadratic x
 
+/-! ## The published Lemma 7.1 obstruction
+
+The publisher proof applies Lemma 3.14 with the wrong parity.  The next
+calculation shows that this cannot be repaired by a harmless reindexing:
+when the ramification index is greater than one, the terminal condition
+of Theorem 2.5 already excludes the exceptional even lattice `H_e` from
+every odd source whose last order is zero and whose preceding alpha is one.
+-/
+
+/-- At ramification index greater than one, the terminal defect condition
+prevents a rank-`2p+3` source with terminal order zero and preceding alpha
+one from representing the exceptional rank-`2p+2` lattice `H_e(1)`.
+
+This is the exact numerical obstruction hidden by the parity mismatch in
+the published proof of Lemma 7.1. -/
+theorem zeroTerminalAlphaOne_not_represents_heClassicEvenH
+    [QuadraticDefectLaws K] [DyadicDiscriminantClassLaws K]
+    {V : Type v} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V}
+    (pairs : Nat) (a : BONG.GoodBONG q L (2 * pairs + 3))
+    (hLast : a.order ⟨2 * pairs + 2, by omega⟩ = 0)
+    (hAlpha : a.alphaValue ⟨2 * pairs + 1, by omega⟩ = 1)
+    (heLarge : 1 < ramificationIndex K) :
+    ¬ Lattice.Represents q
+        (BONG.coefficientDiagonalSpace
+          (heClassicEvenH (K := K) pairs 1))
+        L
+        (heHuExactRealization
+          (heClassicEvenH (K := K) pairs 1)
+          (heClassicEvenH_adjacentAdmissible pairs 1 (Or.inl rfl))
+          (heClassicEvenH_weakTwoStep pairs 1 (by
+            have h := ordUnit_mul K (1 : Kˣ) 1
+            simp only [mul_one] at h
+            omega))).lattice := by
+  let oneOrder : ordUnit K (1 : Kˣ) = 0 := by
+    have h := ordUnit_mul K (1 : Kˣ) 1
+    simp only [mul_one] at h
+    omega
+  let b := heClassicEvenHGoodBONG (K := K) pairs 1
+    (Or.inl rfl) oneOrder
+  let i : RepresentationIndex (2 * pairs + 3) (2 * pairs + 2) :=
+    { val := 2 * pairs + 2
+      pos := by omega
+      lt_large := by omega
+      le_small := by omega }
+  have hTargetLast :
+      b.order ⟨2 * pairs + 1, by omega⟩ =
+        -(ramificationIndex K : Int) := by
+    simp only [b, heClassicEvenHGoodBONG, heHuExactGoodBONG_order]
+    rw [heClassicEvenH_order pairs 1 oneOrder]
+    simp only [Nat.not_even_two_mul_add_one, ↓reduceIte]
+  have hHalf : (1 : WithTop ℚ) < a.representationHalfGap b i := by
+    unfold BONG.GoodBONG.representationHalfGap
+    dsimp only [i]
+    have hTargetIndex :
+        (⟨2 * pairs + 2 - 1, by omega⟩ : Fin (2 * pairs + 2)) =
+          ⟨2 * pairs + 1, by omega⟩ := by
+      apply Fin.ext
+      dsimp
+    rw [hLast, hTargetIndex, hTargetLast]
+    have heQ : (1 : ℚ) < (ramificationIndex K : ℚ) := by
+      exact_mod_cast heLarge
+    norm_cast
+    simp only [Rat.divInt_eq_div]
+    push_cast
+    linarith
+  have hMixedNonnegative : (0 : WithTop ℚ) <=
+      a.truncatedPrefixDefect b (-1) (2 * pairs + 3)
+        (2 * pairs + 1) := by
+    exact a.truncatedPrefixDefect_nonneg b (-1)
+      (2 * pairs + 3) (2 * pairs + 1)
+  have hPrimary :
+      (1 : WithTop ℚ) < a.representationPrimaryDefect b i := by
+    unfold BONG.GoodBONG.representationPrimaryDefect
+    dsimp only [i]
+    have hTargetIndex :
+        (⟨2 * pairs + 2 - 1, by omega⟩ : Fin (2 * pairs + 2)) =
+          ⟨2 * pairs + 1, by omega⟩ := by
+      apply Fin.ext
+      dsimp
+    rw [hLast, hTargetIndex, hTargetLast]
+    have hPlus : 2 * pairs + 2 + 1 = 2 * pairs + 3 := by omega
+    have hMinus : 2 * pairs + 2 - 1 = 2 * pairs + 1 := by omega
+    rw [hPlus, hMinus]
+    have heTop : (1 : WithTop ℚ) <
+        ((((ramificationIndex K : Int) : ℚ) : WithTop ℚ)) := by
+      exact_mod_cast heLarge
+    have hbase :
+        ((((ramificationIndex K : Int) : ℚ) : WithTop ℚ)) <=
+          ((((0 - -(ramificationIndex K : Int) : Int) : ℚ) : WithTop ℚ) +
+            a.truncatedPrefixDefect b (-1) (2 * pairs + 3)
+              (2 * pairs + 1)) := by
+      simpa using (le_add_of_nonneg_right hMixedNonnegative)
+    exact heTop.trans_le hbase
+  have hRepresentationAlpha :
+      (1 : WithTop ℚ) < a.representationAlpha b i := by
+    rw [a.representationAlpha_eq_min_halfGap_prime b i,
+      a.representationAlphaPrime_eq_primary_of_not_interior b i (by
+        dsimp only [i]
+        omega)]
+    exact lt_min hHalf hPrimary
+  have hComparisonCap :
+      a.truncatedPrefixDefect b 1 i.val i.val <= (1 : WithTop ℚ) := by
+    calc
+      a.truncatedPrefixDefect b 1 i.val i.val <= a.prefixAlphaCap i.val :=
+        a.truncatedPrefixDefect_le_leftCap b 1 i.val i.val
+      _ = (1 : WithTop ℚ) := by
+        rw [a.prefixAlphaCap_of_internal (by dsimp only [i]; omega)
+          (by dsimp only [i]; omega)]
+        have hIndex :
+            (⟨i.val - 1, by dsimp only [i]; omega⟩ :
+              Fin (2 * pairs + 2)) =
+              ⟨2 * pairs + 1, by omega⟩ := Fin.ext rfl
+        rw [hIndex, hAlpha]
+        norm_num
+  intro hrep
+  have hConditions := a.representationConditionsPrime_of_represents
+    b (by omega) hrep
+  have hDefect := hConditions.defectCondition i
+  rw [← a.coe_representationAlphaValue b i] at hRepresentationAlpha
+  exact (not_lt_of_ge (hDefect.trans hComparisonCap)) hRepresentationAlpha
+
+/-- Consequently, for `e>1` the literal first odd row `C₁(omega)` does
+not represent `H_e(1)`. -/
+theorem heClassicOddC1Omega_not_represents_evenH_of_ramification_gt_one
+    [QuadraticDefectLaws K] [DyadicDiscriminantClassLaws K]
+    (pairs : Nat) (heLarge : 1 < ramificationIndex K) :
+    ¬ (heClassicOddC1Model (K := K) pairs (heClassicOmega (K := K))
+          (by rw [heClassicOmega_order (K := K)])).Represents
+        (heClassicEvenHModel (K := K) pairs 1 (Or.inl rfl)
+          (by
+            have h := ordUnit_mul K (1 : Kˣ) 1
+            simp only [mul_one] at h
+            omega)) := by
+  let c := heClassicOmega (K := K)
+  let hc : 0 <= ordUnit K c := by
+    rw [heClassicOmega_order (K := K)]
+  let a := heClassicOddC1GoodBONG (K := K) pairs c hc
+  have hLast : a.order ⟨2 * pairs + 2, by omega⟩ = 0 := by
+    simp only [a, heClassicOddC1GoodBONG, heHuExactGoodBONG_order]
+    rw [heClassicOddC1_order, if_pos rfl,
+      heClassicOmega_order (K := K)]
+  have hAlpha : a.alphaValue ⟨2 * pairs + 1, by omega⟩ = 1 := by
+    have hAll := heClassicOddC1_alpha_eq_one (K := K) pairs c 1 hc
+      (Or.inr rfl)
+      (by dsimp only [c]; rw [heClassicOmega_order (K := K)]; norm_num)
+      (by dsimp only [c]; rw [heClassicOmega_defect (K := K)]; norm_num)
+    exact hAll _
+  exact zeroTerminalAlphaOne_not_represents_heClassicEvenH
+    pairs a hLast hAlpha heLarge
+
+/-- The literal second odd row `C₂(omega)`, with the formula-defined
+`omega#`, has the same terminal obstruction to representing `H_e(1)`. -/
+theorem heClassicOddC2Omega_not_represents_evenH_of_ramification_gt_one
+    [QuadraticDefectLaws K] [DyadicDiscriminantClassLaws K]
+    (pairs : Nat) (heLarge : 1 < ramificationIndex K) :
+    ¬ (heClassicOddC2EvenModel (K := K) pairs
+          (heClassicOmega (K := K)) (heClassicOmega (K := K))
+          (heClassicOmegaSharp (K := K))
+          (heClassicOmega_order (K := K))
+          (heClassicOmega_order (K := K))
+          (heClassicOmegaSharp_order (K := K))).Represents
+        (heClassicEvenHModel (K := K) pairs 1 (Or.inl rfl)
+          (by
+            have h := ordUnit_mul K (1 : Kˣ) 1
+            simp only [mul_one] at h
+            omega)) := by
+  let c := heClassicOmega (K := K)
+  let omegaUnit := heClassicOmega (K := K)
+  let omegaSharp := heClassicOmegaSharp (K := K)
+  let hc : ordUnit K c = 0 := heClassicOmega_order (K := K)
+  let homega : ordUnit K omegaUnit = 0 := heClassicOmega_order (K := K)
+  let homegaSharp : ordUnit K omegaSharp = 0 :=
+    heClassicOmegaSharp_order (K := K)
+  let a := heClassicOddC2EvenGoodBONG (K := K) pairs c omegaUnit
+    omegaSharp hc homega homegaSharp
+  have hLast : a.order ⟨2 * pairs + 2, by omega⟩ = 0 := by
+    simp only [a, heClassicOddC2EvenGoodBONG, heHuExactGoodBONG_order]
+    exact heClassicOddC2Even_order_zero pairs c omegaUnit omegaSharp hc
+      homega homegaSharp _
+  have hAlpha : a.alphaValue ⟨2 * pairs + 1, by omega⟩ = 1 := by
+    have hAll := heClassicOddC2Even_alpha_eq_one (K := K) pairs c
+      omegaUnit omegaSharp hc homega homegaSharp (by
+        dsimp only [omegaUnit]
+        exact heClassicOmega_defect (K := K))
+    exact hAll _
+  exact zeroTerminalAlphaOne_not_represents_heClassicEvenH
+    pairs a hLast hAlpha heLarge
+
+/-- Formal counterexample certificate for the literal conclusion of the
+published Lemma 7.1(ii): for `e>1`, neither displayed odd test lattice with
+parameter `omega` represents the classic integral lattice `H_e(1)`. -/
+theorem he2022ClassicLemma71ii_literal_disjunction_fails
+    [QuadraticDefectLaws K] [DyadicDiscriminantClassLaws K]
+    (pairs : Nat) (heLarge : 1 < ramificationIndex K) :
+    ¬ ((heClassicOddC1Model (K := K) pairs (heClassicOmega (K := K))
+            (by rw [heClassicOmega_order (K := K)])).Represents
+          (heClassicEvenHModel (K := K) pairs 1 (Or.inl rfl)
+            (by
+              have h := ordUnit_mul K (1 : Kˣ) 1
+              simp only [mul_one] at h
+              omega)) ∨
+        (heClassicOddC2EvenModel (K := K) pairs
+            (heClassicOmega (K := K)) (heClassicOmega (K := K))
+            (heClassicOmegaSharp (K := K))
+            (heClassicOmega_order (K := K))
+            (heClassicOmega_order (K := K))
+            (heClassicOmegaSharp_order (K := K))).Represents
+          (heClassicEvenHModel (K := K) pairs 1 (Or.inl rfl)
+            (by
+              have h := ordUnit_mul K (1 : Kˣ) 1
+              simp only [mul_one] at h
+              omega))) := by
+  rintro (h | h)
+  · exact heClassicOddC1Omega_not_represents_evenH_of_ramification_gt_one
+      pairs heLarge h
+  · exact heClassicOddC2Omega_not_represents_evenH_of_ramification_gt_one
+      pairs heLarge h
+
 /-- For an odd-order determinant parameter, the literal discriminant-unit
 second column is the other member of the common determinant square class. -/
 theorem heClassicEvenC_oddOrder_literalPairProperties

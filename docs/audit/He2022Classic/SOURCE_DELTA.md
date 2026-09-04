@@ -67,7 +67,17 @@ not an integer under that hypothesis.  Thus the invocation, as printed,
 does not instantiate the cited lemma.
 
 The formalization does not add a parity coercion or an unproved replacement
-lemma.  The rank exclusions needed in Section 7 are instead derived from
-the independently formalized He--Hu ambient-space classification together
-with the equal-rank and codimension-one representation obstructions.  This
-keeps the publisher statement visible while avoiding a silent repair.
+lemma.  More strongly, the literal conclusion of Lemma 7.1(ii) is false when
+the ramification index satisfies `e>1`.  Take the classic integral target
+`H_e^(2p+2)(1)`.  Both displayed rank-`2p+3` sources `C_1(omega)` and
+`C_2(omega)` have terminal BONG order zero and preceding alpha invariant one.
+At the terminal representation index, Theorem 2.5 forces their representation
+alpha to be at most one, whereas its half-gap and primary candidates are both
+strictly greater than one.  Hence neither source represents the target.
+
+This contradiction is machine checked by
+`he2022ClassicLemma71ii_literal_disjunction_fails` in
+`Bong/Bong/He2022ClassicSectionSeven.lean`.  Consequently Corollary 7.2 and
+every odd-rank argument that uses Lemma 7.1(ii) cannot be promoted as a theorem
+under the published hypotheses.  They remain explicitly marked as a
+publisher-source obstruction unless an erratum supplies a corrected statement.
