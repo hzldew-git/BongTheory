@@ -17,6 +17,7 @@ import Bong.Bong.He2022ClassicLemma35
 import Bong.Bong.He2022ClassicLemma36
 import Bong.Bong.He2022ClassicLemma37
 import Bong.Bong.He2022ClassicLemma38
+import Bong.Bong.He2022ClassicLemma39
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -44,7 +45,11 @@ terminal-defect bounds and strict source-gap consequence are formalized.
 Lemma 3.8's contradiction proof for the publisher's two-defect trigger in
 Theorem 2.5(iii) is formalized, with the publisher trigger kept distinct from
 the older alpha-trigger formulation until Beli's equivalence hypotheses are
-available.  The
+available.  Lemma 3.9 is formalized in both of its published parts: part (i)
+constructs the truncated target BONG and transports the capped defects into
+Lemma 3.8, while part (ii) proves the terminal parity contradiction through
+Lemma 3.7.  Both parts retain arbitrary source tails as well as exact-rank
+specializations.  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 2.8(ii), and classic integrality of every indexed row are also proved.  It
 does not yet claim the paper's explicit proof of the main BONG criterion or

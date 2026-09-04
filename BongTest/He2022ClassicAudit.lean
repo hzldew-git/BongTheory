@@ -119,6 +119,10 @@ import Bong.Papers.He2022Classic
 #check Bong.BONG.GoodBONG.he2022ClassicLemma37Gap
 #check Bong.BONG.GoodBONG.he2022ClassicLemma38LongSource
 #check Bong.BONG.GoodBONG.he2022ClassicLemma38
+#check Bong.BONG.GoodBONG.he2022ClassicLemma39iLongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma39i
+#check Bong.BONG.GoodBONG.he2022ClassicLemma39iiLongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma39ii
 
 #print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
 #print axioms Bong.Lattice.exists_classicMaximal_superlattice
@@ -177,3 +181,7 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.BONG.GoodBONG.heClassicPublishedCentralConditions_iff_forall_at
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma38LongSource
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma38
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39iLongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39i
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39iiLongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39ii
