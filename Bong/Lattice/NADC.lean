@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 import Bong.Lattice.OMaximalRepresentation
+import Bong.Bong.HeHu2022AmbientRank
 
 /-!
 # Local n-ADC quadratic lattices
@@ -61,6 +62,31 @@ theorem IsNUniversal.isNADC
   refine ⟨h.1, ?_⟩
   intro W _ _ r M hr hM _
   exact h.2 r M hr hM
+
+/-- An `n`-ADC lattice is `n`-universal whenever its ambient quadratic
+space represents every integral rank-`n` target space. -/
+theorem IsNADC.isNUniversal_of_ambientlyNUniversal
+    (h : IsNADC.{u, v, w} q L n)
+    (hAmbient : AmbientlyNUniversal.{u, v, w} q n) :
+    IsNUniversal.{u, v, w} q L n := by
+  refine ⟨h.isIntegral, ?_⟩
+  intro W _ _ r M hRank hIntegral
+  exact h.represents r M hRank hIntegral
+    (hAmbient r M hRank hIntegral)
+
+/-- He (2025), Theorem 1.4(i), for the repository's dyadic local-field
+interface: in ambient rank at least `n+3`, local `n`-ADC and local
+`n`-universality coincide. -/
+theorem isNADC_iff_isNUniversal_of_rank_add_three_le
+    [FiniteDimensional K V]
+    (q : QuadraticSpace K V) (L : Lattice K V) (n : Nat)
+    (hRank : n + 3 ≤ finrank K V) :
+    IsNADC.{u, v, w} q L n ↔ IsNUniversal.{u, v, w} q L n := by
+  constructor
+  · intro h
+    exact h.isNUniversal_of_ambientlyNUniversal
+      (ambientlyNUniversal_of_rank_add_three_le n hRank)
+  · exact IsNUniversal.isNADC
 
 /-- The restricted test family from He, Lemma 2.1: maximal rank-`n`
 lattices whose ambient spaces are represented by the target ambient space. -/

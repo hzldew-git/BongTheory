@@ -14,6 +14,8 @@ import Bong.Papers.He2023ADC
 #check Bong.Lattice.IsOMaximal.isNADC
 #check Bong.Lattice.IsNADC.isOMaximal_of_finrank_eq
 #check Bong.Lattice.isNADC_iff_isOMaximal_of_finrank_eq
+#check Bong.Lattice.IsNADC.isNUniversal_of_ambientlyNUniversal
+#check Bong.Lattice.isNADC_iff_isNUniversal_of_rank_add_three_le
 #check Bong.GlobalLocalLatticeSystem.IsGloballyNADC
 #check Bong.GlobalLocalLatticeSystem.IsGloballyNUniversal
 #check Bong.GlobalLocalLatticeSystem.IsNRegular
@@ -62,10 +64,12 @@ import Bong.Papers.He2023ADC
 #check Bong.Lattice.QuadraticLatticeModel.IsNADC.represents_every_of_ambient
 #check Bong.Lattice.heADCLemma414LocalDyadic
 #check Bong.Lattice.heADCProposition415LocalDyadic
+#check Bong.Lattice.heADCTheorem14iLocalDyadic
 
 #print axioms Bong.Lattice.heADCLemma21LocalDyadic
 #print axioms Bong.Lattice.heADCLemma414LocalDyadic
 #print axioms Bong.Lattice.heADCProposition415LocalDyadic
+#print axioms Bong.Lattice.heADCTheorem14iLocalDyadic
 #print axioms Bong.GlobalLocalLatticeSystem.heADCTheorem13
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem36
 #print axioms Bong.heADC2025Proposition42iiiEvenFirst

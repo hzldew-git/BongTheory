@@ -60,6 +60,15 @@ theorem heADCProposition415LocalDyadic
     IsNADC.{u, u, u} q L n ↔ IsOMaximal q L :=
   isNADC_iff_isOMaximal_of_finrank_eq q L n hrank
 
+/-- He, Theorem 1.4(i), specialized to a dyadic local field and discharged
+from the proved rank-`n+3` ambient-space theorem. -/
+theorem heADCTheorem14iLocalDyadic
+    [FiniteDimensional K V]
+    (q : QuadraticSpace K V) (L : Lattice K V) (n : Nat)
+    (hRank : n + 3 ≤ Module.finrank K V) :
+    IsNADC.{u, v, w} q L n ↔ IsNUniversal.{u, v, w} q L n :=
+  isNADC_iff_isNUniversal_of_rank_add_three_le q L n hRank
+
 end Lattice
 
 namespace GlobalLocalLatticeSystem
