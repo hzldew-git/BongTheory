@@ -96,6 +96,7 @@ import Bong.Papers.He2022Classic
 #check Bong.BONG.GoodBONG.he2022ClassicLemma31i
 #check Bong.BONG.GoodBONG.he2022ClassicLemma31ii
 #check Bong.BONG.GoodBONG.he2022ClassicLemma31iii
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31iv_corrected
 #check Bong.BONG.GoodBONG.he2022ClassicLemma31v
 
 #print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
@@ -137,4 +138,5 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31i
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31ii
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31iii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31iv_corrected
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31v

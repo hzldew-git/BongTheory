@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 
 import Bong.Bong.He2022ClassicProposition24
 import Bong.Bong.Beli2019MainConditions
+import Bong.Bong.Beli2019Lemma214Bounds
 
 /-!
 # He (2024), Lemma 3.1
@@ -177,6 +178,162 @@ theorem he2022ClassicLemma31iii {m n : Nat}
     hbounds.1.trans hbounds.2
   exact (not_lt_of_ge htargetNonnegative) (by
     simpa only [previous, hnext] using htrigger.1)
+
+/-- At an ordinary central index strictly beyond the first boundary, the
+alpha trigger forces the second strict inequality in Beli's definition of
+an essential index.  This is the unequal-rank form of the numerical
+calculation used in Beli (2006), Lemma 4.9. -/
+private theorem pair_lt_of_centralAlphaTrigger_of_ordinary
+    [targetLaws : Beli2006AlphaLaws.{u, w} K]
+    [sourceLaws : Beli2006AlphaLaws.{u, v} K]
+    {m n : Nat} (a : GoodBONG q L (m + 2))
+    (b : GoodBONG r M (n + 2))
+    (i : CentralRepresentationIndex (m + 2) (n + 2))
+    (hiThree : 2 < i.val) (hiOrdinary : i.val ≤ n + 2)
+    (hiNext : i.val + 1 < m + 2)
+    (htrigger : a.centralAlphaTrigger b i) :
+    b.order ⟨i.val - 3, by omega⟩ +
+        b.order ⟨i.val - 2, by omega⟩ <
+      a.order ⟨i.val, i.lt_large⟩ +
+        a.order ⟨i.val + 1, hiNext⟩ := by
+  let previous : RepresentationIndex (m + 2) (n + 2) := i.previous
+  let current : RepresentationIndex (m + 2) (n + 2) :=
+    i.current hiOrdinary
+  have hpreviousTwo : 1 < previous.val := by
+    simp only [previous, CentralRepresentationIndex.previous]
+    omega
+  have hcurrentNext : current.val + 1 < m + 2 := by
+    simp only [current, CentralRepresentationIndex.current]
+    omega
+  have hpreviousRaw := by
+    letI : Beli2006AlphaLaws.{u, w} K := targetLaws
+    exact (a.representationAlpha_le_prime b previous).trans
+      (a.representationAlphaPrime_le_primaryRightHalfGap
+        b previous hpreviousTwo)
+  have hcurrentRaw :=
+    (a.representationAlpha_le_prime b current).trans
+      (a.representationAlphaPrime_le_primaryLeftHalfGap
+        b current hcurrentNext)
+  have hprevious := hpreviousRaw
+  rw [← a.coe_representationAlphaValue b previous] at hprevious
+  norm_cast at hprevious
+  have hcurrent := hcurrentRaw
+  rw [← a.coe_representationAlphaValue b current] at hcurrent
+  norm_cast at hcurrent
+  have hsum := htrigger.2
+  unfold centralAdjustedAlpha at hsum
+  rw [dif_pos hiOrdinary] at hsum
+  norm_cast at hsum
+  unfold halfGapValue orderGap at hprevious hcurrent
+  have hprevious' :
+      a.representationAlphaValue b previous ≤
+        ((a.order ⟨i.val - 1, by omega⟩ : ℚ) -
+          (b.order ⟨i.val - 2, by omega⟩ : ℚ)) +
+          (((b.order ⟨i.val - 2, by omega⟩ : ℚ) -
+            (b.order ⟨i.val - 3, by omega⟩ : ℚ)) / 2 +
+            (ramificationIndex K : ℚ)) := by
+    dsimp only [previous, CentralRepresentationIndex.previous] at hprevious
+    push_cast at hprevious
+    have htargetIndex :
+        (⟨i.val - 1 - 1, by omega⟩ : Fin (n + 2)) =
+          ⟨i.val - 2, by omega⟩ := by
+      apply Fin.ext
+      change i.val - 1 - 1 = i.val - 2
+      omega
+    let p : Fin (n + 1) := ⟨i.val - 1 - 2, by omega⟩
+    have hpSucc : p.succ = ⟨i.val - 2, by omega⟩ := by
+      apply Fin.ext
+      simp only [p, Fin.val_succ]
+      omega
+    have hpCast : p.castSucc = ⟨i.val - 3, by omega⟩ := by
+      apply Fin.ext
+      simp only [p, Fin.val_castSucc]
+      omega
+    change a.representationAlphaValue b previous ≤
+      (a.order ⟨i.val - 1, by omega⟩ : ℚ) -
+          (b.order ⟨i.val - 1 - 1, by omega⟩ : ℚ) +
+        (((b.order p.succ : ℚ) - (b.order p.castSucc : ℚ)) / 2 +
+          (ramificationIndex K : ℚ)) at hprevious
+    rw [htargetIndex, hpSucc, hpCast] at hprevious
+    exact hprevious
+  have hcurrent' :
+      a.representationAlphaValue b current ≤
+        ((a.order ⟨i.val, i.lt_large⟩ : ℚ) -
+          (b.order ⟨i.val - 1, by omega⟩ : ℚ)) +
+          (((a.order ⟨i.val + 1, hiNext⟩ : ℚ) -
+            (a.order ⟨i.val, i.lt_large⟩ : ℚ)) / 2 +
+            (ramificationIndex K : ℚ)) := by
+    dsimp only [current, CentralRepresentationIndex.current] at hcurrent
+    push_cast at hcurrent
+    let p : Fin (m + 1) := ⟨i.val, by omega⟩
+    have hpSucc : p.succ = ⟨i.val + 1, hiNext⟩ := by
+      apply Fin.ext
+      simp only [p, Fin.val_succ]
+    have hpCast : p.castSucc = ⟨i.val, i.lt_large⟩ := by
+      apply Fin.ext
+      simp only [p, Fin.val_castSucc]
+    change a.representationAlphaValue b current ≤
+      (a.order ⟨i.val, i.lt_large⟩ : ℚ) -
+          (b.order ⟨i.val - 1, by omega⟩ : ℚ) +
+        (((a.order p.succ : ℚ) - (a.order p.castSucc : ℚ)) / 2 +
+          (ramificationIndex K : ℚ)) at hcurrent
+    rw [hpSucc, hpCast] at hcurrent
+    exact hcurrent
+  have hsum' :
+      2 * (ramificationIndex K : ℚ) +
+          (a.order ⟨i.val - 1, by omega⟩ : ℚ) <
+        a.representationAlphaValue b previous +
+          ((b.order ⟨i.val - 1, by omega⟩ : ℚ) +
+            a.representationAlphaValue b current) := by
+    push_cast at hsum
+    simpa only [previous, current,
+      CentralRepresentationIndex.previous,
+      CentralRepresentationIndex.current] using hsum
+  have hordersQ :
+      (b.order ⟨i.val - 3, by omega⟩ : ℚ) +
+          (b.order ⟨i.val - 2, by omega⟩ : ℚ) <
+        (a.order ⟨i.val, i.lt_large⟩ : ℚ) +
+          (a.order ⟨i.val + 1, hiNext⟩ : ℚ) := by
+    linarith [hprevious', hcurrent', hsum']
+  exact_mod_cast hordersQ
+
+/-- Lemma 3.1(iv), in the range in which its displayed second essentiality
+inequality exists.  The published lower bound `1 < j` includes `j = 2`,
+where Beli's endpoint convention omits that inequality; the proof and every
+later use in the paper require the corrected bound `2 < j`. -/
+theorem he2022ClassicLemma31iv_corrected
+    [targetLaws : Beli2006AlphaLaws.{u, w} K]
+    [sourceLaws : Beli2006AlphaLaws.{u, v} K]
+    {m n : Nat} (a : GoodBONG q L (m + 2))
+    (b : GoodBONG r M (n + 2))
+    (hBClassic : Lattice.IsClassicIntegral r M)
+    (i : CentralRepresentationIndex (m + 2) (n + 2))
+    (hiThree : 2 < i.val) (hiOrdinary : i.val ≤ n + 2)
+    (hiNext : i.val + 1 < m + 2)
+    (hpair :
+      a.order ⟨i.val, i.lt_large⟩ +
+          a.order ⟨i.val + 1, hiNext⟩ = 0) :
+    a.HeClassicCentralConditionAt b i := by
+  intro htrigger
+  exfalso
+  have hstrict := a.pair_lt_of_centralAlphaTrigger_of_ordinary
+    (targetLaws := targetLaws) (sourceLaws := sourceLaws)
+    b i hiThree hiOrdinary hiNext htrigger
+  let j : Fin (n + 1) := ⟨i.val - 3, by omega⟩
+  have htarget :=
+    (b.he2022ClassicProposition24 hBClassic).adjacentOrderSum j
+  have hleft : j.castSucc =
+      (⟨i.val - 3, by omega⟩ : Fin (n + 2)) := by
+    apply Fin.ext
+    rfl
+  have hright : j.succ =
+      (⟨i.val - 2, by omega⟩ : Fin (n + 2)) := by
+    apply Fin.ext
+    simp only [j, Fin.val_succ]
+    omega
+  unfold adjacentOrderSum at htarget
+  rw [hleft, hright] at htarget
+  omega
 
 /-- Lemma 3.1(v): if `R_(j+2)-R_(j+1) ≤ 2e`, the strict premise
 of condition (iv) is contradictory, so the pointwise implication holds. -/

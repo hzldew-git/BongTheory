@@ -17,3 +17,18 @@ unchanged.  The formal proof applies formula (2.4) to that preceding
 defect-one candidate, then uses Proposition 2.4(vi) to propagate
 `beta_i = 1`.  This is recorded explicitly rather than silently identifying
 the two adjacent products.
+
+## Lemma 3.1(iv): lower endpoint of the index range
+
+The publisher version (p. 569) and arXiv v3 both state `1 < j < m` and infer
+that `R_(j+1)+R_(j+2)=0 <= S_(j-2)+S_(j-1)` makes `j` nonessential.  At
+`j=2`, however, `S_(j-2)=S_0` does not exist.  Beli (2006), Definition 4.7
+and its endpoint convention explicitly omit this second essentiality
+inequality at `j=2`; at that endpoint essentiality is determined by
+`R_3>S_1`.  Consequently the displayed proof does not justify the stated
+`j=2` case.
+
+All later uses in Lemma 3.2 apply clause (iv) only to odd indices at least
+three.  The formal endpoint therefore records the proof-supported lower
+bound `2 < j`, and keeps the ordinary/terminal central-index distinction
+explicit.  No unproved repair of the publisher statement is introduced.
