@@ -37,9 +37,9 @@
   ],
   "auditDirectory": "docs/audit/He2023ADC",
   "sourceDelta": "docs/audit/He2023ADC/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_LOCAL_DEFINITION_AND_LEMMA_2_1",
+  "coverageStatus": "IN_PROGRESS_SECTION_3_AND_DYADIC_SECTION_4",
   "semanticStatus": "PARTIAL_LOCAL_DYADIC_SPECIALIZATION",
-  "grade": "D",
+  "grade": "C",
   "expectedAxioms": [
     "propext",
     "Classical.choice",
@@ -48,12 +48,20 @@
   "formalizedScope": [
     "Local dyadic specialization of Definition 1.1(ii)",
     "Local dyadic specialization of Lemma 2.1",
-    "Implication from n-universality to n-ADC"
+    "Implication from n-universality to n-ADC and the dyadic stable-rank equivalence in Theorem 1.4(i)",
+    "Global predicates and Theorems 1.3-1.4 as logical reductions with explicit undischarged arithmetic premises",
+    "Direct endpoints for all six numbered Section 3 items using proved Beli and He-Hu results",
+    "Dyadic space classification, codimension-one and codimension-two representation, and ADC lifting endpoints in Section 4",
+    "Dyadic maximal table and literal minimal universality testing sets in ranks at least two",
+    "The coordinate formula in Remark 4.10 and ten arbitrary-lattice order-profile equivalences for concrete models in Lemmas 4.11-4.12; complete published W/N transport is pending at the audited checkpoint",
+    "Dyadic maximal-implies-ADC and equal-rank equivalence in Lemma 4.14 and Proposition 4.15"
   ],
   "excludedScope": [
-    "Global Definition 1.2 and localization machinery",
-    "n-regularity and Theorems 1.3-1.11",
-    "Non-dyadic local cases and independent human semantic sign-off"
+    "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
+    "Non-dyadic local results, Section 6-7 ADC classification, and Section 8 global and enumerative proofs",
+    "Remaining Section 4 clauses including Proposition 4.13, Proposition 4.16, and unary minimality",
+    "Complete published W/N identification and generic parameter specialization for all concrete maximal-profile endpoints",
+    "Completion of theorem-by-theorem semantic review and independent human sign-off"
   ],
-  "reviewNotice": "Current coverage is explicitly local and dyadic. It does not formalize the global classification results of the published paper."
+  "reviewNotice": "This is an in-progress paper kit. Concrete proofs currently cover the dyadic foundations and selected Section 4 results. Global reductions still require explicit arithmetic premises; the local ADC classifications and enumeration are not complete. See the correspondence report for exact endpoint scope."
 }

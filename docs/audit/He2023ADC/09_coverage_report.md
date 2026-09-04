@@ -1,16 +1,24 @@
 # Coverage report
 
-Coverage status: `IN_PROGRESS_EXHAUSTIVE_INVENTORY_COMPLETE`.
+Coverage status: `IN_PROGRESS_SECTION_3_AND_DYADIC_SECTION_4`.
 
 - Publisher inventory: 78/78 directly numbered items identified.
-- Direct proved publisher-result endpoints: 1 local specialization (Lemma
-  2.1) out of 78; the unrestricted paper-level bridge is still pending.
-- Definition coverage: the local dyadic clause of Definition 1.1 is encoded;
-  its global clause and Definition 1.2 are not yet formalized.
-- Global localization, `n`-regularity, local classifications, global
-  classifications, and enumeration remain uncovered.
+- Local dyadic definition, maximal testing, maximal-implies-ADC, equal-rank
+  equivalence and stable-rank ADC/universality equivalence are proved.
+- Section 3 has direct endpoints for all six numbered items.
+- Section 4 has the space and maximal-table endpoints, representation
+  reductions, rank-at-least-two minimal testing sets, Remark 4.10, and the ten
+  canonical-model branches of Lemmas 4.11--4.12 listed in the correspondence.
+- Global predicates and regularity are defined in an abstract system, and
+  the logical reductions are proved with explicit arithmetic premises.
 
-For strict whole-paper accounting, the current verified direct coverage is
-**1/78 local-specialized endpoint** and **0/78 full-scope endpoints**.  Both
-figures are retained because collapsing the distinction would overstate
-semantic coverage.
+The remaining scope includes concrete localization and Lemma 2.2, unrestricted
+local-field results, unary testing-set minimality, remaining Section 4 clauses,
+Sections 5--7 ADC classification, Section 8 global proofs, and the enumerative
+main theorems. Boundary-rank and model-to-paper correspondences remain part
+of the semantic review.
+
+No completed-paper percentage is inferred from the number of declarations:
+one numbered result can have many formal branches, and some current branches
+only cover the dyadic specialization. The whole-paper verdict remains
+`NOT_COMPLETE` and the overall coverage grade is C.

@@ -7,3 +7,14 @@
    rank exactly as encoded.
 4. Keep the dyadic specialization visibly separate from the general and global
    statements.
+5. Confirm the dictionary between the ten explicit model branches of Lemmas
+   4.11--4.12 and the published `W_1`, `W_2`, `N_1`, `N_2` labels, including
+   the sign of `Delta` and the factor `1/2` in the hyperbolic plane.
+6. Confirm that the profile is read as `k` copies of `0,-2e` followed by the
+   listed tail, with zero-based Lean indices. Check the rank-one first-column
+   rows and the absent binary second-column square row.
+7. Review the arithmetic fields of `Theorem13Laws` against the cited
+   localization, maximal-lattice and local-global theorems. Their concrete
+   proofs are still required before promoting the global results.
+
+All cards are unsigned. No independent human semantic approval is recorded.

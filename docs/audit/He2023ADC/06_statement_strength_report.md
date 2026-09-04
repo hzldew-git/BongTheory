@@ -4,3 +4,21 @@
 the repository's dyadic local-field context. It is therefore a specialization,
 not the full algebraic-number-field-or-local-field statement. The global main
 theorems are neither implied by nor encoded in this endpoint.
+
+The added stable-rank local equivalence supplies the dimension assumption
+`rank >= n+3` and derives ambient universality from the proved dyadic space
+theorem. The abstract global reductions do not discharge the corresponding
+number-field assumptions.
+
+The profile endpoints for Lemmas 4.11--4.12 prove both logical directions
+for arbitrary integral lattices with the required ambient space. Equality
+of all displayed orders gives equality of volume orders; an integral maximal
+extension and maximal-lattice uniqueness then give integral isometry. Thus
+the converse does not assume the conclusion or merely verify a canonical
+example. Rank one is included in the unary-tail criteria; the second-column
+square model begins at rank four.
+
+Several Section 4 interfaces remain more general in their linear-algebra
+parameters but narrower in their field scope than the published wording.
+The correspondence table records these distinctions. No statement-strength
+claim is made for the unproved ADC classification or enumeration.

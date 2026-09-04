@@ -4,5 +4,18 @@ The formal predicate explicitly requires source integrality, target rank `n`,
 target integrality, and representation of the target ambient quadratic space by
 the source ambient space. The paper-facing Lemma 2.1 specialization also records
 the standing assumption `n > 0`. Current field assumptions are dyadic local, stronger
-than the paper's general local-field wording in Lemma 2.1. Global fields,
-localization, completions at all primes, and `n`-regularity are absent.
+than the paper's general local-field wording in Lemma 2.1.
+
+The global predicates now exist, but `GlobalLocalLatticeSystem.Theorem13Laws`
+still supplies the arithmetic inputs. A clean transitive axiom report does
+not discharge a theorem parameter. The stable-rank global reductions likewise
+retain ambient representation premises. These interfaces do not establish
+the corresponding concrete algebraic-number-field theorems.
+
+The profile criterion quantifies over every good BONG of an integral lattice
+on the specified space. It assumes ambient isometry, not lattice isometry.
+Maximality of the reference table rows is proved internally. The ten profile
+endpoints and the odd second-column endpoint of Lemma 4.9 now have no
+undischarged `GoodBONGClassificationLaws` parameter: they use the checked
+Beli classification proof. Ordinary field, integrality, unit, defect, and
+rank hypotheses remain part of the mathematical statements.
