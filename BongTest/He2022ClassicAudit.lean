@@ -87,6 +87,16 @@ import Bong.Papers.He2022Classic
 #check Bong.he2022ClassicLemma211i
 #check Bong.he2022ClassicLemma211ii
 #check Bong.he2022ClassicLemma211iii
+#check Bong.BONG.GoodBONG.HeClassicOrderConditionAt
+#check Bong.BONG.GoodBONG.HeClassicCentralConditionAt
+#check Bong.BONG.GoodBONG.HeClassicLongConditionAt
+#check Bong.BONG.GoodBONG.heClassicOrderCondition_iff_forall_at
+#check Bong.BONG.GoodBONG.heClassicCentralConditions_iff_forall_at
+#check Bong.BONG.GoodBONG.heClassicLongConditions_iff_forall_at
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31i
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31ii
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31iii
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31v
 
 #print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
 #print axioms Bong.Lattice.exists_classicMaximal_superlattice
@@ -124,3 +134,7 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.he2022ClassicLemma211i
 #print axioms Bong.he2022ClassicLemma211ii
 #print axioms Bong.he2022ClassicLemma211iii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31i
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31ii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31iii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31v

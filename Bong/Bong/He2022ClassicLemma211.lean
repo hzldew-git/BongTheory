@@ -189,6 +189,8 @@ theorem heClassicRamifiedBinary_represents_iff_anisotropic
     exact hprefix.trans hfull
 
 set_option maxHeartbeats 1000000 in
+-- The reverse implication expands the explicit hyperbolic embedding and needs
+-- more simplifier work than Lean's default heartbeat allowance permits.
 /-- The standard hyperbolic binary test represents a ternary diagonal
 space exactly in its isotropic branch. -/
 theorem heClassicHyperbolicPair_represents_iff_isotropic

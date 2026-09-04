@@ -9,6 +9,7 @@ import Bong.Bong.He2022ClassicProfiles
 import Bong.Bong.He2022ClassicLemma29
 import Bong.Bong.He2022ClassicPublishedTestingSet
 import Bong.Bong.He2022ClassicLemma211
+import Bong.Bong.He2022ClassicLemma31
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
