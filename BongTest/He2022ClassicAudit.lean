@@ -105,6 +105,7 @@ import Bong.Papers.He2022Classic
 #check Bong.BONG.GoodBONG.representationDefectAt_of_not_heClassicEssential
 #check Bong.BONG.GoodBONG.he2022ClassicLemma32
 #check Bong.BONG.GoodBONG.he2022ClassicLemma33
+#check Bong.BONG.GoodBONG.he2022ClassicLemma34
 
 #print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
 #print axioms Bong.Lattice.exists_classicMaximal_superlattice
@@ -150,3 +151,4 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.BONG.GoodBONG.representationDefectAt_of_not_heClassicEssential
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma32
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma33
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma34

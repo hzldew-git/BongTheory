@@ -32,3 +32,12 @@ All later uses in Lemma 3.2 apply clause (iv) only to odd indices at least
 three.  The formal endpoint therefore records the proof-supported lower
 bound `2 < j`, and keeps the ordinary/terminal central-index distinction
 explicit.  No unproved repair of the publisher statement is introduced.
+
+## Lemma 3.4: parity phrase in the equal-prefix subcase
+
+The publisher proof (p. 571) says that both `k-1` and `j+2` are odd.  The
+lemma assumes that `j` is even, so `j+2` is even.  The conclusion used at
+that point is only `R_(j+2) >= 0`; it follows directly from good-BONG
+two-step monotonicity `R_j <= R_(j+2)` together with the hypothesis
+`R_j = 0`.  The formal proof uses this valid argument and does not encode
+the typographical parity claim.
