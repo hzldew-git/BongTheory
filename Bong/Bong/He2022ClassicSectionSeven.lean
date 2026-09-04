@@ -663,8 +663,10 @@ theorem literalLemma42Tests_of_all
     {I : Type u} [Fintype I] (U : I -> Kˣ)
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (pairs : Nat) (X : QuadraticLatticeModel (K := K))
+    {m : Nat}
     (a : @BONG.GoodBONG K _ _ _ _ _ X.Carrier X.addCommGroup X.module
-      X.form X.lattice ((2 * pairs + 1) + 3))
+      X.form X.lattice (m + 3))
+    (hSource : 2 * pairs + 4 <= m + 3)
     (hAll : forall i : HeClassicPublishedEvenTestingIndex
         (K := K) U (ramificationIndex K),
       X.Represents
@@ -709,17 +711,242 @@ theorem literalLemma42Tests_of_all
   exact ⟨⟨hconditionsC.orderCondition, hconditionsC.defectCondition⟩,
     ⟨hconditionsH.orderCondition, hconditionsH.defectCondition⟩⟩
 
-/-- In the only unstable rank, namely source rank `n+2`, the actual finite
-table forces the signed full-prefix bound used by Lemma 4.4.  For `e>1`
-this is `J₂'_E`; for `e=1` the proof uses exactly the two exceptional
-`H(1)` and `H(Delta)` rows occurring in Lemma 4.3(i). -/
-theorem fullRank_signedPrefix_upper_of_all
-    [QuadraticDefectLaws K] [DyadicDiscriminantClassLaws K]
+/-- The codimension-one exclusion in Lemma 4.3(ii) depends only on the
+two displayed rows forming the two ambient isometry classes with their
+common determinant square class.  This parameterized version permits the
+square-class representative actually occurring in the finite table. -/
+theorem heClassicEvenC_notBothRepresents_of_pair
+    {V : Type v} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V}
+    {m : Nat} (pairs : Nat) (a : BONG.GoodBONG q L (m + 3))
+    (hExtra : 2 * pairs + 5 <= m + 3)
+    (c cSharp : Kˣ) (hc : ordUnit K c = 0)
+    (hcSharp : ordUnit K cSharp = 0)
+    (pair : HeHuSpacePairProperties
+      (heClassicEvenC1 (K := K) pairs c)
+      (heClassicEvenC2 (K := K) pairs c cSharp)) :
+    let bC1 := heClassicEvenC1GoodBONG (K := K) pairs c (by omega)
+    let bC2 := heClassicEvenC2GoodBONG (K := K) pairs c cSharp
+      (by omega) hcSharp
+    let i := BONG.GoodBONG.he2022ClassicLemma43Index
+      (m := m) pairs (by omega)
+    ¬ (DiagonalRepresents
+        (bC1.prefixValues (i.val - 1) (by
+          have := i.le_small_succ
+          omega))
+        (a.prefixValues i.val (by
+          have := i.lt_large
+          omega)) ∧
+      DiagonalRepresents
+        (bC2.prefixValues (i.val - 1) (by
+          have := i.le_small_succ
+          omega))
+        (a.prefixValues i.val (by
+          have := i.lt_large
+          omega))) := by
+  dsimp only
+  let hnonnegative : 0 <= ordUnit K c := by omega
+  let bC1 := heClassicEvenC1GoodBONG (K := K) pairs c hnonnegative
+  let bC2 := heClassicEvenC2GoodBONG (K := K) pairs c cSharp
+    hnonnegative hcSharp
+  let i := BONG.GoodBONG.he2022ClassicLemma43Index pairs (by omega :
+    2 * pairs + 4 <= m + 3)
+  rintro ⟨hC1, hC2⟩
+  let hs : i.val - 1 = 2 * pairs + 2 := by
+    dsimp only [i, BONG.GoodBONG.he2022ClassicLemma43Index]
+    omega
+  let ht : i.val = 2 * pairs + 3 := by rfl
+  have hC1Cast := BONG.GoodBONG.heHuLemma43_diagonalRepresents_castLengths
+    hs ht hC1
+  have hC2Cast := BONG.GoodBONG.heHuLemma43_diagonalRepresents_castLengths
+    hs ht hC2
+  have hC1TargetEq :
+      (fun j : Fin (2 * pairs + 2) =>
+        bC1.prefixValues (i.val - 1) (by
+          have := i.le_small_succ
+          omega) (Fin.cast hs.symm j)) =
+        bC1.prefixValues (2 * pairs + 2) le_rfl := by
+    funext j
+    unfold BONG.GoodBONG.prefixValues
+    congr 1
+  have hC2TargetEq :
+      (fun j : Fin (2 * pairs + 2) =>
+        bC2.prefixValues (i.val - 1) (by
+          have := i.le_small_succ
+          omega) (Fin.cast hs.symm j)) =
+        bC2.prefixValues (2 * pairs + 2) le_rfl := by
+    funext j
+    unfold BONG.GoodBONG.prefixValues
+    congr 1
+  have hsourceEq :
+      (fun j : Fin (2 * pairs + 3) =>
+        a.prefixValues i.val (by
+          have := i.lt_large
+          omega) (Fin.cast ht.symm j)) =
+        a.prefixValues (2 * pairs + 3) (by omega) := by
+    funext j
+    unfold BONG.GoodBONG.prefixValues
+    congr 1
+  have hC1' : DiagonalRepresents
+      (bC1.prefixValues (2 * pairs + 2) le_rfl)
+      (a.prefixValues (2 * pairs + 3) (by omega)) := by
+    rw [hC1TargetEq, hsourceEq] at hC1Cast
+    exact hC1Cast
+  have hC2' : DiagonalRepresents
+      (bC2.prefixValues (2 * pairs + 2) le_rfl)
+      (a.prefixValues (2 * pairs + 3) (by omega)) := by
+    rw [hC2TargetEq, hsourceEq] at hC2Cast
+    exact hC2Cast
+  let source := a.prefixValueUnits (2 * pairs + 3) (by omega)
+  have hC1Units : DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC1 (K := K) pairs c))
+      (BONG.GoodBONG.diagonalUnitCoefficients source) := by
+    change DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (bC1.prefixValueUnits (2 * pairs + 2) le_rfl))
+      (BONG.GoodBONG.diagonalUnitCoefficients source) at hC1'
+    rw [BONG.GoodBONG.heClassicEvenC1_fullPrefixValueUnits
+      pairs c hnonnegative] at hC1'
+    exact hC1'
+  have hC2Units : DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC2 (K := K) pairs c cSharp))
+      (BONG.GoodBONG.diagonalUnitCoefficients source) := by
+    change DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (bC2.prefixValueUnits (2 * pairs + 2) le_rfl))
+      (BONG.GoodBONG.diagonalUnitCoefficients source) at hC2'
+    rw [BONG.GoodBONG.heClassicEvenC2_fullPrefixValueUnits
+      pairs c cSharp hnonnegative hcSharp] at hC2'
+    exact hC2'
+  have hexact := heHu2022Lemma313CodimensionOne
+    (heClassicEvenC1 (K := K) pairs c)
+    (heClassicEvenC2 (K := K) pairs c cSharp)
+    pair source
+  rcases hexact with hfirst | hsecond
+  · exact hfirst.2 hC2Units
+  · exact hsecond.1 hC1Units
+
+/-- The Lemma 4.3(ii) failure alternative for an arbitrary defect-one
+unit representative and its canonical sharp partner.  The published
+`omega` statement is a specialization; Section 7 needs this invariant
+form because its finite table is indexed by an arbitrary complete system
+of unit square-class representatives. -/
+theorem he2022ClassicLemma43ii_representative
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {V : Type v} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V}
+    {m : Nat} (pairs : Nat) (a : BONG.GoodBONG q L (m + 3))
+    (hExtra : 2 * pairs + 5 <= m + 3)
+    (hJ1 : a.HeClassicJ1EPrime (2 * pairs + 2) (by omega))
+    (heOne : ramificationIndex K = 1)
+    (_hSum :
+      (1 : WithTop ℚ) <
+        ((((a.order ⟨2 * pairs + 3, by omega⟩ : Int) : ℚ) :
+            WithTop ℚ)) +
+          a.truncatedPrefixDefect a ((-1) ^ (pairs + 2))
+            0 (2 * pairs + 4))
+    (hDAlpha :
+      a.truncatedPrefixDefect a ((-1) ^ (pairs + 2)) 0
+          (2 * pairs + 4) =
+        (a.alphaValue
+          (⟨2 * pairs + 3, by omega⟩ : Fin (m + 2)) : WithTop ℚ))
+    (hR : 1 <= a.order ⟨2 * pairs + 3, by omega⟩)
+    (c : Kˣ) (hc : ordUnit K c = 0)
+    (hcDefect : BONG.GoodBONG.defectOrder (K := K) c = 1) :
+    let cSharp := heClassicDefectOneSharp (K := K) c hcDefect
+    let hcSharp := heClassicDefectOneSharp_order c hcDefect
+    let bC1 := heClassicEvenC1GoodBONG (K := K) pairs c (by omega)
+    let bC2 := heClassicEvenC2GoodBONG (K := K) pairs c cSharp
+      (by omega) hcSharp
+    let i := BONG.GoodBONG.he2022ClassicLemma43Index pairs (by omega)
+    ¬ a.HeClassicPublishedCentralConditionAt bC1 i ∨
+      ¬ a.HeClassicPublishedCentralConditionAt bC2 i := by
+  dsimp only
+  let cSharp := heClassicDefectOneSharp (K := K) c hcDefect
+  let hcSharp := heClassicDefectOneSharp_order c hcDefect
+  let hnonnegative : 0 <= ordUnit K c := by omega
+  let bC1 := heClassicEvenC1GoodBONG (K := K) pairs c hnonnegative
+  let bC2 := heClassicEvenC2GoodBONG (K := K) pairs c cSharp
+    hnonnegative hcSharp
+  let i := BONG.GoodBONG.he2022ClassicLemma43Index pairs (by omega :
+    2 * pairs + 4 <= m + 3)
+  have hC1Order : ∀ j : Fin (2 * pairs + 2), bC1.order j = 0 := by
+    intro j
+    simp only [bC1, heClassicEvenC1GoodBONG, heHuExactGoodBONG_order]
+    rw [heClassicEvenC1_order]
+    split
+    · simpa only using hc
+    · rfl
+  have hC2Order : ∀ j : Fin (2 * pairs + 2), bC2.order j = 0 := by
+    intro j
+    simp only [bC2, heClassicEvenC2GoodBONG, heHuExactGoodBONG_order]
+    rw [heClassicEvenC2_order pairs c cSharp hcSharp]
+    split
+    · simpa only using hc
+    · rfl
+  have hC1Alpha : bC1.alphaValue
+      (⟨2 * pairs, by omega⟩ : Fin (2 * pairs + 1)) = 1 := by
+    have hall := heClassicEvenC1_alpha_eq_one (K := K) pairs c 1
+      hnonnegative (Or.inr rfl) (by rw [hc]; norm_num)
+      (by simpa using hcDefect)
+    exact hall _
+  have hC2Alpha : bC2.alphaValue
+      (⟨2 * pairs, by omega⟩ : Fin (2 * pairs + 1)) = 1 := by
+    have hall := heClassicEvenC2_alpha_eq_one (K := K) pairs c cSharp 1
+      hnonnegative hcSharp (Or.inr rfl) (by rw [hc]; norm_num)
+      (by simpa using hcDefect)
+    exact hall _
+  have hC1Self := BONG.GoodBONG.heClassicEvenC1_fullSelfDefect
+    (K := K) pairs c hnonnegative
+  have hC2Self := BONG.GoodBONG.heClassicEvenC2_fullSelfDefect
+    (K := K) pairs c cSharp hnonnegative hcSharp
+  have hC1Current : min
+      (a.truncatedPrefixDefect a ((-1) ^ (pairs + 2)) 0
+        (2 * pairs + 4)) (1 : WithTop ℚ) <=
+      a.centralCurrentDefect bC1 i := by
+    have h := a.heClassicLemma43_C_centralCurrentDefect_lower_of_self
+      pairs (by omega) bC1 c hC1Self
+    rw [hcDefect] at h
+    simpa only [i] using h
+  have hC2Current : min
+      (a.truncatedPrefixDefect a ((-1) ^ (pairs + 2)) 0
+        (2 * pairs + 4)) (1 : WithTop ℚ) <=
+      a.centralCurrentDefect bC2 i := by
+    have h := a.heClassicLemma43_C_centralCurrentDefect_lower_of_self
+      pairs (by omega) bC2 c hC2Self
+    rw [hcDefect] at h
+    simpa only [i] using h
+  have hC1Trigger : a.centralDefectTrigger bC1 i := by
+    exact a.he2022ClassicLemma43_C_trigger pairs hExtra hJ1 heOne bC1
+      hC1Order hC1Alpha hDAlpha hR hC1Current
+  have hC2Trigger : a.centralDefectTrigger bC2 i := by
+    exact a.he2022ClassicLemma43_C_trigger pairs hExtra hJ1 heOne bC2
+      hC2Order hC2Alpha hDAlpha hR hC2Current
+  have hpair := BONG.GoodBONG.heClassicEvenC_pairProperties
+    (K := K) pairs c hcDefect
+  have hnot := heClassicEvenC_notBothRepresents_of_pair
+    (K := K) pairs a hExtra c cSharp hc hcSharp hpair
+  exact BONG.GoodBONG.not_both_heClassicPublishedCentralConditionAt_of_triggers
+    (m := m + 1) (n₁ := 2 * pairs) (n₂ := 2 * pairs)
+    a bC1 bC2 i i hC1Trigger hC2Trigger hnot
+
+/-- Representation of the actual finite even table forces the signed-prefix
+upper bound used in Lemmas 4.4 and 4.5 at every admissible source rank.
+For `e>1` this is `J2'_E`; for `e=1` the two exceptional `H` rows and a
+defect-one representative pair exclude all remaining branches. -/
+theorem signedPrefix_upper_of_all
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
     {I : Type u} [Fintype I] (U : I -> Kˣ)
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (pairs : Nat) (X : QuadraticLatticeModel (K := K))
+    {m : Nat}
     (a : @BONG.GoodBONG K _ _ _ _ _ X.Carrier X.addCommGroup X.module
-      X.form X.lattice ((2 * pairs + 1) + 3))
+      X.form X.lattice (m + 4))
+    (hSource : 2 * pairs + 4 <= m + 4)
     (hXClassic : X.IsClassicIntegral)
     (hAll : forall i : HeClassicPublishedEvenTestingIndex
         (K := K) U (ramificationIndex K),
@@ -737,12 +964,12 @@ theorem fullRank_signedPrefix_upper_of_all
   letI : Module K X.Carrier := X.module
   have hClassic : Lattice.IsClassicIntegral X.form X.lattice := by
     exact hXClassic
-  have hTests := literalLemma42Tests_of_all U hU pairs X a hAll
+  have hTests := literalLemma42Tests_of_all U hU pairs X a hSource hAll
   have hJ1 := a.he2022ClassicLemma42_j1Prime_of_publishedTests pairs
-    (by omega) hClassic hTests
+    hSource hClassic hTests
   by_cases heLarge : 1 < ramificationIndex K
   · have hJ2 := a.he2022ClassicLemma42_j2Prime_of_publishedTests pairs
-      (by omega) hClassic hTests
+      hSource hClassic hTests
     have hbound := hJ2 heLarge
     simpa only [show (2 * pairs + 2 + 2) / 2 = pairs + 2 by omega,
       show 2 * pairs + 2 + 1 = 2 * pairs + 3 by omega,
@@ -800,7 +1027,6 @@ theorem fullRank_signedPrefix_upper_of_all
       (((-1 : Kˣ) ^ (pairs + 2)) * a.prefixProduct (2 * pairs + 4))
     let twoE : WithTop ℚ :=
       ((2 * (ramificationIndex K : ℚ) : ℚ) : WithTop ℚ)
-    have hSource : 2 * pairs + 4 <= (2 * pairs + 1) + 3 := by omega
     by_contra hupper
     have hsum : (1 : WithTop ℚ) <
         (((R : Int) : ℚ) : WithTop ℚ) + D := by
@@ -811,7 +1037,7 @@ theorem fullRank_signedPrefix_upper_of_all
           (Or.inl (by simpa only [raw, twoE] using hRawLt))
       dsimp only at hfailure
       let i : CentralRepresentationIndex
-          ((2 * pairs + 1) + 3) (2 * pairs + 2) :=
+          (m + 4) (2 * pairs + 2) :=
         BONG.GoodBONG.he2022ClassicLemma43Index pairs hSource
       rcases hfailure with hOneFails | hDeltaFails
       · exact hOneFails
@@ -827,7 +1053,7 @@ theorem fullRank_signedPrefix_upper_of_all
             (Or.inr (by simpa only [D, twoE] using hTwoELeD))
         dsimp only at hfailure
         let i : CentralRepresentationIndex
-            ((2 * pairs + 1) + 3) (2 * pairs + 2) :=
+            (m + 4) (2 * pairs + 2) :=
           BONG.GoodBONG.he2022ClassicLemma43Index pairs hSource
         rcases hfailure with hOneFails | hDeltaFails
         · exact hOneFails
@@ -837,17 +1063,354 @@ theorem fullRank_signedPrefix_upper_of_all
             ((a.heClassicPublishedCentralConditions_iff_forall_at bDelta).mp
               hDeltaCentral i)
       · have hDLtTwoE : D < twoE := lt_of_not_ge hTwoELeD
-        have hDraw : D = raw := by
-          dsimp only [D, raw]
-          unfold BONG.GoodBONG.truncatedPrefixDefect
-          have hlast : 2 * pairs + 4 = (2 * pairs + 1) + 3 := by omega
-          have hcapLast : a.prefixAlphaCap (2 * pairs + 4) = ⊤ := by
-            rw [hlast]
-            exact a.prefixAlphaCap_last
-          rw [a.prefixAlphaCap_zero, hcapLast]
-          simp [BONG.GoodBONG.prefixProduct]
-        rw [hDraw] at hDLtTwoE
-        exact (not_lt_of_ge hRawGe) hDLtTwoE
+        by_cases hExtra : 2 * pairs + 5 <= m + 4
+        · let gap : Fin (m + 3) := ⟨2 * pairs + 3, by omega⟩
+          have hDFormula : D =
+              min raw (a.alphaValue gap : WithTop ℚ) := by
+            dsimp only [D, raw, gap]
+            unfold BONG.GoodBONG.truncatedPrefixDefect
+            rw [a.prefixAlphaCap_zero,
+              a.prefixAlphaCap_of_internal (by omega) (by omega)]
+            simp [BONG.GoodBONG.prefixProduct]
+          have hDAlpha : D = (a.alphaValue gap : WithTop ℚ) := by
+            by_cases hRawLeAlpha : raw <=
+                (a.alphaValue gap : WithTop ℚ)
+            · rw [min_eq_left hRawLeAlpha] at hDFormula
+              have : raw < twoE := by
+                simpa only [hDFormula] using hDLtTwoE
+              exact (not_lt_of_ge hRawGe this).elim
+            · have hAlphaLeRaw : (a.alphaValue gap : WithTop ℚ) <= raw :=
+                le_of_not_ge hRawLeAlpha
+              simpa only [min_eq_right hAlphaLeRaw] using hDFormula
+          have hfirst : a.order (0 : Fin (m + 4)) = 0 := by
+            let first : Fin (2 * pairs + 3) := ⟨0, by omega⟩
+            have h := hJ1.1 first
+            have hindex : (⟨first.val, by omega⟩ : Fin (m + 4)) = 0 :=
+              Fin.ext rfl
+            rw [hindex] at h
+            exact h
+          have hRNonnegative : 0 <= R := by
+            exact (a.he2022ClassicProposition24 hClassic).nonnegativeOfFirstZero
+              hfirst ⟨2 * pairs + 3, by omega⟩
+          have hc : ordUnit K (heClassicOmega (K := K)) = 0 :=
+            heClassicOmega_order (K := K)
+          have hcUnit : IsValuationUnit K
+              ((heClassicOmega (K := K) : K)) :=
+            (isValuationUnit_iff_ordUnit_eq_zero K _).2 hc
+          obtain ⟨ri, s, _hsUnit, hfactor⟩ :=
+            hU.complete (heClassicOmega (K := K)) hcUnit
+          have hcRep : ordUnit K (U ri) = 0 :=
+            (isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit ri)
+          have hcDefect : BONG.GoodBONG.defectOrder (K := K) (U ri) = 1 := by
+            have homega := heClassicOmega_defect (K := K)
+            rw [hfactor, BONG.GoodBONG.defectOrder_mul_square] at homega
+            exact homega
+          let di : HeClassicDefectOneIndex (K := K) U := ⟨ri, hcDefect⟩
+          let idxFirst : HeClassicPublishedEvenTestingIndex
+              (K := K) U (ramificationIndex K) :=
+            .inr (.inl (di, false))
+          let idxSecond : HeClassicPublishedEvenTestingIndex
+              (K := K) U (ramificationIndex K) :=
+            .inr (.inl (di, true))
+          let cSharp := heClassicDefectOneSharp (K := K) (U ri) hcDefect
+          let hcSharp := heClassicDefectOneSharp_order (U ri) hcDefect
+          let bC1 := heClassicEvenC1GoodBONG (K := K) pairs (U ri)
+            (by omega)
+          let bC2 := heClassicEvenC2GoodBONG (K := K) pairs (U ri)
+            cSharp (by omega) hcSharp
+          have hFirstConditions :=
+            HeClassicPublishedEvenTestingIndex.primeConditions_of_represents_model
+              U hU pairs idxFirst a (by omega) (hAll idxFirst)
+          have hSecondConditions :=
+            HeClassicPublishedEvenTestingIndex.primeConditions_of_represents_model
+              U hU pairs idxSecond a (by omega) (hAll idxSecond)
+          change RepresentationConditionsPrime a bC1
+            (by omega) at hFirstConditions
+          change RepresentationConditionsPrime a bC2
+            (by omega) at hSecondConditions
+          have hRZero : R = 0 := by
+            by_contra hRNe
+            have hROne : 1 <= R := by omega
+            have hfailure := he2022ClassicLemma43ii_representative
+              (K := K) pairs a hExtra hJ1 heOne
+              (by simpa only [D, R] using hsum)
+              (by simpa only [D, gap] using hDAlpha)
+              (by simpa only [R] using hROne)
+              (U ri) hcRep hcDefect
+            dsimp only at hfailure
+            let i := BONG.GoodBONG.he2022ClassicLemma43Index pairs
+              (by omega : 2 * pairs + 4 <= m + 4)
+            rcases hfailure with hC1Fails | hC2Fails
+            · exact hC1Fails
+                ((a.heClassicPublishedCentralConditions_iff_forall_at bC1).mp
+                  hFirstConditions.centralRepresentations i)
+            · exact hC2Fails
+                ((a.heClassicPublishedCentralConditions_iff_forall_at bC2).mp
+                  hSecondConditions.centralRepresentations i)
+          have hAlphaOneLt : (1 : ℚ) < a.alphaValue gap := by
+            have hsum' := hsum
+            rw [hRZero, Int.cast_zero, WithTop.coe_zero, zero_add,
+              hDAlpha] at hsum'
+            exact_mod_cast hsum'
+          have hAlphaLtTwo : a.alphaValue gap < (2 : ℚ) := by
+            have hlt := hDLtTwoE
+            rw [hDAlpha] at hlt
+            dsimp only [twoE] at hlt
+            rw [heOne] at hlt
+            norm_num at hlt
+            rw [← a.coe_alphaValue gap] at hlt
+            exact WithTop.coe_lt_coe.mp hlt
+          have hAlphaIntegral : IsRationalInteger (a.alphaValue gap) := by
+            rcases (a.he2022ClassicProposition23 gap).arithmeticShape with
+              hsmall | hlarge
+            · exact hsmall.2.2
+            · rw [heOne] at hlarge
+              norm_num at hlarge
+              linarith
+          rcases hAlphaIntegral with ⟨z, hz⟩
+          have hzOne : (1 : Int) < z := by
+            rw [hz] at hAlphaOneLt
+            exact_mod_cast hAlphaOneLt
+          have hzTwo : z < (2 : Int) := by
+            rw [hz] at hAlphaLtTwo
+            exact_mod_cast hAlphaLtTwo
+          omega
+        · have hlast : 2 * pairs + 4 = m + 4 := by omega
+          have hDraw : D = raw := by
+            dsimp only [D, raw]
+            unfold BONG.GoodBONG.truncatedPrefixDefect
+            have hcapLast : a.prefixAlphaCap (2 * pairs + 4) = ⊤ := by
+              rw [hlast]
+              exact a.prefixAlphaCap_last
+            rw [a.prefixAlphaCap_zero, hcapLast]
+            simp [BONG.GoodBONG.prefixProduct]
+          rw [hDraw] at hDLtTwoE
+          exact (not_lt_of_ge hRawGe) hDLtTwoE
+
+/-- The four literal rows used in Lemma 4.5 may be replaced by the
+square-class representatives actually present in the published finite
+table.  The preceding invariant argument supplies the only upper bound
+needed in the proof, while the remainder is exactly Lemma 4.5's alpha,
+lower-bound, and binary-rank argument. -/
+theorem heClassicEvenJ2_of_all_published
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) (X : QuadraticLatticeModel (K := K))
+    {m : Nat}
+    (a : @BONG.GoodBONG K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice (m + 4))
+    (hSource : 2 * pairs + 4 <= m + 4)
+    (hXClassic : X.IsClassicIntegral)
+    (hAmbient : X.IsAmbientlyNUniversal (2 * pairs + 2))
+    (hAll : forall i : HeClassicPublishedEvenTestingIndex
+        (K := K) U (ramificationIndex K),
+      X.Represents
+        (HeClassicPublishedEvenTestingIndex.model
+          (K := K) U hU pairs i)) :
+    (by
+      letI : AddCommGroup X.Carrier := X.addCommGroup
+      letI : Module K X.Carrier := X.module
+      exact a.HeClassicJ2E (2 * pairs + 2) (by omega)) := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  have hClassic : Lattice.IsClassicIntegral X.form X.lattice := hXClassic
+  have hAmbient' : Lattice.AmbientlyNUniversal.{u, u, u}
+      X.form (2 * pairs + 2) := hAmbient
+  have hTests := literalLemma42Tests_of_all U hU pairs X a hSource hAll
+  have hJ1 := a.he2022ClassicLemma42_j1Prime_of_publishedTests pairs
+    hSource hClassic hTests
+  have hUpperAdd := signedPrefix_upper_of_all
+    U hU pairs X a hSource hXClassic hAll
+  have hNextAlpha := a.he2022ClassicLemma45_nextAlpha pairs hSource
+    hJ1 (by simpa only [show (2 * pairs + 4) / 2 = pairs + 2 by omega]
+      using hUpperAdd)
+  let R : Int := a.order ⟨2 * pairs + 3, by omega⟩
+  let D : WithTop ℚ :=
+    a.truncatedPrefixDefect a ((-1) ^ (pairs + 2)) 0
+      (2 * pairs + 4)
+  have hfirst : a.order (0 : Fin (m + 4)) = 0 := by
+    let first : Fin (2 * pairs + 3) := ⟨0, by omega⟩
+    have h := hJ1.1 first
+    have hindex : (⟨first.val, by omega⟩ : Fin (m + 4)) = 0 :=
+      Fin.ext rfl
+    rw [hindex] at h
+    exact h
+  have hRNonnegative : 0 <= R := by
+    exact (a.he2022ClassicProposition24 hClassic).nonnegativeOfFirstZero
+      hfirst ⟨2 * pairs + 3, by omega⟩
+  have hLower : ((((1 - R : Int) : ℚ) : WithTop ℚ)) <= D := by
+    simpa only [D, R] using
+      a.he2022ClassicLemma45_signedPrefix_lower pairs hSource hJ1
+        hNextAlpha (by simpa only [R] using hRNonnegative)
+  have hUpper : D <= ((((1 - R : Int) : ℚ) : WithTop ℚ)) := by
+    apply (WithTop.add_le_add_iff_left WithTop.coe_ne_top).mp
+    calc
+      (((R : Int) : ℚ) : WithTop ℚ) + D <= 1 := by
+        simpa only [R, D] using hUpperAdd
+      _ = (((R : Int) : ℚ) : WithTop ℚ) +
+          ((((1 - R : Int) : ℚ) : WithTop ℚ)) := by
+        norm_cast
+        ring
+  have hDEq : D = ((((1 - R : Int) : ℚ) : WithTop ℚ)) :=
+    le_antisymm hUpper hLower
+  have hEquality :
+      (((a.order ⟨2 * pairs + 3, by omega⟩ : Int) : ℚ) : WithTop ℚ) +
+        a.truncatedPrefixDefect a ((-1) ^ (pairs + 2)) 0
+          (2 * pairs + 4) = 1 := by
+    rw [show a.truncatedPrefixDefect a ((-1) ^ (pairs + 2)) 0
+        (2 * pairs + 4) = D by rfl, hDEq]
+    change (((R : Int) : ℚ) : WithTop ℚ) +
+      ((((1 - R : Int) : ℚ) : WithTop ℚ)) = 1
+    norm_cast
+    ring
+  unfold BONG.GoodBONG.HeClassicJ2E
+  refine ⟨hNextAlpha, ?_, ?_⟩
+  · simpa only [show 2 * pairs + 2 + 1 = 2 * pairs + 3 by omega,
+      show (2 * pairs + 2 + 2) / 2 = pairs + 2 by omega,
+      show 2 * pairs + 2 + 2 = 2 * pairs + 4 by omega] using hEquality
+  · exact a.he2022ClassicLemma45_binaryRank_of_ambient_and_equality
+      pairs hAmbient' hSource hEquality
+
+/-- The terminal argument of Lemma 4.6 only needs a normalized pair from
+the published table whose parameter is square-equivalent to the signed
+source prefix.  This formulation separates that invariant argument from
+the choice of square-class representatives in Definition 2.6. -/
+theorem heClassicEvenJ3_of_published_pair
+    {V : Type v} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V}
+    {m : Nat} (pairs : Nat) (a : BONG.GoodBONG q L (m + 4))
+    (hSource : 2 * pairs + 4 <= m + 4)
+    (c s cSharp : Kˣ) (hcNonnegative : 0 <= ordUnit K c)
+    (hcSharpOrder : ordUnit K cSharp = 0)
+    (hOrder : ordUnit K c = a.order ⟨2 * pairs + 3, by omega⟩)
+    (hfactor : ((-1 : Kˣ) ^ (pairs + 2)) *
+      a.prefixProduct (2 * pairs + 4) = c * s ^ 2)
+    (hPair : HeHuSpacePairProperties
+      (heClassicEvenC1 (K := K) pairs c)
+      (heClassicEvenC2 (K := K) pairs c cSharp))
+    (hLongC1 : a.LongRepresentationConditions
+      (heClassicEvenC1GoodBONG (K := K) pairs c hcNonnegative))
+    (hLongC2 : a.LongRepresentationConditions
+      (heClassicEvenC2GoodBONG (K := K) pairs c cSharp
+        hcNonnegative hcSharpOrder)) :
+    a.HeClassicJ3E (2 * pairs + 2) (by omega) := by
+  let bC1 := heClassicEvenC1GoodBONG (K := K) pairs c hcNonnegative
+  let bC2 := heClassicEvenC2GoodBONG (K := K) pairs c cSharp
+    hcNonnegative hcSharpOrder
+  unfold BONG.GoodBONG.HeClassicJ3E
+  intro hExtraRaw
+  have hExtra : 2 * pairs + 5 <= m + 4 := by omega
+  by_contra hNotBound
+  have hNotBound' : ¬ (a.order ⟨2 * pairs + 4, by omega⟩ -
+      a.order ⟨2 * pairs + 3, by omega⟩ <=
+        2 * (ramificationIndex K : Int)) := by
+    simpa only [show 2 * pairs + 2 + 1 = 2 * pairs + 3 by omega,
+      show 2 * pairs + 2 + 2 = 2 * pairs + 4 by omega] using hNotBound
+  have hLargeGap : 2 * (ramificationIndex K : Int) <
+      a.order ⟨2 * pairs + 4, by omega⟩ -
+        a.order ⟨2 * pairs + 3, by omega⟩ := by
+    omega
+  have hC1Last : bC1.order ⟨2 * pairs + 1, by omega⟩ =
+      a.order ⟨2 * pairs + 3, by omega⟩ := by
+    calc
+      bC1.order ⟨2 * pairs + 1, by omega⟩ = ordUnit K c := by
+        simp only [bC1, heClassicEvenC1GoodBONG,
+          heHuExactGoodBONG_order, heClassicEvenC1_order]
+        simp
+      _ = a.order ⟨2 * pairs + 3, by omega⟩ := hOrder
+  have hC2Last : bC2.order ⟨2 * pairs + 1, by omega⟩ =
+      a.order ⟨2 * pairs + 3, by omega⟩ := by
+    calc
+      bC2.order ⟨2 * pairs + 1, by omega⟩ = ordUnit K c := by
+        simp only [bC2, heClassicEvenC2GoodBONG,
+          heHuExactGoodBONG_order]
+        rw [heClassicEvenC2_order pairs c cSharp hcSharpOrder]
+        simp
+      _ = a.order ⟨2 * pairs + 3, by omega⟩ := hOrder
+  have hRepC1 := a.he2022ClassicLemma46_terminalRepresentation pairs bC1
+    hExtra hLargeGap hC1Last hLongC1
+  have hRepC2 := a.he2022ClassicLemma46_terminalRepresentation pairs bC2
+    hExtra hLargeGap hC2Last hLongC2
+  let source := a.prefixValueUnits (2 * pairs + 4) (by omega)
+  have hRepC1Units : DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC1 (K := K) pairs c))
+      (BONG.GoodBONG.diagonalUnitCoefficients source) := by
+    change DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (bC1.prefixValueUnits (2 * pairs + 2) le_rfl))
+      (BONG.GoodBONG.diagonalUnitCoefficients source) at hRepC1
+    rw [BONG.GoodBONG.heClassicEvenC1_fullPrefixValueUnits
+      pairs c hcNonnegative] at hRepC1
+    exact hRepC1
+  have hRepC2Units : DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC2 (K := K) pairs c cSharp))
+      (BONG.GoodBONG.diagonalUnitCoefficients source) := by
+    change DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (bC2.prefixValueUnits (2 * pairs + 2) le_rfl))
+      (BONG.GoodBONG.diagonalUnitCoefficients source) at hRepC2
+    rw [BONG.GoodBONG.heClassicEvenC2_fullPrefixValueUnits
+      pairs c cSharp hcNonnegative hcSharpOrder] at hRepC2
+    exact hRepC2
+  have hSourceDet : BONG.GoodBONG.diagonalUnitDeterminant source =
+      a.prefixProduct (2 * pairs + 4) := by
+    simpa only [source] using
+      a.diagonalUnitDeterminant_prefixValueUnits (2 * pairs + 4) (by omega)
+  have hC1Det :
+      BONG.GoodBONG.diagonalUnitDeterminant
+          (heClassicEvenC1 (K := K) pairs c) =
+        (-1 : Kˣ) ^ (pairs + 1) * c := by
+    calc
+      BONG.GoodBONG.diagonalUnitDeterminant
+          (heClassicEvenC1 (K := K) pairs c) =
+          BONG.GoodBONG.diagonalUnitDeterminant
+            (bC1.prefixValueUnits (2 * pairs + 2) le_rfl) := by
+        rw [BONG.GoodBONG.heClassicEvenC1_fullPrefixValueUnits
+          pairs c hcNonnegative]
+      _ = bC1.prefixProduct (2 * pairs + 2) :=
+        bC1.diagonalUnitDeterminant_prefixValueUnits
+          (2 * pairs + 2) le_rfl
+      _ = (-1 : Kˣ) ^ (pairs + 1) * c :=
+        BONG.GoodBONG.heClassicEvenC1_prefixProduct_full
+          (K := K) pairs c hcNonnegative
+  have hSquare : IsSquare
+      ((((-1 : Kˣ) ^ (pairs + 2)) *
+        a.prefixProduct (2 * pairs + 4)) * c) := by
+    refine ⟨c * s, ?_⟩
+    rw [hfactor]
+    simp only [pow_two]
+    ac_rfl
+  have hDet : IsSquare
+      (-BONG.GoodBONG.diagonalUnitDeterminant source *
+        BONG.GoodBONG.diagonalUnitDeterminant
+          (heClassicEvenC1 (K := K) pairs c)) := by
+    rw [hSourceDet, hC1Det]
+    have hsign :
+        -a.prefixProduct (2 * pairs + 4) *
+            ((-1 : Kˣ) ^ (pairs + 1) * c) =
+          (((-1 : Kˣ) ^ (pairs + 2)) *
+            a.prefixProduct (2 * pairs + 4)) * c := by
+      have hneg : -a.prefixProduct (2 * pairs + 4) =
+          (-1 : Kˣ) * a.prefixProduct (2 * pairs + 4) := by
+        simp
+      rw [hneg,
+        show (-1 : Kˣ) ^ (pairs + 2) =
+          (-1 : Kˣ) ^ (pairs + 1) * (-1 : Kˣ) by
+            rw [show pairs + 2 = (pairs + 1) + 1 by omega, pow_succ]]
+      ac_rfl
+    rw [hsign]
+    exact hSquare
+  have hExactlyOne := heHu2022Lemma313CodimensionTwo
+    (heClassicEvenC1 (K := K) pairs c)
+    (heClassicEvenC2 (K := K) pairs c cSharp)
+    hPair source hDet
+  rcases hExactlyOne with hFirst | hSecond
+  · exact hFirst.2 hRepC2Units
+  · exact hSecond.1 hRepC1Units
 
 /-- A signed determinant parameter with the two low-order and low-defect
 possibilities singled out by Lemma 4.4 is square-equivalent to one of the
@@ -982,6 +1545,205 @@ theorem exists_represented_publishedEven_pair_of_low_signed_parameter
           (K := K) pairs c hcOdd)
     · simpa only [c, pi] using hXFirst.ambient
     · simpa only [c, pi, delta] using hXSecond.ambient
+
+/-- The complete finite even table forces the last-gap condition `J3_E`.
+The proof normalizes the signed source prefix to the representative that
+actually indexes the table and then invokes the invariant terminal argument
+above. -/
+theorem heClassicEvenJ3_of_all_published
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) (X : QuadraticLatticeModel (K := K))
+    {m : Nat}
+    (a : @BONG.GoodBONG K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice (m + 4))
+    (hSource : 2 * pairs + 4 <= m + 4)
+    (hXClassic : X.IsClassicIntegral)
+    (hAmbient : X.IsAmbientlyNUniversal (2 * pairs + 2))
+    (hAll : forall i : HeClassicPublishedEvenTestingIndex
+        (K := K) U (ramificationIndex K),
+      X.Represents
+        (HeClassicPublishedEvenTestingIndex.model
+          (K := K) U hU pairs i)) :
+    (by
+      letI : AddCommGroup X.Carrier := X.addCommGroup
+      letI : Module K X.Carrier := X.module
+      exact a.HeClassicJ3E (2 * pairs + 2) (by omega)) := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  have hClassic : Lattice.IsClassicIntegral X.form X.lattice := hXClassic
+  have hTests := literalLemma42Tests_of_all U hU pairs X a hSource hAll
+  have hJ1 := a.he2022ClassicLemma42_j1Prime_of_publishedTests pairs
+    hSource hClassic hTests
+  have hJ2 := heClassicEvenJ2_of_all_published
+    U hU pairs X a hSource hXClassic hAmbient hAll
+  change a.HeClassicJ3E (2 * pairs + 2) (by omega)
+  unfold BONG.GoodBONG.HeClassicJ3E
+  intro hExtraRaw
+  have hExtra : 2 * pairs + 5 <= m + 4 := by omega
+  by_contra hNotBound
+  have hLargeGap : 2 * (ramificationIndex K : Int) <
+      a.order ⟨2 * pairs + 4, by omega⟩ -
+        a.order ⟨2 * pairs + 3, by omega⟩ := by
+    have hNotBound' : ¬ (a.order ⟨2 * pairs + 4, by omega⟩ -
+        a.order ⟨2 * pairs + 3, by omega⟩ <=
+          2 * (ramificationIndex K : Int)) := by
+      simpa only [show 2 * pairs + 2 + 1 = 2 * pairs + 3 by omega,
+        show 2 * pairs + 2 + 2 = 2 * pairs + 4 by omega] using hNotBound
+    omega
+  let c0 : Kˣ := ((-1 : Kˣ) ^ (pairs + 2)) *
+    a.prefixProduct (2 * pairs + 4)
+  have hCases := a.he2022ClassicLemma46_j2_cases
+    pairs hSource hJ1 hJ2
+  have hc0OrderEq : ordUnit K c0 =
+      a.order ⟨2 * pairs + 3, by omega⟩ := by
+    simpa only [c0] using
+      a.he2022ClassicLemma46_signedPrefix_order pairs hSource hJ1
+  have hc0Order : ordUnit K c0 = 0 ∨ ordUnit K c0 = 1 := by
+    rw [hc0OrderEq]
+    exact hCases.1
+  have hc0DefectEq : BONG.GoodBONG.defectOrder (K := K) c0 =
+      a.truncatedPrefixDefect a ((-1) ^ (pairs + 2)) 0
+        (2 * pairs + 4) := by
+    simpa only [c0] using
+      a.he2022ClassicLemma46_rawDefect_eq_capped pairs hSource hExtra
+        hJ1 hJ2 hLargeGap
+  have hc0Defect : BONG.GoodBONG.defectOrder (K := K) c0 = 0 ∨
+      BONG.GoodBONG.defectOrder (K := K) c0 = 1 := by
+    rw [hc0DefectEq]
+    exact hCases.2
+  rcases hc0Order with hc0OrderZero | hc0OrderOne
+  · have hc0Unit : IsValuationUnit K (c0 : K) :=
+      (isValuationUnit_iff_ordUnit_eq_zero K c0).2 hc0OrderZero
+    have hc0Even : Even (ordUnit K c0) := by
+      rw [hc0OrderZero]
+      exact Even.zero
+    have hc0DefectOne : BONG.GoodBONG.defectOrder (K := K) c0 = 1 := by
+      rcases hc0Defect with hzero | hone
+      · have hlower := BONG.GoodBONG.defectOrder_one_le_of_even c0 hc0Even
+        rw [hzero] at hlower
+        exact (not_le_of_gt (show (0 : WithTop ℚ) < 1 by norm_num)
+          hlower).elim
+      · exact hone
+    obtain ⟨i, s, hsUnit, hfactor⟩ := hU.complete c0 hc0Unit
+    have hsOrder : ordUnit K s = 0 :=
+      (isValuationUnit_iff_ordUnit_eq_zero K s).1 hsUnit
+    have hcDefect : BONG.GoodBONG.defectOrder (K := K) (U i) = 1 := by
+      rw [hfactor, BONG.GoodBONG.defectOrder_mul_square] at hc0DefectOne
+      exact hc0DefectOne
+    have hcOrder : ordUnit K (U i) = 0 :=
+      (isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit i)
+    have hcOrderSource : ordUnit K (U i) =
+        a.order ⟨2 * pairs + 3, by omega⟩ := by
+      have hOrderFactor : ordUnit K c0 = ordUnit K (U i) := by
+        rw [hfactor, ordUnit_mul, ordUnit_pow, hsOrder]
+        simp
+      exact hOrderFactor.symm.trans hc0OrderEq
+    let di : HeClassicDefectOneIndex (K := K) U := ⟨i, hcDefect⟩
+    let idxFirst : HeClassicPublishedEvenTestingIndex
+        (K := K) U (ramificationIndex K) := .inr (.inl (di, false))
+    let idxSecond : HeClassicPublishedEvenTestingIndex
+        (K := K) U (ramificationIndex K) := .inr (.inl (di, true))
+    let cSharp := heClassicDefectOneSharp (K := K) (U i) hcDefect
+    let hcSharpOrder := heClassicDefectOneSharp_order (U i) hcDefect
+    let bC1 := heClassicEvenC1GoodBONG (K := K) pairs (U i) (by omega)
+    let bC2 := heClassicEvenC2GoodBONG (K := K) pairs (U i) cSharp
+      (by omega) hcSharpOrder
+    have hFirstConditions :=
+      HeClassicPublishedEvenTestingIndex.primeConditions_of_represents_model
+        U hU pairs idxFirst a (by omega) (hAll idxFirst)
+    have hSecondConditions :=
+      HeClassicPublishedEvenTestingIndex.primeConditions_of_represents_model
+        U hU pairs idxSecond a (by omega) (hAll idxSecond)
+    change RepresentationConditionsPrime a bC1 (by omega) at hFirstConditions
+    change RepresentationConditionsPrime a bC2 (by omega) at hSecondConditions
+    have hPair := BONG.GoodBONG.heClassicEvenC_pairProperties
+      (K := K) pairs (U i) hcDefect
+    have hJ3 := heClassicEvenJ3_of_published_pair
+      (K := K) pairs a hSource (U i) s cSharp (by omega)
+      hcSharpOrder hcOrderSource (by simpa only [c0] using hfactor)
+      (by simpa only [cSharp] using hPair)
+      (by simpa only [bC1] using hFirstConditions.longRepresentations)
+      (by simpa only [bC2] using hSecondConditions.longRepresentations)
+    exact hNotBound (hJ3 hExtraRaw)
+  · have hc0Odd : Odd (ordUnit K c0) := by
+      rw [hc0OrderOne]
+      exact odd_one
+    have hc0DefectZero : BONG.GoodBONG.defectOrder (K := K) c0 = 0 := by
+      unfold BONG.GoodBONG.defectOrder
+      rw [quadraticDefect_eq_zero_of_odd_ordUnit c0 hc0Odd]
+      rfl
+    let pi : Kˣ := uniformizerPowerUnit K (1 : Int)
+    let unitPart : Kˣ := c0 / pi
+    have hUnitPartOrder : ordUnit K unitPart = 0 := by
+      dsimp only [unitPart, pi]
+      rw [div_eq_mul_inv, ordUnit_mul, ordUnit_inv,
+        ordUnit_uniformizerPowerUnit, hc0OrderOne]
+      norm_num
+    have hUnitPart : IsValuationUnit K (unitPart : K) :=
+      (isValuationUnit_iff_ordUnit_eq_zero K unitPart).2 hUnitPartOrder
+    obtain ⟨i, s, hsUnit, hunitFactor⟩ := hU.complete unitPart hUnitPart
+    have hsOrder : ordUnit K s = 0 :=
+      (isValuationUnit_iff_ordUnit_eq_zero K s).1 hsUnit
+    let c : Kˣ := U i * pi
+    have hcOrder : ordUnit K c = 1 := by
+      dsimp only [c, pi]
+      rw [ordUnit_mul,
+        (isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit i),
+        ordUnit_uniformizerPowerUnit]
+      norm_num
+    have hcOdd : Odd (ordUnit K c) := by
+      rw [hcOrder]
+      exact odd_one
+    have hfactor : c0 = c * s ^ 2 := by
+      calc
+        c0 = unitPart * pi := by simp [unitPart]
+        _ = (U i * s ^ 2) * pi := by rw [hunitFactor]
+        _ = c * s ^ 2 := by
+          dsimp only [c]
+          ac_rfl
+    have hcDefect : BONG.GoodBONG.defectOrder (K := K) c = 0 := by
+      rw [hfactor, BONG.GoodBONG.defectOrder_mul_square] at hc0DefectZero
+      exact hc0DefectZero
+    have hcOrderSource : ordUnit K c =
+        a.order ⟨2 * pairs + 3, by omega⟩ := by
+      have hOrderFactor : ordUnit K c0 = ordUnit K c := by
+        rw [hfactor, ordUnit_mul, ordUnit_pow, hsOrder]
+        simp
+      exact hOrderFactor.symm.trans hc0OrderEq
+    let delta :=
+      (Dyadic.dyadicDiscriminantClassLawsProved
+        (K := K)).discriminantUnit
+    let hdeltaOrder : ordUnit K delta = 0 :=
+      (isValuationUnit_iff_ordUnit_eq_zero K _).1
+        (Dyadic.dyadicDiscriminantClassLawsProved
+          (K := K)).discriminant_isValuationUnit
+    let idxFirst : HeClassicPublishedEvenTestingIndex
+        (K := K) U (ramificationIndex K) := .inr (.inr (i, false))
+    let idxSecond : HeClassicPublishedEvenTestingIndex
+        (K := K) U (ramificationIndex K) := .inr (.inr (i, true))
+    let bC1 := heClassicEvenC1GoodBONG (K := K) pairs c (by omega)
+    let bC2 := heClassicEvenC2GoodBONG (K := K) pairs c delta
+      (by omega) hdeltaOrder
+    have hFirstConditions :=
+      HeClassicPublishedEvenTestingIndex.primeConditions_of_represents_model
+        U hU pairs idxFirst a (by omega) (hAll idxFirst)
+    have hSecondConditions :=
+      HeClassicPublishedEvenTestingIndex.primeConditions_of_represents_model
+        U hU pairs idxSecond a (by omega) (hAll idxSecond)
+    change RepresentationConditionsPrime a bC1 (by omega) at hFirstConditions
+    change RepresentationConditionsPrime a bC2 (by omega) at hSecondConditions
+    have hPair := heClassicEvenC_oddOrder_literalPairProperties
+      (K := K) pairs c hcOdd
+    have hJ3 := heClassicEvenJ3_of_published_pair
+      (K := K) pairs a hSource c s delta (by omega)
+      hdeltaOrder hcOrderSource (by simpa only [c0] using hfactor)
+      (by simpa only [delta] using hPair)
+      (by simpa only [bC1] using hFirstConditions.longRepresentations)
+      (by simpa only [bC2] using hSecondConditions.longRepresentations)
+    exact hNotBound (hJ3 hExtraRaw)
 
 /-- A finite family tests classic rank-`n` universality.  The source is
 required to be classic integral, exactly as in Theorem 1.3. -/
@@ -1239,9 +2001,9 @@ theorem all_publishedEven_implies_ambientlyUniversal
       aRaw.castLength hRankEq
     have hClassic : Lattice.IsClassicIntegral X.form X.lattice :=
       hXClassic
-    have hBound := fullRank_signedPrefix_upper_of_all
-      U hU pairs X a hXClassic hAll
-    have hTests := literalLemma42Tests_of_all U hU pairs X a hAll
+    have hBound := signedPrefix_upper_of_all
+      U hU pairs X a (by omega) hXClassic hAll
+    have hTests := literalLemma42Tests_of_all U hU pairs X a (by omega) hAll
     have hJ1 := a.he2022ClassicLemma42_j1Prime_of_publishedTests
       pairs (by omega) hClassic hTests
     have hPrevious : a.order ⟨2 * pairs + 1, by omega⟩ = 0 := by
@@ -1313,6 +2075,78 @@ theorem all_publishedEven_implies_ambientlyUniversal
     exact (heClassicEvenPair_not_both_goodBONG_of_signedPrefix_factor
       (K := K) pairs a c s second hPair hcNonnegative
       (by simpa only [c0] using hfactor) hFirst hSecond).elim
+
+/-- Lemma 7.4, sufficiency in even rank.  Actual representation of every
+entry of the published finite table yields ambient universality by Lemma 7.3
+and all three intrinsic BONG conditions of Theorem 4.1. -/
+theorem all_publishedEven_implies_classicUniversal
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) (X : QuadraticLatticeModel (K := K))
+    (hXClassic : X.IsClassicIntegral)
+    (hAll : forall i : HeClassicPublishedEvenTestingIndex
+        (K := K) U (ramificationIndex K),
+      X.Represents
+        (HeClassicPublishedEvenTestingIndex.model
+          (K := K) U hU pairs i)) :
+    X.IsClassicNUniversal (2 * pairs + 2) := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  letI : Module.Finite K X.Carrier := X.lattice.moduleFinite
+  have hRankLower : 2 * pairs + 4 <= Module.finrank K X.Carrier := by
+    have h := all_publishedEven_implies_rank_add_two_le
+      (K := K) U hU pairs X hAll
+    change 2 * pairs + 4 <= Module.finrank K X.Carrier at h
+    exact h
+  obtain ⟨aRaw⟩ := exists_good_bong X.form X.lattice
+  let m : Nat := Module.finrank K X.Carrier - 4
+  have hRankEq : Module.finrank K X.Carrier = m + 4 := by
+    dsimp only [m]
+    omega
+  let a : BONG.GoodBONG X.form X.lattice (m + 4) :=
+    aRaw.castLength hRankEq
+  have hSource : 2 * pairs + 4 <= m + 4 := by
+    rw [← hRankEq]
+    exact hRankLower
+  have hAmbientX : X.IsAmbientlyNUniversal (2 * pairs + 2) :=
+    all_publishedEven_implies_ambientlyUniversal
+    (K := K) U hU pairs X hXClassic hAll
+  have hTests := literalLemma42Tests_of_all
+    U hU pairs X a hSource hAll
+  have hClassic : Lattice.IsClassicIntegral X.form X.lattice := hXClassic
+  have hJ1Prime := a.he2022ClassicLemma42_j1Prime_of_publishedTests
+    pairs hSource hClassic hTests
+  have hJ2 := heClassicEvenJ2_of_all_published
+    U hU pairs X a hSource hXClassic hAmbientX hAll
+  have hJ3 := heClassicEvenJ3_of_all_published
+    U hU pairs X a hSource hXClassic hAmbientX hAll
+  change Lattice.IsClassicNUniversal.{u, u, u}
+    X.form X.lattice (2 * pairs + 2)
+  exact (a.he2022ClassicTheorem41 hSource).2
+    ⟨hClassic, hAmbientX, ⟨hJ1Prime.1, hJ2, hJ3⟩⟩
+
+/-- He (2024), Lemma 7.4, even-rank branch, for the literal published
+testing family and an arbitrary complete unit square-class representative
+system. -/
+theorem he2022ClassicLemma74_even
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) (X : QuadraticLatticeModel (K := K))
+    (hXClassic : X.IsClassicIntegral) :
+    X.IsClassicNUniversal (2 * pairs + 2) ↔
+      forall i : HeClassicPublishedEvenTestingIndex
+          (K := K) U (ramificationIndex K),
+        X.Represents
+          (HeClassicPublishedEvenTestingIndex.model
+            (K := K) U hU pairs i) := by
+  constructor
+  · exact classicUniversal_implies_all_publishedEven U hU pairs X
+  · exact all_publishedEven_implies_classicUniversal
+      U hU pairs X hXClassic
 
 end Lattice.QuadraticLatticeModel
 
