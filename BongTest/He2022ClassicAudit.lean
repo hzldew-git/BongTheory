@@ -185,3 +185,42 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39i
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39iiLongSource
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39ii
+
+/-! Direct endpoints beyond Section 3 and the Section 7 source obstruction. -/
+
+#check Bong.BONG.GoodBONG.he2022ClassicLemma314
+#check Bong.BONG.GoodBONG.he2022ClassicLemma315i
+#check Bong.BONG.GoodBONG.he2022ClassicLemma315ii
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem41
+#check Bong.BONG.GoodBONG.he2022ClassicLemma42
+#check Bong.BONG.GoodBONG.he2022ClassicLemma45
+#check Bong.BONG.GoodBONG.he2022ClassicLemma46
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem51
+#check Bong.BONG.GoodBONG.he2022ClassicLemma53
+#check Bong.BONG.GoodBONG.he2022ClassicLemma54
+#check Bong.BONG.GoodBONG.he2022ClassicLemma55
+#check Bong.BONG.GoodBONG.he2022ClassicLemma56
+#check Bong.BONG.GoodBONG.he2022ClassicLemma57
+#check Bong.BONG.GoodBONG.he2022ClassicLemma58
+#check Bong.BONG.GoodBONG.he2022ClassicLemma61
+#check Bong.BONG.GoodBONG.he2022ClassicLemma62
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem11
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem15
+#check Bong.BONG.GoodBONG.he2022ClassicCorollary63_even
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails
+#check Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_ambientlyUniversal
+#check Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_classicUniversal_of_lowerJ2
+#check Bong.Lattice.QuadraticLatticeModel.all_publishedEven_implies_classicUniversal
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even
+
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma314
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma315i
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma315ii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem41
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem51
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem11
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15
+#print axioms Bong.BONG.GoodBONG.he2022ClassicCorollary63_even
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails
+#print axioms Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_classicUniversal_of_lowerJ2
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even

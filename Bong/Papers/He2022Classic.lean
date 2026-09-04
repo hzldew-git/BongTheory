@@ -21,6 +21,8 @@ import Bong.Bong.He2022ClassicLemma39
 import Bong.Bong.He2022ClassicLemma57
 import Bong.Bong.He2022ClassicLemma58
 import Bong.Bong.He2022ClassicTheorem51
+import Bong.Bong.He2022ClassicCorollary63
+import Bong.Bong.He2022ClassicSectionSeven
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -65,9 +67,17 @@ are assembled at their full odd-rank endpoints; necessity includes an explicit
 one-rank descent for classic universality, while sufficiency reconstructs all
 four revised Beli representation conditions.  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
-2.8(ii), and classic integrality of every indexed row are also proved.  It
-does not yet claim the paper's explicit proof of the main BONG criterion or
-the minimality theorem.
+2.8(ii), and classic integrality of every indexed row are also proved.  The
+complete Theorem 1.1 criterion, Theorem 1.5, the published even branch of
+Corollary 6.3, Section 7 ambient exhaustion, and the even-rank half of Lemma
+7.4 for the literal finite testing table are included as checked endpoints.
+
+The publisher's Lemma 7.1(ii) is not asserted: it is false when the
+ramification index is greater than one.  The canonical entry instead exports
+a kernel-checked counterexample and a corrected odd-rank Section 7 endpoint
+whose missing lower-even `J2_E` premise is explicit.  Consequently this module
+does not claim the invalid Corollary 7.2 proof chain, the odd half of Lemma
+7.4, or downstream results that depend on that chain.
 -/
 
 namespace Bong
