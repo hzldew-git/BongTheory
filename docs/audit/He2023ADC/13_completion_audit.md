@@ -25,7 +25,12 @@
 | Unrestricted local cases, remaining Section 4, Section 5 and remaining Sections 6--8 | FAIL / pending |
 | Remaining main theorems and enumeration | FAIL / pending |
 | Clean Review Kit containing published profiles | PASS at merge-test commit `6bf3bdf8bd272109e898335683f05bb76664330c`, tree identical to `db03985`; logs inspected |
-| Clean Review Kit including later Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 | Pending its own exact-revision CI |
+| Clean Review Kit including Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 | PASS at f6f7485/c82668b, run 33942437722; 1934 payload hashes, 4963 build jobs, enforcing gate on 57,480 declarations |
+| Lemma 6.8(i)--(ii), only 2/6 clauses | PASS local and independent checks at b624d40, all 15 new standard-only queries; report 23; its own clean CI and human approval pending |
 | Independent semantic sign-off | FAIL / pending |
 
 Completion verdict: `NOT_COMPLETE`.
+
+The earlier result-row clean-kit reservations for 6.1 and 6.4--6.7 are
+closed by the later f6f7485/c82668b receipt above, not by reclassifying their
+old local builds. Human semantic approval remains pending throughout.

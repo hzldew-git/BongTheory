@@ -26,13 +26,14 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Definition 1.1(ii) | local dyadic predicate | formalized |
 | He ADC Lemma 2.1 | local dyadic maximal-testing reduction | proved specialization |
 | He ADC Lemmas 4.11-4.12 | public W/N families and all maximal order-profile branches | proved; independent AI review completed, human review pending |
-| He ADC Proposition 4.13 | all three clauses for arbitrary odd-rank maximal lattices | local kernel and independent AI checks complete; clean-kit CI pending |
-| He ADC Proposition 4.16 | both dyadic clauses, with the exact integral exceptional model | dyadic specialization locally checked and AI-reviewed; non-dyadic part and clean-kit CI pending |
-| He ADC Lemma 6.4 | all four even-rank testing clauses on the actual named lattices | local kernel checks complete; report 17 records semantic review; clean-kit CI and release promotion pending |
-| He ADC Lemma 6.5 | both exact pointwise defect obstructions, including n=2 | local kernel and independent AI checks complete; report 18; clean-kit CI and release promotion pending |
-| He ADC Theorem 6.1 | full equivalence: even n >= 2, rank n+1, ADC iff maximal | local kernel and independent AI checks complete; report 19; clean-kit CI and human approval pending |
-| He ADC Lemma 6.6 | both exact central-condition failures on the actual named targets | local kernel and independent AI checks complete; report 21; clean-kit CI and human approval pending |
-| He ADC Lemma 6.7 | both actual-representation implications, with alpha alternatives and raw/capped defect equality | local kernel and independent AI checks complete; report 22; clean-kit CI and human approval pending |
+| He ADC Proposition 4.13 | all three clauses for arbitrary odd-rank maximal lattices | local/independent checks and clean-kit CI at f6f7485/c82668b pass; human approval pending |
+| He ADC Proposition 4.16 | both dyadic clauses, with the exact integral exceptional model | dyadic checks, AI review and clean-kit CI at f6f7485/c82668b pass; non-dyadic part remains |
+| He ADC Lemma 6.4 | all four even-rank testing clauses on the actual named lattices | local/independent checks and clean-kit CI at f6f7485/c82668b pass; report 17; release promotion pending |
+| He ADC Lemma 6.5 | both exact pointwise defect obstructions, including n=2 | local/independent checks and clean-kit CI at f6f7485/c82668b pass; report 18; release promotion pending |
+| He ADC Theorem 6.1 | full equivalence: even n >= 2, rank n+1, ADC iff maximal | local/independent checks and clean-kit CI at f6f7485/c82668b pass; report 19; human approval pending |
+| He ADC Lemma 6.6 | both exact central-condition failures on the actual named targets | local/independent checks and clean-kit CI at f6f7485/c82668b pass; report 21; human approval pending |
+| He ADC Lemma 6.7 | both actual-representation implications, with alpha alternatives and raw/capped defect equality | local/independent checks and clean-kit CI at f6f7485/c82668b pass; report 22; human approval pending |
+| He ADC Lemma 6.8(i)--(ii) | first-column endpoint isometries on arbitrary n-ADC lattices; exact n=2/n>=4 boundaries | only 2/6 clauses, locally proved and independently AI-reviewed at b624d40; report 23; its own clean CI pending |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1; affected statements remain

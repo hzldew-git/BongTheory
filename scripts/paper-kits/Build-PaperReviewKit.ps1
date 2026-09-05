@@ -284,8 +284,12 @@ $entryRootText = "import $($metadata.entryModule)`n"
 
 $auditImports = @($metadata.auditModules | ForEach-Object { "import $_" }) -join "`n"
 $gateModule = 'BongTest.PaperAxiomGate'
-$gateText = "import Bong`nimport BongTest.AxiomGate`n" + $auditImports + "`n" +
-    "set_option maxHeartbeats 0`n" +
+$gateText = "/-`nCopyright (c) 2026 BONG Theory contributors. All rights reserved.`n" +
+    "Released under Apache 2.0 license as described in the file LICENSE.`n" +
+    "Authors: BONG Theory contributors`n-/`n" +
+    "import Bong`nimport BongTest.AxiomGate`n" + $auditImports + "`n`n" +
+    "/-! Enforce the fixed foundational axiom allowance on this paper's closure. -/`n`n" +
+    "set_option maxHeartbeats 0 in`n" +
     'run_cmd BongCI.checkAxioms #[`Bong, `BongTest]' + "`n"
 [IO.File]::WriteAllText(
     (Join-Path $stagingDirectory 'BongTest/PaperAxiomGate.lean'), $gateText, $encoding

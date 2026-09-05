@@ -1,5 +1,13 @@
 # Adversarial review
 
+Independent review of `b624d40` found no mismatch or trust blocker for
+Lemma 6.8(i)--(ii), only 2/6 clauses. It independently replayed all three
+modules, 15 standard-only queries, the entry and full audit. The actual
+n=2 embeddings, missing binary square model, full determinant signs and
+prefix bounds, raw/capped domination, e=1 and integral-isometry conclusion
+were checked. No testing table or classification law is assumed. Report 23
+records the provisional verdict; clean CI for that addition is not certified.
+
 Independent review of full Lemma 6.7 at `b0f832e` found no mismatch or
 hidden assumption. It checked the actual named lattice representation,
 the literal central-condition contradiction, alpha discreteness, both

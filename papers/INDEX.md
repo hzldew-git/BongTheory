@@ -29,7 +29,24 @@ The current proof order and promotion gates are in
 
 ## Verification inside any kit
 
-### Verified development checkpoint: 2026-09-05
+### New checkpoint with an enforcing axiom gate: 2026-09-05
+
+These two independently verified kits use actual merge-test source
+`c82668b97ed80f0cead4493206cb6483c4e8d77d`, whose tree is identical to
+branch head `f6f7485b6a3acabedbec5a7facce46f8ee7365ab`.
+
+| Paper | Download | Verified scope |
+|---|---|---|
+| He 2022 Classic | [Classic kit with enforcing gate](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/artifacts/9962386381) | Partial paper; clean extraction, build, audit and enforced dependency check on 61,515 declarations; source discrepancy and odd/global gaps remain |
+| He 2023 ADC | [ADC kit through full Lemma 6.7](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/artifacts/9962394872) | Partial paper, including Proposition 4.13, dyadic 4.16, Theorem 6.1 and Lemmas 6.4--6.7; enforced dependency check on 57,480 declarations; later Lemma 6.8 additions are not included |
+
+The logs and exact revision/hash receipts are in the
+[deployment checkpoint](../docs/audit/HePaperDeploymentCheckpoint-20260905.md).
+These are 30-day workflow artifacts, not permanent release assets or
+whole-paper semantic certificates. Other jobs in the same run and subsequent
+commits need their own evidence; no shared green status is assumed.
+
+### Earlier development checkpoint without the new gate
 
 Before the next tagged release, the following independent CI artifacts are
 available for the fixed merge-test source commit

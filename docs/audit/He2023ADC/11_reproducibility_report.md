@@ -124,3 +124,29 @@ clauses. The new module, all five standard-only axiom queries, canonical
 entry and full audit passed local and independent cached checks. Report 22
 records exact scope and boundary review. The local `e77a50b` enforcing-gate
 kit predates this addition; no older artifact or green run certifies it.
+
+## Clean-kit checkpoint through full Lemma 6.7
+
+The later [ADC job in run 33942437722](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/job/101242489577)
+completed successfully. Its actual extracted source is
+`c82668b97ed80f0cead4493206cb6483c4e8d77d`, with tree
+`821e857945c1f9a3b556d877075e67c28524866a`, independently checked equal
+to branch head `f6f7485b6a3acabedbec5a7facce46f8ee7365ab`.
+The log verifies 1934 payload hashes, a 4963-job build, the complete
+paper audit and the enforcing `PaperAxiomGate` on 57,480 declarations.
+Both numbered Lemma 6.7 endpoints have the standard three dependencies.
+
+[Independent ADC download](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/artifacts/9962394872),
+artifact ID `9962394872`, 5541675 outer ZIP bytes. The inner source ZIP
+SHA-256 is `204B0619DCE9D60463EDD58166387DA2D152CC4386213CEA62DD5ED838CE6053`.
+This closes the clean-kit gate for the included Proposition 4.13, dyadic
+Proposition 4.16, Theorem 6.1 and Lemmas 6.4--6.7. Earlier pending statements
+above describe their historical checkpoints, not the status of this later run.
+
+The later `b624d40be62d4e939f28715e631ce7c42a9e642e` addition proves
+Lemma 6.8(i)--(ii) locally, with 15 standard-only new queries, the canonical
+entry and full paper audit passing. It is not in that clean CI artifact and
+needs its own exact-revision kit and run. Overall paper completion and human
+sign-off remain open. The generated CI driver has nonfatal documentation
+and scoped-option lint warnings; the successful gate was not inferred by
+ignoring a compilation error. See the deployment checkpoint for full receipts.

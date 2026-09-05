@@ -139,6 +139,55 @@ all-production/audit-root check: a missing cached `BongTest.Q2` module prevented
 the latter local import. The fresh CI build must supply its own complete
 artifacts; local cached checks do not replace that obligation.
 
+## First clean-kit results with the enforcing gate
+
+The new [Paper Review Kits run 33942437722](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722)
+uses branch head `f6f7485b6a3acabedbec5a7facce46f8ee7365ab`. Its actual checkout
+and packaged source is merge-test commit
+`c82668b97ed80f0cead4493206cb6483c4e8d77d`, not the head SHA. The GitHub
+commit object and local head independently give the same source tree:
+`821e857945c1f9a3b556d877075e67c28524866a`.
+
+| Paper | Successful job | Checked payload hashes | Build jobs | Enforcing gate declarations | Download |
+|---|---|---|---|---|---|
+| ADC | `101242489577` | 1934 | 4963 | 57,480 | [ADC artifact 9962394872](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/artifacts/9962394872) |
+| Classic | `101242489505` | 1967 | 5004 | 61,515 | [Classic artifact 9962386381](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/artifacts/9962386381) |
+
+Both inspected logs contain the actual `BongTest.PaperAxiomGate` build and
+`AXIOM_GATE_PASS` with these counts. The ADC log also prints both full
+Lemma 6.7 statements and their standard-only dependencies. These are the
+first recorded independent clean-kit results for the replacement gate;
+they do not retroactively certify the unsupported action inputs.
+
+The inner ADC source archive SHA-256 is
+`204B0619DCE9D60463EDD58166387DA2D152CC4386213CEA62DD5ED838CE6053`;
+the inner Classic source archive SHA-256 is
+`079D6DFCFB9982415F0D3271C29C6AF0E2C560111B79FB08828D6131C4F97987`.
+These differ from the outer workflow artifact ZIP digests and local
+head-SHA packages, whose manifests name a different commit.
+
+The ADC closure includes Proposition 4.13, dyadic Proposition 4.16,
+Theorem 6.1 and full Lemmas 6.4--6.7. It does not include the subsequent
+Lemma 6.8(i)--(ii) code at `b624d40`. Classic remains a partial paper with
+its source discrepancy and odd/global obligations. The artifacts have
+30-day retention and are not permanent tagged releases. The separate
+whole-production [Lean CI run 33942437720](https://github.com/hzldew-git/BongTheory/actions/runs/33942437720)
+was still in progress when these two receipts were inspected.
+
+The generated driver produced nonfatal documentation/scoped-option lint
+warnings, which are distinct from proof or gate failures and remain visible
+in the frozen logs. No human semantic approval is inferred from these runs.
+The subsequent generator repair adds its copyright/module documentation
+and scopes the heartbeat option to the one gate command. The same command
+on the newer locally imported ADC closure passed on 57,526 declarations
+without those lint warnings. This focused cached check is not a clean-kit
+certificate for either the generator change or the newer Lemma 6.8 code.
+
+Independent follow-up at frozen `f6f7485` also passed all 23 scanner tests,
+the 2675-source scan, and the three actual escaped-identifier/postfix probes
+against the unchanged enforcing gate. It certified those bounded repairs,
+not the later mathematics or a release.
+
 ## Later independently selectable local package
 
 The ADC source-only package at clean commit
@@ -171,3 +220,12 @@ predates both Lemma 6.7 and the later identifier-boundary scanner repair.
 PR 10 remains draft. No new merge, tag, final release or human semantic
 approval is certified here. Remaining Classic source-obstruction and ADC
 local/global classification gaps stay explicit in their paper audits.
+
+The clean-head `f6f7485` local ADC package additionally includes full
+Lemma 6.7 and the enforcing gate:
+`BongTheory-He2023ADC-checkpoint-20260905-terminal-alpha-review-kit.zip`.
+It has 1891 closure Lean sources, 1935 packaged files and 5775446 bytes;
+all 1934 payload hashes passed extraction checks. Archive SHA-256:
+`D1D3C85B94B035282DF7602F8A0E23028AA9E5B1ECFC857C94C7ED6418DAFD06`.
+This particular ZIP was structure-checked locally. The separate clean
+CI receipt above names the tree-identical merge-test source and its own ZIP.

@@ -20,6 +20,8 @@ Lemma 6.6 card, including parity versus raw defect, target transport and
 the precise failing central condition, is in report 21.
 The complete Lemma 6.7 card, including actual lattice representation, alpha
 discreteness and equality of raw and capped defects, is in report 22.
+The card for only Lemma 6.8(i)--(ii), including the uniform n=2 replacement
+proof, signed full determinant and actual lattice conclusion, is in report 23.
 
 1. Confirm the direction and meaning of ambient quadratic-space representation.
 2. Confirm source integrality is part of the local predicate rather than only a

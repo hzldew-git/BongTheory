@@ -10,6 +10,8 @@ and the paper manifest. The arXiv version is comparison-only.
 Checked classification checkpoint: `272d810ea2ca8bd0e19ac97f6d9cda1853502cde`.
 Later central-obstruction checkpoint: `cd8ecbddef7b18979cfabcc1b1ba0afd640268cb`.
 Later terminal-alpha checkpoint: `b0f832e5ff4dd1fe0f305371c029ce2015b004e5`.
+Later partial Lemma 6.8 checkpoint: `b624d40be62d4e939f28715e631ce7c42a9e642e`,
+only clauses (i)--(ii), independently AI-reviewed with 15 standard-only queries.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -25,7 +27,8 @@ classifications, enumeration, or omitted boundary cases.
 
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
-the earlier profile tree passed clean-kit CI, while the current revision has
-passed incremental checks and still requires its own clean-kit CI. Exact
+the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
+through full Lemma 6.7. The later partial Lemma 6.8 revision has passed
+incremental checks and still requires its own clean-kit CI. Exact
 commit distinctions are in report 11. Overall coverage grade: C. Whole-paper
 completion: not achieved.

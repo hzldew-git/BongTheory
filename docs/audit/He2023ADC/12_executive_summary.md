@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`b0f832e5ff4dd1fe0f305371c029ce2015b004e5`.
+`b624d40be62d4e939f28715e631ce7c42a9e642e`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -60,6 +60,12 @@ branch. All five new axiom queries have the standard set. Report 22 records
 the n=2/e=1 and omitted-cap checks. Section 6 now has 5/12 numbered items
 with complete local proofs.
 
+Lemma 6.8(i)--(ii) is now also complete clause by clause and independently
+AI-reviewed, using actual tests and full determinant transport. Clause (i)
+includes n=2; clause (ii) retains n>=4. All 15 new queries have exactly
+the standard three dependencies. Report 23 covers only 2/6 clauses;
+the full-Section-6 count remains 5/12 and Theorem 6.2 is not completed.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
 have not been supplied. Non-dyadic results, the remaining ADC classifications in
@@ -68,7 +74,9 @@ Sections 6--7, global classifications and enumeration remain incomplete.
 Semantic status: provisional, with unsigned human review cards and remaining
 semantic checks elsewhere in the paper. Trust status: the new concrete endpoints use only the
 standard logical axioms; conditional global inputs remain explicit.
-Reproducibility status: the published-profile tree passed clean-kit CI in run
-33929872783; the later Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 proofs
-passed local checks but still require their own clean-kit run. Coverage grade: C. Whole-paper verdict:
+Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
+in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
+full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
+The later b624d40 Lemma 6.8(i)--(ii) addition still needs its own clean run.
+Coverage grade: C. Whole-paper verdict:
 `NOT_COMPLETE`.

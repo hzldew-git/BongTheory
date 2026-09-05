@@ -50,3 +50,8 @@ target-to-(n+1)-prefix embedding expresses the exact pointwise failure.
 or alpha_(n+1)=1 and raw adjacent defect = capped adjacent defect =
 1-R_(n+2). `adjacentDefect` contains no alpha cap. Equality with
 `heADCAdjacentCappedDefect` is a proved conclusion, not a definitional alias.
+
+In Lemma 6.8(i)--(ii), `q.IsIsometric` is the hypothesis on the ambient
+quadratic space, while `Lattice.IsIsometric` is the stronger integral
+conclusion on the actual lattices. The signed full product uses all m
+values and sign (-1)^(m/2); a proper head prefix is kept distinct from it.

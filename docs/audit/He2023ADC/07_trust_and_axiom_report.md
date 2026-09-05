@@ -1,5 +1,16 @@
 # Trust and axiom report
 
+At `b624d40be62d4e939f28715e631ce7c42a9e642e`, Lemma 6.8(i)--(ii)
+and 13 associated support/public adapters passed local and independent
+cached checks: 15 queries, all exactly the standard three axioms. Actual
+rank, integrality, tests and profiles are derived. See report 23.
+
+Separately, the earlier f6f7485/c82668b clean ADC kit passed the enforcing
+transitive-axiom gate on 57,480 declarations in run 33942437722. It includes
+full Lemma 6.7, not the b624d40 addition. This supersedes the historical
+pending clean-kit statuses below only for the included source closure;
+unsupported action inputs in older CI remain an explicitly withdrawn claim.
+
 At `b0f832e5ff4dd1fe0f305371c029ce2015b004e5`, both Lemma 6.7
 clauses, the new module, canonical entry and complete audit passed local
 and independent cached checks. All five new queried axiom sets contain

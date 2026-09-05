@@ -64,6 +64,13 @@ Additional concrete declaration groups are:
 - `He2023ADCEvenCentralAlpha`: actual representation bounds the terminal
   capped defect; alpha alternatives and raw-defect equality are derived;
   `heADC2025Lemma67_endpoint` and both full `heADC2025Lemma67i/ii` are exported.
+- `He2023ADCEvenCorankTwoTests`: actual hyperbolic/nonexceptional ambient
+  embeddings and n-ADC lifting to the named maximal tests.
+- `He2023ADCSignedDeterminant`: full-product square-class/defect transport
+  from actual ambient isometry, and the raw alternating-head lower bound.
+- `He2023ADCEvenCorankTwoFirst`: arbitrary-lattice endpoints
+  `Bong.Lattice.heADC2025Lemma68i` and `heADC2025Lemma68ii`; these complete
+  only 2/6 clauses of Lemma 6.8, with exact rank restrictions retained.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

@@ -72,3 +72,8 @@ implications. The actual lattice-representation hypothesis is retained and
 the raw and capped defects are both present in the conclusion. Target
 integrality and the required BONG are constructed; neither alpha<=1 nor
 the preceding cap bound is imposed as an additional premise. See report 22.
+
+Lemma 6.8(i)--(ii) is `LOGICALLY_EQUIVALENT` clause by clause. The actual
+lattice isometry is proved without a supplied BONG or profile. The uniform
+n=2 proof changes the route, not the statement; (ii) keeps n>=4. This
+does not prove clauses (iii)--(vi) or Theorem 6.2. See report 23.

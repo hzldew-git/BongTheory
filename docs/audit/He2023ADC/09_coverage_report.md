@@ -36,6 +36,11 @@ Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION`.
   actual representation gives the exact alpha alternatives and raw/capped
   defect equalities. Section 6 totals 5/12 numbered items, not a whole-paper
   completion percentage; Theorem 6.2 remains pending.
+- Lemma 6.8(i)--(ii) now passes local and independent checks, with actual
+  lattice isometry and exact n=2/n>=4 boundaries. This is only 2/6 clauses
+  of that lemma; the count of fully complete Section 6 items remains 5/12.
+  Its own clean-kit CI remains pending. The earlier f6f7485/c82668b kit
+  passed clean CI and enforced dependency checks through full Lemma 6.7.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

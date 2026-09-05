@@ -35,3 +35,21 @@ This checkpoint predates the new enforcing transitive-axiom gate. Its
 individually inspected axiom reports are not a successful run of that later
 gate, nor a certificate for a newer source revision. See the deployment
 correction in `../HePaperDeploymentCheckpoint-20260905.md`.
+
+## First clean-kit checkpoint with enforced dependencies
+
+[Run 33942437722, Classic job 101242489505](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/job/101242489505)
+completed successfully on actual merge-test source
+`c82668b97ed80f0cead4493206cb6483c4e8d77d`. Its tree
+`821e857945c1f9a3b556d877075e67c28524866a` was checked equal to head
+`f6f7485b6a3acabedbec5a7facce46f8ee7365ab`. The inspected log verifies
+1967 payload hashes, a 5004-job build and the real `PaperAxiomGate`
+success marker on 61,515 declarations. Its nonfatal generated-driver lint
+warnings are not proof or gate failures.
+
+[Independent Classic download](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/artifacts/9962386381),
+artifact `9962386381`, 5802993 outer ZIP bytes. The inner source ZIP
+SHA-256 is `079D6DFCFB9982415F0D3271C29C6AF0E2C560111B79FB08828D6131C4F97987`.
+This certifies the new gate for this fixed kit, not complete paper coverage,
+human semantic approval, the separate whole-production CI or a permanent
+release. The source discrepancy and odd/global obligations are unchanged.

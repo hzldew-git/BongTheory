@@ -77,3 +77,9 @@ not a testing law or ambient-only representation. Its target BONG and
 integrality are constructed internally. The preceding alpha bound and the
 strict uncapping inequality are derived; next-order zero and raw/capped
 equality are not assumed. See report 22.
+
+Lemma 6.8(i)--(ii) constructs the good BONG, actual tests and all order
+data. Rank is derived from the stated ambient isometry and integrality
+from n-ADC. Clause (i) includes n=2 by a proved uniform embedding argument;
+clause (ii) retains n>=4. No undefined binary square second model or
+full-determinant assumption is introduced. See report 23.
