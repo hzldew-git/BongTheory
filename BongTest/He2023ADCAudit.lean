@@ -313,3 +313,25 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma68ii_of_goodBONG
 #print axioms Bong.Lattice.heADC2025Lemma68i
 #print axioms Bong.Lattice.heADC2025Lemma68ii
+
+#check @Bong.Lattice.heADC2025Lemma68v
+#check @Bong.Lattice.heADC2025Lemma68vi
+#check @Bong.heADCSharpDomain_publishedParameter_iff
+#check @Bong.Lattice.heADC2025Lemma68vPublished
+#check @Bong.Lattice.heADC2025Lemma68viPublished
+#print axioms Bong.BONG.GoodBONG.heADCSharpDefectData
+#print axioms Bong.BONG.GoodBONG.heADCEvenCorankTwo_orders_of_finite_full_defect
+#print axioms Bong.heADCSharp_mul_discriminant_not_square
+#print axioms Bong.Lattice.heADCEvenCorankTwo_tests_of_sharp_ambient
+#print axioms Bong.BONG.GoodBONG.heADCEvenCorankTwo_sharp_orders
+#print axioms Bong.heADCEvenSharpSpace_determinantClass
+#print axioms Bong.heADCSharpDomain_of_mul_square
+#print axioms Bong.heADCEvenSharpSpace_represents_of_mul_square
+#print axioms Bong.Lattice.heADCEvenCorankTwoSharp_normalized
+#print axioms Bong.Lattice.heADCEvenCorankTwoSharp_isOMaximal
+#print axioms Bong.Lattice.heADC2025Lemma68v
+#print axioms Bong.Lattice.heADC2025Lemma68vi
+#print axioms Bong.heADCNormalizedRepresentative_eq_one_of_isSquare
+#print axioms Bong.heADCSharpDomain_publishedParameter_iff
+#print axioms Bong.Lattice.heADC2025Lemma68vPublished
+#print axioms Bong.Lattice.heADC2025Lemma68viPublished
