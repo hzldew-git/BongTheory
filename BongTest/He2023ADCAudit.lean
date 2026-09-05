@@ -207,3 +207,11 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.heADCEvenTests_determinants_not_square
 #print axioms Bong.BONG.GoodBONG.heADCEvenMixedTest_bound
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma64iv
+
+#check @Bong.BONG.GoodBONG.heADCTerminalDefectCondition_fails
+#check @Bong.BONG.GoodBONG.heADCUniformizerTest_orders
+#check @Bong.BONG.GoodBONG.heADC2025Lemma65i
+#print axioms Bong.BONG.GoodBONG.heADCTerminalDefectCondition_fails
+#print axioms Bong.BONG.GoodBONG.heADCUniformizerTest_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma65i_of_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma65i
