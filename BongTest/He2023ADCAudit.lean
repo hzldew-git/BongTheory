@@ -335,3 +335,18 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.heADCSharpDomain_publishedParameter_iff
 #print axioms Bong.Lattice.heADC2025Lemma68vPublished
 #print axioms Bong.Lattice.heADC2025Lemma68viPublished
+
+#check @Bong.Lattice.heADC2025Lemma68iii
+#check @Bong.Lattice.heADC2025Lemma68iv_of_pos
+#print axioms Bong.AlternatingEndpointTower.exists_unitScale_of_even_leadingOrders
+#print axioms Bong.AlternatingEndpointTower.equalDeterminantRepresentation_of_even_leadingOrders
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_not_evenTower
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_last_ne_neg_twoE
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_terminal_lt
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_terminal_pair
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_orders
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_full_profile
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma68iii_of_goodBONG
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma68iv_of_goodBONG_of_pos
+#print axioms Bong.Lattice.heADC2025Lemma68iii
+#print axioms Bong.Lattice.heADC2025Lemma68iv_of_pos

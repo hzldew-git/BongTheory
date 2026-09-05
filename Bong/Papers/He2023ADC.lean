@@ -28,6 +28,7 @@ import Bong.Bong.He2023ADCEvenCentralAlpha
 import Bong.Bong.He2023ADCEvenCorankTwoFirst
 import Bong.Bong.He2023ADCEvenCorankTwoGeneric
 import Bong.Bong.He2023ADCPublishedParameterDomain
+import Bong.Bong.He2023ADCEvenCorankTwoSecond
 
 /-!
 # He: n-ADC integral quadratic lattices
