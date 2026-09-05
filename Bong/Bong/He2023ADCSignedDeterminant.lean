@@ -18,13 +18,13 @@ namespace Bong
 
 open Dyadic
 
-universe u
+universe u v
 
 namespace BONG.GoodBONG
 
 variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   [TopologicalSpace K] [DyadicContext K]
-  {V : Type u} [AddCommGroup V] [Module K V]
+  {V : Type v} [AddCommGroup V] [Module K V]
   {q : QuadraticSpace K V} {L : Lattice K V}
 
 /-- An actual ambient isometry determines the square class of the full BONG product. -/

@@ -427,3 +427,18 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCExceptional_ternaryTerminalDefect_zero
 #print axioms Bong.BONG.GoodBONG.heADCExceptional_ternaryTerminalAlpha_ge_half
 #print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_is3ADC
+
+#check @Bong.BONG.GoodBONG.heADC2025Lemma69
+#check @Bong.BONG.GoodBONG.heADC2025Lemma610
+#check @Bong.BONG.GoodBONG.heADC2025Lemma611_of_goodBONG
+#check @Bong.Lattice.heADC2025Lemma611
+#print axioms Bong.BONG.GoodBONG.heADCLemma69_previousDefect
+#print axioms Bong.BONG.GoodBONG.heADCLemma69_terminalTrigger
+#print axioms Bong.BONG.GoodBONG.heADCLemma69_fullTargetPrefix_representation
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma69
+#print axioms Bong.BONG.GoodBONG.heADCLemma610_alphaProfile
+#print axioms Bong.BONG.GoodBONG.heADCLemma610_prefixDefectBounds
+#print axioms Bong.BONG.GoodBONG.heADCLemma610_internalRepresentations
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma610
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma611_of_goodBONG
+#print axioms Bong.Lattice.heADC2025Lemma611
