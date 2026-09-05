@@ -181,3 +181,11 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.heADCEvenFirstTests_prefixProduct_not_square
 #print axioms Bong.BONG.GoodBONG.heADCEvenFirstTests_rank_gt
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma64ii
+
+#check @Bong.BONG.GoodBONG.heADCEvenFirstTest_alternatingOrders
+#check @Bong.BONG.GoodBONG.heADCEvenFirstTest_signedPrefixDefect
+#check @Bong.BONG.GoodBONG.heADC2025Lemma64i
+#print axioms Bong.heADCEvenFirstTest_parameterDefect
+#print axioms Bong.BONG.GoodBONG.heADCEvenFirstTest_alternatingOrders
+#print axioms Bong.BONG.GoodBONG.heADCEvenFirstTest_signedPrefixDefect
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma64i
