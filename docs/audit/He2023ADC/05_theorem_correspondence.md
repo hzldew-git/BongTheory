@@ -29,6 +29,7 @@
 | Lemma 6.4(i)--(iv) | `Bong.BONG.GoodBONG.heADC2025Lemma64i`, `heADC2025Lemma64ii`, `heADC2025Lemma64iii`, `heADC2025Lemma64iv` | Local proof coverage `FULLY_FORMALIZED`, semantic `PROVISIONAL_MATCH` after independent AI review of all four clauses; report 17 records scope; exact-revision clean-kit CI and human approval remain pending |
 | Lemma 6.5(i)--(ii) | `Bong.BONG.GoodBONG.heADC2025Lemma65i`, `heADC2025Lemma65ii` | Local proof coverage `FULLY_FORMALIZED`, semantic `PROVISIONAL_MATCH`; exact failing indices, both actual target classes and n=2 checked independently; report 18; clean-kit CI and human approval pending |
 | Theorem 6.1 | `Bong.Lattice.heADC2025Theorem61` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH`: arbitrary full lattice, even n >= 2, rank n+1, ADC iff maximal; no supplied BONG/profile/law; independent AI review at `272d810`; report 19; clean-kit CI and human approval pending |
+| Lemma 6.6(i)--(ii) | `Bong.BONG.GoodBONG.heADC2025Lemma66i`, `heADC2025Lemma66ii` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `cd8ecbd`; literal central trigger plus exact prefix non-representation, arbitrary BONGs on actual targets, raw/capped distinction and short-rank boundaries reviewed; report 21; clean-kit CI and human approval pending |
 | Section 5, remaining Sections 6--8 and Section 1 results | none | Pending |
 
 The field restriction prevents claiming the full generality of Lemma 2.1.

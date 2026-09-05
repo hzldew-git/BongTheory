@@ -55,6 +55,12 @@ Additional concrete declaration groups are:
   raised-tail exclusion of all but the second-column unit row.
 - `He2023ADCEvenCorankOne`: `Bong.Lattice.heADC2025Theorem61`, the complete
   equivalence on arbitrary full lattices, constructing its BONG internally.
+- `He2023ADCEvenCentralTrigger`: three capped-defect inequalities proving
+  the actual published central trigger, including the binary boundary.
+- `He2023ADCEvenCentralPrefix`: five prefix geometry lemmas using arbitrary
+  even next order or raw defect class, then same-parameter non-representation.
+- `He2023ADCEvenCentralObstruction`: target profiles from actual isometries,
+  `heADC2025Lemma66_endpoint`, and both full numbered `heADC2025Lemma66i/ii`.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

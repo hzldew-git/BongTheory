@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`272d810ea2ca8bd0e19ac97f6d9cda1853502cde`.
+`cd8ecbddef7b18979cfabcc1b1ba0afd640268cb`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -43,8 +43,16 @@ equivalent to maximality. The endpoint constructs its own good BONG and
 retains no profile or law premise. The necessity proof uses actual tests,
 concrete ambient embeddings and a proved maximal-superlattice volume
 argument. Report 19 records the 12 new standard-only axiom queries and the
-n=2/e=1 checks. Section 6 now has 3/12 numbered items with complete local
-proofs, including 1/2 of its numbered classification theorems.
+n=2/e=1 checks. This completes 1/2 of Section 6's numbered classification
+theorems, not Theorem 6.2.
+
+Both Lemma 6.6 clauses are also complete locally and independently
+AI-reviewed. They use the exact published central trigger, distinguish
+raw and capped defects, and prove the required prefix-space exclusion
+for arbitrary good BONGs on the actual targets. All 12 new queries have
+the standard-only axiom set. Report 21 records boundaries and pending
+deployment gates. Section 6 now has 4/12 numbered items with complete
+local proofs.
 
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
@@ -55,6 +63,6 @@ Semantic status: provisional, with unsigned human review cards and remaining
 semantic checks elsewhere in the paper. Trust status: the new concrete endpoints use only the
 standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the published-profile tree passed clean-kit CI in run
-33929872783; the later Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.5 and Theorem 6.1 proofs
+33929872783; the later Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.6 and Theorem 6.1 proofs
 passed local checks but still require their own clean-kit run. Coverage grade: C. Whole-paper verdict:
 `NOT_COMPLETE`.

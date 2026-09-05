@@ -58,3 +58,11 @@ No good BONG or order profile is assumed in its public endpoint. The
 alternative volume proof does not weaken the conclusion or assume the
 converse of Proposition 4.13. The supporting actual corank-one even case
 of Lemma 4.6(i) remains `SPECIAL_CASE_ONLY` for that whole lemma.
+
+Both Lemma 6.6 endpoints are `LOGICALLY_EQUIVALENT` to their published
+pointwise obstructions. The conclusion includes the literal trigger and
+negates its required prefix representation; it is not a weakened lattice
+non-representation statement. Target profiles are derived, the parity
+alternative is not restricted to zero, and the raw-defect alternative
+selects the specified class. Clause (ii) excludes precisely the undefined
+binary square second-column target. See report 21.

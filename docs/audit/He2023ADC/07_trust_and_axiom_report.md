@@ -1,5 +1,12 @@
 # Trust and axiom report
 
+At `cd8ecbddef7b18979cfabcc1b1ba0afd640268cb`, both Lemma 6.6
+clauses are complete. Three trigger, five prefix and four actual-target
+declarations passed local and independent cached checks; all 12 queried
+transitive sets contain exactly the standard three axioms. The public
+endpoints retain no target profile, space representation or custom law.
+Report 21 records the three frozen revisions and exact proof scope.
+
 At `272d810ea2ca8bd0e19ac97f6d9cda1853502cde`, all three Theorem 6.1
 modules, the canonical entry and complete audit passed local and independent
 cached re-elaboration. All 12 new axiom queries are exactly `propext`,

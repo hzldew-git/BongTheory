@@ -1,6 +1,6 @@
 # Coverage report
 
-Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_TESTING`.
+Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION`.
 
 - Publisher inventory: 78/78 directly numbered items identified.
 - Local dyadic definition, maximal testing, maximal-implies-ADC, equal-rank
@@ -25,10 +25,14 @@ Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_TESTING`.
   non-representation.
 - Theorem 6.1 is now locally complete and independently AI-reviewed: every
   full lattice of rank n+1, for even n >= 2, is n-ADC iff it is maximal.
-  Thus 3/12 numbered Section 6 items have complete local proofs, including
-  1/2 of its numbered classification theorems. Theorem 6.2 remains pending.
+  This completes 1/2 of Section 6's numbered classification theorems;
+  Theorem 6.2 remains pending.
   The needed actual even corank-one case of Lemma 4.6(i) is also proved;
   it does not complete all of Lemma 4.6.
+- Both Lemma 6.6 clauses are now locally complete and independently
+  AI-reviewed. The exact central trigger and prefix non-representation
+  are proved on arbitrary good BONGs of both actual targets. The Section 6
+  total is 4/12 numbered items, not a whole-paper completion percentage.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

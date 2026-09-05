@@ -37,7 +37,7 @@
   ],
   "auditDirectory": "docs/audit/He2023ADC",
   "sourceDelta": "docs/audit/He2023ADC/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_TESTING",
+  "coverageStatus": "IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION",
   "semanticStatus": "PARTIAL_LOCAL_DYADIC_SPECIALIZATION",
   "grade": "C",
   "expectedAxioms": [
@@ -59,7 +59,8 @@
     "Both clauses of Proposition 4.16 over dyadic fields, including the exact half-hyperbolic representation exception and integral identification with A orthogonal sum pi-scaled A",
     "All four clauses of Lemma 6.4 on the actual named maximal tests, including the binary boundaries, exact raw defects, and internally derived profiles, determinant separation and rank inequalities; local kernel checks complete, exact-revision clean-kit CI still pending",
     "Both clauses of Lemma 6.5, proving the exact pointwise failures of the representation defect condition for arbitrary good BONGs on both actual unit-uniformizer target classes, including n=2; local kernel checks and independent AI review complete, exact-revision clean-kit CI pending",
-    "Full Theorem 6.1 for every even n at least two and arbitrary full lattice of rank n+1: n-ADC if and only if norm-maximal; good BONG and actual test profiles constructed internally, both directions locally kernel-checked and independently AI-reviewed, exact-revision clean-kit CI pending"
+    "Full Theorem 6.1 for every even n at least two and arbitrary full lattice of rank n+1: n-ADC if and only if norm-maximal; good BONG and actual test profiles constructed internally, both directions locally kernel-checked and independently AI-reviewed, exact-revision clean-kit CI pending",
+    "Both clauses of Lemma 6.6: literal published central trigger at n+1 and failure of its required prefix representation, with target profiles and class transport derived for arbitrary good BONGs on the actual named targets; raw/capped distinction and short-rank boundaries independently AI-reviewed, exact-revision clean-kit CI pending"
   ],
   "excludedScope": [
     "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
@@ -67,5 +68,5 @@
     "Remaining Section 4 clauses, including non-dyadic Proposition 4.16 and unary testing-set minimality",
     "Completion of theorem-by-theorem semantic review and independent human sign-off"
   ],
-  "reviewNotice": "This is an in-progress paper kit. Concrete proofs cover the dyadic foundations, selected Section 4 results, all clauses of Lemmas 6.4-6.5 and full Theorem 6.1. Global reductions still require explicit arithmetic premises; Theorem 6.2, the other local ADC classifications and enumeration are not complete. Local proof checks are distinct from exact-revision clean-kit CI and release promotion. See the correspondence report for exact endpoint scope."
+  "reviewNotice": "This is an in-progress paper kit. Concrete proofs cover the dyadic foundations, selected Section 4 results, all clauses of Lemmas 6.4-6.6 and full Theorem 6.1. Global reductions still require explicit arithmetic premises; Theorem 6.2, the other local ADC classifications and enumeration are not complete. Local proof checks are distinct from exact-revision clean-kit CI and release promotion. See the correspondence report for exact endpoint scope."
 }

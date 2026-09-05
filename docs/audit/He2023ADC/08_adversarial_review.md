@@ -1,5 +1,14 @@
 # Adversarial review
 
+The aggregate independent Lemma 6.6 review at `cd8ecbd` found no mismatch
+or hidden law. It checked full capped-trigger bounds, arbitrary even next
+order, raw-defect class selection, the hypotheses of endpoint-tower
+classification, the same-parameter exactly-one exclusion and actual-target
+isometry transport. The binary Delta and e=1 cases are included; the
+binary square second model is correctly absent. All three source modules,
+12 queries, entry and full audit passed independent cached replay. See
+report 21; no human approval or clean-release certificate is implied.
+
 Independent frozen-code review of Theorem 6.1 at `272d810` found no
 mismatch, hidden target assumption or circularity. It checked the arbitrary
 lattice endpoint, internal BONG construction, maximal-superlattice volume

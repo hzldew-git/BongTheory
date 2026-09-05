@@ -65,3 +65,9 @@ Integrality belongs to both `IsNADC` and `IsOMaximal`; no extra field,
 profile, representative-system or classification-law premise is hidden.
 The universe parameters of ADC testing are explicitly `{u,u,u}`. Report 19
 records the independently expanded public statement.
+
+Lemma 6.6's target orders are derived for arbitrary isometric good BONGs,
+not supplied. The parity branch requires only even next order; the raw
+defect branch derives its square class. Neither branch assumes ambient
+or integral representation. Clause (ii)'s positive k condition is exactly
+n >= 4, where the second square-class model is defined. See report 21.

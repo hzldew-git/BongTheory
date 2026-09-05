@@ -15,6 +15,9 @@ capped-defect endpoints and the repaired empty-head explanation, is in
 The full Theorem 6.1 card, including the arbitrary-lattice equivalence,
 alternative volume proof and empty-head boundary, is in
 `19_even_corank_one_checkpoint.md`.
+The exact published representation card is in report 20. The complete
+Lemma 6.6 card, including parity versus raw defect, target transport and
+the precise failing central condition, is in report 21.
 
 1. Confirm the direction and meaning of ambient quadratic-space representation.
 2. Confirm source integrality is part of the local predicate rather than only a

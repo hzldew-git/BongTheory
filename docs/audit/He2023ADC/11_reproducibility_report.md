@@ -88,3 +88,13 @@ and all 1925 file hashes passed; archive SHA-256:
 `7D0DD1177B92D091C86B0ABF23EB6D945298FAD075EBD8967C2895DEC4048C59`.
 This is structure-only validation, not a clean Lean run or uploaded release.
 It predates report 20 and the later Lemma 6.6 support development.
+
+## Complete central-obstruction checkpoint
+
+`cd8ecbddef7b18979cfabcc1b1ba0afd640268cb` adds both full Lemma 6.6
+clauses. The three trigger, five prefix and four actual-target queries,
+their source modules, canonical entry and full ADC audit pass local and
+independent cached checks. They are not contained in the earlier `a734545`
+archive. Report 21 records scope; a new exact-revision kit and clean CI
+are still required. The separate whole-repository CI comment false positive
+and its repair are documented in `../HePaperDeploymentCheckpoint-20260905.md`.

@@ -39,3 +39,9 @@ In Theorem 6.1, O-maximal means maximal among norm-integral full lattices
 in the same quadratic space. A volume-order difference is twice a
 nonnegative inclusion index; it is not a count of BONG order profiles.
 The ADC and maximality predicates both include norm-integrality.
+
+For Lemma 6.6, `quadraticDefect K (signedEvenPrefixProduct ...)` is raw,
+whereas `heADCAdjacentCappedDefect` includes the source endpoint alpha cap.
+`centralDefectTrigger` is the publisher's sum-of-two-defects trigger, not
+the auxiliary-alpha trigger. Its conjunction with failure of the full
+target-to-(n+1)-prefix embedding expresses the exact pointwise failure.
