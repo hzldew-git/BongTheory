@@ -1,5 +1,12 @@
 # Trust and axiom report
 
+At `b0f832e5ff4dd1fe0f305371c029ce2015b004e5`, both Lemma 6.7
+clauses, the new module, canonical entry and complete audit passed local
+and independent cached checks. All five new queried axiom sets contain
+exactly `propext`, `Classical.choice`, `Quot.sound`. The numbered endpoints
+retain no target profile, representation-criterion or custom-law premise.
+The raw equality is proved by strict uncapping. See report 22.
+
 At `cd8ecbddef7b18979cfabcc1b1ba0afd640268cb`, both Lemma 6.6
 clauses are complete. Three trigger, five prefix and four actual-target
 declarations passed local and independent cached checks; all 12 queried

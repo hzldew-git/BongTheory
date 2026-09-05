@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`cd8ecbddef7b18979cfabcc1b1ba0afd640268cb`.
+`b0f832e5ff4dd1fe0f305371c029ce2015b004e5`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -51,8 +51,14 @@ AI-reviewed. They use the exact published central trigger, distinguish
 raw and capped defects, and prove the required prefix-space exclusion
 for arbitrary good BONGs on the actual targets. All 12 new queries have
 the standard-only axiom set. Report 21 records boundaries and pending
-deployment gates. Section 6 now has 4/12 numbered items with complete
-local proofs.
+deployment gates.
+
+Both Lemma 6.7 clauses are complete locally and independently AI-reviewed.
+Actual representation gives the terminal alpha alternatives, and the raw
+adjacent defect is proved equal to the capped defect in the alpha-one
+branch. All five new axiom queries have the standard set. Report 22 records
+the n=2/e=1 and omitted-cap checks. Section 6 now has 5/12 numbered items
+with complete local proofs.
 
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
@@ -63,6 +69,6 @@ Semantic status: provisional, with unsigned human review cards and remaining
 semantic checks elsewhere in the paper. Trust status: the new concrete endpoints use only the
 standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the published-profile tree passed clean-kit CI in run
-33929872783; the later Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.6 and Theorem 6.1 proofs
+33929872783; the later Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 proofs
 passed local checks but still require their own clean-kit run. Coverage grade: C. Whole-paper verdict:
 `NOT_COMPLETE`.

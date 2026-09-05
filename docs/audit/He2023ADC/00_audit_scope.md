@@ -20,10 +20,12 @@ The literal published Theorem 3.6 interface is independently reviewed at
 `218cfb917fed8d1123af0d64e28c206312676f77` in report 20.
 Both complete Lemma 6.6 clauses are independently reviewed at
 `cd8ecbddef7b18979cfabcc1b1ba0afd640268cb` in report 21.
+Both complete Lemma 6.7 clauses are independently reviewed at
+`b0f832e5ff4dd1fe0f305371c029ce2015b004e5` in report 22.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
-Section 4 endpoints, Theorem 6.1 and Lemmas 6.4--6.6 listed in
+Section 4 endpoints, Theorem 6.1 and Lemmas 6.4--6.7 listed in
 `05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic
 premises still undischarged. This audit does not certify the missing local,

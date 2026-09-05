@@ -18,6 +18,8 @@ alternative volume proof and empty-head boundary, is in
 The exact published representation card is in report 20. The complete
 Lemma 6.6 card, including parity versus raw defect, target transport and
 the precise failing central condition, is in report 21.
+The complete Lemma 6.7 card, including actual lattice representation, alpha
+discreteness and equality of raw and capped defects, is in report 22.
 
 1. Confirm the direction and meaning of ambient quadratic-space representation.
 2. Confirm source integrality is part of the local predicate rather than only a

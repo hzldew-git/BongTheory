@@ -71,3 +71,9 @@ not supplied. The parity branch requires only even next order; the raw
 defect branch derives its square class. Neither branch assumes ambient
 or integral representation. Clause (ii)'s positive k condition is exactly
 n >= 4, where the second square-class model is defined. See report 21.
+
+Lemma 6.7 assumes actual representation of its named lattice, as printed,
+not a testing law or ambient-only representation. Its target BONG and
+integrality are constructed internally. The preceding alpha bound and the
+strict uncapping inequality are derived; next-order zero and raw/capped
+equality are not assumed. See report 22.

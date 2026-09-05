@@ -1,5 +1,13 @@
 # Adversarial review
 
+Independent review of full Lemma 6.7 at `b0f832e` found no mismatch or
+hidden assumption. It checked the actual named lattice representation,
+the literal central-condition contradiction, alpha discreteness, both
+endpoint caps and strict uncapping. The binary Delta and e=1 cases are
+included, while the undefined binary square model remains excluded.
+The source, five queries, entry and full audit passed independent cached
+replay. Report 22 records the provisional verdict and unsigned human cards.
+
 The aggregate independent Lemma 6.6 review at `cd8ecbd` found no mismatch
 or hidden law. It checked full capped-trigger bounds, arbitrary even next
 order, raw-defect class selection, the hypotheses of endpoint-tower

@@ -116,3 +116,11 @@ axiom allowance. This does not erase the individually inspected axiom
 reports, but those reports must not be presented as an automatically
 enforced complete-scope gate. The deployment checkpoint records the concrete
 replacement and its negative tests; that repair requires its own remote run.
+
+## Complete terminal-alpha checkpoint
+
+`b0f832e5ff4dd1fe0f305371c029ce2015b004e5` adds both full Lemma 6.7
+clauses. The new module, all five standard-only axiom queries, canonical
+entry and full audit passed local and independent cached checks. Report 22
+records exact scope and boundary review. The local `e77a50b` enforcing-gate
+kit predates this addition; no older artifact or green run certifies it.

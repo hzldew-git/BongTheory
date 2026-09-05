@@ -61,6 +61,9 @@ Additional concrete declaration groups are:
   even next order or raw defect class, then same-parameter non-representation.
 - `He2023ADCEvenCentralObstruction`: target profiles from actual isometries,
   `heADC2025Lemma66_endpoint`, and both full numbered `heADC2025Lemma66i/ii`.
+- `He2023ADCEvenCentralAlpha`: actual representation bounds the terminal
+  capped defect; alpha alternatives and raw-defect equality are derived;
+  `heADC2025Lemma67_endpoint` and both full `heADC2025Lemma67i/ii` are exported.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

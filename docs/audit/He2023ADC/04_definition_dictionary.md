@@ -45,3 +45,8 @@ whereas `heADCAdjacentCappedDefect` includes the source endpoint alpha cap.
 `centralDefectTrigger` is the publisher's sum-of-two-defects trigger, not
 the auxiliary-alpha trigger. Its conjunction with failure of the full
 target-to-(n+1)-prefix embedding expresses the exact pointwise failure.
+
+`HeADCEvenCentralAlphaAlternatives` in Lemma 6.7 is exactly alpha_(n+1)=0,
+or alpha_(n+1)=1 and raw adjacent defect = capped adjacent defect =
+1-R_(n+2). `adjacentDefect` contains no alpha cap. Equality with
+`heADCAdjacentCappedDefect` is a proved conclusion, not a definitional alias.

@@ -9,11 +9,12 @@ and the paper manifest. The arXiv version is comparison-only.
 
 Checked classification checkpoint: `272d810ea2ca8bd0e19ac97f6d9cda1853502cde`.
 Later central-obstruction checkpoint: `cd8ecbddef7b18979cfabcc1b1ba0afd640268cb`.
+Later terminal-alpha checkpoint: `b0f832e5ff4dd1fe0f305371c029ce2015b004e5`.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
 Proposition 4.13, both dyadic clauses of Proposition 4.16, all four clauses of
-Lemma 6.4, both clauses of Lemmas 6.5 and 6.6, full Theorem 6.1, and volume criterion depend only on `propext`,
+Lemma 6.4, both clauses of Lemmas 6.5--6.7, full Theorem 6.1, and volume criterion depend only on `propext`,
 `Classical.choice`, and `Quot.sound`.
 
 The audited declaration groups and scope limitations are in

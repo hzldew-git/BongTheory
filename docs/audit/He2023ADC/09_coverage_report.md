@@ -31,8 +31,11 @@ Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION`.
   it does not complete all of Lemma 4.6.
 - Both Lemma 6.6 clauses are now locally complete and independently
   AI-reviewed. The exact central trigger and prefix non-representation
-  are proved on arbitrary good BONGs of both actual targets. The Section 6
-  total is 4/12 numbered items, not a whole-paper completion percentage.
+  are proved on arbitrary good BONGs of both actual targets.
+- Both Lemma 6.7 clauses are locally complete and independently AI-reviewed:
+  actual representation gives the exact alpha alternatives and raw/capped
+  defect equalities. Section 6 totals 5/12 numbered items, not a whole-paper
+  completion percentage; Theorem 6.2 remains pending.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

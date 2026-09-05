@@ -32,6 +32,7 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Lemma 6.5 | both exact pointwise defect obstructions, including n=2 | local kernel and independent AI checks complete; report 18; clean-kit CI and release promotion pending |
 | He ADC Theorem 6.1 | full equivalence: even n >= 2, rank n+1, ADC iff maximal | local kernel and independent AI checks complete; report 19; clean-kit CI and human approval pending |
 | He ADC Lemma 6.6 | both exact central-condition failures on the actual named targets | local kernel and independent AI checks complete; report 21; clean-kit CI and human approval pending |
+| He ADC Lemma 6.7 | both actual-representation implications, with alpha alternatives and raw/capped defect equality | local kernel and independent AI checks complete; report 22; clean-kit CI and human approval pending |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1; affected statements remain

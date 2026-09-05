@@ -66,3 +66,9 @@ non-representation statement. Target profiles are derived, the parity
 alternative is not restricted to zero, and the raw-defect alternative
 selects the specified class. Clause (ii) excludes precisely the undefined
 binary square second-column target. See report 21.
+
+Both Lemma 6.7 endpoints are `LOGICALLY_EQUIVALENT` to the published
+implications. The actual lattice-representation hypothesis is retained and
+the raw and capped defects are both present in the conclusion. Target
+integrality and the required BONG are constructed; neither alpha<=1 nor
+the preceding cap bound is imposed as an additional premise. See report 22.
