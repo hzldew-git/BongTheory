@@ -373,3 +373,17 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCBoundary_terminalTrigger_not_of_finite
 #print axioms Bong.BONG.GoodBONG.heADCBoundary_firstCentralRepresentation
 #print axioms Bong.BONG.GoodBONG.heADCBoundary_represents_finite
+
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N2Delta
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N1One
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_splitHead
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_fullDefect
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_finite
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_represents_endpoint
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_thirdValue
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_firstTwoIsotropic
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_firstThree_represents
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_endpointTarget
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N2Delta
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_halfHyperbolic
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N1One

@@ -84,6 +84,13 @@ actual integral nonmaximal lattice in W_2^4(Delta) with good-BONG orders
 gate checks 57,679 declarations. No 2-ADC property is asserted, so this
 supporting construction neither refutes the paper nor changes coverage.
 
+Report 27 checks the a074fae representation helper for `0 <= d < 2e`:
+all four literal conditions yield actual binary lattice representation,
+under explicit source and target hypotheses. Twelve new standard-only
+sets and a 57,708-declaration focused gate pass. The `d=2e` endpoint,
+infinite defect, candidate instantiation and full testing reduction are
+outside this checkpoint; no 2-ADC or refutation claim follows from it alone.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
 have not been supplied. Non-dyadic results, the remaining ADC classifications in

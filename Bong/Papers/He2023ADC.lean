@@ -31,6 +31,8 @@ import Bong.Bong.He2023ADCPublishedParameterDomain
 import Bong.Bong.He2023ADCEvenCorankTwoSecond
 import Bong.Bong.He2023ADCQuaternaryBoundaryCandidate
 import Bong.Bong.He2023ADCQuaternaryBoundaryConditions
+import Bong.Bong.He2023ADCQuaternaryBoundaryTests
+import Bong.Bong.He2023ADCQuaternaryBoundaryEndpoint
 
 /-!
 # He: n-ADC integral quadratic lattices
