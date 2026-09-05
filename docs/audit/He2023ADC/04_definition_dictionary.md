@@ -17,6 +17,9 @@
 | signed even n-prefix in Lemma 6.4, n=2k+2 | `(-1 : Kˣ) ^ (k+1) * a.prefixProduct (2*k+2)` |
 | raw defect in Lemma 6.4(i)(iv) | `Dyadic.quadraticDefect K`, valued in extended naturals with infinity retained |
 | unit kappa in Lemma 6.4(iv) | valuation unit with raw defect the finite natural `2*e-1`; its sharp domain is proved |
+| failing indices in Lemma 6.5(i)(ii) | `RepresentationIndex.val` is one-based: n and n-1, respectively |
+| bracketed defects in Lemma 6.5 | `truncatedPrefixDefect`, retaining source and target endpoint alpha caps |
+| omitted empty-prefix alpha cap | infinity, not a defined alpha_0 or beta_0 |
 
 The `*Published` endpoints use the named `heADCW*` and `heADCN*` families
 directly. `isIsometric_publishedModel_iff_orderProfile` transports the concrete

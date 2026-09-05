@@ -51,3 +51,10 @@ larger source rank. Part (iii)'s named-space domain excludes exactly the
 undefined binary square row. Part (iv)'s unit kappa and defect `2e-1` are
 the parameters explicitly specified by the paper; sharp-domain membership
 and both last-order formulas are not added hypotheses. See report 17.
+
+Lemma 6.5 assumes no representation or ambient representation. Its public
+endpoints derive target orders on arbitrary good BONGs from isometries with
+the two actual unit-uniformizer maximal classes. Part (ii) adds no next-order
+bound; the required bound follows from good-BONG monotonicity. Its defect
+bridge retains both alpha caps. The empty head at n=2 is not an additional
+positive-rank assumption. See report 18.

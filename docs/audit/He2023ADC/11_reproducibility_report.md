@@ -54,3 +54,17 @@ published-profile CI artifact nor the earlier local quaternary Review Kit
 contains Lemma 6.4. Its own source-only kit and exact-revision clean-kit CI
 are separate reproducibility obligations; no earlier green result is reused
 as certification of these later proofs.
+
+The standalone kit at checkpoint `0a49c89f5f4455756403a9fa3cc98c7a71626fee`
+subsequently passed extraction and 1916 file hash checks, archive SHA-256
+`2012E324DA7332B81CD16F37C463C80E97141EFD92C88E82E1BB79092F9FA585`.
+This is structure validation, not its own clean Lean build.
+
+## Later pointwise-obstruction checkpoint
+
+`2a5d3afc90cbb55fef284c0678336aa58484c847` and
+`9d6a4b103449e387d4c9d78de4899bd53e81e374` add Lemma 6.5(i) and (ii).
+Both modules, canonical entry, complete audit and eight new standard-only
+axiom checks passed locally and in independent cached review. None of the
+earlier kits or remote CI results contains these two additions. Report 18
+records the exact version boundary and pending clean-kit obligations.

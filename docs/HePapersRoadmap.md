@@ -29,6 +29,7 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Proposition 4.13 | all three clauses for arbitrary odd-rank maximal lattices | local kernel and independent AI checks complete; clean-kit CI pending |
 | He ADC Proposition 4.16 | both dyadic clauses, with the exact integral exceptional model | dyadic specialization locally checked and AI-reviewed; non-dyadic part and clean-kit CI pending |
 | He ADC Lemma 6.4 | all four even-rank testing clauses on the actual named lattices | local kernel checks complete; report 17 records semantic review; clean-kit CI and release promotion pending |
+| He ADC Lemma 6.5 | both exact pointwise defect obstructions, including n=2 | local kernel and independent AI checks complete; report 18; clean-kit CI and release promotion pending |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1; affected statements remain

@@ -9,6 +9,9 @@ normalization, the integral exceptional class and form scaling, is in
 The result-level card for Lemma 6.4, including raw versus capped defects,
 derived ranks, all five tests and the binary boundary, is in
 `17_even_testing_checkpoint.md`.
+The card for both clauses of Lemma 6.5, including exact failing indices,
+capped-defect endpoints and the repaired empty-head explanation, is in
+`18_even_obstruction_checkpoint.md`.
 
 1. Confirm the direction and meaning of ambient quadratic-space representation.
 2. Confirm source integrality is part of the local predicate rather than only a

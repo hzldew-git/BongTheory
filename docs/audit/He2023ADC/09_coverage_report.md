@@ -20,6 +20,10 @@ Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_TESTING`.
   Lemma 6.4, on the actual named tests and including their short-rank
   boundaries. This is one numbered lemma, not four paper results, and it
   does not complete either of the even ADC classification theorems.
+- Both clauses of Lemma 6.5 are also locally kernel-complete and independently
+  AI-reviewed. They prove the two exact pointwise obstructions, not merely
+  non-representation. Thus two of Section 6's twelve numbered items have
+  complete local proofs; no classification theorem is completed by this count.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

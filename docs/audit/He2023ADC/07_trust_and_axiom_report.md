@@ -1,5 +1,12 @@
 # Trust and axiom report
 
+At audited checkpoint `9d6a4b103449e387d4c9d78de4899bd53e81e374`, both
+Lemma 6.5 clauses, the canonical entry and complete audit pass local and
+independent cached checks. Eight new queried declarations report exactly
+`propext`, `Classical.choice`, and `Quot.sound`. The numbered endpoints
+assume neither representation nor target profiles; report 18 records the
+pointwise conclusions, capped-defect bridge and binary boundary.
+
 At checkpoint `d94cc797ad8ed83c53447c139b496d5a2ca8f4fb`, all four
 Lemma 6.4 modules, the canonical entry and complete audit pass local checks.
 Twenty newly queried axiom sets across the four modules contain exactly

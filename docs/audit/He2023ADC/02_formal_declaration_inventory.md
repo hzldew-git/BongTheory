@@ -40,6 +40,11 @@ Additional concrete declaration groups are:
   `heADC2025Lemma64iv` for all five named tests, deriving the strict rank
   inequality and next order in `{0,1,2}`.
 
+- `He2023ADCEvenTerminalObstruction`: arbitrary actual target profiles and
+  `heADC2025Lemma65i`, with the precise failing index n.
+- `He2023ADCEvenPenultimateObstruction`: capped alternating and mixed-prefix
+  bounds and `heADC2025Lemma65ii`, with the precise failing index n-1.
+
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional
 logical reductions, not constructions of number-field completions or proofs

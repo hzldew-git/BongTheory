@@ -1,5 +1,13 @@
 # Adversarial review
 
+The independent frozen-code review of Lemma 6.5(i) at `2a5d3af` and (ii)
+at `9d6a4b` found no mismatch or circularity. It checked exact pointwise
+failure, both actual target classes, capped rather than raw defect bounds,
+the empty target head and omitted secondary candidate at n=2, and e=1.
+Both files, eight queries, the canonical entry and full audit passed the
+reviewer's separate cached replay. Full result-level evidence is in report
+18; this is not human approval or a clean-environment certificate.
+
 An independent read-only AI reviewer checked each frozen Lemma 6.4 clause
 through final code `d94cc797ad8ed83c53447c139b496d5a2ca8f4fb`. It confirmed
 all four clauses, the five actual tests, derived profiles and ranks, raw

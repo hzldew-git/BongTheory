@@ -44,3 +44,10 @@ equal rank is impossible. The exact raw defect and all final-order
 alternatives are retained. The short-rank exclusions are exactly those of
 the named spaces, not a new stable-rank restriction. Report 17 gives the
 result-level correspondence and existing-index convention.
+
+Lemma 6.5's two endpoints are logically equivalent to the literal published
+pointwise obstructions. They negate the exact inequalities at n and n-1,
+not merely representation or the conjunction of all conditions. The proof
+of (ii) exports positivity, which suffices for the published conclusion;
+not exporting its optional numerical value 1/2 does not weaken the statement.
+Both actual target classes and arbitrary isometric copies are covered.
