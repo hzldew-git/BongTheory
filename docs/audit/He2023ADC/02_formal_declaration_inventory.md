@@ -23,6 +23,10 @@ Additional concrete declaration groups are:
 - `He2023ADCOddMaximalStructure`: normalized ambient exhaustion, the complete
   order profile of an arbitrary odd-rank maximal lattice, and
   `heADC2025Proposition413`, proving all order, alpha, and capped-defect clauses.
+- `He2023ADCQuaternaryMaximal`: maximal isotropic lattices represent the
+  half-hyperbolic plane; the quaternary exception is precisely `N_2^4(1)`;
+  `heADC2025Proposition416Dyadic` includes its integral `A perp A^(pi)` model.
+  `heADCAForm_bilin_apply` verifies the exact published Gram normalization.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

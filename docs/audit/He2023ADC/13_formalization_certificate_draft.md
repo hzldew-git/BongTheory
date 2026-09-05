@@ -7,11 +7,11 @@ lattices over algebraic number fields*, Doc. Math. 30 (2025), 981--1022,
 DOI 10.4171/DM/1003. The exact SHA-256 is recorded in `00_audit_scope.md`
 and the paper manifest. The arXiv version is comparison-only.
 
-Checked code checkpoint: `9c432a685c96c134b12664800464ae4b1d0d6eec`.
+Checked code checkpoint: `5fff59784a0a3dd4442405f204519c36e0a8e468`.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
-Proposition 4.13, and volume criterion depend only on `propext`,
+Proposition 4.13, both dyadic clauses of Proposition 4.16, and volume criterion depend only on `propext`,
 `Classical.choice`, and `Quot.sound`.
 
 The audited declaration groups and scope limitations are in

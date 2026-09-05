@@ -29,3 +29,10 @@ Several Section 4 interfaces remain more general in their linear-algebra
 parameters but narrower in their field scope than the published wording.
 The correspondence table records these distinctions. No statement-strength
 claim is made for the unproved ADC classification or enumeration.
+
+Proposition 4.16 is fully proved after restricting the field to the dyadic
+context. The exception is a biconditional, not only a sufficient condition
+away from one named lattice. Anisotropy proves actual non-representation in
+that class. Both its class and its `A perp A^(pi)` presentation are integral
+lattice isometries. This logically equivalent dyadic restriction is strictly
+narrower than the whole published local-field proposition.

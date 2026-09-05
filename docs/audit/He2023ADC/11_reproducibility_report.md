@@ -36,3 +36,10 @@ remote checkpoint. Its new module, paper entry, and audit passed local Lean
 checks and a separate cached review. The earlier CI artifact does not contain
 this addition and does not certify it. Reproducibility for this newer
 checkpoint remains `PARTIALLY_REPRODUCIBLE` pending its own clean-kit CI.
+
+The subsequent code checkpoint `5fff59784a0a3dd4442405f204519c36e0a8e468`
+adds both dyadic clauses of Proposition 4.16. Its new source module, canonical
+entry and complete audit also passed local compilation. All six new queried
+axiom sets contain only the three standard axioms. This check used the same
+existing dependency worktrees; the older remote artifact contains neither
+Proposition 4.13 nor this Proposition 4.16 addition. It cannot certify them.

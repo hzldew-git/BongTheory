@@ -1,5 +1,14 @@
 # Adversarial review
 
+The separate reviewer audited the frozen dyadic Proposition 4.16 code at
+`5fff59784a0a3dd4442405f204519c36e0a8e468` after independently extracting
+the published scope. No semantic blocker was found. Both directions of the
+exception, integral rather than only ambient isometry, the exact half-scaled
+Gram matrix, form rather than vector scaling, and all public premises were
+checked. The reviewer reran the module, entry and complete audit successfully.
+The dyadic restriction is `FULLY_FORMALIZED` / `PROVISIONAL_MATCH`; the whole
+published proposition remains `SPECIAL_CASE_ONLY`. See report 16.
+
 The focused independent review of Proposition 4.13 at `9c432a6` found no
 blocking mismatch. It checked all three clauses, the n=3 and e=1 boundaries,
 the capped rather than raw defect, finite rational embedding into `WithTop`,

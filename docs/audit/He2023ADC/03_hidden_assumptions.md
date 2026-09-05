@@ -32,3 +32,11 @@ Proposition 4.13 at checkpoint `9c432a6` assumes only the source's dyadic
 context, good BONG, and norm maximality. It derives the unit normalization,
 ambient row, actual maximal-lattice isometry, and order profile internally.
 There is no additional representative-system or profile premise; see report 15.
+
+The Proposition 4.16 endpoint at `5fff597` assumes only the dyadic field
+context, a nondegenerate space, a full norm-maximal lattice, and rank four.
+No good BONG, order profile, anisotropy, or project-law premise is added.
+The extra field restriction is substantive: the published proposition also
+includes non-dyadic local fields. Its exception is an integral isometry class,
+not equality of arbitrarily chosen representatives. The factor pi scales
+the form, not the lattice vectors. See report 16.

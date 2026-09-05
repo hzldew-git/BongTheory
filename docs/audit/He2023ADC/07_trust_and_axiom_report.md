@@ -1,5 +1,12 @@
 # Trust and axiom report
 
+At checkpoint `5fff59784a0a3dd4442405f204519c36e0a8e468`, the new
+quaternary module, canonical entry and complete audit passed local compilation.
+The six new queried endpoints, including the full dyadic Proposition 4.16,
+report exactly `propext`, `Classical.choice`, and `Quot.sound`. Their public
+signatures contain no auxiliary project-law or good-BONG premise. The new
+file contains no admitted proof, custom axiom or native-evaluation mechanism.
+
 At the later checkpoint `9c432a685c96c134b12664800464ae4b1d0d6eec`,
 `exists_heADCOddNormalizedAmbient`, `heADCOddMaximal_orders`, and
 `heADC2025Proposition413` also report exactly `propext`, `Classical.choice`,

@@ -12,6 +12,10 @@ Coverage status: `IN_PROGRESS_SECTION_3_AND_DYADIC_SECTION_4`.
   published-family branches covering Lemmas 4.11--4.12. Proposition 4.13 now
   has a complete endpoint for arbitrary odd-rank maximal lattices, including
   all alpha and bracketed-defect conclusions and the ternary boundary.
+- Both clauses of Proposition 4.16 have completed dyadic proofs: the
+  hyperbolic representation exception and its explicit integral model.
+  The whole published proposition is `SPECIAL_CASE_ONLY`, since its
+  non-dyadic part is not supplied by the current field context.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

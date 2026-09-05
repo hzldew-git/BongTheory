@@ -3,6 +3,9 @@
 The full author-facing card for the newly completed Proposition 4.13, with
 its assumptions, boundary checks, and unsigned approval fields, is in
 `15_odd_maximal_structure_checkpoint.md`.
+The corresponding card for dyadic Proposition 4.16, including exact Gram
+normalization, the integral exceptional class and form scaling, is in
+`16_quaternary_maximal_checkpoint.md`.
 
 1. Confirm the direction and meaning of ambient quadratic-space representation.
 2. Confirm source integrality is part of the local predicate rather than only a
