@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`fe2a459a4152ade94299a61d1c4958fefa646ba0`.
+`cf9f83be635d6e459cfb429ad73b4c7a31f1ddf4`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -99,6 +99,18 @@ the candidate is 2-ADC and nonmaximal. Independent review traversed 80,790
 proof dependencies and found no circular use of Lemma 6.8 or Theorem 6.2.
 Report 31 freezes the exact published binary proposition and its negation.
 
+Report 32 completes Lemma 6.12 at `cf9f83b`. The actual exceptional lattice
+`H perp <1, -Delta * pi^(2 - 2e)>` in `W_1^4(Delta)` is proved integral,
+nonmaximal, 2-ADC, and not 3-ADC. The 2-ADC proof exhausts the maximal binary
+catalogue, including both endpoints and normalized generic families; the
+3-ADC obstruction proves terminal defect zero against comparison alpha at
+least one half. A concrete `Q_2` module establishes nonvacuity. Sixteen new
+axiom reports have exactly the standard three dependencies, the enforcing
+gate checks 57,886 declarations, and the scanner covers 2,705 Lean files.
+This raises Section 6 to 6/12 fully matched numbered items. Exact-revision
+clean-kit CI and human sign-off remain pending, and Lemmas 6.9--6.11 and
+Theorem 6.2 are not supplied.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
 have not been supplied. Non-dyadic results, the remaining ADC classifications in
@@ -110,8 +122,8 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later Lemma 6.8 and discrepancy additions through fe2a459 still need their
-own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
+The later Lemma 6.8, discrepancy, and Lemma 6.12 additions through cf9f83b
+still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification
 lemma. Whole-paper verdict:

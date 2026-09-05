@@ -34,7 +34,8 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   are proved on arbitrary good BONGs of both actual targets.
 - Both Lemma 6.7 clauses are locally complete and independently AI-reviewed:
   actual representation gives the exact alpha alternatives and raw/capped
-  defect equalities. Section 6 totals 5/12 numbered items, not a whole-paper
+  defect equalities. At that checkpoint Section 6 totaled 5/12 numbered items,
+  not a whole-paper
   completion percentage; Theorem 6.2 remains pending.
 - Lemma 6.8(i)--(ii) now passes local and independent checks, with actual
   lattice isometry and exact n=2/n>=4 boundaries. This is only 2/6 clauses
@@ -54,16 +55,24 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   than a remaining formalization gap. Section 6 still has 5/12 fully matched
   numbered items; mismatch evidence does not count as a formalized proof of
   the paper's false clause.
+- Lemma 6.12 is now locally complete at `cf9f83b`. The actual exceptional
+  lattice in `W_1^4(Delta)` is proved 2-ADC, not 3-ADC, and nonmaximal. The
+  proof exhausts the maximal binary catalogue and has a concrete `Q_2`
+  nonvacuity check. Report 32 records the source-first audit, standard-only
+  dependency sets, and the pending exact-revision clean-kit and human gates.
+  This raises Section 6 to 6/12 fully matched numbered items; it does not
+  prove Lemmas 6.9--6.11 or Theorem 6.2.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, the remaining Sections 6--7 ADC classification, Section 8 global proofs, and the enumerative
+Section 5, the remaining Section 6 results other than Lemma 6.12, Section 7
+ADC classification, Section 8 global proofs, and the enumerative
 main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.
 
 No completed-paper percentage is inferred from the number of declarations:
 one numbered result can have many formal branches, and some current branches
 only cover the dyadic specialization. The whole-paper verdict remains
-`NOT_COMPLETE` and the overall coverage grade is C.
+`NOT_COMPLETE` and the overall coverage grade is D.

@@ -27,6 +27,7 @@ additional paper lemmas; the audit packages give the fuller maps.
 | He classic, abstract maximal-testing reduction | `Bong.Lattice.heClassicMaximalTestingReduction` | `Bong/Papers/He2022Classic.lean` | `PROVED_FOUNDATION_ONLY` |
 | He ADC, Definition 1.1(ii), local dyadic specialization | `Bong.Lattice.IsNADC` | `Bong/Lattice/NADC.lean` | `DEFINITION_PENDING_SEMANTIC_SIGNOFF` |
 | He ADC, Lemma 2.1, local dyadic specialization | `Bong.Lattice.heADCLemma21LocalDyadic` | `Bong/Papers/He2023ADC.lean` | `PROVED_SPECIALIZATION_ONLY` |
+| He ADC, Lemma 6.12 | `Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC`, `heADCExceptionalQuaternaryCandidate_not_is3ADC`, `heADCExceptionalQuaternaryCandidate_not_isOMaximal` | `Bong/Bong/He2023ADCExceptionalQuaternaryNonThree.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 
 All listed endpoints have zero project-specific law/data parameters in their
 public signatures. The theorem-level status is provisional solely because the

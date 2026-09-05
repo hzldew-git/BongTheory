@@ -17,11 +17,12 @@ paper; those three extensions are explicitly marked partial.
 - Beli 2020 coverage status:
   `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY`; its printed Theorem 3.1
   exponent is kept separate from the exponent derived from Theorem 2.1.
-- He-paper coverage status: `PARTIAL`. The He--Hu and He classic headline
-  criteria currently have complete proposition/condition layers but not proofs
-  of the equivalences. The ADC entry proves only the local dyadic specialization
-  of Lemma 2.1.
-- Project grade: B.
+- He-paper coverage status: `PARTIAL`. He--Hu has complete formal coverage of
+  its 47 numbered results subject to semantic sign-off; He classic retains
+  unformalized testing/global scope; He ADC has 6/12 complete Section 6 items,
+  including full Lemma 6.12, and a confirmed mismatch in Lemma 6.8(iv).
+- Project grade: D because the He ADC audit identifies a substantive
+  theorem-level mismatch; this does not downgrade the separately graded kits.
 - Local reproducibility status:
   `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES` at commit
   `5befe079dbf3569d1760b8e66bc52aef0de21745`.
@@ -60,7 +61,7 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
 | He, *manuscripta math.* 174 (2024), Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | full local equivalence proved; testing and global parts of the paper remain incomplete |
-| He, *Doc. Math.* 30 (2025), Lemmas 4.11-4.12 and even Section 6 | published-family profiles, Theorem 6.1, Lemmas 6.4-6.8 endpoints, and the quaternary boundary audit | partial paper; Lemma 6.8(iv) is formally refuted at n=2 and recorded as a semantic mismatch |
+| He, *Doc. Math.* 30 (2025), Lemmas 4.11-4.12 and even Section 6 | published-family profiles, Theorem 6.1, Lemmas 6.4-6.8 endpoints, both quaternary boundary audits, and full Lemma 6.12 | partial paper; Lemma 6.12 is locally complete, while Lemma 6.8(iv) is formally refuted at n=2 and recorded as a semantic mismatch |
 
 The Classic paper's literal Lemma 7.1(ii) is refuted for ramification index
 greater than one. The ADC paper's Lemma 6.8(iv) is also refuted at n=2 by an

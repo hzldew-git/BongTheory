@@ -97,6 +97,12 @@ Additional concrete declaration groups are:
   maximal target, and proves the negation of that implication.
 - `BongTest.He2023ADCQuaternaryBoundaryQ2` supplies a concrete field instance
   for the 2-ADC, nonmaximality, and discrepancy conclusions.
+- `He2023ADCExceptionalQuaternaryCandidate`, `Conditions`, `Tests`, `Generic`,
+  `Normalization`, `Endpoint`, `Testing`, and `NonThree` construct the actual
+  exceptional Lemma 6.12 lattice, exhaust all relevant maximal binary tests,
+  prove 2-ADC and nonmaximality, and derive the terminal obstruction to 3-ADC.
+- `BongTest.He2023ADCExceptionalQuaternaryQ2` supplies a concrete field
+  instance for all three final Lemma 6.12 conclusions.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

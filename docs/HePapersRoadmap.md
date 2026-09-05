@@ -36,6 +36,7 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Lemma 6.8(i)--(ii) | first-column endpoint isometries on arbitrary n-ADC lattices; exact n=2/n>=4 boundaries | only 2/6 clauses, locally proved and independently AI-reviewed at b624d40; report 23; its own clean CI pending |
 | He ADC Lemma 6.8(v)--(vi) | nonexceptional columns, original-parameter lattice isometries and explicit printed-domain bridge | locally proved and independently AI-reviewed at b728bce; Delta-in-U convention disclosed; report 24; whole lemma now 4/6, own clean CI pending |
 | He ADC Lemma 6.8(iii)--(iv) | actual second-column isometries: full (iii), n>=4 of (iv), and an actual nonmaximal 2-ADC counterexample at its printed n=2 boundary | n>=4 result passes at 074f2cd; binary implication is `SEMANTIC_MISMATCH` and formally refuted through fe2a459; reports 25--31; exact-revision clean CI pending |
+| He ADC Lemma 6.12 | exceptional quaternary lattice in `W_1^4(Delta)` is 2-ADC, not 3-ADC, and nonmaximal | full local proof and source-first audit at cf9f83b; report 32; exact-revision clean CI and human sign-off pending |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1. ADC Lemma 6.8(iv) also has

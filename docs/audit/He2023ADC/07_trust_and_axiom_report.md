@@ -1,5 +1,13 @@
 # Trust and axiom report
 
+At `cf9f83be635d6e459cfb429ad73b4c7a31f1ddf4`, full Lemma 6.12 passes
+direct compilation of its eight proof modules, canonical entry, complete
+paper audit and concrete `Q_2` nonvacuity entry. Sixteen newly printed
+dependency sets are exactly `propext`, `Classical.choice`, and `Quot.sound`.
+The focused enforcing gate checks 57,886 declarations. The scanner's 23 tests
+and scan of 2,705 tracked Lean files pass. Report 32 records the source-first
+semantic audit; exact-revision clean-kit CI and human sign-off remain pending.
+
 At `fe2a459a4152ade94299a61d1c4958fefa646ba0`, the complete binary-testing
 argument and the explicit negation of the printed Lemma 6.8(iv) boundary pass
 the canonical entry and 205-report audit. The focused enforcing gate checks

@@ -91,3 +91,11 @@ subsequently prove that the omitted binary implication is false. The formal
 relation to the printed n=2 clause is therefore `DIFFERENT_BOUNDARY_CASES`
 with theorem status `SEMANTIC_MISMATCH`, rather than an incomplete proof of a
 true statement. No corrected form of Theorem 6.2 is claimed.
+
+Lemma 6.12 is `LOGICALLY_EQUIVALENT` to the complete published exceptional
+example. The final endpoints use the actual lattice and literal local 2-ADC
+and 3-ADC predicates; they do not retain a testing-catalogue premise, supplied
+profile, representation criterion, or assumed nonmaximality. The negative
+3-ADC endpoint proves failure against an actual maximal represented ternary
+target. Report 32 records the source-first correspondence. It does not imply
+Lemmas 6.9--6.11 or a repaired Theorem 6.2.

@@ -54,6 +54,9 @@ The complete Lemma 6.7 card, including actual lattice representation, alpha
 discreteness and equality of raw and capped defects, is in report 22.
 The card for only Lemma 6.8(i)--(ii), including the uniform n=2 replacement
 proof, signed full determinant and actual lattice conclusion, is in report 23.
+The full Lemma 6.12 card is in report 32. It asks reviewers to check the exact
+exceptional lattice, complete maximal-binary catalogue, the omitted
+`N_2^2(Delta)` ambient class, and the terminal ternary obstruction.
 
 1. Confirm the direction and meaning of ambient quadratic-space representation.
 2. Confirm source integrality is part of the local predicate rather than only a

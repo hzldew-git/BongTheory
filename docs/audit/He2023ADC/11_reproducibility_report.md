@@ -1,6 +1,14 @@
 # Reproducibility report
 
-Latest audited code checkpoint: `fe2a459a4152ade94299a61d1c4958fefa646ba0`.
+Latest audited code checkpoint: `cf9f83be635d6e459cfb429ad73b4c7a31f1ddf4`.
+The eight full-Lemma-6.12 modules, canonical entry, expanded paper audit and
+concrete `Q_2` entry pass direct local elaboration. The focused enforcing gate
+checks 57,886 declarations; all 16 new printed dependency sets are standard
+only. The 23 scanner tests and 2,705-file source scan also pass. This is local
+cached evidence. A new source-only kit, extraction/hash verification and
+exact-revision clean CI are required before reproducibility promotion.
+
+Earlier audited code checkpoint: `fe2a459a4152ade94299a61d1c4958fefa646ba0`.
 The complete binary boundary development, explicit mismatch proposition,
 canonical entry, 205-report paper audit, concrete `Q_2` nonvacuity module, and
 focused 57,757-declaration enforcing gate pass locally. The decisive eight
