@@ -43,6 +43,16 @@ def main() -> int:
          'macro_rules | `(probeGate $i:ident $s:str) => `(def $i : String := $s)\n'
          'probeGate scannerProbe!\'"\'/-"\ntheorem ScannerProbe : True := by sorry\n-- -/\nend Bong',
          "REJECT", "sorryAx"),
+        ("scanner-escaped-raw", 'namespace Bong\nsyntax "probeGate " ident str : command\n'
+         'macro_rules | `(probeGate $i:ident $s:str) => `(def $i : String := $s)\n'
+         'probeGate «scannerProbe»r#""/-"#\ntheorem ScannerProbe : True := by sorry\n-- -/\nend Bong',
+         "REJECT", "sorryAx"),
+        ("scanner-escaped-char", 'namespace Bong\nsyntax "probeChar " ident char str : command\n'
+         'macro_rules | `(probeChar $i:ident $c:char $s:str) => `(def $i : String := $s)\n'
+         'probeChar «scannerProbe»\'"\'"/-"\ntheorem ScannerProbe : True := by sorry\n-- -/\nend Bong',
+         "REJECT", "sorryAx"),
+        ("scanner-postfix", 'postfix:max "λ" => id\n'
+         'theorem Bong.ScannerProbe : True := sorryλ', "REJECT", "sorryAx"),
     ]
     for label, declaration, outcome, dependency in fixtures:
         scope = "#[(← Lean.getEnv).mainModule]" if label.startswith("owned-") else "#[`Bong]"

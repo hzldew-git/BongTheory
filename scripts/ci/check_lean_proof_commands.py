@@ -15,7 +15,7 @@ import subprocess
 from pathlib import Path
 
 
-FORBIDDEN = re.compile(r"(?<![\w'])(sorryAx|sorry|admit|axiom)(?![\w'])")
+FORBIDDEN = re.compile(r"sorryAx|sorry|admit|axiom")
 RAW_START = re.compile(r'r(#+)?"')
 CHAR_LITERAL = re.compile(r"'(?:\\(?:u[0-9a-fA-F]{4}|x[0-9a-fA-F]{2}|.)|[^'\r\n])'")
 
@@ -100,8 +100,7 @@ def mask_comments(source: str) -> str:
         else:
             raw = RAW_START.match(source, index)
             char = CHAR_LITERAL.match(source, index)
-            boundary = index == 0 or not (lean_identifier_rest(source[index - 1])
-                                         or source[index - 1] == "»")
+            boundary = index == 0 or not lean_identifier_rest(source[index - 1])
             if raw and boundary:
                 raw_end = '"' + (raw.group(1) or "")
                 index = raw.end()
@@ -121,7 +120,9 @@ def mask_comments(source: str) -> str:
 def findings(source: str) -> list[tuple[int, str]]:
     masked = mask_comments(source)
     return [(masked.count("\n", 0, item.start()) + 1, item.group())
-            for item in FORBIDDEN.finditer(masked)]
+            for item in FORBIDDEN.finditer(masked)
+            if not (item.start() and lean_identifier_rest(masked[item.start() - 1]))
+            and not (item.end() < len(masked) and lean_identifier_rest(masked[item.end()]))]
 
 
 def main() -> int:

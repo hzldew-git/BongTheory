@@ -13,9 +13,10 @@ The recorded merge-test commit is
 the branch tree. Later local commits must pass their own remote gates.
 
 [Paper Review Kits run 33929872783](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783)
-has successful clean-extract jobs for Beli 2003, 2006, 2009, 2019, 2020,
-He--Hu, and He ADC. The He classic job remains in progress at the
-inspection. The He ADC artifact contains the published maximal profiles,
+completed successfully for all eight papers. The last He classic job,
+`101206371200`, completed at 03:05:13 UTC on 5 September after a successful
+5010-job build. Its source-only artifact is `9961760603`. The He ADC artifact
+contains the published maximal profiles,
 not the later Proposition 4.13, dyadic 4.16 or Section 6 additions.
 
 ## Whole-repository CI false positive
@@ -116,6 +117,27 @@ All 20 scanner tests now pass, including the complete custom-command probes
 for bang, question mark and representative Unicode endings. All 16 actual-Lean
 gate fixtures pass after adding the independent reviewer's five probes.
 The enforcing gate itself was not weakened or changed by this follow-up.
+
+Review of `01140a7` then identified two further supplemental boundaries:
+the end of an escaped identifier really is a boundary before a raw/character
+literal, and Python regex word characters do not determine Lean token ends
+(for example, a postfix lambda token after an unfinished term). The follow-up
+removes the special escaped-closer exclusion and uses the pinned Lean
+predicate for forbidden-token boundaries too. Regression cases retain all
+three complete valid-Lean examples. The unchanged enforcing gate was
+independently confirmed to reject each example, including its transitive
+unfinished-proof dependency. No claim of a complete Lean lexer is made.
+
+After these follow-ups, all 23 supplemental-scanner tests, all 2675 tracked
+source checks, and all 19 actual-Lean gate fixtures pass locally. Each
+negative fixture exits nonzero for the gate's own reason. These test counts
+do not upgrade the earlier frozen scanner revisions or certify fresh CI.
+
+The later local imported `Bong` umbrella closure passed the enforcing gate
+on 66,608 declarations. This is still explicit focused mode, not the default
+all-production/audit-root check: a missing cached `BongTest.Q2` module prevented
+the latter local import. The fresh CI build must supply its own complete
+artifacts; local cached checks do not replace that obligation.
 
 ## Later independently selectable local package
 

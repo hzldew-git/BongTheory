@@ -47,6 +47,13 @@ class ProofCommandScanTests(unittest.TestCase):
         self.assertEqual(findings("sorryName axiomFree sorry_lemma x.sorryAx' αsorry sorryβ"), [])
         self.assertEqual(findings("_root_.sorryAx"), [(1, "sorryAx")])
 
+    def test_lean_non_identifier_postfix_boundary(self):
+        source = 'import Lean\npostfix:max "λ" => id\ntheorem Bong.ScannerProbe : True := sorryλ'
+        self.assertEqual(findings(source), [(3, "sorry")])
+        for ending in "λΠΣ×÷":
+            with self.subTest(ending=ending):
+                self.assertEqual(findings("sorry" + ending), [(1, "sorry")])
+
     def test_primed_identifier_before_custom_command_string(self):
         prefix = (
             'import Lean\nnamespace Bong\n'
@@ -70,6 +77,34 @@ class ProofCommandScanTests(unittest.TestCase):
         for char in "λΠΣ×÷ ()":
             with self.subTest(char=char):
                 self.assertFalse(lean_identifier_rest(char))
+
+    def test_raw_string_after_escaped_identifier(self):
+        prefix = (
+            'import Lean\nnamespace Bong\n'
+            'syntax "probeGate " ident str : command\n'
+            'macro_rules | `(probeGate $i:ident $s:str) => `(def $i : String := $s)\n'
+            'probeGate «scannerProbe»r#""/-"#\n'
+        )
+        for statement, token in (
+            ("theorem ScannerProbe : True := by sorry", "sorry"),
+            ("axiom ScannerProbe : True", "axiom"),
+        ):
+            with self.subTest(token=token):
+                self.assertEqual(findings(prefix + statement + "\n-- -/\nend Bong"), [(6, token)])
+
+    def test_character_after_escaped_identifier(self):
+        prefix = (
+            'import Lean\nnamespace Bong\n'
+            'syntax "probeChar " ident char str : command\n'
+            'macro_rules | `(probeChar $i:ident $c:char $s:str) => `(def $i : String := $s)\n'
+            'probeChar «scannerProbe»\'"\'"/-"\n'
+        )
+        for statement, token in (
+            ("theorem ScannerProbe : True := by sorry", "sorry"),
+            ("axiom ScannerProbe : True", "axiom"),
+        ):
+            with self.subTest(token=token):
+                self.assertEqual(findings(prefix + statement + "\n-- -/\nend Bong"), [(6, token)])
 
     def test_quoted_forbidden_words_are_conservatively_reported(self):
         self.assertEqual(findings('def s := "sorry"'), [(1, "sorry")])
