@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`074f2cdcd63637fb6f6d8c65879e55968a1dc675`.
+`fe2a459a4152ade94299a61d1c4958fefa646ba0`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -74,9 +74,10 @@ from normalization alone. This checkpoint supplied 4/6 clauses.
 
 Report 25 adds full (iii) and the n>=4 special case of (iv), independently
 replayed with twelve standard-only new sets and a focused gate on 57,667
-declarations. Lemma 6.8 now has 5/6 whole clauses plus partial (iv), not
-a complete proof. The printed n=2 case of (iv) remains unresolved; its
-proof on p. 1003 invokes N_2^n(1) only with n>=4. No refutation is certified.
+declarations. Reports 26--30 then construct and independently audit an actual
+nonmaximal 2-ADC lattice in `W_2^4(Delta)`. Report 31 records the formal
+negation of the n=2 implication printed in Lemma 6.8(iv), with a concrete
+`Q_2` nonvacuity check. The source result is `SEMANTIC_MISMATCH` at n=2.
 
 Report 26 independently checks the subsequent 9ec46e6 construction of an
 actual integral nonmaximal lattice in W_2^4(Delta) with good-BONG orders
@@ -91,19 +92,27 @@ sets and a 57,708-declaration focused gate pass. The `d=2e` endpoint,
 infinite defect, candidate instantiation and full testing reduction are
 outside this checkpoint; no 2-ADC or refutation claim follows from it alone.
 
+Reports 28--29 audit the actual exceptional tests and normalized generic
+families. Report 30 exhausts the full binary maximal-testing catalogue,
+checks square normalization back to the original integral targets, and proves
+the candidate is 2-ADC and nonmaximal. Independent review traversed 80,790
+proof dependencies and found no circular use of Lemma 6.8 or Theorem 6.2.
+Report 31 freezes the exact published binary proposition and its negation.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
 have not been supplied. Non-dyadic results, the remaining ADC classifications in
 Sections 6--7, global classifications and enumeration remain incomplete.
 
-Semantic status: provisional, with unsigned human review cards and remaining
-semantic checks elsewhere in the paper. Trust status: the new concrete endpoints use only the
+Semantic status: one confirmed theorem-level mismatch plus provisional and
+incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
 standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later b624d40, b728bce and 074f2cd Lemma 6.8 additions still need their
-own clean run. The d05a898 package passed structure checks only and predates
-074f2cd. Local dependency-state warnings remain disclosed in report 25.
-Coverage grade: C. Whole-paper verdict:
+The later Lemma 6.8 and discrepancy additions through fe2a459 still need their
+own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
+separate paper-kit run passed for all eight papers at f6f7485/c82668b.
+Project grade: D because a substantive mismatch occurs in a core classification
+lemma. Whole-paper verdict:
 `NOT_COMPLETE`.

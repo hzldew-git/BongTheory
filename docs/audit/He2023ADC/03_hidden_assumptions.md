@@ -97,3 +97,12 @@ before either public theorem; rank and norm integrality follow from the
 ambient and ADC hypotheses. The positive k assumption in (iv) is visible
 and genuinely restricts it to n>=4. It is not a paper-wide convention and
 is not counted as a complete proof of the published (iv).
+
+The boundary counterexample uses `IsNADC.{u,u,u}`. Thus its target carriers
+share the universe of the field and source carrier. Every finite-dimensional
+binary space has a coordinate model there, so this does not omit a binary
+isometry class; an arbitrary-universe strengthening is not separately exported.
+The abstract `DyadicContext` is inhabited by the checked `Q_2` instance.
+Square normalization permits a scalar of negative valuation, but integral
+transport is obtained through maximal-lattice uniqueness rather than by
+assuming that the coordinate scaling is an integral map.

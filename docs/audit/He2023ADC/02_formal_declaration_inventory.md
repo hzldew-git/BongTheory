@@ -87,6 +87,16 @@ Additional concrete declaration groups are:
   only the n>=4 endpoint `heADC2025Lemma68iv_of_pos`, on arbitrary actual
   lattices. Report 25 raises the count to 5/6 whole clauses; n=2 of (iv)
   is explicitly not asserted.
+- `He2023ADCQuaternaryBoundaryCandidate`, `Conditions`, `Tests`, `Endpoint`,
+  `Generic`, `Normalization`, and `Testing` construct the actual rank-four
+  boundary lattice, prove every finite and exceptional binary test, normalize
+  arbitrary nonexceptional parameters, exhaust the maximal binary catalogue,
+  and conclude that the lattice is 2-ADC but nonmaximal.
+- `He2023ADCQuaternaryBoundaryDiscrepancy` defines the exact binary implication
+  printed in Lemma 6.8(iv), proves that the candidate is not its asserted
+  maximal target, and proves the negation of that implication.
+- `BongTest.He2023ADCQuaternaryBoundaryQ2` supplies a concrete field instance
+  for the 2-ADC, nonmaximality, and discrepancy conclusions.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

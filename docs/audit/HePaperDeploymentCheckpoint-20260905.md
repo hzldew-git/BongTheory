@@ -4,6 +4,27 @@ This is a versioned progress record, not a completed-release certificate.
 The three papers retain separate canonical entries, audit folders, manifests
 and source-only Review Kits in the shared repository.
 
+## Later workflow and boundary status
+
+The later Paper Review Kits run 33942437722 completed successfully for all
+eight paper jobs at source `c82668b97ed80f0cead4493206cb6483c4e8d77d`,
+tree-identical to remote branch head `f6f7485b6a3acabedbec5a7facce46f8ee7365ab`.
+This supplies independent clean extraction, payload verification, builds,
+paper audits, and enforcing gates for He--Hu, He classic, and He ADC at that
+source. The He--Hu, He classic, and He ADC artifacts are respectively
+`9965063239`, `9962386381`, and `9962394872`.
+
+Lean CI run 33942437720 did not pass: the monolithic complete build reached its
+configured 360-minute limit and was cancelled. Later deployment work must
+replace that single build with sharded complete coverage; no green status is
+inferred from the successful paper-kit workflow.
+
+Local ADC work through `fe2a459a4152ade94299a61d1c4958fefa646ba0` is newer
+than both remote workflows. It proves and independently audits a concrete
+counterexample to the n=2 instance of published Lemma 6.8(iv). Reports 28--31
+record the exact mathematical, trust, and reproducibility scope. This source
+has not yet been pushed or included in a clean Review Kit.
+
 ## Remote revision and observations
 
 At the time of inspection, both remote workflows concern branch head
@@ -262,8 +283,9 @@ new queries use exactly the standard three axioms. An independent focused
 imported-environment gate passed on 57,667 declarations; the main scanner
 checks passed 23 regression tests and 2687 tracked Lean sources.
 
-Report 25 records the distinction between five complete whole clauses and
-the still partial (iv). Its n=2 boundary is unresolved, not refuted. The
+Report 25 records the historical distinction between five complete whole
+clauses and the then-partial (iv). Reports 26--31 subsequently prove and
+independently audit a counterexample to its n=2 boundary. The
 local d05a898 package and remote f6f7485/c82668b clean kit both predate this
 increment. Existing dependency-state warnings remain disclosed; cached
 checks are not clean CI. No release is promoted by this proof increment.

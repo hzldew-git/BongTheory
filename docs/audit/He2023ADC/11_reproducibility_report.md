@@ -1,6 +1,14 @@
 # Reproducibility report
 
-Latest audited code checkpoint: `074f2cdcd63637fb6f6d8c65879e55968a1dc675`
+Latest audited code checkpoint: `fe2a459a4152ade94299a61d1c4958fefa646ba0`.
+The complete binary boundary development, explicit mismatch proposition,
+canonical entry, 205-report paper audit, concrete `Q_2` nonvacuity module, and
+focused 57,757-declaration enforcing gate pass locally. The decisive eight
+testing declarations also passed independent stdin replay and an 80,790-body
+dependency traversal. They use only the standard three axioms. This remains
+cached evidence; exact-revision clean-kit CI is pending.
+
+The earlier checkpoint `074f2cdcd63637fb6f6d8c65879e55968a1dc675`
 adds full (iii) and n>=4 of (iv). Main and independent replay passed five
 new modules, entry and all 159 audit reports, including twelve new exact
 standard-only sets. The focused gate passed on 57,667 declarations; the
@@ -182,3 +190,20 @@ dependency worktree or local build cache. Its source manifest records a
 clean tree. These checks establish package integrity, not a clean Lean
 build. The ZIP has not been uploaded as a release and does not contain
 the later second-endpoint code at `074f2cd`.
+
+## Later complete paper-kit workflow result
+
+Run 33942437722 completed successfully for all eight independently selectable
+paper kits at merge-test source `c82668b97ed80f0cead4493206cb6483c4e8d77d`,
+whose tree equals remote branch head `f6f7485b6a3acabedbec5a7facce46f8ee7365ab`.
+This includes clean extraction, payload hashes, builds, paper audits, and
+enforcing gates for He--Hu, He classic, and He ADC at that earlier source.
+The He ADC artifact is `9962394872`; the He--Hu artifact is `9965063239`; the
+He classic artifact is `9962386381`. These 30-day workflow artifacts do not
+contain the later Lemma 6.8 work.
+
+Whole-repository run 33942437720 reached the six-hour job limit while executing
+the complete build and was cancelled by the configured timeout. It is not a
+green CI receipt. The successful sharded paper-kit run shows that the source
+closures are reproducible at f6f7485, while the monolithic workflow needs a
+sharded complete-coverage design before release.

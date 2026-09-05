@@ -23,7 +23,7 @@ unannounced correction from arXiv. Bare unequal scalars are not sufficient.
 Author confirmation of the intended compatible choice remains pending;
 report 24 records the independent AI domain and proof checks.
 
-## Unresolved n=2 proof boundary in Lemma 6.8(iv)
+## Refuted n=2 boundary in Lemma 6.8(iv)
 
 The publisher's statement on p. 1002, under the even n>=2 convention on
 p. 998, includes n=2 in (iv). Page 1003 invokes the test N_2^n(1) explicitly
@@ -31,9 +31,15 @@ with n>=4, but supplies no separate argument for n=2 there. The following
 Lemmas 6.9--6.12 concern W_1^4(Delta), not the W_2^4(Delta) ambient case.
 
 At `074f2cdcd63637fb6f6d8c65879e55968a1dc675`, the formalization proves
-the n>=4 special case as `heADC2025Lemma68iv_of_pos`. The restriction is
-visible and does not alter the published target. Status of the remaining
-argument: `INSUFFICIENT_EVIDENCE` / `AUTHOR_CONFIRMATION_REQUIRED`.
-An omitted argument is not a refutation. No arXiv amendment or new source
-convention is silently adopted to fill this gap. Report 25 records the
-independent source comparison and the fully proved neighboring clause (iii).
+the n>=4 special case as `heADC2025Lemma68iv_of_pos`. The later boundary
+development constructs an actual integral nonmaximal lattice in
+`W_2^4(Delta)`, exhausts every relevant maximal binary test, and proves that
+the candidate is 2-ADC. At `fe2a459a4152ade94299a61d1c4958fefa646ba0`,
+`not_heADC2025Lemma68ivBinaryStatement` records the resulting negation of the
+printed binary implication. A concrete `Q_2` module rules out vacuity.
+
+Independent source-first and code-second review checked the literal Theorem
+3.6 conditions, square-class exhaustion, actual integral transports, hidden
+assumptions, universe scope, and noncircular dependency closure. The result is
+`SEMANTIC_MISMATCH` for Lemma 6.8(iv) at n=2. No arXiv amendment or replacement
+classification is adopted. Reports 30--31 give the exact evidence and limits.

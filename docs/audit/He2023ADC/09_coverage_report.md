@@ -1,6 +1,6 @@
 # Coverage report
 
-Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION`.
+Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
 
 - Publisher inventory: 78/78 directly numbered items identified.
 - Local dyadic definition, maximal testing, maximal-implies-ADC, equal-rank
@@ -46,11 +46,14 @@ Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION`.
   for the printed V domain. That checkpoint supplied 4/6 clauses, still partial;
   Section 6 remains 5/12 fully completed numbered items. These new proofs
   still need their own clean kit and CI, and do not imply human approval.
-- Report 25 adds full (iii) and only the n>=4 part of (iv) at 074f2cd,
-  with main and independent replay and twelve standard-only new queries.
-  Lemma 6.8 now has 5/6 completed whole clauses plus a partial (iv).
-  The n=2 case of (iv) remains unresolved, not refuted. Section 6 remains
-  5/12 complete numbered items; this addition also needs its own clean CI.
+- Report 25 adds full (iii) and the n>=4 part of (iv) at 074f2cd. Reports
+  26--30 construct the missing boundary candidate and independently prove that
+  it is an actual nonmaximal 2-ADC lattice in `W_2^4(Delta)`. Report 31 records
+  the formal negation of the printed n=2 implication and a concrete `Q_2`
+  witness. Lemma 6.8(iv) is therefore a `STATEMENT_MISMATCH` at n=2, rather
+  than a remaining formalization gap. Section 6 still has 5/12 fully matched
+  numbered items; mismatch evidence does not count as a formalized proof of
+  the paper's false clause.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

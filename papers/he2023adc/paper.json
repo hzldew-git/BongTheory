@@ -33,13 +33,14 @@
   ],
   "entryModule": "Bong.Papers.He2023ADC",
   "auditModules": [
-    "BongTest.He2023ADCAudit"
+    "BongTest.He2023ADCAudit",
+    "BongTest.He2023ADCQuaternaryBoundaryQ2"
   ],
   "auditDirectory": "docs/audit/He2023ADC",
   "sourceDelta": "docs/audit/He2023ADC/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION",
-  "semanticStatus": "PARTIAL_LOCAL_DYADIC_SPECIALIZATION",
-  "grade": "C",
+  "coverageStatus": "IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH",
+  "semanticStatus": "SEMANTIC_MISMATCH_LEMMA_6_8_IV_BINARY",
+  "grade": "D",
   "expectedAxioms": [
     "propext",
     "Classical.choice",
@@ -64,14 +65,15 @@
     "Both clauses of Lemma 6.7: actual named lattice representation implies exact alpha alternatives and raw/capped defect equalities with endpoint caps justified; independently AI-reviewed and included in clean-kit CI with the enforcing gate at f6f7485/c82668b",
     "Lemma 6.8(i)-(ii): actual first-column endpoint lattice isometries for arbitrary n-ADC lattices, including n=2 in (i) and retaining n>=4 in (ii); locally kernel-checked and independently AI-reviewed at b624d40, with its own exact-revision clean-kit CI pending",
     "Lemma 6.8(v)-(vi): nonexceptional class-domain lattice isometries with internal square normalization and the original parameter; printed V-domain wrappers expose compatible Delta in U; locally kernel-checked and independently AI-reviewed at b728bce, with its own clean-kit CI pending",
-    "Lemma 6.8(iii) in full and only n>=4 of (iv): actual arbitrary-lattice second-column isometries, with all tests, kappa and profiles derived internally; locally kernel-checked and independently AI-reviewed at 074f2cd; whole Lemma 6.8 has 5/6 completed clauses plus partial (iv), with n=2 of (iv) unresolved and exact-revision clean CI pending"
+    "Lemma 6.8(iii) in full and n>=4 of (iv): actual arbitrary-lattice second-column isometries, with all tests, kappa and profiles derived internally; locally kernel-checked and independently AI-reviewed at 074f2cd",
+    "Formal counterexample to the n=2 instance printed in Lemma 6.8(iv): an actual integral nonmaximal 2-ADC lattice in W_2^4(Delta), complete maximal binary testing, explicit negation of the published binary implication, and a concrete Q_2 nonvacuity module; locally kernel-checked and independently AI-reviewed through fe2a459; reports 26-31; exact-revision clean CI pending"
   ],
   "excludedScope": [
     "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
     "Non-dyadic local results, the remaining Section 6-7 ADC classification, and Section 8 global and enumerative proofs",
     "Remaining Section 4 clauses, including non-dyadic Proposition 4.16 and unary testing-set minimality",
     "Completion of theorem-by-theorem semantic review and independent human sign-off",
-    "The supporting quaternary boundary construction at 9ec46e6 proves existence, integrality and nonmaximality only; its 2-ADC status and any implication for published Lemma 6.8(iv) remain unresolved"
+    "A corrected replacement for Lemma 6.8(iv) at n=2 and a complete re-evaluation of the downstream Theorem 6.2 classification"
   ],
-  "reviewNotice": "This is an in-progress paper kit. Concrete proofs cover the dyadic foundations, selected Section 4 results, full Theorem 6.1, all clauses of Lemmas 6.4-6.7, and clauses (i),(ii),(iii),(v),(vi) of Lemma 6.8 plus only n>=4 of (iv). The n=2 case of (iv) remains unresolved, not refuted; the printed V-domain wrappers expose the compatible Delta-in-U convention. Clean-kit CI at f6f7485/c82668b includes full Lemma 6.7 and the enforcing gate, but not the later b624d40/b728bce/074f2cd partial Lemma 6.8 additions. Global arithmetic premises, Theorem 6.2, the other local ADC classifications and enumeration remain incomplete. Local checks, exact-revision reproducibility and release promotion remain separate gates."
+  "reviewNotice": "This is an in-progress paper kit with a theorem-level semantic mismatch. Concrete proofs cover the dyadic foundations, selected Section 4 results, full Theorem 6.1, all clauses of Lemmas 6.4-6.7, and clauses (i),(ii),(iii),(v),(vi) of Lemma 6.8 plus n>=4 of (iv). The n=2 instance printed in Lemma 6.8(iv) is formally refuted by an independently audited, nonvacuous actual 2-ADC counterexample through fe2a459; reports 26-31 give the scope. The printed V-domain wrappers expose the compatible Delta-in-U convention. Clean-kit CI at f6f7485/c82668b includes full Lemma 6.7 and the enforcing gate, but not the later Lemma 6.8 or discrepancy additions. Global arithmetic premises, Theorem 6.2, the other local ADC classifications and enumeration remain incomplete. Exact-revision clean CI, release promotion, and human sign-off remain separate gates."
 }

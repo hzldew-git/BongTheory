@@ -19,7 +19,11 @@ Printed wrappers explicitly require compatible Delta in U; report 24 and
 Later second-endpoint checkpoint: `074f2cdcd63637fb6f6d8c65879e55968a1dc675`,
 full (iii) and only n>=4 of (iv), with independent replay of twelve new
 standard-only queries. Report 25 records 5/6 whole clauses and partial (iv).
-The n=2 case of (iv) remains unresolved, not certified or refuted here.
+Complete binary-testing checkpoint: `0aa3848ca5aae079c2944174e687af8c068b9573`.
+Explicit mismatch checkpoint: `fe2a459a4152ade94299a61d1c4958fefa646ba0`.
+Reports 30--31 prove and independently audit a nonvacuous counterexample to
+the n=2 instance printed in Lemma 6.8(iv). That clause is
+`SEMANTIC_MISMATCH`; the n>=4 formal endpoint remains provisional.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -38,5 +42,6 @@ pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
 through full Lemma 6.7. The later partial Lemma 6.8 revision has passed
 incremental checks and still requires its own clean-kit CI. Exact
-commit distinctions are in report 11. Overall coverage grade: C. Whole-paper
+commit distinctions are in report 11. Overall project grade: D because one
+core source result has a substantive semantic mismatch. Whole-paper
 completion: not achieved.

@@ -1,10 +1,36 @@
 # Author review cards
 
-Report 25 adds the cards for full Lemma 6.8(iii) and the restricted n>=4
-part of (iv). In particular, the author is asked for the intended n=2
-argument of (iv): its statement includes n=2, but the printed proof invokes
-the square second-column test only with n>=4. No human confirmation or
-refutation of that remaining boundary is recorded.
+## Lemma 6.8(iv), binary boundary
+
+Paper location: pp. 1002--1003.
+
+Paper statement: if an integral rank-four lattice is 2-ADC and its ambient
+space is `W_2^4(Delta)`, then it is integrally isometric to the maximal lattice
+`N_2^4(Delta)`.
+
+Formal finding: an explicit integral lattice in that ambient space has good
+BONG orders `(0,-2e,1,3-2e)`, represents every relevant maximal binary lattice,
+is 2-ADC, and is not maximal. Therefore it is not integrally isometric to
+`N_2^4(Delta)`. The argument is instantiated over `Q_2` and has no dependency
+on Lemma 6.8 or Theorem 6.2.
+
+Current audit status: `SEMANTIC_MISMATCH` at n=2; `PROVISIONAL_MATCH` for the
+separately formalized n>=4 statement.
+
+Questions for the paper author and domain expert:
+
+1. Was Lemma 6.8(iv) intended to include n=2?
+2. Should the candidate with orders `(0,-2e,1,3-2e)` be added to the
+   exceptional classification, or is there an intended hypothesis that
+   excludes it?
+3. Which downstream statements should be revised after the use of Lemma
+   6.7(ii) outside its n>=4 range?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+
+Report 25 contains the historical cards for full Lemma 6.8(iii) and the
+restricted n>=4 part of (iv). Reports 30--31 replace the former open question
+about n=2 with the formal counterexample recorded above.
 
 The full author-facing card for the newly completed Proposition 4.13, with
 its assumptions, boundary checks, and unsigned approval fields, is in

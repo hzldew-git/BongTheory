@@ -29,9 +29,15 @@
 | Lemma 6.8(i)--(ii), only 2/6 clauses | PASS local and independent checks at b624d40, all 15 new standard-only queries; report 23; its own clean CI and human approval pending |
 | Lemma 6.8(v)--(vi), raising the partial lemma to 4/6 | PASS local and independent checks at b728bce, 16 standard-only queries; explicit Delta-in-U convention in the printed wrappers; report 24; own clean CI and human approval pending |
 | Lemma 6.8(iii) and n>=4 of (iv), raising whole-clause coverage to 5/6 | PASS local and independent checks at 074f2cd, 12 standard-only new queries and focused gate on 57,667 declarations; report 25; n=2 of (iv), own clean CI and human approval pending |
+| Complete actual binary maximal testing at the n=2 boundary | PASS local and independent checks at 0aa3848; actual 2-ADC and nonmaximality proved, eight standard-only new queries, 80,790-declaration body traversal; report 30 |
+| Lemma 6.8(iv), printed n=2 implication | `SEMANTIC_MISMATCH`; its formal negation and concrete `Q_2` nonvacuity check pass at fe2a459; report 31; human confirmation and exact-revision clean CI pending |
 | Independent semantic sign-off | FAIL / pending |
 
 Completion verdict: `NOT_COMPLETE`.
+
+Project grade: D because the audit identifies a substantive mismatch in a
+core classification lemma. This grade does not imply that the unformalized
+remainder has been assessed as false.
 
 The earlier result-row clean-kit reservations for 6.1 and 6.4--6.7 are
 closed by the later f6f7485/c82668b receipt above, not by reclassifying their

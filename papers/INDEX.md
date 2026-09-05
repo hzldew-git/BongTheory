@@ -14,7 +14,7 @@ PDF, unrelated milestone test, or Git history.
 | Beli 2020 | [`Bong.Papers.Beli2020`](../Bong/Papers/Beli2020.lean) | [`BongTest.Beli2020Audit`](../BongTest/Beli2020Audit.lean) | [`Beli2020`](../docs/audit/Beli2020) | [`Beli2020 review kit`](https://github.com/hzldew-git/BongTheory/releases/download/v0.3.0-rc.1/BongTheory-Beli2020-v0.3.0-rc.1-review-kit.zip) |
 | He--Hu 2022 (published 2024) | [`Bong.Papers.HeHu2022`](../Bong/Papers/HeHu2022.lean) | [`BongTest.HeHu2022Audit`](../BongTest/HeHu2022Audit.lean) | [`HeHu2022`](../docs/audit/HeHu2022) | Pending next release; manifest [`hehu2022`](hehu2022/paper.json) |
 | He 2022 Classic (published 2024) | [`Bong.Papers.He2022Classic`](../Bong/Papers/He2022Classic.lean) | [`BongTest.He2022ClassicAudit`](../BongTest/He2022ClassicAudit.lean) | [`He2022Classic`](../docs/audit/He2022Classic) | Pending next release; manifest [`he2022classic`](he2022classic/paper.json) |
-| He 2023 ADC (published 2025) | [`Bong.Papers.He2023ADC`](../Bong/Papers/He2023ADC.lean) | [`BongTest.He2023ADCAudit`](../BongTest/He2023ADCAudit.lean) | [`He2023ADC`](../docs/audit/He2023ADC) | Pending next release; manifest [`he2023adc`](he2023adc/paper.json) |
+| He 2023 ADC (published 2025) | [`Bong.Papers.He2023ADC`](../Bong/Papers/He2023ADC.lean) | [`BongTest.He2023ADCAudit`](../BongTest/He2023ADCAudit.lean), [`Q2 boundary`](../BongTest/He2023ADCQuaternaryBoundaryQ2.lean) | [`He2023ADC`](../docs/audit/He2023ADC) | Pending next release; Lemma 6.8(iv) has a documented n=2 semantic mismatch; manifest [`he2023adc`](he2023adc/paper.json) |
 
 The Beli 2020 row denotes the paper first submitted in 2020. Its frozen source
 is arXiv:2008.10113v2, revised in 2022. The paper year and revision year are

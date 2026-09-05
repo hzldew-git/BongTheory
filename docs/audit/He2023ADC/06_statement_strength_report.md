@@ -86,5 +86,8 @@ c!=1,Delta is not certified. This checkpoint did not cover (iii),(iv).
 
 Report 25 proves full (iii), `LOGICALLY_EQUIVALENT` on every even n>=2.
 Its endpoint for (iv) is `SPECIAL_CASE_ONLY`: the explicit k>0 premise
-removes n=2 even though the printed statement includes it. No smaller
-undefined square second-column test is fabricated. Theorem 6.2 remains open.
+removes n=2 even though the printed statement includes it. Reports 30--31
+subsequently prove that the omitted binary implication is false. The formal
+relation to the printed n=2 clause is therefore `DIFFERENT_BOUNDARY_CASES`
+with theorem status `SEMANTIC_MISMATCH`, rather than an incomplete proof of a
+true statement. No corrected form of Theorem 6.2 is claimed.

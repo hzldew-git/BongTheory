@@ -69,3 +69,9 @@ lattice or assert that its original leading orders coincide. The final
 integral-isometry conclusion instead uses the proved full order-profile
 criterion on the original lattice. The boundary n=2 is retained in (iii)
 and explicitly excluded, not redefined, in `heADC2025Lemma68iv_of_pos`.
+
+`HeADC2025Lemma68ivBinaryStatement` is an audit proposition, not a replacement
+definition from the paper. It packages the literal n=2 implication using the
+same `IsNADC`, ambient quadratic-space isometry, and integral lattice-isometry
+notions already compared above. Its formal negation therefore exposes a
+statement mismatch without changing any underlying mathematical definition.

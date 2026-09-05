@@ -60,10 +60,11 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
 | He, *manuscripta math.* 174 (2024), Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | full local equivalence proved; testing and global parts of the paper remain incomplete |
-| He, *Doc. Math.* 30 (2025), Lemmas 4.11-4.12 | published-family endpoints in `He2023ADCPublishedProfiles` and `He2023ADCGenericProfiles` | maximal profiles proved; the paper remains partially formalized |
+| He, *Doc. Math.* 30 (2025), Lemmas 4.11-4.12 and even Section 6 | published-family profiles, Theorem 6.1, Lemmas 6.4-6.8 endpoints, and the quaternary boundary audit | partial paper; Lemma 6.8(iv) is formally refuted at n=2 and recorded as a semantic mismatch |
 
 The Classic paper's literal Lemma 7.1(ii) is refuted for ramification index
-greater than one; it is not assumed or silently repaired. The local
+greater than one. The ADC paper's Lemma 6.8(iv) is also refuted at n=2 by an
+actual nonmaximal 2-ADC lattice, with a concrete `Q_2` check. The local
 Theorem 1.5 endpoint covers n >= 2 only. See each paper's fidelity report for
 exact coverage, assumptions, source discrepancies, and missing human approval.
 

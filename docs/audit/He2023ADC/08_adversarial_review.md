@@ -1,13 +1,23 @@
 # Adversarial review
 
+Independent source-first review of `0aa3848` actively tested the complete
+binary catalogue, parameter normalization, infinity handling, all literal
+Theorem 3.6 caps, lattice-isometry directions, universe scope, nonvacuity, and
+circularity. It found no semantic blocker. The candidate meets every printed
+Lemma 6.8(iv) hypothesis at n=2 but is not maximal and hence is not the asserted
+`N_2^4(Delta)`. The publisher proof invokes Lemma 6.7(ii), whose n>=4 premise
+does not cover this case. Commit `fe2a459` records the exact negated statement
+and a `Q_2` witness. This is a `SEMANTIC_MISMATCH`, while a corrected complete
+classification remains `INSUFFICIENT_EVIDENCE`.
+
 Independent review of `074f2cd` found no substantive mismatch in full
 (iii) or the explicitly restricted n>=4 part of (iv). It checked same-lattice
 BONG construction, internal kappa and tests, the leading-order-2 tower case,
 space-only square normalization, signed full determinant, raw/capped defects,
 and e=1. Five modules, entry, audit and the focused gate independently passed.
-The printed (iv) includes n=2; its proof uses N_2^n(1) with n>=4. This
-unresolved boundary is not certified or declared false. Report 25 raises
-whole-clause coverage to 5/6, not to a complete Lemma 6.8.
+The printed (iv) includes n=2; its proof uses N_2^n(1) with n>=4. Report 25
+records the earlier restricted positive result; reports 30--31 supersede its
+then-open status by proving and auditing the binary counterexample.
 
 Independent review of `b728bce` passed all four frozen new modules, entry,
 full ADC audit and 16 standard-only queries for Lemma 6.8(v),(vi).

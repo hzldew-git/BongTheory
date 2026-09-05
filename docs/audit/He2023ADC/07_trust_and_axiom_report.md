@@ -1,5 +1,15 @@
 # Trust and axiom report
 
+At `fe2a459a4152ade94299a61d1c4958fefa646ba0`, the complete binary-testing
+argument and the explicit negation of the printed Lemma 6.8(iv) boundary pass
+the canonical entry and 205-report audit. The focused enforcing gate checks
+57,757 declarations. Independent source replay checked the eight decisive
+testing declarations, and a dependency-body traversal reached 80,790 constants
+without finding Lemma 6.8 or Theorem 6.2 in the closure. The new conclusions
+use exactly `propext`, `Classical.choice`, and `Quot.sound`. A concrete `Q_2`
+module also passes with the same standard axiom set. Reports 30--31 record the
+scope. Clean exact-revision CI remains pending.
+
 At `074f2cdcd63637fb6f6d8c65879e55968a1dc675`, full (iii) and the n>=4
 part of (iv) passed main and independent replay of all five new modules,
 entry and full ADC audit. All 159 printed reports remain in the standard

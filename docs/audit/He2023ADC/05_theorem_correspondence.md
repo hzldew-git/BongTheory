@@ -33,9 +33,9 @@
 | Lemma 6.7(i)--(ii) | `Bong.BONG.GoodBONG.heADC2025Lemma67i`, `heADC2025Lemma67ii` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `b0f832e`; actual tests, exact alpha alternatives and raw/capped equalities, both rank boundaries and e=1 reviewed; report 22; included in clean-kit f6f7485/c82668b; human approval pending |
 | Lemma 6.8(i)--(ii) | `Bong.Lattice.heADC2025Lemma68i`, `heADC2025Lemma68ii` | Each clause `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `b624d40`; exact n=2/n>=4 boundaries; report 23; own clean CI and human approval pending |
 | Lemma 6.8(iii) | `Bong.Lattice.heADC2025Lemma68iii` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `074f2cd`, including n=2; report 25; own clean CI and human approval pending |
-| Lemma 6.8(iv) | `Bong.Lattice.heADC2025Lemma68iv_of_pos` | `SPECIAL_CASE_ONLY` / `PARTIAL_FORMALIZATION`, n>=4 at `074f2cd`; the published n=2 case remains open; report 25 |
+| Lemma 6.8(iv) | `Bong.Lattice.heADC2025Lemma68iv_of_pos`; `Bong.BONG.GoodBONG.not_heADC2025Lemma68ivBinaryStatement` | `PROVISIONAL_MATCH` for n>=4 at `074f2cd`; `SEMANTIC_MISMATCH` at n=2. The latter declaration proves the negation of the printed binary implication using an actual nonmaximal 2-ADC lattice; independently audited in reports 30--31 |
 | Lemma 6.8(v)--(vi) | `Bong.Lattice.heADC2025Lemma68v`, `heADC2025Lemma68vi` and their `Published` wrappers | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `b728bce`; actual original-parameter lattice isometry, n=2 included; printed V domain explicitly requires compatible Delta in U; report 24; with report 25 whole lemma 5/6, own clean CI and human approval pending |
-| Section 5, remaining Sections 6--8 and Section 1 results | none | Pending |
+| Section 5, remaining Sections 6--8 and Section 1 results | none | Pending; the proof of Theorem 6.2 cannot be certified through Lemma 6.8(iv) as printed |
 
 The field restriction prevents claiming the full generality of Lemma 2.1.
 At checkpoint `976883e6cda7c17402c4c1f0bc768db555460eae`, all thirteen
