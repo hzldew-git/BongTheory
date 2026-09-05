@@ -410,3 +410,20 @@ import Bong.Papers.He2023ADC
 #check @Bong.BONG.GoodBONG.HeADC2025Lemma68ivBinaryStatement
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isIsometric_N2Delta
 #print axioms Bong.BONG.GoodBONG.not_heADC2025Lemma68ivBinaryStatement
+
+#check @Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC
+#check @Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_is3ADC
+#check @Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_orders
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_represents_first
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_fullDefect
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCExceptional_represents_finite
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_represents_N1Delta
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_represents_sharp
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_misses_N2Delta
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_representsAllRelevantOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC
+#print axioms Bong.BONG.GoodBONG.heADCExceptional_ternaryTerminalDefect_zero
+#print axioms Bong.BONG.GoodBONG.heADCExceptional_ternaryTerminalAlpha_ge_half
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_is3ADC
