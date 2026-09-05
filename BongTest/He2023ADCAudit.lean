@@ -455,3 +455,17 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCExceptionalTail_second_eq_neg_discriminant
 #print axioms Bong.BONG.GoodBONG.heADCRemark63Tail_admissible
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark63
+
+#check @Bong.Lattice.IsNADC.of_latticeIsometry
+#check @Bong.Lattice.IsNADC.of_succ
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_is3ADC
+#check @Bong.Lattice.heADCQuaternarySecondDiscriminantClassification
+#check @Bong.Lattice.heADC2025Theorem62_binary_corrected
+#check @Bong.Lattice.heADC2025Theorem71
+#print axioms Bong.Lattice.IsNADC.of_latticeIsometry
+#print axioms Bong.Lattice.IsNADC.of_succ
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_is3ADC
+#print axioms Bong.BONG.GoodBONG.heADCQuaternarySecondDiscriminant_classification
+#print axioms Bong.Lattice.heADCQuaternarySecondDiscriminantClassification
+#print axioms Bong.Lattice.heADC2025Theorem62_binary_corrected
+#print axioms Bong.Lattice.heADC2025Theorem71

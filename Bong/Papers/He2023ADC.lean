@@ -37,6 +37,7 @@ import Bong.Bong.He2023ADCQuaternaryBoundaryGeneric
 import Bong.Bong.He2023ADCQuaternaryBoundaryNormalization
 import Bong.Bong.He2023ADCQuaternaryBoundaryTesting
 import Bong.Bong.He2023ADCQuaternaryBoundaryDiscrepancy
+import Bong.Bong.He2023ADCTheorem71
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
