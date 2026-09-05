@@ -295,3 +295,21 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma67_endpoint
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma67i
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma67ii
+
+#check @Bong.Lattice.heADC2025Lemma68i
+#check @Bong.Lattice.heADC2025Lemma68ii
+#print axioms Bong.heADCEvenCodimensionTwo_represents_of_parameter_not_square
+#print axioms Bong.heADCEvenFirst_represents_previous
+#print axioms Bong.Lattice.heADCMaximal_represents_of_ambient_model
+#print axioms Bong.Lattice.heADCEvenCorankTwoFirst_same
+#print axioms Bong.Lattice.heADCEvenCorankTwoFirst_of_not_square
+#print axioms Bong.Lattice.heADCEvenCorankTwoSecond_of_not_square
+#print axioms Bong.BONG.GoodBONG.heADC_prefixProduct_det_square_of_ambient
+#print axioms Bong.BONG.GoodBONG.heADC_signedFullDefect_of_ambient
+#print axioms Bong.BONG.GoodBONG.heADC_signedFullDefectOrder_of_ambient
+#print axioms Bong.BONG.GoodBONG.heADCEvenEndpoint_signedPrefix_defect
+#print axioms Bong.BONG.GoodBONG.heADCEvenCorankTwo_endpoint_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma68i_of_goodBONG
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma68ii_of_goodBONG
+#print axioms Bong.Lattice.heADC2025Lemma68i
+#print axioms Bong.Lattice.heADC2025Lemma68ii
