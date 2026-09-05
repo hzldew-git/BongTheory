@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 import Bong.Lattice.NADC
 import Bong.Lattice.GlobalNADC
 import Bong.Bong.He2023ADCSectionThree
+import Bong.Bong.He2023ADCPublishedRepresentation
 import Bong.Bong.He2023ADCSectionFour
 import Bong.Bong.He2023ADCMaximalProfiles
 import Bong.Bong.He2023ADCGenericProfiles

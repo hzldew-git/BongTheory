@@ -252,3 +252,8 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCCorankOne_raisedTail_isOMaximal
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem61_of_goodBONG
 #print axioms Bong.Lattice.heADC2025Theorem61
+
+#check @Bong.BONG.GoodBONG.heADC2025Theorem36Published
+#check @Bong.BONG.GoodBONG.heADC2025Theorem36PublishedFull
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem36Published
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem36PublishedFull
