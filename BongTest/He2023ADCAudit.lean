@@ -350,3 +350,12 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma68iv_of_goodBONG_of_pos
 #print axioms Bong.Lattice.heADC2025Lemma68iii
 #print axioms Bong.Lattice.heADC2025Lemma68iv_of_pos
+
+#check @Bong.BONG.GoodBONG.exists_heADCQuaternaryBoundaryCandidate
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_admissible
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_orders
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_integral
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_orders
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_represents_endpoint
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_second
+#print axioms Bong.BONG.GoodBONG.exists_heADCQuaternaryBoundaryCandidate
