@@ -34,6 +34,12 @@ the terminal dichotomy, the four-condition exceptional-lattice
 classification, and the arbitrary-lattice maximal-or-exceptional theorem.
 Ten new axiom reports are standard-only and the focused gate checks 57,918
 declarations.
+Theorem 6.2 and Remark 6.3 checkpoint:
+`70580bbd2b4386bec53f046b54a96e3dd69bcaae`. Report 34 proves the complete
+`n>=4` restriction of Theorem 6.2, formally refutes its exact published `n=2`
+biconditional, and proves the actual integral isometry in Remark 6.3. Eight
+new axiom reports are standard-only, the focused gate checks 57,933
+declarations, and the scanner checks 2,711 tracked Lean sources.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -50,9 +56,9 @@ classifications, enumeration, or omitted boundary cases.
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
-through full Lemma 6.7. The later partial Lemma 6.8 revision and full Lemmas
-6.9--6.12 have passed direct local checks; they still require exact-revision
-clean-kit CI. Exact
+through full Lemma 6.7. The later Section 6 developments through 70580bb have
+passed direct local checks; they still require exact-revision clean-kit CI. Exact
 commit distinctions are in report 11. Overall project grade: D because one
-core source result has a substantive semantic mismatch. Whole-paper
+core source lemma and its downstream classification theorem have substantive
+binary-boundary semantic mismatches. Whole-paper
 completion: not achieved.

@@ -90,7 +90,8 @@ removes n=2 even though the printed statement includes it. Reports 30--31
 subsequently prove that the omitted binary implication is false. The formal
 relation to the printed n=2 clause is therefore `DIFFERENT_BOUNDARY_CASES`
 with theorem status `SEMANTIC_MISMATCH`, rather than an incomplete proof of a
-true statement. No corrected form of Theorem 6.2 is claimed.
+true statement. At that checkpoint no corrected form of Theorem 6.2 was
+claimed; report 34 below supersedes this historical limitation.
 
 Lemma 6.12 is `LOGICALLY_EQUIVALENT` to the complete published exceptional
 example. The final endpoints use the actual lattice and literal local 2-ADC
@@ -109,3 +110,14 @@ literal 2-ADC condition and ambient `W_1^4(Delta)` isometry; its good BONG,
 kappa, and four maximal binary tests are constructed internally. These
 results do not repair the separate false boundary in Lemma 6.8(iv), so they
 do not by themselves certify Theorem 6.2. See report 33.
+
+Report 34 supersedes the earlier Theorem 6.2 limitation. The declaration
+`heADC2025Theorem62_of_four_le` is `LOGICALLY_EQUIVALENT` to the complete
+published theorem after restricting to `n>=4`; it quantifies over an arbitrary
+full lattice and retains no supplied diagonalization, BONG, space case, or
+square-class split. The separate declaration
+`not_heADC2025Theorem62BinaryStatement` proves the negation of the exact
+published `n=2` biconditional. Hence the unrestricted source theorem is
+`SEMANTIC_MISMATCH`, not merely incomplete. `heADC2025Remark63` proves the
+actual integral isometry in the published remark, rather than only coefficient
+or square-class equality.

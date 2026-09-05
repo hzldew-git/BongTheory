@@ -126,3 +126,12 @@ Ten newly queried declarations depend exactly on `propext`,
 sources without finding a forbidden proof token outside comments. No public
 numbered endpoint retains a custom law, supplied classification condition,
 or assumed testing catalogue. Report 33 records the semantic boundary.
+
+At checkpoint `70580bbd2b4386bec53f046b54a96e3dd69bcaae`, the Theorem 6.2
+discrepancy, stable-range theorem, Remark 6.3, canonical entry, and full audit
+compile directly. Eight new dependency reports again contain exactly
+`propext`, `Classical.choice`, and `Quot.sound`. The focused enforcing gate
+checks 57,933 declarations, and the comment-aware scanner checks 2,711 tracked
+Lean sources with no forbidden proof token outside comments. These mechanical
+checks validate the proof objects; report 34 separately records the semantic
+mismatch and the unsigned human-review gates.

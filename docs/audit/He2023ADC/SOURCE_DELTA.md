@@ -43,3 +43,23 @@ Independent source-first and code-second review checked the literal Theorem
 assumptions, universe scope, and noncircular dependency closure. The result is
 `SEMANTIC_MISMATCH` for Lemma 6.8(iv) at n=2. No arXiv amendment or replacement
 classification is adopted. Reports 30--31 give the exact evidence and limits.
+
+## Refuted n=2 boundary in Theorem 6.2
+
+The publisher's Theorem 6.2 includes every even `n>=2`. At `n=2` it claims
+that every rank-four 2-ADC lattice is either maximal or isometric to the
+exceptional lattice in `W_1^4(Delta)` from Lemma 6.12.
+
+At `70580bbd2b4386bec53f046b54a96e3dd69bcaae`, the already audited boundary
+lattice in `W_2^4(Delta)` is used as an actual integral counterexample. It is
+2-ADC and nonmaximal, and Proposition 4.2(i)'s proved nonisometric ambient
+pair shows that it cannot be isometric to the `W_1^4(Delta)` exception.
+`not_heADC2025Theorem62BinaryStatement` therefore proves the negation of the
+exact published `n=2` biconditional.
+
+The same checkpoint proves the complete `n>=4` restriction as
+`heADC2025Theorem62_of_four_le`, using both columns of Proposition 4.2(ii)
+and all six valid branches of Lemma 6.8. The published target is not silently
+altered: the source theorem remains `SEMANTIC_MISMATCH` at `n=2`, while the
+restricted theorem is recorded separately. Report 34 gives the formal and
+source-level evidence.

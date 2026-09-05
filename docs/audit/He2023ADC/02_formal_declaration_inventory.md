@@ -109,6 +109,15 @@ Additional concrete declaration groups are:
   identifies every exceptional-profile lattice with the constructed model.
 - `He2023ADCLemma611` derives all four binary tests from 2-ADC-ness and exports
   the published maximal-or-exceptional classification on arbitrary lattices.
+- `He2023ADCTheorem62Discrepancy` freezes the exact published `n=2`
+  biconditional and proves its negation using the actual second-column
+  boundary lattice and the nonisometric ambient-space pair.
+- `He2023ADCTheorem62Stable` transports square-equivalent parameters in both
+  even columns and proves the full `n>=4` restriction of Theorem 6.2 on an
+  arbitrary lattice, with all six Lemma 6.8 branches discharged.
+- `He2023ADCRemark63` identifies the exceptional coefficient when `e=1`,
+  constructs the alternate tail BONG, and proves the actual integral lattice
+  isometry asserted by Remark 6.3.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

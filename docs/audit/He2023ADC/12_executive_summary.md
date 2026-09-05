@@ -117,22 +117,33 @@ exceptional-lattice isometry; Lemma 6.11 derives every binary test from the
 The three modules, canonical entry, and full audit compile directly. Ten new
 axiom reports are standard-only, the enforcing gate checks 57,918
 declarations, and the scanner checks 2,708 tracked Lean files. Section 6 now
-has 9/12 fully matched numbered items. Exact-revision package CI and human
-sign-off remain pending. Theorem 6.2 and Remark 6.3 are not supplied, and the
-separate published Lemma 6.8(iv) mismatch is unchanged.
+had 9/12 fully matched numbered items at that checkpoint. Exact-revision
+package CI and human sign-off remained pending there; Theorem 6.2 and Remark
+6.3 were not yet supplied, and the separate published Lemma 6.8(iv) mismatch
+was unchanged.
+
+Report 34 adds the complete published Remark 6.3 and a boundary-complete
+audit of Theorem 6.2 at `70580bb`. The exact `n=2` biconditional of Theorem
+6.2 is formally refuted by the actual second-column 2-ADC lattice; the full
+`n>=4` restriction is proved for arbitrary lattices. Eight new axiom reports
+are standard-only, the enforcing gate checks 57,933 declarations, and the
+scanner checks 2,711 tracked Lean files. Section 6 is now completely triaged:
+10/12 numbered items match, while Lemma 6.8 and Theorem 6.2 each have a
+documented false `n=2` boundary. Downstream theorems still require fresh audit
+instead of inheriting the unqualified published Theorem 6.2.
 
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
-have not been supplied. Non-dyadic results, the remaining ADC classifications in
-Sections 6--7, global classifications and enumeration remain incomplete.
+have not been supplied. Non-dyadic results, Section 7 ADC classifications,
+global classifications and enumeration remain incomplete.
 
-Semantic status: one confirmed theorem-level mismatch plus provisional and
+Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
 standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later Lemma 6.8, discrepancy, and Lemma 6.12 additions through cf9f83b
+The later Section 6 additions through 70580bb
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

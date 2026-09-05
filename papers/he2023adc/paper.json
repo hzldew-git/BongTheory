@@ -39,8 +39,8 @@
   ],
   "auditDirectory": "docs/audit/He2023ADC",
   "sourceDelta": "docs/audit/He2023ADC/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH",
-  "semanticStatus": "SEMANTIC_MISMATCH_LEMMA_6_8_IV_BINARY",
+  "coverageStatus": "IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCHES",
+  "semanticStatus": "SEMANTIC_MISMATCH_LEMMA_6_8_IV_AND_THEOREM_6_2_BINARY",
   "grade": "D",
   "expectedAxioms": [
     "propext",
@@ -69,14 +69,16 @@
     "Lemma 6.8(iii) in full and n>=4 of (iv): actual arbitrary-lattice second-column isometries, with all tests, kappa and profiles derived internally; locally kernel-checked and independently AI-reviewed at 074f2cd",
     "Formal counterexample to the n=2 instance printed in Lemma 6.8(iv): an actual integral nonmaximal 2-ADC lattice in W_2^4(Delta), complete maximal binary testing, explicit negation of the published binary implication, and a concrete Q_2 nonvacuity module; locally kernel-checked and independently AI-reviewed through fe2a459; reports 26-31; exact-revision clean CI pending",
     "Full Lemma 6.12 for the actual exceptional quaternary lattice H orthogonal sum <1,-Delta*pi^(2-2e)> in W_1^4(Delta): exact good-BONG profile, integrality, nonmaximality, complete maximal-binary testing and 2-ADC, explicit ternary obstruction and not-3-ADC, plus concrete Q_2 nonvacuity; source-first audited and locally kernel-checked at cf9f83b; report 32; exact-revision clean CI and human sign-off pending",
-    "Full Lemmas 6.9-6.11: exact terminal-order dichotomy from actual kappa tests, all four Beli classification conditions identifying the exceptional lattice, and the public maximal-or-exceptional classification deriving every binary test from 2-ADC; source-first audited and locally kernel-checked at 382ef7a; report 33; exact-revision clean CI and human sign-off pending"
+    "Full Lemmas 6.9-6.11: exact terminal-order dichotomy from actual kappa tests, all four Beli classification conditions identifying the exceptional lattice, and the public maximal-or-exceptional classification deriving every binary test from 2-ADC; source-first audited and locally kernel-checked at 382ef7a; report 33; exact-revision clean CI and human sign-off pending",
+    "The complete n>=4 restriction of Theorem 6.2 for arbitrary lattices, together with a direct formal refutation of its exact published n=2 biconditional by the actual nonmaximal second-column 2-ADC lattice; source-first audited and locally kernel-checked at 70580bb; report 34; exact-revision clean CI and human sign-off pending",
+    "Full Remark 6.3: under ramification index one, actual integral isometry of the two displayed exceptional quaternary lattice models; source-first audited and locally kernel-checked at 70580bb; report 34; exact-revision clean CI and human sign-off pending"
   ],
   "excludedScope": [
     "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
-    "Non-dyadic local results, Theorem 6.2 and Remark 6.3, Section 7 ADC classification, and Section 8 global and enumerative proofs",
+    "Non-dyadic local results, Section 7 ADC classification, and Section 8 global and enumerative proofs",
     "Remaining Section 4 clauses, including non-dyadic Proposition 4.16 and unary testing-set minimality",
     "Completion of theorem-by-theorem semantic review and independent human sign-off",
-    "A corrected replacement for Lemma 6.8(iv) at n=2 and a complete re-evaluation of the downstream Theorem 6.2 classification"
+    "Any corrected publisher replacement for the refuted n=2 boundaries in Lemma 6.8(iv) and Theorem 6.2, and re-evaluation of all downstream uses"
   ],
-  "reviewNotice": "This is an in-progress paper kit with a theorem-level semantic mismatch. Concrete proofs cover the dyadic foundations, selected Section 4 results, full Theorem 6.1, all clauses of Lemmas 6.4-6.7, clauses (i),(ii),(iii),(v),(vi) of Lemma 6.8 plus n>=4 of (iv), and full Lemmas 6.9-6.12. The n=2 instance printed in Lemma 6.8(iv) is formally refuted by an independently audited, nonvacuous actual 2-ADC counterexample through fe2a459; reports 26-31 give the scope. Lemmas 6.9-6.12 are source-first audited through 382ef7a; reports 32-33 give their scope. The printed V-domain wrappers expose the compatible Delta-in-U convention. Clean-kit CI at f6f7485/c82668b includes full Lemma 6.7 and the enforcing gate, but not the later Lemma 6.8-6.12 additions. Global arithmetic premises, Theorem 6.2, Remark 6.3, the other local ADC classifications and enumeration remain incomplete. Exact-revision clean CI, release promotion, and human sign-off remain separate gates."
+  "reviewNotice": "This is an in-progress paper kit with two published binary-boundary semantic mismatches. Section 6 is completely triaged: Theorem 6.1, Remark 6.3, and Lemmas 6.4-6.7 and 6.9-6.12 provisionally match; every valid branch of Lemma 6.8 and the n>=4 restriction of Theorem 6.2 are proved; the n=2 statements in Lemma 6.8(iv) and Theorem 6.2 are directly refuted by an independently audited, nonvacuous actual 2-ADC counterexample. Reports 26-34 give the scope. The printed V-domain wrappers expose the compatible Delta-in-U convention. Clean-kit CI at f6f7485/c82668b includes full Lemma 6.7 and the enforcing gate, but not the later Section 6 additions. Global arithmetic premises, the other local ADC classifications and enumeration remain incomplete. Exact-revision clean CI, release promotion, and human sign-off remain separate gates."
 }

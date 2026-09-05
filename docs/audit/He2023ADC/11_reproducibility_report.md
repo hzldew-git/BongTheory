@@ -230,3 +230,18 @@ The exact-revision standalone package workflow is
 Until it completes successfully, this paragraph records local checks only;
 it is not a clean GitHub runner or downloadable-artifact receipt. Report 33
 records the theorem-level scope.
+
+## Theorem 6.2 and Remark 6.3 local checkpoint
+
+At exact code revision `70580bbd2b4386bec53f046b54a96e3dd69bcaae`, the
+Theorem 6.2 discrepancy, stable-range theorem, Remark 6.3, canonical paper
+entry, and complete audit compile directly with Lean 4.32.1. Eight new axiom
+reports contain only `propext`, `Classical.choice`, and `Quot.sound`. The
+focused gate reports `AXIOM_GATE_PASS: 57933 declarations checked`; the
+source scanner checks 2,711 tracked Lean files without a forbidden proof token
+outside comments. `git diff --check` and the 100-column source check pass.
+
+This is local evidence only until a workflow builds an independently
+extracted Review Kit at a revision containing this checkpoint. Report 34
+records the exact theorem scope and the distinction between the valid `n>=4`
+restriction and the refuted published `n=2` biconditional.

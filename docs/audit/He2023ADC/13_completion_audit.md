@@ -22,7 +22,7 @@
 | No `sorry`, project axiom, or `opaque` declaration in scoped files | PASS, local audit |
 | Global Definition 1.2 and regularity | Abstract definitions present; concrete number-field realization pending |
 | Theorem 1.3 and global parts of 1.4 | Conditional logical reductions; arithmetic premises undischarged |
-| Unrestricted local cases, remaining Section 4, Section 5 and remaining Sections 6--8 | FAIL / pending |
+| Unrestricted local cases, remaining Section 4, Section 5 and Sections 7--8 | FAIL / pending |
 | Remaining main theorems and enumeration | FAIL / pending |
 | Clean Review Kit containing published profiles | PASS at merge-test commit `6bf3bdf8bd272109e898335683f05bb76664330c`, tree identical to `db03985`; logs inspected |
 | Clean Review Kit including Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 | PASS at f6f7485/c82668b, run 33942437722; 1934 payload hashes, 4963 build jobs, enforcing gate on 57,480 declarations |
@@ -33,6 +33,10 @@
 | Lemma 6.8(iv), printed n=2 implication | `SEMANTIC_MISMATCH`; its formal negation and concrete `Q_2` nonvacuity check pass at fe2a459; report 31; human confirmation and exact-revision clean CI pending |
 | Lemma 6.12, exceptional quaternary lattice | PASS local kernel, 16 new standard-only axiom queries, 57,886-declaration enforcing gate, full maximal-binary testing and concrete `Q_2` nonvacuity at cf9f83b; report 32; exact-revision clean CI and human approval pending |
 | Lemmas 6.9--6.11 | PASS local kernel at 382ef7a, ten new standard-only axiom queries, 57,918-declaration enforcing gate, actual kappa tests, four-condition classification and arbitrary-lattice Lemma 6.11; report 33; exact-revision clean CI and human approval pending |
+| Theorem 6.2, `n>=4` restriction | PASS local kernel at 70580bb, arbitrary-lattice statement, both space columns and all parameter classes exhausted; report 34; exact-revision clean CI and human approval pending |
+| Theorem 6.2, exact published `n=2` biconditional | `SEMANTIC_MISMATCH`; formal negation passes at 70580bb using an actual nonmaximal 2-ADC lattice outside the listed exceptional ambient space; report 34 |
+| Remark 6.3 | PASS local kernel at 70580bb; actual integral lattice isometry under `e=1`, eight new standard-only reports shared with the Theorem 6.2 checkpoint, 57,933-declaration gate; report 34 |
+| Section 6 theorem-by-theorem triage | PASS: ten numbered items provisionally match; Lemma 6.8 and Theorem 6.2 each have a formally refuted `n=2` boundary; no all-statements-proved claim |
 | Independent semantic sign-off | FAIL / pending |
 
 Completion verdict: `NOT_COMPLETE`.

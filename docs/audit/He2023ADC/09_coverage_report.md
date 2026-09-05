@@ -66,17 +66,22 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   Lemma 6.10 checks all four Beli classification conditions and obtains
   actual exceptional-lattice isometry; Lemma 6.11 derives all four binary
   tests from 2-ADC-ness and proves the maximal-or-exceptional classification.
-  Report 33 records source correspondence and trust checks. This raises
-  Section 6 to 9/12 fully matched numbered items. Exact-revision package CI
-  and human sign-off remain separate gates. Theorem 6.2 and Remark 6.3 remain
-  pending, and the Lemma 6.8(iv) `n=2` mismatch remains unchanged.
+  Report 33 records source correspondence and trust checks. This raised
+  Section 6 to 9/12 fully matched numbered items at that checkpoint.
+- Remark 6.3 is now locally kernel-complete at `70580bb`, raising Section 6
+  to 10/12 fully matched numbered items. The same checkpoint proves the full
+  `n>=4` restriction of Theorem 6.2 and formally refutes its exact published
+  `n=2` biconditional. Together with the earlier Lemma 6.8 analysis, every
+  numbered Section 6 item is now triaged: ten match, while Lemma 6.8 and
+  Theorem 6.2 each contain a formally refuted `n=2` boundary. Report 34 records
+  the source correspondence, trust checks, and downstream audit obligation.
+  Exact-revision package CI and human sign-off remain separate gates.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, Theorem 6.2 and Remark 6.3, Section 7 ADC classification,
-Section 8 global proofs, and the enumerative
+Section 5, Section 7 ADC classification, Section 8 global proofs, and the enumerative
 main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.
 
