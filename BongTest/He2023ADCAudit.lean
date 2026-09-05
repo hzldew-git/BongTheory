@@ -232,3 +232,23 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankOne
 #print axioms Bong.BONG.GoodBONG.heADCCorankOne_uniformizerTest
 #print axioms Bong.BONG.GoodBONG.heADCEvenCorankOne_orders
+
+#check @Bong.heADCIsOMaximal_of_volumeOrder_le_add_one
+#check @Bong.BONG.GoodBONG.heADCCorankOne_standardTail_isOMaximal
+#check @Bong.heADCEvenFirstOne_represents_oddFirst
+#check @Bong.heADCEvenFirstDelta_represents_oddSecondUniformizer
+#check @Bong.BONG.GoodBONG.heADCCorankOne_raisedTail_ambient
+#check @Bong.BONG.GoodBONG.heADC2025Theorem61_of_goodBONG
+#check @Bong.Lattice.heADC2025Theorem61
+#print axioms Bong.heADCIsOMaximal_of_volumeOrder_le_add_one
+#print axioms Bong.BONG.GoodBONG.heADCOdd_volumeOrder_split
+#print axioms Bong.BONG.GoodBONG.heADCOdd_profile_volumeOrder
+#print axioms Bong.BONG.GoodBONG.heADCOdd_prefixSum_eq_of_head_profile
+#print axioms Bong.BONG.GoodBONG.heADCCorankOne_standardTail_isOMaximal
+#print axioms Bong.heADCEvenFirstOne_represents_oddFirst
+#print axioms Bong.heADCEvenFirstDelta_represents_oddSecondUniformizer
+#print axioms Bong.BONG.GoodBONG.heADCRaisedTail_not_represents_first
+#print axioms Bong.BONG.GoodBONG.heADCCorankOne_raisedTail_ambient
+#print axioms Bong.BONG.GoodBONG.heADCCorankOne_raisedTail_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem61_of_goodBONG
+#print axioms Bong.Lattice.heADC2025Theorem61
