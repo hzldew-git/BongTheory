@@ -407,3 +407,6 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_representsAllRelevantOMaximal
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_is2ADC
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isOMaximal
+#check @Bong.BONG.GoodBONG.HeADC2025Lemma68ivBinaryStatement
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isIsometric_N2Delta
+#print axioms Bong.BONG.GoodBONG.not_heADC2025Lemma68ivBinaryStatement
