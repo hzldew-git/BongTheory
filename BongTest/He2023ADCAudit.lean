@@ -152,3 +152,14 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.exists_heADCOddNormalizedAmbient
 #print axioms Bong.BONG.GoodBONG.heADCOddMaximal_orders
 #print axioms Bong.BONG.GoodBONG.heADC2025Proposition413
+
+#check @Bong.Lattice.IsOMaximal.represents_halfHyperbolic_iff
+#check @Bong.heADCAForm_bilin_apply
+#check @Bong.heADCN2QuaternaryOne_isIsometric_A_product_scaledA
+#check @Bong.Lattice.heADC2025Proposition416Dyadic
+#print axioms Bong.Lattice.IsOMaximal.represents_halfHyperbolic_iff
+#print axioms Bong.heADCAForm_bilin_apply
+#print axioms Bong.heADCDiscriminantEndpoint_isIsometric_scaledA
+#print axioms Bong.heADCN2QuaternaryOne_isIsometric_A_product_scaledA
+#print axioms Bong.Lattice.IsOMaximal.isAnisotropic_iff_heADCN2QuaternaryOne
+#print axioms Bong.Lattice.heADC2025Proposition416Dyadic
