@@ -215,3 +215,11 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCUniformizerTest_orders
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma65i_of_orders
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma65i
+
+#check @Bong.BONG.GoodBONG.heADCExtremalPairs_prefixDefect
+#check @Bong.BONG.GoodBONG.heADCEvenPenultimate_mixedDefect
+#check @Bong.BONG.GoodBONG.heADC2025Lemma65ii
+#print axioms Bong.BONG.GoodBONG.heADCExtremalPairs_prefixDefect
+#print axioms Bong.BONG.GoodBONG.heADCEvenPenultimate_mixedDefect
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma65ii_of_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma65ii
