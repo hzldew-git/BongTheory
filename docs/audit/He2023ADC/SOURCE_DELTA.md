@@ -82,3 +82,36 @@ Accordingly, the theorem statement is `PROVISIONAL_MATCH`, while the printed
 proof is `INCOMPLETE_PROOF`. The formal target is not changed, and the false
 Lemma 6.8(iv) and Theorem 6.2 boundaries remain recorded as semantic
 mismatches. Report 35 gives the full source-to-formal correspondence.
+
+## Lemma 7.11 extracted-symbol and coverage boundary
+
+The publisher PDF on p. 1011 states the exceptional rank-five hypothesis
+`d(a_[1,4])=infinity`. Plain-text extraction renders the infinity glyph as
+`1`, but the proof on the same page explicitly uses
+`a_[1,4] in F^(times 2)`, confirming infinite defect. The formalization uses
+the square-prefix formulation and does not adopt the OCR error.
+
+At `2417a4f31e4a9f96e22c4da6d2276e2e94210fdd`,
+`heADC2025Lemma711Odd` proves the source conclusion for every odd-valuation
+test `N_2^3(delta*pi)`. The derived represented-target contradiction is enough
+to close Lemma 7.5(iii), but the source states the failure for every nonzero
+parameter and its even-valuation branch is not yet supplied. Lemma 7.11 is
+therefore `SPECIAL_CASE_ONLY`, not fully formalized. Report 36 gives the exact
+scope.
+
+## Lemma 7.13 printed quantifier versus proof
+
+The printed Lemma 7.13(ii) on pp. 1011--1012 introduces either of two targets
+and says the source prefix fails to represent the selected target. Its proof,
+however, assumes that the prefix represents both targets simultaneously and
+derives a Hilbert-symbol contradiction. This establishes only that at least
+one target fails. The necessity proof of Lemma 7.5 on p. 1013 explicitly uses
+this weaker `either` conclusion.
+
+At `2417a4f`, `heADC2025Lemma713` records the proof-supported disjunction in
+both target columns, and `heADC2025Lemma713_trigger_impossible` supplies the
+downstream contradiction. The stronger printed pointwise conclusion is not
+asserted. The source statement is therefore marked `SEMANTIC_MISMATCH` in
+quantifier strength, while Theorem 7.4 and Lemma 7.5 remain proved from the
+weaker result actually justified by the published argument. Report 36 records
+the formal correspondence.

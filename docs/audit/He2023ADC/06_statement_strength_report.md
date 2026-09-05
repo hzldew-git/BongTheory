@@ -136,3 +136,18 @@ false binary Theorem 6.2: it uses the corrected three-way classification at
 `n=3`, proves both nonmaximal classes are not 3-ADC, and uses only the valid
 `n>=4` restriction thereafter. The source statement therefore matches, while
 the source proof is recorded separately as `INCOMPLETE_PROOF`.
+
+At `2417a4f`, `heADC2025Lemma75` and `heADC2025Theorem74` are
+`LOGICALLY_EQUIVALENT` to the complete published Lemma 7.5 and Theorem 7.4
+in the paper's standing odd-rank dyadic context. The public endpoints retain
+no supplied representation criterion, test catalogue, or classification law.
+Theorem 7.4's endpoint `R_(n+1)=2-2e` is included.
+
+Lemmas 7.6--7.10 and 7.12 are likewise `LOGICALLY_EQUIVALENT` to their
+numbered statements. The current Lemma 7.11 endpoint is `SPECIAL_CASE_ONLY`:
+it covers all odd-valuation parameters and the existence consequence used by
+Lemma 7.5, but not the source's even-valuation branch. Lemma 7.13 is
+`SEMANTIC_MISMATCH` at the printed quantifier: its proof yields a disjunction
+of the two failures, whereas the displayed statement reads pointwise. The
+formalization uses exactly the proof-supported disjunction; this is sufficient
+for Lemma 7.5(iv). See report 36.

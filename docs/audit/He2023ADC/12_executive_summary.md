@@ -144,7 +144,21 @@ class. The formal proof first establishes the corrected three-way binary
 classification and proves that the omitted class, like the published
 exception, is not 3-ADC. Seven new dependency reports are standard-only, the
 focused gate checks 58,019 declarations, and the scanner checks 2,715 tracked
-Lean sources. The remaining 20 Section 7 items are not covered by this result.
+Lean sources. At that checkpoint, the other 20 Section 7 items were not
+covered by this result.
+
+Report 36 adds the complete Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 at
+`2417a4f`. The full Lemma 7.5 four-condition equivalence is proved in both
+directions, including the rank-five large-gap branch and the endpoint
+`R_(n+1)=2-2e`. The odd-valuation specialization of Lemma 7.11 is proved and
+is sufficient for this necessity argument; its even-valuation universal
+branch remains open. The formalization also detects that Lemma 7.13's printed
+per-target conclusion is stronger than its proof, which establishes only that
+the two targets cannot both be represented. The proof-supported disjunction
+is formalized and suffices downstream. Nine selected dependency reports are
+standard-only, and the focused gate checks 59,190 declarations. Section 7 now
+has 9/21 fully formalized numbered items, one partial item, one
+quantifier-mismatched item, and ten pending items.
 
 Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
@@ -152,7 +166,7 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through c3e6092
+The later additions through 2417a4f
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

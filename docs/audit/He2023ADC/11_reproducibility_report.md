@@ -260,3 +260,19 @@ tracked Lean files without a forbidden proof token outside comments.
 This is local evidence only until an independently extracted Review Kit at
 this exact revision passes GitHub CI. Report 35 records the source-proof gap,
 the corrected formal route, and the theorem-level scope.
+
+## Theorem 7.4 and Lemma 7.5 local checkpoint
+
+At exact code revision `2417a4f31e4a9f96e22c4da6d2276e2e94210fdd`, the
+corrected He--Hu rank-boundary modules, Lemmas 7.5--7.13 in the scopes stated
+in report 36, Theorem 7.4, the canonical entry, and the complete audit compile
+directly with Lean 4.32.1. Nine selected axiom reports contain only
+`propext`, `Classical.choice`, and `Quot.sound`. The focused gate reports
+`AXIOM_GATE_PASS: 59190 declarations checked`; the scanner checks 2,715
+tracked Lean sources without a forbidden proof token outside comments.
+`git diff --check` and the 100-column scoped source check pass.
+
+This is local evidence only until an independently extracted He ADC Review
+Kit at this exact revision passes GitHub CI. The local dependency worktrees
+are dirty and are not release evidence. Report 36 records the theorem scope,
+the partial Lemma 7.11 coverage, and the Lemma 7.13 source mismatch.

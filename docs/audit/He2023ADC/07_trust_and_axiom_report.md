@@ -146,3 +146,14 @@ without a forbidden proof token outside comments. No public theorem endpoint
 retains a custom law, supplied BONG, profile, or testing catalogue. Report 35
 separates these mechanical checks from the source proof gap and unsigned human
 review.
+
+At checkpoint `2417a4f31e4a9f96e22c4da6d2276e2e94210fdd`, the corrected
+He--Hu rank boundaries, the Section 7 chain through Theorem 7.4, canonical
+paper entry, and focused audit compile directly. Nine selected dependency
+reports contain exactly `propext`, `Classical.choice`, and `Quot.sound`.
+The focused enforcing gate checks 59,190 declarations, and the comment-aware
+scanner checks 2,715 tracked Lean sources without a forbidden proof token
+outside comments. No public Theorem 7.4 or Lemma 7.5 endpoint retains a
+custom law or caller-supplied testing premise. Report 36 separates these
+mechanical checks from the partial Lemma 7.11 coverage, Lemma 7.13 source
+quantifier mismatch, clean-CI requirement, and unsigned human review.

@@ -81,13 +81,22 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
 - Theorem 7.1 is locally kernel-complete at `c3e6092`. Its published statement
   is recovered without using the false binary form of Theorem 6.2: the formal
   proof supplies a corrected three-way rank-four classification and proves
-  that both nonmaximal classes fail 3-ADC. This is 1/21 numbered Section 7
-  items. The published proof, rather than its theorem statement, is marked
+  that both nonmaximal classes fail 3-ADC. At that checkpoint this was 1/21
+  numbered Section 7 items. The published proof, rather than its theorem statement, is marked
   incomplete; report 35 records the exact repair and local trust checks.
+- Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 are locally kernel-complete at
+  `2417a4f`. This raises full Section 7 coverage to 9/21 numbered items.
+  Lemma 7.11 has the complete odd-valuation specialization and the exact
+  contradiction needed for Lemma 7.5, but its even-valuation branch remains
+  pending. Lemma 7.13's proof-supported simultaneous-failure disjunction is
+  formalized and sufficient downstream; its stronger printed per-target
+  quantifier is recorded as a semantic mismatch. Report 36 gives the exact
+  correspondence and trust checks.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, the remaining 20 Section 7 items, Section 8 global proofs, and the
+Section 5, ten still-unformalized Section 7 items, the full Lemma 7.11
+statement, the printed-strength Lemma 7.13 claim, Section 8 global proofs, and the
 enumerative main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.
 

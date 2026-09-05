@@ -149,5 +149,14 @@ The formal repair is noncircular: it proves a corrected exhaustive three-way
 binary classification, proves the omitted class is not 3-ADC using the
 representation criterion, and uses only the valid stable Theorem 6.2 branch
 when `n>=5`. Report 35 records the exact theorem and remaining human-review
-questions. Theorem 7.2 and later results have not yet received this downstream
-audit.
+questions.
+
+The follow-up source-first audit at `2417a4f` covers Theorem 7.4 and Lemmas
+7.5--7.13. It found complete proof-supported correspondences for Theorem 7.4
+and Lemmas 7.5--7.10 and 7.12, a deliberately partial odd-valuation endpoint
+for Lemma 7.11, and a new quantifier mismatch in Lemma 7.13. The latter proof
+rules out simultaneous representation of two targets but does not establish
+their separate failures; the downstream necessity proof needs only the weaker
+disjunction. Report 36 records the exact statements and open human-review
+questions. Theorem 7.2, Remark 7.3, and results from Lemma 7.14 onward have
+not yet received this downstream audit.

@@ -91,3 +91,15 @@ nonmaximal classes are excluded by actual not-3-ADC theorems; and that the
 odd `n>=5` branch invokes only the valid stable restriction. The theorem
 statement is provisionally matched, but the publisher proof remains marked
 `INCOMPLETE_PROOF` pending human confirmation.
+
+Report 36 adds the cards for Theorem 7.4 and Lemmas 7.5, 7.11, and 7.13.
+Reviewers should confirm the four-condition Lemma 7.5 equivalence, especially
+the `n=3` large-gap branch and the endpoint `R_(n+1)=2-2e`; confirm that the
+He--Hu Lemma 5.7 source-rank boundary really permits `m=3`; and decide whether
+the unformalized even-valuation part of Lemma 7.11 is needed as a separate
+published endpoint. For Lemma 7.13, reviewers should compare the pointwise
+wording with the proof by contradiction from simultaneous representation and
+confirm that the disjunctive form used on p. 1013 is the intended correction.
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.

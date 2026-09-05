@@ -127,6 +127,22 @@ Additional concrete declaration groups are:
   `(n+1)`-ADC to `n`-ADC by adjoining an integral orthogonal line.
 - `He2023ADCTheorem71` exports `Bong.Lattice.heADC2025Theorem71`, the complete
   arbitrary-lattice statement with the omitted `n=3` branch repaired.
+- `He2023ADCLemma79` formalizes descent from odd `n`-ADC to the preceding
+  even ADC condition used at the start of the Section 7 characterization.
+- `He2023ADCLemma710`, `He2023ADCLemma76`, `He2023ADCLemma77Initial`,
+  `He2023ADCLemma77`, `He2023ADCLemma78`, and `He2023ADCLemma712` supply the
+  complete order, alpha, truncated-defect, central, and long-condition chain
+  for Lemmas 7.6--7.10 and 7.12.
+- `He2023ADCLemma711` exports `heADC2025Lemma711Odd` and the represented-target
+  contradiction needed in the rank-five branch. This is explicitly only the
+  odd-valuation specialization of the published all-parameter Lemma 7.11.
+- `He2023ADCLemma713` exports the source-proof-supported per-column
+  simultaneous-failure disjunction and the contradiction used downstream.
+  It does not assert the stronger printed failure of each target separately.
+- `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
+  full four-condition equivalence `heADC2025Lemma75`.
+- `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full
+  necessity, sufficiency, and biconditional endpoints for Theorem 7.4.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional
