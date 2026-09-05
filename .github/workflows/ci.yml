@@ -17,11 +17,18 @@ concurrency:
 jobs:
   build-and-audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 360
 
     steps:
       - name: Check out the exact revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Test and run the comment-aware unfinished-proof check
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s scripts/ci -p 'test_*.py'
+          python3 -B scripts/ci/check_lean_proof_commands.py
 
       - name: Build and audit the complete Bong namespace
         uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
@@ -32,15 +39,6 @@ jobs:
           axiom-audit: true
           axiom-audit-root: Bong
           axiom-audit-allow: propext,Classical.choice,Quot.sound
-
-      - name: Reject unfinished proof commands
-        shell: bash
-        run: |
-          set -euo pipefail
-          if git grep -n -E '(^|[^[:alpha:]])sorry([^[:alpha:]]|$)|sorryAx|^[[:space:]]*axiom[[:space:]]' -- '*.lean'; then
-            echo 'Forbidden unfinished proof or project axiom found.' >&2
-            exit 1
-          fi
 
       - name: Check public theorem signatures and axiom sets
         run: lake env lean BongTest/FinalPublicTheoremAudit.lean
