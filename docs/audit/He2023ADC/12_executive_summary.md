@@ -78,6 +78,12 @@ declarations. Lemma 6.8 now has 5/6 whole clauses plus partial (iv), not
 a complete proof. The printed n=2 case of (iv) remains unresolved; its
 proof on p. 1003 invokes N_2^n(1) only with n>=4. No refutation is certified.
 
+Report 26 independently checks the subsequent 9ec46e6 construction of an
+actual integral nonmaximal lattice in W_2^4(Delta) with good-BONG orders
+(0,-2e,1,3-2e). Its seven new axiom sets are standard-only and its focused
+gate checks 57,679 declarations. No 2-ADC property is asserted, so this
+supporting construction neither refutes the paper nor changes coverage.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
 have not been supplied. Non-dyadic results, the remaining ADC classifications in
