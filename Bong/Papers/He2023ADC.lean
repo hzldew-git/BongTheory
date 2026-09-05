@@ -12,6 +12,7 @@ import Bong.Bong.He2023ADCGenericProfiles
 import Bong.Bong.He2023ADCOddMaximalStructure
 import Bong.Bong.He2023ADCQuaternaryMaximal
 import Bong.Bong.He2023ADCEvenRepresentationBounds
+import Bong.Bong.He2023ADCEvenFirstTests
 
 /-!
 # He: n-ADC integral quadratic lattices

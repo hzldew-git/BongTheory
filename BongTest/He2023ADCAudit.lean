@@ -170,3 +170,14 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCAlternatingPrefix_of_represented_endpoint
 #print axioms Bong.BONG.GoodBONG.heADCComparisonPrefix_isSquare_of_strict_crossGap
 #print axioms Bong.BONG.GoodBONG.heADCBoundaryOrder_zero_of_two_represented_classes
+
+#check @Bong.heADCEvenFirstTest_orders
+#check @Bong.heADCEvenFirstTests_prefixProduct_not_square
+#check @Bong.BONG.GoodBONG.heADCEvenFirstTests_rank_gt
+#check @Bong.BONG.GoodBONG.heADC2025Lemma64ii
+#print axioms Bong.heADCMaximalGoodBONG_prefixProduct_det_square
+#print axioms Bong.heADCEvenFirstTest_orders
+#print axioms Bong.heADCEvenFirstTests_det_not_square
+#print axioms Bong.heADCEvenFirstTests_prefixProduct_not_square
+#print axioms Bong.BONG.GoodBONG.heADCEvenFirstTests_rank_gt
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma64ii
