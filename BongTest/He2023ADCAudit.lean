@@ -189,3 +189,9 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCEvenFirstTest_alternatingOrders
 #print axioms Bong.BONG.GoodBONG.heADCEvenFirstTest_signedPrefixDefect
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma64i
+
+#check @Bong.heADCEvenSecondTest_orders
+#check @Bong.BONG.GoodBONG.heADC2025Lemma64iii
+#print axioms Bong.heADCMaximalOrderProfile_raisedFour
+#print axioms Bong.heADCEvenSecondTest_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma64iii

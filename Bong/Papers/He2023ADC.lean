@@ -14,6 +14,7 @@ import Bong.Bong.He2023ADCQuaternaryMaximal
 import Bong.Bong.He2023ADCEvenRepresentationBounds
 import Bong.Bong.He2023ADCEvenFirstTests
 import Bong.Bong.He2023ADCEvenFirstDefects
+import Bong.Bong.He2023ADCEvenSecondTests
 
 /-!
 # He: n-ADC integral quadratic lattices
