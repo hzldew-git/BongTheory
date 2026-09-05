@@ -387,3 +387,12 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N2Delta
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_halfHyperbolic
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N1One
+
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_unitFirst
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_uniformizerSecond
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_profiledMaximal
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_unitFirst
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_unitSecond
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_unitUniformizer_defect_zero
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_uniformizerFirst
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_uniformizerSecond
