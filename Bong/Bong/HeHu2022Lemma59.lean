@@ -407,7 +407,7 @@ theorem heHuLemma59CTilde_eq_lemma58Prefix {m : Nat}
 coefficients is even.  This is the parity observation `ord(a_{1,N}) even`
 used at the start of the published proof. -/
 theorem heHuLemma59_sourceInitialPrefixOrder_even {m : Nat}
-    (a : GoodBONG q L (m + 3)) (k : Nat) (hm : 2 * k + 3 ≤ m)
+    (a : GoodBONG q L (m + 3)) (k : Nat) (hm : 2 * k + 2 ≤ m)
     (hI1 : a.HeHuI1E (2 * k + 2) (by omega)) :
     Even (ordUnit K (a.prefixProduct (2 * k + 3))) := by
   have hentries (j : Nat) (hj : j < 2 * k + 3) :
@@ -436,7 +436,7 @@ theorem heHuLemma59_sourceInitialPrefixOrder_even {m : Nat}
 /-- The signed determinant `c=(-1)^(k+2)a_(1,N+2)` has the parity of the
 published gap `R_(N+2)-R_(N+1)`. -/
 theorem heHuLemma59_c_order_sub_gap_even {m : Nat}
-    (a : GoodBONG q L (m + 3)) (k : Nat) (hm : 2 * k + 3 ≤ m)
+    (a : GoodBONG q L (m + 3)) (k : Nat) (hm : 2 * k + 2 ≤ m)
     (hI1 : a.HeHuI1E (2 * k + 2) (by omega)) :
     Even (ordUnit K (heHuLemma59C a k) -
       (a.order ⟨2 * k + 4, by omega⟩ -
@@ -1003,7 +1003,7 @@ theorem heHu2022Lemma59i {m : Nat}
   dsimp only
   have hodd : Odd (2 * k + 3) := ⟨k + 1, by omega⟩
   have h58Raw := a.heHu2022Lemma58 (n := 2 * k + 1) (by omega)
-    hodd hm hIntegral hI1 hI2 hAlpha hTrigger
+    hodd (by omega) hIntegral hI1 hI2 hAlpha hTrigger
   have h58 :
       ∃ hc : HeHuSharpDomain (heHuLemma59CTilde a k),
         defectOrder (K := K) (heHuLemma59CTilde a k) =
@@ -1021,7 +1021,7 @@ theorem heHu2022Lemma59i {m : Nat}
   let cTilde := heHuLemma59CTilde a k
   let u := heHuSharp cTilde hc
   have hcapRaw := a.heHuLemma58_nextAlpha_gt (n := 2 * k + 1)
-    (by omega) hodd hm hIntegral hI1 hAlpha hTrigger
+    (by omega) hodd (by omega) hIntegral hI1 hAlpha hTrigger
   have hcap :
       (1 : ℚ) - (a.order ⟨2 * k + 3, by omega⟩ : ℚ) <
         a.alphaValue ⟨2 * k + 3, by omega⟩ := by
@@ -1043,7 +1043,8 @@ theorem heHu2022Lemma59i {m : Nat}
   let gap := a.order ⟨2 * k + 4, by omega⟩ -
     a.order ⟨2 * k + 3, by omega⟩
   have hcDiff : Even (ordUnit K c - gap) := by
-    simpa only [c, gap] using a.heHuLemma59_c_order_sub_gap_even k hm hI1
+    simpa only [c, gap] using
+      a.heHuLemma59_c_order_sub_gap_even k (by omega) hI1
   have hcParity : heHuLemma59Parity (K := K) c =
       if Even gap then 0 else 1 :=
     heHuLemma59Parity_eq_gapParity c gap hcDiff
@@ -1169,39 +1170,38 @@ theorem heHuLemma59_sourceTargetHead_sameSquareClass {m : Nat}
   rw [heq] at hproduct
   simpa only [A, H] using hproduct
 
-/-- He--Hu, Lemma 5.9(ii).  For the sharp unit attached to `cTilde`, the
-source prefix cannot represent both published first-column tests.  This is
-the paper's simultaneous nonrepresentation assertion: it does not claim
-that each test separately fails. -/
-theorem heHu2022Lemma59ii {m : Nat}
-    (a : GoodBONG q L (m + 3)) (k : Nat) (hm : 2 * k + 3 ≤ m)
+/-- The sharpened parity-cycle form of He--Hu, Lemma 5.9(ii).  For the sharp
+unit attached to `cTilde`, the source prefix represents exactly one of the
+two published first-column tests. -/
+theorem heHu2022Lemma59iiExactlyOne {m : Nat}
+    (a : GoodBONG q L (m + 3)) (k : Nat) (hm : 2 * k + 2 ≤ m)
     (hc : HeHuSharpDomain (heHuLemma59CTilde a k)) :
-    ¬(
+    (DiagonalRepresents
+        ((heHuLemma59Target (K := K) (heHuLemma59C a k) k).prefixValues
+          (2 * k + 3) (by omega))
+        (a.prefixValues (2 * k + 4) (by omega)) ∧
+      ¬DiagonalRepresents
+        ((heHuLemma59Target (K := K)
+            (heHuLemma59C a k *
+              heHuSharp (heHuLemma59CTilde a k) hc) k).prefixValues
+          (2 * k + 3) (by omega))
+        (a.prefixValues (2 * k + 4) (by omega))) ∨
+    (¬DiagonalRepresents
+        ((heHuLemma59Target (K := K) (heHuLemma59C a k) k).prefixValues
+          (2 * k + 3) (by omega))
+        (a.prefixValues (2 * k + 4) (by omega)) ∧
       DiagonalRepresents
-          ((heHuLemma59Target (K := K) (heHuLemma59C a k) k).prefixValues
-            (2 * k + 3) (by omega))
-          (a.prefixValues (2 * k + 4) (by omega)) ∧
-        DiagonalRepresents
-          ((heHuLemma59Target (K := K)
-              (heHuLemma59C a k *
-                heHuSharp (heHuLemma59CTilde a k) hc) k).prefixValues
-            (2 * k + 3) (by omega))
-          (a.prefixValues (2 * k + 4) (by omega))) := by
-  rintro ⟨hrepFirst, hrepSecond⟩
+        ((heHuLemma59Target (K := K)
+            (heHuLemma59C a k *
+              heHuSharp (heHuLemma59CTilde a k) hc) k).prefixValues
+          (2 * k + 3) (by omega))
+        (a.prefixValues (2 * k + 4) (by omega))) := by
   let u := heHuSharp (heHuLemma59CTilde a k) hc
   let first := heHuLemma59Target (K := K) (heHuLemma59C a k) k
   let second := heHuLemma59Target (K := K) (heHuLemma59C a k * u) k
   let au := a.prefixValueUnits (2 * k + 4) (by omega)
   let bu := first.prefixValueUnits (2 * k + 3) (by omega)
   let cu := second.prefixValueUnits (2 * k + 3) (by omega)
-  have hp : DiagonalRepresents
-      (diagonalUnitCoefficients bu) (diagonalUnitCoefficients au) := by
-    simpa only [bu, au, first, diagonalUnitCoefficients_prefixValueUnits]
-      using hrepFirst
-  have hr : DiagonalRepresents
-      (diagonalUnitCoefficients cu) (diagonalUnitCoefficients au) := by
-    simpa only [cu, au, second, u,
-      diagonalUnitCoefficients_prefixValueUnits] using hrepSecond
   have hheads :
       second.prefixValueUnits (2 * k + 2) (by omega) =
         first.prefixValueUnits (2 * k + 2) (by omega) := by
@@ -1239,7 +1239,6 @@ theorem heHu2022Lemma59ii {m : Nat}
   have hcycle := DiagonalRepresentationParityLaws.caseIII
     (i := 2 * k + 4) (j := 2 * k + 3) (k := 2 * k + 3)
     (l := 2 * k + 2) au bu cu (by omega) rfl (by omega)
-  have hs := hcycle.all_triple_consequences.1 hp hq hr
   have hfirstClass : IsSquare
       ((diagonalUnitDeterminant bu * diagonalUnitDeterminant cu) * u) := by
     simpa only [bu, cu, first, second, u,
@@ -1268,14 +1267,111 @@ theorem heHu2022Lemma59ii {m : Nat}
         hilbertSymbol_eq_of_isSquare_mul_left hfirstClass
       _ = hilbertSymbol K u (heHuLemma59CTilde a k) :=
         hilbertSymbol_eq_of_isSquare_mul_right hsecondClass
-  have hone : hilbertSymbol K u (heHuLemma59CTilde a k) = 1 := by
-    rw [← htransport]
-    exact hs
   have hminus : hilbertSymbol K u (heHuLemma59CTilde a k) = -1 := by
     simpa only [u] using (heHu2022Proposition32
       (heHuLemma59CTilde a k) hc).2.2
-  rw [hminus] at hone
-  norm_num at hone
+  have hnotParity : ¬(
+      hilbertSymbol K
+          (diagonalUnitDeterminant bu * diagonalUnitDeterminant cu)
+          (-diagonalUnitDeterminant au *
+            diagonalUnitDeterminant
+              (diagonalUnitTake cu (2 * k + 2) (by omega))) = 1) := by
+    intro hs
+    have hone : hilbertSymbol K u (heHuLemma59CTilde a k) = 1 := by
+      rw [← htransport]
+      exact hs
+    rw [hminus] at hone
+    norm_num at hone
+  have hexact :
+      (DiagonalRepresents
+          (diagonalUnitCoefficients bu) (diagonalUnitCoefficients au) ∧
+        ¬DiagonalRepresents
+          (diagonalUnitCoefficients cu) (diagonalUnitCoefficients au)) ∨
+      (¬DiagonalRepresents
+          (diagonalUnitCoefficients bu) (diagonalUnitCoefficients au) ∧
+        DiagonalRepresents
+          (diagonalUnitCoefficients cu) (diagonalUnitCoefficients au)) := by
+    by_cases hp : DiagonalRepresents
+        (diagonalUnitCoefficients bu) (diagonalUnitCoefficients au)
+    · left
+      refine ⟨hp, ?_⟩
+      intro hr
+      have hpq := (show
+        DiagonalRepresents
+            (diagonalUnitCoefficients bu) (diagonalUnitCoefficients au) ↔
+          DiagonalRepresents
+            (diagonalUnitCoefficients
+              (diagonalUnitTake cu (2 * k + 2) (by omega)))
+            (diagonalUnitCoefficients bu) from iff_of_true hp hq)
+      have hrs := (show
+        (DiagonalRepresents
+              (diagonalUnitCoefficients bu) (diagonalUnitCoefficients au) ↔
+            DiagonalRepresents
+              (diagonalUnitCoefficients
+                (diagonalUnitTake cu (2 * k + 2) (by omega)))
+              (diagonalUnitCoefficients bu)) ↔
+          (DiagonalRepresents
+              (diagonalUnitCoefficients cu) (diagonalUnitCoefficients au) ↔
+            hilbertSymbol K
+                (diagonalUnitDeterminant bu * diagonalUnitDeterminant cu)
+                (-diagonalUnitDeterminant au *
+                  diagonalUnitDeterminant
+                    (diagonalUnitTake cu (2 * k + 2) (by omega))) = 1)
+          from hcycle).mp hpq
+      exact hnotParity (hrs.mp hr)
+    · right
+      refine ⟨hp, ?_⟩
+      by_contra hr
+      have hrs := (show
+        DiagonalRepresents
+            (diagonalUnitCoefficients cu) (diagonalUnitCoefficients au) ↔
+          hilbertSymbol K
+              (diagonalUnitDeterminant bu * diagonalUnitDeterminant cu)
+              (-diagonalUnitDeterminant au *
+                diagonalUnitDeterminant
+                  (diagonalUnitTake cu (2 * k + 2) (by omega))) = 1
+          from iff_of_false hr hnotParity)
+      have hpq := (show
+        (DiagonalRepresents
+              (diagonalUnitCoefficients bu) (diagonalUnitCoefficients au) ↔
+            DiagonalRepresents
+              (diagonalUnitCoefficients
+                (diagonalUnitTake cu (2 * k + 2) (by omega)))
+              (diagonalUnitCoefficients bu)) ↔
+          (DiagonalRepresents
+              (diagonalUnitCoefficients cu) (diagonalUnitCoefficients au) ↔
+            hilbertSymbol K
+                (diagonalUnitDeterminant bu * diagonalUnitDeterminant cu)
+                (-diagonalUnitDeterminant au *
+                  diagonalUnitDeterminant
+                    (diagonalUnitTake cu (2 * k + 2) (by omega))) = 1)
+          from hcycle).mpr hrs
+      exact hp (hpq.mpr hq)
+  simpa only [bu, cu, au, first, second, u,
+    diagonalUnitCoefficients_prefixValueUnits] using hexact
+
+/-- He--Hu, Lemma 5.9(ii).  For the sharp unit attached to `cTilde`, the
+source prefix cannot represent both published first-column tests.  This is
+the paper's simultaneous nonrepresentation assertion: it does not claim
+that each test separately fails. -/
+theorem heHu2022Lemma59ii {m : Nat}
+    (a : GoodBONG q L (m + 3)) (k : Nat) (hm : 2 * k + 2 ≤ m)
+    (hc : HeHuSharpDomain (heHuLemma59CTilde a k)) :
+    ¬(
+      DiagonalRepresents
+          ((heHuLemma59Target (K := K) (heHuLemma59C a k) k).prefixValues
+            (2 * k + 3) (by omega))
+          (a.prefixValues (2 * k + 4) (by omega)) ∧
+        DiagonalRepresents
+          ((heHuLemma59Target (K := K)
+              (heHuLemma59C a k *
+                heHuSharp (heHuLemma59CTilde a k) hc) k).prefixValues
+            (2 * k + 3) (by omega))
+          (a.prefixValues (2 * k + 4) (by omega))) := by
+  intro hboth
+  rcases a.heHu2022Lemma59iiExactlyOne k hm hc with hfirst | hsecond
+  · exact hfirst.2 hboth.2
+  · exact hsecond.1 hboth.1
 
 /-- He--Hu, Lemma 5.9 in its complete published quantifier structure.
 Both tests activate condition (iii'), but their representations cannot hold
@@ -1319,7 +1415,7 @@ theorem heHu2022Lemma59 {m : Nat}
   rcases a.heHu2022Lemma59i k hm hIntegral hI1 hI2 hI3 hAlphaNext
       hAlpha hTrigger with ⟨hc, hfirstTrigger, hsecondTrigger⟩
   let u := heHuSharp (heHuLemma59CTilde a k) hc
-  have hnot := a.heHu2022Lemma59ii k hm hc
+  have hnot := a.heHu2022Lemma59ii k (by omega) hc
   refine ⟨hc, hfirstTrigger, hsecondTrigger, hnot, ?_⟩
   by_cases hPrimeFirst : a.CentralRepresentationConditionsPrime
       (heHuLemma59Target (K := K) (heHuLemma59C a k) k)

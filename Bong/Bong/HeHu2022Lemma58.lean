@@ -36,7 +36,7 @@ larger than `1 - R_(N+1)`.  This is the step that removes the final cap
 from Lemma 2.10(ii). -/
 theorem heHuLemma58_nextAlpha_gt {m n : Nat}
     (a : GoodBONG q L (m + 3))
-    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 2 ≤ m)
+    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 1 ≤ m)
     (hIntegral : Lattice.IsIntegral q L)
     (hI1 : a.HeHuI1E (n + 1) (by omega))
     (hAlpha : a.alphaValue ⟨n + 1, by omega⟩ = 1)
@@ -116,7 +116,7 @@ conclusions are respectively the source defect, unit property, and
 complementary sharp defect asserted in the paper. -/
 theorem heHu2022Lemma58 {m n : Nat}
     (a : GoodBONG q L (m + 3))
-    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 2 ≤ m)
+    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 1 ≤ m)
     (hIntegral : Lattice.IsIntegral q L)
     (hI1 : a.HeHuI1E (n + 1) (by omega))
     (hI2 : a.HeHuI2E (n + 1) (by omega))

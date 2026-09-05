@@ -71,16 +71,16 @@ theorem heHuLemma510_original_iff_prime
     [QuadraticDefectLaws K]
     {m k : Nat} (a : GoodBONG q L (m + 3))
     (b : GoodBONG r M (2 * k + 3))
-    (hm : 2 * k + 3 ≤ m)
+    (hm : 2 * k + 2 ≤ m)
     (hAIntegral : Lattice.IsIntegral q L)
     (hBIntegral : Lattice.IsIntegral r M)
     (hI1 : a.HeHuI1E (2 * k + 2) (by omega))
     (hI2 : a.HeHuI2E (2 * k + 2) (by omega)) :
     a.CentralRepresentationConditions b ↔
       a.CentralRepresentationConditionsPrime b := by
-  have hOrder := a.heHu2022Lemma56i b (by omega) ⟨k + 1, by omega⟩ hm
+  have hOrder := a.heHu2022Lemma56i b (by omega) ⟨k + 1, by omega⟩ (by omega)
     hI1 hBIntegral
-  have hDefect := a.heHu2022Lemma56ii b (by omega) ⟨k + 1, by omega⟩ hm
+  have hDefect := a.heHu2022Lemma56ii b (by omega) ⟨k + 1, by omega⟩ (by omega)
     hAIntegral hBIntegral hI1 hI2
   have htriggers := a.beli2019Lemma216
     (sourceLaws := sourceLaws) (targetLaws := targetLaws)
@@ -284,7 +284,7 @@ theorem heHuLemma510_nonterminal_representation
     [Beli2009AlphaLocalizationLaws.{u, w} K]
     {m k : Nat} (a : GoodBONG q L (m + 3))
     (b : GoodBONG r M (2 * k + 3))
-    (hm : 2 * k + 3 ≤ m)
+    (hm : 2 * k + 1 ≤ m)
     (hAIntegral : Lattice.IsIntegral q L)
     (hBIntegral : Lattice.IsIntegral r M)
     (hI1 : a.HeHuI1E (2 * k + 2) (by omega))
@@ -1050,7 +1050,7 @@ theorem heHu2022Lemma510Universal_to_tests
   constructor
   · intro hAlpha hTrigger
     have h58 := a.heHu2022Lemma58 (n := 2 * k + 1) (by omega)
-      ⟨k + 1, by omega⟩ hm hAIntegral hI1 hI2 hAlpha hTrigger
+      ⟨k + 1, by omega⟩ (by omega) hAIntegral hI1 hI2 hAlpha hTrigger
     have h58' :
         ∃ hc : HeHuSharpDomain (heHuLemma59CTilde a k),
           defectOrder (K := K) (heHuLemma59CTilde a k) =
@@ -1197,7 +1197,7 @@ theorem heHu2022Lemma510Tests_to_i2O
       beliUniversalAlphaLaws
     have hPrimeFirst :=
       (a.heHuLemma510_original_iff_prime sourceLaws targetLaws
-        (heHuLemma59Target (K := K) (heHuLemma59C a k) k) hm
+        (heHuLemma59Target (K := K) (heHuLemma59C a k) k) (by omega)
         hAIntegral
         (heHuLemma59Target_integral (K := K) (heHuLemma59C a k) k)
         hI1 hI2).mp hCentralFirst
@@ -1205,7 +1205,7 @@ theorem heHu2022Lemma510Tests_to_i2O
       (a.heHuLemma510_original_iff_prime sourceLaws targetLaws
         (heHuLemma59Target (K := K)
           (heHuLemma59C a k * heHuSharp (heHuLemma59CTilde a k) hc) k)
-        hm hAIntegral
+        (by omega) hAIntegral
         (heHuLemma59Target_integral (K := K)
           (heHuLemma59C a k * heHuSharp (heHuLemma59CTilde a k) hc) k)
         hI1 hI2).mp hCentralSecond
@@ -1232,12 +1232,12 @@ theorem heHu2022Lemma510I2O_to_universal
   intro W _ _ r M b hBIntegral
   let targetLaws : Beli2006AlphaLaws.{u, w} K :=
     beliUniversalAlphaLaws
-  apply (a.heHuLemma510_original_iff_prime sourceLaws targetLaws b hm
+  apply (a.heHuLemma510_original_iff_prime sourceLaws targetLaws b (by omega)
     hAIntegral hBIntegral hI1 hI2).mpr
   intro i htrigger
   by_cases hiNonterminal : i.val ≤ 2 * k + 3
   · exact a.heHuLemma510_nonterminal_representation
-      (sourceLaws := sourceLaws) b hm hAIntegral
+      (sourceLaws := sourceLaws) b (by omega) hAIntegral
       hBIntegral hI1 hI2 i hiNonterminal htrigger
   · have hiTerminal : i.val = 2 * k + 4 := by
       have := i.le_small_succ

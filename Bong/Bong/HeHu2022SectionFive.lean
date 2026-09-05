@@ -371,7 +371,7 @@ theorem heHu2022Lemma54 {m n : Nat}
 integral rank-`n` target. -/
 theorem heHu2022Lemma56i {m n : Nat}
     (a : GoodBONG q L (m + 3)) (b : GoodBONG r M (n + 2))
-    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 2 ≤ m)
+    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 1 ≤ m)
     (hI1 : a.HeHuI1E (n + 1) (by omega))
     (hBIntegral : Lattice.IsIntegral r M) :
     a.RepresentationOrderCondition b (by omega) := by
@@ -403,7 +403,7 @@ theorem heHu2022Lemma56i {m n : Nat}
 the proof of He--Hu, Lemma 5.6(ii). -/
 private theorem heHuLemma56_oddIndexDefect {m n : Nat}
     (a : GoodBONG q L (m + 3)) (b : GoodBONG r M (n + 2))
-    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 2 ≤ m)
+    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 1 ≤ m)
     (hI1 : a.HeHuI1E (n + 1) (by omega))
     (hBIntegral : Lattice.IsIntegral r M)
     (i : RepresentationIndex (m + 3) (n + 2))
@@ -456,7 +456,7 @@ integral rank-`n` target.  The source rank is written as `m+3`, matching the
 paper's standing assumption that its quadratic space is `n`-universal. -/
 theorem heHu2022Lemma56ii {m n : Nat}
     (a : GoodBONG q L (m + 3)) (b : GoodBONG r M (n + 2))
-    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 2 ≤ m)
+    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 1 ≤ m)
     (hAIntegral : Lattice.IsIntegral q L)
     (hBIntegral : Lattice.IsIntegral r M)
     (hI1 : a.HeHuI1E (n + 1) (by omega))
@@ -474,7 +474,9 @@ theorem heHu2022Lemma56ii {m n : Nat}
     rw [hiEq]
     let boundary : Fin (m + 2) := ⟨n + 1, by omega⟩
     have hRn : a.order boundary.castSucc = 0 := by
-      have h := hI1.oddBoundaryOrder hn hnOdd (by omega)
+      have h := hI1.oddOrder ⟨n + 1, by omega⟩ (by
+        rcases hnOdd with ⟨t, ht⟩
+        exact ⟨t, by omega⟩)
       change a.order ⟨n + 1, by omega⟩ = 0
       have hindex : (⟨n + 1, by omega⟩ : Fin (m + 3)) =
           ⟨n + 2 - 1, by omega⟩ := by
@@ -541,8 +543,23 @@ theorem heHu2022Lemma56ii {m n : Nat}
               ((((1 : ℚ) - (a.order ⟨n + 2, by omega⟩ : ℚ)) : ℚ) :
                 WithTop ℚ) := by
         rcases hI2 with hzero | hone
-        · have hforced := a.heHu2022Lemma54i hn ⟨k, hk⟩ (by omega)
-            hI1 hzero
+        · have hboundaryGap : a.orderGap boundary =
+              a.order ⟨n + 2, by omega⟩ := by
+            unfold orderGap boundary
+            simp only [Fin.castSucc_mk, Fin.succ_mk]
+            have hcast : boundary.castSucc =
+                (⟨n + 1, by omega⟩ : Fin (m + 3)) := by
+              apply Fin.ext
+              rfl
+            have hsucc : (⟨n + 1 + 1, by omega⟩ : Fin (m + 3)) =
+                ⟨n + 2, by omega⟩ := by
+              apply Fin.ext
+              rfl
+            rw [hsucc, ← hcast, hRn]
+            omega
+          have hforced :=
+            (a.heHu2022Proposition26 boundary).alphaZero.mp hzero
+          rw [hboundaryGap] at hforced
           exact False.elim (hnext hforced)
         · exact hone
       subst n
@@ -627,7 +644,7 @@ numerical conclusions only use integrality and the displayed BONG
 conditions. -/
 theorem heHu2022Lemma56 {m n : Nat}
     (a : GoodBONG q L (m + 3))
-    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 2 ≤ m)
+    (hn : 3 ≤ n + 2) (hnOdd : Odd (n + 2)) (hm : n + 1 ≤ m)
     (_hAmbient : Lattice.AmbientlyNUniversal.{u, v, w} q (n + 2))
     (hAIntegral : Lattice.IsIntegral q L)
     (hI1 : a.HeHuI1E (n + 1) (by omega))
@@ -650,7 +667,7 @@ theorem heHu2022Lemma56 {m n : Nat}
 `R_(n+1)=1` forces `R_(n+2)>=1`. -/
 theorem heHu2022Remark52_order_ge_one {m n : Nat}
     (a : GoodBONG q L (m + 1)) (hn : 3 ≤ n) (hnOdd : Odd n)
-    (hm : n + 2 ≤ m) (hIntegral : Lattice.IsIntegral q L)
+    (hm : n + 1 ≤ m) (hIntegral : Lattice.IsIntegral q L)
     (hRn1 : a.order ⟨n, by omega⟩ = 1) :
     1 ≤ a.order ⟨n + 1, by omega⟩ := by
   have hn1Even : Even (n + 1) := by
@@ -684,7 +701,8 @@ theorem heHu2022Remark52 {m n : Nat}
         1 < a.order ⟨n + 1, by omega⟩) := by
   constructor
   · rintro (hRn1 | hRn2)
-    · have hge := a.heHu2022Remark52_order_ge_one hn hnOdd hm hIntegral hRn1
+    · have hm' : n + 1 ≤ m := by omega
+      have hge := a.heHu2022Remark52_order_ge_one hn hnOdd hm' hIntegral hRn1
       rcases lt_or_eq_of_le hge with hgt | heq
       · exact Or.inr hgt
       · exact Or.inl ⟨hRn1, heq.symm⟩

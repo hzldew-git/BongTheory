@@ -469,3 +469,54 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.Lattice.heADCQuaternarySecondDiscriminantClassification
 #print axioms Bong.Lattice.heADC2025Theorem62_binary_corrected
 #print axioms Bong.Lattice.heADC2025Theorem71
+
+#check @Bong.Lattice.heADC2025Lemma79
+#check @Bong.BONG.GoodBONG.heADC2025Lemma710
+#check @Bong.BONG.GoodBONG.HeADCLemma710Conclusions.oddOrder
+#check @Bong.BONG.GoodBONG.HeADCLemma710Conclusions.evenOrder
+#check @Bong.BONG.GoodBONG.HeADCLemma710Conclusions.alphaAlternative
+#check @Bong.BONG.GoodBONG.HeADCLemma710Conclusions.largeGapConclusion
+#check @Bong.BONG.GoodBONG.heHuLemma58_nextAlpha_gt
+#check @Bong.BONG.GoodBONG.heHu2022Lemma58
+#check @Bong.BONG.GoodBONG.heADC2025Lemma712
+#print axioms Bong.Lattice.heADC2025Lemma79
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma710
+#print axioms Bong.BONG.GoodBONG.HeADCLemma710Conclusions.alphaAlternative
+#print axioms Bong.BONG.GoodBONG.HeADCLemma710Conclusions.largeGapConclusion
+#print axioms Bong.BONG.GoodBONG.heHuLemma58_nextAlpha_gt
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma58
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma712
+
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76ii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76iii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76iv
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76v
+#check @Bong.BONG.GoodBONG.heADC2025Lemma77i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma77ii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma77iii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma78
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Odd
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711_exists_represented_oddTarget
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711_badBranch_impossible
+#check @Bong.BONG.GoodBONG.heADC2025Lemma713
+#check @Bong.BONG.GoodBONG.heADC2025Lemma713_trigger_impossible
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75iii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75iv
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75Necessity
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75Sufficiency
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75
+#check @Bong.BONG.GoodBONG.HeADCTheorem74Conditions
+#check @Bong.BONG.GoodBONG.heADC2025Theorem74Necessity
+#check @Bong.BONG.GoodBONG.heADC2025Theorem74Sufficiency
+#check @Bong.BONG.GoodBONG.heADC2025Theorem74
+
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma76v
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma77iii
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma78
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma711Odd
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma711_badBranch_impossible
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma713
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma713_trigger_impossible
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma75
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem74

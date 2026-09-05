@@ -38,6 +38,10 @@ import Bong.Bong.He2023ADCQuaternaryBoundaryNormalization
 import Bong.Bong.He2023ADCQuaternaryBoundaryTesting
 import Bong.Bong.He2023ADCQuaternaryBoundaryDiscrepancy
 import Bong.Bong.He2023ADCTheorem71
+import Bong.Bong.He2023ADCTheorem74
+import Bong.Bong.He2023ADCLemma79
+import Bong.Bong.He2023ADCLemma710
+import Bong.Bong.He2023ADCLemma712
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
@@ -51,9 +55,13 @@ integral quadratic lattices over algebraic number fields*, Doc. Math. 30
 semantic authority.
 
 The present layer covers the local dyadic specialization of Definition 1.1,
-Lemma 2.1, Section 3, and the checked Section 4 endpoints, together with the
-logical local--global reductions in Theorems 1.3--1.4.  Number-field
-localization laws remain explicit proof data rather than hidden axioms.
+Lemma 2.1, Sections 3--4, the corrected local classifications in Theorems
+6.2 and 7.1, and the odd-rank characterization in Theorem 7.4 together with
+the complete proof chain through Lemmas 7.5--7.10 and 7.12, the
+odd-valuation specialization needed from Lemma 7.11, and the corrected
+quantifier form of Lemma 7.13.  It also records the logical local--global
+reductions in Theorems 1.3--1.4.  Number-field localization laws remain
+explicit proof data rather than hidden axioms.
 -/
 
 namespace Bong

@@ -217,7 +217,7 @@ theorem heHuLemma57_split_represents_sourcePrefix
     using hrep
 
 /-- Paper index `i=4` in the exceptional rank-three central test. -/
-def heHuLemma57CentralIndex {m : Nat} (hm : 4 ≤ m) :
+def heHuLemma57CentralIndex {m : Nat} (hm : 3 ≤ m) :
     CentralRepresentationIndex (m + 2) 3 where
   val := 4
   one_lt := by omega
@@ -228,7 +228,7 @@ def heHuLemma57CentralIndex {m : Nat} (hm : 4 ≤ m) :
 `2e`.  This is the domination step from the two alternating binary
 prefixes in the published proof. -/
 theorem heHuLemma57_centralPreviousDefect_ge
-    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 4 ≤ m)
+    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 3 ≤ m)
     (hAIntegral : Lattice.IsIntegral q L)
     (hR4 : a.order ⟨3, by omega⟩ =
       -(2 * (ramificationIndex K : Int)))
@@ -286,7 +286,7 @@ theorem heHuLemma57_centralPreviousDefect_ge
 test at paper index `4`. -/
 theorem heHuLemma57_defectTrigger
     [sourceLaws : Beli2006AlphaLaws.{u, v} K]
-    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 4 ≤ m)
+    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 3 ≤ m)
     (hAIntegral : Lattice.IsIntegral q L)
     (hR4 : a.order ⟨3, by omega⟩ =
       -(2 * (ramificationIndex K : Int)))
@@ -375,7 +375,7 @@ theorem heHuLemma57_not_represents
     [sourceLaws : Beli2006AlphaLaws.{u, v} K]
     [QuadraticDefectLaws K]
     [DyadicAlternatingEndpointTowerRepresentationLaws K]
-    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 4 ≤ m)
+    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 3 ≤ m)
     (hI1 : a.HeHuI1E 2 (by omega))
     (hR4 : a.order ⟨3, by omega⟩ =
       -(2 * (ramificationIndex K : Int)))
@@ -444,7 +444,7 @@ theorem heHu2022Lemma57
     [sourceLaws : Beli2006AlphaLaws.{u, v} K]
     [QuadraticDefectLaws K]
     [DyadicAlternatingEndpointTowerRepresentationLaws K]
-    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 4 ≤ m)
+    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 3 ≤ m)
     (hAIntegral : Lattice.IsIntegral q L)
     (hI1 : a.HeHuI1E 2 (by omega))
     (hR4 : a.order ⟨3, by omega⟩ =
@@ -468,7 +468,7 @@ theorem heHu2022Lemma57_not_centralRepresentationConditionsPrime
     [sourceLaws : Beli2006AlphaLaws.{u, v} K]
     [QuadraticDefectLaws K]
     [DyadicAlternatingEndpointTowerRepresentationLaws K]
-    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 4 ≤ m)
+    {m : Nat} (a : GoodBONG q L (m + 2)) (hm : 3 ≤ m)
     (hAIntegral : Lattice.IsIntegral q L)
     (hI1 : a.HeHuI1E 2 (by omega))
     (hR4 : a.order ⟨3, by omega⟩ =
