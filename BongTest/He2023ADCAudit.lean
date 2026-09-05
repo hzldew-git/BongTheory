@@ -264,3 +264,14 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCEvenCentral_fullMixedDefect
 #print axioms Bong.BONG.GoodBONG.heADCEvenCentral_currentDefect_gt
 #print axioms Bong.BONG.GoodBONG.heADCEvenCentral_defectTrigger
+
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_prefix_oddFirst
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_signedClass
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_prefix_evenFirst
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_prefix_represents_first
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_prefix_not_represents_second
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_oddFirst
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_signedClass
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_evenFirst
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_represents_first
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_not_represents_second
