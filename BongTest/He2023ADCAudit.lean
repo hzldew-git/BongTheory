@@ -442,3 +442,16 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma610
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma611_of_goodBONG
 #print axioms Bong.Lattice.heADC2025Lemma611
+
+#check @Bong.BONG.GoodBONG.HeADC2025Theorem62BinaryStatement
+#check @Bong.BONG.GoodBONG.not_heADC2025Theorem62BinaryStatement
+#check @Bong.Lattice.heADC2025Theorem62_of_four_le
+#check @Bong.BONG.GoodBONG.heADC2025Remark63
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isometric_exceptional
+#print axioms Bong.BONG.GoodBONG.not_heADC2025Theorem62BinaryStatement
+#print axioms Bong.Lattice.heADCEvenFirst_ambient_of_parameter_mul_square
+#print axioms Bong.Lattice.heADCEvenSecond_ambient_of_parameter_mul_square
+#print axioms Bong.Lattice.heADC2025Theorem62_of_four_le
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalTail_second_eq_neg_discriminant
+#print axioms Bong.BONG.GoodBONG.heADCRemark63Tail_admissible
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark63
