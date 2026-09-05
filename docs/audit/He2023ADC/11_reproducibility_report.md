@@ -1,6 +1,15 @@
 # Reproducibility report
 
-Latest code checkpoint: `b728bce20942191785d0b50f2c068e0b5ee7c2f7` adds
+Latest audited code checkpoint: `074f2cdcd63637fb6f6d8c65879e55968a1dc675`
+adds full (iii) and n>=4 of (iv). Main and independent replay passed five
+new modules, entry and all 159 audit reports, including twelve new exact
+standard-only sets. The focused gate passed on 57,667 declarations; the
+23 scanner tests and 2687-source scan passed locally. The existing modified
+dependencies were not repaired; independent Git inspection of aesop and
+batteries also reported `bad tree object HEAD`. Report 25 makes no clean-build
+claim, and neither the f6f7485/c82668b run nor the d05a898 kit contains it.
+
+The earlier `b728bce20942191785d0b50f2c068e0b5ee7c2f7` checkpoint adds
 Lemma 6.8(v),(vi) and its explicit representative bridge. Main and separate
 AI replay passed all four frozen modules, entry and full ADC audit, with
 16 standard-only new dependency sets. The 23 scanner tests and 2682-source
@@ -157,3 +166,19 @@ needs its own exact-revision kit and run. Overall paper completion and human
 sign-off remain open. The generated CI driver has nonfatal documentation
 and scoped-option lint warnings; the successful gate was not inferred by
 ignoring a compilation error. See the deployment checkpoint for full receipts.
+
+## Standalone generic-column kit
+
+The clean detached source checkpoint
+`d05a89885573dd17ec097f059f4a635a96736b7b` was packaged as
+`BongTheory-He2023ADC-checkpoint-20260905-generic-review-kit.zip`.
+It contains 1898 project Lean sources, 1944 packaged files and 5806365 bytes.
+Extraction and all 1943 payload hashes passed. The archive SHA-256 is
+`FB75D0711589F584E2C8B7AE054CFCBA97B6FD172271D51CB747484BFE41C646`.
+
+This source-only kit includes Lemma 6.8(i),(ii),(v),(vi), reports 23--24,
+and the enforcing gate with the scoped driver repair. It contains no
+dependency worktree or local build cache. Its source manifest records a
+clean tree. These checks establish package integrity, not a clean Lean
+build. The ZIP has not been uploaded as a release and does not contain
+the later second-endpoint code at `074f2cd`.

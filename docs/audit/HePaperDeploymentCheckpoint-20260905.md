@@ -240,3 +240,30 @@ all 1934 payload hashes passed extraction checks. Archive SHA-256:
 `D1D3C85B94B035282DF7602F8A0E23028AA9E5B1ECFC857C94C7ED6418DAFD06`.
 This particular ZIP was structure-checked locally. The separate clean
 CI receipt above names the tree-identical merge-test source and its own ZIP.
+
+The clean detached `d05a89885573dd17ec097f059f4a635a96736b7b` source
+was subsequently packaged as
+`BongTheory-He2023ADC-checkpoint-20260905-generic-review-kit.zip`.
+It contains 1898 project Lean sources, 1944 files and 5806365 bytes;
+all 1943 payload hashes passed extraction checks. Archive SHA-256:
+`FB75D0711589F584E2C8B7AE054CFCBA97B6FD172271D51CB747484BFE41C646`.
+This clean-source package contains Lemma 6.8(i),(ii),(v),(vi), reports
+23--24, and the scoped enforcing-gate driver. It has not been cleanly
+compiled or uploaded as a release. It predates the second-endpoint
+addition at `074f2cd`; neither that addition nor a complete paper is
+certified by this structure-only receipt.
+
+## Later second-endpoint proof increment
+
+At `074f2cdcd63637fb6f6d8c65879e55968a1dc675`, full ADC Lemma 6.8(iii)
+and the explicit n>=4 part of (iv) passed main and independent replay of
+five new modules, canonical entry and the complete paper audit. All twelve
+new queries use exactly the standard three axioms. An independent focused
+imported-environment gate passed on 57,667 declarations; the main scanner
+checks passed 23 regression tests and 2687 tracked Lean sources.
+
+Report 25 records the distinction between five complete whole clauses and
+the still partial (iv). Its n=2 boundary is unresolved, not refuted. The
+local d05a898 package and remote f6f7485/c82668b clean kit both predate this
+increment. Existing dependency-state warnings remain disclosed; cached
+checks are not clean CI. No release is promoted by this proof increment.

@@ -43,9 +43,14 @@ Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION`.
   passed clean CI and enforced dependency checks through full Lemma 6.7.
 - Report 24 adds locally proved and independently AI-reviewed clauses
   (v),(vi) at b728bce, including n=2 and explicit representative alignment
-  for the printed V domain. Lemma 6.8 is now 4/6 clauses, still partial;
+  for the printed V domain. That checkpoint supplied 4/6 clauses, still partial;
   Section 6 remains 5/12 fully completed numbered items. These new proofs
   still need their own clean kit and CI, and do not imply human approval.
+- Report 25 adds full (iii) and only the n>=4 part of (iv) at 074f2cd,
+  with main and independent replay and twelve standard-only new queries.
+  Lemma 6.8 now has 5/6 completed whole clauses plus a partial (iv).
+  The n=2 case of (iv) remains unresolved, not refuted. Section 6 remains
+  5/12 complete numbered items; this addition also needs its own clean CI.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

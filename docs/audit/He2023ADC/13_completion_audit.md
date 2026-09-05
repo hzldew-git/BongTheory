@@ -28,6 +28,7 @@
 | Clean Review Kit including Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 | PASS at f6f7485/c82668b, run 33942437722; 1934 payload hashes, 4963 build jobs, enforcing gate on 57,480 declarations |
 | Lemma 6.8(i)--(ii), only 2/6 clauses | PASS local and independent checks at b624d40, all 15 new standard-only queries; report 23; its own clean CI and human approval pending |
 | Lemma 6.8(v)--(vi), raising the partial lemma to 4/6 | PASS local and independent checks at b728bce, 16 standard-only queries; explicit Delta-in-U convention in the printed wrappers; report 24; own clean CI and human approval pending |
+| Lemma 6.8(iii) and n>=4 of (iv), raising whole-clause coverage to 5/6 | PASS local and independent checks at 074f2cd, 12 standard-only new queries and focused gate on 57,667 declarations; report 25; n=2 of (iv), own clean CI and human approval pending |
 | Independent semantic sign-off | FAIL / pending |
 
 Completion verdict: `NOT_COMPLETE`.

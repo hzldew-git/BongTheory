@@ -1,5 +1,13 @@
 # Trust and axiom report
 
+At `074f2cdcd63637fb6f6d8c65879e55968a1dc675`, full (iii) and the n>=4
+part of (iv) passed main and independent replay of all five new modules,
+entry and full ADC audit. All 159 printed reports remain in the standard
+allowance, and the 12 new sets are exactly the standard three axioms.
+The separate focused imported-environment gate passed on 57,667 declarations.
+This is cached-local evidence, not a clean-build certificate. Report 25
+records scope and the preserved dependency-state warnings.
+
 At `b728bce20942191785d0b50f2c068e0b5ee7c2f7`, clauses (v),(vi), their
 printed-domain wrappers and support lemmas passed local and independent
 cached checks: four modules, entry, full ADC audit and all 16 standard-only

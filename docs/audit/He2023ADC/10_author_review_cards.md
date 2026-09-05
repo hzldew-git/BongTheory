@@ -1,5 +1,11 @@
 # Author review cards
 
+Report 25 adds the cards for full Lemma 6.8(iii) and the restricted n>=4
+part of (iv). In particular, the author is asked for the intended n=2
+argument of (iv): its statement includes n=2, but the printed proof invokes
+the square second-column test only with n>=4. No human confirmation or
+refutation of that remaining boundary is recorded.
+
 The full author-facing card for the newly completed Proposition 4.13, with
 its assumptions, boundary checks, and unsigned approval fields, is in
 `15_odd_maximal_structure_checkpoint.md`.

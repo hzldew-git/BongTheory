@@ -35,6 +35,7 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Lemma 6.7 | both actual-representation implications, with alpha alternatives and raw/capped defect equality | local/independent checks and clean-kit CI at f6f7485/c82668b pass; report 22; human approval pending |
 | He ADC Lemma 6.8(i)--(ii) | first-column endpoint isometries on arbitrary n-ADC lattices; exact n=2/n>=4 boundaries | only 2/6 clauses, locally proved and independently AI-reviewed at b624d40; report 23; its own clean CI pending |
 | He ADC Lemma 6.8(v)--(vi) | nonexceptional columns, original-parameter lattice isometries and explicit printed-domain bridge | locally proved and independently AI-reviewed at b728bce; Delta-in-U convention disclosed; report 24; whole lemma now 4/6, own clean CI pending |
+| He ADC Lemma 6.8(iii) and partial (iv) | actual second-column isometries: all even n>=2 in (iii), only n>=4 in (iv) | locally proved and independently AI-reviewed at 074f2cd; report 25; whole-clause coverage now 5/6 plus partial (iv); n=2 of (iv) and own clean CI remain open |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1; affected statements remain

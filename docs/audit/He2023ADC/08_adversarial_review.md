@@ -1,12 +1,21 @@
 # Adversarial review
 
+Independent review of `074f2cd` found no substantive mismatch in full
+(iii) or the explicitly restricted n>=4 part of (iv). It checked same-lattice
+BONG construction, internal kappa and tests, the leading-order-2 tower case,
+space-only square normalization, signed full determinant, raw/capped defects,
+and e=1. Five modules, entry, audit and the focused gate independently passed.
+The printed (iv) includes n=2; its proof uses N_2^n(1) with n>=4. This
+unresolved boundary is not certified or declared false. Report 25 raises
+whole-clause coverage to 5/6, not to a complete Lemma 6.8.
+
 Independent review of `b728bce` passed all four frozen new modules, entry,
 full ADC audit and 16 standard-only queries for Lemma 6.8(v),(vi).
 It checked actual tests, finite full signed defect, raw/capped distinctions,
 normalization back to the original parameter, n=2/e=1, and the explicit
 Delta-in-U convention. No blocker was found on this disclosed scope.
 The connection-interrupted review was resumed and completed. Report 24
-does not certify clean CI or human approval; the full lemma remains 4/6.
+does not certify clean CI or human approval; that checkpoint supplied 4/6.
 
 Independent review of `b624d40` found no mismatch or trust blocker for
 Lemma 6.8(i)--(ii), only 2/6 clauses. It independently replayed all three

@@ -82,4 +82,9 @@ The later report 24 proves (v),(vi). Its printed wrappers are
 `LOGICALLY_EQUIVALENT` under the disclosed compatible representative
 convention Delta in U. The class-domain cores generalize to arbitrary
 scalar representatives through internal square normalization. Bare
-c!=1,Delta is not certified. Clauses (iii),(iv) and Theorem 6.2 remain open.
+c!=1,Delta is not certified. This checkpoint did not cover (iii),(iv).
+
+Report 25 proves full (iii), `LOGICALLY_EQUIVALENT` on every even n>=2.
+Its endpoint for (iv) is `SPECIAL_CASE_ONLY`: the explicit k>0 premise
+removes n=2 even though the printed statement includes it. No smaller
+undefined square second-column test is fabricated. Theorem 6.2 remains open.

@@ -77,7 +77,16 @@ Additional concrete declaration groups are:
 - `He2023ADCPublishedParameterDomain` proves the normalized square
   representative equals 1 and bridges the printed exclusion on V with
   explicit Delta in U. Its `Published` wrappers expose that convention.
-  With report 23 the lemma totals 4/6 clauses, not a complete numbered item.
+  Together with report 23 this earlier checkpoint supplied 4/6 clauses.
+- `AlternatingEndpointEvenOrders` and `He2023ADCEvenEndpointExclusion`
+  normalize even leading orders only in the ambient quadratic space and
+  exclude both an even-leading endpoint tower and final order -2e.
+- `He2023ADCEvenSecondEndpointOrders` and `He2023ADCEvenSecondEndpointTests`
+  derive the full terminal profile from internally constructed actual tests.
+- `He2023ADCEvenCorankTwoSecond` exports full `heADC2025Lemma68iii` and
+  only the n>=4 endpoint `heADC2025Lemma68iv_of_pos`, on arbitrary actual
+  lattices. Report 25 raises the count to 5/6 whole clauses; n=2 of (iv)
+  is explicitly not asserted.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

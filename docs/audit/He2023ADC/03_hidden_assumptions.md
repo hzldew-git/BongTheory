@@ -90,3 +90,10 @@ premise. The printed-domain wrappers explicitly require the fixed Delta
 to belong to U; page 983's normalization alone does not imply this.
 This is a disclosed representative convention, not a classification law.
 See report 24 and `SOURCE_DELTA.md`; author confirmation remains pending.
+
+Report 25's second-column endpoints construct all complementary tests and
+kappa internally. The internal central-alpha implication is discharged
+before either public theorem; rank and norm integrality follow from the
+ambient and ADC hypotheses. The positive k assumption in (iv) is visible
+and genuinely restricts it to n>=4. It is not a paper-wide convention and
+is not counted as a complete proof of the published (iv).

@@ -97,3 +97,14 @@ three actual embeddings, signed-defect domination and original-parameter
 transport. Formalization expert: check proof irrelevance in the second
 model, internal rank casts and normalization, and full dependency closure.
 Names, dates, signatures and independent human decisions: not supplied.
+
+## Subsequent package receipt
+
+The source-only kit at clean commit
+`d05a89885573dd17ec097f059f4a635a96736b7b` includes this report and the
+four completed clauses of Lemma 6.8. Its 1898 project Lean sources are
+included among 1944 files; the archive has 5806365 bytes. Extraction and
+all 1943 payload hashes passed. Archive SHA-256:
+`FB75D0711589F584E2C8B7AE054CFCBA97B6FD172271D51CB747484BFE41C646`.
+This is structure-only verification. No clean build, uploaded release,
+or later second-endpoint proof is certified by this package receipt.

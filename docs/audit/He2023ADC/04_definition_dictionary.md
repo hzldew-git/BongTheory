@@ -62,3 +62,10 @@ The printed-domain equivalence additionally exposes Delta in U; the
 square representative is proved equal to 1 from normalization. The
 `HeADCEvenCorankTwoThreeTests` structure is internal proof data and is
 constructed from ADC plus ambient isometry, not a replacement ADC definition.
+
+Report 25's even-leading tower normalization is a quadratic-space coordinate
+rescaling by independently chosen squares. It does not preserve the integral
+lattice or assert that its original leading orders coincide. The final
+integral-isometry conclusion instead uses the proved full order-profile
+criterion on the original lattice. The boundary n=2 is retained in (iii)
+and explicitly excluded, not redefined, in `heADC2025Lemma68iv_of_pos`.

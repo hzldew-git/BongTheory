@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`b728bce20942191785d0b50f2c068e0b5ee7c2f7`.
+`074f2cdcd63637fb6f6d8c65879e55968a1dc675`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -70,7 +70,13 @@ Report 24 subsequently completes clauses (v),(vi) with independent AI
 review and 16 standard-only new dependency sets. Internal normalization
 returns actual integral isometry with the original parameter. The printed
 V domain explicitly exposes compatible Delta in U; it is not inferred
-from normalization alone. Lemma 6.8 now has 4/6 clauses, still partial.
+from normalization alone. This checkpoint supplied 4/6 clauses.
+
+Report 25 adds full (iii) and the n>=4 special case of (iv), independently
+replayed with twelve standard-only new sets and a focused gate on 57,667
+declarations. Lemma 6.8 now has 5/6 whole clauses plus partial (iv), not
+a complete proof. The printed n=2 case of (iv) remains unresolved; its
+proof on p. 1003 invokes N_2^n(1) only with n>=4. No refutation is certified.
 
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
@@ -83,6 +89,8 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later b624d40 and b728bce Lemma 6.8 additions still need their own clean run.
+The later b624d40, b728bce and 074f2cd Lemma 6.8 additions still need their
+own clean run. The d05a898 package passed structure checks only and predates
+074f2cd. Local dependency-state warnings remain disclosed in report 25.
 Coverage grade: C. Whole-paper verdict:
 `NOT_COMPLETE`.

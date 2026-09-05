@@ -22,3 +22,18 @@ source convention, not an added lattice classification premise or an
 unannounced correction from arXiv. Bare unequal scalars are not sufficient.
 Author confirmation of the intended compatible choice remains pending;
 report 24 records the independent AI domain and proof checks.
+
+## Unresolved n=2 proof boundary in Lemma 6.8(iv)
+
+The publisher's statement on p. 1002, under the even n>=2 convention on
+p. 998, includes n=2 in (iv). Page 1003 invokes the test N_2^n(1) explicitly
+with n>=4, but supplies no separate argument for n=2 there. The following
+Lemmas 6.9--6.12 concern W_1^4(Delta), not the W_2^4(Delta) ambient case.
+
+At `074f2cdcd63637fb6f6d8c65879e55968a1dc675`, the formalization proves
+the n>=4 special case as `heADC2025Lemma68iv_of_pos`. The restriction is
+visible and does not alter the published target. Status of the remaining
+argument: `INSUFFICIENT_EVIDENCE` / `AUTHOR_CONFIRMATION_REQUIRED`.
+An omitted argument is not a refutation. No arXiv amendment or new source
+convention is silently adopted to fill this gap. Report 25 records the
+independent source comparison and the fully proved neighboring clause (iii).
