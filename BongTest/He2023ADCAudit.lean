@@ -275,3 +275,12 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_evenFirst
 #print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_represents_first
 #print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_not_represents_second
+
+#check @Bong.BONG.GoodBONG.heADCEvenSecondTest_isometric_orders
+#check @Bong.BONG.GoodBONG.heADC2025Lemma66_endpoint
+#check @Bong.BONG.GoodBONG.heADC2025Lemma66i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma66ii
+#print axioms Bong.BONG.GoodBONG.heADCEvenSecondTest_isometric_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma66_endpoint
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma66i
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma66ii
