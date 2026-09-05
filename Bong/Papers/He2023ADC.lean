@@ -34,6 +34,8 @@ import Bong.Bong.He2023ADCQuaternaryBoundaryConditions
 import Bong.Bong.He2023ADCQuaternaryBoundaryTests
 import Bong.Bong.He2023ADCQuaternaryBoundaryEndpoint
 import Bong.Bong.He2023ADCQuaternaryBoundaryGeneric
+import Bong.Bong.He2023ADCQuaternaryBoundaryNormalization
+import Bong.Bong.He2023ADCQuaternaryBoundaryTesting
 
 /-!
 # He: n-ADC integral quadratic lattices

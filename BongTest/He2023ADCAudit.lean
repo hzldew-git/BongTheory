@@ -396,3 +396,14 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCBoundary_unitUniformizer_defect_zero
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_uniformizerFirst
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_uniformizerSecond
+
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_is2ADC
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_sharp_normalized
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_sharp
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_represents_of_diagonalRepresents
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_misses_N1Delta
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_evenTest
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_representsAllRelevantOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_is2ADC
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isOMaximal
