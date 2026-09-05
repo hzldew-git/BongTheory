@@ -359,3 +359,17 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_represents_endpoint
 #print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_second
 #print axioms Bong.BONG.GoodBONG.exists_heADCQuaternaryBoundaryCandidate
+
+#check @Bong.BONG.GoodBONG.heADCBoundary_represents_finite
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_hasOrders
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_orderCondition
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_longConditions
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_firstDefect
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_middleAlpha
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_oddMixedPrefix
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_secondComparisonDefect
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_secondDefect_of_finite
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_terminalMixedDefect
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_terminalTrigger_not_of_finite
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_firstCentralRepresentation
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_represents_finite

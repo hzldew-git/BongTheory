@@ -70,7 +70,8 @@
     "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
     "Non-dyadic local results, the remaining Section 6-7 ADC classification, and Section 8 global and enumerative proofs",
     "Remaining Section 4 clauses, including non-dyadic Proposition 4.16 and unary testing-set minimality",
-    "Completion of theorem-by-theorem semantic review and independent human sign-off"
+    "Completion of theorem-by-theorem semantic review and independent human sign-off",
+    "The supporting quaternary boundary construction at 9ec46e6 proves existence, integrality and nonmaximality only; its 2-ADC status and any implication for published Lemma 6.8(iv) remain unresolved"
   ],
   "reviewNotice": "This is an in-progress paper kit. Concrete proofs cover the dyadic foundations, selected Section 4 results, full Theorem 6.1, all clauses of Lemmas 6.4-6.7, and clauses (i),(ii),(iii),(v),(vi) of Lemma 6.8 plus only n>=4 of (iv). The n=2 case of (iv) remains unresolved, not refuted; the printed V-domain wrappers expose the compatible Delta-in-U convention. Clean-kit CI at f6f7485/c82668b includes full Lemma 6.7 and the enforcing gate, but not the later b624d40/b728bce/074f2cd partial Lemma 6.8 additions. Global arithmetic premises, Theorem 6.2, the other local ADC classifications and enumeration remain incomplete. Local checks, exact-revision reproducibility and release promotion remain separate gates."
 }
