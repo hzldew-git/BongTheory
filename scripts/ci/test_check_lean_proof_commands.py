@@ -47,6 +47,20 @@ class ProofCommandScanTests(unittest.TestCase):
         self.assertEqual(findings("sorryName axiomFree sorry_lemma x.sorryAx' αsorry sorryβ"), [])
         self.assertEqual(findings("_root_.sorryAx"), [(1, "sorryAx")])
 
+    def test_primed_identifier_before_custom_command_string(self):
+        prefix = (
+            'import Lean\nnamespace Bong\n'
+            'syntax "probeGate " ident str : command\n'
+            'macro_rules | `(probeGate $i:ident $s:str) => `(def $i : String := $s)\n'
+            'probeGate scannerProbe\'"\'/-"\n'
+        )
+        for statement, token in (
+            ("theorem ScannerProbe : True := by sorry", "sorry"),
+            ("axiom ScannerProbe : True", "axiom"),
+        ):
+            with self.subTest(token=token):
+                self.assertEqual(findings(prefix + statement + "\n-- -/\nend Bong"), [(6, token)])
+
     def test_quoted_forbidden_words_are_conservatively_reported(self):
         self.assertEqual(findings('def s := "sorry"'), [(1, "sorry")])
 

@@ -12,6 +12,21 @@ This project separates three claims that must not be conflated.
 The first two can be mechanically checked. The third also requires
 independent mathematical and formalization review.
 
+## Enforced dependency checks
+
+The CI gate in `BongTest/AxiomGate.lean` rejects transitive dependencies
+outside `propext`, `Classical.choice`, and `Quot.sound`, using Lean's own
+dependency collector. CI negatively tests the command before running it on
+all production modules and the standard audit-root closure. Generated Review
+Kits use the same command on the chosen paper's imported module closure.
+Namespace membership and defining-module ownership are both checked.
+
+Historical Lean-action `axiom-audit` inputs were unsupported and did not
+enforce this check. Their successful builds must not be described as passing
+the new gate; see `docs/audit/HePaperDeploymentCheckpoint-20260905.md`.
+Individually inspected proof reports remain evidence only for their recorded
+declarations and revisions.
+
 ## Public proof boundary
 
 `BongTest/FinalPublicTheoremAudit.lean` checks the public Beli endpoints. Their

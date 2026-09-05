@@ -98,3 +98,21 @@ independent cached checks. They are not contained in the earlier `a734545`
 archive. Report 21 records scope; a new exact-revision kit and clean CI
 are still required. The separate whole-repository CI comment false positive
 and its repair are documented in `../HePaperDeploymentCheckpoint-20260905.md`.
+
+The clean `391a896759e18accb3f14156a00991f3c076c332` source kit subsequently
+passed extraction and all 1930 payload hashes. Archive:
+`BongTheory-He2023ADC-checkpoint-20260905-central-obstruction-review-kit.zip`,
+5765705 bytes, SHA-256
+`FB59500BB4911DE8F317E9CE56AE5EC67170E758BA97CEE7584D53F77BBCBCB6`.
+It contains full Lemma 6.6, but predates the new enforcing axiom gate.
+It is not a clean Lean certificate or an uploaded release.
+
+## CI enforcement correction
+
+Independent review found that the pinned Lean action ignores the former
+`axiom-audit` configuration inputs. The older whole-repository run proves
+successful default compilation, not successful enforcement of a namespace
+axiom allowance. This does not erase the individually inspected axiom
+reports, but those reports must not be presented as an automatically
+enforced complete-scope gate. The deployment checkpoint records the concrete
+replacement and its negative tests; that repair requires its own remote run.

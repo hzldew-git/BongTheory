@@ -114,6 +114,11 @@ if ($StructureOnly) {
     exit 0
 }
 
+if ($manifest.formalization.enforcingAxiomGate -ne 'BongTest.PaperAxiomGate' -or
+    @($manifest.formalization.auditModules) -notcontains 'BongTest.PaperAxiomGate') {
+    throw 'This older kit lacks the enforcing transitive axiom gate; regenerate it before full verification.'
+}
+
 $lakeCommand = Get-Command lake -ErrorAction SilentlyContinue
 $lake = if ($lakeCommand) { $lakeCommand.Source } else { $null }
 if (-not $lake) {
@@ -151,6 +156,10 @@ try {
             Get-Content -LiteralPath $logPath -Tail 200
             throw "Review Kit audit failed for $auditModule with exit code $LASTEXITCODE."
         }
+        if ($auditModule -eq $manifest.formalization.enforcingAxiomGate -and
+            -not (Select-String -LiteralPath $logPath -SimpleMatch 'AXIOM_GATE_PASS:' -Quiet)) {
+            throw 'The enforcing gate returned without its success marker.'
+        }
     }
 } finally {
     Pop-Location
@@ -164,5 +173,6 @@ try {
     structure = 'verified'
     build = 'passed'
     audits = @($manifest.formalization.auditModules)
+    enforcingAxiomGate = $manifest.formalization.enforcingAxiomGate
     logDirectory = $LogDirectory
 } | ConvertTo-Json -Depth 5

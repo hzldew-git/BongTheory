@@ -13,17 +13,23 @@ The recorded merge-test commit is
 the branch tree. Later local commits must pass their own remote gates.
 
 [Paper Review Kits run 33929872783](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783)
-has successful clean-extract jobs for Beli 2003, 2006, 2009, 2020, He--Hu,
-and He ADC. The He classic and Beli 2019 jobs remain in progress at the
+has successful clean-extract jobs for Beli 2003, 2006, 2009, 2019, 2020,
+He--Hu, and He ADC. The He classic job remains in progress at the
 inspection. The He ADC artifact contains the published maximal profiles,
 not the later Proposition 4.13, dyadic 4.16 or Section 6 additions.
 
 ## Whole-repository CI false positive
 
 [Lean CI run 33929872826](https://github.com/hzldew-git/BongTheory/actions/runs/33929872826)
-finished with a failure, but its build-and-complete-namespace-axiom-audit
-step succeeded from 23:32:44 UTC on 4 September to 02:20:32 UTC on
-5 September. The next textual gate matched the word `sorry` inside the
+finished with a failure. Its full default build succeeded (5700 jobs),
+from 23:32:44 UTC on 4 September to 02:20:32 UTC on 5 September.
+Despite its former step name, this was NOT an enforcing namespace-wide
+axiom audit. Independent inspection found that the pinned
+[Lean action definition](https://raw.githubusercontent.com/leanprover/lean-action/38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9/action.yml)
+does not support `axiom-audit`, `axiom-audit-root` or `axiom-audit-allow`;
+the remote log explicitly warns about these unexpected inputs. Earlier
+descriptions of this step as a successful complete axiom audit are withdrawn.
+The next textual gate matched the word `sorry` inside the
 module documentation at `Bong/Lattice/GlobalNADC.lean:21`, in a sentence
 explicitly explaining that no unfinished proof was used. The public-signature
 and clean-generated-state steps were subsequently skipped, so the workflow
@@ -38,8 +44,7 @@ opening brace are rejected for parser review, because they may contain
 nested interpolated terms and quotes. Unterminated comments, literals and
 escaped identifiers fail closed. Actual `sorry`,
 `sorryAx`, `admit` and `axiom` tokens remain rejected. This is not a Lean
-parser, and the complete-namespace kernel axiom audit is preserved unchanged
-as a separate, stronger trust check. No mathematical declaration or
+parser and cannot replace a transitive proof-dependency gate. No mathematical declaration or
 documentation was rewritten to evade the scan.
 
 Independent review found two valid-Lean evasion cases in the initial repair
@@ -48,15 +53,53 @@ interpolated strings could hide later actual proof tokens. The first repair
 is therefore not sufficient. Follow-up regression tests include those cases;
 the scanner now recognizes escaped identifiers and fails closed on ambiguous
 braced ordinary strings. These limitations are explicit, not a claim of
-complete Lean parsing.
+complete Lean parsing. A further valid-Lean custom-command regression at
+`391a896` exposed a character literal wrongly starting inside a primed
+identifier. The follow-up guards that token boundary and tests both an
+unfinished theorem and an actual custom-axiom declaration.
 
-All 18 regression tests and the follow-up scan of 2673 tracked Lean sources
-passed locally, without generated files. The source gate runs before the
+The 18-test and 2673-source successes at `391a896` did not cover that later
+counterexample. The source gate runs before the
 expensive build. The job limit
 is extended to 360 minutes, matching the paper-kit build allowance; the
-previous successful build-and-audit step already took about 168 minutes.
+previous successful build step already took about 168 minutes.
 No gate is bypassed and no build result is inferred from the timeout change.
 The repair still requires a fresh remote run after push.
+
+## Replacement enforcing gate
+
+`BongTest/AxiomGate.lean` uses Lean's transitive `collectAxioms`, not textual
+output matching, and throws an elaboration error for every dependency outside
+the fixed allowance `propext`, `Classical.choice`, `Quot.sound`. It selects
+declarations by namespace and by defining module, including private helpers
+and helpers declared outside the project's namespace. An empty selection is
+also an error. The source scanner is only supplemental.
+
+`scripts/ci/check_axiom_gate_fixtures.py` exercises the actual Lean command
+on constructive and standard proofs, unfinished proofs, direct and transitive
+custom dependencies, private helpers, native computation and empty scope.
+A negative fixture must return nonzero with the gate's own rejection marker;
+an import or syntax error cannot stand in for a rejection.
+
+The default CI gate imports every tracked production `Bong` module and the
+standard `BongTest` audit-root closure. The production library glob builds
+every production module, including ones not reached by the umbrella import.
+Legacy milestone-only test modules outside that closure remain subject to
+the tracked-source scan, not a newly claimed full compiled-module audit.
+The explicit `--entry` mode is a focused local check and is not used by CI.
+
+New Review Kits contain the same enforcing gate and a generated paper-specific
+driver, listed in their audit manifest and built from their own source closure.
+The verifier requires its success marker. Older kits without it may still be
+structure-checked but cannot receive a new full-verification result from the
+updated verifier. Historical build receipts are not retroactively upgraded.
+
+Local replacement-gate results: all 19 source-scanner regression tests pass;
+all 11 actual-Lean positive/negative fixture cases pass, including unreferenced
+private and out-of-namespace declarations selected by module ownership.
+The current ADC imported closure passes the enforcing gate on 57,453
+declarations. This remains a focused local check using the existing modified
+dependency worktrees, not the full-production CI result or a clean rebuild.
 
 ## Later independently selectable local package
 
@@ -68,6 +111,15 @@ verified after extraction. Archive SHA-256:
 `7D0DD1177B92D091C86B0ABF23EB6D945298FAD075EBD8967C2895DEC4048C59`.
 It predates the later Lemma 6.6 code. Structure verification is not a clean
 Lean build, and this package has not been uploaded or promoted to a release.
+
+The later clean `391a896759e18accb3f14156a00991f3c076c332` kit includes both
+complete Lemma 6.6 clauses:
+`BongTheory-He2023ADC-checkpoint-20260905-central-obstruction-review-kit.zip`.
+It has 1889 closure Lean sources, 1931 packaged files and 5765705 bytes;
+all 1930 payload hashes passed extraction checks. Archive SHA-256:
+`FB59500BB4911DE8F317E9CE56AE5EC67170E758BA97CEE7584D53F77BBCBCB6`.
+This is also structure-only and not uploaded. It predates the replacement
+enforcing gate and cannot certify that later deployment repair.
 
 PR 10 remains draft. No new merge, tag, final release or human semantic
 approval is certified here. Remaining Classic source-obstruction and ADC

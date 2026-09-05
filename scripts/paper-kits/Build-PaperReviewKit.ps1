@@ -177,6 +177,7 @@ $seenModules = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordi
 $sourceFiles = [Collections.Generic.HashSet[string]]::new([StringComparer]::OrdinalIgnoreCase)
 
 $roots = @([string] $metadata.entryModule) + @($metadata.auditModules | ForEach-Object { [string] $_ })
+$roots += 'BongTest.AxiomGate'
 foreach ($root in $roots) {
     $pending.Enqueue($root)
 }
@@ -282,14 +283,22 @@ $entryRootText = "import $($metadata.entryModule)`n"
 [IO.File]::WriteAllText((Join-Path $stagingDirectory 'Bong.lean'), $entryRootText, $encoding)
 
 $auditImports = @($metadata.auditModules | ForEach-Object { "import $_" }) -join "`n"
+$gateModule = 'BongTest.PaperAxiomGate'
+$gateText = "import Bong`nimport BongTest.AxiomGate`n" + $auditImports + "`n" +
+    "set_option maxHeartbeats 0`n" +
+    'run_cmd BongCI.checkAxioms #[`Bong, `BongTest]' + "`n"
+[IO.File]::WriteAllText(
+    (Join-Path $stagingDirectory 'BongTest/PaperAxiomGate.lean'), $gateText, $encoding
+)
 [IO.File]::WriteAllText(
     (Join-Path $stagingDirectory 'BongTest.lean'),
-    $auditImports + "`n",
+    $auditImports + "`nimport $gateModule`n",
     $encoding
 )
 
+$kitAuditModules = @($metadata.auditModules) + @($gateModule)
 $auditCommands = @()
-foreach ($auditModule in @($metadata.auditModules)) {
+foreach ($auditModule in $kitAuditModules) {
     $auditPath = Convert-ToForwardSlashPath (Convert-ModuleToRelativePath ([string] $auditModule))
     $auditCommands += "lake env lean $auditPath"
 }
@@ -352,6 +361,13 @@ Successful compilation establishes kernel acceptance of the encoded
 statements. It does not by itself promote the semantic status to
 **VERIFIED_MATCH**. Consult the included fidelity materials under
 **$($metadata.auditDirectory)**.
+
+The generated **BongTest/PaperAxiomGate.lean** additionally rejects any
+declaration in this paper's imported project-module closure whose transitive
+axiom dependencies exceed **propext, Classical.choice, Quot.sound**. It checks
+module ownership as well as namespaces, including private helpers. This
+enforcing check is separate from the human-readable axiom listings and does
+not claim semantic equivalence to the paper.
 $notice
 ## Integrity
 
@@ -390,7 +406,8 @@ $manifest = [ordered]@{
     paper = $paperManifest
     formalization = [ordered]@{
         entryModule = $metadata.entryModule
-        auditModules = @($metadata.auditModules)
+        auditModules = $kitAuditModules
+        enforcingAxiomGate = $gateModule
         auditDirectory = $metadata.auditDirectory
         coverageStatus = if ($metadata.PSObject.Properties.Name -contains 'coverageStatus') {
             $metadata.coverageStatus

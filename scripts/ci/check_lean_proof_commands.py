@@ -82,7 +82,7 @@ def mask_comments(source: str) -> str:
             if raw and (index == 0 or not (source[index - 1].isalnum() or source[index - 1] in "_'")):
                 raw_end = '"' + (raw.group(1) or "")
                 index = raw.end()
-            elif char:
+            elif char and (index == 0 or not (source[index - 1].isalnum() or source[index - 1] in "_'»")):
                 index = char.end()
             else:
                 index += 1

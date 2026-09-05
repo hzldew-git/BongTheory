@@ -12,7 +12,8 @@ distributable formal artifact only when all of the following are present:
 4. a dedicated `docs/audit/<PaperName>/` fidelity package;
 5. a generated source-only Review Kit whose local import closure is computed
    from the entry and audit modules;
-6. clean-extract CI that builds the generated kit and runs every listed audit;
+6. clean-extract CI that builds the generated kit and runs every listed audit,
+   including the enforcing transitive-axiom gate described below;
 7. a Release asset, outer SHA-256, exact source commit, and frozen-paper hash;
 8. explicit semantic status and every known source discrepancy.
 
@@ -45,3 +46,15 @@ make source authority machine-readable. Required paper-source fields are:
 The publisher version of record is the sole semantic authority. Preprints may
 be listed only as comparison sources. Review Kits never contain publisher
 PDFs; their hashes let reviewers verify an independently obtained copy.
+
+## Enforcing trust gate for every new kit
+
+The generator includes `BongTest.AxiomGate` and generates the paper-local
+`BongTest.PaperAxiomGate`. The latter imports the paper and its audits, checks
+all in-scope declarations by namespace and defining module, and fails if
+their transitive axioms exceed `propext`, `Classical.choice`, `Quot.sound`.
+The generated manifest records it as `formalization.enforcingAxiomGate` and
+adds it to `formalization.auditModules`; the verifier requires its success
+marker after execution. Human-readable `#print axioms` reports alone are
+not an enforcing gate. This requirement applies automatically to all future
+BONG-related papers and does not change their semantic coverage grades.
