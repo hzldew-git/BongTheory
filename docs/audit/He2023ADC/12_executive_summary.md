@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`b624d40be62d4e939f28715e631ce7c42a9e642e`.
+`b728bce20942191785d0b50f2c068e0b5ee7c2f7`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -66,6 +66,12 @@ includes n=2; clause (ii) retains n>=4. All 15 new queries have exactly
 the standard three dependencies. Report 23 covers only 2/6 clauses;
 the full-Section-6 count remains 5/12 and Theorem 6.2 is not completed.
 
+Report 24 subsequently completes clauses (v),(vi) with independent AI
+review and 16 standard-only new dependency sets. Internal normalization
+returns actual integral isometry with the original parameter. The printed
+V domain explicitly exposes compatible Delta in U; it is not inferred
+from normalization alone. Lemma 6.8 now has 4/6 clauses, still partial.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
 have not been supplied. Non-dyadic results, the remaining ADC classifications in
@@ -77,6 +83,6 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later b624d40 Lemma 6.8(i)--(ii) addition still needs its own clean run.
+The later b624d40 and b728bce Lemma 6.8 additions still need their own clean run.
 Coverage grade: C. Whole-paper verdict:
 `NOT_COMPLETE`.

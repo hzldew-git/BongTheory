@@ -71,6 +71,13 @@ Additional concrete declaration groups are:
 - `He2023ADCEvenCorankTwoFirst`: arbitrary-lattice endpoints
   `Bong.Lattice.heADC2025Lemma68i` and `heADC2025Lemma68ii`; these complete
   only 2/6 clauses of Lemma 6.8, with exact rank restrictions retained.
+- `He2023ADCEvenCorankTwoGenericOrders`, `GenericTests`, and `Generic`
+  prove clauses (v),(vi) on the actual class-exclusion domain, deriving
+  all tests, orders, normalization and original-parameter lattice isometry.
+- `He2023ADCPublishedParameterDomain` proves the normalized square
+  representative equals 1 and bridges the printed exclusion on V with
+  explicit Delta in U. Its `Published` wrappers expose that convention.
+  With report 23 the lemma totals 4/6 clauses, not a complete numbered item.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

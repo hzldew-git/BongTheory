@@ -55,3 +55,10 @@ In Lemma 6.8(i)--(ii), `q.IsIsometric` is the hypothesis on the ambient
 quadratic space, while `Lattice.IsIsometric` is the stronger integral
 conclusion on the actual lattices. The signed full product uses all m
 values and sign (-1)^(m/2); a proper head prefix is kept distinct from it.
+
+`HeHuSharpDomain c` excludes two square classes, not merely two scalars.
+`HeHuPublishedSquareClassIndex.parameter U p` ranges over U and U*pi.
+The printed-domain equivalence additionally exposes Delta in U; the
+square representative is proved equal to 1 from normalization. The
+`HeADCEvenCorankTwoThreeTests` structure is internal proof data and is
+constructed from ADC plus ambient isometry, not a replacement ADC definition.

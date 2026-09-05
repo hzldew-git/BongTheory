@@ -1,5 +1,12 @@
 # Trust and axiom report
 
+At `b728bce20942191785d0b50f2c068e0b5ee7c2f7`, clauses (v),(vi), their
+printed-domain wrappers and support lemmas passed local and independent
+cached checks: four modules, entry, full ADC audit and all 16 standard-only
+queries. The printed wrappers disclose Delta in U; the class-domain core
+does not assume normalized representatives. See report 24. This later
+addition is not included in the f6f7485/c82668b clean-kit receipt.
+
 At `b624d40be62d4e939f28715e631ce7c42a9e642e`, Lemma 6.8(i)--(ii)
 and 13 associated support/public adapters passed local and independent
 cached checks: 15 queries, all exactly the standard three axioms. Actual

@@ -41,6 +41,11 @@ Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_CLASSIFICATION`.
   of that lemma; the count of fully complete Section 6 items remains 5/12.
   Its own clean-kit CI remains pending. The earlier f6f7485/c82668b kit
   passed clean CI and enforced dependency checks through full Lemma 6.7.
+- Report 24 adds locally proved and independently AI-reviewed clauses
+  (v),(vi) at b728bce, including n=2 and explicit representative alignment
+  for the printed V domain. Lemma 6.8 is now 4/6 clauses, still partial;
+  Section 6 remains 5/12 fully completed numbered items. These new proofs
+  still need their own clean kit and CI, and do not imply human approval.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

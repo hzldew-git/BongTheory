@@ -183,6 +183,17 @@ on the newer locally imported ADC closure passed on 57,526 declarations
 without those lint warnings. This focused cached check is not a clean-kit
 certificate for either the generator change or the newer Lemma 6.8 code.
 
+## Later local generic-column checkpoint
+
+`b728bce20942191785d0b50f2c068e0b5ee7c2f7` proves ADC Lemma 6.8(v),(vi)
+and the printed-domain bridge with explicit Delta in U. Four modules,
+entry and full audit passed both main and independent cached checks;
+all 16 new query sets contain exactly the standard three axioms. Report 24
+records scope and source convention. With b624d40, the lemma has 4/6
+clauses. This code is not in the f6f7485/c82668b clean artifacts above and
+still requires its own exact-revision kit and clean run. No release is
+promoted and no whole-paper completion is claimed by this local increment.
+
 Independent follow-up at frozen `f6f7485` also passed all 23 scanner tests,
 the 2675-source scan, and the three actual escaped-identifier/postfix probes
 against the unchanged enforcing gate. It certified those bounded repairs,

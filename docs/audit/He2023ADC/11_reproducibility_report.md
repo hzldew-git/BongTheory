@@ -1,5 +1,12 @@
 # Reproducibility report
 
+Latest code checkpoint: `b728bce20942191785d0b50f2c068e0b5ee7c2f7` adds
+Lemma 6.8(v),(vi) and its explicit representative bridge. Main and separate
+AI replay passed all four frozen modules, entry and full ADC audit, with
+16 standard-only new dependency sets. The 23 scanner tests and 2682-source
+scan passed locally. These remain cached checks; report 24's new code is
+not covered by the earlier f6f7485/c82668b clean-kit receipt below.
+
 Run `lake build Bong.Papers.He2023ADC` and then
 `lake env lean BongTest/He2023ADCAudit.lean`. Generate the independent Review Kit
 from `papers/he2023adc/paper.json`. Verify the publisher PDF against its manifest

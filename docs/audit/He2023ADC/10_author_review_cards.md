@@ -42,3 +42,8 @@ proof, signed full determinant and actual lattice conclusion, is in report 23.
    proofs are still required before promoting the global results.
 
 All cards are unsigned. No independent human semantic approval is recorded.
+
+Report 24 adds the card for Lemma 6.8(v),(vi). In particular, confirm that
+the fixed Delta is intended to belong to U before the literal exclusion
+V minus {1,Delta}. Review the three actual tests, signed-defect argument
+and return to the original parameter after internal normalization.

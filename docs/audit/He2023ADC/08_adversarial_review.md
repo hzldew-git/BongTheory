@@ -1,5 +1,13 @@
 # Adversarial review
 
+Independent review of `b728bce` passed all four frozen new modules, entry,
+full ADC audit and 16 standard-only queries for Lemma 6.8(v),(vi).
+It checked actual tests, finite full signed defect, raw/capped distinctions,
+normalization back to the original parameter, n=2/e=1, and the explicit
+Delta-in-U convention. No blocker was found on this disclosed scope.
+The connection-interrupted review was resumed and completed. Report 24
+does not certify clean CI or human approval; the full lemma remains 4/6.
+
 Independent review of `b624d40` found no mismatch or trust blocker for
 Lemma 6.8(i)--(ii), only 2/6 clauses. It independently replayed all three
 modules, 15 standard-only queries, the entry and full audit. The actual

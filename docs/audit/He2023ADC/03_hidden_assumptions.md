@@ -83,3 +83,10 @@ data. Rank is derived from the stated ambient isometry and integrality
 from n-ADC. Clause (i) includes n=2 by a proved uniform embedding argument;
 clause (ii) retains n>=4. No undefined binary square second model or
 full-determinant assumption is introduced. See report 23.
+
+Lemma 6.8(v),(vi) derives the three actual tests, finite full defect and
+entire profile. Its class-domain core has no representative normalization
+premise. The printed-domain wrappers explicitly require the fixed Delta
+to belong to U; page 983's normalization alone does not imply this.
+This is a disclosed representative convention, not a classification law.
+See report 24 and `SOURCE_DELTA.md`; author confirmation remains pending.

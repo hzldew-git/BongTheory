@@ -6,7 +6,7 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `b624d40be62d4e939f28715e631ce7c42a9e642e`,
+The current audited code checkpoint is `b728bce20942191785d0b50f2c068e0b5ee7c2f7`,
 branch `feat/he-formalization`, Lean 4.32.1, audited on 5 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
@@ -25,10 +25,14 @@ Both complete Lemma 6.7 clauses are independently reviewed at
 Lemma 6.8(i)--(ii), only 2/6 clauses of that lemma, are independently
 reviewed at `b624d40` in report 23. The clean-kit receipt through full
 Lemma 6.7 is f6f7485/c82668b; it does not include report 23's new proofs.
+The later report 24 independently reviews clauses (v)--(vi) at b728bce,
+including the explicit Delta-in-U convention for the printed domain.
+Lemma 6.8 now has 4/6 clauses; (iii)--(iv) remain open. Neither later
+addition is certified by the f6f7485/c82668b clean run.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
-Section 4 endpoints, Theorem 6.1, Lemmas 6.4--6.7 and Lemma 6.8(i)--(ii) listed in
+Section 4 endpoints, Theorem 6.1, Lemmas 6.4--6.7 and Lemma 6.8(i),(ii),(v),(vi) listed in
 `05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic
 premises still undischarged. This audit does not certify the missing local,

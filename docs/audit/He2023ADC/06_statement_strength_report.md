@@ -77,3 +77,9 @@ Lemma 6.8(i)--(ii) is `LOGICALLY_EQUIVALENT` clause by clause. The actual
 lattice isometry is proved without a supplied BONG or profile. The uniform
 n=2 proof changes the route, not the statement; (ii) keeps n>=4. This
 does not prove clauses (iii)--(vi) or Theorem 6.2. See report 23.
+
+The later report 24 proves (v),(vi). Its printed wrappers are
+`LOGICALLY_EQUIVALENT` under the disclosed compatible representative
+convention Delta in U. The class-domain cores generalize to arbitrary
+scalar representatives through internal square normalization. Bare
+c!=1,Delta is not certified. Clauses (iii),(iv) and Theorem 6.2 remain open.
