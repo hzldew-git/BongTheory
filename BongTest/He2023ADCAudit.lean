@@ -163,3 +163,10 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.heADCN2QuaternaryOne_isIsometric_A_product_scaledA
 #print axioms Bong.Lattice.IsOMaximal.isAnisotropic_iff_heADCN2QuaternaryOne
 #print axioms Bong.Lattice.heADC2025Proposition416Dyadic
+
+#check @Bong.BONG.GoodBONG.heADCAlternatingPrefix_of_represented_endpoint
+#check @Bong.BONG.GoodBONG.heADCComparisonPrefix_isSquare_of_strict_crossGap
+#check @Bong.BONG.GoodBONG.heADCBoundaryOrder_zero_of_two_represented_classes
+#print axioms Bong.BONG.GoodBONG.heADCAlternatingPrefix_of_represented_endpoint
+#print axioms Bong.BONG.GoodBONG.heADCComparisonPrefix_isSquare_of_strict_crossGap
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryOrder_zero_of_two_represented_classes
