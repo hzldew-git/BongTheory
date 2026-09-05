@@ -2,8 +2,10 @@
 
 Nested Lean block comments and line comments are masked without changing line
 numbers. Quoted literals are retained conservatively: a forbidden word inside
-one is reported, not silently trusted. This is not a Lean parser or a substitute
-for the complete-namespace kernel axiom audit in the preceding CI step.
+one is reported, not silently trusted. Braced ordinary strings are rejected:
+without a Lean parser they may contain nested interpolated terms and quotes.
+This is not a Lean parser or a substitute for the separate complete-namespace
+kernel axiom audit.
 """
 
 from __future__ import annotations
@@ -25,6 +27,7 @@ def mask_comments(source: str) -> str:
     depth = 0
     quoted = False
     raw_end = None
+    escaped_identifier = False
     while index < len(source):
         if depth:
             if source.startswith("/-", index):
@@ -39,6 +42,10 @@ def mask_comments(source: str) -> str:
                 if source[index] not in "\r\n":
                     result[index] = " "
                 index += 1
+        elif escaped_identifier:
+            if source[index] == "»":
+                escaped_identifier = False
+            index += 1
         elif raw_end is not None:
             if source.startswith(raw_end, index):
                 index += len(raw_end)
@@ -48,6 +55,8 @@ def mask_comments(source: str) -> str:
         elif quoted:
             if source[index] == "\\":
                 index += 2
+            elif source[index] == "{":
+                raise ValueError("braced quoted literal requires Lean-parser review; refusing to skip it")
             elif source[index] == '"':
                 quoted = False
                 index += 1
@@ -61,6 +70,9 @@ def mask_comments(source: str) -> str:
             result[index : index + 2] = "  "
             depth = 1
             index += 2
+        elif source[index] == "«":
+            escaped_identifier = True
+            index += 1
         elif source[index] == '"':
             quoted = True
             index += 1
@@ -78,6 +90,8 @@ def mask_comments(source: str) -> str:
         raise ValueError("unterminated Lean block comment")
     if quoted or raw_end is not None:
         raise ValueError("unterminated quoted literal")
+    if escaped_identifier:
+        raise ValueError("unterminated escaped identifier")
     return "".join(result)
 
 

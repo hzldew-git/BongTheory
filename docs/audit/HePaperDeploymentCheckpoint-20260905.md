@@ -30,17 +30,29 @@ and clean-generated-state steps were subsequently skipped, so the workflow
 as a whole has not passed.
 
 The repair replaces flat text matching with a comment-aware supplemental
-source check, with 14 regression tests. Nested block comments and line
-comments are masked while preserving line numbers. Quoted markers do not
-begin comments; forbidden words in quoted literals are conservatively
-reported. Unterminated comments/literals fail closed. Actual `sorry`,
+source check. Nested block comments and line
+comments are masked while preserving line numbers. Quoted markers and
+escaped identifiers do not begin comments; forbidden words in quoted
+literals are conservatively reported. Ordinary strings with an unescaped
+opening brace are rejected for parser review, because they may contain
+nested interpolated terms and quotes. Unterminated comments, literals and
+escaped identifiers fail closed. Actual `sorry`,
 `sorryAx`, `admit` and `axiom` tokens remain rejected. This is not a Lean
 parser, and the complete-namespace kernel axiom audit is preserved unchanged
 as a separate, stronger trust check. No mathematical declaration or
 documentation was rewritten to evade the scan.
 
-All 14 regression tests and the scan of 2673 tracked Lean sources passed
-locally. The source gate now runs before the expensive build. The job limit
+Independent review found two valid-Lean evasion cases in the initial repair
+at `d920f4d`: comment markers inside escaped identifiers and nested
+interpolated strings could hide later actual proof tokens. The first repair
+is therefore not sufficient. Follow-up regression tests include those cases;
+the scanner now recognizes escaped identifiers and fails closed on ambiguous
+braced ordinary strings. These limitations are explicit, not a claim of
+complete Lean parsing.
+
+All 18 regression tests and the follow-up scan of 2673 tracked Lean sources
+passed locally, without generated files. The source gate runs before the
+expensive build. The job limit
 is extended to 360 minutes, matching the paper-kit build allowance; the
 previous successful build-and-audit step already took about 168 minutes.
 No gate is bypassed and no build result is inferred from the timeout change.
