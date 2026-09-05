@@ -284,3 +284,14 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma66_endpoint
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma66i
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma66ii
+
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_capped_le_of_represents
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_alphaAlternatives_of_capped_le
+#check @Bong.BONG.GoodBONG.heADC2025Lemma67_endpoint
+#check @Bong.BONG.GoodBONG.heADC2025Lemma67i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma67ii
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_capped_le_of_represents
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_alphaAlternatives_of_capped_le
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma67_endpoint
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma67i
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma67ii
