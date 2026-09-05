@@ -16,6 +16,8 @@ in `16_quaternary_maximal_checkpoint.md`. Its non-dyadic scope remains open.
 The four clauses of Lemma 6.4 are recorded in `17_even_testing_checkpoint.md`.
 Both clauses of Lemma 6.5 are recorded in `18_even_obstruction_checkpoint.md`.
 The complete Theorem 6.1 is recorded in `19_even_corank_one_checkpoint.md`.
+The literal published Theorem 3.6 interface is independently reviewed at
+`218cfb917fed8d1123af0d64e28c206312676f77` in report 20.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the

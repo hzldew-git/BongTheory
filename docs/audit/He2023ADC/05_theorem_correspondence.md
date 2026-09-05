@@ -9,6 +9,7 @@
 | Theorem 1.4(i) | `heADCTheorem14iLocalDyadic` | Proved dyadic stable-rank specialization |
 | Theorem 1.4(ii)(iii) | `GlobalLocalLatticeSystem.heADCTheorem14ii`, `heADCTheorem14iii` | Logical reductions with ambient arithmetic premises |
 | Lemma 3.1--Theorem 3.6 | `heADC2025Lemma31`, `heADC2025Corollary32*`, `heADC2025Proposition3*`, `heADC2025Theorem36` | Direct reuse of proved Beli/He--Hu results; transcription review provisional |
+| Theorem 3.6, literal published package | `GoodBONG.heADC2025Theorem36Published`, `heADC2025Theorem36PublishedFull` | `PROVISIONAL_MATCH` after independent AI review at `218cfb9`; exact capped-defect trigger and terminal index; report 20; two adapters, not two new paper results |
 | Definition 4.1, Proposition 4.2, Remark 4.3 | `heADCW*`, `heADCN*`, including `heADCW1Unary` and `heADCN1Unary`, `heADC2025Proposition42*`, `heADC2025Remark43*` | Unary definitions now included; complete unary classification/counting and unrestricted field scope remain pending |
 | Lemma 4.4 | `heADC2025Lemma44*` | Table-index uniqueness and determinant/Hasse forms of the two representation criteria; parameter-form correspondence remains reviewable |
 | Lemma 4.5 | `heADC2025Lemma45i*`, `heADC2025Lemma45ii*` | Dyadic exactly-one representation results in both directions |

@@ -78,3 +78,13 @@ passed local and independent cached checks. Report 19 records exact scope.
 Neither the earlier published-profile remote artifact nor the local 6.4
 kit contains this theorem. Exact-revision clean-kit CI remains pending;
 local dependency-worktree warnings are not suppressed or reclassified.
+
+The source-only ADC kit at clean commit
+`a7345459f9737fffb482b3ef8d215f8feeca24b2` contains full Theorem 6.1
+and the published Theorem 3.6 interface. Archive name:
+`BongTheory-He2023ADC-checkpoint-20260905-even-corank-one-review-kit.zip`.
+It has 1886 Lean sources, 1926 packaged files, and 5750530 bytes. Extraction
+and all 1925 file hashes passed; archive SHA-256:
+`7D0DD1177B92D091C86B0ABF23EB6D945298FAD075EBD8967C2895DEC4048C59`.
+This is structure-only validation, not a clean Lean run or uploaded release.
+It predates report 20 and the later Lemma 6.6 support development.

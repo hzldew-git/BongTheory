@@ -9,6 +9,9 @@ Additional concrete declaration groups are:
 
 - `isNADC_iff_isNUniversal_of_rank_add_three_le`: dyadic stable-rank equivalence.
 - `He2023ADCSectionThree`: direct endpoints for Lemma 3.1 through Theorem 3.6.
+- `He2023ADCPublishedRepresentation`: `heADC2025Theorem36Published` and
+  `heADC2025Theorem36PublishedFull`, retaining the publisher's exact
+  condition-(iii) sum of capped defects; report 20 distinguishes packages.
 - `He2023ADCSectionFour`: space tables, representation lemmas, maximal table,
   and rank-at-least-two literal minimal testing sets.
 - `OMaximalVolume`: maximality and isometry characterized by volume order.
