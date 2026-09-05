@@ -257,3 +257,10 @@ import Bong.Papers.He2023ADC
 #check @Bong.BONG.GoodBONG.heADC2025Theorem36PublishedFull
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem36Published
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem36PublishedFull
+
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_fullMixedDefect
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_currentDefect_gt
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_defectTrigger
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_fullMixedDefect
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_currentDefect_gt
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_defectTrigger
