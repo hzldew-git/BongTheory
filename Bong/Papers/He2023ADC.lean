@@ -15,6 +15,7 @@ import Bong.Bong.He2023ADCEvenRepresentationBounds
 import Bong.Bong.He2023ADCEvenFirstTests
 import Bong.Bong.He2023ADCEvenFirstDefects
 import Bong.Bong.He2023ADCEvenSecondTests
+import Bong.Bong.He2023ADCEvenMixedTests
 
 /-!
 # He: n-ADC integral quadratic lattices

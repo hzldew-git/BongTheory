@@ -195,3 +195,15 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.heADCMaximalOrderProfile_raisedFour
 #print axioms Bong.heADCEvenSecondTest_orders
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma64iii
+
+#check @Bong.heADCKappaSharpDomain
+#check @Bong.heADCKappaTest_lastOrders
+#check @Bong.BONG.GoodBONG.heADCEvenMixedTest_bound
+#check @Bong.BONG.GoodBONG.heADC2025Lemma64iv
+#print axioms Bong.heADCKappaSharpDomain
+#print axioms Bong.heADCKappaTest_lastOrders
+#print axioms Bong.heADCEvenFirst_determinantClass
+#print axioms Bong.heADCEvenSecond_determinantClass
+#print axioms Bong.heADCEvenTests_determinants_not_square
+#print axioms Bong.BONG.GoodBONG.heADCEvenMixedTest_bound
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma64iv
