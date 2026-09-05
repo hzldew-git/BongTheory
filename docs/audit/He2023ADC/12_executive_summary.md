@@ -134,8 +134,17 @@ instead of inheriting the unqualified published Theorem 6.2.
 
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
-have not been supplied. Non-dyadic results, Section 7 ADC classifications,
-global classifications and enumeration remain incomplete.
+have not been supplied. Non-dyadic results, most Section 7 ADC
+classifications, global classifications and enumeration remain incomplete.
+
+Report 35 adds the complete Theorem 7.1 at `c3e6092`. The theorem statement
+is correct, but the publisher's proof is incomplete because it inherits the
+false binary classification and omits the second `W_2^4(Delta)` boundary
+class. The formal proof first establishes the corrected three-way binary
+classification and proves that the omitted class, like the published
+exception, is not 3-ADC. Seven new dependency reports are standard-only, the
+focused gate checks 58,019 declarations, and the scanner checks 2,715 tracked
+Lean sources. The remaining 20 Section 7 items are not covered by this result.
 
 Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
@@ -143,7 +152,7 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later Section 6 additions through 70580bb
+The later additions through c3e6092
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

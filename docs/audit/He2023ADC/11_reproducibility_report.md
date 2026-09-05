@@ -245,3 +245,18 @@ This is local evidence only until a workflow builds an independently
 extracted Review Kit at a revision containing this checkpoint. Report 34
 records the exact theorem scope and the distinction between the valid `n>=4`
 restriction and the refuted published `n=2` biconditional.
+
+## Theorem 7.1 corrected-proof local checkpoint
+
+At exact code revision `c3e6092f05a0f3b2872fefbd21554cc5461104ce`, the
+second-boundary non-3-ADC proof, corrected binary classification, ADC
+monotonicity theorem, Theorem 7.1, canonical paper entry, and complete audit
+compile directly with Lean 4.32.1. Seven new axiom reports contain only
+`propext`, `Classical.choice`, and `Quot.sound`. The focused gate reports
+`AXIOM_GATE_PASS: 58019 declarations checked`; the source scanner checks 2,715
+tracked Lean files without a forbidden proof token outside comments.
+`git diff --check` and the 100-column source check pass.
+
+This is local evidence only until an independently extracted Review Kit at
+this exact revision passes GitHub CI. Report 35 records the source-proof gap,
+the corrected formal route, and the theorem-level scope.

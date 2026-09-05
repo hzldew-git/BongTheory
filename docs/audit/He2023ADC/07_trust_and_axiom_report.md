@@ -135,3 +135,14 @@ checks 57,933 declarations, and the comment-aware scanner checks 2,711 tracked
 Lean sources with no forbidden proof token outside comments. These mechanical
 checks validate the proof objects; report 34 separately records the semantic
 mismatch and the unsigned human-review gates.
+
+At checkpoint `c3e6092f05a0f3b2872fefbd21554cc5461104ce`, the corrected
+binary classification, the second boundary's failure of 3-ADC, ADC
+monotonicity, Theorem 7.1, canonical paper entry, and focused audit compile
+directly. Seven newly queried declarations depend exactly on `propext`,
+`Classical.choice`, and `Quot.sound`. The focused enforcing gate checks 58,019
+declarations, and the comment-aware scanner checks 2,715 tracked Lean sources
+without a forbidden proof token outside comments. No public theorem endpoint
+retains a custom law, supplied BONG, profile, or testing catalogue. Report 35
+separates these mechanical checks from the source proof gap and unsigned human
+review.

@@ -78,11 +78,17 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   Exact-revision package CI and human sign-off remain separate gates.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
+- Theorem 7.1 is locally kernel-complete at `c3e6092`. Its published statement
+  is recovered without using the false binary form of Theorem 6.2: the formal
+  proof supplies a corrected three-way rank-four classification and proves
+  that both nonmaximal classes fail 3-ADC. This is 1/21 numbered Section 7
+  items. The published proof, rather than its theorem statement, is marked
+  incomplete; report 35 records the exact repair and local trust checks.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, Section 7 ADC classification, Section 8 global proofs, and the enumerative
-main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
+Section 5, the remaining 20 Section 7 items, Section 8 global proofs, and the
+enumerative main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.
 
 No completed-paper percentage is inferred from the number of declarations:

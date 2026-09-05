@@ -118,6 +118,15 @@ Additional concrete declaration groups are:
 - `He2023ADCRemark63` identifies the exceptional coefficient when `e=1`,
   constructs the alternate tail BONG, and proves the actual integral lattice
   isometry asserted by Remark 6.3.
+- `He2023ADCQuaternaryBoundaryNonThree` proves that the omitted second-column
+  binary boundary lattice is not 3-ADC using an actual maximal ternary target.
+- `He2023ADCQuaternaryBoundaryClassification` proves the complete
+  second-discriminant rank-four classification and exports the corrected
+  three-way binary classification `heADC2025Theorem62_binary_corrected`.
+- `NADCMonotonicity` proves integral-isometry invariance and descent from
+  `(n+1)`-ADC to `n`-ADC by adjoining an integral orthogonal line.
+- `He2023ADCTheorem71` exports `Bong.Lattice.heADC2025Theorem71`, the complete
+  arbitrary-lattice statement with the omitted `n=3` branch repaired.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

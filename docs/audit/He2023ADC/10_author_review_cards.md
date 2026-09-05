@@ -82,3 +82,12 @@ Report 24 adds the card for Lemma 6.8(v),(vi). In particular, confirm that
 the fixed Delta is intended to belong to U before the literal exclusion
 V minus {1,Delta}. Review the three actual tests, signed-defect argument
 and return to the original parameter after internal normalization.
+
+Report 35 adds the card for Theorem 7.1. Reviewers should confirm that the
+publisher proof's invocation of Theorem 6.2 at `n-1=2` omits the additional
+`W_2^4(Delta)` boundary class; that the corrected three-way classification
+exhausts both ambient columns and all parameter square classes; that both
+nonmaximal classes are excluded by actual not-3-ADC theorems; and that the
+odd `n>=5` branch invokes only the valid stable restriction. The theorem
+statement is provisionally matched, but the publisher proof remains marked
+`INCOMPLETE_PROOF` pending human confirmation.

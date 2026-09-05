@@ -121,3 +121,18 @@ published `n=2` biconditional. Hence the unrestricted source theorem is
 `SEMANTIC_MISMATCH`, not merely incomplete. `heADC2025Remark63` proves the
 actual integral isometry in the published remark, rather than only coefficient
 or square-class equality.
+
+Report 35 proves a corrected complete binary classification. Every rank-four
+2-ADC lattice is maximal, isometric to the published first-discriminant
+exception, or isometric to the additional second-discriminant boundary
+lattice. The result is stronger than the false published binary list only in
+the necessary corrective sense: it adds the independently realized omitted
+class and proves actual integral isometry in that branch.
+
+`heADC2025Theorem71` is `LOGICALLY_EQUIVALENT` to the complete published
+Theorem 7.1 over the paper's standing dyadic context. Its public endpoint
+retains exactly odd `n>=3` and rank `n+1`. The formal proof does not assume the
+false binary Theorem 6.2: it uses the corrected three-way classification at
+`n=3`, proves both nonmaximal classes are not 3-ADC, and uses only the valid
+`n>=4` restriction thereafter. The source statement therefore matches, while
+the source proof is recorded separately as `INCOMPLETE_PROOF`.

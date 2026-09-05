@@ -12,7 +12,7 @@ version.
 | 4 | Definition 4.1; Proposition 4.2; Remark 4.3; Lemmas 4.4--4.9; Remark 4.10; Lemmas 4.11, 4.12; Proposition 4.13; Lemma 4.14; Propositions 4.15, 4.16 | 16 | Dyadic space/table endpoints, representation reductions, maximal profiles, complete 4.13, and dyadic 4.14--4.16 proved in the scopes listed below; non-dyadic cases and unary testing remain pending |
 | 5 | Theorem 5.1; Lemmas 5.2--5.4 | 4 | Pending |
 | 6 | Theorems 6.1, 6.2; Remark 6.3; Lemmas 6.4--6.12 | 12 | Ten items are fully matched: Theorem 6.1, Remark 6.3, and Lemmas 6.4--6.7, 6.9--6.12. Lemma 6.8(i),(ii),(iii),(v),(vi) and `n>=4` of (iv) are proved, while its printed `n=2` clause is formally refuted. The `n>=4` restriction of Theorem 6.2 is proved, while its exact `n=2` biconditional is also formally refuted. All 12 items are therefore triaged; the two boundary mismatches are documented in reports 30--31 and 34 |
-| 7 | Theorems 7.1, 7.2; Remark 7.3; Theorem 7.4; Lemmas 7.5--7.15; Definition 7.16; Remark 7.17; Lemmas 7.18--7.20; Corollary 7.21 | 21 | Pending |
+| 7 | Theorems 7.1, 7.2; Remark 7.3; Theorem 7.4; Lemmas 7.5--7.15; Definition 7.16; Remark 7.17; Lemmas 7.18--7.20; Corollary 7.21 | 21 | Theorem 7.1 is fully formalized: its statement holds, but the published proof omits the second binary boundary class; the corrected three-way classification and both 3-ADC exclusions close the gap. The other 20 items are pending; report 35 |
 | 8 | Lemma 8.1; Theorem 8.2; Corollary 8.3; Lemma 8.4; Corollary 8.5 | 5 | Pending |
 | **Total** | **All directly numbered publisher items** | **78** | **Partial coverage; no whole-paper completion claim** |
 

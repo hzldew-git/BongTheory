@@ -63,3 +63,22 @@ and all six valid branches of Lemma 6.8. The published target is not silently
 altered: the source theorem remains `SEMANTIC_MISMATCH` at `n=2`, while the
 restricted theorem is recorded separately. Report 34 gives the formal and
 source-level evidence.
+
+## Incomplete published proof of Theorem 7.1
+
+The publisher's Theorem 7.1 on p. 1006 states the odd-rank equivalence
+correctly. Its proof descends from `n`-ADC to `(n-1)`-ADC and invokes the
+unqualified Theorem 6.2. At `n=3`, it lists and excludes only the
+`W_1^4(Delta)` exceptional lattice from Lemma 6.12. The additional
+`W_2^4(Delta)` nonmaximal 2-ADC class established above is not considered.
+
+At `c3e6092f05a0f3b2872fefbd21554cc5461104ce`, the formalization proves a
+corrected complete rank-four classification with both nonmaximal classes.
+It also proves that the omitted second class is not 3-ADC. The exact published
+Theorem 7.1 then follows: at `n=3` both exceptions are excluded, and at odd
+`n>=5` only the valid stable restriction of Theorem 6.2 is used.
+
+Accordingly, the theorem statement is `PROVISIONAL_MATCH`, while the printed
+proof is `INCOMPLETE_PROOF`. The formal target is not changed, and the false
+Lemma 6.8(iv) and Theorem 6.2 boundaries remain recorded as semantic
+mismatches. Report 35 gives the full source-to-formal correspondence.

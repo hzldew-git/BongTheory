@@ -140,3 +140,14 @@ semantics pending human confirmation. Its scope is recorded in report 14.
 Other open checks include the rank-one portion of Lemma 4.9(ii) and the
 remaining small-rank clauses of Section 3. This AI review is not human
 author or expert sign-off, and did not perform a clean-environment build.
+
+The downstream audit of Theorem 7.1 found that its published statement is
+not refuted by the Theorem 6.2 counterexample, but its printed proof is
+incomplete. At `n=3`, the proof lists only the first-discriminant exceptional
+lattice and omits the independently realized second-discriminant boundary.
+The formal repair is noncircular: it proves a corrected exhaustive three-way
+binary classification, proves the omitted class is not 3-ADC using the
+representation criterion, and uses only the valid stable Theorem 6.2 branch
+when `n>=5`. Report 35 records the exact theorem and remaining human-review
+questions. Theorem 7.2 and later results have not yet received this downstream
+audit.

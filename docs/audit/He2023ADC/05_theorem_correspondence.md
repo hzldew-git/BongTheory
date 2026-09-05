@@ -41,7 +41,8 @@
 | Lemma 6.10 | `Bong.BONG.GoodBONG.heADC2025Lemma610` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `382ef7a`; actual exceptional-lattice isometry after all four Beli classification conditions; report 33 |
 | Lemma 6.11 | `Bong.Lattice.heADC2025Lemma611` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `382ef7a`; public theorem assumes only 2-ADC and the printed ambient space, deriving all binary tests internally; report 33 |
 | Lemma 6.12 | `Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC`, `heADCExceptionalQuaternaryCandidate_not_is3ADC`, `heADCExceptionalQuaternaryCandidate_not_isOMaximal` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `cf9f83b`; actual exceptional lattice in `W_1^4(Delta)`, complete maximal-binary testing, terminal ternary obstruction and concrete `Q_2` nonvacuity; report 32; exact-revision clean CI and human approval pending |
-| Section 5, Sections 7--8 and remaining Section 1 results | none | Pending; downstream uses of the unqualified Theorem 6.2 require separate boundary audit |
+| Theorem 7.1 | `Bong.Lattice.heADC2025Theorem71` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `c3e6092`: the theorem statement is proved exactly for odd `n>=3` and rank `n+1`; the publisher proof is `INCOMPLETE_PROOF` because it omits the second binary boundary class, which the formal proof classifies and separately proves not 3-ADC; report 35 |
+| Section 5, Section 7 except Theorem 7.1, Section 8 and remaining Section 1 results | none | Pending; every downstream use of the unqualified Theorem 6.2 requires a separate boundary audit |
 
 The field restriction prevents claiming the full generality of Lemma 2.1.
 At checkpoint `976883e6cda7c17402c4c1f0bc768db555460eae`, all thirteen
