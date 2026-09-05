@@ -193,8 +193,8 @@ structure SectionFourKeyLemmaBounds
 
 /-- Condition 2.1(ii) at one boundary, stated directly with `A_i`. -/
 noncomputable def RepresentationDefectAt
-    (a : GoodBONG q L (n + 1)) (c : GoodBONG s N (n + 1))
-    (j : RepresentationIndex (n + 1) (n + 1)) : Prop :=
+    {m : Nat} (a : GoodBONG q L (m + 1)) (c : GoodBONG s N (n + 1))
+    (j : RepresentationIndex (m + 1) (n + 1)) : Prop :=
   a.representationAlpha c j ≤ a.truncatedPrefixDefect c 1 j.val j.val
 
 theorem representationDefectCondition_iff_forall_at
@@ -258,20 +258,20 @@ theorem representationAlpha_le_rightAlpha
 /-- The alpha version of `currentFallbackBound`, obtained by applying
 Lemma 2.11(ii) to the pair `a,c`. -/
 noncomputable def currentFallbackAlphaBound
-    (_a : GoodBONG q L (n + 1)) (c : GoodBONG s N (n + 1))
-    (j : RepresentationIndex (n + 1) (n + 1)) (hprev : 1 < j.val) :
+    {m : Nat} (_a : GoodBONG q L (m + 1)) (c : GoodBONG s N (n + 1))
+    (j : RepresentationIndex (m + 1) (n + 1)) (hprev : 1 < j.val) :
     WithTop ℚ :=
-  (((c.order ⟨j.val - 2, by have := j.lt_large; omega⟩ -
-      c.order ⟨j.val - 1, by have := j.lt_large; omega⟩ : Int) : ℚ) :
+  (((c.order ⟨j.val - 2, by have := j.le_small; omega⟩ -
+      c.order ⟨j.val - 1, by have := j.le_small; omega⟩ : Int) : ℚ) :
         WithTop ℚ) +
-    (c.alphaValue ⟨j.val - 2, by have := j.lt_large; omega⟩ : WithTop ℚ)
+    (c.alphaValue ⟨j.val - 2, by have := j.le_small; omega⟩ : WithTop ℚ)
 
 /-- The alpha version of `nextFallbackBound`, obtained by applying
 Lemma 2.11(i) to the pair `a,c`. -/
 noncomputable def nextFallbackAlphaBound
-    (a : GoodBONG q L (n + 1))
-    (j : RepresentationIndex (n + 1) (n + 1))
-    (hnext : j.val + 1 < n + 1) : WithTop ℚ :=
+    {m : Nat} (a : GoodBONG q L (m + 1))
+    (j : RepresentationIndex (m + 1) (n + 1))
+    (hnext : j.val + 1 < m + 1) : WithTop ℚ :=
   (((a.order ⟨j.val, j.lt_large⟩ - a.order ⟨j.val + 1, hnext⟩ :
       Int) : ℚ) : WithTop ℚ) +
     (a.alphaValue ⟨j.val, by omega⟩ : WithTop ℚ)

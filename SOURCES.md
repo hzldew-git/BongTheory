@@ -12,6 +12,9 @@ the exact local copies used for statement extraction and semantic audit.
 | Beli 2019 v2 | Constantin N. Beli, “Representations of quadratic lattices over dyadic local fields,” [arXiv:1905.04552v2](https://arxiv.org/abs/1905.04552v2), revised 30 May 2022 | 139-page arXiv v2 PDF | `1669C626A6D01AF297E07C2CB9584C5BD34F4CEE0F2B188EE0B351BD091C387C` |
 | Beli 2019 v2 source | Same work and version | arXiv v2 TeX source | `00D58B232A331E559D175C2DF383DE82A49BC7B044E035092B7AC96015858292` |
 | Beli 2020 | Constantin N. Beli, “Universal integral quadratic forms over dyadic local fields,” [arXiv:2008.10113v2](https://arxiv.org/abs/2008.10113v2), first submitted 23 August 2020 and revised 26 June 2022 | 19-page arXiv v2 PDF | `35ECB7CB20A42768A6F55D80E69D4699837419854FAB021515020CCC7488986C` |
+| He--Hu 2022 / published 2024 | Zilong He and Yong Hu, “On n-universal quadratic forms over dyadic local fields,” *Sci. China Math.* 67 (2024), 1481--1506, DOI [10.1007/s11425-022-2133-0](https://doi.org/10.1007/s11425-022-2133-0) | 26-page publisher version of record | `32CBF87286B6580B91DCF051CABF3C31C62D65098B7C75177B00C5FBCF1E24E6` |
+| He 2022 Classic / published 2024 | Zilong He, “On classic n-universal quadratic forms over dyadic local fields,” *manuscripta math.* 174 (2024), 559--595, DOI [10.1007/s00229-023-01516-0](https://doi.org/10.1007/s00229-023-01516-0) | 37-page publisher version of record | `51F3626A15692E2FF0BAAE62F0EBCC4B8BEE02052C4D3CB1EA579B02E17480C1` |
+| He 2023 ADC / published 2025 | Zilong He, “On n-ADC integral quadratic lattices over algebraic number fields,” *Doc. Math.* 30 (2025), no. 4, 981--1022, DOI [10.4171/DM/1003](https://doi.org/10.4171/DM/1003) | 42-page publisher version of record | `E26190C88B16624DCCB7F269C6C3FFDA02BC6830677A5BC0C8E0AD48A36E72D6` |
 
 The revised condition `(iii')` following Theorem 2.1 occurs in the audited
 2019 v2 source. It is represented by the separate public endpoint
@@ -27,3 +30,8 @@ The formal development also uses results from O'Meara's *Introduction to
 Quadratic Forms* where Beli invokes them. Only the results used by the proof
 chain are formalized; their locations and roles are documented in source
 comments and the audit reports.
+
+For the three He papers, publisher versions of record are the sole semantic
+authority. The comparison copies arXiv:2204.01997v2, arXiv:2206.04885v3, and
+arXiv:2306.00334v3 have separate hashes in the schema-2 paper manifests. The
+latter two were revised after publication and cannot override publisher text.

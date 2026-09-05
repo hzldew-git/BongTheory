@@ -740,8 +740,6 @@ import Bong.Bong.Beli2019Lemma93TailDefect
 import Bong.Bong.Beli2019Lemma93TailAlpha
 import Bong.Bong.Beli2019Lemma93TailRepresentation
 import Bong.Bong.Beli2019Lemma93TailCentral
-import Bong.Bong.Beli2019Lemma211Defect
-import Bong.Bong.Beli2019Lemma213Nonessential
 import Bong.Bong.Beli2019Lemma93TailConditions
 import Bong.Bong.Beli2019Lemma93Reduction
 import Bong.Bong.Beli2019RepresentationProblemReindex
@@ -1011,3 +1009,6 @@ import Bong.Papers.Beli2006
 import Bong.Papers.Beli2009
 import Bong.Papers.Beli2019
 import Bong.Papers.Beli2020
+import Bong.Papers.HeHu2022
+import Bong.Papers.He2022Classic
+import Bong.Papers.He2023ADC

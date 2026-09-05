@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "id": "he2022classic",
+  "canonicalName": "He 2022 Classic",
+  "assetStem": "He2022Classic",
+  "workYear": 2022,
+  "publicationYear": 2024,
+  "title": "On classic n-universal quadratic forms over dyadic local fields",
+  "author": "Zilong He",
+  "citation": "Zilong He, On classic n-universal quadratic forms over dyadic local fields, manuscripta math. 174 (2024), 559-595",
+  "doi": "https://doi.org/10.1007/s00229-023-01516-0",
+  "authoritativeSource": {
+    "authority": true,
+    "kind": "publisher-version-of-record",
+    "url": "https://link.springer.com/content/pdf/10.1007/s00229-023-01516-0.pdf",
+    "description": "37-page publisher PDF; version of record published online 24 October 2023",
+    "sha256": "51F3626A15692E2FF0BAAE62F0EBCC4B8BEE02052C4D3CB1EA579B02E17480C1",
+    "pageCount": 37,
+    "byteCount": 682938,
+    "versionDate": "2023-10-24",
+    "redistributable": false
+  },
+  "comparisonSources": [
+    {
+      "authority": false,
+      "kind": "post-publication-arxiv-revision",
+      "url": "https://arxiv.org/abs/2206.04885v3",
+      "description": "33-page arXiv v3 comparison copy, revised 25 December 2025 after publication",
+      "sha256": "5D1D24B13BDA98223B71A6857D1FD3708255A2158F9A14FEA826A5365646A052"
+    }
+  ],
+  "entryModule": "Bong.Papers.He2022Classic",
+  "auditModules": [
+    "BongTest.He2022ClassicAudit"
+  ],
+  "auditDirectory": "docs/audit/He2022Classic",
+  "sourceDelta": "docs/audit/He2022Classic/SOURCE_DELTA.md",
+  "coverageStatus": "IN_PROGRESS_THEOREM_1_1_PROVED_AND_PARTIAL_TESTING",
+  "semanticStatus": "PARTIAL_WITH_DISCLOSED_SOURCE_OBSTRUCTION",
+  "grade": "C",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "formalizedScope": [
+    "Classic integrality and classic n-universality",
+    "Theorem 1.1 proved equivalence for every source rank and n >= 2, with both parity branches",
+    "Classic maximality and existence of classic-maximal over-lattices",
+    "Abstract classic-maximal testing reduction",
+    "Local BONG proof chain in Sections 2-6, with source differences recorded separately",
+    "Theorem 1.5 local implication for n >= 2 and Corollary 6.3 even branch",
+    "Section 7 ambient exhaustion and Lemma 7.4 even-rank testing equivalence",
+    "Kernel-checked refutation of the literal Lemma 7.1(ii) disjunction when e > 1"
+  ],
+  "excludedScope": [
+    "Theorem 1.3 full minimality, odd-rank sufficiency, and complete published counting claims",
+    "Theorem 1.5 unary case and its global unramifiedness/discriminant conclusion",
+    "Literal Lemma 7.1(ii) and downstream claims requiring an unresolved source correction",
+    "Global consequences and independent human semantic sign-off"
+  ],
+  "reviewNotice": "Theorem 1.1 has a checked proof, not merely a proposition encoding. Theorem 1.5 is proved only locally for n >= 2. Theorem 1.3 and the global results remain incomplete; the false literal Lemma 7.1(ii) is disclosed and refuted, not assumed or silently repaired. Grade C describes partial coverage and is not a whole-paper certificate. The post-publication arXiv v3 copy is non-authoritative."
+}

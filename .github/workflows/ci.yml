@@ -15,36 +15,89 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-audit:
+  plan:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    outputs:
+      matrix: ${{ steps.shards.outputs.matrix }}
 
     steps:
       - name: Check out the exact revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - name: Build and audit the complete Bong namespace
+      - name: Test and run the comment-aware unfinished-proof check
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s scripts/ci -p 'test_*.py'
+          python3 -B scripts/ci/check_lean_proof_commands.py
+
+      - name: Plan complete Lean source coverage
+        id: shards
+        shell: bash
+        run: python3 -B scripts/ci/plan_lean_build_shards.py --github-output "$GITHUB_OUTPUT"
+
+  build-and-audit:
+    needs: plan
+    name: Build and audit ${{ matrix.shard.name }} (${{ matrix.shard.moduleCount }} modules)
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Build every module in this shard
         uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
         with:
           auto-config: false
           build: true
+          build-args: ${{ matrix.shard.buildModules }}
           use-mathlib-cache: true
-          axiom-audit: true
-          axiom-audit-root: Bong
-          axiom-audit-allow: propext,Classical.choice,Quot.sound
 
-      - name: Reject unfinished proof commands
-        shell: bash
+      - name: Enforce transitive axiom bounds on production shards
+        if: ${{ matrix.shard.axiomGate }}
+        shell: pwsh
+        env:
+          SHARD_MODULES: ${{ matrix.shard.modules }}
         run: |
-          set -euo pipefail
-          if git grep -n -E '(^|[^[:alpha:]])sorry([^[:alpha:]]|$)|sorryAx|^[[:space:]]*axiom[[:space:]]' -- '*.lean'; then
-            echo 'Forbidden unfinished proof or project axiom found.' >&2
-            exit 1
-          fi
-
-      - name: Check public theorem signatures and axiom sets
-        run: lake env lean BongTest/FinalPublicTheoremAudit.lean
+          $ErrorActionPreference = 'Stop'
+          $arguments = @('scripts/ci/run_axiom_gate.py')
+          foreach ($module in ($env:SHARD_MODULES -split ' ')) {
+            if ($module) {
+              $arguments += '--entry'
+              $arguments += $module
+            }
+          }
+          python3 -B @arguments
+          if ($LASTEXITCODE -ne 0) {
+            exit $LASTEXITCODE
+          }
 
       - name: Verify clean generated state
         shell: bash
         run: test -z "$(git status --porcelain)"
+
+  axiom-gate-fixtures:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Negatively test the enforcing gate
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          auto-config: false
+          build: true
+          build-args: BongTest.AxiomGate
+          use-mathlib-cache: true
+
+      - name: Run actual positive and negative fixtures
+        shell: bash
+        run: python3 -B scripts/ci/check_axiom_gate_fixtures.py

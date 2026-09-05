@@ -603,3 +603,7 @@ import BongTest.DiagonalTernaryRepresentationObstructionAudit
 import BongTest.DiagonalRepresentationParityAudit
 import BongTest.Beli2003Audit
 import BongTest.Beli2020Audit
+import BongTest.HeHu2022Audit
+import BongTest.He2022ClassicAudit
+import BongTest.He2023ADCAudit
+import BongTest.AxiomGate

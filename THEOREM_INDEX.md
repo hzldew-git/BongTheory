@@ -21,6 +21,13 @@ additional paper lemmas; the audit packages give the fuller maps.
 | Beli 2020, Theorem 3.1, literal text at first scale zero | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31Conditions_of_firstScaleOrder_eq_zero` | `Bong/Bong/BeliUniversalTheorem31Proof.lean` | `PROVISIONAL_MATCH` |
 | Beli 2020, Lemma 4.9 | `Bong.BONG.GoodBONG.beliUniversalLemma49` | `Bong/Bong/BeliUniversalLemma49.lean` | `PROVISIONAL_MATCH` |
 | Beli 2020, Corollary 4.10 | `Bong.BONG.GoodBONG.beliUniversalCorollary410` | `Bong/Bong/BeliUniversalCorollary410.lean` | `PROVISIONAL_MATCH` |
+| He--Hu, Theorem 1.1 | `Bong.BONG.GoodBONG.HeHuTheorem11Statement` | `Bong/Bong/HeHu2022Conditions.lean` | `STATEMENT_ONLY_UNPROVED` |
+| He--Hu, Theorem 1.2 maximal-testing core | `Bong.Lattice.heHuMaximalTestingReduction` | `Bong/Papers/HeHu2022.lean` | `PROVED_ABSTRACT_CORE_ONLY` |
+| He classic, Theorem 1.1 | `Bong.BONG.GoodBONG.HeClassicTheorem11Statement` | `Bong/Bong/He2022ClassicConditions.lean` | `STATEMENT_ONLY_UNPROVED` |
+| He classic, abstract maximal-testing reduction | `Bong.Lattice.heClassicMaximalTestingReduction` | `Bong/Papers/He2022Classic.lean` | `PROVED_FOUNDATION_ONLY` |
+| He ADC, Definition 1.1(ii), local dyadic specialization | `Bong.Lattice.IsNADC` | `Bong/Lattice/NADC.lean` | `DEFINITION_PENDING_SEMANTIC_SIGNOFF` |
+| He ADC, Lemma 2.1, local dyadic specialization | `Bong.Lattice.heADCLemma21LocalDyadic` | `Bong/Papers/He2023ADC.lean` | `PROVED_SPECIALIZATION_ONLY` |
+| He ADC, Lemma 6.12 | `Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC`, `heADCExceptionalQuaternaryCandidate_not_is3ADC`, `heADCExceptionalQuaternaryCandidate_not_isOMaximal` | `Bong/Bong/He2023ADCExceptionalQuaternaryNonThree.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 
 All listed endpoints have zero project-specific law/data parameters in their
 public signatures. The theorem-level status is provisional solely because the
