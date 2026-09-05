@@ -36,3 +36,11 @@ away from one named lattice. Anisotropy proves actual non-representation in
 that class. Both its class and its `A perp A^(pi)` presentation are integral
 lattice isometries. This logically equivalent dyadic restriction is strictly
 narrower than the whole published local-field proposition.
+
+Lemma 6.4's four endpoints are necessary conditions, not converse ADC
+classifications. Each uses the actual named maximal tests. Parts (i) and
+(iii) retain equal source and target rank; parts (ii) and (iv) derive that
+equal rank is impossible. The exact raw defect and all final-order
+alternatives are retained. The short-rank exclusions are exactly those of
+the named spaces, not a new stable-rank restriction. Report 17 gives the
+result-level correspondence and existing-index convention.

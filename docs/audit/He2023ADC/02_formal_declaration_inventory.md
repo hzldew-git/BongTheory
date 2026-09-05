@@ -27,6 +27,18 @@ Additional concrete declaration groups are:
   half-hyperbolic plane; the quaternary exception is precisely `N_2^4(1)`;
   `heADC2025Proposition416Dyadic` includes its integral `A perp A^(pi)` model.
   `heADCAForm_bilin_apply` verifies the exact published Gram normalization.
+- `He2023ADCEvenRepresentationBounds`: represented endpoint pairs, the strict
+  cross-gap square conclusion including codimension one, and a two-class
+  next-order bound. These are support lemmas, not separate paper results.
+- `He2023ADCEvenFirstTests`: constructed good BONGs on the actual first-column
+  tests, their determinant separation, and `heADC2025Lemma64ii`.
+- `He2023ADCEvenFirstDefects`: `heADC2025Lemma64i`, including exact raw
+  signed-prefix defects and the equal-rank unconditional order conclusion.
+- `He2023ADCEvenSecondTests`: `heADC2025Lemma64iii`, including the empty-head
+  binary discriminant case and the exact three final-pair alternatives.
+- `He2023ADCEvenMixedTests`: the two actual kappa profiles and
+  `heADC2025Lemma64iv` for all five named tests, deriving the strict rank
+  inequality and next order in `{0,1,2}`.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

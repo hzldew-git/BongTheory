@@ -26,6 +26,9 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Definition 1.1(ii) | local dyadic predicate | formalized |
 | He ADC Lemma 2.1 | local dyadic maximal-testing reduction | proved specialization |
 | He ADC Lemmas 4.11-4.12 | public W/N families and all maximal order-profile branches | proved; independent AI review completed, human review pending |
+| He ADC Proposition 4.13 | all three clauses for arbitrary odd-rank maximal lattices | local kernel and independent AI checks complete; clean-kit CI pending |
+| He ADC Proposition 4.16 | both dyadic clauses, with the exact integral exceptional model | dyadic specialization locally checked and AI-reviewed; non-dyadic part and clean-kit CI pending |
+| He ADC Lemma 6.4 | all four even-rank testing clauses on the actual named lattices | local kernel checks complete; report 17 records semantic review; clean-kit CI and release promotion pending |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1; affected statements remain

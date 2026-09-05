@@ -14,6 +14,9 @@
 | arbitrary-lattice equivalence on a specified table space | `GoodBONG.HeADCMaximalProfileCriterion` |
 | unary `W_1^1(c)` and its maximal lattice | `heADCW1Unary`, `heADCN1Unary` |
 | finite integral defect index `d(c)` in the nonexceptional unit rows | integer cast of `(quadraticDefect K c).toNat`, with finiteness proved from `HeHuSharpDomain` |
+| signed even n-prefix in Lemma 6.4, n=2k+2 | `(-1 : Kˣ) ^ (k+1) * a.prefixProduct (2*k+2)` |
+| raw defect in Lemma 6.4(i)(iv) | `Dyadic.quadraticDefect K`, valued in extended naturals with infinity retained |
+| unit kappa in Lemma 6.4(iv) | valuation unit with raw defect the finite natural `2*e-1`; its sharp domain is proved |
 
 The `*Published` endpoints use the named `heADCW*` and `heADCN*` families
 directly. `isIsometric_publishedModel_iff_orderProfile` transports the concrete

@@ -37,7 +37,7 @@
   ],
   "auditDirectory": "docs/audit/He2023ADC",
   "sourceDelta": "docs/audit/He2023ADC/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_SECTION_3_AND_DYADIC_SECTION_4",
+  "coverageStatus": "IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_TESTING",
   "semanticStatus": "PARTIAL_LOCAL_DYADIC_SPECIALIZATION",
   "grade": "C",
   "expectedAxioms": [
@@ -56,13 +56,14 @@
     "The coordinate formula in Remark 4.10, ten concrete-model profile criteria, and thirteen published W/N branches for Lemmas 4.11-4.12 including rank one, with auxiliary defect and unit conditions proved",
     "All three clauses of Proposition 4.13 for arbitrary odd-rank maximal lattices, including rank three and the capped-defect equalities",
     "Dyadic maximal-implies-ADC and equal-rank equivalence in Lemma 4.14 and Proposition 4.15",
-    "Both clauses of Proposition 4.16 over dyadic fields, including the exact half-hyperbolic representation exception and integral identification with A orthogonal sum pi-scaled A"
+    "Both clauses of Proposition 4.16 over dyadic fields, including the exact half-hyperbolic representation exception and integral identification with A orthogonal sum pi-scaled A",
+    "All four clauses of Lemma 6.4 on the actual named maximal tests, including the binary boundaries, exact raw defects, and internally derived profiles, determinant separation and rank inequalities; local kernel checks complete, exact-revision clean-kit CI still pending"
   ],
   "excludedScope": [
     "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
-    "Non-dyadic local results, Section 6-7 ADC classification, and Section 8 global and enumerative proofs",
+    "Non-dyadic local results, the remaining Section 6-7 ADC classification, and Section 8 global and enumerative proofs",
     "Remaining Section 4 clauses, including non-dyadic Proposition 4.16 and unary testing-set minimality",
     "Completion of theorem-by-theorem semantic review and independent human sign-off"
   ],
-  "reviewNotice": "This is an in-progress paper kit. Concrete proofs currently cover the dyadic foundations and selected Section 4 results. Global reductions still require explicit arithmetic premises; the local ADC classifications and enumeration are not complete. See the correspondence report for exact endpoint scope."
+  "reviewNotice": "This is an in-progress paper kit. Concrete proofs cover the dyadic foundations, selected Section 4 results and all four clauses of Lemma 6.4. Global reductions still require explicit arithmetic premises; the local ADC classifications and enumeration are not complete. Local proof checks are distinct from exact-revision clean-kit CI and release promotion. See the correspondence report for exact endpoint scope."
 }

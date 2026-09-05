@@ -40,3 +40,14 @@ The extra field restriction is substantive: the published proposition also
 includes non-dyadic local fields. Its exception is an integral isometry class,
 not equality of arbitrarily chosen representatives. The factor pi scales
 the form, not the lattice vectors. See report 16.
+
+Lemma 6.4 assumes actual integral representations of its named maximal
+tests. Their good BONGs, profiles, determinant separation and completion data
+are constructed internally. The rank inequality is derived. In part (i),
+the positive next-order statement is conditional on the existence of its
+index, while the unconditional order statement includes equal rank. In
+parts (ii) and (iv), the two different determinant classes imply strictly
+larger source rank. Part (iii)'s named-space domain excludes exactly the
+undefined binary square row. Part (iv)'s unit kappa and defect `2e-1` are
+the parameters explicitly specified by the paper; sharp-domain membership
+and both last-order formulas are not added hypotheses. See report 17.

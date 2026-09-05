@@ -6,6 +6,9 @@ its assumptions, boundary checks, and unsigned approval fields, is in
 The corresponding card for dyadic Proposition 4.16, including exact Gram
 normalization, the integral exceptional class and form scaling, is in
 `16_quaternary_maximal_checkpoint.md`.
+The result-level card for Lemma 6.4, including raw versus capped defects,
+derived ranks, all five tests and the binary boundary, is in
+`17_even_testing_checkpoint.md`.
 
 1. Confirm the direction and meaning of ambient quadratic-space representation.
 2. Confirm source integrality is part of the local predicate rather than only a

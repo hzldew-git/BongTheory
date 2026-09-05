@@ -1,6 +1,6 @@
 # Coverage report
 
-Coverage status: `IN_PROGRESS_SECTION_3_AND_DYADIC_SECTION_4`.
+Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_TESTING`.
 
 - Publisher inventory: 78/78 directly numbered items identified.
 - Local dyadic definition, maximal testing, maximal-implies-ADC, equal-rank
@@ -16,12 +16,16 @@ Coverage status: `IN_PROGRESS_SECTION_3_AND_DYADIC_SECTION_4`.
   hyperbolic representation exception and its explicit integral model.
   The whole published proposition is `SPECIAL_CASE_ONLY`, since its
   non-dyadic part is not supplied by the current field context.
+- Section 6 has local kernel-complete proofs of all four clauses of
+  Lemma 6.4, on the actual named tests and including their short-rank
+  boundaries. This is one numbered lemma, not four paper results, and it
+  does not complete either of the even ADC classification theorems.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Sections 5--7 ADC classification, Section 8 global proofs, and the enumerative
+Section 5, the remaining Sections 6--7 ADC classification, Section 8 global proofs, and the enumerative
 main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.
 

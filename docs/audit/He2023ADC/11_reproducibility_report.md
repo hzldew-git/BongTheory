@@ -43,3 +43,14 @@ entry and complete audit also passed local compilation. All six new queried
 axiom sets contain only the three standard axioms. This check used the same
 existing dependency worktrees; the older remote artifact contains neither
 Proposition 4.13 nor this Proposition 4.16 addition. It cannot certify them.
+
+## Later even-testing checkpoint
+
+Code `d94cc797ad8ed83c53447c139b496d5a2ca8f4fb` additionally includes
+all four clauses of Lemma 6.4. The new modules, canonical entry and expanded
+audit passed local checks with twenty standard-only axiom reports. These
+checks still use the existing modified dependency worktrees. Neither the
+published-profile CI artifact nor the earlier local quaternary Review Kit
+contains Lemma 6.4. Its own source-only kit and exact-revision clean-kit CI
+are separate reproducibility obligations; no earlier green result is reused
+as certification of these later proofs.

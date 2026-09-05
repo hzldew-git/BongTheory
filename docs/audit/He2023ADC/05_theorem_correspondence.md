@@ -25,7 +25,8 @@
 | Proposition 4.13 | `Bong.BONG.GoodBONG.heADC2025Proposition413` | `FULLY_FORMALIZED`, semantic `PROVISIONAL_MATCH`: all three clauses for every odd rank at least three; exact capped-defect bounds and equality retained |
 | Lemma 4.14, Proposition 4.15 | `heADCLemma414LocalDyadic`, `heADCProposition415LocalDyadic` | Proved dyadic specializations |
 | Proposition 4.16 | `Bong.Lattice.heADC2025Proposition416Dyadic` and `Bong.heADCN2QuaternaryOne_isIsometric_A_product_scaledA` | `SPECIAL_CASE_ONLY` for the published proposition; dyadic restriction `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` after independent AI review, with integral representations and the exact half-scaled Gram normalization |
-| Sections 5--8, remaining Section 1 results | none | Pending |
+| Lemma 6.4(i)--(iv) | `Bong.BONG.GoodBONG.heADC2025Lemma64i`, `heADC2025Lemma64ii`, `heADC2025Lemma64iii`, `heADC2025Lemma64iv` | Local proof coverage `FULLY_FORMALIZED`, semantic `PROVISIONAL_MATCH` after independent AI review of all four clauses; report 17 records scope; exact-revision clean-kit CI and human approval remain pending |
+| Section 5, remaining Sections 6--8 and Section 1 results | none | Pending |
 
 The field restriction prevents claiming the full generality of Lemma 2.1.
 At checkpoint `976883e6cda7c17402c4c1f0bc768db555460eae`, all thirteen

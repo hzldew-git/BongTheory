@@ -39,7 +39,7 @@ branch commit `db0398506b2e242288bc979217972c6a1d175674`.
 | Paper | Independently verified CI artifact | Scope of this checkpoint |
 |---|---|---|
 | He--Hu 2022 | [Download He--Hu checkpoint](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783/artifacts/9958197730) | Published-paper development and audit; human semantic sign-off remains pending |
-| He 2023 ADC | [Download ADC checkpoint](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783/artifacts/9958233657) | Partial paper, including all published Lemma 4.11-4.12 profiles; does not include the later Proposition 4.13 addition |
+| He 2023 ADC | [Download ADC checkpoint](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783/artifacts/9958233657) | Partial paper, including all published Lemma 4.11-4.12 profiles; does not include later Proposition 4.13, dyadic Proposition 4.16 or Lemma 6.4 |
 
 These are temporary workflow artifacts with 30-day retention, not permanent
 Release assets. Consult the [workflow run](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783)

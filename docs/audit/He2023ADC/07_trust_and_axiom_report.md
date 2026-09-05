@@ -1,5 +1,13 @@
 # Trust and axiom report
 
+At checkpoint `d94cc797ad8ed83c53447c139b496d5a2ca8f4fb`, all four
+Lemma 6.4 modules, the canonical entry and complete audit pass local checks.
+Twenty newly queried axiom sets across the four modules contain exactly
+`propext`, `Classical.choice`, and `Quot.sound`; the earlier three support
+queries also contain only these axioms. The public endpoints do not retain
+caller-supplied profiles, determinant separation or project-law premises.
+The separate exact-revision clean-kit CI gate remains open; see report 17.
+
 At checkpoint `5fff59784a0a3dd4442405f204519c36e0a8e468`, the new
 quaternary module, canonical entry and complete audit passed local compilation.
 The six new queried endpoints, including the full dyadic Proposition 4.16,
@@ -7,7 +15,7 @@ report exactly `propext`, `Classical.choice`, and `Quot.sound`. Their public
 signatures contain no auxiliary project-law or good-BONG premise. The new
 file contains no admitted proof, custom axiom or native-evaluation mechanism.
 
-At the later checkpoint `9c432a685c96c134b12664800464ae4b1d0d6eec`,
+At the earlier checkpoint `9c432a685c96c134b12664800464ae4b1d0d6eec`,
 `exists_heADCOddNormalizedAmbient`, `heADCOddMaximal_orders`, and
 `heADC2025Proposition413` also report exactly `propext`, `Classical.choice`,
 and `Quot.sound`. Their full types contain no separate project-law parameter

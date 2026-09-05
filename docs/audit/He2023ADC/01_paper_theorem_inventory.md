@@ -11,7 +11,7 @@ version.
 | 3 | Lemma 3.1; Corollary 3.2; Propositions 3.3--3.5; Theorem 3.6 | 6 | Direct proved endpoints for all six items; source-to-type audit remains provisional |
 | 4 | Definition 4.1; Proposition 4.2; Remark 4.3; Lemmas 4.4--4.9; Remark 4.10; Lemmas 4.11, 4.12; Proposition 4.13; Lemma 4.14; Propositions 4.15, 4.16 | 16 | Dyadic space/table endpoints, representation reductions, maximal profiles, complete 4.13, and dyadic 4.14--4.16 proved in the scopes listed below; non-dyadic cases and unary testing remain pending |
 | 5 | Theorem 5.1; Lemmas 5.2--5.4 | 4 | Pending |
-| 6 | Theorems 6.1, 6.2; Remark 6.3; Lemmas 6.4--6.12 | 12 | Pending |
+| 6 | Theorems 6.1, 6.2; Remark 6.3; Lemmas 6.4--6.12 | 12 | All four clauses of Lemma 6.4 pass local kernel checks; exact-revision clean CI and human approval pending; all other items remain pending |
 | 7 | Theorems 7.1, 7.2; Remark 7.3; Theorem 7.4; Lemmas 7.5--7.15; Definition 7.16; Remark 7.17; Lemmas 7.18--7.20; Corollary 7.21 | 21 | Pending |
 | 8 | Lemma 8.1; Theorem 8.2; Corollary 8.3; Lemma 8.4; Corollary 8.5 | 5 | Pending |
 | **Total** | **All directly numbered publisher items** | **78** | **Partial coverage; no whole-paper completion claim** |

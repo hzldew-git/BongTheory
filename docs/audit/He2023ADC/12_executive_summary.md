@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`5fff59784a0a3dd4442405f204519c36e0a8e468`.
+`d94cc797ad8ed83c53447c139b496d5a2ca8f4fb`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -26,6 +26,12 @@ exact representation exception is accompanied by the integral isometry
 Gram matrix verified. Report 16 records this specialization; the published
 proposition also includes non-dyadic fields and is not complete as a whole.
 
+All four clauses of Lemma 6.4 now pass local kernel and axiom checks. They
+use the actual named maximal tests, retain the exact defect/order conclusions,
+and cover the binary boundaries. Report 17 records independent review and
+the remaining clean-kit obligations. This is the even-testing lemma, not
+completion of Theorems 6.1--6.2 or the whole Section 6 classification.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
 have not been supplied. Non-dyadic results, the ADC classifications in
@@ -35,6 +41,6 @@ Semantic status: provisional, with unsigned human review cards and remaining
 semantic checks elsewhere in the paper. Trust status: the new concrete endpoints use only the
 standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the published-profile tree passed clean-kit CI in run
-33929872783; the later Proposition 4.13 and dyadic 4.16 proofs passed local checks but
-still requires its own clean-kit run. Coverage grade: C. Whole-paper verdict:
+33929872783; the later Proposition 4.13, dyadic 4.16 and Lemma 6.4 proofs
+passed local checks but still require their own clean-kit run. Coverage grade: C. Whole-paper verdict:
 `NOT_COMPLETE`.

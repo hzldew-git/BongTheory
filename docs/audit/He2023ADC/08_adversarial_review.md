@@ -1,5 +1,16 @@
 # Adversarial review
 
+An independent read-only AI reviewer checked each frozen Lemma 6.4 clause
+through final code `d94cc797ad8ed83c53447c139b496d5a2ca8f4fb`. It confirmed
+all four clauses, the five actual tests, derived profiles and ranks, raw
+defects, both kappa columns, binary/e=1/codimension-one boundaries, and
+absence of circularity. It independently recompiled every new module with
+queries, each frozen entry and complete audit; all twenty new axiom sets
+were standard-only. It also checked that earlier clauses were unchanged at
+the final commit. Combined local proof coverage: `FULLY_FORMALIZED`;
+semantics: `PROVISIONAL_MATCH`. See report 17. Clean-kit CI and human
+sign-off remain separate, unfulfilled gates.
+
 The separate reviewer audited the frozen dyadic Proposition 4.16 code at
 `5fff59784a0a3dd4442405f204519c36e0a8e468` after independently extracting
 the published scope. No semantic blocker was found. Both directions of the
