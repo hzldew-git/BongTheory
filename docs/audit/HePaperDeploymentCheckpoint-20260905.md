@@ -101,6 +101,22 @@ The current ADC imported closure passes the enforcing gate on 57,453
 declarations. This remains a focused local check using the existing modified
 dependency worktrees, not the full-production CI result or a clean rebuild.
 
+Independent review at `e77a50bbf929d9d23533e4b07f11535d0c87040f` confirmed
+the enforcing command, all 11 fixtures, the 57,453-declaration ADC result,
+the 2,063 production/audit roots and the generated-kit wiring. It also checked
+five additional cases: opaque unfinished bodies, type-only dependencies,
+namespace-component boundaries, choice/quotient permission and a source-scan
+evasion that the enforcing gate correctly rejects.
+
+That review found that the supplemental scanner's primed-identifier guard
+still omitted `!`, `?` and Lean-specific Unicode continuation characters.
+The follow-up implements the pinned Lean 4.32.1 `isIdRest` predicate from
+`Init/Meta/Defs.lean`, rather than Python's different alphanumeric predicate.
+All 20 scanner tests now pass, including the complete custom-command probes
+for bang, question mark and representative Unicode endings. All 16 actual-Lean
+gate fixtures pass after adding the independent reviewer's five probes.
+The enforcing gate itself was not weakened or changed by this follow-up.
+
 ## Later independently selectable local package
 
 The ADC source-only package at clean commit
@@ -120,6 +136,15 @@ all 1930 payload hashes passed extraction checks. Archive SHA-256:
 `FB59500BB4911DE8F317E9CE56AE5EC67170E758BA97CEE7584D53F77BBCBCB6`.
 This is also structure-only and not uploaded. It predates the replacement
 enforcing gate and cannot certify that later deployment repair.
+
+The subsequent source-only `e77a50b` package includes the enforcing gate:
+`BongTheory-He2023ADC-checkpoint-20260905-enforcing-gate-review-kit.zip`.
+It has 1890 closure Lean sources, 1933 packaged files and 5768227 bytes;
+all 1932 payload hashes passed extraction checks. Archive SHA-256:
+`F1DAE1673BB68F876EFC2520A46BA697AEB994C452499B8E4B3234170FEE275C`.
+Its generated driver, checksum coverage, manifest and build-root wiring
+were independently inspected. It is not a clean-build certificate and
+predates both Lemma 6.7 and the later identifier-boundary scanner repair.
 
 PR 10 remains draft. No new merge, tag, final release or human semantic
 approval is certified here. Remaining Classic source-obstruction and ADC

@@ -30,6 +30,19 @@ def main() -> int:
         ("owned-outside", "axiom Outside.bad : False", "REJECT", "Outside.bad"),
         ("owned-private-unused", "namespace Bong\nprivate axiom bad : False\nend Bong",
          "REJECT", "bad"),
+        ("opaque", "opaque Bong.probe : False := by sorry", "REJECT", "sorryAx"),
+        ("type-only", "axiom Outside.badType : Prop\n"
+         "def Bong.probe : Outside.badType → Outside.badType := fun h => h",
+         "REJECT", "Outside.badType"),
+        ("namespace-component", "def Bongus.probe : Nat := 0", "EMPTY", None),
+        ("choice-and-quotient", "theorem Bong.probe (α : Type) (h : Nonempty α) "
+         "(r : α → α → Prop) (a b : α) (hab : r a b) : "
+         "Nonempty α ∧ Quot.mk r a = Quot.mk r b := ⟨⟨Classical.choice h⟩, Quot.sound hab⟩",
+         "PASS", None),
+        ("scanner-bang", 'namespace Bong\nsyntax "probeGate " ident str : command\n'
+         'macro_rules | `(probeGate $i:ident $s:str) => `(def $i : String := $s)\n'
+         'probeGate scannerProbe!\'"\'/-"\ntheorem ScannerProbe : True := by sorry\n-- -/\nend Bong',
+         "REJECT", "sorryAx"),
     ]
     for label, declaration, outcome, dependency in fixtures:
         scope = "#[(← Lean.getEnv).mainModule]" if label.startswith("owned-") else "#[`Bong]"

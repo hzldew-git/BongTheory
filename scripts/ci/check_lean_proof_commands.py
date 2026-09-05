@@ -20,6 +20,27 @@ RAW_START = re.compile(r'r(#+)?"')
 CHAR_LITERAL = re.compile(r"'(?:\\(?:u[0-9a-fA-F]{4}|x[0-9a-fA-F]{2}|.)|[^'\r\n])'")
 
 
+def lean_identifier_rest(char: str) -> bool:
+    """Lean 4.32.1 Init/Meta/Defs.lean isIdRest, including non-ASCII ranges.
+
+    Python's isalnum omits several Lean letter-like characters and Lean's
+    exclamation/question-mark continuations. A primed identifier must not
+    become a character literal merely because it touches a following string.
+    """
+    code = ord(char)
+    return (
+        "a" <= char <= "z" or "A" <= char <= "Z" or "0" <= char <= "9"
+        or char in "_'!?"
+        or (0x03B1 <= code <= 0x03C9 and code != 0x03BB)
+        or (0x0391 <= code <= 0x03A9 and code not in (0x03A0, 0x03A3))
+        or 0x03CA <= code <= 0x03FB or 0x1F00 <= code <= 0x1FFE
+        or 0x2100 <= code <= 0x214F or 0x1D49C <= code <= 0x1D59F
+        or (0x00C0 <= code <= 0x00FF and code not in (0x00D7, 0x00F7))
+        or 0x0100 <= code <= 0x017F or 0x2080 <= code <= 0x2089
+        or 0x2090 <= code <= 0x209C or 0x1D62 <= code <= 0x1D6A or code == 0x2C7C
+    )
+
+
 def mask_comments(source: str) -> str:
     """Mask comments, respecting quoted markers and nested block comments."""
     result = list(source)
@@ -79,10 +100,12 @@ def mask_comments(source: str) -> str:
         else:
             raw = RAW_START.match(source, index)
             char = CHAR_LITERAL.match(source, index)
-            if raw and (index == 0 or not (source[index - 1].isalnum() or source[index - 1] in "_'")):
+            boundary = index == 0 or not (lean_identifier_rest(source[index - 1])
+                                         or source[index - 1] == "»")
+            if raw and boundary:
                 raw_end = '"' + (raw.group(1) or "")
                 index = raw.end()
-            elif char and (index == 0 or not (source[index - 1].isalnum() or source[index - 1] in "_'»")):
+            elif char and boundary:
                 index = char.end()
             else:
                 index += 1

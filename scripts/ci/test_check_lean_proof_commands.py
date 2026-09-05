@@ -2,7 +2,7 @@
 
 import unittest
 
-from check_lean_proof_commands import findings, mask_comments
+from check_lean_proof_commands import findings, lean_identifier_rest, mask_comments
 
 
 class ProofCommandScanTests(unittest.TestCase):
@@ -52,14 +52,24 @@ class ProofCommandScanTests(unittest.TestCase):
             'import Lean\nnamespace Bong\n'
             'syntax "probeGate " ident str : command\n'
             'macro_rules | `(probeGate $i:ident $s:str) => `(def $i : String := $s)\n'
-            'probeGate scannerProbe\'"\'/-"\n'
         )
-        for statement, token in (
-            ("theorem ScannerProbe : True := by sorry", "sorry"),
-            ("axiom ScannerProbe : True", "axiom"),
-        ):
-            with self.subTest(token=token):
-                self.assertEqual(findings(prefix + statement + "\n-- -/\nend Bong"), [(6, token)])
+        for ending in ("", "!", "?", "℀", "ₐ", "ᵢ", "ⱼ", "𝒜", "α", "é", "Ā"):
+            command = 'probeGate scannerProbe' + ending + '\'"\'/-"\n'
+            for statement, token in (
+                ("theorem ScannerProbe : True := by sorry", "sorry"),
+                ("axiom ScannerProbe : True", "axiom"),
+            ):
+                with self.subTest(ending=ending, token=token):
+                    self.assertEqual(findings(prefix + command + statement + "\n-- -/\nend Bong"),
+                                     [(6, token)])
+
+    def test_lean_identifier_rest_boundaries(self):
+        for char in "aZ9_'!?αΩϻἀ℀𝒜éĀ₁ₐᵢⱼ":
+            with self.subTest(char=char):
+                self.assertTrue(lean_identifier_rest(char))
+        for char in "λΠΣ×÷ ()":
+            with self.subTest(char=char):
+                self.assertFalse(lean_identifier_rest(char))
 
     def test_quoted_forbidden_words_are_conservatively_reported(self):
         self.assertEqual(findings('def s := "sorry"'), [(1, "sorry")])
