@@ -32,6 +32,7 @@
 | Complete actual binary maximal testing at the n=2 boundary | PASS local and independent checks at 0aa3848; actual 2-ADC and nonmaximality proved, eight standard-only new queries, 80,790-declaration body traversal; report 30 |
 | Lemma 6.8(iv), printed n=2 implication | `SEMANTIC_MISMATCH`; its formal negation and concrete `Q_2` nonvacuity check pass at fe2a459; report 31; human confirmation and exact-revision clean CI pending |
 | Lemma 6.12, exceptional quaternary lattice | PASS local kernel, 16 new standard-only axiom queries, 57,886-declaration enforcing gate, full maximal-binary testing and concrete `Q_2` nonvacuity at cf9f83b; report 32; exact-revision clean CI and human approval pending |
+| Lemmas 6.9--6.11 | PASS local kernel at 382ef7a, ten new standard-only axiom queries, 57,918-declaration enforcing gate, actual kappa tests, four-condition classification and arbitrary-lattice Lemma 6.11; report 33; exact-revision clean CI and human approval pending |
 | Independent semantic sign-off | FAIL / pending |
 
 Completion verdict: `NOT_COMPLETE`.

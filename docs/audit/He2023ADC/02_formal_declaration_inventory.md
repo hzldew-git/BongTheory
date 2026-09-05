@@ -103,6 +103,12 @@ Additional concrete declaration groups are:
   prove 2-ADC and nonmaximality, and derive the terminal obstruction to 3-ADC.
 - `BongTest.He2023ADCExceptionalQuaternaryQ2` supplies a concrete field
   instance for all three final Lemma 6.12 conclusions.
+- `He2023ADCLemma69` proves the exact terminal-order dichotomy from the two
+  actual kappa tests, using the literal Theorem 3.6(iii) trigger.
+- `He2023ADCLemma610` verifies all four Beli classification conditions and
+  identifies every exceptional-profile lattice with the constructed model.
+- `He2023ADCLemma611` derives all four binary tests from 2-ADC-ness and exports
+  the published maximal-or-exceptional classification on arbitrary lattices.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

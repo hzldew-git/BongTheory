@@ -60,15 +60,23 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   proof exhausts the maximal binary catalogue and has a concrete `Q_2`
   nonvacuity check. Report 32 records the source-first audit, standard-only
   dependency sets, and the pending exact-revision clean-kit and human gates.
-  This raises Section 6 to 6/12 fully matched numbered items; it does not
-  prove Lemmas 6.9--6.11 or Theorem 6.2.
+  At that checkpoint Section 6 reached 6/12 fully matched numbered items.
+- Lemmas 6.9--6.11 are now locally kernel-complete at `382ef7a`. Lemma 6.9
+  proves the exact terminal dichotomy from the two actual kappa tests;
+  Lemma 6.10 checks all four Beli classification conditions and obtains
+  actual exceptional-lattice isometry; Lemma 6.11 derives all four binary
+  tests from 2-ADC-ness and proves the maximal-or-exceptional classification.
+  Report 33 records source correspondence and trust checks. This raises
+  Section 6 to 9/12 fully matched numbered items. Exact-revision package CI
+  and human sign-off remain separate gates. Theorem 6.2 and Remark 6.3 remain
+  pending, and the Lemma 6.8(iv) `n=2` mismatch remains unchanged.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, the remaining Section 6 results other than Lemma 6.12, Section 7
-ADC classification, Section 8 global proofs, and the enumerative
+Section 5, Theorem 6.2 and Remark 6.3, Section 7 ADC classification,
+Section 8 global proofs, and the enumerative
 main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.
 

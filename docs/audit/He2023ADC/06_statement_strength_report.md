@@ -99,3 +99,13 @@ profile, representation criterion, or assumed nonmaximality. The negative
 3-ADC endpoint proves failure against an actual maximal represented ternary
 target. Report 32 records the source-first correspondence. It does not imply
 Lemmas 6.9--6.11 or a repaired Theorem 6.2.
+
+Lemmas 6.9--6.11 are now `LOGICALLY_EQUIVALENT` to their complete published
+statements. Lemma 6.9 retains the actual two lattice-representation premises,
+not merely order or defect surrogates. Lemma 6.10 concludes integral lattice
+isometry with the constructed exceptional model after proving all four Beli
+classification conditions. The public Lemma 6.11 endpoint assumes only the
+literal 2-ADC condition and ambient `W_1^4(Delta)` isometry; its good BONG,
+kappa, and four maximal binary tests are constructed internally. These
+results do not repair the separate false boundary in Lemma 6.8(iv), so they
+do not by themselves certify Theorem 6.2. See report 33.

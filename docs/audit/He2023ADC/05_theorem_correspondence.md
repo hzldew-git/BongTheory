@@ -35,8 +35,11 @@
 | Lemma 6.8(iii) | `Bong.Lattice.heADC2025Lemma68iii` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `074f2cd`, including n=2; report 25; own clean CI and human approval pending |
 | Lemma 6.8(iv) | `Bong.Lattice.heADC2025Lemma68iv_of_pos`; `Bong.BONG.GoodBONG.not_heADC2025Lemma68ivBinaryStatement` | `PROVISIONAL_MATCH` for n>=4 at `074f2cd`; `SEMANTIC_MISMATCH` at n=2. The latter declaration proves the negation of the printed binary implication using an actual nonmaximal 2-ADC lattice; independently audited in reports 30--31 |
 | Lemma 6.8(v)--(vi) | `Bong.Lattice.heADC2025Lemma68v`, `heADC2025Lemma68vi` and their `Published` wrappers | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `b728bce`; actual original-parameter lattice isometry, n=2 included; printed V domain explicitly requires compatible Delta in U; report 24; with report 25 whole lemma 5/6, own clean CI and human approval pending |
+| Lemma 6.9 | `Bong.BONG.GoodBONG.heADC2025Lemma69` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `382ef7a`; exact terminal dichotomy, actual kappa tests and literal Theorem 3.6(iii) trigger; report 33 |
+| Lemma 6.10 | `Bong.BONG.GoodBONG.heADC2025Lemma610` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `382ef7a`; actual exceptional-lattice isometry after all four Beli classification conditions; report 33 |
+| Lemma 6.11 | `Bong.Lattice.heADC2025Lemma611` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `382ef7a`; public theorem assumes only 2-ADC and the printed ambient space, deriving all binary tests internally; report 33 |
 | Lemma 6.12 | `Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC`, `heADCExceptionalQuaternaryCandidate_not_is3ADC`, `heADCExceptionalQuaternaryCandidate_not_isOMaximal` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `cf9f83b`; actual exceptional lattice in `W_1^4(Delta)`, complete maximal-binary testing, terminal ternary obstruction and concrete `Q_2` nonvacuity; report 32; exact-revision clean CI and human approval pending |
-| Section 5, remaining Section 6 excluding Lemma 6.12, and Sections 7--8 and Section 1 results | none | Pending; the proof of Theorem 6.2 cannot be certified through Lemma 6.8(iv) as printed |
+| Section 5, Theorem 6.2 and Remark 6.3, Sections 7--8 and remaining Section 1 results | none | Pending; the proof of Theorem 6.2 cannot be certified through Lemma 6.8(iv) as printed |
 
 The field restriction prevents claiming the full generality of Lemma 2.1.
 At checkpoint `976883e6cda7c17402c4c1f0bc768db555460eae`, all thirteen

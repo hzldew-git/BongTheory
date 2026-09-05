@@ -107,9 +107,19 @@ catalogue, including both endpoints and normalized generic families; the
 least one half. A concrete `Q_2` module establishes nonvacuity. Sixteen new
 axiom reports have exactly the standard three dependencies, the enforcing
 gate checks 57,886 declarations, and the scanner covers 2,705 Lean files.
-This raises Section 6 to 6/12 fully matched numbered items. Exact-revision
-clean-kit CI and human sign-off remain pending, and Lemmas 6.9--6.11 and
-Theorem 6.2 are not supplied.
+This raised Section 6 to 6/12 fully matched numbered items at that checkpoint.
+
+Report 33 adds complete Lemmas 6.9--6.11 at `382ef7a`. Lemma 6.9 derives the
+published terminal-order dichotomy from actual represented kappa lattices;
+Lemma 6.10 verifies the four Beli classification conditions and proves actual
+exceptional-lattice isometry; Lemma 6.11 derives every binary test from the
+2-ADC hypothesis and exports the printed maximal-or-exceptional disjunction.
+The three modules, canonical entry, and full audit compile directly. Ten new
+axiom reports are standard-only, the enforcing gate checks 57,918
+declarations, and the scanner checks 2,708 tracked Lean files. Section 6 now
+has 9/12 fully matched numbered items. Exact-revision package CI and human
+sign-off remain pending. Theorem 6.2 and Remark 6.3 are not supplied, and the
+separate published Lemma 6.8(iv) mismatch is unchanged.
 
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs

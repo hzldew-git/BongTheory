@@ -117,3 +117,12 @@ The global `Theorem13Laws` parameter remains undischarged. Its absence from
 `#print axioms` is not evidence that the supplied arithmetic laws have been
 proved: explicit premises are not Lean axioms. Imported He--Hu and Beli
 results are reused, as the published ADC paper itself reuses those results.
+
+At checkpoint `382ef7ab3014e08834342ae8b806b15b33aaabb8`, the three new
+Lemmas 6.9--6.11 modules, canonical entry, and full audit compile directly.
+Ten newly queried declarations depend exactly on `propext`,
+`Classical.choice`, and `Quot.sound`. The focused enforcing gate checks
+57,918 declarations, and the comment-aware scanner checks 2,708 tracked Lean
+sources without finding a forbidden proof token outside comments. No public
+numbered endpoint retains a custom law, supplied classification condition,
+or assumed testing catalogue. Report 33 records the semantic boundary.

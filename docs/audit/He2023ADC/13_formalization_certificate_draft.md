@@ -28,6 +28,12 @@ Full Lemma 6.12 checkpoint: `cf9f83be635d6e459cfb429ad73b4c7a31f1ddf4`.
 Report 32 source-first audits the actual exceptional quaternary lattice as
 2-ADC, not 3-ADC, and nonmaximal, with sixteen standard-only axiom reports and
 a concrete `Q_2` nonvacuity entry.
+Full Lemmas 6.9--6.11 checkpoint:
+`382ef7ab3014e08834342ae8b806b15b33aaabb8`. Report 33 source-first audits
+the terminal dichotomy, the four-condition exceptional-lattice
+classification, and the arbitrary-lattice maximal-or-exceptional theorem.
+Ten new axiom reports are standard-only and the focused gate checks 57,918
+declarations.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -44,9 +50,9 @@ classifications, enumeration, or omitted boundary cases.
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
-through full Lemma 6.7. The later partial Lemma 6.8 revision has passed
-incremental checks, and the later full Lemma 6.12 revision has passed direct
-local checks; both still require exact-revision clean-kit CI. Exact
+through full Lemma 6.7. The later partial Lemma 6.8 revision and full Lemmas
+6.9--6.12 have passed direct local checks; they still require exact-revision
+clean-kit CI. Exact
 commit distinctions are in report 11. Overall project grade: D because one
 core source result has a substantive semantic mismatch. Whole-paper
 completion: not achieved.

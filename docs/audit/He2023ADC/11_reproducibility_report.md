@@ -215,3 +215,18 @@ the complete build and was cancelled by the configured timeout. It is not a
 green CI receipt. The successful sharded paper-kit run shows that the source
 closures are reproducible at f6f7485, while the monolithic workflow needs a
 sharded complete-coverage design before release.
+
+## Lemmas 6.9--6.11 checkpoint
+
+At exact code revision `382ef7ab3014e08834342ae8b806b15b33aaabb8`, the
+three numbered-result modules, `Bong.Papers.He2023ADC`, and
+`BongTest.He2023ADCAudit` compile directly with Lean 4.32.1. The focused
+transitive gate reports `AXIOM_GATE_PASS: 57918 declarations checked`, and
+the source scanner reports 2,708 tracked Lean files with no forbidden proof
+token outside comments. `git diff --check` and the 100-column check pass.
+
+The exact-revision standalone package workflow is
+[run 33981160696](https://github.com/hzldew-git/BongTheory/actions/runs/33981160696).
+Until it completes successfully, this paragraph records local checks only;
+it is not a clean GitHub runner or downloadable-artifact receipt. Report 33
+records the theorem-level scope.
