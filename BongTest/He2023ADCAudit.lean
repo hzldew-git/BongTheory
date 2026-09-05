@@ -223,3 +223,12 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADCEvenPenultimate_mixedDefect
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma65ii_of_orders
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma65ii
+
+#check @Bong.BONG.GoodBONG.heADCMaximal_represents_iff_diagonalRepresents
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankOne
+#check @Bong.BONG.GoodBONG.heADCCorankOne_uniformizerTest
+#check @Bong.BONG.GoodBONG.heADCEvenCorankOne_orders
+#print axioms Bong.BONG.GoodBONG.heADCMaximal_represents_iff_diagonalRepresents
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankOne
+#print axioms Bong.BONG.GoodBONG.heADCCorankOne_uniformizerTest
+#print axioms Bong.BONG.GoodBONG.heADCEvenCorankOne_orders

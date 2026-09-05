@@ -18,6 +18,7 @@ import Bong.Bong.He2023ADCEvenSecondTests
 import Bong.Bong.He2023ADCEvenMixedTests
 import Bong.Bong.He2023ADCEvenTerminalObstruction
 import Bong.Bong.He2023ADCEvenPenultimateObstruction
+import Bong.Bong.He2023ADCEvenCorankOneTests
 
 /-!
 # He: n-ADC integral quadratic lattices
