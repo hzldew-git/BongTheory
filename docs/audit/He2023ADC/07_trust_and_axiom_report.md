@@ -1,5 +1,13 @@
 # Trust and axiom report
 
+At `272d810ea2ca8bd0e19ac97f6d9cda1853502cde`, all three Theorem 6.1
+modules, the canonical entry and complete audit passed local and independent
+cached re-elaboration. All 12 new axiom queries are exactly `propext`,
+`Classical.choice`, and `Quot.sound`. The public arbitrary-lattice
+equivalence has no BONG, profile, ambient classification or law premise.
+The four supporting concrete corank-one test queries at `9fb5f14` have the
+same standard-only set. Report 19 separates these checks from clean CI.
+
 At audited checkpoint `9d6a4b103449e387d4c9d78de4899bd53e81e374`, both
 Lemma 6.5 clauses, the canonical entry and complete audit pass local and
 independent cached checks. Eight new queried declarations report exactly

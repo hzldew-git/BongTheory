@@ -6,7 +6,7 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `9d6a4b103449e387d4c9d78de4899bd53e81e374`,
+The current audited classification checkpoint is `272d810ea2ca8bd0e19ac97f6d9cda1853502cde`,
 branch `feat/he-formalization`, Lean 4.32.1, audited on 5 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
@@ -15,10 +15,12 @@ The dyadic specialization of both clauses of Proposition 4.16 is recorded
 in `16_quaternary_maximal_checkpoint.md`. Its non-dyadic scope remains open.
 The four clauses of Lemma 6.4 are recorded in `17_even_testing_checkpoint.md`.
 Both clauses of Lemma 6.5 are recorded in `18_even_obstruction_checkpoint.md`.
+The complete Theorem 6.1 is recorded in `19_even_corank_one_checkpoint.md`.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
-Section 4 endpoints and Lemmas 6.4--6.5 listed in `05_theorem_correspondence.md`. The global
+Section 4 endpoints, Theorem 6.1 and Lemmas 6.4--6.5 listed in
+`05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic
 premises still undischarged. This audit does not certify the missing local,
 global, or enumerative classifications.

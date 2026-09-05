@@ -12,6 +12,9 @@ derived ranks, all five tests and the binary boundary, is in
 The card for both clauses of Lemma 6.5, including exact failing indices,
 capped-defect endpoints and the repaired empty-head explanation, is in
 `18_even_obstruction_checkpoint.md`.
+The full Theorem 6.1 card, including the arbitrary-lattice equivalence,
+alternative volume proof and empty-head boundary, is in
+`19_even_corank_one_checkpoint.md`.
 
 1. Confirm the direction and meaning of ambient quadratic-space representation.
 2. Confirm source integrality is part of the local predicate rather than only a

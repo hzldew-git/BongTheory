@@ -51,3 +51,10 @@ not merely representation or the conjunction of all conditions. The proof
 of (ii) exports positivity, which suffices for the published conclusion;
 not exporting its optional numerical value 1/2 does not weaken the statement.
 Both actual target classes and arbitrary isometric copies are covered.
+
+Theorem 6.1 is `LOGICALLY_EQUIVALENT` to the complete dyadic published
+equivalence, for every even n >= 2 and arbitrary full lattice of rank n+1.
+No good BONG or order profile is assumed in its public endpoint. The
+alternative volume proof does not weaken the conclusion or assume the
+converse of Proposition 4.13. The supporting actual corank-one even case
+of Lemma 4.6(i) remains `SPECIAL_CASE_ONLY` for that whole lemma.

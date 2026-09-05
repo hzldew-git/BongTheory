@@ -68,3 +68,13 @@ Both modules, canonical entry, complete audit and eight new standard-only
 axiom checks passed locally and in independent cached review. None of the
 earlier kits or remote CI results contains these two additions. Report 18
 records the exact version boundary and pending clean-kit obligations.
+
+## Full even corank-one theorem checkpoint
+
+`272d810ea2ca8bd0e19ac97f6d9cda1853502cde` adds full Theorem 6.1 over
+the independently reviewed concrete tests at `9fb5f14`. All three new
+modules, 12 standard-only axiom queries, canonical entry and complete audit
+passed local and independent cached checks. Report 19 records exact scope.
+Neither the earlier published-profile remote artifact nor the local 6.4
+kit contains this theorem. Exact-revision clean-kit CI remains pending;
+local dependency-worktree warnings are not suppressed or reclassified.

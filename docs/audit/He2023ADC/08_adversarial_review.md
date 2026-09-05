@@ -1,5 +1,14 @@
 # Adversarial review
 
+Independent frozen-code review of Theorem 6.1 at `272d810` found no
+mismatch, hidden target assumption or circularity. It checked the arbitrary
+lattice endpoint, internal BONG construction, maximal-superlattice volume
+index argument, the direction of both actual ambient embeddings, all four
+normalized ambient rows, and n=2/e=1. All three modules, 12 queries, entry
+and full audit passed independent cached replay. The needed `9fb5f14`
+concrete-test support was separately reviewed and unchanged. Report 19
+records the provisional verdict and unsigned human approval fields.
+
 The independent frozen-code review of Lemma 6.5(i) at `2a5d3af` and (ii)
 at `9d6a4b` found no mismatch or circularity. It checked exact pointwise
 failure, both actual target classes, capped rather than raw defect bounds,

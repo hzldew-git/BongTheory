@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`9d6a4b103449e387d4c9d78de4899bd53e81e374`.
+`272d810ea2ca8bd0e19ac97f6d9cda1853502cde`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -29,23 +29,32 @@ proposition also includes non-dyadic fields and is not complete as a whole.
 All four clauses of Lemma 6.4 now pass local kernel and axiom checks. They
 use the actual named maximal tests, retain the exact defect/order conclusions,
 and cover the binary boundaries. Report 17 records independent review and
-the remaining clean-kit obligations. This is the even-testing lemma, not
-completion of Theorems 6.1--6.2 or the whole Section 6 classification.
+the remaining clean-kit obligations. Those testing clauses alone do not
+complete either classification theorem.
 
 Both clauses of Lemma 6.5 now also pass local checks and independent AI
 review. The conclusions identify the exact failing Theorem 3.6(ii)
 inequalities at n and n-1, with both named targets and n=2 covered. Report 18
 records the capped-defect argument and pending clean-kit obligations.
 
+Theorem 6.1 is now complete locally and independently AI-reviewed: for
+every even n >= 2 and arbitrary full lattice of rank n+1, n-ADC is
+equivalent to maximality. The endpoint constructs its own good BONG and
+retains no profile or law premise. The necessity proof uses actual tests,
+concrete ambient embeddings and a proved maximal-superlattice volume
+argument. Report 19 records the 12 new standard-only axiom queries and the
+n=2/e=1 checks. Section 6 now has 3/12 numbered items with complete local
+proofs, including 1/2 of its numbered classification theorems.
+
 Global definitions and regularity are present as abstract predicates. The
 global reductions still require arithmetic premises whose concrete proofs
-have not been supplied. Non-dyadic results, the ADC classifications in
+have not been supplied. Non-dyadic results, the remaining ADC classifications in
 Sections 6--7, global classifications and enumeration remain incomplete.
 
 Semantic status: provisional, with unsigned human review cards and remaining
 semantic checks elsewhere in the paper. Trust status: the new concrete endpoints use only the
 standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the published-profile tree passed clean-kit CI in run
-33929872783; the later Proposition 4.13, dyadic 4.16 and Lemmas 6.4--6.5 proofs
+33929872783; the later Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.5 and Theorem 6.1 proofs
 passed local checks but still require their own clean-kit run. Coverage grade: C. Whole-paper verdict:
 `NOT_COMPLETE`.

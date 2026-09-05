@@ -44,6 +44,14 @@ Additional concrete declaration groups are:
   `heADC2025Lemma65i`, with the precise failing index n.
 - `He2023ADCEvenPenultimateObstruction`: capped alternating and mixed-prefix
   bounds and `heADC2025Lemma65ii`, with the precise failing index n-1.
+- `He2023ADCEvenCorankOneTests`: actual exactly-one maximal tests in
+  Lemma 4.6(i)'s even corank-one specialization and the necessary ADC profile.
+- `He2023ADCCorankOneVolume`: maximal-superlattice volume gap and the
+  standard-tail maximality proof, not a converse of Proposition 4.13.
+- `He2023ADCCorankOneAmbient`: two concrete ambient embeddings and the
+  raised-tail exclusion of all but the second-column unit row.
+- `He2023ADCEvenCorankOne`: `Bong.Lattice.heADC2025Theorem61`, the complete
+  equivalence on arbitrary full lattices, constructing its BONG internally.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional

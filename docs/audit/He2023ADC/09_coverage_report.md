@@ -22,8 +22,13 @@ Coverage status: `IN_PROGRESS_DYADIC_FOUNDATIONS_AND_EVEN_TESTING`.
   does not complete either of the even ADC classification theorems.
 - Both clauses of Lemma 6.5 are also locally kernel-complete and independently
   AI-reviewed. They prove the two exact pointwise obstructions, not merely
-  non-representation. Thus two of Section 6's twelve numbered items have
-  complete local proofs; no classification theorem is completed by this count.
+  non-representation.
+- Theorem 6.1 is now locally complete and independently AI-reviewed: every
+  full lattice of rank n+1, for even n >= 2, is n-ADC iff it is maximal.
+  Thus 3/12 numbered Section 6 items have complete local proofs, including
+  1/2 of its numbered classification theorems. Theorem 6.2 remains pending.
+  The needed actual even corank-one case of Lemma 4.6(i) is also proved;
+  it does not complete all of Lemma 4.6.
 - Global predicates and regularity are defined in an abstract system, and
   the logical reductions are proved with explicit arithmetic premises.
 

@@ -12,7 +12,7 @@
 | Definition 4.1, Proposition 4.2, Remark 4.3 | `heADCW*`, `heADCN*`, including `heADCW1Unary` and `heADCN1Unary`, `heADC2025Proposition42*`, `heADC2025Remark43*` | Unary definitions now included; complete unary classification/counting and unrestricted field scope remain pending |
 | Lemma 4.4 | `heADC2025Lemma44*` | Table-index uniqueness and determinant/Hasse forms of the two representation criteria; parameter-form correspondence remains reviewable |
 | Lemma 4.5 | `heADC2025Lemma45i*`, `heADC2025Lemma45ii*` | Dyadic exactly-one representation results in both directions |
-| Lemma 4.6 | `IsNADC.representsExactlyOne_of_ambient`, `represents_every_of_ambient` | Proved lattice lifting; explicit table specialization still to be assembled |
+| Lemma 4.6 | `IsNADC.representsExactlyOne_of_ambient`, `represents_every_of_ambient`, `GoodBONG.heADC2025Lemma46iEvenCorankOne` | Generic lifting and the actual even corank-one exactly-one test are proved; `SPECIAL_CASE_ONLY` for the whole lemma; other table specializations remain |
 | Lemmas 4.7--4.8 | none | Non-dyadic scope pending |
 | Lemma 4.9(i) | `heADC2025Lemma49*` table-row endpoints | Maximality of the explicit dyadic models; Beli classification premise internally discharged |
 | Lemma 4.9(ii) | `heADC2025Lemma49iiEven`, `heADC2025Lemma49iiOdd` | Literal finite deletion-minimal testing sets for rank at least two; unary case pending |
@@ -27,6 +27,7 @@
 | Proposition 4.16 | `Bong.Lattice.heADC2025Proposition416Dyadic` and `Bong.heADCN2QuaternaryOne_isIsometric_A_product_scaledA` | `SPECIAL_CASE_ONLY` for the published proposition; dyadic restriction `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` after independent AI review, with integral representations and the exact half-scaled Gram normalization |
 | Lemma 6.4(i)--(iv) | `Bong.BONG.GoodBONG.heADC2025Lemma64i`, `heADC2025Lemma64ii`, `heADC2025Lemma64iii`, `heADC2025Lemma64iv` | Local proof coverage `FULLY_FORMALIZED`, semantic `PROVISIONAL_MATCH` after independent AI review of all four clauses; report 17 records scope; exact-revision clean-kit CI and human approval remain pending |
 | Lemma 6.5(i)--(ii) | `Bong.BONG.GoodBONG.heADC2025Lemma65i`, `heADC2025Lemma65ii` | Local proof coverage `FULLY_FORMALIZED`, semantic `PROVISIONAL_MATCH`; exact failing indices, both actual target classes and n=2 checked independently; report 18; clean-kit CI and human approval pending |
+| Theorem 6.1 | `Bong.Lattice.heADC2025Theorem61` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH`: arbitrary full lattice, even n >= 2, rank n+1, ADC iff maximal; no supplied BONG/profile/law; independent AI review at `272d810`; report 19; clean-kit CI and human approval pending |
 | Section 5, remaining Sections 6--8 and Section 1 results | none | Pending |
 
 The field restriction prevents claiming the full generality of Lemma 2.1.

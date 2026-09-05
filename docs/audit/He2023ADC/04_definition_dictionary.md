@@ -34,3 +34,8 @@ space, lattice and rank; it does not assume the desired equivalence.
 The source uses one-based indices. In Lean the even zero-based positions
 correspond to the source's odd positions, with order zero; the odd zero-based
 positions of a hyperbolic block have order `-2e`.
+
+In Theorem 6.1, O-maximal means maximal among norm-integral full lattices
+in the same quadratic space. A volume-order difference is twice a
+nonnegative inclusion index; it is not a count of BONG order profiles.
+The ADC and maximality predicates both include norm-integrality.

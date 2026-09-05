@@ -58,3 +58,10 @@ the two actual unit-uniformizer maximal classes. Part (ii) adds no next-order
 bound; the required bound follows from good-BONG monotonicity. Its defect
 bridge retains both alpha caps. The empty head at n=2 is not an additional
 positive-rank assumption. See report 18.
+
+Theorem 6.1 quantifies over arbitrary full lattices with even n >= 2 and
+rank n+1. It constructs the BONG and derives all testing and profile facts.
+Integrality belongs to both `IsNADC` and `IsOMaximal`; no extra field,
+profile, representative-system or classification-law premise is hidden.
+The universe parameters of ADC testing are explicitly `{u,u,u}`. Report 19
+records the independently expanded public statement.
