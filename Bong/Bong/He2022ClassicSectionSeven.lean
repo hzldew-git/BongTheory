@@ -5,6 +5,7 @@ Authors: BONG Theory contributors
 -/
 
 import Bong.Bong.He2022ClassicPublishedRepresentation
+import Bong.Bong.He2022ClassicLemma710
 import Bong.Bong.He2022ClassicLemma58
 import Bong.Bong.He2022ClassicTheorem51
 import Bong.Bong.HeHu2022Theorem12
@@ -732,6 +733,312 @@ theorem heClassicEvenC_oddOrder_literalPairProperties
   simpa only [delta, heClassicEvenC1, heClassicEvenC2,
     heClassicScaledHyperbolicTower_zero, heHuBinaryFirst,
     heHuBinaryTwist] using hpair
+
+/-- Lemma 7.10(iii), defect-one row: the next-rank `C₂` lattice is an
+integral deletion witness for the displayed `C₁` lattice. -/
+theorem he2022ClassicLemma710iii_defectOne_largeC2_misses_C1
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    (pairs : Nat) (c : Kˣ) (hcOrder : ordUnit K c = 0)
+    (hcDefect : defectOrder (K := K) c = (1 : WithTop ℚ)) :
+    let cSharp := heClassicDefectOneSharp (K := K) c hcDefect
+    ¬ (heClassicEvenC2Model (K := K) (pairs + 1) c cSharp
+        (by omega) (heClassicDefectOneSharp_order c hcDefect)).Represents
+      (heClassicEvenC1Model (K := K) pairs c (by omega)) := by
+  dsimp only
+  change ¬ Lattice.Represents
+    (BONG.coefficientDiagonalSpace
+      (heClassicEvenC2 (K := K) (pairs + 1) c
+        (heClassicDefectOneSharp (K := K) c hcDefect)))
+    (BONG.coefficientDiagonalSpace (heClassicEvenC1 (K := K) pairs c))
+    _ _
+  exact he2022ClassicLemma710iii_largeC2_misses_C1
+    pairs c (heClassicDefectOneSharp (K := K) c hcDefect)
+    (by omega) (heClassicDefectOneSharp_order c hcDefect)
+    (heClassicEvenC_pairProperties (K := K) pairs c hcDefect)
+    (heClassicEvenC_pairProperties (K := K) (pairs + 1) c hcDefect)
+
+/-- Lemma 7.10(iii), defect-one row: the next-rank `C₁` lattice is an
+integral deletion witness for the displayed `C₂` lattice. -/
+theorem he2022ClassicLemma710iii_defectOne_largeC1_misses_C2
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    (pairs : Nat) (c : Kˣ) (hcOrder : ordUnit K c = 0)
+    (hcDefect : defectOrder (K := K) c = (1 : WithTop ℚ)) :
+    let cSharp := heClassicDefectOneSharp (K := K) c hcDefect
+    ¬ (heClassicEvenC1Model (K := K) (pairs + 1) c (by omega)).Represents
+      (heClassicEvenC2Model (K := K) pairs c cSharp
+        (by omega) (heClassicDefectOneSharp_order c hcDefect)) := by
+  dsimp only
+  change ¬ Lattice.Represents
+    (BONG.coefficientDiagonalSpace
+      (heClassicEvenC1 (K := K) (pairs + 1) c))
+    (BONG.coefficientDiagonalSpace
+      (heClassicEvenC2 (K := K) pairs c
+        (heClassicDefectOneSharp (K := K) c hcDefect)))
+    _ _
+  exact he2022ClassicLemma710iii_largeC1_misses_C2
+    pairs c (heClassicDefectOneSharp (K := K) c hcDefect)
+    (by omega) (heClassicDefectOneSharp_order c hcDefect)
+    (heClassicEvenC_pairProperties (K := K) pairs c hcDefect)
+    (heClassicEvenC_pairProperties (K := K) (pairs + 1) c hcDefect)
+
+/-- For a defect-one table parameter, the large `C₂` witness integrally
+represents every classic target outside the small `C₁` ambient class. -/
+theorem he2022ClassicLemma710iii_defectOne_largeC2_represents_other
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    {V : Type v} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V}
+    (pairs : Nat) (c : Kˣ) (hcOrder : ordUnit K c = 0)
+    (hcDefect : defectOrder (K := K) c = (1 : WithTop ℚ))
+    (b : BONG.GoodBONG q L (2 * pairs + 2))
+    (hClassic : Lattice.IsClassicIntegral q L)
+    (hother : ¬ DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients b.valueUnit)
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC1 (K := K) pairs c))) :
+    let cSharp := heClassicDefectOneSharp (K := K) c hcDefect
+    Lattice.Represents
+      (BONG.coefficientDiagonalSpace
+        (heClassicEvenC2 (K := K) (pairs + 1) c cSharp))
+      q
+      (heHuExactRealization
+        (heClassicEvenC2 (K := K) (pairs + 1) c cSharp)
+        (heClassicEvenC2_adjacentAdmissible (pairs + 1) c cSharp
+          (by omega) (heClassicDefectOneSharp_order c hcDefect))
+        (heClassicEvenC2_weakTwoStep (pairs + 1) c cSharp
+          (by omega) (heClassicDefectOneSharp_order c hcDefect))).lattice
+      L := by
+  dsimp only
+  exact he2022ClassicLemma710iii_largeC2_represents_other
+    pairs c (heClassicDefectOneSharp (K := K) c hcDefect) 1
+    (by omega) (heClassicDefectOneSharp_order c hcDefect)
+    (Or.inr rfl) (by rw [hcOrder]; norm_num) (by simpa using hcDefect)
+    (heClassicEvenC_pairProperties (K := K) pairs c hcDefect)
+    (heClassicEvenC_pairProperties (K := K) (pairs + 1) c hcDefect)
+    b hClassic hother
+
+/-- For a defect-one table parameter, the large `C₁` witness integrally
+represents every classic target outside the small `C₂` ambient class. -/
+theorem he2022ClassicLemma710iii_defectOne_largeC1_represents_other
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    {V : Type v} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V}
+    (pairs : Nat) (c : Kˣ) (hcOrder : ordUnit K c = 0)
+    (hcDefect : defectOrder (K := K) c = (1 : WithTop ℚ))
+    (b : BONG.GoodBONG q L (2 * pairs + 2))
+    (hClassic : Lattice.IsClassicIntegral q L)
+    (hother : ¬ DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients b.valueUnit)
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC2 (K := K) pairs c
+          (heClassicDefectOneSharp (K := K) c hcDefect)))) :
+    Lattice.Represents
+      (BONG.coefficientDiagonalSpace
+        (heClassicEvenC1 (K := K) (pairs + 1) c))
+      q
+      (heHuExactRealization
+        (heClassicEvenC1 (K := K) (pairs + 1) c)
+        (heClassicEvenC1_adjacentAdmissible (pairs + 1) c (by omega))
+        (heClassicEvenC1_weakTwoStep (pairs + 1) c (by omega))).lattice
+      L := by
+  exact he2022ClassicLemma710iii_largeC1_represents_other
+    pairs c (heClassicDefectOneSharp (K := K) c hcDefect) 1
+    (by omega) (Or.inr rfl) (by rw [hcOrder]; norm_num)
+    (by simpa using hcDefect)
+    (heClassicEvenC_pairProperties (K := K) pairs c hcDefect)
+    (heClassicEvenC_pairProperties (K := K) (pairs + 1) c hcDefect)
+    b hClassic hother
+
+/-- Lemma 7.10(iii), odd-order row: the next-rank discriminant-twisted
+`C₂` lattice is an integral deletion witness for `C₁`. -/
+theorem he2022ClassicLemma710iii_oddOrder_largeC2_misses_C1
+    [HilbertSymbolLaws K] [DyadicDiscriminantClassLaws K]
+    (pairs : Nat) (c : Kˣ) (hcOrder : ordUnit K c = 1) :
+    let delta := (Dyadic.dyadicDiscriminantClassLawsProved
+      (K := K)).discriminantUnit
+    let hdeltaOrder : ordUnit K delta = 0 :=
+      (isValuationUnit_iff_ordUnit_eq_zero K _).1
+        (Dyadic.dyadicDiscriminantClassLawsProved
+          (K := K)).discriminant_isValuationUnit
+    ¬ (heClassicEvenC2Model (K := K) (pairs + 1) c delta
+        (by omega) hdeltaOrder).Represents
+      (heClassicEvenC1Model (K := K) pairs c (by omega)) := by
+  dsimp only
+  let delta := (Dyadic.dyadicDiscriminantClassLawsProved
+    (K := K)).discriminantUnit
+  have hdeltaOrder : ordUnit K delta = 0 :=
+    (isValuationUnit_iff_ordUnit_eq_zero K _).1
+      (Dyadic.dyadicDiscriminantClassLawsProved
+        (K := K)).discriminant_isValuationUnit
+  have hcOdd : Odd (ordUnit K c) := by
+    rw [hcOrder]
+    exact odd_one
+  change ¬ Lattice.Represents
+    (BONG.coefficientDiagonalSpace
+      (heClassicEvenC2 (K := K) (pairs + 1) c delta))
+    (BONG.coefficientDiagonalSpace (heClassicEvenC1 (K := K) pairs c))
+    _ _
+  exact he2022ClassicLemma710iii_largeC2_misses_C1
+    pairs c delta (by omega) hdeltaOrder
+    (by
+      simpa only [delta] using
+        (heClassicEvenC_oddOrder_literalPairProperties
+          (K := K) pairs c hcOdd))
+    (by
+      simpa only [delta] using
+        (heClassicEvenC_oddOrder_literalPairProperties
+          (K := K) (pairs + 1) c hcOdd))
+
+/-- Lemma 7.10(iii), odd-order row: the next-rank `C₁` lattice is an
+integral deletion witness for the displayed discriminant-twisted `C₂`. -/
+theorem he2022ClassicLemma710iii_oddOrder_largeC1_misses_C2
+    [HilbertSymbolLaws K] [DyadicDiscriminantClassLaws K]
+    (pairs : Nat) (c : Kˣ) (hcOrder : ordUnit K c = 1) :
+    let delta := (Dyadic.dyadicDiscriminantClassLawsProved
+      (K := K)).discriminantUnit
+    let hdeltaOrder : ordUnit K delta = 0 :=
+      (isValuationUnit_iff_ordUnit_eq_zero K _).1
+        (Dyadic.dyadicDiscriminantClassLawsProved
+          (K := K)).discriminant_isValuationUnit
+    ¬ (heClassicEvenC1Model (K := K) (pairs + 1) c (by omega)).Represents
+      (heClassicEvenC2Model (K := K) pairs c delta
+        (by omega) hdeltaOrder) := by
+  dsimp only
+  let delta := (Dyadic.dyadicDiscriminantClassLawsProved
+    (K := K)).discriminantUnit
+  have hdeltaOrder : ordUnit K delta = 0 :=
+    (isValuationUnit_iff_ordUnit_eq_zero K _).1
+      (Dyadic.dyadicDiscriminantClassLawsProved
+        (K := K)).discriminant_isValuationUnit
+  have hcOdd : Odd (ordUnit K c) := by
+    rw [hcOrder]
+    exact odd_one
+  change ¬ Lattice.Represents
+    (BONG.coefficientDiagonalSpace
+      (heClassicEvenC1 (K := K) (pairs + 1) c))
+    (BONG.coefficientDiagonalSpace
+      (heClassicEvenC2 (K := K) pairs c delta))
+    _ _
+  exact he2022ClassicLemma710iii_largeC1_misses_C2
+    pairs c delta (by omega) hdeltaOrder
+    (by
+      simpa only [delta] using
+        (heClassicEvenC_oddOrder_literalPairProperties
+          (K := K) pairs c hcOdd))
+    (by
+      simpa only [delta] using
+        (heClassicEvenC_oddOrder_literalPairProperties
+          (K := K) (pairs + 1) c hcOdd))
+
+/-- For an odd-order table parameter, the large discriminant-twisted `C₂`
+witness integrally represents every classic target outside the small `C₁`
+ambient class. -/
+theorem he2022ClassicLemma710iii_oddOrder_largeC2_represents_other
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {V : Type v} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V}
+    (pairs : Nat) (c : Kˣ) (hcOrder : ordUnit K c = 1)
+    (b : BONG.GoodBONG q L (2 * pairs + 2))
+    (hClassic : Lattice.IsClassicIntegral q L)
+    (hother : ¬ DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients b.valueUnit)
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC1 (K := K) pairs c))) :
+    let delta := (Dyadic.dyadicDiscriminantClassLawsProved
+      (K := K)).discriminantUnit
+    let hdeltaOrder : ordUnit K delta = 0 :=
+      (isValuationUnit_iff_ordUnit_eq_zero K _).1
+        (Dyadic.dyadicDiscriminantClassLawsProved
+          (K := K)).discriminant_isValuationUnit
+    Lattice.Represents
+      (BONG.coefficientDiagonalSpace
+        (heClassicEvenC2 (K := K) (pairs + 1) c delta))
+      q
+      (heHuExactRealization
+        (heClassicEvenC2 (K := K) (pairs + 1) c delta)
+        (heClassicEvenC2_adjacentAdmissible
+          (pairs + 1) c delta (by omega) hdeltaOrder)
+        (heClassicEvenC2_weakTwoStep
+          (pairs + 1) c delta (by omega) hdeltaOrder)).lattice
+      L := by
+  dsimp only
+  let delta := (Dyadic.dyadicDiscriminantClassLawsProved
+    (K := K)).discriminantUnit
+  have hdeltaOrder : ordUnit K delta = 0 :=
+    (isValuationUnit_iff_ordUnit_eq_zero K _).1
+      (Dyadic.dyadicDiscriminantClassLawsProved
+        (K := K)).discriminant_isValuationUnit
+  have hcOdd : Odd (ordUnit K c) := by
+    rw [hcOrder]
+    exact odd_one
+  have hcDefect : defectOrder (K := K) c = 0 := by
+    unfold defectOrder
+    rw [quadraticDefect_eq_zero_of_odd_ordUnit c hcOdd]
+    rfl
+  exact he2022ClassicLemma710iii_largeC2_represents_other
+    pairs c delta 0 (by omega) hdeltaOrder (Or.inl rfl)
+    (by rw [hcOrder]; norm_num) (by simpa using hcDefect)
+    (by
+      simpa only [delta] using
+        (heClassicEvenC_oddOrder_literalPairProperties
+          (K := K) pairs c hcOdd))
+    (by
+      simpa only [delta] using
+        (heClassicEvenC_oddOrder_literalPairProperties
+          (K := K) (pairs + 1) c hcOdd))
+    b hClassic hother
+
+/-- For an odd-order table parameter, the large `C₁` witness integrally
+represents every classic target outside the small discriminant-twisted `C₂`
+ambient class. -/
+theorem he2022ClassicLemma710iii_oddOrder_largeC1_represents_other
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {V : Type v} [AddCommGroup V] [Module K V]
+    {q : QuadraticSpace K V} {L : Lattice K V}
+    (pairs : Nat) (c : Kˣ) (hcOrder : ordUnit K c = 1)
+    (b : BONG.GoodBONG q L (2 * pairs + 2))
+    (hClassic : Lattice.IsClassicIntegral q L)
+    (hother : ¬ DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients b.valueUnit)
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC2 (K := K) pairs c
+          (Dyadic.dyadicDiscriminantClassLawsProved
+            (K := K)).discriminantUnit))) :
+    Lattice.Represents
+      (BONG.coefficientDiagonalSpace
+        (heClassicEvenC1 (K := K) (pairs + 1) c))
+      q
+      (heHuExactRealization
+        (heClassicEvenC1 (K := K) (pairs + 1) c)
+        (heClassicEvenC1_adjacentAdmissible (pairs + 1) c (by omega))
+        (heClassicEvenC1_weakTwoStep (pairs + 1) c (by omega))).lattice
+      L := by
+  let delta := (Dyadic.dyadicDiscriminantClassLawsProved
+    (K := K)).discriminantUnit
+  have hdeltaOrder : ordUnit K delta = 0 :=
+    (isValuationUnit_iff_ordUnit_eq_zero K _).1
+      (Dyadic.dyadicDiscriminantClassLawsProved
+        (K := K)).discriminant_isValuationUnit
+  have hcOdd : Odd (ordUnit K c) := by
+    rw [hcOrder]
+    exact odd_one
+  have hcDefect : defectOrder (K := K) c = 0 := by
+    unfold defectOrder
+    rw [quadraticDefect_eq_zero_of_odd_ordUnit c hcOdd]
+    rfl
+  exact he2022ClassicLemma710iii_largeC1_represents_other
+    pairs c delta 0 (by omega) (Or.inl rfl)
+    (by rw [hcOrder]; norm_num) (by simpa using hcDefect)
+    (by
+      simpa only [delta] using
+        (heClassicEvenC_oddOrder_literalPairProperties
+          (K := K) pairs c hcOdd))
+    (by
+      simpa only [delta] using
+        (heClassicEvenC_oddOrder_literalPairProperties
+          (K := K) (pairs + 1) c hcOdd))
+    b hClassic (by simpa only [delta] using hother)
 
 /-- The determinant calculation at the heart of the even branch of Lemma
 7.3.  If the signed determinant of a rank-`n+2` good BONG is square
