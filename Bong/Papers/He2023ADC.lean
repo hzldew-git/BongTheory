@@ -42,6 +42,7 @@ import Bong.Bong.He2023ADCTheorem74
 import Bong.Bong.He2023ADCLemma79
 import Bong.Bong.He2023ADCLemma710
 import Bong.Bong.He2023ADCLemma712
+import Bong.Bong.He2023ADCLemma714
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
@@ -59,7 +60,8 @@ Lemma 2.1, Sections 3--4, the corrected local classifications in Theorems
 6.2 and 7.1, and the odd-rank characterization in Theorem 7.4 together with
 the complete proof chain through Lemmas 7.5--7.10 and 7.12, the
 complete normalized two-row form of Lemma 7.11, and the corrected quantifier
-form of Lemma 7.13.  It also records the logical local--global
+form of Lemma 7.13, and the determinant-parity conclusions of Lemma 7.14.
+It also records the logical local--global
 reductions in Theorems 1.3--1.4.  Number-field localization laws remain
 explicit proof data rather than hidden axioms.
 -/

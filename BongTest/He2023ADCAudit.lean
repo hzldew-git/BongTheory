@@ -507,6 +507,10 @@ import Bong.Papers.He2023ADC
 #check @Bong.BONG.GoodBONG.heADC2025Lemma711_badBranch_impossible
 #check @Bong.BONG.GoodBONG.heADC2025Lemma713
 #check @Bong.BONG.GoodBONG.heADC2025Lemma713_trigger_impossible
+#check @Bong.BONG.GoodBONG.heADC2025Lemma714_fullOrderEven_iff
+#check @Bong.BONG.GoodBONG.heADC2025Lemma714_initialPrefixEven
+#check @Bong.BONG.GoodBONG.heADC2025Lemma714i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma714ii
 #check @Bong.BONG.GoodBONG.heADC2025Lemma75iii
 #check @Bong.BONG.GoodBONG.heADC2025Lemma75iv
 #check @Bong.BONG.GoodBONG.heADC2025Lemma75Necessity
@@ -526,5 +530,7 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma711_badBranch_impossible
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma713
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma713_trigger_impossible
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma714i
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma714ii
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma75
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem74
