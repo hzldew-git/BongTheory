@@ -785,7 +785,7 @@ theorem heHu2022Lemma511Tests_to_i3O
       if Even gap then 0 else 1 := by
     apply heHuLemma59Parity_eq_gapParity c gap
     simpa only [c, gap] using
-      a.heHuLemma59_c_order_sub_gap_even k hm hI1
+      a.heHuLemma59_c_order_sub_gap_even k (by omega) hI1
   have hParityMiddle : heHuLemma59Parity (K := K) c =
       a.order ⟨2 * k + 4, by omega⟩ := by
     rcases hShape.2 with hMiddleZero | hMiddleOne

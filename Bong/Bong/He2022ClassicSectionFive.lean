@@ -183,7 +183,7 @@ theorem he2022ClassicLemma53 {m n : Nat}
   intro hTrigger
   have hRn2GeOne : 1 <= a.order ⟨n + 1, by omega⟩ := by
     rcases hTrigger with hone | hgt
-    · exact a.heHu2022Remark52_order_ge_one hn hnOdd hm
+    · exact a.heHu2022Remark52_order_ge_one hn hnOdd (by omega)
         hClassic.isIntegral hone
     · omega
   have hGapNonnegative : 0 <= a.order ⟨n + 1, by omega⟩ -

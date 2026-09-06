@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 
 import Bong.Bong.He2022ClassicPublishedRepresentation
 import Bong.Bong.He2022ClassicLemma710
+import Bong.Bong.He2022ClassicPublishedIrredundancy
 import Bong.Bong.He2022ClassicLemma58
 import Bong.Bong.He2022ClassicTheorem51
 import Bong.Bong.HeHu2022Theorem12
@@ -1039,6 +1040,366 @@ theorem he2022ClassicLemma710iii_oddOrder_largeC1_represents_other
         (heClassicEvenC_oddOrder_literalPairProperties
           (K := K) (pairs + 1) c hcOdd))
     b hClassic (by simpa only [delta] using hother)
+
+/-- Literal finite-table form of Lemma 7.10(iii) for deletion of a
+defect-one first-column row. -/
+theorem he2022ClassicLemma710iii_defectOne_largeC2_represents_published_other
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) (di : HeClassicDefectOneIndex (K := K) U)
+    (j : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K))
+    (hne : j ≠ Sum.inr (Sum.inl (di, false))) :
+    (heClassicEvenC2Model (K := K) (pairs + 1) (U di.1)
+        (heClassicDefectOneSharp (K := K) (U di.1) di.2)
+        (by
+          have hOrder :=
+            (isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit di.1)
+          omega)
+        (heClassicDefectOneSharp_order (U di.1) di.2)).Represents
+      (HeClassicPublishedEvenTestingIndex.model (K := K) U hU pairs j) := by
+  let deleted : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K) :=
+    Sum.inr (Sum.inl (di, false))
+  let X := HeClassicPublishedEvenTestingIndex.exactModel
+    (K := K) U hU pairs j
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  let b := HeClassicPublishedEvenTestingIndex.exactModelGoodBONG
+    (K := K) U hU pairs j
+  have hb : b.valueUnit =
+      HeClassicPublishedEvenTestingIndex.coefficients
+        (K := K) U pairs j := by
+    funext k
+    exact heHuExactGoodBONG_valueUnit
+      (HeClassicPublishedEvenTestingIndex.coefficients
+        (K := K) U pairs j)
+      (HeClassicPublishedEvenTestingIndex.coefficients_adjacentAdmissible
+        U hU pairs j)
+      (HeClassicPublishedEvenTestingIndex.coefficients_weakTwoStep
+        U hU pairs j) k
+  have hClassic : Lattice.IsClassicIntegral X.form X.lattice := by
+    have h := HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+      U hU pairs j
+    rw [← HeClassicPublishedEvenTestingIndex.exactModel_eq_model] at h
+    exact h
+  have hother : ¬ DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients b.valueUnit)
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC1 (K := K) pairs (U di.1))) := by
+    have hcoeff :=
+      HeClassicPublishedEvenTestingIndex.not_diagonalRepresents_coefficients_of_ne
+        (K := K) U hU (pairs := pairs) (i := j) (j := deleted) (by
+          simpa only [deleted] using hne)
+    rw [hb]
+    simpa [deleted, HeClassicPublishedEvenTestingIndex.coefficients] using hcoeff
+  have hlow := he2022ClassicLemma710iii_defectOne_largeC2_represents_other
+    (K := K) pairs (U di.1)
+    ((isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit di.1))
+    di.2 b hClassic hother
+  rw [← HeClassicPublishedEvenTestingIndex.exactModel_eq_model]
+  unfold Lattice.QuadraticLatticeModel.Represents
+  exact hlow
+
+/-- Literal finite-table form of Lemma 7.10(iii) for deletion of a
+defect-one second-column row. -/
+theorem he2022ClassicLemma710iii_defectOne_largeC1_represents_published_other
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) (di : HeClassicDefectOneIndex (K := K) U)
+    (j : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K))
+    (hne : j ≠ Sum.inr (Sum.inl (di, true))) :
+    (heClassicEvenC1Model (K := K) (pairs + 1) (U di.1)
+        (by
+          rw [(isValuationUnit_iff_ordUnit_eq_zero K _).1
+            (hU.isUnit di.1)])).Represents
+      (HeClassicPublishedEvenTestingIndex.model (K := K) U hU pairs j) := by
+  let deleted : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K) :=
+    Sum.inr (Sum.inl (di, true))
+  let X := HeClassicPublishedEvenTestingIndex.exactModel
+    (K := K) U hU pairs j
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  let b := HeClassicPublishedEvenTestingIndex.exactModelGoodBONG
+    (K := K) U hU pairs j
+  have hb : b.valueUnit =
+      HeClassicPublishedEvenTestingIndex.coefficients
+        (K := K) U pairs j := by
+    funext k
+    exact heHuExactGoodBONG_valueUnit
+      (HeClassicPublishedEvenTestingIndex.coefficients
+        (K := K) U pairs j)
+      (HeClassicPublishedEvenTestingIndex.coefficients_adjacentAdmissible
+        U hU pairs j)
+      (HeClassicPublishedEvenTestingIndex.coefficients_weakTwoStep
+        U hU pairs j) k
+  have hClassic : Lattice.IsClassicIntegral X.form X.lattice := by
+    have h := HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+      U hU pairs j
+    rw [← HeClassicPublishedEvenTestingIndex.exactModel_eq_model] at h
+    exact h
+  have hother : ¬ DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients b.valueUnit)
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC2 (K := K) pairs (U di.1)
+          (heClassicDefectOneSharp (K := K) (U di.1) di.2))) := by
+    have hcoeff :=
+      HeClassicPublishedEvenTestingIndex.not_diagonalRepresents_coefficients_of_ne
+        (K := K) U hU (pairs := pairs) (i := j) (j := deleted) (by
+          simpa only [deleted] using hne)
+    rw [hb]
+    simpa [deleted, HeClassicPublishedEvenTestingIndex.coefficients] using hcoeff
+  have hlow := he2022ClassicLemma710iii_defectOne_largeC1_represents_other
+    (K := K) pairs (U di.1)
+    ((isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit di.1))
+    di.2 b hClassic hother
+  rw [← HeClassicPublishedEvenTestingIndex.exactModel_eq_model]
+  unfold Lattice.QuadraticLatticeModel.Represents
+  exact hlow
+
+/-- Literal finite-table form of Lemma 7.10(iii) for deletion of an
+odd-order first-column row. -/
+theorem he2022ClassicLemma710iii_oddOrder_largeC2_represents_published_other
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) (i : I)
+    (j : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K))
+    (hne : j ≠ Sum.inr (Sum.inr (i, false))) :
+    (heClassicEvenC2Model (K := K) (pairs + 1)
+        (U i * uniformizerPowerUnit K (1 : Int))
+        (Dyadic.dyadicDiscriminantClassLawsProved
+          (K := K)).discriminantUnit
+        (by
+          rw [ordUnit_mul, ordUnit_uniformizerPowerUnit,
+            (isValuationUnit_iff_ordUnit_eq_zero K (U i)).1 (hU.isUnit i)]
+          norm_num)
+        ((isValuationUnit_iff_ordUnit_eq_zero K _).1
+          (Dyadic.dyadicDiscriminantClassLawsProved
+            (K := K)).discriminant_isValuationUnit)).Represents
+      (HeClassicPublishedEvenTestingIndex.model (K := K) U hU pairs j) := by
+  let deleted : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K) :=
+    Sum.inr (Sum.inr (i, false))
+  let X := HeClassicPublishedEvenTestingIndex.exactModel
+    (K := K) U hU pairs j
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  let b := HeClassicPublishedEvenTestingIndex.exactModelGoodBONG
+    (K := K) U hU pairs j
+  have hb : b.valueUnit =
+      HeClassicPublishedEvenTestingIndex.coefficients
+        (K := K) U pairs j := by
+    funext k
+    exact heHuExactGoodBONG_valueUnit
+      (HeClassicPublishedEvenTestingIndex.coefficients
+        (K := K) U pairs j)
+      (HeClassicPublishedEvenTestingIndex.coefficients_adjacentAdmissible
+        U hU pairs j)
+      (HeClassicPublishedEvenTestingIndex.coefficients_weakTwoStep
+        U hU pairs j) k
+  have hClassic : Lattice.IsClassicIntegral X.form X.lattice := by
+    have h := HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+      U hU pairs j
+    rw [← HeClassicPublishedEvenTestingIndex.exactModel_eq_model] at h
+    exact h
+  have hother : ¬ DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients b.valueUnit)
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC1 (K := K) pairs
+          (U i * uniformizerPowerUnit K (1 : Int)))) := by
+    have hcoeff :=
+      HeClassicPublishedEvenTestingIndex.not_diagonalRepresents_coefficients_of_ne
+        (K := K) U hU (pairs := pairs) (i := j) (j := deleted) (by
+          simpa only [deleted] using hne)
+    rw [hb]
+    simpa [deleted, HeClassicPublishedEvenTestingIndex.coefficients] using hcoeff
+  have hcOrder : ordUnit K
+      (U i * uniformizerPowerUnit K (1 : Int)) = 1 := by
+    rw [ordUnit_mul, ordUnit_uniformizerPowerUnit,
+      (isValuationUnit_iff_ordUnit_eq_zero K (U i)).1 (hU.isUnit i)]
+    norm_num
+  have hlow := he2022ClassicLemma710iii_oddOrder_largeC2_represents_other
+    (K := K) pairs (U i * uniformizerPowerUnit K (1 : Int)) hcOrder
+    b hClassic hother
+  rw [← HeClassicPublishedEvenTestingIndex.exactModel_eq_model]
+  unfold Lattice.QuadraticLatticeModel.Represents
+  exact hlow
+
+/-- Literal finite-table form of Lemma 7.10(iii) for deletion of an
+odd-order second-column row. -/
+theorem he2022ClassicLemma710iii_oddOrder_largeC1_represents_published_other
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) (i : I)
+    (j : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K))
+    (hne : j ≠ Sum.inr (Sum.inr (i, true))) :
+    (heClassicEvenC1Model (K := K) (pairs + 1)
+        (U i * uniformizerPowerUnit K (1 : Int))
+        (by
+          rw [ordUnit_mul, ordUnit_uniformizerPowerUnit,
+            (isValuationUnit_iff_ordUnit_eq_zero K (U i)).1 (hU.isUnit i)]
+          norm_num)).Represents
+      (HeClassicPublishedEvenTestingIndex.model (K := K) U hU pairs j) := by
+  let deleted : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K) :=
+    Sum.inr (Sum.inr (i, true))
+  let X := HeClassicPublishedEvenTestingIndex.exactModel
+    (K := K) U hU pairs j
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  let b := HeClassicPublishedEvenTestingIndex.exactModelGoodBONG
+    (K := K) U hU pairs j
+  have hb : b.valueUnit =
+      HeClassicPublishedEvenTestingIndex.coefficients
+        (K := K) U pairs j := by
+    funext k
+    exact heHuExactGoodBONG_valueUnit
+      (HeClassicPublishedEvenTestingIndex.coefficients
+        (K := K) U pairs j)
+      (HeClassicPublishedEvenTestingIndex.coefficients_adjacentAdmissible
+        U hU pairs j)
+      (HeClassicPublishedEvenTestingIndex.coefficients_weakTwoStep
+        U hU pairs j) k
+  have hClassic : Lattice.IsClassicIntegral X.form X.lattice := by
+    have h := HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+      U hU pairs j
+    rw [← HeClassicPublishedEvenTestingIndex.exactModel_eq_model] at h
+    exact h
+  have hother : ¬ DiagonalRepresents
+      (BONG.GoodBONG.diagonalUnitCoefficients b.valueUnit)
+      (BONG.GoodBONG.diagonalUnitCoefficients
+        (heClassicEvenC2 (K := K) pairs
+          (U i * uniformizerPowerUnit K (1 : Int))
+          (Dyadic.dyadicDiscriminantClassLawsProved
+            (K := K)).discriminantUnit)) := by
+    have hcoeff :=
+      HeClassicPublishedEvenTestingIndex.not_diagonalRepresents_coefficients_of_ne
+        (K := K) U hU (pairs := pairs) (i := j) (j := deleted) (by
+          simpa only [deleted] using hne)
+    rw [hb]
+    simpa [deleted, HeClassicPublishedEvenTestingIndex.coefficients] using hcoeff
+  have hcOrder : ordUnit K
+      (U i * uniformizerPowerUnit K (1 : Int)) = 1 := by
+    rw [ordUnit_mul, ordUnit_uniformizerPowerUnit,
+      (isValuationUnit_iff_ordUnit_eq_zero K (U i)).1 (hU.isUnit i)]
+    norm_num
+  have hlow := he2022ClassicLemma710iii_oddOrder_largeC1_represents_other
+    (K := K) pairs (U i * uniformizerPowerUnit K (1 : Int)) hcOrder
+    b hClassic hother
+  rw [← HeClassicPublishedEvenTestingIndex.exactModel_eq_model]
+  unfold Lattice.QuadraticLatticeModel.Represents
+  exact hlow
+
+/-- Literal deletion witness for every `C₁/C₂` row in the even table.
+This is exactly clause (iii) of He's Lemma 7.10, with the finite published
+index and the quantifier over every remaining displayed row made explicit. -/
+theorem he2022ClassicLemma710iii_publishedC_deletionWitness
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat)
+    (i : (HeClassicDefectOneIndex (K := K) U × Bool) ⊕ (I × Bool)) :
+    exists X : Lattice.QuadraticLatticeModel (K := K),
+      X.IsClassicIntegral ∧
+        ¬ X.Represents
+          (HeClassicPublishedEvenTestingIndex.model
+            (K := K) U hU pairs (Sum.inr i)) ∧
+        forall j : HeClassicPublishedEvenTestingIndex
+            (K := K) U (ramificationIndex K),
+          j ≠ Sum.inr i →
+            X.Represents
+              (HeClassicPublishedEvenTestingIndex.model
+                (K := K) U hU pairs j) := by
+  rcases i with ⟨di, column⟩ | ⟨i, column⟩
+  · cases column
+    · let X := heClassicEvenC2Model (K := K) (pairs + 1) (U di.1)
+        (heClassicDefectOneSharp (K := K) (U di.1) di.2)
+        (by
+          rw [(isValuationUnit_iff_ordUnit_eq_zero K _).1
+            (hU.isUnit di.1)])
+        (heClassicDefectOneSharp_order (U di.1) di.2)
+      refine ⟨X, ?_, ?_, ?_⟩
+      · exact heClassicEvenC2Model_isClassicIntegral
+          (K := K) (pairs + 1) (U di.1)
+          (heClassicDefectOneSharp (K := K) (U di.1) di.2)
+          (by
+            rw [(isValuationUnit_iff_ordUnit_eq_zero K _).1
+              (hU.isUnit di.1)])
+          (heClassicDefectOneSharp_order (U di.1) di.2)
+      · simpa [X, HeClassicPublishedEvenTestingIndex.model] using
+          (he2022ClassicLemma710iii_defectOne_largeC2_misses_C1
+            (K := K) pairs (U di.1)
+            ((isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit di.1))
+            di.2)
+      · intro j hne
+        exact
+          he2022ClassicLemma710iii_defectOne_largeC2_represents_published_other
+            (K := K) U hU pairs di j (by simpa using hne)
+    · let X := heClassicEvenC1Model (K := K) (pairs + 1) (U di.1)
+          (by
+            rw [(isValuationUnit_iff_ordUnit_eq_zero K _).1
+              (hU.isUnit di.1)])
+      refine ⟨X, ?_, ?_, ?_⟩
+      · exact heClassicEvenC1Model_isClassicIntegral
+          (K := K) (pairs + 1) (U di.1) (by
+            rw [(isValuationUnit_iff_ordUnit_eq_zero K _).1
+              (hU.isUnit di.1)])
+      · simpa [X, HeClassicPublishedEvenTestingIndex.model] using
+          (he2022ClassicLemma710iii_defectOne_largeC1_misses_C2
+            (K := K) pairs (U di.1)
+            ((isValuationUnit_iff_ordUnit_eq_zero K _).1 (hU.isUnit di.1))
+            di.2)
+      · intro j hne
+        exact
+          he2022ClassicLemma710iii_defectOne_largeC1_represents_published_other
+            (K := K) U hU pairs di j (by simpa using hne)
+  · let c := U i * uniformizerPowerUnit K (1 : Int)
+    have hcOrder : ordUnit K c = 1 := by
+      dsimp only [c]
+      rw [ordUnit_mul, ordUnit_uniformizerPowerUnit,
+        (isValuationUnit_iff_ordUnit_eq_zero K (U i)).1 (hU.isUnit i)]
+      norm_num
+    let delta := (Dyadic.dyadicDiscriminantClassLawsProved
+      (K := K)).discriminantUnit
+    have hdeltaOrder : ordUnit K delta = 0 :=
+      (isValuationUnit_iff_ordUnit_eq_zero K _).1
+        (Dyadic.dyadicDiscriminantClassLawsProved
+          (K := K)).discriminant_isValuationUnit
+    cases column
+    · let X := heClassicEvenC2Model (K := K) (pairs + 1) c delta
+          (by omega) hdeltaOrder
+      refine ⟨X, ?_, ?_, ?_⟩
+      · exact heClassicEvenC2Model_isClassicIntegral
+          (K := K) (pairs + 1) c delta (by omega) hdeltaOrder
+      · simpa [X, c, delta, HeClassicPublishedEvenTestingIndex.model] using
+          (he2022ClassicLemma710iii_oddOrder_largeC2_misses_C1
+            (K := K) pairs c hcOrder)
+      · intro j hne
+        exact
+          he2022ClassicLemma710iii_oddOrder_largeC2_represents_published_other
+            (K := K) U hU pairs i j (by simpa using hne)
+    · let X := heClassicEvenC1Model (K := K) (pairs + 1) c (by omega)
+      refine ⟨X, ?_, ?_, ?_⟩
+      · exact heClassicEvenC1Model_isClassicIntegral
+          (K := K) (pairs + 1) c (by omega)
+      · simpa [X, c, delta, HeClassicPublishedEvenTestingIndex.model] using
+          (he2022ClassicLemma710iii_oddOrder_largeC1_misses_C2
+            (K := K) pairs c hcOrder)
+      · intro j hne
+        exact
+          he2022ClassicLemma710iii_oddOrder_largeC1_represents_published_other
+            (K := K) U hU pairs i j (by simpa using hne)
 
 /-- The determinant calculation at the heart of the even branch of Lemma
 7.3.  If the signed determinant of a rank-`n+2` good BONG is square
