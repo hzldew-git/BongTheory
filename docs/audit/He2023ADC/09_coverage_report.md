@@ -86,7 +86,8 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   incomplete; report 35 records the exact repair and local trust checks.
 - Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 are locally kernel-complete at
   `2417a4f`. Lemma 7.11 is complete in both normalized parameter rows at
-  `832d10c`, raising full Section 7 coverage to 10/21 numbered items. Its
+  `832d10c`. Lemma 7.14 is complete at `6c52803`, raising full Section 7
+  coverage to 11/21 numbered items. Its
   odd-valuation represented-target contradiction remains the route used by
   Lemma 7.5. Lemma 7.13's proof-supported simultaneous-failure disjunction is
   formalized and sufficient downstream; its stronger printed per-target
@@ -95,7 +96,7 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, ten still-unformalized Section 7 items, the printed-strength
+Section 5, nine still-unformalized Section 7 items, the printed-strength
 Lemma 7.13 claim, Section 8 global proofs, and the
 enumerative main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.

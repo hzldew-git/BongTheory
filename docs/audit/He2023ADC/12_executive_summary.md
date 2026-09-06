@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`cf9f83be635d6e459cfb429ad73b4c7a31f1ddf4`.
+`6c528031d27cc050a1f10c2ec953500f9b4c3c2c`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -158,8 +158,11 @@ per-target conclusion is stronger than its proof, which establishes only that
 the two targets cannot both be represented. The proof-supported disjunction
 is formalized and suffices downstream. The complete Lemma 7.11 checkpoint has
 standard-only new dependency reports, a 59,204-declaration focused gate, and
-a 2,727-source scanner. Section 7 now has 10/21 fully formalized numbered
-items, one quantifier-mismatched item, and ten pending items.
+a 2,727-source scanner. Report 38 adds both clauses of Lemma 7.14 at
+`6c52803`: both ambient columns and both parameter parities are retained,
+with a 59,218-declaration gate and 2,728-source scanner. Section 7 now has
+11/21 fully formalized numbered items, one quantifier-mismatched item, and
+nine pending items.
 
 Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
@@ -167,7 +170,7 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through 832d10c
+The later additions through 6c52803
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

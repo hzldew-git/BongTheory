@@ -292,3 +292,18 @@ tracked Lean files without a forbidden proof token outside comments.
 This is local evidence only until an independently extracted Review Kit at a
 revision containing this checkpoint passes GitHub CI. Report 37 records the
 source normalization and theorem-level scope.
+
+## Lemma 7.14 local checkpoint
+
+At exact code revision `6c528031d27cc050a1f10c2ec953500f9b4c3c2c`, the
+Lemma 7.14 module, canonical paper entry, and focused audit compile directly
+with Lean 4.32.1. The queried `heADC2025Lemma714i` and
+`heADC2025Lemma714ii` endpoints have exactly the standard dependencies
+`propext`, `Classical.choice`, and `Quot.sound`. The focused gate reports
+`AXIOM_GATE_PASS: 59218 declarations checked`; the source scanner checks 2,728
+tracked Lean files without a forbidden proof token outside comments.
+`git diff --check` and the 100-column scoped source check pass.
+
+This is local evidence only until an independently extracted Review Kit at a
+revision containing this checkpoint passes GitHub CI. Report 38 records the
+source parity argument and theorem-level scope.

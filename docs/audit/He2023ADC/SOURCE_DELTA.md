@@ -115,3 +115,14 @@ asserted. The source statement is therefore marked `SEMANTIC_MISMATCH` in
 quantifier strength, while Theorem 7.4 and Lemma 7.5 remain proved from the
 weaker result actually justified by the published argument. Report 36 records
 the formal correspondence.
+
+## Lemma 7.14 determinant parity
+
+The publisher proof on p. 1013 says that the order of the full coefficient
+product is even for `W_nu^(n+2)(epsilon)` and odd for
+`W_nu^(n+2)(epsilon*pi)`. At `6c52803`, the formalization proves this for both
+ambient columns by comparing determinant square classes; it does not assume
+that the two spaces are equal. Theorem 7.4 supplies an even sum through the
+penultimate order and restricts the last order to `{0,1}`. Hence
+`heADC2025Lemma714i` and `heADC2025Lemma714ii` recover the two displayed
+conclusions without an extra parity premise. Report 38 gives the exact scope.

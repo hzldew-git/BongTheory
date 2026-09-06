@@ -139,6 +139,9 @@ Additional concrete declaration groups are:
 - `He2023ADCLemma713` exports the source-proof-supported per-column
   simultaneous-failure disjunction and the contradiction used downstream.
   It does not assert the stronger printed failure of each target separately.
+- `He2023ADCLemma714` exports the determinant-parity comparison, the even
+  initial-prefix sum, and both published conclusions for unit and
+  unit-times-uniformizer ambient parameters in either ambient column.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full

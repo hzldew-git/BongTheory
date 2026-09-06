@@ -103,5 +103,11 @@ assumed. For Lemma 7.13, reviewers should compare the pointwise
 wording with the proof by contradiction from simultaneous representation and
 confirm that the disjunctive form used on p. 1013 is the intended correction.
 
+Report 38 adds the Lemma 7.14 card. Reviewers should check that the two
+published ambient columns have the same determinant parity, that the unit and
+unit-times-uniformizer rows exhaust `c in V`, and that the Theorem 7.4 profile
+makes the sum of the first `n+1` orders even. These facts, together with the
+last-order set `{0,1}`, are exactly what selects the two conclusions.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

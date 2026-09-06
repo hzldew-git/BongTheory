@@ -153,3 +153,9 @@ internally. Lemma 7.13 is
 of the two failures, whereas the displayed statement reads pointwise. The
 formalization uses exactly the proof-supported disjunction; this is sufficient
 for Lemma 7.5(iv). See reports 36--37.
+
+At `6c52803`, `heADC2025Lemma714i` and `heADC2025Lemma714ii` are
+`LOGICALLY_EQUIVALENT` to the two clauses of Lemma 7.14 after the paper's
+explicit normalizations `c=delta` and `c=delta*pi`. Both values of the
+ambient index are retained as a disjunction, and the conclusions contain no
+caller-supplied determinant-parity law. See report 38.

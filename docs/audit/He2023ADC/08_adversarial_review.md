@@ -166,4 +166,13 @@ At `832d10c`, the unit row was added with its own central-defect estimate and
 prefix non-representation proof, and the two normalized rows were combined
 into one all-parameter endpoint. The proof does not import a caller-supplied
 classification law or defect-`2e-1` unit. This does not change the independent
-Lemma 7.13 quantifier mismatch or the ten still-pending Section 7 items.
+Lemma 7.13 quantifier mismatch or the ten Section 7 items pending at that
+checkpoint.
+
+Report 38 audits Lemma 7.14 against p. 1013 of the publisher PDF. The proof
+does not identify the two ambient columns; it uses their square-related
+determinants only to transfer parity. It also proves that all orders before
+the last have even total from Theorem 7.4, instead of assuming the displayed
+congruence in (7.3). No parity converse, field-uniformizer normalization, or
+last-order dichotomy is left as caller data. Nine Section 7 items remain
+pending, independently of the Lemma 7.13 mismatch.
