@@ -44,6 +44,9 @@ import Bong.Bong.He2023ADCLemma710
 import Bong.Bong.He2023ADCLemma712
 import Bong.Bong.He2023ADCLemma714
 import Bong.Bong.He2023ADCLemma715
+import Bong.Bong.He2023ADCDefinition716
+import Bong.Bong.He2023ADCLemma718
+import Bong.Bong.He2023ADCLemma719Models
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
@@ -62,7 +65,9 @@ Lemma 2.1, Sections 3--4, the corrected local classifications in Theorems
 the complete proof chain through Lemmas 7.5--7.10 and 7.12, the
 complete normalized two-row form of Lemma 7.11, the corrected quantifier
 form of Lemma 7.13, and the complete classification proof through Lemmas
-7.14--7.15.
+7.14--7.15.  It further formalizes Definition 7.16, Remark 7.17, and
+Lemmas 7.18--7.19, including integral-isometry bridges from the explicit
+Lemma 7.19 construction to both named `N`-families.
 It also records the logical local--global
 reductions in Theorems 1.3--1.4.  Number-field localization laws remain
 explicit proof data rather than hidden axioms.

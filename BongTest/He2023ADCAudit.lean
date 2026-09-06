@@ -548,3 +548,30 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma715
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma75
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem74
+
+#check @Bong.BONG.GoodBONG.HeADC2025Definition716
+#check @Bong.BONG.GoodBONG.heADC2025Remark717_unique
+#check @Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
+#check @Bong.BONG.GoodBONG.heADC2025Lemma718
+#check @Bong.BONG.GoodBONG.heADC2025Lemma718_not_definition716
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719_unitDefectData
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719Append
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719Core
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719_towerBaseConditions
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719ExplicitData
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719FirstBasePublishedData
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719SecondBasePublishedData
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719FirstNamedPublished
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719SecondNamedPublished
+
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma718
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719_unitDefectData
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719Append
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719Core
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719_towerBaseConditions
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719ExplicitData
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719FirstBasePublishedData
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719SecondBasePublishedData
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719FirstNamedPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719SecondNamedPublished
