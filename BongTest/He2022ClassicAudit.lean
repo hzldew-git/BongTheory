@@ -4,6 +4,9 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 import Bong.Papers.He2022Classic
+import Bong.Bong.He2022ClassicLemma75
+import Bong.Bong.He2022ClassicLemma78
+import Bong.Bong.He2022ClassicLemma79
 
 /-! Kernel and trust-boundary audit for He's classic paper entry. -/
 
@@ -260,3 +263,19 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.HeClassicPublishedEvenTestingIndex.eq_of_diagonalRepresents_coefficients
 #print axioms Bong.HeClassicPublishedEvenTestingIndex.not_diagonalRepresents_coefficients_of_ne
 #print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_publishedC_deletionWitness
+
+/-! Published Lemmas 7.5, 7.8, and 7.9. -/
+
+#check Bong.he2022ClassicLemma75iii_evenHDiscriminant_represents_P2Omega
+#check Bong.BONG.GoodBONG.he2022ClassicLemma78i_of_zero_one_profile
+#check Bong.he2022ClassicLemma79iii_P1Omega_represents_HOne
+#check Bong.he2022ClassicLemma79iii_P2Omega_represents_HDiscriminant
+#check Bong.he2022ClassicLemma79iii_P1Omega_not_represents_HDiscriminant
+#check Bong.he2022ClassicLemma79iii_P2Omega_not_represents_HOne
+
+#print axioms Bong.he2022ClassicLemma75iii_evenHDiscriminant_represents_P2Omega
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma78i_of_zero_one_profile
+#print axioms Bong.he2022ClassicLemma79iii_P1Omega_represents_HOne
+#print axioms Bong.he2022ClassicLemma79iii_P2Omega_represents_HDiscriminant
+#print axioms Bong.he2022ClassicLemma79iii_P1Omega_not_represents_HDiscriminant
+#print axioms Bong.he2022ClassicLemma79iii_P2Omega_not_represents_HOne
