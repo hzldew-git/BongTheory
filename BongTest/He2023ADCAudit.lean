@@ -585,6 +585,15 @@ import Bong.Papers.He2023ADC
 #check @Bong.BONG.GoodBONG.heADC2025Theorem72Product_iff_published
 #check @Bong.BONG.GoodBONG.heADC2025Theorem72Published_overlap
 #check @Bong.BONG.GoodBONG.heADC2025Theorem72Published
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_normalized_sub_order
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_binaryTail_isIsometric
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_discriminantBinary_isIsometric_scaledA
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_ternaryTail_isIsometric
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdBasePublishedData
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_firstPublished
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_secondPublished
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublished
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublishedRepresentative
 
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma718
@@ -614,3 +623,11 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.HeADC2025Theorem72Product.isometricSecondUnit_of_isOMaximal
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Published_overlap
 #print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Published
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_binaryTail_isIsometric
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_discriminantBinary_isIsometric_scaledA
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_ternaryTail_isIsometric
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_thirdBasePublishedData
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_firstPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_secondPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublishedRepresentative

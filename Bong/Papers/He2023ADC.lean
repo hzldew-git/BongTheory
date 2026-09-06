@@ -48,6 +48,7 @@ import Bong.Bong.He2023ADCDefinition716
 import Bong.Bong.He2023ADCLemma718
 import Bong.Bong.He2023ADCLemma719Models
 import Bong.Bong.He2023ADCTheorem72Published
+import Bong.Bong.He2023ADCRemark73
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
@@ -73,6 +74,9 @@ Hilbert-symbol-selected classification in Lemma 7.20.  Theorem 7.2 is
 available both independently of representatives and in the literal finite
 form with parameters in `U \ {1, Delta}` and `epsilon*pi^k`; its final
 maximal-overlap assertion is proved as an integral-isometry classification.
+All three literal integral-isometry formulas of Remark 7.3 are also proved,
+including their prescribed powers of the uniformizer and the ordered ternary
+tail `pi A perp <Delta epsilon>`.
 It also records the logical local--global
 reductions in Theorems 1.3--1.4.  Number-field localization laws remain
 explicit proof data rather than hidden axioms.

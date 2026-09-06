@@ -110,15 +110,14 @@ noncomputable def heADC2025Lemma719_unitDefectData (delta : Kˣ)
     HeADC719UnitDefectData delta := by
   let hs := heADC2025Lemma719_sharpDomain_of_defect_lt delta hdelta hlt
   let d : Int := (quadraticDefect K delta).toNat
-  obtain ⟨hdOdd, hdNonnegative, hdLt, hdefect⟩ :=
-    heADCUnitSharpDefectData delta hdelta hs
+  have hdata := heADCUnitSharpDefectData delta hdelta hs
   exact
     { d := d
       sharp := hs
-      odd := hdOdd
-      nonnegative := hdNonnegative
-      ltTwoE := hdLt
-      defect := hdefect }
+      odd := hdata.1
+      nonnegative := hdata.2.1
+      ltTwoE := hdata.2.2.1
+      defect := hdata.2.2.2 }
 
 /-- The complete conclusion of Lemma 7.19 for a fixed displayed model. -/
 def HeADC719Conclusion {V : Type u} [AddCommGroup V] [Module K V]
