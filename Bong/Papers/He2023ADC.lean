@@ -5,6 +5,7 @@ Authors: BONG Theory contributors
 -/
 import Bong.Lattice.NADC
 import Bong.Lattice.GlobalNADC
+import Bong.Lattice.He2023ADCSectionEight
 import Bong.Bong.He2023ADCSectionThree
 import Bong.Bong.He2023ADCPublishedRepresentation
 import Bong.Bong.He2023ADCSectionFour
@@ -53,6 +54,7 @@ import Bong.Bong.He2023ADCCorollary721
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
+import Bong.Bong.He2023ADCSectionFive
 
 /-!
 # He: n-ADC integral quadratic lattices
@@ -82,8 +84,12 @@ complete, and irredundant integral-isometry catalogue, with an exact maximal
 versus nonmaximal partition.  Its numerical counts isolate the unit
 square-class cardinality quoted from O'Meara 63:9 as an explicit premise.
 It also records the logical local--global
-reductions in Theorems 1.3--1.4.  Number-field localization laws remain
-explicit proof data rather than hidden axioms.
+reductions in Theorems 1.3--1.4.  The complete logical derivations of all four
+numbered Section 5 results and of the Section 8 local--global chain are also
+formalized over explicit non-dyadic Jordan and number-field arithmetic law
+packages.  Concrete constructions of those law packages remain open;
+number-field localization, Meyer--Xu genus separation, and non-dyadic Jordan
+facts are therefore visible proof data rather than hidden axioms.
 -/
 
 namespace Bong

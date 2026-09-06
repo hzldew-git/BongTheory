@@ -25,6 +25,52 @@ import Bong.Papers.He2023ADC
 #check Bong.GlobalLocalLatticeSystem.heADCTheorem14ii
 #check Bong.GlobalLocalLatticeSystem.heADCTheorem14iii
 
+#check Bong.HeADC2025NonDyadicUnitClass
+#check Bong.HeADC2025NonDyadicSquareClass
+#check Bong.HeADC2025NonDyadicColumn
+#check Bong.HeADC2025NonDyadicSystem
+#check Bong.HeADC2025NonDyadicSystem.IsNADC
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma52
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53i
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53ii
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iii
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iv
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma54
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51
+
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma52
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53i
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53ii
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iii
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iv
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma54
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51
+
+#check Bong.HeADC2025GlobalData
+#check Bong.HeADC2025GlobalData.HasClassNumberOne
+#check Bong.HeADC2025GlobalData.HasDistinguishingRankSublattice
+#check Bong.HeADC2025GlobalData.SectionEightLaws
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81i
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem82
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary83
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15i
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem17
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
+
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81i
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem82
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary83
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15i
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem17
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
+
 #check Bong.BONG.OrthogonalBasisData.heADC2025Lemma31
 #check Bong.BONG.GoodBONG.heADC2025Corollary32i
 #check Bong.BONG.GoodBONG.heADC2025Corollary32ii

@@ -57,7 +57,6 @@ theorem heADC2025Lemma720_defectDataValue (rIndex : Nat) (omega : Kˣ)
       (heADC2025Lemma719_sharpDomain_of_defect_lt omega homega
         (heADC2025Lemma720_defectLt rIndex omega hr hdefect)) = data
   rcases data with ⟨hodd, hnonnegative, hlt, hdata⟩
-  dsimp only
   rw [hdefect]
   simp only [ENat.toNat_coe]
 
