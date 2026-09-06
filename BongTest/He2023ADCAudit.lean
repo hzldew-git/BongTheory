@@ -648,6 +648,19 @@ import Bong.Papers.He2023ADC
 #check @Bong.HeADC2025Corollary721Index.card_nonmaximalIndex_published
 #check @Bong.HeADC2025Corollary721Index.heADC2025Corollary721
 
+#check @Bong.HeADC2025QuaternaryCatalogue.exceptionalModel_rank
+#check @Bong.HeADC2025QuaternaryCatalogue.boundaryModel_rank
+#check @Bong.HeADC2025QuaternaryCatalogue.model_isNADC
+#check @Bong.HeADC2025QuaternaryCatalogue.exists_index_isIntegrallyIsometric
+#check @Bong.HeADC2025QuaternaryCatalogue.model_eq_of_isIntegrallyIsometric
+#check @Bong.HeADC2025QuaternaryCatalogue.isExactIsometryCatalogue
+#check @Bong.HeADC2025QuaternaryCatalogue.model_isOMaximal_iff
+#check @Bong.HeADC2025QuaternaryCatalogue.card_index_corrected
+#check @Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem110BinaryCountStatement
+#check @Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem19iiBinaryStatement
+#check @Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorem19ii_binary_corrected
+#check @Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorems19iiAnd110BinaryCorrected
+
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma718
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma719_unitDefectData
@@ -691,3 +704,15 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.HeADC2025Corollary721Index.card_index_published
 #print axioms Bong.HeADC2025Corollary721Index.card_nonmaximalIndex_published
 #print axioms Bong.HeADC2025Corollary721Index.heADC2025Corollary721
+#print axioms Bong.HeADC2025QuaternaryCatalogue.exceptionalModel_rank
+#print axioms Bong.HeADC2025QuaternaryCatalogue.boundaryModel_rank
+#print axioms Bong.HeADC2025QuaternaryCatalogue.model_isNADC
+#print axioms Bong.HeADC2025QuaternaryCatalogue.exists_index_isIntegrallyIsometric
+#print axioms Bong.HeADC2025QuaternaryCatalogue.model_eq_of_isIntegrallyIsometric
+#print axioms Bong.HeADC2025QuaternaryCatalogue.isExactIsometryCatalogue
+#print axioms Bong.HeADC2025QuaternaryCatalogue.model_isOMaximal_iff
+#print axioms Bong.HeADC2025QuaternaryCatalogue.card_index_corrected
+#print axioms Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem110BinaryCountStatement
+#print axioms Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem19iiBinaryStatement
+#print axioms Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorem19ii_binary_corrected
+#print axioms Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorems19iiAnd110BinaryCorrected

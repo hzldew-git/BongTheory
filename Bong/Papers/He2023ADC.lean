@@ -51,6 +51,7 @@ import Bong.Bong.He2023ADCLemma719Models
 import Bong.Bong.He2023ADCTheorem72Published
 import Bong.Bong.He2023ADCRemark73
 import Bong.Bong.He2023ADCCorollary721
+import Bong.Bong.He2023ADCQuaternaryCatalogue
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
@@ -83,6 +84,10 @@ tail `pi A perp <Delta epsilon>`.  Corollary 7.21 is proved as a finite,
 complete, and irredundant integral-isometry catalogue, with an exact maximal
 versus nonmaximal partition.  Its numerical counts isolate the unit
 square-class cardinality quoted from O'Meara 63:9 as an explicit premise.
+At the binary rank-four boundary, the formalization proves a corrected exact
+catalogue with two nonmaximal classes and count `8 * (N p)^e + 2`; it also
+machine-checks that the single-exception formulations printed in Theorems
+1.9(ii), 1.10, and 6.2 are false.
 It also records the logical local--global
 reductions in Theorems 1.3--1.4.  The complete logical derivations of all four
 numbered Section 5 results and of the Section 8 local--global chain are also
