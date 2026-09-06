@@ -563,6 +563,20 @@ import Bong.Papers.He2023ADC
 #check @Bong.BONG.GoodBONG.heADC2025Lemma719SecondBasePublishedData
 #check @Bong.BONG.GoodBONG.heADC2025Lemma719FirstNamedPublished
 #check @Bong.BONG.GoodBONG.heADC2025Lemma719SecondNamedPublished
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iFirst
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iSecond
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720ii
+#check @Bong.heADC2025Lemma720_columnRepresentation_iff
+#check @Bong.heADC2025Lemma720_productSpaceIsometric
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiFirst
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiSecond
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iii_defined
+#check @Bong.BONG.GoodBONG.HeADC2025Definition716IsDefined
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720_exceptional_undefined
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720_defined_iff
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiFirst_isometricNamed
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiSecond_isometricNamed
 
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma718
@@ -575,3 +589,14 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma719SecondBasePublishedData
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma719FirstNamedPublished
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma719SecondNamedPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iFirst_isometricNamed
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iSecond_isometricNamed
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720ii_isometricNamed
+#print axioms Bong.heADC2025Lemma720_columnRepresentation_iff
+#print axioms Bong.heADC2025Lemma720_productSpaceIsometric
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iii
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iii_defined
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720_exceptional_undefined
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720_defined_iff
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iiiFirst_isometricNamed
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iiiSecond_isometricNamed
