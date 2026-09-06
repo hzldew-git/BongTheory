@@ -160,6 +160,10 @@ Additional concrete declaration groups are:
   two-column bases to the named `N_1` and `N_2` lattices, lifts them across
   the unary line, and transports the full `n`-ADC conclusion to the literal
   products printed in Lemma 7.19.
+- `He2023ADCLemma720Maximal`, `He2023ADCLemma720Ambient`, and
+  `He2023ADCLemma720` prove all parts of Lemma 7.20: the maximal endpoints,
+  exact Hilbert-symbol column selection, determinant completion, both named
+  products, lower-row existence, and the unique undefined triple.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full

@@ -138,5 +138,13 @@ that the diagonal representation identifies each explicit maximal base with
 the correct named `N_nu`, and that the final isometry transport reaches the
 literal orthogonal product printed in the paper.
 
+Report 43 adds the Lemma 7.20 card. Reviewers should check the four
+Hilbert-symbol column combinations and the sign convention
+`(-1)^nuPrime=(-1)^nu*(omega,c)_p`; verify that determinant completion adds
+the line `<omega*c>`; and confirm that the resulting penultimate order is
+`1-(2r+1)=-2r`. They should also confirm that units of every odd defect
+`2r+1<2e` exist under the paper's local-field hypotheses and that the final
+definedness biconditional has exactly the exceptional triple `(2,e,U)`.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

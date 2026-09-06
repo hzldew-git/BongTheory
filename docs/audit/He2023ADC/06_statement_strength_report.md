@@ -184,3 +184,11 @@ The two `heADC2025Lemma719*NamedPublished` endpoints are
 `N_1` and `N_2` products. The strict defect domain, integer parity and bounds,
 good-BONG append, `alpha_n=1`, maximal base identification, and transport of
 `n`-ADC are all proved internally. See report 42.
+
+At `b86a9d4`, `heADC2025Lemma720_defined_iff` and the part (i)--(iii)
+endpoints are `LOGICALLY_EQUIVALENT` to Lemma 7.20. The public statements
+retain the normalized parameter order, exact range of `r`, defect
+`d(omega_r)=2r+1`, and the Hilbert-symbol sign equation. The odd-defect unit,
+selected column, determinant-completion isometry, named good BONG, `n`-ADC
+property, penultimate order, and unique undefined triple are proved
+internally. See report 43.

@@ -338,3 +338,19 @@ pass.
 This remains local evidence until the independently extracted Review Kit for
 this exact revision passes GitHub CI. Reports 40--42 record the source-level
 scope and model-identification argument.
+
+## Lemma 7.20 local checkpoint
+
+At exact code revision `b86a9d4cca78d1f016b1d550fc586df3b90bd8d4`, all
+three Lemma 7.20 proof modules, `Bong.Papers.He2023ADC`, and
+`BongTest.He2023ADCAudit` compile directly with Lean 4.32.1. Eleven selected
+dependency reports, including the exact definedness biconditional and both
+named-product branches, contain exactly `propext`, `Classical.choice`, and
+`Quot.sound`. The focused gate reports
+`AXIOM_GATE_PASS: 59643 declarations checked`; the source scanner checks
+2,738 tracked Lean files without a forbidden proof token outside comments.
+`git diff --check` and the scoped 100-column check pass.
+
+This remains local evidence until the independently extracted Review Kit for
+this exact revision passes GitHub CI. Report 43 records the source-level
+scope, Hilbert selection, determinant completion, and named-model argument.

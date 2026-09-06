@@ -32,6 +32,7 @@ additional paper lemmas; the audit packages give the fuller maps.
 | He ADC, Definition 7.16 and Remark 7.17 | `Bong.BONG.GoodBONG.HeADC2025Definition716`, `heADC2025Remark717_unique`, `heADC2025Remark717_exhaustion` | `Bong/Bong/He2023ADCDefinition716.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He ADC, Lemma 7.18 | `Bong.BONG.GoodBONG.heADC2025Lemma718` | `Bong/Bong/He2023ADCLemma718.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He ADC, Lemma 7.19 | `Bong.BONG.GoodBONG.heADC2025Lemma719FirstNamedPublished`, `heADC2025Lemma719SecondNamedPublished` | `Bong/Bong/He2023ADCLemma719Models.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
+| He ADC, Lemma 7.20 | `Bong.BONG.GoodBONG.heADC2025Lemma720_defined_iff`, `heADC2025Lemma720iii`, `heADC2025Lemma720iiiFirst_isometricNamed`, `heADC2025Lemma720iiiSecond_isometricNamed` | `Bong/Bong/He2023ADCLemma720.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 
 All listed endpoints have zero project-specific law/data parameters in their
 public signatures. The theorem-level status is provisional solely because the

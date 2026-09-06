@@ -49,6 +49,9 @@ Report 39 proves the complete Lemma 7.15 isometry classification, including
 the maximal branch and all four Beli conditions in the nonmaximal branch.
 Reports 40--42 formalize Definition 7.16, both assertions of Remark 7.17,
 Lemma 7.18, and the two literal named-product branches of Lemma 7.19.
+Report 43 completes Lemma 7.20: all maximal endpoints, the Hilbert-symbol
+selection and named products, existence in every lower row, and the unique
+undefined triple.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
@@ -56,7 +59,7 @@ Section 4 endpoints, Theorem 6.1, Lemmas 6.4--6.7, Lemma 6.8(i),(ii),(iii),(v),(
 the n>=4 part of (iv), the refutation of its printed n=2 boundary, and full
 Lemmas 6.9--6.12, the boundary-complete audit of Theorem 6.2, Remark 6.3,
 Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, full Lemmas 7.14--7.15,
-Definition 7.16, Remark 7.17, full Lemmas 7.18--7.19, and the corrected
+Definition 7.16, Remark 7.17, full Lemmas 7.18--7.20, and the corrected
 Lemma 7.13 consequence listed in
 `05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic

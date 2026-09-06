@@ -76,6 +76,13 @@ conditional class symbol, uniqueness and exhaustion, the second-column
 endpoint exclusion, and both literal named-product constructions. Eleven
 selected dependency reports are standard-only, the focused gate checks
 59,555 declarations, and the scanner checks 2,735 tracked Lean sources.
+Lemma 7.20 checkpoint:
+`b86a9d4cca78d1f016b1d550fc586df3b90bd8d4`. Report 43 proves the exact
+definedness biconditional, all maximal endpoints, all four Hilbert-symbol
+column combinations, both named products, and the integral-isometry
+conclusions. Eleven selected dependency reports are standard-only, the
+focused gate checks 59,643 declarations, and the scanner checks 2,738 tracked
+Lean sources.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -92,7 +99,7 @@ classifications, enumeration, or omitted boundary cases.
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
-through full Lemma 6.7. The later developments through 7b21fe0 have
+through full Lemma 6.7. The later developments through b86a9d4 have
 passed direct local checks; they still require exact-revision clean-kit CI. Exact
 commit distinctions are in report 11. Overall project grade: D because one
 core source lemma and its downstream classification theorem have substantive

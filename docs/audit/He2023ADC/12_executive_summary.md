@@ -167,8 +167,12 @@ with a 59,348-declaration gate and 2,729-source scanner. Reports 40--42 add
 Definition 7.16, Remark 7.17, and Lemmas 7.18--7.19 at `7b21fe0`. Lemma 7.19
 is proved on both literal named `N` products after explicit maximal-lattice
 isometries. The focused gate checks 59,555 declarations and the scanner checks
-2,735 sources. Section 7 now has 16/21 fully formalized numbered items, one
-quantifier-mismatched item, and four pending items.
+2,735 sources. Report 43 completes Lemma 7.20 at `b86a9d4`: its maximal
+endpoints, all four Hilbert-selected ambient combinations, both named
+products, every lower-row existence statement, and the unique undefined
+triple are proved. The focused gate checks 59,643 declarations and the
+scanner checks 2,738 sources. Section 7 now has 17/21 fully formalized
+numbered items, one quantifier-mismatched item, and three pending items.
 
 Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
@@ -176,7 +180,7 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through 7b21fe0
+The later additions through b86a9d4
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

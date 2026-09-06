@@ -43,6 +43,7 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Definition 7.16 and Remark 7.17 | conditional `M_(nu,r)` class symbol, uniqueness, and exhaustion | full local proof at 7b21fe0; report 40; exact-revision clean CI pending |
 | He ADC Lemma 7.18 | second-column unit endpoint `r=e` is excluded | full local proof at 7b21fe0 on the actual named maximal model; report 41; exact-revision clean CI pending |
 | He ADC Lemma 7.19 | both named products `N_nu^(n+1)(delta) orthogonal-sum <c>` are n-ADC with `R_(n+1)=1-d(delta)` | full local construction and integral-isometry bridge at 7b21fe0; report 42; exact-revision clean CI pending |
+| He ADC Lemma 7.20 | maximal endpoints, the unique undefined triple, and both Hilbert-selected named products | full local classification at b86a9d4; report 43; exact-revision clean CI pending |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1. ADC Lemma 6.8(iv) also has

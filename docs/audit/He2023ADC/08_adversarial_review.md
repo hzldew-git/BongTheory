@@ -194,3 +194,14 @@ odd-defect data, proves `alpha_n=1`, and identifies both explicit bases with
 the named `N` lattices before transporting `n`-ADC. No definitional equality
 between explicit and chosen maximal models is assumed. Four Section 7 items
 now remain pending, independently of the Lemma 7.13 mismatch.
+
+Report 43 audits Lemma 7.20 against pp. 1015--1016. The maximal rows use the
+actual profiles from Lemma 4.12. In the lower rows, all four column choices
+are derived from determinant--Hasse classification after common-tower
+cancellation; the Hilbert equation is not assumed as an ambient-isometry
+law. The missing determinant line is proved to have square class `omega*c`,
+and Lemma 7.19 supplies the actual named product. Existence of every required
+odd-defect unit is constructed from the dyadic defect spectrum. Lemma 7.18
+proves the converse exceptional case, yielding an exact definedness
+biconditional. Three Section 7 items now remain pending, independently of the
+Lemma 7.13 mismatch.
