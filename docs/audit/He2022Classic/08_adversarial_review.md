@@ -9,9 +9,12 @@ paper adjacent index `j` is Lean index `j-1`; the lower bound `j >= n+2` in the
 odd upper branch is therefore Lean bound `n+1 <= j.val`.
 
 The current code supplies both directions of Theorem 1.1 and explicitly
-eliminates low source ranks. This is no longer a statement-only project.
-Conversely, the n >= 2 hypothesis in the local Theorem 1.5 endpoint excludes
-the unary boundary allowed by the paper and must be reported.
+eliminates low source ranks. This is no longer a statement-only project. The
+earlier unary gap in Theorem 1.5 is closed by a separate proof: classic
+1-universality is first converted to scalar universality, and the actual
+finite alpha-candidate set is bounded term by term. The remaining limitation
+is global, not unary: no number-field localization or discriminant theorem is
+claimed.
 
 The literal Lemma 7.1(ii) disjunction fails when e > 1. The repository exports
 its checked refutation and does not promote the qualified odd testing result

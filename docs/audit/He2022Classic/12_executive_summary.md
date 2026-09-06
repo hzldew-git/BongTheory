@@ -2,13 +2,14 @@
 
 Paper: Zilong He, *On classic n-universal quadratic forms over dyadic local
 fields*, manuscripta math. 174 (2024), 559-595, publisher version of record.
-Code checkpoint: `31873263c5390f1df802cf9b25d125ee65f79d07`.
-Proof assistant: Lean 4.32.1. Review date: 2026-09-05.
+Code checkpoint: `66b408163590da57edcd0325fc20266369fb70c2`.
+Proof assistant: Lean 4.32.1. Review date: 2026-09-06.
 
 Theorem 1.1 now has a proof of both directions for n >= 2 and arbitrary source
 rank. The local proof chain and even-rank testing equivalence are substantial
 advances beyond the earlier statement-only milestone. Theorem 1.5 is proved
-only in its local n >= 2 scope; its unary and global clauses remain excluded.
+in its full local n >= 1 scope, including the separate unary argument; its
+number-field localization and global discriminant clause remain excluded.
 
 Theorem 1.3 is not complete. The literal Lemma 7.1(ii) disjunction has a
 kernel-checked refutation when e > 1, so it is neither assumed nor silently

@@ -2,7 +2,8 @@
 
 The audit module prints the transitive axioms of classic-maximal existence,
 the testing reduction, the local parity criteria, the proved Theorem 1.1,
-the restricted Theorem 1.5, the even testing result, and the source refutation.
+both branches of the local Theorem 1.5, the even testing result, and the source
+refutation.
 Expected foundational axioms are `propext`, `Classical.choice`, and `Quot.sound`.
 The volume-minimal construction is noncomputable but proved, not a new axiom.
 
@@ -15,6 +16,10 @@ The explicit arithmetic law interfaces and the lower-even J2 premise of the
 qualified odd testing result remain visible in the hidden-assumption report.
 A standard-only axiom set does not discharge arbitrary theorem premises or
 turn a special case into the full publisher statement.
+
+The audit prints `he2022ClassicTheorem15_unary` and
+`he2022ClassicTheorem15_allRanks`; both report only the three expected
+foundational axioms. This does not create the still-absent number-field layer.
 
 No source assertion is added as a custom axiom to bypass the Lemma 7.1(ii)
 obstruction. Kernel acceptance and semantic correspondence are separate

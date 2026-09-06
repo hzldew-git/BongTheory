@@ -45,28 +45,34 @@ universes, and transitive dependencies preserve this scope?
 
 Author decision, reviewer name, date, and signature: not provided.
 
-## Theorem 1.5: local special case only
+## Theorem 1.5: complete local range, global layer pending
 
 Paper location: p. 562; separate unary proof on p. 586. Formal endpoint:
-`Bong.BONG.GoodBONG.he2022ClassicTheorem15`.
+`Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks`, with branch endpoints
+`he2022ClassicTheorem15_unary` and `he2022ClassicTheorem15`.
 
 Paper statement: if the localized lattice is classic n-universal, its rank is
 at least n + 3 >= 4, and every unsigned adjacent defect is greater than one,
 then the dyadic ramification index is one. If this holds at every dyadic prime,
 two is unramified in the number field, equivalently its discriminant is odd.
 
-Formal translation: at a single dyadic field, under those local assumptions
-and the additional restriction n >= 2, the ramification index is one.
-The source rank is written m + 1 so adjacent indices have type `Fin m`.
+Formal translation: at a single dyadic field, under the corresponding local
+assumptions and throughout n >= 1, the ramification index is one. The source
+rank is written `tail + 2` so adjacent indices have type `Fin (tail + 1)`.
+The unary proof converts classic 1-universality to scalar universality, applies
+Beli's universal criterion, and proves alpha_1 > 1 by checking every candidate
+in its defining finite minimum. The n >= 2 branch is the previously checked
+Theorem 1.1 argument.
 
 Common definitions and assumptions: classic integrality, classic
 n-universality, rank bound, unsigned adjacent defects, and dyadic valuation.
-Differences: the unary n = 1 case is absent; there is no number-field variable,
-all-places quantifier, localization construction, or discriminant conclusion.
+Difference: there is no number-field variable, all-dyadic-primes quantifier,
+localization construction, or discriminant conclusion.
 
-Current status: `PARTIAL_FORMALIZATION`; relationship: `SPECIAL_CASE_ONLY`.
-Question for the author/domain expert: Confirm that this is a useful local
-specialization, without treating it as the entire theorem.
+Current status: `FULLY_FORMALIZED_LOCAL_COMPONENT`; relationship to the full
+printed theorem: `PARTIAL_FORMALIZATION`.
+Question for the author/domain expert: Confirm the local translation and the
+unary bridge to Beli's criterion, without treating it as the global clause.
 Question for the formalization expert: Verify that no implicit global claim
 is introduced by the endpoint name.
 

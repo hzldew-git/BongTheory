@@ -21,9 +21,13 @@ The proposition-valued definition remains separate from its proof:
   for n >= 2 and arbitrary source rank.
 - `Bong.BONG.GoodBONG.he2022ClassicTheorem41` and
   `he2022ClassicTheorem51`: even and odd local criteria used by that proof.
-- `Bong.BONG.GoodBONG.he2022ClassicTheorem15`: proves e = 1 for a fixed dyadic
-  field, n >= 2, source rank at least n + 3, classic n-universality, and all
-  unsigned adjacent defects greater than one. It has no global conclusion.
+- `Bong.BONG.GoodBONG.he2022ClassicTheorem15_unary`: proves the fixed-field
+  implication at n = 1 through the scalar-universal alpha criterion.
+- `Bong.BONG.GoodBONG.he2022ClassicTheorem15`: proves the fixed-field
+  implication for n >= 2 through the classic criterion.
+- `Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks`: combines both branches
+  over the complete published local range n >= 1. It has no global
+  number-field conclusion.
 - `Bong.BONG.GoodBONG.he2022ClassicCorollary63_even`: even branch only.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
   testing equivalence, not the full minimality theorem.

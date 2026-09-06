@@ -6,9 +6,10 @@ generated from `papers/he2022classic/paper.json`. The publisher PDF is excluded;
 its manifest hash identifies the version reviewers must obtain independently.
 The audit output must distinguish the proposition-valued definition from the
 proof `he2022ClassicTheorem11`, and print the latter's transitive axioms.
-The restricted local Theorem 1.5 and the source refutation are audited too.
+The unary and all-ranks local Theorem 1.5 endpoints and the source refutation
+are audited too.
 
-Code checkpoint: `31873263c5390f1df802cf9b25d125ee65f79d07`.
+Code checkpoint: `66b408163590da57edcd0325fc20266369fb70c2`.
 Lean: 4.32.1; dependency versions: the committed `lake-manifest.json`.
 Reproducibility status for this checkpoint: `PARTIALLY_REPRODUCIBLE` until its
 own generated kit has passed clean extraction, compilation, and all audits.
@@ -22,8 +23,8 @@ Classic job `101206371200`, completed successfully at 03:05:13 UTC on
 `6bf3bdf8bd272109e898335683f05bb76664330c`, whose tree was independently
 checked equal to branch commit `db0398506b2e242288bc979217972c6a1d175674`.
 The inspected log records a successful 5010-job build and the expanded Classic
-audit, including the full local Theorem 1.1, restricted Theorem 1.5, literal
-Lemma 7.1(ii) refutation, conditional odd testing and full even testing.
+audit, including the full local Theorem 1.1, the then-restricted Theorem 1.5,
+literal Lemma 7.1(ii) refutation, conditional odd testing and full even testing.
 
 The separate source-only artifact is
 [`paper-review-he2022classic-6bf3bdf8bd272109e898335683f05bb76664330c`](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783/artifacts/9961760603),
@@ -35,6 +36,12 @@ This checkpoint predates the new enforcing transitive-axiom gate. Its
 individually inspected axiom reports are not a successful run of that later
 gate, nor a certificate for a newer source revision. See the deployment
 correction in `../HePaperDeploymentCheckpoint-20260905.md`.
+
+The current checkpoint adds the published unary branch and a complete local
+n >= 1 dispatcher. Local cached compilation, the Classic audit, the proof-token
+scanner, and a focused transitive gate over 61,546 declarations pass. A new
+clean-kit run for this exact checkpoint is still required; the historical
+artifacts below do not certify it.
 
 ## First clean-kit checkpoint with enforced dependencies
 

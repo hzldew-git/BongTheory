@@ -1,11 +1,12 @@
 # Coverage report
 
-Coverage status: `IN_PROGRESS_THEOREM_1_1_PROVED_AND_PARTIAL_TESTING`.
+Coverage status: `IN_PROGRESS_THEOREMS_1_1_AND_LOCAL_1_5_PROVED`.
 
 - Publisher inventory: 66/66 directly numbered items identified.
 - Main theorems: Theorem 1.1 has a complete local equivalence proof;
-  Theorem 1.3 is partial; Theorem 1.5 is a local n >= 2 special case;
-  Theorems 1.7-1.9 have no complete published endpoints.
+  Theorem 1.3 is partial; the local-field implication of Theorem 1.5 is proved
+  for every n >= 1, while its global clause is absent; Theorems 1.7-1.9 have
+  no complete published endpoints.
 - Local numbered results: the Sections 2-6 proof chain includes direct
   representation, invariant, parity-criterion, and conversion endpoints.
   A complete refreshed branch-by-branch denominator audit is not claimed here.

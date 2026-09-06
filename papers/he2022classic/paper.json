@@ -35,7 +35,7 @@
   ],
   "auditDirectory": "docs/audit/He2022Classic",
   "sourceDelta": "docs/audit/He2022Classic/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_THEOREM_1_1_PROVED_AND_PARTIAL_TESTING",
+  "coverageStatus": "IN_PROGRESS_THEOREMS_1_1_AND_LOCAL_1_5_PROVED",
   "semanticStatus": "PARTIAL_WITH_DISCLOSED_SOURCE_OBSTRUCTION",
   "grade": "C",
   "expectedAxioms": [
@@ -49,15 +49,15 @@
     "Classic maximality and existence of classic-maximal over-lattices",
     "Abstract classic-maximal testing reduction",
     "Local BONG proof chain in Sections 2-6, with source differences recorded separately",
-    "Theorem 1.5 local implication for n >= 2 and Corollary 6.3 even branch",
+    "Theorem 1.5 local implication for every n >= 1 and Corollary 6.3 even branch",
     "Section 7 ambient exhaustion and Lemma 7.4 even-rank testing equivalence",
     "Kernel-checked refutation of the literal Lemma 7.1(ii) disjunction when e > 1"
   ],
   "excludedScope": [
     "Theorem 1.3 full minimality, odd-rank sufficiency, and complete published counting claims",
-    "Theorem 1.5 unary case and its global unramifiedness/discriminant conclusion",
+    "Theorem 1.5 number-field localization and global unramifiedness/discriminant conclusion",
     "Literal Lemma 7.1(ii) and downstream claims requiring an unresolved source correction",
     "Global consequences and independent human semantic sign-off"
   ],
-  "reviewNotice": "Theorem 1.1 has a checked proof, not merely a proposition encoding. Theorem 1.5 is proved only locally for n >= 2. Theorem 1.3 and the global results remain incomplete; the false literal Lemma 7.1(ii) is disclosed and refuted, not assumed or silently repaired. Grade C describes partial coverage and is not a whole-paper certificate. The post-publication arXiv v3 copy is non-authoritative."
+  "reviewNotice": "Theorem 1.1 has a checked proof, not merely a proposition encoding. The complete n >= 1 local-field implication underlying Theorem 1.5 is proved, including its unary branch; its number-field localization and global discriminant clause are not. Theorem 1.3 and the other global results remain incomplete; the false literal Lemma 7.1(ii) is disclosed and refuted, not assumed or silently repaired. Grade C describes partial coverage and is not a whole-paper certificate. The post-publication arXiv v3 copy is non-authoritative."
 }

@@ -1,5 +1,10 @@
 # Headline theorem checkpoint and independent review
 
+Historical checkpoint: this report is fixed to the commit below. The unary
+Theorem 1.5 gap recorded here is superseded by
+`15_theorem15_unary_checkpoint.md`; the remaining observations retain their
+original checkpoint scope.
+
 Date: 2026-09-05. Fixed code commit:
 `31873263c5390f1df802cf9b25d125ee65f79d07`.
 Source: publisher version of record, pp. 559-595, SHA-256

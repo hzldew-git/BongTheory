@@ -6,7 +6,7 @@
 | Maximal testing principle used in Theorem 1.3 | `heClassicMaximalTestingReduction` | Abstract core proved |
 | Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | Both directions proved for n >= 2 and arbitrary source rank; semantic assessment remains provisional |
 | Theorem 1.3 explicit lists and minimality | indexed models and `he2022ClassicLemma74_even` | `PARTIAL_FORMALIZATION`: even testing equivalence does not establish odd sufficiency, complete counting, or minimality |
-| Theorem 1.5 | `Bong.BONG.GoodBONG.he2022ClassicTheorem15` | `SPECIAL_CASE_ONLY`: local n >= 2 implication; unary and global clauses excluded |
+| Theorem 1.5 | `Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks` | `PARTIAL_FORMALIZATION`: complete local implication for n >= 1; number-field localization and global discriminant clause excluded |
 | Theorems 1.7, 1.8, 1.9 | no complete published endpoint | `NOT_FORMALIZED` |
 | Theorems 4.1, 5.1 | `he2022ClassicTheorem41`, `he2022ClassicTheorem51` | Checked local parity criteria used in Theorem 1.1 |
 | Corollary 6.3 | `he2022ClassicCorollary63_even` | `PARTIAL_FORMALIZATION`: even branch |

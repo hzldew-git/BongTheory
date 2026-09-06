@@ -10,9 +10,14 @@ both directions, all source ranks, and both parity branches for n >= 2. The
 intended relationship is `LOGICALLY_EQUIVALENT`; final semantic acceptance
 remains `PROVISIONAL_MATCH` pending independent human confirmation.
 
-For Theorem 1.5 the primary relationship is `SPECIAL_CASE_ONLY`: the endpoint
-proves the local implication for n >= 2. The paper also allows n = 1 and draws
-a conclusion about all dyadic primes and the number-field discriminant.
+For Theorem 1.5 the endpoint `he2022ClassicTheorem15_allRanks` proves the
+local-field implication throughout the published range n >= 1. The separate
+unary endpoint follows the source's alpha-invariant contradiction, while the
+n >= 2 branch uses Theorem 1.1. The paper additionally starts with a global
+number-field lattice and concludes that two is unramified, equivalently that
+the number-field discriminant is odd; that localization and global conclusion
+are not encoded. The relationship to the complete printed theorem therefore
+remains `PARTIAL_FORMALIZATION`.
 
 For Theorem 1.3 and Lemma 7.4 the current testing endpoint covers even rank;
 neither full odd-rank sufficiency nor proper-subset minimality follows merely
