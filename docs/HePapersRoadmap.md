@@ -38,6 +38,8 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Lemma 6.8(iii)--(iv) | actual second-column isometries: full (iii), n>=4 of (iv), and an actual nonmaximal 2-ADC counterexample at its printed n=2 boundary | n>=4 result passes at 074f2cd; binary implication is `SEMANTIC_MISMATCH` and formally refuted through fe2a459; reports 25--31; exact-revision clean CI pending |
 | He ADC Lemma 6.12 | exceptional quaternary lattice in `W_1^4(Delta)` is 2-ADC, not 3-ADC, and nonmaximal | full local proof and source-first audit at cf9f83b; report 32; exact-revision clean CI and human sign-off pending |
 | He ADC Theorem 7.1 | exact odd `n>=3`, rank `n+1` equivalence; corrected three-way binary classification and both nonmaximal 3-ADC exclusions | full local proof at c3e6092; statement `PROVISIONAL_MATCH`, publisher proof `INCOMPLETE_PROOF`; report 35; exact-revision clean CI and human sign-off pending |
+| He ADC Theorem 7.4 and Lemmas 7.5--7.14 | complete odd-corank-two BONG criterion and its order, alpha, defect, representation and determinant-parity chain | full local proof in the audited scopes through 6c52803; Lemma 7.13 has a disclosed quantifier mismatch; reports 36--38; exact-revision clean CI pending |
+| He ADC Lemma 7.15 | integral isometry iff ambient-space isometry and equality of `R_(n+1)` | full local proof at 06d2507, including both maximal and four-condition nonmaximal branches; report 39; exact-revision clean CI pending |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1. ADC Lemma 6.8(iv) also has

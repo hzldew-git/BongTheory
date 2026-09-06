@@ -160,9 +160,12 @@ is formalized and suffices downstream. The complete Lemma 7.11 checkpoint has
 standard-only new dependency reports, a 59,204-declaration focused gate, and
 a 2,727-source scanner. Report 38 adds both clauses of Lemma 7.14 at
 `6c52803`: both ambient columns and both parameter parities are retained,
-with a 59,218-declaration gate and 2,728-source scanner. Section 7 now has
-11/21 fully formalized numbered items, one quantifier-mismatched item, and
-nine pending items.
+with a 59,218-declaration gate and 2,728-source scanner. Report 39 adds the
+complete Lemma 7.15 isometry classification at `06d2507`: the maximal branch
+and all four Beli conditions in the nonmaximal branch are proved internally,
+with a 59,348-declaration gate and 2,729-source scanner. Section 7 now has
+12/21 fully formalized numbered items, one quantifier-mismatched item, and
+eight pending items.
 
 Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
@@ -170,7 +173,7 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through 6c52803
+The later additions through 06d2507
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

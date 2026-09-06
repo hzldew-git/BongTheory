@@ -142,6 +142,10 @@ Additional concrete declaration groups are:
 - `He2023ADCLemma714` exports the determinant-parity comparison, the even
   initial-prefix sum, and both published conclusions for unit and
   unit-times-uniformizer ambient parameters in either ambient column.
+- `He2023ADCLemma715` exports the complete integral-isometry biconditional.
+  It derives equality of all orders and alphas, every prefix defect bound,
+  the sole triggered prefix representation, and both maximal and nonmaximal
+  branches without a supplied Beli classification law.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full

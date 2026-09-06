@@ -307,3 +307,18 @@ tracked Lean files without a forbidden proof token outside comments.
 This is local evidence only until an independently extracted Review Kit at a
 revision containing this checkpoint passes GitHub CI. Report 38 records the
 source parity argument and theorem-level scope.
+
+## Lemma 7.15 local checkpoint
+
+At exact code revision `06d25079c6dac69bc0439b94e694fa52c81961ed`, the
+Lemma 7.15 module, canonical paper entry, and focused audit compile directly
+with Lean 4.32.1. Six selected new dependency reports, including
+`heADC2025Lemma715`, contain exactly `propext`, `Classical.choice`, and
+`Quot.sound`. The focused gate reports
+`AXIOM_GATE_PASS: 59348 declarations checked`; the source scanner checks
+2,729 tracked Lean files without a forbidden proof token outside comments.
+`git diff --check` and the 100-column scoped source check pass.
+
+This is local evidence only until an independently extracted Review Kit at a
+revision containing this checkpoint passes GitHub CI. Report 39 records the
+four-condition classification proof and theorem-level scope.

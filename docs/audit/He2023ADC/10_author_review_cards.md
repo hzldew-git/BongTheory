@@ -109,5 +109,15 @@ unit-times-uniformizer rows exhaust `c in V`, and that the Theorem 7.4 profile
 makes the sum of the first `n+1` orders even. These facts, together with the
 last-order set `{0,1}`, are exactly what selects the two conclusions.
 
+Report 39 adds the Lemma 7.15 card. Reviewers should check the zero-based
+translation of `R_(n+1)`; that ambient isometry plus Lemma 7.14 identifies
+the final order; that formula (7.5) gives every alpha used in Beli condition
+(ii); and that the signed-prefix and domination arguments cover every index
+in condition (iii). For condition (iv), verify that only `i=n-1` can trigger
+and that Proposition 3.5(iv)--(v) together with Lemma 4.4(ii) supplies the
+actual prefix representation. Finally, confirm that the `R_(n+1)=-2e`
+branch may equivalently be closed by the proved maximal-lattice uniqueness
+route.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

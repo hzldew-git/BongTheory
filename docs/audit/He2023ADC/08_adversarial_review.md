@@ -176,3 +176,12 @@ the last have even total from Theorem 7.4, instead of assuming the displayed
 congruence in (7.3). No parity converse, field-uniformizer normalization, or
 last-order dichotomy is left as caller data. Nine Section 7 items remain
 pending, independently of the Lemma 7.13 mismatch.
+
+Report 39 audits Lemma 7.15 against pp. 1013--1014. The public theorem keeps
+the source's two invariants and derives the full order sequence using ambient
+determinant parity. In the nonmaximal branch it verifies each of Beli Theorem
+3.1(i)--(iv), including the actual prefix map at the sole alpha-sum trigger;
+in the maximal branch it derives `O`-maximality before invoking uniqueness.
+No uniqueness trigger, alpha profile, classification law, or maximality fact
+is assumed. Eight Section 7 items now remain pending, independently of the
+Lemma 7.13 mismatch.

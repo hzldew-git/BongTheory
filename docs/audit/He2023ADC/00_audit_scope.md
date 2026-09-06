@@ -6,7 +6,7 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `6c528031d27cc050a1f10c2ec953500f9b4c3c2c`,
+The current audited code checkpoint is `06d25079c6dac69bc0439b94e694fa52c81961ed`,
 branch `feat/he-formalization`, Lean 4.32.1, audited on 6 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
@@ -45,13 +45,15 @@ Lemmas 7.5--7.10 and 7.12 chain and records the Lemma 7.13 source mismatch.
 Report 37 completes both normalized parameter rows of Lemma 7.11. These
 additions also await exact-revision clean CI. Report 38 proves both ambient
 columns and both parameter rows of Lemma 7.14 from determinant parity.
+Report 39 proves the complete Lemma 7.15 isometry classification, including
+the maximal branch and all four Beli conditions in the nonmaximal branch.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
 Section 4 endpoints, Theorem 6.1, Lemmas 6.4--6.7, Lemma 6.8(i),(ii),(iii),(v),(vi),
 the n>=4 part of (iv), the refutation of its printed n=2 boundary, and full
 Lemmas 6.9--6.12, the boundary-complete audit of Theorem 6.2, Remark 6.3,
-Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, full Lemma 7.14, and the corrected
+Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, full Lemmas 7.14--7.15, and the corrected
 Lemma 7.13 consequence listed in
 `05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic

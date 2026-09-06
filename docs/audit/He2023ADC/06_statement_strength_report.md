@@ -159,3 +159,11 @@ At `6c52803`, `heADC2025Lemma714i` and `heADC2025Lemma714ii` are
 explicit normalizations `c=delta` and `c=delta*pi`. Both values of the
 ambient index are retained as a disjunction, and the conclusions contain no
 caller-supplied determinant-parity law. See report 38.
+
+At `06d2507`, `heADC2025Lemma715` is `LOGICALLY_EQUIVALENT` to the complete
+published Lemma 7.15. Its chosen good BONGs name the source invariant
+`R_(n+1)`; no order-tail law, alpha formula, prefix-defect bound, internal
+representation condition, maximality assertion, or classification theorem
+premise is exposed to the caller. Necessity and sufficiency both conclude in
+the source's actual ambient-space and integral-lattice isometry relations.
+See report 39.
