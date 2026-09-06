@@ -162,5 +162,13 @@ that the final unary factor is exactly `<Delta epsilon>` after the binary
 block. Confirm also that the first two parameters lie in
 `U \ {1,Delta}` and the third lies in `U`.
 
+Report 46 adds the Corollary 7.21 card. Reviewers should confirm that the
+three top rows and four rows for every `r<=e-1` are counted without omission;
+that the Lemma 7.20(ii) row is included exactly once in the catalogue and is
+the only maximal lower row; and that Lemma 7.15 plus ambient-row uniqueness
+really proves pairwise nonisometry. They should separately verify that
+O'Meara 63:9 gives `|U|=2(N p)^e` under the repository's normalization. That
+last identity remains an explicit premise of the numerical endpoint.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

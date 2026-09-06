@@ -223,3 +223,13 @@ followed by `<Delta epsilon>`. The proof identifies arbitrary admissible
 binary shears integrally and uses maximal-lattice uniqueness only after an
 ambient isometry is derived. Corollary 7.21 remains pending, independently
 of the Lemma 7.13 mismatch.
+
+Report 46 supersedes that final pending conclusion. The Corollary 7.21 index
+is not merely a list with the right cardinality: every model has the required
+rank and ADC property, every arbitrary qualifying lattice maps to a model,
+and Lemma 7.15 plus ambient-row uniqueness proves irredundancy. The maximal
+overlap is placed in the maximal summand and proved to be the only maximal
+lower row. The resulting `(4e+3)|U|` and `(4e-1)|U|` counts are unconditional.
+The final substitution `|U|=2(N p)^e` remains visibly conditional on the
+cited O'Meara 63:9 law; a standard-only axiom report does not prove that
+premise. Lemma 7.13's independent source mismatch is unchanged.

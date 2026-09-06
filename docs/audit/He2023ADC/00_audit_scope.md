@@ -6,7 +6,7 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `287b202cfd78c97efe00761798c6914d9715e151`,
+The current audited code checkpoint is `bd0c9a3f66d3465cd518bae2d75386887f79d5a5`,
 branch `feat/he-formalization`, Lean 4.32.1, audited on 6 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
@@ -59,6 +59,10 @@ maximal profiles.
 Report 45 proves all three literal integral-isometry formulas of Remark 7.3,
 including the exact exponent range, negative powers of the uniformizer,
 the sharp factor, and the ordered `pi A perp <Delta epsilon>` tail.
+Report 46 constructs the complete and irredundant Corollary 7.21 isometry
+catalogue, proves its exact maximal partition and counts in terms of `|U|`,
+and isolates the cited O'Meara 63:9 numerical substitution as an explicit
+undischarged premise.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
@@ -68,7 +72,7 @@ Lemmas 6.9--6.12, the boundary-complete audit of Theorem 6.2, Remark 6.3,
 Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, full Lemmas 7.14--7.15,
 Definition 7.16, Remark 7.17, full Lemmas 7.18--7.20, and the corrected
 Lemma 7.13 consequence, together with complete Theorem 7.2 and Remark 7.3,
-listed in
+and the Corollary 7.21 catalogue and conditional numerical wrapper, listed in
 `05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic
 premises still undischarged. This audit does not certify the missing local,

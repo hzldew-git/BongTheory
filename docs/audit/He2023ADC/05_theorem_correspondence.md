@@ -55,7 +55,8 @@
 | Lemma 7.20 | `heADC2025Lemma720_defined_iff`, `heADC2025Lemma720iii`, and the five `isometricNamed` endpoints | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `b86a9d4`: exact unique exception, all maximal endpoints, and both Hilbert-selected named products; report 43 |
 | Theorem 7.2 | `heADC2025Theorem72`, `heADC2025Theorem72Product_iff_published`, `heADC2025Theorem72Published`, `heADC2025Theorem72Published_overlap` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `07cd548`: intrinsic and literal finite maximal-or-product biconditionals, integral square-normalization, and the maximal overlap; report 44 |
 | Remark 7.3 | `heADC2025Remark73_firstPublished`, `heADC2025Remark73_secondPublished`, `heADC2025Remark73_thirdPublishedRepresentative` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `287b202`: all three printed integral-isometry formulas, exact exponent range, sharp factor, half-scaled `A`, and ordered ternary tail; report 45 |
-| Section 5, Corollary 7.21, Section 8 and remaining Section 1 results | none | Pending; every downstream use of the unqualified Theorem 6.2 requires a separate boundary audit |
+| Corollary 7.21 | `HeADC2025Corollary721Index.isExactNADCIsometryCatalogue`, `model_isOMaximal_iff`, `card_index`, `card_nonmaximalIndex`, `heADC2025Corollary721` | `FORMALIZED_RELATIVE_TO_CITED_COUNTING_LAW` / `PROVISIONAL_MATCH` at `bd0c9a3`: exact complete and irredundant isometry catalogue, maximal partition, unconditional `(4e+3)|U|` and `(4e-1)|U|` counts; printed residue-norm formulas explicitly assume the O'Meara 63:9 cardinality input; report 46 |
+| Section 5, Section 8 and remaining Section 1 results | none | Pending; every downstream use of the unqualified Theorem 6.2 requires a separate boundary audit |
 
 The field restriction prevents claiming the full generality of Lemma 2.1.
 At checkpoint `976883e6cda7c17402c4c1f0bc768db555460eae`, all thirteen

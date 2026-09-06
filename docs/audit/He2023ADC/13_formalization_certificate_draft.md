@@ -97,6 +97,14 @@ negative uniformizer powers, sharp factor, half-scaled `A` normalization,
 ordered ternary tail, and exact finite representative specialization. Eight
 selected dependency reports are standard-only, the focused gate checks
 59,743 declarations, and the scanner checks 2,741 tracked Lean sources.
+Corollary 7.21 checkpoint:
+`bd0c9a3f66d3465cd518bae2d75386887f79d5a5`. Report 46 proves a complete
+and irredundant integral-isometry catalogue, the exact maximal/nonmaximal
+partition, and the intermediate cardinalities in terms of `|U|`. The printed
+residue-norm formulas retain the cited O'Meara 63:9 identity as an explicit
+premise. Seven selected dependency reports are standard-only, the focused
+gate checks 59,853 declarations, and the scanner checks 2,742 tracked Lean
+sources.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -113,7 +121,7 @@ classifications, enumeration, or omitted boundary cases.
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
-through full Lemma 6.7. The later developments through 287b202 have
+through full Lemma 6.7. The later developments through bd0c9a3 have
 passed direct local checks; they still require exact-revision clean-kit CI. Exact
 commit distinctions are in report 11. Overall project grade: D because one
 core source lemma and its downstream classification theorem have substantive

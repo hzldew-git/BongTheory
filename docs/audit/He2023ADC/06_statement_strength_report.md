@@ -209,3 +209,12 @@ third endpoint is first proved for every valuation unit `epsilon`, which is
 stronger in parameter generality; `thirdPublishedRepresentative` then gives
 the exact printed specialization `epsilon in U`. No conclusion is weakened
 to ambient-space isometry or a coefficient identity. See report 45.
+
+At `bd0c9a3`, `isExactNADCIsometryCatalogue` and
+`model_isOMaximal_iff` are `LOGICALLY_EQUIVALENT` to the classification and
+maximality content counted in Corollary 7.21. The parameter `k` covers exactly
+odd `n=2k+3>=3`, and the catalogue uses integral lattice isometry. The
+intermediate cardinalities `(4e+3)|U|` and `(4e-1)|U|` are unconditional.
+The endpoint `heADC2025Corollary721` is a `PROVISIONAL_MATCH` relative to the
+explicit O'Meara 63:9 premise `|U|=2(N p)^e`; it does not prove that cited
+arithmetic theorem. See report 46.

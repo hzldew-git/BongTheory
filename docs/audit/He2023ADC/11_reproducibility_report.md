@@ -385,3 +385,20 @@ finite representative wrapper, contain exactly `propext`,
 This remains local evidence until the independently extracted Review Kit for
 this exact revision passes GitHub CI. Report 45 records the source-level
 normalizations and integral-isometry chain.
+
+## Corollary 7.21 local checkpoint
+
+At exact code revision `bd0c9a3f66d3465cd518bae2d75386887f79d5a5`,
+`He2023ADCCorollary721.lean`, `Bong.Papers.He2023ADC`, and
+`BongTest.He2023ADCAudit` compile directly with Lean 4.32.1. Seven selected
+dependency reports, including the exact catalogue, maximality biconditional,
+and both published counts, contain exactly `propext`, `Classical.choice`, and
+`Quot.sound`. The focused gate reports
+`AXIOM_GATE_PASS: 59853 declarations checked`; the source scanner checks
+2,742 tracked Lean files without a forbidden proof token outside comments.
+`git diff --check` and the scoped 100-column check pass.
+
+This remains local evidence until the independently extracted Review Kit for
+this exact revision passes GitHub CI. The numerical endpoints visibly retain
+the cited O'Meara 63:9 cardinality premise. Report 46 records the exact
+catalogue, row count, maximality partition, and trust boundary.

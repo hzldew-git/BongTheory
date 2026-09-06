@@ -39,7 +39,7 @@
   ],
   "auditDirectory": "docs/audit/He2023ADC",
   "sourceDelta": "docs/audit/He2023ADC/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_WITH_BOUNDARY_MISMATCHES_THROUGH_REMARK_7_3",
+  "coverageStatus": "IN_PROGRESS_WITH_BOUNDARY_MISMATCHES_AND_CONDITIONAL_COROLLARY_7_21",
   "semanticStatus": "SEMANTIC_MISMATCH_LEMMA_6_8_IV_THEOREM_6_2_BINARY_AND_LEMMA_7_13_QUANTIFIERS__INCOMPLETE_PROOF_THEOREM_7_1",
   "grade": "D",
   "expectedAxioms": [
@@ -84,14 +84,15 @@
     "Full Lemma 7.20: exact definedness biconditional, maximal endpoints, all Hilbert-selected named products, and integral-isometry conclusions; locally kernel-checked with a 59643-declaration focused gate at b86a9d4; report 43",
     "Full Theorem 7.2: representative-independent and literal finite maximal-or-product biconditionals, integral square normalization, and maximal overlap; locally kernel-checked with a 59692-declaration focused gate at 07cd548; report 44",
     "Full Remark 7.3: all three printed integral-isometry formulas, including the exact l range, negative uniformizer exponents, sharp factor, half-scaled A normalization, ordered ternary tail, and finite representative wrapper; locally kernel-checked with a 59743-declaration focused gate at 287b202; report 45",
+    "Corollary 7.21: complete and irredundant integral-isometry catalogue, exact maximal/nonmaximal partition, and unconditional (4e+3)|U| total and (4e-1)|U| nonmaximal counts; the printed residue-norm formulas are proved relative to the explicit O'Meara 63:9 counting premise; locally kernel-checked with a 59853-declaration focused gate at bd0c9a3; report 46",
     "The corrected simultaneous-failure consequence justified by the published proof of Lemma 7.13, sufficient for Theorem 7.4; the stronger printed per-target conclusion is not asserted; report 36"
   ],
   "excludedScope": [
     "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
-    "Non-dyadic local results, Corollary 7.21, and Section 8 global and enumerative proofs",
+    "Non-dyadic local results, the proof of the O'Meara 63:9 counting input, and Section 8 global and enumerative proofs",
     "Remaining Section 4 clauses, including non-dyadic Proposition 4.16 and unary testing-set minimality",
     "Completion of theorem-by-theorem semantic review and independent human sign-off",
     "Any corrected publisher replacement for the refuted n=2 boundaries in Lemma 6.8(iv) and Theorem 6.2; downstream uses other than the independently repaired Theorem 7.1 require separate re-evaluation"
   ],
-  "reviewNotice": "This is an in-progress paper kit. Section 6 is completely triaged: ten numbered items provisionally match, while the n=2 statements in Lemma 6.8(iv) and Theorem 6.2 are directly refuted by an independently audited, nonvacuous actual 2-ADC counterexample. Theorem 7.1 is proved, but its printed proof omits a second binary boundary class. Section 7 now has 19/21 fully formalized numbered items through Remark 7.3 at 287b202. The printed conclusion of Lemma 7.13 is stronger than its proof; the formalization records the proved simultaneous-failure form. Reports 26-45 give the scope. Clean-kit CI at f6f7485/c82668b predates all additions after Lemma 6.7. Global arithmetic premises, Corollary 7.21, the printed-strength Lemma 7.13 claim, and enumeration remain incomplete. Exact-revision clean CI, release promotion, and human sign-off remain separate gates."
+  "reviewNotice": "This is an in-progress paper kit. Section 6 is completely triaged: ten numbered items provisionally match, while the n=2 statements in Lemma 6.8(iv) and Theorem 6.2 are directly refuted by an independently audited, nonvacuous actual 2-ADC counterexample. Theorem 7.1 is proved, but its printed proof omits a second binary boundary class. Section 7 has 19/21 fully formalized numbered items; Corollary 7.21 additionally has a complete and irredundant catalogue and exact maximal partition, with its printed numerical formulas conditional on the cited O'Meara 63:9 count. The printed conclusion of Lemma 7.13 is stronger than its proof; the formalization records the proved simultaneous-failure form. Reports 26-46 give the scope. Clean-kit CI at f6f7485/c82668b predates all additions after Lemma 6.7. Global arithmetic premises, proof of the cited counting input, the printed-strength Lemma 7.13 claim, and enumeration remain incomplete. Exact-revision clean CI, release promotion, and human sign-off remain separate gates."
 }

@@ -173,6 +173,11 @@ Additional concrete declaration groups are:
   first two named even lattices and the ordered half-scaled `A` plus unary
   decomposition for the named odd lattice. It also exports the exact finite
   representative specialization of the third formula.
+- `He2023ADCCorollary721` constructs the finite maximal/nonmaximal index,
+  proves it is a complete and irredundant integral-isometry catalogue, proves
+  maximality exactly characterizes the left summand, and derives the
+  `(4e+3)|U|` total and `(4e-1)|U|` nonmaximal counts. The two printed
+  residue-norm formulas explicitly retain the O'Meara 63:9 counting premise.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full

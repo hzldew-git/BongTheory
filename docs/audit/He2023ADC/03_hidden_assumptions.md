@@ -122,3 +122,11 @@ integrality conditions, maximal-lattice comparison, discriminant endpoint,
 and auxiliary defect-`2e-1` unit used for the third formula are all
 constructed internally. The exact third representative wrapper needs only
 that `U` is complete and normalized. See report 45.
+
+Corollary 7.21's finite catalogue, isometry completeness, irredundancy,
+maximality partition, and counts in terms of `|U|` add no counting premise.
+The printed residue-norm formulas separately require
+`HeADC2025Corollary721CountingLaw`, which states the O'Meara 63:9 identity
+`|U|=2(N p)^e`. No generic proved instance is currently present. This
+explicit theorem parameter must not be mistaken for a discharged result merely
+because `#print axioms` reports only foundational axioms. See report 46.

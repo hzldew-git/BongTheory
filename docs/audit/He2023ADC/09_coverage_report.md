@@ -88,8 +88,10 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   `2417a4f`. Lemma 7.11 is complete in both normalized parameter rows at
   `832d10c`. Lemma 7.14 is complete at `6c52803`, Lemma 7.15 at `06d2507`,
   Definition 7.16 through Lemma 7.19 at `7b21fe0`, Lemma 7.20 at `b86a9d4`,
-  Theorem 7.2 at `07cd548`, and Remark 7.3 at `287b202`, raising full Section
-  7 coverage to 19/21 numbered items. The two Lemma 7.19 branches conclude on
+  Theorem 7.2 at `07cd548`, Remark 7.3 at `287b202`, and Corollary 7.21 at
+  `bd0c9a3`. Nineteen of the 21 Section 7 items are fully formalized,
+  Corollary 7.21 is formalized relative to its cited numerical counting law,
+  and Lemma 7.13 has a source mismatch. The two Lemma 7.19 branches conclude on
   the literal named products after proved integral-isometry transport. The
   Lemma 7.11 odd-valuation represented-target contradiction remains the route used by
   Lemma 7.5. Lemma 7.13's proof-supported simultaneous-failure disjunction is
@@ -99,12 +101,16 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   Theorem 7.2 supplies both the intrinsic and literal finite product families
   and proves their equivalence and maximal overlap. Remark 7.3 identifies all
   three named models with the literal printed decompositions by integral
-  lattice isometries. Reports 36--45 give the exact correspondence and trust
+  lattice isometries. Corollary 7.21 additionally proves a complete and
+  irredundant isometry catalogue, its exact maximal partition, and the counts
+  in terms of `|U|`; only the cited substitution `|U|=2(N p)^e` remains an
+  explicit premise. Reports 36--46 give the exact correspondence and trust
   checks.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, Corollary 7.21, the printed-strength Lemma 7.13 claim, Section 8
+Section 5, proof of the O'Meara 63:9 counting input, the printed-strength
+Lemma 7.13 claim, Section 8
 global proofs, and the
 enumerative main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.

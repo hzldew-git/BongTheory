@@ -223,3 +223,15 @@ declarations, and the comment-aware scanner checks 2,741 tracked Lean sources
 without finding a forbidden proof token outside comments. The scoped
 100-column and `git diff --check` gates pass. Report 45 separates these local
 checks from exact-revision clean CI and unsigned human review.
+
+At checkpoint `bd0c9a3f66d3465cd518bae2d75386887f79d5a5`, the Corollary
+7.21 module, canonical paper entry, and expanded paper audit compile directly
+with Lean 4.32.1. Seven selected dependency reports contain exactly
+`propext`, `Classical.choice`, and `Quot.sound`. The focused enforcing gate
+checks 59,853 declarations, and the comment-aware scanner checks 2,742 tracked
+Lean sources without finding a forbidden proof token outside comments. The
+scoped 100-column and `git diff --check` gates pass. The O'Meara 63:9
+cardinality law is an explicit theorem premise, not a Lean axiom and not a
+proved repository instance. Report 46 separates the unconditional catalogue
+from the conditional numerical substitution and the remaining clean-CI and
+human-review gates.

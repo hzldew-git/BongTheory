@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`6c528031d27cc050a1f10c2ec953500f9b4c3c2c`.
+`bd0c9a3f66d3465cd518bae2d75386887f79d5a5`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -183,8 +183,15 @@ checkpoint. Report 45 adds all three literal formulas of Remark 7.3 at
 `A` normalization, ordered ternary tail, and finite representative domain.
 Eight selected reports are standard-only, the focused gate checks 59,743
 declarations, and the scanner checks 2,741 sources. Section 7 now has 19/21
-fully formalized numbered items, one quantifier-mismatched item, and one
-pending item.
+fully formalized numbered items and one quantifier-mismatched item. Report 46
+formalizes Corollary 7.21 relative to its cited O'Meara 63:9 numerical input at
+`bd0c9a3`. The code proves a complete and irredundant integral-isometry
+catalogue, exact maximal versus nonmaximal membership, and the unconditional
+counts `(4e+3)|U|` and `(4e-1)|U|`. Under the visible counting premise it
+derives the printed `(8e+6)(N p)^e` and `(8e-2)(N p)^e` formulas. Seven
+selected reports are standard-only, the focused gate checks 59,853
+declarations, and the scanner checks 2,742 sources. The cited counting theorem
+still has no proved generic repository instance.
 
 Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
@@ -192,7 +199,7 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through 287b202
+The later additions through bd0c9a3
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

@@ -116,6 +116,21 @@ quantifier strength, while Theorem 7.4 and Lemma 7.5 remain proved from the
 weaker result actually justified by the published argument. Report 36 records
 the formal correspondence.
 
+## Corollary 7.21 cited cardinality boundary
+
+The publisher's proof on p. 1016 obtains its two numerical formulas by using
+`|U|=[O_F^times:O_F^(times 2)]=2(N p)^e`, citing O'Meara 63:9. At
+`bd0c9a3f66d3465cd518bae2d75386887f79d5a5`, the formalization proves the
+complete and irredundant isometry catalogue, its exact maximal partition, and
+the intermediate counts `(4e+3)|U|` and `(4e-1)|U|` without that citation.
+
+The final substitution is isolated as
+`HeADC2025Corollary721CountingLaw`. No generic proved instance has been
+located. The published numerical formulas are therefore formalized relative
+to the cited arithmetic input, not advertised as unconditional repository
+theorems. This is an explicit trust boundary rather than a discrepancy in the
+paper's statement; report 46 gives the full accounting.
+
 ## Lemma 7.14 determinant parity
 
 The publisher proof on p. 1013 says that the order of the full coefficient

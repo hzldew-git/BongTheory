@@ -10,9 +10,9 @@ paper; those three extensions are explicitly marked partial.
 
 ## Current status
 
-- Proof-assistant status: the public theorem endpoints compile without
-  project-specific law parameters and use only `propext`, `Classical.choice`,
-  and `Quot.sound`.
+- Proof-assistant status: the public theorem endpoints compile and use only
+  `propext`, `Classical.choice`, and `Quot.sound`; conditional arithmetic
+  endpoints keep each undischarged mathematical premise visible in their type.
 - Semantic-fidelity status: `PROVISIONAL_MATCH`.
 - Beli 2020 coverage status:
   `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY`; its printed Theorem 3.1
@@ -20,8 +20,9 @@ paper; those three extensions are explicitly marked partial.
 - He-paper coverage status: `PARTIAL`. He--Hu has complete formal coverage of
   its 47 numbered results subject to semantic sign-off; He classic retains
   unformalized testing/global scope; He ADC Section 6 is fully triaged and
-  Section 7 has 19/21 fully formalized numbered items through Remark 7.3,
-  with the documented boundary and quantifier mismatches kept explicit.
+  Section 7 has 19/21 fully formalized numbered items, one documented
+  quantifier mismatch, and a complete Corollary 7.21 catalogue whose final
+  numerical substitution explicitly retains its cited counting premise.
 - Project grade: D because the He ADC audit identifies a substantive
   theorem-level mismatch; this does not downgrade the separately graded kits.
 - Local reproducibility status:
@@ -62,7 +63,7 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
 | He, *manuscripta math.* 174 (2024), Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | full local equivalence proved; testing and global parts of the paper remain incomplete |
-| He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1, 7.2 and 7.4, and the chain through Remark 7.3 | partial paper; Section 7 is 19/21, Lemma 7.13 has a quantifier mismatch, and Corollary 7.21 remains pending |
+| He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1, 7.2 and 7.4, the chain through Remark 7.3, and the Corollary 7.21 catalogue | partial paper; Lemma 7.13 has a quantifier mismatch, and the Corollary 7.21 residue-norm formulas retain the cited O'Meara 63:9 count as an explicit premise |
 
 The Classic paper's literal Lemma 7.1(ii) is refuted for ramification index
 greater than one. The ADC paper's Lemma 6.8(iv) is also refuted at n=2 by an
