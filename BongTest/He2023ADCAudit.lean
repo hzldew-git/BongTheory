@@ -497,6 +497,12 @@ import Bong.Papers.He2023ADC
 #check @Bong.BONG.GoodBONG.heADC2025Lemma77iii
 #check @Bong.BONG.GoodBONG.heADC2025Lemma78
 #check @Bong.BONG.GoodBONG.heADC2025Lemma711Odd
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even_previousDefect_ge
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even_defectTrigger
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even_not_represents
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even_not_centralRepresentationConditionsPrime
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711
 #check @Bong.BONG.GoodBONG.heADC2025Lemma711_exists_represented_oddTarget
 #check @Bong.BONG.GoodBONG.heADC2025Lemma711_badBranch_impossible
 #check @Bong.BONG.GoodBONG.heADC2025Lemma713
@@ -515,6 +521,8 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma77iii
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma78
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma711Odd
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma711Even
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma711
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma711_badBranch_impossible
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma713
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma713_trigger_impossible

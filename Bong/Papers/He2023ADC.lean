@@ -58,8 +58,8 @@ The present layer covers the local dyadic specialization of Definition 1.1,
 Lemma 2.1, Sections 3--4, the corrected local classifications in Theorems
 6.2 and 7.1, and the odd-rank characterization in Theorem 7.4 together with
 the complete proof chain through Lemmas 7.5--7.10 and 7.12, the
-odd-valuation specialization needed from Lemma 7.11, and the corrected
-quantifier form of Lemma 7.13.  It also records the logical local--global
+complete normalized two-row form of Lemma 7.11, and the corrected quantifier
+form of Lemma 7.13.  It also records the logical local--global
 reductions in Theorems 1.3--1.4.  Number-field localization laws remain
 explicit proof data rather than hidden axioms.
 -/
