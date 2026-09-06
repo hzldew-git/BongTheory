@@ -49,6 +49,7 @@ import Bong.Bong.He2023ADCLemma718
 import Bong.Bong.He2023ADCLemma719Models
 import Bong.Bong.He2023ADCTheorem72Published
 import Bong.Bong.He2023ADCRemark73
+import Bong.Bong.He2023ADCCorollary721
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
@@ -76,7 +77,10 @@ form with parameters in `U \ {1, Delta}` and `epsilon*pi^k`; its final
 maximal-overlap assertion is proved as an integral-isometry classification.
 All three literal integral-isometry formulas of Remark 7.3 are also proved,
 including their prescribed powers of the uniformizer and the ordered ternary
-tail `pi A perp <Delta epsilon>`.
+tail `pi A perp <Delta epsilon>`.  Corollary 7.21 is proved as a finite,
+complete, and irredundant integral-isometry catalogue, with an exact maximal
+versus nonmaximal partition.  Its numerical counts isolate the unit
+square-class cardinality quoted from O'Meara 63:9 as an explicit premise.
 It also records the logical local--global
 reductions in Theorems 1.3--1.4.  Number-field localization laws remain
 explicit proof data rather than hidden axioms.

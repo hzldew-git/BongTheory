@@ -594,6 +594,13 @@ import Bong.Papers.He2023ADC
 #check @Bong.BONG.GoodBONG.heADC2025Remark73_secondPublished
 #check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublished
 #check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublishedRepresentative
+#check @Bong.HeADC2025Corollary721Index.isExactNADCIsometryCatalogue
+#check @Bong.HeADC2025Corollary721Index.model_isOMaximal_iff
+#check @Bong.HeADC2025Corollary721Index.card_index
+#check @Bong.HeADC2025Corollary721Index.card_nonmaximalIndex
+#check @Bong.HeADC2025Corollary721Index.card_index_published
+#check @Bong.HeADC2025Corollary721Index.card_nonmaximalIndex_published
+#check @Bong.HeADC2025Corollary721Index.heADC2025Corollary721
 
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma718
@@ -631,3 +638,10 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark73_secondPublished
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublished
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublishedRepresentative
+#print axioms Bong.HeADC2025Corollary721Index.isExactNADCIsometryCatalogue
+#print axioms Bong.HeADC2025Corollary721Index.model_isOMaximal_iff
+#print axioms Bong.HeADC2025Corollary721Index.card_index
+#print axioms Bong.HeADC2025Corollary721Index.card_nonmaximalIndex
+#print axioms Bong.HeADC2025Corollary721Index.card_index_published
+#print axioms Bong.HeADC2025Corollary721Index.card_nonmaximalIndex_published
+#print axioms Bong.HeADC2025Corollary721Index.heADC2025Corollary721
