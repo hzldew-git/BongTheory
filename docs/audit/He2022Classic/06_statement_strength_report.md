@@ -1,8 +1,9 @@
 # Statement strength report
 
-The proved testing theorem quantifies over every classic-maximal rank-`n`
-lattice. The publisher's Theorem 1.3 replaces that abstract family with explicit
-minimal lists, so the current endpoint is not a substitute for Theorem 1.3.
+The abstract maximal-testing theorem quantifies over every classic-maximal
+rank-`n` lattice. The Section 7 endpoint separately proves that the literal
+published even list is sufficient and deletion-minimal; the corresponding odd
+list is not yet an unconditional endpoint.
 
 `HeClassicTheorem11Statement` records all branches of the explicit BONG
 classification. `he2022ClassicTheorem11` now proves that proposition, including
@@ -19,12 +20,12 @@ the number-field discriminant is odd; that localization and global conclusion
 are not encoded. The relationship to the complete printed theorem therefore
 remains `PARTIAL_FORMALIZATION`.
 
-For Theorem 1.3 and Lemma 7.4 the current testing endpoint covers even rank.
-Lemma 7.10(iii)'s `C`-pair witness mechanism now reaches integral
-representation outside the excluded ambient class, but the finite-index
-nonisometry bridge and exceptional rows remain. Neither full odd-rank
-sufficiency nor proper-subset minimality follows from the current endpoints.
-The extra lower-even J2 premise in the available odd endpoint is not hidden.
+For Theorem 1.3 the current endpoints prove Lemma 7.4 in even rank, all of
+Lemmas 7.7 and 7.10, and a literal deletion witness for each even table row.
+Thus even testing sufficiency and proper-subset minimality are proved. Full
+odd-rank sufficiency and odd deletion minimality do not follow from these
+endpoints. The extra lower-even J2 premise in the available odd endpoint is
+not hidden.
 
 The false literal assertion in Lemma 7.1(ii) is not replaced by an equivalent
 theorem. Its refutation and the explicitly qualified alternative are separate

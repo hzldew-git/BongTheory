@@ -21,7 +21,7 @@ arXiv copies are non-authoritative comparison sources.
 | He--Hu Theorem 1.1 | complete published equivalence | proved; provisional semantic review |
 | He--Hu Theorem 1.2 | literal finite normalized-unit table, counts, and deletion-minimality | proved; human review pending |
 | He classic Theorem 1.1 | complete local equivalence for n >= 2 | proved; human review pending |
-| He classic Theorem 1.3 | literal table and even testing equivalence | partial; odd sufficiency and full minimality/counting remain |
+| He classic Theorem 1.3 | literal even table, testing equivalence, and every deletion witness | even branch proved; odd sufficiency/minimality and unconditional counting remain |
 | He classic Theorem 1.5 | local implication for n >= 2 | special case; unary and global clauses remain |
 | He ADC Definition 1.1(ii) | local dyadic predicate | formalized |
 | He ADC Lemma 2.1 | local dyadic maximal-testing reduction | proved specialization |

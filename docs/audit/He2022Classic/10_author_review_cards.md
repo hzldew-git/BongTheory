@@ -83,13 +83,15 @@ Author decision, reviewer name, date, and signature: not provided.
 Paper location: p. 561. The source asserts even and odd testing equivalences,
 the displayed residue-cardinality counts, and inclusion-minimality of the
 testing families. The current code constructs the literal indexed rows and
-proves even testing equivalence, but does not prove all these obligations.
+proves the even testing equivalence plus a deletion witness for every even
+row. The odd and unconditional counting obligations remain.
 
 Current status: `PARTIAL_FORMALIZATION`. The qualified odd testing endpoint
 has an extra lower-even J2 premise; it is not the printed unconditional theorem.
 Question for the author/domain expert: How should the refuted literal
 Lemma 7.1(ii) and the affected odd testing chain be resolved?
-Question for the formalization expert: Check testing sufficiency, irredundancy,
-counts of isometry classes, and deletion-minimality separately.
+Question for the formalization expert: Check the proved even sufficiency and
+deletion-minimality separately from odd sufficiency, isometry-class counts,
+and the unresolved source discrepancy.
 
 No source erratum or human approval is asserted by this card.

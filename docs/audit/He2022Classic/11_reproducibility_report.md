@@ -6,10 +6,11 @@ generated from `papers/he2022classic/paper.json`. The publisher PDF is excluded;
 its manifest hash identifies the version reviewers must obtain independently.
 The audit output must distinguish the proposition-valued definition from the
 proof `he2022ClassicTheorem11`, and print the latter's transitive axioms.
-The unary and all-ranks local Theorem 1.5 endpoints, the Lemma 7.10(iii)
-`C`-row witness endpoints, and the source refutation are audited too.
+The unary and all-ranks local Theorem 1.5 endpoints, Lemma 7.7, all three
+clauses of Lemma 7.10, the even literal-minimal endpoint, and the source
+refutation are audited too.
 
-Code checkpoint: `cf2f474d7bb82ad076ba39b92bcba9f7a2de082a`.
+Code checkpoint: `0e48f148d67d0fa838044b249963cd9f508b4abd`.
 Lean: 4.32.1; dependency versions: the committed `lake-manifest.json`.
 Reproducibility status for this checkpoint: `PARTIALLY_REPRODUCIBLE` until its
 own generated kit has passed clean extraction, compilation, and all audits.
@@ -38,10 +39,11 @@ gate, nor a certificate for a newer source revision. See the deployment
 correction in `../HePaperDeploymentCheckpoint-20260905.md`.
 
 The current checkpoint includes the published unary branch, a complete local
-n >= 1 dispatcher, and the Lemma 7.10(iii) `C`-row deletion-witness core.
-Local cached compilation with warnings treated as errors, the Classic audit,
-the 2,743-source proof-token scan, all 24 CI helper tests, and a focused
-transitive gate over 58,173 declarations pass. A new
+n >= 1 dispatcher, Lemma 7.7, complete Lemma 7.10, and the literal-minimal
+even half of Theorem 1.3. Local cached compilation of the two new modules, the
+Section 7 aggregator, canonical entry, and Classic audit passes. The focused
+proof-token scan reports no forbidden proof escape in the changed scope, and
+the new endpoints report only the three expected foundational axioms. A new
 clean-kit run for this exact checkpoint is still required; the historical
 artifacts below do not certify it.
 

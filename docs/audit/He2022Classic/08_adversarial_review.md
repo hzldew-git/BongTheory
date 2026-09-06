@@ -23,4 +23,6 @@ an admitted proof. See `SOURCE_DELTA.md` for the exact witnesses and scope.
 
 Constructed testing rows, their integrality, cardinalities of an index type,
 testing sufficiency, and proper-subset minimality are distinct claims. The
-even Lemma 7.4 proof must not be used as a certificate for all of Theorem 1.3.
+even branch now has separate proofs of testing sufficiency and rowwise
+deletion-minimality; neither is a certificate for the still-incomplete odd
+branch or for unconditional numerical counts in all residue fields.

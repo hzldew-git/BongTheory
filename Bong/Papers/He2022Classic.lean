@@ -69,9 +69,11 @@ four revised Beli representation conditions.  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 2.8(ii), and classic integrality of every indexed row are also proved.  The
 complete Theorem 1.1 criterion, the full local rank range of Theorem 1.5,
-the published even branch of
-Corollary 6.3, Section 7 ambient exhaustion, and the even-rank half of Lemma
-7.4 for the literal finite testing table are included as checked endpoints.
+the published even branch of Corollary 6.3, Section 7 ambient exhaustion,
+Lemma 7.4 for the literal even finite testing table, the complete Lemma 7.7
+boundary argument, and all three clauses of Lemma 7.10 are included as checked
+endpoints.  In particular, every displayed even row has a literal deletion
+witness, giving the even-rank testing and minimality half of Theorem 1.3.
 
 The global all-dyadic-primes and discriminant conclusion of Theorem 1.5
 belongs to a future number-field localization layer.  The publisher's Lemma

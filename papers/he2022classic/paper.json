@@ -35,7 +35,7 @@
   ],
   "auditDirectory": "docs/audit/He2022Classic",
   "sourceDelta": "docs/audit/He2022Classic/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_THEOREMS_1_1_LOCAL_1_5_AND_LEMMA_7_10_III_CORE_PROVED",
+  "coverageStatus": "IN_PROGRESS_THEOREMS_1_1_LOCAL_1_5_AND_EVEN_THEOREM_1_3_PROVED",
   "semanticStatus": "PARTIAL_WITH_DISCLOSED_SOURCE_OBSTRUCTION",
   "grade": "C",
   "expectedAxioms": [
@@ -51,14 +51,15 @@
     "Local BONG proof chain in Sections 2-6, with source differences recorded separately",
     "Theorem 1.5 local implication for every n >= 1 and Corollary 6.3 even branch",
     "Section 7 ambient exhaustion and Lemma 7.4 even-rank testing equivalence",
-    "Lemma 7.10(iii) C-pair ambient exactness and integral deletion-witness core for both published parameter families",
+    "Lemma 7.7 and all three clauses of Lemma 7.10 on the literal published even table",
+    "Theorem 1.3(i) and its even-rank literal deletion minimality conclusion in Theorem 1.3(iii)",
     "Kernel-checked refutation of the literal Lemma 7.1(ii) disjunction when e > 1"
   ],
   "excludedScope": [
-    "Theorem 1.3 full minimality, the Lemma 7.10 finite-index nonisometry bridge and exceptional-row clauses, odd-rank sufficiency, and complete published counting claims",
+    "Theorem 1.3(ii), odd-rank minimality through Lemma 7.11, and unconditional published numerical counts without a proved counting-law instance",
     "Theorem 1.5 number-field localization and global unramifiedness/discriminant conclusion",
     "Literal Lemma 7.1(ii) and downstream claims requiring an unresolved source correction",
     "Global consequences and independent human semantic sign-off"
   ],
-  "reviewNotice": "Theorem 1.1 has a checked proof, not merely a proposition encoding. The complete n >= 1 local-field implication underlying Theorem 1.5 is proved, including its unary branch; its number-field localization and global discriminant clause are not. Lemma 7.10(iii)'s C-pair witness mechanism is checked, but its finite-index bridge, the exceptional rows, Theorem 1.3, and the other global results remain incomplete. The false literal Lemma 7.1(ii) is disclosed and refuted, not assumed or silently repaired. Grade C describes partial coverage and is not a whole-paper certificate. The post-publication arXiv v3 copy is non-authoritative."
+  "reviewNotice": "Theorem 1.1 has a checked proof, not merely a proposition encoding. The complete n >= 1 local-field implication underlying Theorem 1.5 is proved, including its unary branch; its number-field localization and global discriminant clause are not. The literal even-rank family now satisfies the testing equivalence and row-by-row deletion minimality required by Theorem 1.3(i),(iii). The odd branch remains incomplete because the false literal Lemma 7.1(ii) is disclosed and refuted, not assumed or silently repaired. Grade C describes partial whole-paper coverage and is not a whole-paper certificate. The post-publication arXiv v3 copy is non-authoritative."
 }

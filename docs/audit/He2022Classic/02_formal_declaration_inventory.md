@@ -30,14 +30,18 @@ The proposition-valued definition remains separate from its proof:
   number-field conclusion.
 - `Bong.BONG.GoodBONG.he2022ClassicCorollary63_even`: even branch only.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
-  testing equivalence, not the full minimality theorem.
-- `Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_represents_other` and
-  its `C2` converse: the integral `C`-row deletion witnesses outside the
-  excluded ambient class; published defect-one and odd-order specializations
-  are in `He2022ClassicSectionSeven.lean`.
+  testing equivalence.
+- `Bong.BONG.GoodBONG.he2022ClassicLemma77_boundary_conditions` and the two
+  bundled representation endpoints: the published boundary and stable-range
+  proof for `P2(Delta)` against both `C` columns.
+- `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710_publishedEven_deletionWitness`:
+  one classic integral deletion witness for every literal even table index,
+  including all exceptional and `C` rows.
+- `Bong.Lattice.QuadraticLatticeModel.he2022ClassicTheorem13_even_literalMinimal`:
+  the combined even testing and literal-minimality endpoint.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails`:
   a refutation of the literal publisher disjunction, not its formal proof.
 
 `BongTest/He2022ClassicAudit.lean` exposes additional branch endpoints and
-their transitive axiom reports. The `C`-row mechanism is not yet the literal
-all-indices statement, and no endpoint is claimed for full Theorem 1.3.
+their transitive axiom reports. The all-indices even statement is proved; no
+endpoint is claimed for the still-incomplete odd half of Theorem 1.3.

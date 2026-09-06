@@ -21,8 +21,8 @@ In contrast, `HeClassicPublishedCountingLaws` supplies the unit-square-class
 cardinality and the defect-one balance used by the residue-cardinality
 formulas. No proved instance was found at this checkpoint. The three
 `he2022ClassicProposition28ii_*` numerical endpoints therefore remain
-conditional. Combinatorial index counts do not by themselves remove this
-assumption or establish pairwise nonisometry of the indexed lattices.
+conditional. The separate pairwise-nonisometry and rowwise-deletion proofs do
+not remove this counting assumption or prove the numerical formulas.
 
 The Section 7 endpoint named
 `all_publishedOdd_implies_classicUniversal_of_lowerJ2` retains the lower-even
