@@ -50,11 +50,15 @@ Seven new axiom reports are standard-only, the focused gate checks 58,019
 declarations, and the scanner checks 2,715 tracked Lean sources.
 Theorem 7.4 and Lemma 7.5 checkpoint:
 `2417a4f31e4a9f96e22c4da6d2276e2e94210fdd`. Report 36 proves Theorem 7.4
-and the complete Lemmas 7.5--7.10 and 7.12 chain. Lemma 7.11 is covered only
-for odd-valuation tests and the exact downstream contradiction. Lemma 7.13
+and the complete Lemmas 7.5--7.10 and 7.12 chain. Lemma 7.13
 has a printed quantifier mismatch; the proof-supported disjunction is
 formalized and suffices for Lemma 7.5. Nine selected axiom reports are
 standard-only, and the focused gate checks 59,190 declarations.
+Complete Lemma 7.11 checkpoint:
+`832d10c95f56dd3ae80fc4f912de248f25316da1`. Report 37 proves both
+normalized parameter rows and the combined all-parameter endpoint. The two
+new dependency reports are standard-only, the focused gate checks 59,204
+declarations, and the scanner checks 2,727 tracked Lean sources.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -71,7 +75,7 @@ classifications, enumeration, or omitted boundary cases.
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
-through full Lemma 6.7. The later developments through 2417a4f have
+through full Lemma 6.7. The later developments through 832d10c have
 passed direct local checks; they still require exact-revision clean-kit CI. Exact
 commit distinctions are in report 11. Overall project grade: D because one
 core source lemma and its downstream classification theorem have substantive

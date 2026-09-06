@@ -160,3 +160,10 @@ their separate failures; the downstream necessity proof needs only the weaker
 disjunction. Report 36 records the exact statements and open human-review
 questions. Theorem 7.2, Remark 7.3, and results from Lemma 7.14 onward have
 not yet received this downstream audit.
+
+Report 37 supersedes only the partial-coverage conclusion for Lemma 7.11.
+At `832d10c`, the unit row was added with its own central-defect estimate and
+prefix non-representation proof, and the two normalized rows were combined
+into one all-parameter endpoint. The proof does not import a caller-supplied
+classification law or defect-`2e-1` unit. This does not change the independent
+Lemma 7.13 quantifier mismatch or the ten still-pending Section 7 items.

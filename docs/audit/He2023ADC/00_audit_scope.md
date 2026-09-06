@@ -6,7 +6,7 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `2417a4f31e4a9f96e22c4da6d2276e2e94210fdd`,
+The current audited code checkpoint is `832d10c95f56dd3ae80fc4f912de248f25316da1`,
 branch `feat/he-formalization`, Lean 4.32.1, audited on 6 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
@@ -41,19 +41,17 @@ Theorem 6.2, and formally refute its false binary biconditional. Report 35
 adds the corrected complete binary classification and proves Theorem 7.1;
 the source theorem statement matches, while its printed proof omits the
 second boundary class. Report 36 proves Theorem 7.4 and the complete
-Lemmas 7.5--7.10 and 7.12 chain. It also isolates the odd-valuation part of
-Lemma 7.11 needed by that chain and records that the published proof of
-Lemma 7.13 supports only a simultaneous-failure conclusion, not the stronger
-printed per-target quantifier. These additions also await exact-revision
-clean CI.
+Lemmas 7.5--7.10 and 7.12 chain and records the Lemma 7.13 source mismatch.
+Report 37 completes both normalized parameter rows of Lemma 7.11. These
+additions also await exact-revision clean CI.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
 Section 4 endpoints, Theorem 6.1, Lemmas 6.4--6.7, Lemma 6.8(i),(ii),(iii),(v),(vi),
 the n>=4 part of (iv), the refutation of its printed n=2 boundary, and full
 Lemmas 6.9--6.12, the boundary-complete audit of Theorem 6.2, Remark 6.3,
-Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.10 and 7.12, the scoped
-Lemma 7.11 specialization, and the corrected Lemma 7.13 consequence listed in
+Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, and the corrected
+Lemma 7.13 consequence listed in
 `05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic
 premises still undischarged. This audit does not certify the missing local,

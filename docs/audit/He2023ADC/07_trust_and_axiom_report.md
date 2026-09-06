@@ -157,3 +157,13 @@ outside comments. No public Theorem 7.4 or Lemma 7.5 endpoint retains a
 custom law or caller-supplied testing premise. Report 36 separates these
 mechanical checks from the partial Lemma 7.11 coverage, Lemma 7.13 source
 quantifier mismatch, clean-CI requirement, and unsigned human review.
+
+At checkpoint `832d10c95f56dd3ae80fc4f912de248f25316da1`, both normalized
+rows of Lemma 7.11, the canonical paper entry, and the focused audit compile
+directly with Lean 4.32.1. The new unit-row and combined endpoints depend
+exactly on `propext`, `Classical.choice`, and `Quot.sound`. The focused
+enforcing gate checks 59,204 declarations, and the comment-aware scanner
+checks 2,727 tracked Lean sources without a forbidden proof token outside
+comments. All changed Lean lines satisfy the 100-column limit and
+`git diff --check` passes. Report 37 separates these local mechanical checks
+from exact-revision clean CI and unsigned human review.

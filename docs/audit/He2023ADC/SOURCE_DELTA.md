@@ -83,7 +83,7 @@ proof is `INCOMPLETE_PROOF`. The formal target is not changed, and the false
 Lemma 6.8(iv) and Theorem 6.2 boundaries remain recorded as semantic
 mismatches. Report 35 gives the full source-to-formal correspondence.
 
-## Lemma 7.11 extracted-symbol and coverage boundary
+## Lemma 7.11 extracted symbol and normalized coverage
 
 The publisher PDF on p. 1011 states the exceptional rank-five hypothesis
 `d(a_[1,4])=infinity`. Plain-text extraction renders the infinity glyph as
@@ -91,13 +91,13 @@ The publisher PDF on p. 1011 states the exceptional rank-five hypothesis
 `a_[1,4] in F^(times 2)`, confirming infinite defect. The formalization uses
 the square-prefix formulation and does not adopt the OCR error.
 
-At `2417a4f31e4a9f96e22c4da6d2276e2e94210fdd`,
-`heADC2025Lemma711Odd` proves the source conclusion for every odd-valuation
-test `N_2^3(delta*pi)`. The derived represented-target contradiction is enough
-to close Lemma 7.5(iii), but the source states the failure for every nonzero
-parameter and its even-valuation branch is not yet supplied. Lemma 7.11 is
-therefore `SPECIAL_CASE_ONLY`, not fully formalized. Report 36 gives the exact
-scope.
+At `832d10c95f56dd3ae80fc4f912de248f25316da1`,
+`heADC2025Lemma711` proves the source conclusion in both normalized rows
+`N_2^3(delta)` and `N_2^3(delta*pi)` for every valuation unit `delta`. This is
+the paper's own split `c=epsilon` or `epsilon*pi`, so no nonzero square class
+is omitted. The derived represented-target contradiction still closes
+Lemma 7.5(iii). Lemma 7.11 is now `FULLY_FORMALIZED` /
+`PROVISIONAL_MATCH`; report 37 gives the exact scope.
 
 ## Lemma 7.13 printed quantifier versus proof
 

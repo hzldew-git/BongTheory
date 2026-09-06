@@ -1,11 +1,15 @@
 # Theorem 7.4 and the Lemma 7.5 proof chain
 
-Status: Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 are
+Status at code checkpoint `2417a4f`: Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 are
 `FULLY_FORMALIZED` / `PROVISIONAL_MATCH`. Lemma 7.11 is
 `SPECIAL_CASE_ONLY`. Lemma 7.13 has a documented source-quantifier
 `SEMANTIC_MISMATCH`.
 
 Code checkpoint: `2417a4f31e4a9f96e22c4da6d2276e2e94210fdd`.
+
+Historical note: the partial Lemma 7.11 status in this checkpoint is
+superseded by the complete two-row proof at `832d10c` and report 37. Theorem
+7.4, Lemma 7.5, and the Lemma 7.13 mismatch recorded here remain current.
 
 ## Source authority
 
@@ -118,7 +122,7 @@ comments. All scoped new Lean source lines satisfy the 100-column limit, and
 These are local checks at the stated commit. Exact-revision Review Kit CI,
 release promotion, and human sign-off remain separate gates.
 
-## Coverage consequence
+## Historical coverage consequence at `2417a4f`
 
 Section 7 now has nine fully formalized numbered items: Theorems 7.1 and 7.4,
 and Lemmas 7.5--7.10 and 7.12. Lemma 7.11 remains partial; Lemma 7.13 is

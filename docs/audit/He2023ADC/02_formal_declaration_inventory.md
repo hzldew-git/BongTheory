@@ -133,9 +133,9 @@ Additional concrete declaration groups are:
   `He2023ADCLemma77`, `He2023ADCLemma78`, and `He2023ADCLemma712` supply the
   complete order, alpha, truncated-defect, central, and long-condition chain
   for Lemmas 7.6--7.10 and 7.12.
-- `He2023ADCLemma711` exports `heADC2025Lemma711Odd` and the represented-target
-  contradiction needed in the rank-five branch. This is explicitly only the
-  odd-valuation specialization of the published all-parameter Lemma 7.11.
+- `He2023ADCLemma711` exports the complete normalized two-row theorem
+  `heADC2025Lemma711`, its unit and unit-times-uniformizer components, and the
+  represented-target contradiction needed in the rank-five branch.
 - `He2023ADCLemma713` exports the source-proof-supported per-column
   simultaneous-failure disjunction and the contradiction used downstream.
   It does not assert the stronger printed failure of each target separately.

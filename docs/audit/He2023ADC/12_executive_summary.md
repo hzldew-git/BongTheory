@@ -150,15 +150,16 @@ covered by this result.
 Report 36 adds the complete Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 at
 `2417a4f`. The full Lemma 7.5 four-condition equivalence is proved in both
 directions, including the rank-five large-gap branch and the endpoint
-`R_(n+1)=2-2e`. The odd-valuation specialization of Lemma 7.11 is proved and
-is sufficient for this necessity argument; its even-valuation universal
-branch remains open. The formalization also detects that Lemma 7.13's printed
+`R_(n+1)=2-2e`. Report 37 completes Lemma 7.11 at `832d10c`: its unit and
+unit-times-uniformizer rows jointly cover every normalized nonzero square
+class, while the latter row remains sufficient for the Lemma 7.5 necessity
+argument. The formalization also detects that Lemma 7.13's printed
 per-target conclusion is stronger than its proof, which establishes only that
 the two targets cannot both be represented. The proof-supported disjunction
-is formalized and suffices downstream. Nine selected dependency reports are
-standard-only, and the focused gate checks 59,190 declarations. Section 7 now
-has 9/21 fully formalized numbered items, one partial item, one
-quantifier-mismatched item, and ten pending items.
+is formalized and suffices downstream. The complete Lemma 7.11 checkpoint has
+standard-only new dependency reports, a 59,204-declaration focused gate, and
+a 2,727-source scanner. Section 7 now has 10/21 fully formalized numbered
+items, one quantifier-mismatched item, and ten pending items.
 
 Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
@@ -166,7 +167,7 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through 2417a4f
+The later additions through 832d10c
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

@@ -22,7 +22,7 @@
 | No `sorry`, project axiom, or `opaque` declaration in scoped files | PASS, local audit |
 | Global Definition 1.2 and regularity | Abstract definitions present; concrete number-field realization pending |
 | Theorem 1.3 and global parts of 1.4 | Conditional logical reductions; arithmetic premises undischarged |
-| Unrestricted local cases, remaining Section 4, Section 5, ten pending Section 7 items, full Lemma 7.11, printed-strength Lemma 7.13, and Section 8 | FAIL / pending |
+| Unrestricted local cases, remaining Section 4, Section 5, ten pending Section 7 items, printed-strength Lemma 7.13, and Section 8 | FAIL / pending |
 | Remaining main theorems and enumeration | FAIL / pending |
 | Clean Review Kit containing published profiles | PASS at merge-test commit `6bf3bdf8bd272109e898335683f05bb76664330c`, tree identical to `db03985`; logs inspected |
 | Clean Review Kit including Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 | PASS at f6f7485/c82668b, run 33942437722; 1934 payload hashes, 4963 build jobs, enforcing gate on 57,480 declarations |
@@ -41,9 +41,9 @@
 | Theorem 7.1 | PASS local kernel at c3e6092 for odd `n>=3`, rank `n+1`; published statement proved, published proof marked `INCOMPLETE_PROOF` and repaired by exhausting both binary exceptions; seven standard-only reports and 58,019-declaration gate; report 35; exact-revision clean CI and human approval pending |
 | Theorem 7.4 and Lemma 7.5 | PASS local kernel at 2417a4f: full odd `n=2k+3`, rank `n+2` equivalences in both directions, including the endpoint `R_(n+1)=2-2e`; report 36 |
 | Lemmas 7.6--7.10 and 7.12 | PASS local kernel at 2417a4f: complete numbered statements and the full representation-condition chain; report 36 |
-| Lemma 7.11 | PARTIAL at 2417a4f: odd-valuation tests and the exact contradiction needed for Lemma 7.5 pass; even-valuation source branch pending; report 36 |
+| Lemma 7.11 | PASS local kernel at 832d10c: both normalized parameter rows, the exact condition-(iii) failures, and the contradiction needed for Lemma 7.5 pass; two new standard-only axiom reports, 59,204-declaration gate; report 37 |
 | Lemma 7.13 | `SEMANTIC_MISMATCH` at the printed quantifier: the formalized simultaneous-failure disjunction matches the published proof and suffices for Lemma 7.5; report 36 |
-| Section 7 mechanical gate | PASS local at 2417a4f: nine selected standard-only axiom reports, 59,190-declaration focused gate, 2,715-source scanner, scoped 100-column and diff checks |
+| Section 7 mechanical gate | PASS local through 832d10c: new Lemma 7.11 endpoints are standard-only; 59,204-declaration focused gate, 2,727-source scanner, scoped 100-column and diff checks |
 | Remaining Section 7 results | FAIL / pending: Theorem 7.2, Remark 7.3, Lemmas 7.14--7.15, Definition 7.16, Remark 7.17, Lemmas 7.18--7.20, and Corollary 7.21 |
 | Independent semantic sign-off | FAIL / pending |
 

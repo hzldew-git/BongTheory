@@ -144,10 +144,12 @@ no supplied representation criterion, test catalogue, or classification law.
 Theorem 7.4's endpoint `R_(n+1)=2-2e` is included.
 
 Lemmas 7.6--7.10 and 7.12 are likewise `LOGICALLY_EQUIVALENT` to their
-numbered statements. The current Lemma 7.11 endpoint is `SPECIAL_CASE_ONLY`:
-it covers all odd-valuation parameters and the existence consequence used by
-Lemma 7.5, but not the source's even-valuation branch. Lemma 7.13 is
+numbered statements. At `832d10c`, `heADC2025Lemma711` is
+`LOGICALLY_EQUIVALENT` to Lemma 7.11 after the paper's square-class
+normalization `c=delta` or `delta*pi`: both rows quantify over every valuation
+unit `delta`, and the unit row constructs its defect-`2e-1` auxiliary unit
+internally. Lemma 7.13 is
 `SEMANTIC_MISMATCH` at the printed quantifier: its proof yields a disjunction
 of the two failures, whereas the displayed statement reads pointwise. The
 formalization uses exactly the proof-supported disjunction; this is sufficient
-for Lemma 7.5(iv). See report 36.
+for Lemma 7.5(iv). See reports 36--37.

@@ -276,3 +276,19 @@ This is local evidence only until an independently extracted He ADC Review
 Kit at this exact revision passes GitHub CI. The local dependency worktrees
 are dirty and are not release evidence. Report 36 records the theorem scope,
 the partial Lemma 7.11 coverage, and the Lemma 7.13 source mismatch.
+
+## Complete Lemma 7.11 local checkpoint
+
+At exact code revision `832d10c95f56dd3ae80fc4f912de248f25316da1`, the
+unit and unit-times-uniformizer rows of Lemma 7.11, the combined normalized
+endpoint, the canonical paper entry, and the focused audit compile directly
+with Lean 4.32.1. The newly queried `heADC2025Lemma711Even` and
+`heADC2025Lemma711` endpoints have exactly the standard dependencies
+`propext`, `Classical.choice`, and `Quot.sound`. The focused gate reports
+`AXIOM_GATE_PASS: 59204 declarations checked`; the source scanner checks 2,727
+tracked Lean files without a forbidden proof token outside comments.
+`git diff --check` and the 100-column scoped source check pass.
+
+This is local evidence only until an independently extracted Review Kit at a
+revision containing this checkpoint passes GitHub CI. Report 37 records the
+source normalization and theorem-level scope.

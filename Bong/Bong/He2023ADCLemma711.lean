@@ -11,12 +11,10 @@ import Bong.Bong.HeHu2022Lemma57
 # He (2025), Lemma 7.11
 
 The published symbol `d(a_1...a_4)=infinity` means that the four-entry
-prefix determinant is a square.  We first expose the odd-valuation tests
-`N_2^3(delta*pi)` from the published testing set.  Two parameters differing
-by the distinguished nonsquare unit cannot both be the unique ternary class
-missed by the source ambient space, so at least one such test is represented
-by the full rank-five space.  Lemma 5.7 then gives the condition-(iii')
-obstruction at paper index `4`.
+prefix determinant is a square.  The unit and unit-times-uniformizer rows
+of `N_2^3(c)` are both formalized.  The latter row also supplies the exact
+represented-target contradiction used in the necessity proof of Lemma 7.5.
+All condition-(iii') obstructions occur at paper index `4`.
 -/
 
 namespace Bong

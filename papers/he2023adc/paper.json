@@ -39,8 +39,8 @@
   ],
   "auditDirectory": "docs/audit/He2023ADC",
   "sourceDelta": "docs/audit/He2023ADC/SOURCE_DELTA.md",
-  "coverageStatus": "IN_PROGRESS_WITH_BOUNDARY_MISMATCHES_AND_THEOREM_7_4_PROVED",
-  "semanticStatus": "SEMANTIC_MISMATCH_LEMMA_6_8_IV_THEOREM_6_2_BINARY_AND_LEMMA_7_13_QUANTIFIERS__INCOMPLETE_PROOF_THEOREM_7_1__PARTIAL_LEMMA_7_11",
+  "coverageStatus": "IN_PROGRESS_WITH_BOUNDARY_MISMATCHES_AND_LEMMA_7_11_COMPLETE",
+  "semanticStatus": "SEMANTIC_MISMATCH_LEMMA_6_8_IV_THEOREM_6_2_BINARY_AND_LEMMA_7_13_QUANTIFIERS__INCOMPLETE_PROOF_THEOREM_7_1",
   "grade": "D",
   "expectedAxioms": [
     "propext",
@@ -75,15 +75,15 @@
     "Corrected complete rank-four 2-ADC classification: every lattice is maximal or isometric to one of the two realized nonmaximal boundary classes; the added second-discriminant class is independently proved not 3-ADC; locally kernel-checked at c3e6092; report 35",
     "Full Theorem 7.1 for every odd n at least three and arbitrary full lattice of rank n+1: n-ADC if and only if norm-maximal; the publisher statement is proved while its incomplete n=3 proof is repaired by exhausting both binary exceptions; locally kernel-checked with a 58019-declaration enforcing gate at c3e6092; report 35; exact-revision clean CI and human sign-off pending",
     "Full Theorem 7.4 and Lemmas 7.5-7.10 and 7.12 for odd n=2k+3 and rank n+2, including both directions of the four-condition BONG criterion and the endpoint R_(n+1)=2-2e; locally kernel-checked with a 59190-declaration focused gate at 2417a4f; report 36",
-    "The odd-valuation N_2^3(delta*pi) specialization of Lemma 7.11 and the existence consequence needed for Lemma 7.5(iii); the even-valuation universal statement remains pending; report 36",
+    "Full Lemma 7.11 in its normalized unit and unit-times-uniformizer parameter rows, including the internally constructed defect-(2e-1) auxiliary unit and the represented-target consequence needed for Lemma 7.5(iii); locally kernel-checked with a 59204-declaration focused gate at 832d10c; report 37",
     "The corrected simultaneous-failure consequence justified by the published proof of Lemma 7.13, sufficient for Theorem 7.4; the stronger printed per-target conclusion is not asserted; report 36"
   ],
   "excludedScope": [
     "Concrete number-field localization and proofs of the arithmetic premises used by the global reductions",
-    "Non-dyadic local results, Theorem 7.2, Remark 7.3, the even-valuation remainder of Lemma 7.11, Lemmas 7.14-7.15, Definition 7.16, Remark 7.17, Lemmas 7.18-7.20, Corollary 7.21, and Section 8 global and enumerative proofs",
+    "Non-dyadic local results, Theorem 7.2, Remark 7.3, Lemmas 7.14-7.15, Definition 7.16, Remark 7.17, Lemmas 7.18-7.20, Corollary 7.21, and Section 8 global and enumerative proofs",
     "Remaining Section 4 clauses, including non-dyadic Proposition 4.16 and unary testing-set minimality",
     "Completion of theorem-by-theorem semantic review and independent human sign-off",
     "Any corrected publisher replacement for the refuted n=2 boundaries in Lemma 6.8(iv) and Theorem 6.2; downstream uses other than the independently repaired Theorem 7.1 require separate re-evaluation"
   ],
-  "reviewNotice": "This is an in-progress paper kit. Section 6 is completely triaged: ten numbered items provisionally match, while the n=2 statements in Lemma 6.8(iv) and Theorem 6.2 are directly refuted by an independently audited, nonvacuous actual 2-ADC counterexample. Theorem 7.1 is proved, but its printed proof omits a second binary boundary class. Theorem 7.4 and Lemmas 7.5-7.10 and 7.12 are proved at 2417a4f. Lemma 7.11 is covered only for the odd-valuation tests needed by Lemma 7.5, and the printed conclusion of Lemma 7.13 is stronger than its proof; the formalization records the proved simultaneous-failure form. Reports 26-36 give the scope. Clean-kit CI at f6f7485/c82668b predates all additions after Lemma 6.7. Global arithmetic premises, ten remaining Section 7 items, the full Lemma 7.11 statement, and enumeration remain incomplete. Exact-revision clean CI, release promotion, and human sign-off remain separate gates."
+  "reviewNotice": "This is an in-progress paper kit. Section 6 is completely triaged: ten numbered items provisionally match, while the n=2 statements in Lemma 6.8(iv) and Theorem 6.2 are directly refuted by an independently audited, nonvacuous actual 2-ADC counterexample. Theorem 7.1 is proved, but its printed proof omits a second binary boundary class. Theorem 7.4 and Lemmas 7.5-7.10 and 7.12 are proved at 2417a4f. Full normalized unit and unit-times-uniformizer coverage of Lemma 7.11 is proved at 832d10c. The printed conclusion of Lemma 7.13 is stronger than its proof; the formalization records the proved simultaneous-failure form. Reports 26-37 give the scope. Clean-kit CI at f6f7485/c82668b predates all additions after Lemma 6.7. Global arithmetic premises, ten remaining Section 7 items, the printed-strength Lemma 7.13 claim, and enumeration remain incomplete. Exact-revision clean CI, release promotion, and human sign-off remain separate gates."
 }
