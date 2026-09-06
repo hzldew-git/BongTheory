@@ -20,7 +20,7 @@ paper; those three extensions are explicitly marked partial.
 - He-paper coverage status: `PARTIAL`. He--Hu has complete formal coverage of
   its 47 numbered results subject to semantic sign-off; He classic retains
   unformalized testing/global scope; He ADC Section 6 is fully triaged and
-  Section 7 has 18/21 fully formalized numbered items through Theorem 7.2,
+  Section 7 has 19/21 fully formalized numbered items through Remark 7.3,
   with the documented boundary and quantifier mismatches kept explicit.
 - Project grade: D because the He ADC audit identifies a substantive
   theorem-level mismatch; this does not downgrade the separately graded kits.
@@ -62,7 +62,7 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
 | He, *manuscripta math.* 174 (2024), Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | full local equivalence proved; testing and global parts of the paper remain incomplete |
-| He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1, 7.2 and 7.4, and the chain through Lemma 7.20 | partial paper; Section 7 is 18/21, Lemma 7.13 has a quantifier mismatch, and Remark 7.3 and Corollary 7.21 remain pending |
+| He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1, 7.2 and 7.4, and the chain through Remark 7.3 | partial paper; Section 7 is 19/21, Lemma 7.13 has a quantifier mismatch, and Corollary 7.21 remains pending |
 
 The Classic paper's literal Lemma 7.1(ii) is refuted for ramification index
 greater than one. The ADC paper's Lemma 6.8(iv) is also refuted at n=2 by an

@@ -83,3 +83,11 @@ one. `HeADC2025Theorem72PublishedProduct` is the same family after choosing
 `U`; its Boolean line component is the source exponent in `{0,1}`. Their
 formal equivalence uses integral lattice isometry, not equality of chosen
 models or ambient-space isometry alone.
+
+`heADC2025Remark73Plane delta l` is the paper's general plane
+`A(pi^l,-(delta-1)pi^-l)`. `heADCAForm` is the already checked coordinate
+model `(1/2)A(2,2rho)`. Thus rescaling it by `pi` is the printed
+`(1/2)pi A(2,2rho)`. `halfHyperbolicExtensionForm` and its lattice are the
+literal repeated orthogonal product with the paper's half-hyperbolic `H`.
+The formal conclusions are integral lattice isometries, not coefficient-list
+abbreviations.

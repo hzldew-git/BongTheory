@@ -214,3 +214,12 @@ checks 59,692 declarations, and the comment-aware scanner checks 2,740 tracked
 Lean sources without finding a forbidden proof token outside comments. The
 scoped 100-column and `git diff --check` gates pass. Report 44 separates these
 local checks from exact-revision clean CI and unsigned human review.
+
+At checkpoint `287b202cfd78c97efe00761798c6914d9715e151`, the Remark 7.3
+module, canonical paper entry, and expanded paper audit compile directly with
+Lean 4.32.1. Eight selected dependency reports contain exactly `propext`,
+`Classical.choice`, and `Quot.sound`. The focused enforcing gate checks 59,743
+declarations, and the comment-aware scanner checks 2,741 tracked Lean sources
+without finding a forbidden proof token outside comments. The scoped
+100-column and `git diff --check` gates pass. Report 45 separates these local
+checks from exact-revision clean CI and unsigned human review.

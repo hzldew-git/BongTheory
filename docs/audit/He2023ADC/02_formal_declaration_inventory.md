@@ -169,6 +169,10 @@ Additional concrete declaration groups are:
 - `He2023ADCTheorem72Published` defines the literal finite base and line
   parameters, proves equivalence with the intrinsic family by integral
   isometries, and proves the published maximal-overlap conclusion.
+- `He2023ADCRemark73` proves the exact general-plane normalization for the
+  first two named even lattices and the ordered half-scaled `A` plus unary
+  decomposition for the named odd lattice. It also exports the exact finite
+  representative specialization of the third formula.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full

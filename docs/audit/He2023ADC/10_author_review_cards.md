@@ -154,5 +154,13 @@ integral lattice isometry. For the overlap, verify the four maximal-profile
 comparisons and that only the second-column unit row survives before its
 parameter is normalized into `U`.
 
+Report 45 adds the Remark 7.3 card. Reviewers should compare the exact
+general plane `A(pi^l,-(delta-1)pi^-l)`, the outside scales `pi^-l` and
+`delta# pi^-l`, and the equation `2l=d(delta)-1<=2e-2`. For the third row,
+confirm that `heADCAForm` is `(1/2)A(2,2rho)`, that its scale is `pi`, and
+that the final unary factor is exactly `<Delta epsilon>` after the binary
+block. Confirm also that the first two parameters lie in
+`U \ {1,Delta}` and the third lies in `U`.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

@@ -6,7 +6,7 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `07cd54844a61931cb8b7b6e0ec237448e94b074c`,
+The current audited code checkpoint is `287b202cfd78c97efe00761798c6914d9715e151`,
 branch `feat/he-formalization`, Lean 4.32.1, audited on 6 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
@@ -56,6 +56,9 @@ Report 44 proves Theorem 7.2 in both a representative-independent form and
 the literal published finite-parameter form. It also proves the maximal
 overlap assertion by comparing the product order with all four normalized
 maximal profiles.
+Report 45 proves all three literal integral-isometry formulas of Remark 7.3,
+including the exact exponent range, negative powers of the uniformizer,
+the sharp factor, and the ordered `pi A perp <Delta epsilon>` tail.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
@@ -64,7 +67,8 @@ the n>=4 part of (iv), the refutation of its printed n=2 boundary, and full
 Lemmas 6.9--6.12, the boundary-complete audit of Theorem 6.2, Remark 6.3,
 Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, full Lemmas 7.14--7.15,
 Definition 7.16, Remark 7.17, full Lemmas 7.18--7.20, and the corrected
-Lemma 7.13 consequence, together with the complete Theorem 7.2, listed in
+Lemma 7.13 consequence, together with complete Theorem 7.2 and Remark 7.3,
+listed in
 `05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic
 premises still undischarged. This audit does not certify the missing local,

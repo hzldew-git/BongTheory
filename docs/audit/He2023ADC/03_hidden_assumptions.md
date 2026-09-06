@@ -114,3 +114,11 @@ intrinsic sharp square-class domain. The product hypotheses, defect bound,
 line order, selected column, ADC property, and maximal-overlap profile are
 all derived in the public theorem chain; no product-classification law or
 maximal-overlap law is supplied by the caller. See report 44.
+
+Remark 7.3 uses the same explicit finite representative-system interface as
+Theorem 7.2 for its first two formulas. The integer `l`, its nonnegativity,
+and `2l <= 2e-2` are derived from the quadratic defect. The binary shear,
+integrality conditions, maximal-lattice comparison, discriminant endpoint,
+and auxiliary defect-`2e-1` unit used for the third formula are all
+constructed internally. The exact third representative wrapper needs only
+that `U` is complete and normalized. See report 45.

@@ -200,3 +200,12 @@ system and distinguished discriminant representative are made explicit.
 The intrinsic theorem drops this arbitrary finite choice. The defect domain,
 line normalization, both integral square-change transports, and elimination
 of the other three maximal ambient rows are proved internally. See report 44.
+
+At `287b202`, the first two Remark 7.3 endpoints are
+`LOGICALLY_EQUIVALENT` to the printed formulas on the same finite base-index
+domain as Theorem 7.2. They derive `l`, `2l=d(delta)-1`, `l>=0`, and
+`2l<=2e-2` internally and conclude actual integral lattice isometry. The
+third endpoint is first proved for every valuation unit `epsilon`, which is
+stronger in parameter generality; `thirdPublishedRepresentative` then gives
+the exact printed specialization `epsilon in U`. No conclusion is weakened
+to ambient-space isometry or a coefficient identity. See report 45.

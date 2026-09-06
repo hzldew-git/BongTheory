@@ -214,3 +214,12 @@ For the overlap assertion, the proof compares the Lemma 7.19 penultimate
 order with every Proposition 4.13 maximal row and eliminates three rows; it
 does not assume the desired second-column model. Remark 7.3 and Corollary
 7.21 remain pending, independently of the Lemma 7.13 mismatch.
+
+Report 45 audits every sign, scale, exponent, factor order, and lattice in
+Remark 7.3 against p. 1006. In particular, the negative exponents `-l` and
+`-2l` are not replaced by absolute values; the second formula retains the
+external `delta#`; and the third formula is ordered as the scaled `A` block
+followed by `<Delta epsilon>`. The proof identifies arbitrary admissible
+binary shears integrally and uses maximal-lattice uniqueness only after an
+ambient isometry is derived. Corollary 7.21 remains pending, independently
+of the Lemma 7.13 mismatch.

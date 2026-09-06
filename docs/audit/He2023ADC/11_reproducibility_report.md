@@ -369,3 +369,19 @@ outside comments. `git diff --check` and the scoped 100-column check pass.
 This remains local evidence until the independently extracted Review Kit for
 this exact revision passes GitHub CI. Report 44 records the source-level
 scope, representative normalization, and overlap argument.
+
+## Remark 7.3 local checkpoint
+
+At exact code revision `287b202cfd78c97efe00761798c6914d9715e151`,
+`He2023ADCRemark73.lean`, `Bong.Papers.He2023ADC`, and
+`BongTest.He2023ADCAudit` compile directly with Lean 4.32.1. Eight selected
+dependency reports, including all three published formulas and the exact
+finite representative wrapper, contain exactly `propext`,
+`Classical.choice`, and `Quot.sound`. The focused gate reports
+`AXIOM_GATE_PASS: 59743 declarations checked`; the source scanner checks
+2,741 tracked Lean files without a forbidden proof token outside comments.
+`git diff --check` and the scoped 100-column check pass.
+
+This remains local evidence until the independently extracted Review Kit for
+this exact revision passes GitHub CI. Report 45 records the source-level
+normalizations and integral-isometry chain.
