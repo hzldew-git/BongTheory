@@ -119,5 +119,24 @@ actual prefix representation. Finally, confirm that the `R_(n+1)=-2e`
 branch may equivalently be closed by the proved maximal-lattice uniqueness
 route.
 
+Report 40 adds the Definition 7.16 and Remark 7.17 card. Reviewers should
+confirm that `ord(c) in {0,1}` is the paper's normalized set `V`, that the
+zero-based index names `R_(n+1)`, and that the formal property does not assert
+existence for every symbol. The uniqueness and exhaustion arguments should
+be checked against Lemma 7.15, equation (7.3)(b), and the four normalized
+odd ambient rows.
+
+Report 41 adds the Lemma 7.18 card. Reviewers should confirm that the actual
+second-column maximal profile gives an order incompatible with `-2e`, and
+that the maximality/uniqueness route is equivalent to the paper's direct use
+of Lemma 7.14(i) and Proposition 3.5(v).
+
+Report 42 adds the Lemma 7.19 card. Reviewers should verify the conversion of
+`d(delta)<2e` to an odd integer defect, the appended-good-BONG endpoint
+inequalities, and the two-sided proof of `alpha_n=1`. They should also check
+that the diagonal representation identifies each explicit maximal base with
+the correct named `N_nu`, and that the final isometry transport reaches the
+literal orthogonal product printed in the paper.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

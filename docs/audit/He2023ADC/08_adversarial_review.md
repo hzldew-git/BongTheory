@@ -185,3 +185,12 @@ in the maximal branch it derives `O`-maximality before invoking uniqueness.
 No uniqueness trigger, alpha profile, classification law, or maximality fact
 is assumed. Eight Section 7 items now remain pending, independently of the
 Lemma 7.13 mismatch.
+
+Reports 40--42 audit the next four numbered items. Definition 7.16 does not
+silently assert existence, and Remark 7.17 constructs both its finite index
+and normalized ambient row. Lemma 7.18 derives the forbidden endpoint via an
+actual named maximal-lattice profile. Lemma 7.19 derives its sharp-domain and
+odd-defect data, proves `alpha_n=1`, and identifies both explicit bases with
+the named `N` lattices before transporting `n`-ADC. No definitional equality
+between explicit and chosen maximal models is assumed. Four Section 7 items
+now remain pending, independently of the Lemma 7.13 mismatch.

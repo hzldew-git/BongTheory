@@ -29,6 +29,9 @@ additional paper lemmas; the audit packages give the fuller maps.
 | He ADC, Lemma 2.1, local dyadic specialization | `Bong.Lattice.heADCLemma21LocalDyadic` | `Bong/Papers/He2023ADC.lean` | `PROVED_SPECIALIZATION_ONLY` |
 | He ADC, Lemma 6.12 | `Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC`, `heADCExceptionalQuaternaryCandidate_not_is3ADC`, `heADCExceptionalQuaternaryCandidate_not_isOMaximal` | `Bong/Bong/He2023ADCExceptionalQuaternaryNonThree.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He ADC, Lemma 7.15 | `Bong.BONG.GoodBONG.heADC2025Lemma715` | `Bong/Bong/He2023ADCLemma715.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
+| He ADC, Definition 7.16 and Remark 7.17 | `Bong.BONG.GoodBONG.HeADC2025Definition716`, `heADC2025Remark717_unique`, `heADC2025Remark717_exhaustion` | `Bong/Bong/He2023ADCDefinition716.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
+| He ADC, Lemma 7.18 | `Bong.BONG.GoodBONG.heADC2025Lemma718` | `Bong/Bong/He2023ADCLemma718.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
+| He ADC, Lemma 7.19 | `Bong.BONG.GoodBONG.heADC2025Lemma719FirstNamedPublished`, `heADC2025Lemma719SecondNamedPublished` | `Bong/Bong/He2023ADCLemma719Models.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 
 All listed endpoints have zero project-specific law/data parameters in their
 public signatures. The theorem-level status is provisional solely because the

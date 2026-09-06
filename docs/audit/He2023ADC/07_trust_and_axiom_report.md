@@ -186,3 +186,13 @@ checks 2,729 tracked Lean sources without a forbidden proof token outside
 comments. All changed Lean lines satisfy the 100-column limit and
 `git diff --check` passes. Report 39 separates these local checks from
 exact-revision clean CI and unsigned human review.
+
+At checkpoint `7b21fe0e07e97ba082dd9e78a79e3ec8091630af`, all six new modules
+for Definition 7.16 through Lemma 7.19, the canonical paper entry, and the
+expanded audit compile directly with Lean 4.32.1. Eleven selected dependency
+reports, including both named-product conclusions, contain exactly `propext`,
+`Classical.choice`, and `Quot.sound`. The focused enforcing gate checks 59,555
+declarations, and the comment-aware scanner checks 2,735 tracked Lean sources
+without finding a forbidden proof token outside comments. The scoped
+100-column and `git diff --check` gates pass. Reports 40--42 separate these
+local checks from exact-revision clean CI and unsigned human review.

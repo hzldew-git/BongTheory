@@ -167,3 +167,20 @@ representation condition, maximality assertion, or classification theorem
 premise is exposed to the caller. Necessity and sufficiency both conclude in
 the source's actual ambient-space and integral-lattice isometry relations.
 See report 39.
+
+At `7b21fe0`, Definition 7.16 preserves the source's existence qualification:
+it is a property of a supplied lattice, not an unconditional constructor.
+Remark 7.17 derives uniqueness from Lemma 7.15 and exhaustion from the exact
+even interval in Theorem 7.4 plus the four normalized ambient rows. The
+formal statements are `LOGICALLY_EQUIVALENT`; see report 40.
+
+At the same checkpoint, `heADC2025Lemma718` is `LOGICALLY_EQUIVALENT` to
+the published endpoint exclusion and has no supplied maximality or profile
+premise. The equivalent undefinedness statement is derived from Definition
+7.16. See report 41.
+
+The two `heADC2025Lemma719*NamedPublished` endpoints are
+`LOGICALLY_EQUIVALENT` to Lemma 7.19. They conclude directly on the named
+`N_1` and `N_2` products. The strict defect domain, integer parity and bounds,
+good-BONG append, `alpha_n=1`, maximal base identification, and transport of
+`n`-ADC are all proved internally. See report 42.

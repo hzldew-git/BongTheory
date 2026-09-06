@@ -40,6 +40,9 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Theorem 7.1 | exact odd `n>=3`, rank `n+1` equivalence; corrected three-way binary classification and both nonmaximal 3-ADC exclusions | full local proof at c3e6092; statement `PROVISIONAL_MATCH`, publisher proof `INCOMPLETE_PROOF`; report 35; exact-revision clean CI and human sign-off pending |
 | He ADC Theorem 7.4 and Lemmas 7.5--7.14 | complete odd-corank-two BONG criterion and its order, alpha, defect, representation and determinant-parity chain | full local proof in the audited scopes through 6c52803; Lemma 7.13 has a disclosed quantifier mismatch; reports 36--38; exact-revision clean CI pending |
 | He ADC Lemma 7.15 | integral isometry iff ambient-space isometry and equality of `R_(n+1)` | full local proof at 06d2507, including both maximal and four-condition nonmaximal branches; report 39; exact-revision clean CI pending |
+| He ADC Definition 7.16 and Remark 7.17 | conditional `M_(nu,r)` class symbol, uniqueness, and exhaustion | full local proof at 7b21fe0; report 40; exact-revision clean CI pending |
+| He ADC Lemma 7.18 | second-column unit endpoint `r=e` is excluded | full local proof at 7b21fe0 on the actual named maximal model; report 41; exact-revision clean CI pending |
+| He ADC Lemma 7.19 | both named products `N_nu^(n+1)(delta) orthogonal-sum <c>` are n-ADC with `R_(n+1)=1-d(delta)` | full local construction and integral-isometry bridge at 7b21fe0; report 42; exact-revision clean CI pending |
 
 The current milestone is not whole-project completion. The Classic publisher
 Lemma 7.1(ii) has a checked refutation when e > 1. ADC Lemma 6.8(iv) also has

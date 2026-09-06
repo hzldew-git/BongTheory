@@ -322,3 +322,19 @@ with Lean 4.32.1. Six selected new dependency reports, including
 This is local evidence only until an independently extracted Review Kit at a
 revision containing this checkpoint passes GitHub CI. Report 39 records the
 four-condition classification proof and theorem-level scope.
+
+## Definition 7.16 through Lemma 7.19 local checkpoint
+
+At exact code revision `7b21fe0e07e97ba082dd9e78a79e3ec8091630af`, all six
+new proof modules, `Bong.Papers.He2023ADC`, and
+`BongTest.He2023ADCAudit` compile directly with Lean 4.32.1. Eleven selected
+dependency reports, including both literal named-product endpoints of Lemma
+7.19, contain exactly `propext`, `Classical.choice`, and `Quot.sound`. The
+focused gate reports `AXIOM_GATE_PASS: 59555 declarations checked`; the
+source scanner checks 2,735 tracked Lean files without a forbidden proof
+token outside comments. `git diff --check` and the scoped 100-column check
+pass.
+
+This remains local evidence until the independently extracted Review Kit for
+this exact revision passes GitHub CI. Reports 40--42 record the source-level
+scope and model-identification argument.

@@ -19,8 +19,9 @@ paper; those three extensions are explicitly marked partial.
   exponent is kept separate from the exponent derived from Theorem 2.1.
 - He-paper coverage status: `PARTIAL`. He--Hu has complete formal coverage of
   its 47 numbered results subject to semantic sign-off; He classic retains
-  unformalized testing/global scope; He ADC has 6/12 complete Section 6 items,
-  including full Lemma 6.12, and a confirmed mismatch in Lemma 6.8(iv).
+  unformalized testing/global scope; He ADC Section 6 is fully triaged and
+  Section 7 has 16/21 fully formalized numbered items through Lemma 7.19,
+  with the documented boundary and quantifier mismatches kept explicit.
 - Project grade: D because the He ADC audit identifies a substantive
   theorem-level mismatch; this does not downgrade the separately graded kits.
 - Local reproducibility status:
@@ -61,7 +62,7 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
 | He, *manuscripta math.* 174 (2024), Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | full local equivalence proved; testing and global parts of the paper remain incomplete |
-| He, *Doc. Math.* 30 (2025), Lemmas 4.11-4.12 and even Section 6 | published-family profiles, Theorem 6.1, Lemmas 6.4-6.8 endpoints, both quaternary boundary audits, and full Lemma 6.12 | partial paper; Lemma 6.12 is locally complete, while Lemma 6.8(iv) is formally refuted at n=2 and recorded as a semantic mismatch |
+| He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1 and 7.4, and the chain through Lemma 7.19 | partial paper; Section 7 is 16/21, Lemma 7.13 has a quantifier mismatch, and the named-product form of Lemma 7.19 is locally kernel-complete |
 
 The Classic paper's literal Lemma 7.1(ii) is refuted for ramification index
 greater than one. The ADC paper's Lemma 6.8(iv) is also refuted at n=2 by an

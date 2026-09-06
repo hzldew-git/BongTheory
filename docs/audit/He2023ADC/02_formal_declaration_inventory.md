@@ -146,6 +146,20 @@ Additional concrete declaration groups are:
   It derives equality of all orders and alphas, every prefix defect bound,
   the sole triggered prefix representation, and both maximal and nonmaximal
   branches without a supplied Beli classification law.
+- `He2023ADCDefinition716` defines the two ambient columns and the exact
+  property denoted by `M_(nu,r)^(n+2)(c)`. It proves both uniqueness by
+  Lemma 7.15 and exhaustion from Theorem 7.4 and normalized odd ambient
+  representatives.
+- `He2023ADCLemma718` excludes the second-column unit endpoint `r=e` and
+  exports the equivalent undefinedness theorem for Definition 7.16.
+- `He2023ADCLemma719Core`, `He2023ADCLemma719Tower`, and
+  `He2023ADCLemma719` construct the unary extension, prove its exact
+  `alpha_n=1`, verify all Theorem 7.4 conditions, and expose the paper's
+  strict unit-defect hypotheses.
+- `He2023ADCLemma719Models` proves integral isometries from the explicit
+  two-column bases to the named `N_1` and `N_2` lattices, lifts them across
+  the unary line, and transports the full `n`-ADC conclusion to the literal
+  products printed in Lemma 7.19.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full
