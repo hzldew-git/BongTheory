@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 
 import Bong.Bong.He2022ClassicPublishedRepresentation
 import Bong.Bong.He2022ClassicLemma710
+import Bong.Bong.He2022ClassicLemma710Exceptional
 import Bong.Bong.He2022ClassicPublishedIrredundancy
 import Bong.Bong.He2022ClassicLemma58
 import Bong.Bong.He2022ClassicTheorem51
@@ -3832,6 +3833,70 @@ theorem he2022ClassicLemma74_even
   · exact classicUniversal_implies_all_publishedEven U hU pairs X
   · exact all_publishedEven_implies_classicUniversal
       U hU pairs X hXClassic
+
+/-- He (2024), Lemma 7.10: every entry of the literal published even table
+has a classic integral deletion witness.  The exceptional-row branch follows
+clauses (i)--(ii), and every `C₁/C₂` row follows clause (iii). -/
+theorem he2022ClassicLemma710_publishedEven_deletionWitness
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat)
+    (i : HeClassicPublishedEvenTestingIndex
+      (K := K) U (ramificationIndex K)) :
+    ∃ X : QuadraticLatticeModel (K := K),
+      X.IsClassicIntegral ∧
+      ¬ X.Represents
+        (HeClassicPublishedEvenTestingIndex.model
+          (K := K) U hU pairs i) ∧
+      ∀ j : HeClassicPublishedEvenTestingIndex
+          (K := K) U (ramificationIndex K),
+        j ≠ i →
+          X.Represents
+            (HeClassicPublishedEvenTestingIndex.model
+              (K := K) U hU pairs j) := by
+  rcases i with h | i
+  · by_cases heOne : ramificationIndex K = 1
+    · rcases heClassicExceptionalIndex_eq_one_or_discriminant
+        (K := K) heOne h with hOne | hDiscriminant
+      · subst h
+        exact he2022ClassicLemma710ii_publishedHOne_deletionWitness
+          (K := K) U hU pairs heOne
+      · subst h
+        exact
+          he2022ClassicLemma710ii_publishedHDiscriminant_deletionWitness
+            (K := K) U hU pairs heOne
+    · have he : 1 < ramificationIndex K := by
+        have hePositive := ramificationIndex_pos (K := K)
+        omega
+      have hOne := heClassicExceptionalIndex_eq_one_of_one_lt
+        (K := K) he h
+      subst h
+      exact he2022ClassicLemma710i_publishedHOne_deletionWitness
+        (K := K) U hU pairs he
+  · exact he2022ClassicLemma710iii_publishedC_deletionWitness
+      (K := K) U hU pairs i
+
+/-- The even-rank half of He (2024), Theorem 1.3, stated for the literal
+published family: it tests classic universality and no displayed row can be
+deleted. -/
+theorem he2022ClassicTheorem13_even_literalMinimal
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {I : Type u} [Fintype I] (U : I → Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat) :
+    IsLiteralMinimalClassicUniversalityTestingFamily
+      (HeClassicPublishedEvenTestingIndex.model
+        (K := K) U hU pairs) (2 * pairs + 2) := by
+  constructor
+  · intro X hXClassic hAll
+    exact all_publishedEven_implies_classicUniversal
+      (K := K) U hU pairs X hXClassic hAll
+  · intro i
+    exact he2022ClassicLemma710_publishedEven_deletionWitness
+      (K := K) U hU pairs i
 
 end Lattice.QuadraticLatticeModel
 

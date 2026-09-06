@@ -279,3 +279,27 @@ import Bong.Bong.He2022ClassicLemma79
 #print axioms Bong.he2022ClassicLemma79iii_P2Omega_represents_HDiscriminant
 #print axioms Bong.he2022ClassicLemma79iii_P1Omega_not_represents_HDiscriminant
 #print axioms Bong.he2022ClassicLemma79iii_P2Omega_not_represents_HOne
+
+/-! Published Lemmas 7.7 and 7.10, including literal table minimality. -/
+
+#check Bong.BONG.GoodBONG.he2022ClassicLemma77_boundary_conditions
+#check Bong.BONG.GoodBONG.he2022ClassicLemma77iii_C1_conditions
+#check Bong.BONG.GoodBONG.he2022ClassicLemma77iii_C2_conditions
+#check Bong.he2022ClassicLemma77_C1_represents
+#check Bong.he2022ClassicLemma77_C2_represents
+#check Bong.he2022ClassicLemma710i_P2Discriminant_represents_publishedC
+#check Bong.he2022ClassicLemma710i_publishedHOne_deletionWitness
+#check Bong.he2022ClassicLemma710ii_publishedHDiscriminant_deletionWitness
+#check Bong.he2022ClassicLemma710ii_publishedHOne_deletionWitness
+#check @Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710_publishedEven_deletionWitness
+#check @Bong.Lattice.QuadraticLatticeModel.he2022ClassicTheorem13_even_literalMinimal
+
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma77_boundary_conditions
+#print axioms Bong.he2022ClassicLemma77_C1_represents
+#print axioms Bong.he2022ClassicLemma77_C2_represents
+#print axioms Bong.he2022ClassicLemma710i_P2Discriminant_represents_publishedC
+#print axioms Bong.he2022ClassicLemma710i_publishedHOne_deletionWitness
+#print axioms Bong.he2022ClassicLemma710ii_publishedHDiscriminant_deletionWitness
+#print axioms Bong.he2022ClassicLemma710ii_publishedHOne_deletionWitness
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710_publishedEven_deletionWitness
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicTheorem13_even_literalMinimal
