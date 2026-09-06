@@ -205,3 +205,12 @@ checks 59,643 declarations, and the comment-aware scanner checks 2,738 tracked
 Lean sources without a forbidden proof token outside comments. The scoped
 100-column and `git diff --check` gates pass. Report 43 separates these local
 checks from exact-revision clean CI and unsigned human review.
+
+At checkpoint `07cd54844a61931cb8b7b6e0ec237448e94b074c`, both Theorem
+7.2 modules, the canonical paper entry, and the expanded audit compile
+directly with Lean 4.32.1. Six selected dependency reports contain exactly
+`propext`, `Classical.choice`, and `Quot.sound`. The focused enforcing gate
+checks 59,692 declarations, and the comment-aware scanner checks 2,740 tracked
+Lean sources without finding a forbidden proof token outside comments. The
+scoped 100-column and `git diff --check` gates pass. Report 44 separates these
+local checks from exact-revision clean CI and unsigned human review.

@@ -171,8 +171,14 @@ isometries. The focused gate checks 59,555 declarations and the scanner checks
 endpoints, all four Hilbert-selected ambient combinations, both named
 products, every lower-row existence statement, and the unique undefined
 triple are proved. The focused gate checks 59,643 declarations and the
-scanner checks 2,738 sources. Section 7 now has 17/21 fully formalized
-numbered items, one quantifier-mismatched item, and three pending items.
+scanner checks 2,738 sources. Section 7 had 17/21 fully formalized numbered
+items at that checkpoint. Report 44 adds the full Theorem 7.2 at `07cd548`:
+both the representative-independent and literal finite maximal-or-product
+biconditionals, integral square normalization, and the published
+maximal-overlap assertion are proved. Six selected reports are standard-only,
+the focused gate checks 59,692 declarations, and the scanner checks 2,740
+sources. Section 7 now has 18/21 fully formalized numbered items, one
+quantifier-mismatched item, and two pending items.
 
 Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
 incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
@@ -180,7 +186,7 @@ standard logical axioms; conditional global inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through b86a9d4
+The later additions through 07cd548
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

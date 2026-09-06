@@ -87,8 +87,9 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
 - Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 are locally kernel-complete at
   `2417a4f`. Lemma 7.11 is complete in both normalized parameter rows at
   `832d10c`. Lemma 7.14 is complete at `6c52803`, Lemma 7.15 at `06d2507`,
-  Definition 7.16 through Lemma 7.19 at `7b21fe0`, and Lemma 7.20 at
-  `b86a9d4`, raising full Section 7 coverage to 17/21 numbered items. The two
+  Definition 7.16 through Lemma 7.19 at `7b21fe0`, Lemma 7.20 at `b86a9d4`,
+  and Theorem 7.2 at `07cd548`, raising full Section 7 coverage to 18/21
+  numbered items. The two
   Lemma 7.19 branches conclude on
   the literal named products after proved integral-isometry transport. The
   Lemma 7.11 odd-valuation represented-target contradiction remains the route used by
@@ -96,12 +97,13 @@ Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
   formalized and sufficient downstream; its stronger printed per-target
   quantifier is recorded as a semantic mismatch. Lemma 7.20 includes every
   maximal and lower-row named product and its exact unique exception.
-  Reports 36--43 give the
+  Theorem 7.2 supplies both the intrinsic and literal finite product families
+  and proves their equivalence and maximal overlap. Reports 36--44 give the
   exact correspondence and trust checks.
 
 The remaining scope includes concrete localization and Lemma 2.2, unrestricted
 local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, three still-unformalized Section 7 items, the printed-strength
+Section 5, two still-unformalized Section 7 items, the printed-strength
 Lemma 7.13 claim, Section 8 global proofs, and the
 enumerative main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
 in code; this does not fill the other boundary cases or provide human approval.

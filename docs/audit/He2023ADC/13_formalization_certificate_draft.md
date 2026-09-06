@@ -83,6 +83,13 @@ column combinations, both named products, and the integral-isometry
 conclusions. Eleven selected dependency reports are standard-only, the
 focused gate checks 59,643 declarations, and the scanner checks 2,738 tracked
 Lean sources.
+Theorem 7.2 checkpoint:
+`07cd54844a61931cb8b7b6e0ec237448e94b074c`. Report 44 proves the intrinsic
+and literal finite maximal-or-product biconditionals, the integral-isometry
+normalization of both displayed parameters, and the published maximal-overlap
+assertion. Six selected dependency reports are standard-only, the focused
+gate checks 59,692 declarations, and the scanner checks 2,740 tracked Lean
+sources.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -99,7 +106,7 @@ classifications, enumeration, or omitted boundary cases.
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
-through full Lemma 6.7. The later developments through b86a9d4 have
+through full Lemma 6.7. The later developments through 07cd548 have
 passed direct local checks; they still require exact-revision clean-kit CI. Exact
 commit distinctions are in report 11. Overall project grade: D because one
 core source lemma and its downstream classification theorem have substantive

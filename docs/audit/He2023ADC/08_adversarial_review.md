@@ -205,3 +205,12 @@ odd-defect unit is constructed from the dyadic defect spectrum. Lemma 7.18
 proves the converse exceptional case, yielding an exact definedness
 biconditional. Three Section 7 items now remain pending, independently of the
 Lemma 7.13 mismatch.
+
+Report 44 audits Theorem 7.2 against pp. 1006 and 1016. The intrinsic theorem
+does not depend on a chosen representative system, while a separate theorem
+reconstructs the exact finite family printed by the publisher. Unit-square
+normalization is transported through integral isometries in both columns.
+For the overlap assertion, the proof compares the Lemma 7.19 penultimate
+order with every Proposition 4.13 maximal row and eliminates three rows; it
+does not assume the desired second-column model. Remark 7.3 and Corollary
+7.21 remain pending, independently of the Lemma 7.13 mismatch.

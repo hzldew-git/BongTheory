@@ -192,3 +192,11 @@ retain the normalized parameter order, exact range of `r`, defect
 selected column, determinant-completion isometry, named good BONG, `n`-ADC
 property, penultimate order, and unique undefined triple are proved
 internally. See report 43.
+
+At `07cd548`, `heADC2025Theorem72Published` and
+`heADC2025Theorem72Published_overlap` are `LOGICALLY_EQUIVALENT` to the full
+published Theorem 7.2 once the paper's finite normalized unit representative
+system and distinguished discriminant representative are made explicit.
+The intrinsic theorem drops this arbitrary finite choice. The defect domain,
+line normalization, both integral square-change transports, and elimination
+of the other three maximal ambient rows are proved internally. See report 44.

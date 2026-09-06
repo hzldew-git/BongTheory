@@ -354,3 +354,18 @@ named-product branches, contain exactly `propext`, `Classical.choice`, and
 This remains local evidence until the independently extracted Review Kit for
 this exact revision passes GitHub CI. Report 43 records the source-level
 scope, Hilbert selection, determinant completion, and named-model argument.
+
+## Theorem 7.2 local checkpoint
+
+At exact code revision `07cd54844a61931cb8b7b6e0ec237448e94b074c`, both
+Theorem 7.2 proof modules, `Bong.Papers.He2023ADC`, and
+`BongTest.He2023ADCAudit` compile directly with Lean 4.32.1. Six selected
+dependency reports, including the literal finite biconditional and maximal
+overlap, contain exactly `propext`, `Classical.choice`, and `Quot.sound`.
+The focused gate reports `AXIOM_GATE_PASS: 59692 declarations checked`; the
+source scanner checks 2,740 tracked Lean files without a forbidden proof token
+outside comments. `git diff --check` and the scoped 100-column check pass.
+
+This remains local evidence until the independently extracted Review Kit for
+this exact revision passes GitHub CI. Report 44 records the source-level
+scope, representative normalization, and overlap argument.

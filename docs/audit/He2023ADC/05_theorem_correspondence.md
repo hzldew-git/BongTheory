@@ -53,7 +53,8 @@
 | Lemma 7.18 | `heADC2025Lemma718`, `heADC2025Lemma718_not_definition716` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `7b21fe0`: a unit second-column lattice cannot have `R_(n+1)=-2e`, equivalently the corresponding `M_(2,e)` symbol is undefined; report 41 |
 | Lemma 7.19 | `heADC2025Lemma719FirstNamedPublished`, `heADC2025Lemma719SecondNamedPublished` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `7b21fe0`: both named products `N_nu^(n+1)(delta) orthogonal-sum <c>` are `n`-ADC and have `R_(n+1)=1-d(delta)`; defect data, alpha equality, and model isometries are derived internally; report 42 |
 | Lemma 7.20 | `heADC2025Lemma720_defined_iff`, `heADC2025Lemma720iii`, and the five `isometricNamed` endpoints | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `b86a9d4`: exact unique exception, all maximal endpoints, and both Hilbert-selected named products; report 43 |
-| Section 5, Theorem 7.2, Remark 7.3, Corollary 7.21, Section 8 and remaining Section 1 results | none | Pending; every downstream use of the unqualified Theorem 6.2 requires a separate boundary audit |
+| Theorem 7.2 | `heADC2025Theorem72`, `heADC2025Theorem72Product_iff_published`, `heADC2025Theorem72Published`, `heADC2025Theorem72Published_overlap` | `FULLY_FORMALIZED` / `PROVISIONAL_MATCH` at `07cd548`: intrinsic and literal finite maximal-or-product biconditionals, integral square-normalization, and the maximal overlap; report 44 |
+| Section 5, Remark 7.3, Corollary 7.21, Section 8 and remaining Section 1 results | none | Pending; every downstream use of the unqualified Theorem 6.2 requires a separate boundary audit |
 
 The field restriction prevents claiming the full generality of Lemma 2.1.
 At checkpoint `976883e6cda7c17402c4c1f0bc768db555460eae`, all thirteen

@@ -146,5 +146,13 @@ the line `<omega*c>`; and confirm that the resulting penultimate order is
 `2r+1<2e` exist under the paper's local-field hypotheses and that the final
 definedness biconditional has exactly the exceptional triple `(2,e,U)`.
 
+Report 44 adds the Theorem 7.2 card. Reviewers should confirm that
+`d(delta)<2e` is exactly the square-class content of
+`delta in U \ {1,Delta}`; that the line-order alternatives normalize to
+`epsilon*pi^j`, `j in {0,1}`; and that every square normalization is an
+integral lattice isometry. For the overlap, verify the four maximal-profile
+comparisons and that only the second-column unit row survives before its
+parameter is normalized into `U`.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

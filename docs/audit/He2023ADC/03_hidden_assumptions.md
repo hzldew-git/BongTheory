@@ -106,3 +106,11 @@ The abstract `DyadicContext` is inhabited by the checked `Q_2` instance.
 Square normalization permits a scalar of negative valuation, but integral
 transport is obtained through maximal-lattice uniqueness rather than by
 assuming that the coordinate scaling is an integral map.
+
+Theorem 7.2 exposes the finite representative system `U`, its completeness,
+and the occurrence of the distinguished discriminant class. The latter is
+needed only to translate the printed deletion `U \ {1, Delta}` into the
+intrinsic sharp square-class domain. The product hypotheses, defect bound,
+line order, selected column, ADC property, and maximal-overlap profile are
+all derived in the public theorem chain; no product-classification law or
+maximal-overlap law is supplied by the caller. See report 44.

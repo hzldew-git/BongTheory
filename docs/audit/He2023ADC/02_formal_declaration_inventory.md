@@ -164,6 +164,11 @@ Additional concrete declaration groups are:
   `He2023ADCLemma720` prove all parts of Lemma 7.20: the maximal endpoints,
   exact Hilbert-symbol column selection, determinant completion, both named
   products, lower-row existence, and the unique undefined triple.
+- `He2023ADCTheorem72` defines the representative-independent product family
+  and proves both directions of the maximal-or-product classification.
+- `He2023ADCTheorem72Published` defines the literal finite base and line
+  parameters, proves equivalence with the intrinsic family by integral
+  isometries, and proves the published maximal-overlap conclusion.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full

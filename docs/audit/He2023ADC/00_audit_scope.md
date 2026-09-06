@@ -6,7 +6,7 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `06d25079c6dac69bc0439b94e694fa52c81961ed`,
+The current audited code checkpoint is `07cd54844a61931cb8b7b6e0ec237448e94b074c`,
 branch `feat/he-formalization`, Lean 4.32.1, audited on 6 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
@@ -52,6 +52,10 @@ Lemma 7.18, and the two literal named-product branches of Lemma 7.19.
 Report 43 completes Lemma 7.20: all maximal endpoints, the Hilbert-symbol
 selection and named products, existence in every lower row, and the unique
 undefined triple.
+Report 44 proves Theorem 7.2 in both a representative-independent form and
+the literal published finite-parameter form. It also proves the maximal
+overlap assertion by comparing the product order with all four normalized
+maximal profiles.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
@@ -60,7 +64,7 @@ the n>=4 part of (iv), the refutation of its printed n=2 boundary, and full
 Lemmas 6.9--6.12, the boundary-complete audit of Theorem 6.2, Remark 6.3,
 Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, full Lemmas 7.14--7.15,
 Definition 7.16, Remark 7.17, full Lemmas 7.18--7.20, and the corrected
-Lemma 7.13 consequence listed in
+Lemma 7.13 consequence, together with the complete Theorem 7.2, listed in
 `05_theorem_correspondence.md`. The global
 predicates and logical reductions are also in scope, with their arithmetic
 premises still undischarged. This audit does not certify the missing local,

@@ -75,3 +75,11 @@ definition from the paper. It packages the literal n=2 implication using the
 same `IsNADC`, ambient quadratic-space isometry, and integral lattice-isometry
 notions already compared above. Its formal negation therefore exposes a
 statement mismatch without changing any underlying mathematical definition.
+
+`HeADC2025Theorem72BaseIndex U` is the literal finite type indexing
+`U \ {1, Delta}`. `HeADC2025Theorem72Product` is the invariant product
+family with an arbitrary sharp unit square class and a line of order zero or
+one. `HeADC2025Theorem72PublishedProduct` is the same family after choosing
+`U`; its Boolean line component is the source exponent in `{0,1}`. Their
+formal equivalence uses integral lattice isometry, not equality of chosen
+models or ambient-space isometry alone.
