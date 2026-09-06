@@ -5,7 +5,7 @@ fields*, manuscripta math. 174 (2024), 559-595, DOI
 10.1007/s00229-023-01516-0. Authority: the publisher PDF identified in
 `00_audit_scope.md`; the later arXiv revision is comparison-only.
 
-Code checkpoint: `66b408163590da57edcd0325fc20266369fb70c2`.
+Code checkpoint: `cf2f474d7bb82ad076ba39b92bcba9f7a2de082a`.
 Proof assistant: Lean 4.32.1. Dependencies: the committed Lake manifest.
 Date: 2026-09-06. Project grade: C.
 
@@ -13,8 +13,9 @@ Theorem 1.1 has a checked proof and provisional semantic correspondence.
 Theorem 1.3 is partial. Theorem 1.5 has its complete local n >= 1 implication,
 but not its global number-field and discriminant clause. Theorems 1.7-1.9 are
 not covered by complete published endpoints. The even
-Lemma 7.4 result and the refutation of literal Lemma 7.1(ii) are separate
-checked declarations, not a certificate for the full testing theorem.
+Lemma 7.4 result, the `C`-row witness mechanism in Lemma 7.10(iii), and the
+refutation of literal Lemma 7.1(ii) are separate checked declarations, not a
+certificate for the full testing theorem.
 
 Foundational axioms expected by the audit are propositional extensionality,
 classical choice, and quotient soundness. Arithmetic interfaces and all

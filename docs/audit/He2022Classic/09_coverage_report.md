@@ -1,6 +1,7 @@
 # Coverage report
 
-Coverage status: `IN_PROGRESS_THEOREMS_1_1_AND_LOCAL_1_5_PROVED`.
+Coverage status:
+`IN_PROGRESS_THEOREMS_1_1_LOCAL_1_5_AND_LEMMA_7_10_III_CORE_PROVED`.
 
 - Publisher inventory: 66/66 directly numbered items identified.
 - Main theorems: Theorem 1.1 has a complete local equivalence proof;
@@ -14,8 +15,11 @@ Coverage status: `IN_PROGRESS_THEOREMS_1_1_AND_LOCAL_1_5_PROVED`.
   Corollary 7.2 chain cannot be promoted through the false Lemma 7.1(ii).
 - Definitions: classic integrality, maximality, universality, and the finite
   testing models are present. Human semantic confirmation remains pending.
-- Testing classifications: Lemma 7.4's even equivalence is checked; odd
-  sufficiency and full minimality/counting in Theorem 1.3 remain incomplete.
+- Testing classifications: Lemma 7.4's even equivalence is checked. The
+  ambient and integral `C`-pair deletion mechanism of Lemma 7.10(iii) is
+  checked for both published parameter families; its finite-index
+  nonisometry bridge, Lemma 7.10(i)--(ii), odd sufficiency, and full
+  minimality/counting in Theorem 1.3 remain incomplete.
 - Examples and global Section 8 consequences are not claimed as covered.
 
 The previous 0/66 proof claim was stale and is withdrawn. No replacement

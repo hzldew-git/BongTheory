@@ -19,10 +19,12 @@ the number-field discriminant is odd; that localization and global conclusion
 are not encoded. The relationship to the complete printed theorem therefore
 remains `PARTIAL_FORMALIZATION`.
 
-For Theorem 1.3 and Lemma 7.4 the current testing endpoint covers even rank;
-neither full odd-rank sufficiency nor proper-subset minimality follows merely
-from constructing the finite indices. The extra lower-even J2 premise in the
-available odd endpoint is not hidden.
+For Theorem 1.3 and Lemma 7.4 the current testing endpoint covers even rank.
+Lemma 7.10(iii)'s `C`-pair witness mechanism now reaches integral
+representation outside the excluded ambient class, but the finite-index
+nonisometry bridge and exceptional rows remain. Neither full odd-rank
+sufficiency nor proper-subset minimality follows from the current endpoints.
+The extra lower-even J2 premise in the available odd endpoint is not hidden.
 
 The false literal assertion in Lemma 7.1(ii) is not replaced by an equivalent
 theorem. Its refutation and the explicitly qualified alternative are separate

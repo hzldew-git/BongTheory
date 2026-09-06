@@ -62,13 +62,13 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 | Published source | Current public endpoint | Honest status |
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
-| He, *manuscripta math.* 174 (2024), Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | full local equivalence proved; testing and global parts of the paper remain incomplete |
+| He, *manuscripta math.* 174 (2024), Theorems 1.1, local 1.5, and Lemma 7.10(iii) core | `Bong.BONG.GoodBONG.he2022ClassicTheorem11`, `he2022ClassicTheorem15_allRanks`, and the `he2022ClassicLemma710iii_*` endpoints | local classification and ramification implication proved; the C-pair deletion mechanism is checked, while complete minimality and global parts remain incomplete |
 | He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1, 7.2 and 7.4, the chain through Remark 7.3, and the Corollary 7.21 catalogue | partial paper; Lemma 7.13 has a quantifier mismatch, and the Corollary 7.21 residue-norm formulas retain the cited O'Meara 63:9 count as an explicit premise |
 
 The Classic paper's literal Lemma 7.1(ii) is refuted for ramification index
 greater than one. The ADC paper's Lemma 6.8(iv) is also refuted at n=2 by an
 actual nonmaximal 2-ADC lattice, with a concrete `Q_2` check. The local
-Theorem 1.5 endpoint covers n >= 2 only. See each paper's fidelity report for
+Theorem 1.5 endpoint covers every n >= 1 locally. See each paper's fidelity report for
 exact coverage, assumptions, source discrepancies, and missing human approval.
 
 For these three papers the publisher version of record is the sole semantic

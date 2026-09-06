@@ -6,10 +6,10 @@ generated from `papers/he2022classic/paper.json`. The publisher PDF is excluded;
 its manifest hash identifies the version reviewers must obtain independently.
 The audit output must distinguish the proposition-valued definition from the
 proof `he2022ClassicTheorem11`, and print the latter's transitive axioms.
-The unary and all-ranks local Theorem 1.5 endpoints and the source refutation
-are audited too.
+The unary and all-ranks local Theorem 1.5 endpoints, the Lemma 7.10(iii)
+`C`-row witness endpoints, and the source refutation are audited too.
 
-Code checkpoint: `66b408163590da57edcd0325fc20266369fb70c2`.
+Code checkpoint: `cf2f474d7bb82ad076ba39b92bcba9f7a2de082a`.
 Lean: 4.32.1; dependency versions: the committed `lake-manifest.json`.
 Reproducibility status for this checkpoint: `PARTIALLY_REPRODUCIBLE` until its
 own generated kit has passed clean extraction, compilation, and all audits.
@@ -37,9 +37,11 @@ individually inspected axiom reports are not a successful run of that later
 gate, nor a certificate for a newer source revision. See the deployment
 correction in `../HePaperDeploymentCheckpoint-20260905.md`.
 
-The current checkpoint adds the published unary branch and a complete local
-n >= 1 dispatcher. Local cached compilation, the Classic audit, the proof-token
-scanner, and a focused transitive gate over 61,546 declarations pass. A new
+The current checkpoint includes the published unary branch, a complete local
+n >= 1 dispatcher, and the Lemma 7.10(iii) `C`-row deletion-witness core.
+Local cached compilation with warnings treated as errors, the Classic audit,
+the 2,743-source proof-token scan, all 24 CI helper tests, and a focused
+transitive gate over 58,173 declarations pass. A new
 clean-kit run for this exact checkpoint is still required; the historical
 artifacts below do not certify it.
 

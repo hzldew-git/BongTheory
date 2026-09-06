@@ -31,8 +31,13 @@ The proposition-valued definition remains separate from its proof:
 - `Bong.BONG.GoodBONG.he2022ClassicCorollary63_even`: even branch only.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
   testing equivalence, not the full minimality theorem.
+- `Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_represents_other` and
+  its `C2` converse: the integral `C`-row deletion witnesses outside the
+  excluded ambient class; published defect-one and odd-order specializations
+  are in `He2022ClassicSectionSeven.lean`.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails`:
   a refutation of the literal publisher disjunction, not its formal proof.
 
 `BongTest/He2022ClassicAudit.lean` exposes additional branch endpoints and
-their transitive axiom reports. No endpoint is claimed for full Theorem 1.3.
+their transitive axiom reports. The `C`-row mechanism is not yet the literal
+all-indices statement, and no endpoint is claimed for full Theorem 1.3.

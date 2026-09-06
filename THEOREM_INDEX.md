@@ -25,6 +25,7 @@ additional paper lemmas; the audit packages give the fuller maps.
 | He--Hu, Theorem 1.2 maximal-testing core | `Bong.Lattice.heHuMaximalTestingReduction` | `Bong/Papers/HeHu2022.lean` | `PROVED_ABSTRACT_CORE_ONLY` |
 | He classic, Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | `Bong/Bong/He2022ClassicTheorem11.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He classic, Theorem 1.5 local implication, all n >= 1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks` | `Bong/Bong/He2022ClassicTheorem15.lean` | `FULLY_FORMALIZED_LOCAL_COMPONENT` |
+| He classic, Lemma 7.10(iii), C-row witness core | `Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_represents_other`, `Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC2_represents_other` | `Bong/Bong/He2022ClassicLemma710.lean` | `FULLY_FORMALIZED_CORE_PARTIAL_TABLE_CLAUSE` |
 | He classic, abstract maximal-testing reduction | `Bong.Lattice.heClassicMaximalTestingReduction` | `Bong/Papers/He2022Classic.lean` | `PROVED_FOUNDATION_ONLY` |
 | He ADC, Definition 1.1(ii), local dyadic specialization | `Bong.Lattice.IsNADC` | `Bong/Lattice/NADC.lean` | `DEFINITION_PENDING_SEMANTIC_SIGNOFF` |
 | He ADC, Lemma 2.1, local dyadic specialization | `Bong.Lattice.heADCLemma21LocalDyadic` | `Bong/Papers/He2023ADC.lean` | `PROVED_SPECIALIZATION_ONLY` |
