@@ -769,7 +769,7 @@ theorem heClassicLemma62_alphaNext_le_iff_branch {m n : Nat}
     exact hmono
   have hR2GeOne : 1 ≤ a.order ⟨n + 1, by omega⟩ := by
     rcases hTrigger with hR1One | hR2Gt
-    · exact a.heHu2022Remark52_order_ge_one hnThree hnOdd hmStable
+    · exact a.heHu2022Remark52_order_ge_one hnThree hnOdd (by omega)
         hClassic.isIntegral hR1One
     · omega
   have hPivotGap : a.orderGap pivot =

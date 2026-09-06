@@ -137,7 +137,7 @@ theorem heHu2022Proposition55
     refine ⟨?_, ?_, ?_⟩
     · intro W _ _ r M b hB
       have h56 := a.heHu2022Lemma56 (m := m) (n := 2 * k + 1)
-        (by omega) ⟨k + 1, by omega⟩ hm hAmbient hAIntegral hI1 hI2
+        (by omega) ⟨k + 1, by omega⟩ (by omega) hAmbient hAIntegral hI1 hI2
       exact ⟨h56.1 b hB, h56.2 b hB⟩
     · exact a.heHu2022Lemma510I2O_to_universal
         (sourceLaws := sourceLaws) (m := m) (k := k) hm hAIntegral

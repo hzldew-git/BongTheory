@@ -303,3 +303,23 @@ import Bong.Bong.He2022ClassicLemma79
 #print axioms Bong.he2022ClassicLemma710ii_publishedHOne_deletionWitness
 #print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710_publishedEven_deletionWitness
 #print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicTheorem13_even_literalMinimal
+
+/-! Published Lemma 7.11 and the literal odd-table deletion half. -/
+
+#check Bong.heClassicOddC1BarModel
+#check Bong.heClassicOddC1BarModel_isClassicIntegral
+#check Bong.he2022ClassicLemma711i_barC1_missesExactly_C2
+#check Bong.he2022ClassicLemma711i_C2_missesExactly_C1
+#check Bong.he2022ClassicLemma711ii_C2Odd_missesExactly_C1
+#check Bong.he2022ClassicLemma711ii_C1_missesExactly_C2Odd
+#check Bong.BONG.GoodBONG.he2022ClassicLemma711_represents_other
+#check @Bong.HeClassicPublishedOddTestingIndex.eq_of_diagonalRepresents_coefficients
+#check @Bong.HeClassicPublishedOddTestingIndex.not_diagonalRepresents_coefficients_of_ne
+#check @Bong.he2022ClassicLemma711_publishedOdd_deletionWitness
+
+#print axioms Bong.heClassicOddC1BarModel_isClassicIntegral
+#print axioms Bong.he2022ClassicLemma711i_barC1_missesExactly_C2
+#print axioms Bong.he2022ClassicLemma711ii_C2Odd_missesExactly_C1
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma711_represents_other
+#print axioms Bong.HeClassicPublishedOddTestingIndex.eq_of_diagonalRepresents_coefficients
+#print axioms Bong.he2022ClassicLemma711_publishedOdd_deletionWitness

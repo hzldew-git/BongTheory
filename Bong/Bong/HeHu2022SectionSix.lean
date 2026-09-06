@@ -857,7 +857,7 @@ theorem heHuLemma63_alphaNext_le_iff_branch
       hnOdd hnPlusTwoOdd |>.2
   have hR2GeOne : 1 ≤ a.order ⟨n + 1, by omega⟩ := by
     rcases hTrigger with hR1One | hR2Gt
-    · exact a.heHu2022Remark52_order_ge_one hnThree hnOdd hmStable
+    · exact a.heHu2022Remark52_order_ge_one hnThree hnOdd (by omega)
         hIntegral hR1One
     · omega
   have hPivotGap : a.orderGap pivot =

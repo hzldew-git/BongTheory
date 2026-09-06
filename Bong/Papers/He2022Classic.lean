@@ -23,6 +23,7 @@ import Bong.Bong.He2022ClassicLemma58
 import Bong.Bong.He2022ClassicTheorem51
 import Bong.Bong.He2022ClassicCorollary63
 import Bong.Bong.He2022ClassicSectionSeven
+import Bong.Bong.He2022ClassicLemma711
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -71,9 +72,12 @@ literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 complete Theorem 1.1 criterion, the full local rank range of Theorem 1.5,
 the published even branch of Corollary 6.3, Section 7 ambient exhaustion,
 Lemma 7.4 for the literal even finite testing table, the complete Lemma 7.7
-boundary argument, and all three clauses of Lemma 7.10 are included as checked
-endpoints.  In particular, every displayed even row has a literal deletion
-witness, giving the even-rank testing and minimality half of Theorem 1.3.
+boundary argument, all three clauses of Lemma 7.10, and the four odd-rank
+deletion constructions of Lemma 7.11 are included as checked endpoints.  In
+particular, every displayed row in both parity tables has a literal deletion
+witness.  The even table is proved to test classic universality, so its full
+minimality half of Theorem 1.3 follows; for the odd table the deletion half is
+proved independently of the invalid sufficiency chain described below.
 
 The global all-dyadic-primes and discriminant conclusion of Theorem 1.5
 belongs to a future number-field localization layer.  The publisher's Lemma
@@ -81,8 +85,8 @@ belongs to a future number-field localization layer.  The publisher's Lemma
 ramification index is greater than one.  The canonical entry instead exports
 a kernel-checked counterexample and a corrected odd-rank Section 7 endpoint
 whose missing lower-even `J2_E` premise is explicit.  Consequently this module
-does not claim the invalid Corollary 7.2 proof chain, the odd half of Lemma
-7.4, or downstream results that depend on that chain.
+does not claim the invalid Corollary 7.2 proof chain, the odd testing assertion
+in Lemma 7.4, or the odd full-minimality assertion that depends on that chain.
 -/
 
 namespace Bong
