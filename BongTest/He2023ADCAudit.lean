@@ -577,6 +577,14 @@ import Bong.Papers.He2023ADC
 #check @Bong.BONG.GoodBONG.heADC2025Lemma720_defined_iff
 #check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiFirst_isometricNamed
 #check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiSecond_isometricNamed
+#check @Bong.BONG.GoodBONG.HeADC2025Theorem72Product
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72Necessity
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72
+#check @Bong.BONG.GoodBONG.HeADC2025Theorem72BaseIndex
+#check @Bong.BONG.GoodBONG.HeADC2025Theorem72PublishedProduct
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72Product_iff_published
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72Published_overlap
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72Published
 
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma718
@@ -600,3 +608,9 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma720_defined_iff
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iiiFirst_isometricNamed
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iiiSecond_isometricNamed
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Necessity
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Product_iff_published
+#print axioms Bong.BONG.GoodBONG.HeADC2025Theorem72Product.isometricSecondUnit_of_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Published_overlap
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Published
