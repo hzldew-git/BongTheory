@@ -346,6 +346,9 @@ artifact, **.lake** directory, publisher PDF, Git history, or unrelated
 
 ## Fast verification
 
+Set the environment variable **LEAN_NUM_THREADS=1** in the invoking shell
+(`$env:LEAN_NUM_THREADS = '1'` in PowerShell), then run:
+
 ~~~text
 lake exe cache get
 lake build
@@ -360,6 +363,10 @@ In a fresh extraction, omit the cache command and run:
 lake --no-cache build
 $($auditCommands -join "`n")
 ~~~
+
+The one-thread setting is deliberate: the complete source closure contains
+several memory-intensive shared modules, and unconstrained parallel builds can
+exhaust a review machine even when every module compiles successfully.
 
 Successful compilation establishes kernel acceptance of the encoded
 statements. It does not by itself promote the semantic status to

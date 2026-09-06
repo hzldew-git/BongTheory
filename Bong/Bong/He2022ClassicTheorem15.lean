@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 
 import Bong.Bong.He2022ClassicTheorem11
 import Bong.Bong.BinaryDiagonalEvenSpinorUpper
+import Bong.Bong.BeliUniversalMain
 
 /-!
 # He (2024), Theorem 1.5 and Corollary 6.3
@@ -28,6 +29,47 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   {q : QuadraticSpace K V} {L : Lattice K V}
 
 namespace BONG.GoodBONG
+
+/-- In rank one, every integral unary target is already classic integral.
+Consequently classic `1`-universality implies Beli's scalar universality. -/
+private theorem classicOneUniversal_isUniversal
+    (h : Lattice.IsClassicNUniversal.{u, v, u} q L 1) :
+    Lattice.IsUniversal q L := by
+  rw [Lattice.isUniversal_iff]
+  refine ⟨h.isIntegral, ?_⟩
+  intro c hc
+  by_cases hzero : c = 0
+  · subst c
+    rw [Lattice.representsScalar_iff]
+    exact ⟨0, L.zero_mem, q.quadratic_zero⟩
+  · let b : Kˣ := Units.mk0 c hzero
+    have hlineClassic :
+        Lattice.IsClassicIntegral
+          (QuadraticSpace.rescaleUnit b (QuadraticSpace.line K))
+          (BONG.unaryModelLattice (K := K)) := by
+      rw [Lattice.isClassicIntegral_iff_forall]
+      intro x y hx hy
+      have hxIntegral : Dyadic.IsIntegral K x := by
+        rw [BONG.mem_unaryModelLattice_iff,
+          Dyadic.mem_integerRing_iff] at hx
+        exact hx
+      have hyIntegral : Dyadic.IsIntegral K y := by
+        rw [BONG.mem_unaryModelLattice_iff,
+          Dyadic.mem_integerRing_iff] at hy
+        exact hy
+      simp only [QuadraticSpace.rescaleUnit_bilin_apply,
+        QuadraticSpace.line_bilin_apply]
+      have hbIntegral : Dyadic.IsIntegral K (b : K) := by
+        simpa only [b, Units.val_mk0] using hc
+      exact Dyadic.isIntegral_mul K hbIntegral
+        (Dyadic.isIntegral_mul K hxIntegral hyIntegral)
+    have hrep := h.represents
+      (QuadraticSpace.rescaleUnit b (QuadraticSpace.line K))
+      (BONG.unaryModelLattice (K := K)) (by simp) hlineClassic
+    have hscalar :=
+      (Lattice.represents_unaryModel_iff_representsScalar
+        (q := q) (L := L) b).1 hrep
+    simpa only [b, Units.val_mk0] using hscalar
 
 /-- The unsigned defect `d(a_j a_(j+1))` in Theorem 1.5, with zero-based
 adjacent index. -/
@@ -138,6 +180,66 @@ private theorem allOrders_nonnegative {m : Nat}
   intro i
   have hi := hAll ⟨i.1, by omega⟩
   simpa only [b, order_castLength] using hi
+
+/-- Under the negation of Theorem 1.5's conclusion, all candidates defining
+the first alpha invariant are strictly greater than one. -/
+private theorem one_lt_firstAlpha_of_unsigned {tail : Nat}
+    (a : GoodBONG q L (tail + 2))
+    (he : 1 < ramificationIndex K)
+    (hFirst : a.order (0 : Fin (tail + 2)) = 0)
+    (hNonnegative : ∀ i : Fin (tail + 2), 0 ≤ a.order i)
+    (hAdjacent : ∀ j : Fin (tail + 1),
+      (1 : WithTop ℚ) < a.adjacentDefect j) :
+    1 < a.alphaValue (0 : Fin (tail + 1)) := by
+  have heRat : (1 : ℚ) < (ramificationIndex K : ℚ) := by
+    exact_mod_cast he
+  have hSecond : 0 ≤ a.order (1 : Fin (tail + 2)) :=
+    hNonnegative 1
+  have hHalfRat :
+      (1 : ℚ) <
+        ((a.order (1 : Fin (tail + 2)) -
+            a.order (0 : Fin (tail + 2)) : Int) : ℚ) / 2 +
+          (ramificationIndex K : ℚ) := by
+    rw [hFirst]
+    norm_num
+    have hSecondRat : (0 : ℚ) ≤ a.order (1 : Fin (tail + 2)) := by
+      exact_mod_cast hSecond
+    linarith
+  have hAlphaTop :
+      (1 : WithTop ℚ) < a.alpha (0 : Fin (tail + 1)) := by
+    unfold alpha
+    rw [Finset.lt_min'_iff]
+    intro x hx
+    simp only [alphaCandidates, Finset.mem_insert, Finset.mem_union,
+      Finset.mem_image, Finset.mem_filter, Finset.mem_univ, true_and] at hx
+    rcases hx with hhalf | hleft | hright
+    · rw [hhalf]
+      unfold halfGapCandidate
+      exact_mod_cast hHalfRat
+    · rcases hleft with ⟨j, hji, rfl⟩
+      have hj : j = (0 : Fin (tail + 1)) := by
+        apply Fin.ext
+        change j.val ≤ (0 : Fin (tail + 1)).val at hji
+        exact Nat.eq_zero_of_le_zero hji
+      subst j
+      unfold leftDefectCandidate
+      have hDiff :
+          (0 : WithTop ℚ) ≤
+            (((a.order (1 : Fin (tail + 2)) -
+              a.order (0 : Fin (tail + 2)) : Int) : ℚ) : WithTop ℚ) := by
+        exact_mod_cast (sub_nonneg.mpr (by simpa only [hFirst] using hSecond))
+      exact (hAdjacent 0).trans_le (le_add_of_nonneg_left hDiff)
+    · rcases hright with ⟨j, _hij, rfl⟩
+      unfold rightDefectCandidate
+      have hNext : 0 ≤ a.order j.succ := hNonnegative j.succ
+      have hDiff :
+          (0 : WithTop ℚ) ≤
+            (((a.order j.succ -
+              a.order (0 : Fin (tail + 2)) : Int) : ℚ) : WithTop ℚ) := by
+        exact_mod_cast (sub_nonneg.mpr (by simpa only [hFirst] using hNext))
+      exact (hAdjacent j).trans_le (le_add_of_nonneg_left hDiff)
+  rw [← a.coe_alphaValue] at hAlphaTop
+  exact_mod_cast hAlphaTop
 
 private theorem contradiction_of_adjacent_witness {m : Nat}
     (a : GoodBONG q L (m + 1))
@@ -254,6 +356,58 @@ theorem he2022ClassicTheorem15
     obtain ⟨j, hj⟩ := hZeroBranch.2
       ⟨he, hOrderN1, hOrderN2, hPrefix⟩
     exact a.contradiction_of_adjacent_witness hAdjacent hNonnegative j hj
+
+/-- He (2024), Theorem 1.5 at the published unary boundary `n = 1`.
+The source rank condition is retained as `4 ≤ tail + 2`, although the
+contradiction only uses the first alpha invariant and the adjacent defects. -/
+theorem he2022ClassicTheorem15_unary
+    {tail : Nat} (a : GoodBONG q L (tail + 2))
+    (hRank : 4 ≤ tail + 2)
+    (hClassic : Lattice.IsClassicIntegral q L)
+    (hUniversal : Lattice.IsClassicNUniversal.{u, v, u} q L 1)
+    (hUnsigned : ∀ j : Fin (tail + 1),
+      (1 : WithTop ℚ) < a.heClassicUnsignedAdjacentDefect j) :
+    ramificationIndex K = 1 := by
+  by_contra heNe
+  have he : 1 < ramificationIndex K := by
+    have hePos := ramificationIndex_pos (K := K)
+    omega
+  have hScalarUniversal : Lattice.IsUniversal q L :=
+    classicOneUniversal_isUniversal hUniversal
+  have hConditions : a.UniversalTheorem21Conditions :=
+    (a.isUniversal_iff_universalTheorem21Conditions
+      hClassic.isIntegral).mp hScalarUniversal
+  have hFirst : a.order (0 : Fin (tail + 2)) = 0 := hConditions.1
+  have hNonnegative : ∀ i : Fin (tail + 2), 0 ≤ a.order i :=
+    a.allOrders_nonnegative (by omega) hClassic hFirst
+  have hAdjacent : ∀ j : Fin (tail + 1),
+      (1 : WithTop ℚ) < a.adjacentDefect j :=
+    a.adjacentDefect_gt_one_of_unsigned he hUnsigned
+  have hAlphaGt : 1 < a.alphaValue (0 : Fin (tail + 1)) :=
+    a.one_lt_firstAlpha_of_unsigned he hFirst hNonnegative hAdjacent
+  have hAlphaLe : a.alphaValue (0 : Fin (tail + 1)) ≤ 1 := by
+    rcases hConditions.2 with hI | hII
+    · rw [hI.alphaOne]
+      norm_num
+    · rw [hII.alphaOne]
+  exact (not_lt_of_ge hAlphaLe hAlphaGt).elim
+
+/-- He (2024), Theorem 1.5 in its complete local rank range `n ≥ 1`.
+The conclusion is the local equality `e_p = 1`; the number-field
+unramifiedness consequence is kept for the global layer. -/
+theorem he2022ClassicTheorem15_allRanks
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {tail n : Nat} (a : GoodBONG q L (tail + 2))
+    (hn : 1 ≤ n) (hRank : n + 3 ≤ tail + 2)
+    (hClassic : Lattice.IsClassicIntegral q L)
+    (hUniversal : Lattice.IsClassicNUniversal.{u, v, u} q L n)
+    (hUnsigned : ∀ j : Fin (tail + 1),
+      (1 : WithTop ℚ) < a.heClassicUnsignedAdjacentDefect j) :
+    ramificationIndex K = 1 := by
+  rcases hn.eq_or_lt with rfl | hnTwo
+  · exact a.he2022ClassicTheorem15_unary hRank hClassic hUniversal hUnsigned
+  · exact a.he2022ClassicTheorem15 hnTwo hRank hClassic hUniversal hUnsigned
 
 end BONG.GoodBONG
 

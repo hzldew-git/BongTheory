@@ -206,6 +206,8 @@ import Bong.Papers.He2022Classic
 #check Bong.BONG.GoodBONG.he2022ClassicLemma62
 #check Bong.BONG.GoodBONG.he2022ClassicTheorem11
 #check Bong.BONG.GoodBONG.he2022ClassicTheorem15
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem15_unary
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks
 #check Bong.BONG.GoodBONG.he2022ClassicCorollary63_even
 #check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails
 #check Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_ambientlyUniversal
@@ -220,6 +222,8 @@ import Bong.Papers.He2022Classic
 #print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem51
 #print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem11
 #print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15_unary
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks
 #print axioms Bong.BONG.GoodBONG.he2022ClassicCorollary63_even
 #print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails
 #print axioms Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_classicUniversal_of_lowerJ2

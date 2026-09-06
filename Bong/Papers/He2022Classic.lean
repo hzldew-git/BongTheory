@@ -68,11 +68,14 @@ one-rank descent for classic universality, while sufficiency reconstructs all
 four revised Beli representation conditions.  The
 literal finite `C_e^n` indices, all three cardinality formulas of Proposition
 2.8(ii), and classic integrality of every indexed row are also proved.  The
-complete Theorem 1.1 criterion, Theorem 1.5, the published even branch of
+complete Theorem 1.1 criterion, the full local rank range of Theorem 1.5,
+the published even branch of
 Corollary 6.3, Section 7 ambient exhaustion, and the even-rank half of Lemma
 7.4 for the literal finite testing table are included as checked endpoints.
 
-The publisher's Lemma 7.1(ii) is not asserted: it is false when the
+The global all-dyadic-primes and discriminant conclusion of Theorem 1.5
+belongs to a future number-field localization layer.  The publisher's Lemma
+7.1(ii) is not asserted: it is false when the
 ramification index is greater than one.  The canonical entry instead exports
 a kernel-checked counterexample and a corrected odd-rank Section 7 endpoint
 whose missing lower-even `J2_E` premise is explicit.  Consequently this module

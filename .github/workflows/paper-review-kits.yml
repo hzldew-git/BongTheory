@@ -102,7 +102,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
-      LEAN_NUM_THREADS: '4'
+      LEAN_NUM_THREADS: '1'
 
     steps:
       - name: Check out the exact revision
@@ -145,7 +145,7 @@ jobs:
           build: true
           lake-package-directory: ${{ runner.temp }}/review-extract-${{ matrix.paper }}
           use-github-cache: true
-          use-mathlib-cache: false
+          use-mathlib-cache: true
 
       - name: Run every audit listed by the paper manifest
         shell: pwsh

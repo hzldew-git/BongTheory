@@ -10,7 +10,10 @@ param(
 
     [switch] $AllowDirtyKit,
 
-    [string] $LogDirectory = ''
+    [string] $LogDirectory = '',
+
+    [ValidateRange(1, 64)]
+    [int] $LeanThreads = 1
 )
 
 $ErrorActionPreference = 'Stop'
@@ -142,10 +145,17 @@ if (-not $LogDirectory) {
 $LogDirectory = [IO.Path]::GetFullPath($LogDirectory)
 [void] (New-Item -ItemType Directory -Path $LogDirectory -Force)
 
+$previousLeanNumThreads = [Environment]::GetEnvironmentVariable(
+    'LEAN_NUM_THREADS',
+    [EnvironmentVariableTarget]::Process
+)
+$env:LEAN_NUM_THREADS = [string] $LeanThreads
 Push-Location $ExtractionDirectory
 try {
-    & $lake build
+    $buildLogPath = Join-Path $LogDirectory 'lake-build.log'
+    & $lake build *> $buildLogPath
     if ($LASTEXITCODE -ne 0) {
+        Get-Content -LiteralPath $buildLogPath -Tail 200
         throw "Review Kit Lake build failed with exit code $LASTEXITCODE."
     }
     foreach ($auditModule in @($manifest.formalization.auditModules)) {
@@ -163,6 +173,11 @@ try {
     }
 } finally {
     Pop-Location
+    if ($null -eq $previousLeanNumThreads) {
+        Remove-Item Env:LEAN_NUM_THREADS -ErrorAction SilentlyContinue
+    } else {
+        $env:LEAN_NUM_THREADS = $previousLeanNumThreads
+    }
 }
 
 [pscustomobject]@{
@@ -172,6 +187,8 @@ try {
     verifiedFileCount = $listed.Count
     structure = 'verified'
     build = 'passed'
+    leanThreads = $LeanThreads
+    buildLog = $buildLogPath
     audits = @($manifest.formalization.auditModules)
     enforcingAxiomGate = $manifest.formalization.enforcingAxiomGate
     logDirectory = $LogDirectory
