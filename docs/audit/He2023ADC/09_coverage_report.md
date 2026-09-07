@@ -16,10 +16,11 @@ counted as a concrete arithmetic implementation.
   reductions with explicit arithmetic premises.
 - Section 3 has direct endpoints for all six numbered items.
 - Section 4 contains the dyadic space and maximal tables, representation
-  reductions, rank-at-least-two minimal testing sets, all thirteen published
-  `W/N` branches of Lemmas 4.11--4.12, full Proposition 4.13, and the dyadic
-  parts of Lemma 4.14 and Propositions 4.15--4.16. Non-dyadic cases and unary
-  testing-set minimality remain open.
+  reductions, literal minimal testing sets in every rank `n>=1`, all thirteen
+  published `W/N` branches of Lemmas 4.11--4.12, full Proposition 4.13, and
+  the dyadic parts of Lemma 4.14 and Propositions 4.15--4.16. The unary table,
+  exhaustion, exact excluding ternary witness, and count are closed in report
+  50. Non-dyadic cases remain open.
 - Every numbered Section 5 deduction, including all four clauses of Lemma
   5.3 and Theorem 5.1, is proved from the explicit non-dyadic
   `SectionFiveLaws` package. A concrete lattice/Jordan instance of that
@@ -63,7 +64,7 @@ route that exhausts both exceptions.
 
 The main unresolved mathematical work is:
 
-- a concrete unrestricted Lemma 2.2 and remaining Section 4/unary cases;
+- a concrete unrestricted Lemma 2.2 and the non-dyadic Section 4 cases;
 - a concrete non-dyadic instance of `SectionFiveLaws`;
 - concrete number-field instances of `SectionEightLaws` and the earlier
   global reduction packages;

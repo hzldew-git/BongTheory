@@ -425,3 +425,19 @@ This closes local independent-extraction reproducibility for the exact
 commits, GitHub-hosted CI or artifact upload, a tagged release, the remaining
 mathematical scope, or human semantic sign-off. See Report 49 for the fixed
 receipt.
+
+## Unary table local checkpoint
+
+At exact code revision `da6fbd41a4dc0323380b1013283bd20f9fa6b729`,
+`He2023ADCUnaryTesting.lean`, `Bong.Papers.He2023ADC`, and
+`BongTest.He2023ADCAudit` compile directly with Lean 4.32.1. The paper entry
+completed 5,032 build jobs. Six selected unary dependency reports contain
+exactly `propext`, `Classical.choice`, and `Quot.sound`; the focused
+transitive gate reports `AXIOM_GATE_PASS: 60154 declarations checked`.
+The scoped forbidden-token scan, 100-column check, and `git diff --check`
+pass, with 2,755 tracked Lean sources at this checkpoint.
+
+This evidence is local and exact-revision, but it postdates the clean kit at
+`85772de`. A fresh Review Kit, GitHub CI artifact, permanent release, and
+human semantic approval for this checkpoint remain pending. Report 50 records
+the source correspondence and trust boundary.

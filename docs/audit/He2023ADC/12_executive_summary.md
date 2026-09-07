@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`f7e8fb7e1b8d43b66a62e500f61f7eeba004f136`.
+`da6fbd41a4dc0323380b1013283bd20f9fa6b729`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -209,6 +209,13 @@ the same O'Meara 63:9 input, `8(N p)^e+2`. The printed two-way
 classification and `+1` count are frozen and formally refuted rather than
 silently replaced.
 
+Report 50 closes the dyadic unary boundary of Section 4. The finite
+`N_1^1(c)` family is proved complete and irredundant; `W_2^3(c)` is the
+unique excluding ternary space and supplies literal deletion-minimality in
+Lemma 4.9(ii). The exact count `2|U|` is unconditional. Its printed
+`4(N p)^e` form retains O'Meara 63:9 as an explicit premise. The 5,032-job
+paper build, expanded audit, and 60,154-declaration focused gate pass locally.
+
 Semantic status: one omitted binary class affects four printed statements
 (Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
 has a separate quantifier mismatch, and the proof of Theorem 7.1 is
@@ -223,7 +230,8 @@ The later additions through Reports 47--48 now have an exact local clean-kit
 receipt at 85772de. A freshly extracted source kit completed all 5,047 build
 jobs, the three He ADC audit entries, and the 60,152-declaration enforcing
 gate; its archive SHA-256 is fixed in Report 49. This is local independent
-extraction evidence, not GitHub CI or a permanent release. The monolithic run
+extraction evidence, not GitHub CI or a permanent release. The later unary
+commit has exact local evidence but is not covered by that kit. The monolithic run
 33942437720 hit its six-hour timeout; the separate paper-kit run passed for
 all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

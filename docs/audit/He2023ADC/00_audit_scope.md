@@ -6,8 +6,8 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `f7e8fb7e1b8d43b66a62e500f61f7eeba004f136`,
-branch `feat/he-formalization`, Lean 4.32.1, audited on 6 September 2026
+The current audited code checkpoint is `da6fbd41a4dc0323380b1013283bd20f9fa6b729`,
+branch `feat/he-formalization`, Lean 4.32.1, audited on 7 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
 complete Proposition 4.13 is audited in `15_odd_maximal_structure_checkpoint.md`.
@@ -70,6 +70,10 @@ Report 48 propagates the binary boundary audit to Theorems 1.9(ii) and 1.10,
 constructs a complete irredundant rank-four catalogue, and proves that the
 printed `+1` count must be replaced by `+2` under the paper's own counting
 input.
+Report 49 records the independently extracted clean Review Kit receipt through
+Reports 47--48 at `85772de`. Report 50 closes the later dyadic unary table,
+classification, count, and rank-one minimality boundary at `da6fbd4`; this
+later checkpoint has exact local evidence but is not contained in that kit.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
@@ -80,7 +84,8 @@ Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, full Lemmas 7.14--7.15,
 Definition 7.16, Remark 7.17, full Lemmas 7.18--7.20, and the corrected
 Lemma 7.13 consequence, together with complete Theorem 7.2 and Remark 7.3,
 and the Corollary 7.21 catalogue and conditional numerical wrapper, listed in
-`05_theorem_correspondence.md`. The Section 5 and Section 8 deductions are
+`05_theorem_correspondence.md`. The dyadic unary table and the rank-one case
+of Lemma 4.9(ii) are also complete. The Section 5 and Section 8 deductions are
 also proved over explicit law packages. The global predicates and logical
 reductions are in scope, with their non-dyadic and arithmetic premises still
 undischarged. This audit does not certify those concrete instances or the

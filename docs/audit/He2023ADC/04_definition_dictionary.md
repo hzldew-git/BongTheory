@@ -13,6 +13,9 @@
 | alternating orders followed by a table tail | `heADCMaximalOrderProfile` |
 | arbitrary-lattice equivalence on a specified table space | `GoodBONG.HeADCMaximalProfileCriterion` |
 | unary `W_1^1(c)` and its maximal lattice | `heADCW1Unary`, `heADCN1Unary` |
+| finite published unary table | `HeADC2025PublishedUnaryTestingIndex`, `HeADC2025PublishedUnaryTestingIndex.model` |
+| minimal testing set in Lemma 4.9(ii) | `QuadraticLatticeModel.IsLiteralMinimalUniversalityTestingFamily` |
+| unary unique excluding space `W_2^3(c)` | `QuadraticLatticeModel.heADC2025Proposition42iiiUnary` |
 | finite integral defect index `d(c)` in the nonexceptional unit rows | integer cast of `(quadraticDefect K c).toNat`, with finiteness proved from `HeHuSharpDomain` |
 | signed even n-prefix in Lemma 6.4, n=2k+2 | `(-1 : Kˣ) ^ (k+1) * a.prefixProduct (2*k+2)` |
 | raw defect in Lemma 6.4(i)(iv) | `Dyadic.quadraticDefect K`, valued in extended naturals with infinity retained |

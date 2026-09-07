@@ -9,6 +9,7 @@
 | Dyadic Theorem 1.4(i), stable-rank equivalence | PASS; concrete ambient theorem used |
 | Direct Section 3 endpoints | PASS for the listed types; semantic and boundary audit provisional |
 | Dyadic Section 4 space/table/representation interfaces | PARTIAL; exact scopes listed in correspondence |
+| Unary Definition 4.1, Proposition 4.2, Remark 4.3, and Lemma 4.9(ii) | PASS local kernel at da6fbd4: finite table exhaustion and irredundancy, unique excluding `W_2^3(c)`, literal deletion-minimality, unconditional `2|U|` count, six standard-only reports, and 60,154-declaration gate; printed count remains conditional on O'Meara 63:9; report 50 |
 | Remark 4.10 and ten model-profile criteria for Lemmas 4.11--4.12 | PASS kernel and axiom checks; source-model correspondence review provisional |
 | Thirteen published-family branches of Lemmas 4.11--4.12 | PASS kernel and axiom checks; `W/N` transport and arithmetic side conditions proved; human approval pending |
 | Proposition 4.13 | PASS all three clauses and independent AI review; human approval pending |
@@ -24,7 +25,7 @@
 | Theorem 1.3 and global parts of 1.4 | Conditional logical reductions; arithmetic premises undischarged |
 | Section 5 numbered logic | CONDITIONAL PASS at d447cd3: Theorem 5.1 and Lemmas 5.2--5.4 follow from explicit `SectionFiveLaws`; concrete non-dyadic Jordan/lattice instance pending; report 47 |
 | Section 8 numbered logic and Theorems 1.5, 1.7 | CONDITIONAL PASS at d447cd3: every deduction follows from explicit `SectionEightLaws`; concrete number-field and Meyer--Xu--O'Meara instances pending; report 47 |
-| Unrestricted Lemma 2.2, remaining Section 4/unary cases, printed-strength Lemma 7.13, and O'Meara 63:9 counting law | FAIL / pending |
+| Unrestricted Lemma 2.2, non-dyadic Section 4 cases, printed-strength Lemma 7.13, and O'Meara 63:9 counting law | FAIL / pending; dyadic unary boundary is no longer included here |
 | Remaining main theorems and enumeration | FAIL / pending |
 | Clean Review Kit containing published profiles | PASS at merge-test commit `6bf3bdf8bd272109e898335683f05bb76664330c`, tree identical to `db03985`; logs inspected |
 | Clean Review Kit including Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 | PASS at f6f7485/c82668b, run 33942437722; 1934 payload hashes, 4963 build jobs, enforcing gate on 57,480 declarations |
@@ -60,6 +61,7 @@
 | Theorem 1.10, exact published binary count | `SEMANTIC_MISMATCH`; printed `8(N p)^e+1` is refuted and corrected to `8(N p)^e+2` relative to the same counting law at f7e8fb7; report 48 |
 | Section 7 mechanical gate | PASS local through bd0c9a3: seven selected Corollary 7.21 endpoints are standard-only; 59,853-declaration focused gate, 2,742-source scanner, scoped 100-column and diff checks |
 | Exact clean Review Kit through Reports 47--48 | PASS locally at clean checkpoint 85772de: archive hash fixed, 2,038 payload hashes verified after extraction, 5,047-job full build, three He ADC audit entries and 60,152-declaration enforcing gate pass; Report 49; GitHub upload is separate |
+| Exact clean Review Kit containing the unary checkpoint | PENDING; da6fbd4 has exact local build/audit/gate evidence but postdates the 85772de kit |
 | Remaining Section 7 issue | FAIL / source mismatch: printed-strength Lemma 7.13; the proof-supported disjunction is formalized |
 | Independent semantic sign-off | FAIL / pending |
 

@@ -14,6 +14,9 @@ Additional concrete declaration groups are:
   condition-(iii) sum of capped defects; report 20 distinguishes packages.
 - `He2023ADCSectionFour`: space tables, representation lemmas, maximal table,
   and rank-at-least-two literal minimal testing sets.
+- `He2023ADCUnaryTesting`: the finite rank-one table, ambient-isometry
+  exhaustion and irredundancy, the exact `W_2^3(c)` excluding witness,
+  literal deletion-minimality, and unconditional and published-form counts.
 - `OMaximalVolume`: maximality and isometry characterized by volume order.
 - `He2023ADCMaximalProfiles`: Remark 4.10 and ten canonical-model branches of
   the arbitrary-lattice criteria in Lemmas 4.11--4.12.

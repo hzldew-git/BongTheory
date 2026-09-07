@@ -170,5 +170,14 @@ really proves pairwise nonisometry. They should separately verify that
 O'Meara 63:9 gives `|U|=2(N p)^e` under the repository's normalization. That
 last identity remains an explicit premise of the numerical endpoint.
 
+Report 50 adds the unary table card. Reviewers should confirm that rank one
+has only the `N_1^1(c)` column; that the normalized parameters `delta` and
+`delta*pi` exhaust and irredundantly represent all unary square classes; and
+that the exact excluding space is `W_2^3(c)`. They should check that deleting
+any one row leaves an integral ternary witness which represents every other
+row but not the deleted row. Finally, the unconditional table count `2|U|`
+must be kept separate from the printed `4(N p)^e`, whose conversion uses the
+cited O'Meara 63:9 identity.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

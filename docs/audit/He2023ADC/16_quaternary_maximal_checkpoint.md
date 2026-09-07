@@ -111,6 +111,7 @@ does not contain this module. Its successful CI must not be attributed to
 the new proposition. Exact-revision clean-kit CI is still required.
 
 This closes only the dyadic Proposition 4.16 gap recorded at report 15's
-earlier checkpoint. Non-dyadic results, unary testing, ADC classifications,
+earlier checkpoint. Non-dyadic results, unary testing (later closed in report
+50), ADC classifications,
 concrete global arithmetic, enumeration, and human review remain outside
 this sub-result. Whole-paper grade: C. Whole-paper verdict: `NOT_COMPLETE`.

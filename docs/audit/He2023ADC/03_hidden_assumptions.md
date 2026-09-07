@@ -20,6 +20,13 @@ undischarged `GoodBONGClassificationLaws` parameter: they use the checked
 Beli classification proof. Ordinary field, integrality, unit, defect, and
 rank hypotheses remain part of the mathematical statements.
 
+The unary table is indexed by a finite complete and irredundant unit
+square-class representative system. Completeness and irredundancy are used
+as mathematical hypotheses, not hidden axioms. The exact count `2 * |U|` is
+unconditional once that index is chosen. Only the conversion to the printed
+`4 * (N p)^e` uses the explicit `HeADC2025Corollary721CountingLaw`, recording
+the cited O'Meara 63:9 input. See report 50.
+
 The publisher's standing convention on page 986 assumes integrality for
 all subsequent lattices. Thus the explicit integrality premise of the new
 published-family criteria does not narrow Lemmas 4.11--4.12. Nonexceptional

@@ -261,3 +261,13 @@ standalone enforcing gate passed. The gate checked 60,152 declarations and
 reported only the allowed dependency policy. Report 49 records the archive
 hash and exact commands. This is not GitHub CI, a release, or human semantic
 approval.
+
+At checkpoint `da6fbd41a4dc0323380b1013283bd20f9fa6b729`, the unary
+testing module, canonical paper entry, and expanded audit compile directly
+with Lean 4.32.1. The six selected unary dependency reports contain exactly
+`propext`, `Classical.choice`, and `Quot.sound`. The focused transitive gate
+reports `AXIOM_GATE_PASS: 60154 declarations checked`. The O'Meara 63:9
+cardinality is an explicit proposition-valued premise only in the published
+numerical count; it is neither a Lean axiom nor a proved generic instance.
+Report 50 separates this exact local evidence from a later clean Review Kit,
+GitHub CI, and unsigned human semantic review.

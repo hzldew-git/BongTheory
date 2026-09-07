@@ -30,6 +30,15 @@ parameters but narrower in their field scope than the published wording.
 The correspondence table records these distinctions. No statement-strength
 claim is made for the unproved ADC classification or enumeration.
 
+At `da6fbd4`, the unary table endpoints are `LOGICALLY_EQUIVALENT` to the
+rank-one parts of Definition 4.1, Proposition 4.2, and Lemma 4.9(ii) after
+restricting to the standing dyadic context. The minimality theorem is not
+weakened to pairwise nonisometry: it supplies an integral rank-three witness
+after deleting each table row. The unconditional cardinality is `2|U|`.
+The printed `4(N p)^e` form is a `PROVISIONAL_MATCH` relative to the explicit
+O'Meara 63:9 counting premise, not an unconditional repository theorem.
+See report 50.
+
 Proposition 4.16 is fully proved after restricting the field to the dyadic
 context. The exception is a biconditional, not only a sufficient condition
 away from one named lattice. Anisotropy proves actual non-representation in

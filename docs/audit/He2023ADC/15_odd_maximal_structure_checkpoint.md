@@ -98,7 +98,8 @@ successful remote profile-kit build, so that older artifact cannot certify
 the new proposition. Exact-commit clean-kit CI remains pending.
 
 This result closes the Proposition 4.13 gap recorded at the earlier report 14
-checkpoint. Proposition 4.16, unary testing, non-dyadic results, ADC
-classifications, concrete global arithmetic, and human review remain outside
+checkpoint. Proposition 4.16, unary testing (later closed in report 50),
+non-dyadic results, ADC classifications, concrete global arithmetic, and
+human review remain outside
 this completed sub-result. The whole ADC project remains Grade C and
 `NOT_COMPLETE`.

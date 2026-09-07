@@ -117,6 +117,13 @@ complete and irredundant rank-four 2-ADC catalogue with two nonmaximal
 classes, formally refutes the printed binary Theorem 1.9(ii) and Theorem
 1.10 count, and proves the corrected `8(N p)^e+2` formula relative to the
 same visible O'Meara 63:9 law. Selected dependency reports are standard-only.
+Unary table checkpoint:
+`da6fbd41a4dc0323380b1013283bd20f9fa6b729`. Report 50 proves the finite
+rank-one table's completeness and irredundancy, Proposition 4.2(iii)'s exact
+excluding ternary space, literal deletion-minimality in Lemma 4.9(ii), and
+the unconditional `2|U|` count. The printed `4(N p)^e` form retains the
+O'Meara premise. Six selected reports are standard-only and the focused gate
+checks 60,154 declarations.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -133,9 +140,11 @@ classifications, enumeration, or omitted boundary cases.
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
-through full Lemma 6.7. The later developments through f7e8fb7 have
-passed direct local checks; they still require exact-revision clean-kit CI. Exact
-commit distinctions are in report 11. Overall project grade: D because one
+through full Lemma 6.7. The exact locally extracted kit at 85772de covers
+the later developments through Reports 47--48 and passes its full build,
+audits, and enforcing gate. The unary checkpoint postdates that kit and has
+only exact local evidence. Exact commit distinctions are in report 11.
+Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper
 completion: not achieved.

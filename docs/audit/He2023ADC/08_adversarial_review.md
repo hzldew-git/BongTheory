@@ -137,9 +137,9 @@ undischarged auxiliary-unit or project-law premises. It recommends
 `FULLY_FORMALIZED` coverage for these two lemmas with `PROVISIONAL_MATCH`
 semantics pending human confirmation. Its scope is recorded in report 14.
 
-Other open checks include the rank-one portion of Lemma 4.9(ii) and the
-remaining small-rank clauses of Section 3. This AI review is not human
-author or expert sign-off, and did not perform a clean-environment build.
+The rank-one portion of Lemma 4.9(ii) is closed by report 50. Remaining
+small-rank and unrestricted-field checks stay separately listed. This AI
+review is not human author or expert sign-off.
 
 The downstream audit of Theorem 7.1 found that its published statement is
 not refuted by the Theorem 6.2 counterexample, but its printed proof is
@@ -233,3 +233,13 @@ lower row. The resulting `(4e+3)|U|` and `(4e-1)|U|` counts are unconditional.
 The final substitution `|U|=2(N p)^e` remains visibly conditional on the
 cited O'Meara 63:9 law; a standard-only axiom report does not prove that
 premise. Lemma 7.13's independent source mismatch is unchanged.
+
+Report 50 audits the unary boundary directly against Definition 4.1,
+Proposition 4.2, Remark 4.3, and Lemma 4.9(ii). It checks that there is no
+second unary column, that every rank-one ambient space is represented exactly
+once by the finite normalized parameter family, and that `W_2^3(c)` is the
+actual excluding witness. The deletion theorem quantifies over every index
+and supplies an integral witness representing all other rows. The exact
+`2|U|` count is unconditional; only the publisher's `4(N p)^e` conversion
+uses the disclosed O'Meara premise. The local kernel and transitive axiom
+checks pass, while clean-kit CI and human review remain pending.
