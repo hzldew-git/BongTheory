@@ -588,7 +588,7 @@ private theorem oddGeneral_parametersSquare_of_represents {pairs : Nat}
   rw [heq] at hquot
   exact hquot
 
-private theorem diagonalRepresents_of_heHuOMaximalModel_ambientlyIsometric
+theorem diagonalRepresents_of_heHuOMaximalModel_ambientlyIsometric
     {n : Nat} (a b : Fin n -> Kˣ)
     (h : (heHuOMaximalModel a).IsAmbientlyIsometric
       (heHuOMaximalModel b)) :
@@ -607,7 +607,7 @@ private theorem diagonalRepresents_of_heHuOMaximalModel_ambientlyIsometric
     exact ⟨f.toRepresentation⟩
   exact (heHuOMaximalModel_represents_iff b a).mp hBA
 
-private theorem publishedParameter_eq_of_square
+theorem publishedParameter_eq_of_square
     {I : Type u} [Fintype I] (U : I -> Kˣ)
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     {p q : HeHuPublishedSquareClassIndex I}

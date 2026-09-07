@@ -56,6 +56,7 @@ import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
 import Bong.Bong.He2023ADCSectionFive
+import Bong.Bong.He2023ADCUnaryTesting
 
 /-!
 # He: n-ADC integral quadratic lattices
@@ -66,7 +67,10 @@ integral quadratic lattices over algebraic number fields*, Doc. Math. 30
 semantic authority.
 
 The present layer covers the local dyadic specialization of Definition 1.1,
-Lemma 2.1, Sections 3--4, the corrected local classifications in Theorems
+Lemma 2.1, and Sections 3--4.  In particular, the rank-one table in
+Definition 4.1, Proposition 4.2 and Remark 4.3, together with its literal
+deletion-minimality in Lemma 4.9(ii), is included.  It also covers the
+corrected local classifications in Theorems
 6.2 and 7.1, and the odd-rank characterization in Theorem 7.4 together with
 the complete proof chain through Lemmas 7.5--7.10 and 7.12, the
 complete normalized two-row form of Lemma 7.11, the corrected quantifier

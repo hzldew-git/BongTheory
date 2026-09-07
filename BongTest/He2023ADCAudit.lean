@@ -92,6 +92,16 @@ import Bong.Papers.He2023ADC
 #check Bong.heADC2025Remark43EvenCardZero
 #check Bong.heADC2025Remark43OddMaximal
 #check Bong.heADC2025Remark43EvenMaximal
+#check Bong.HeADC2025PublishedUnaryTestingIndex
+#check Bong.HeADC2025PublishedUnaryTestingIndex.model
+#check Bong.HeADC2025PublishedUnaryTestingIndex.model_rank
+#check Bong.HeADC2025PublishedUnaryTestingIndex.model_isOMaximal
+#check Bong.Lattice.QuadraticLatticeModel.exists_heADC2025PublishedUnaryIndex_for_model
+#check Bong.Lattice.QuadraticLatticeModel.heADC2025PublishedUnary_model_eq_of_ambientlyIsometric
+#check Bong.Lattice.QuadraticLatticeModel.heADC2025Proposition42iiiUnary
+#check Bong.Lattice.QuadraticLatticeModel.heADC2025Lemma49iiUnary
+#check Bong.heADC2025Remark43UnaryCard
+#check Bong.heADC2025Remark43UnaryCardPublished
 #check Bong.heADC2025Lemma44iOdd
 #check Bong.heADC2025Lemma44iEven
 #check Bong.heADC2025Lemma44ii
@@ -164,6 +174,13 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.heADC2025Lemma49OddSecondUnitUniformizer
 #print axioms Bong.heADC2025Lemma49iiEven
 #print axioms Bong.heADC2025Lemma49iiOdd
+#print axioms Bong.Lattice.QuadraticLatticeModel.exists_heADC2025PublishedUnaryIndex_for_model
+#print axioms
+  Bong.Lattice.QuadraticLatticeModel.heADC2025PublishedUnary_model_eq_of_ambientlyIsometric
+#print axioms Bong.Lattice.QuadraticLatticeModel.heADC2025Proposition42iiiUnary
+#print axioms Bong.Lattice.QuadraticLatticeModel.heADC2025Lemma49iiUnary
+#print axioms Bong.heADC2025Remark43UnaryCard
+#print axioms Bong.heADC2025Remark43UnaryCardPublished
 #print axioms Bong.Lattice.isOMaximal_iff_volumeOrder_eq_of_ambientlyIsometric
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark410
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iOne
