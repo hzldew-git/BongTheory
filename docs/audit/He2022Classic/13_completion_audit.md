@@ -14,6 +14,7 @@
 | Lemma 7.7 | PASS: all boundary indices, stable ranges, and both literal C columns checked |
 | Lemma 7.10 | PASS: clauses (i)--(iii), every exceptional row, and the literal finite-index bridge checked |
 | Lemma 7.11 | PASS: every literal odd-table row has a checked deletion witness; this does not assert odd testing sufficiency |
+| Proposition 2.8 published rows | PASS: every literal even and odd table model is classic integral and classic-maximal by an explicit volume-order calculation; Report 19 |
 | Literal Lemma 7.1(ii) | REFUTED for e > 1; source resolution required |
 | Theorem 1.3 explicit list and minimality | PARTIAL: even testing equivalence and literal minimality pass; odd deletion passes, but odd testing sufficiency/full minimality and unconditional numerical counting remain |
 | Global main theorems | FAIL / pending |

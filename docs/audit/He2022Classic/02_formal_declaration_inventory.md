@@ -31,6 +31,12 @@ The proposition-valued definition remains separate from its proof:
 - `Bong.BONG.GoodBONG.he2022ClassicCorollary63_even`: even branch only.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
   testing equivalence.
+- `Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one`: a generic proved
+  maximality criterion for classic integral lattices of volume order at most
+  one.
+- `HeClassicPublishedEvenTestingIndex.model_isClassicMaximal` and
+  `HeClassicPublishedOddTestingIndex.model_isClassicMaximal`: every literal
+  published table row is classic-maximal in its own ambient space.
 - `Bong.BONG.GoodBONG.he2022ClassicLemma77_boundary_conditions` and the two
   bundled representation endpoints: the published boundary and stable-range
   proof for `P2(Delta)` against both `C` columns.

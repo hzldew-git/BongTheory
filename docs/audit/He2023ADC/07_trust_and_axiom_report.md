@@ -252,3 +252,12 @@ contain exactly `propext`, `Classical.choice`, and `Quot.sound`. The
 O'Meara 63:9 cardinality remains an explicit structure hypothesis, not a Lean
 axiom or a proved instance. Exact-revision clean Review Kit CI remains
 pending at this checkpoint. See report 48.
+
+The exact clean Review Kit generated from
+`85772de61f14c11e08523130332aeddbe3371a9c` closes that local mechanical
+reservation through Reports 47--48. A fresh full extraction completed all
+5,047 build jobs, and each of the three He ADC audit entries plus the
+standalone enforcing gate passed. The gate checked 60,152 declarations and
+reported only the allowed dependency policy. Report 49 records the archive
+hash and exact commands. This is not GitHub CI, a release, or human semantic
+approval.

@@ -15,6 +15,10 @@ Coverage status:
   Corollary 7.2 chain cannot be promoted through the false Lemma 7.1(ii).
 - Definitions: classic integrality, maximality, universality, and the finite
   testing models are present. Human semantic confirmation remains pending.
+- Proposition 2.8 table structure: every literal even and odd row is proved
+  classic integral and, by its explicit volume order zero or one,
+  classic-maximal in its ambient quadratic space. This does not classify all
+  classic-maximal lattices or prove odd testing sufficiency.
 - Testing classifications: Lemma 7.4's even equivalence, Lemma 7.7, every
   clause of Lemma 7.10, and a deletion witness for every literal even table
   index are checked. Thus Theorem 1.3(i) and the even part of (iii) are proved.

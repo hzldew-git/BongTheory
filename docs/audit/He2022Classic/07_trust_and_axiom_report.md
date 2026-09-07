@@ -37,3 +37,10 @@ Independent review distinguishes the generic proved instances
 `dyadicDiscriminantClassLawsProved` from the still-undischarged
 `HeClassicPublishedCountingLaws`. The latter is a mathematical premise of the
 displayed numerical-count formulas, even when their axiom sets are standard.
+
+At checkpoint `981f044`, the generic volume-order maximality theorem and both
+published-table maximality endpoints compile in the canonical Classic build
+and focused audit. Their selected transitive dependency reports contain
+exactly `propext`, `Classical.choice`, and `Quot.sound`. No classification or
+odd-testing premise is hidden in these endpoints; Report 19 records their
+scope.

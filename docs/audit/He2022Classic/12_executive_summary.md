@@ -2,7 +2,7 @@
 
 Paper: Zilong He, *On classic n-universal quadratic forms over dyadic local
 fields*, manuscripta math. 174 (2024), 559-595, publisher version of record.
-Code checkpoint: `404b410bc8381dd999b97374a33bdca5a3c0c07d`.
+Code checkpoint: `981f044`.
 Proof assistant: Lean 4.32.1. Review date: 2026-09-07.
 
 Theorem 1.1 now has a proof of both directions for n >= 2 and arbitrary source
@@ -16,6 +16,11 @@ Lemma 7.7, all clauses of Lemma 7.10, the finite-index nonisometry bridge, all
 exceptional `H` rows, and the unified row-by-row deletion theorem are checked.
 Lemma 7.11 now gives the corresponding row-by-row deletion witness for every
 literal odd-table index, independently of the odd sufficiency chain.
+Every literal model in both tables is also proved classic-maximal: its volume
+order is computed as zero or one and the generic volume-index argument rules
+out a proper classic integral over-lattice. This strengthens Proposition 2.8
+but supplies neither a classification of all classic-maximal lattices nor the
+missing odd testing implication.
 The literal Lemma 7.1(ii) disjunction has a kernel-checked refutation when
 e > 1, so it is neither assumed nor silently repaired. Odd testing sufficiency
 and therefore odd full minimality, unconditional numerical counting, and

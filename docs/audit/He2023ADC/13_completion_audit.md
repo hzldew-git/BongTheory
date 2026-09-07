@@ -59,6 +59,7 @@
 | Theorem 1.9(ii), exact published binary classification | `SEMANTIC_MISMATCH`; formal negation and corrected three-way biconditional pass at f7e8fb7; report 48 |
 | Theorem 1.10, exact published binary count | `SEMANTIC_MISMATCH`; printed `8(N p)^e+1` is refuted and corrected to `8(N p)^e+2` relative to the same counting law at f7e8fb7; report 48 |
 | Section 7 mechanical gate | PASS local through bd0c9a3: seven selected Corollary 7.21 endpoints are standard-only; 59,853-declaration focused gate, 2,742-source scanner, scoped 100-column and diff checks |
+| Exact clean Review Kit through Reports 47--48 | PASS locally at clean checkpoint 85772de: archive hash fixed, 2,038 payload hashes verified after extraction, 5,047-job full build, three He ADC audit entries and 60,152-declaration enforcing gate pass; Report 49; GitHub upload is separate |
 | Remaining Section 7 issue | FAIL / source mismatch: printed-strength Lemma 7.13; the proof-supported disjunction is formalized |
 | Independent semantic sign-off | FAIL / pending |
 

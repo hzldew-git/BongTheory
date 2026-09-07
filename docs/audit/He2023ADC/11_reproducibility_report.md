@@ -402,3 +402,26 @@ This remains local evidence until the independently extracted Review Kit for
 this exact revision passes GitHub CI. The numerical endpoints visibly retain
 the cited O'Meara 63:9 cardinality premise. Report 46 records the exact
 catalogue, row count, maximality partition, and trust boundary.
+
+## Exact clean Review Kit through Reports 47--48
+
+An exact clean source kit was generated from
+`85772de61f14c11e08523130332aeddbe3371a9c`. The archive
+`BongTheory-He2023ADC-ci-85772de61f14-review-kit.zip` has SHA-256
+`82ABDA3D74226EFB64C400A0B5049954EF858E90A7A2304F5B894DFDCE45021B`.
+Its metadata records a clean source tree, 1,969 tracked local Lean sources,
+and 2,039 packaged files. A structure-only extraction verified all 2,038
+payload hashes.
+
+In a separate fresh full extraction, dependency acquisition succeeded and
+`lake build` completed 5,047 jobs with Lean 4.32.1. The canonical He ADC
+audit, both concrete Q_2 boundary audits, and `PaperAxiomGate` were then rerun
+individually; all exited successfully. The enforcing gate reported
+`AXIOM_GATE_PASS: 60152 declarations checked` both during the full build and
+when rerun directly.
+
+This closes local independent-extraction reproducibility for the exact
+`85772de` checkpoint, including Reports 47--48. It does not cover later
+commits, GitHub-hosted CI or artifact upload, a tagged release, the remaining
+mathematical scope, or human semantic sign-off. See Report 49 for the fixed
+receipt.

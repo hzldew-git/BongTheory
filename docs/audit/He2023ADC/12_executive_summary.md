@@ -219,9 +219,13 @@ inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through f7e8fb7
-still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
-separate paper-kit run passed for all eight papers at f6f7485/c82668b.
+The later additions through Reports 47--48 now have an exact local clean-kit
+receipt at 85772de. A freshly extracted source kit completed all 5,047 build
+jobs, the three He ADC audit entries, and the 60,152-declaration enforcing
+gate; its archive SHA-256 is fixed in Report 49. This is local independent
+extraction evidence, not GitHub CI or a permanent release. The monolithic run
+33942437720 hit its six-hour timeout; the separate paper-kit run passed for
+all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification
 lemma. Whole-paper verdict:
 `NOT_COMPLETE`.
