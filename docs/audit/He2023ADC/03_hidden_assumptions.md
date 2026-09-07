@@ -176,3 +176,12 @@ irredundancy of the published non-dyadic rows, plus the equal-rank
 ADC-implies-maximal implication. Those are genuine undisclosed mathematical
 obligations until a concrete local-field instance is constructed. No count
 or Theorem 1.10 conclusion is a law field. See report 52.
+
+The two final enumeration results have distinct visible boundaries. For
+Corollary 1.8, the Hanke and Kirschmer class types, their partition, and the
+cardinalities 115 and 471 are supplied; only the total 586 is derived. For
+Theorem 1.11, `HeADC2025Theorem111Laws` supplies Oh-catalogue exhaustion,
+the local row checks, and table metadata. The final 21-row classification is
+not a law field: its source-row list, nonrepetition, count, global `2`-ADC
+deduction, completeness, and maximality conclusion are proved. Concrete
+matrix rows and local computations remain open. See report 53.

@@ -468,3 +468,17 @@ scoped forbidden-token, 100-column, and `git diff --check` checks.
 This is exact local evidence for the catalogue deduction, not evidence that
 the explicit non-dyadic law package has a concrete instance. It also postdates
 the latest independently extracted He ADC kit. See report 52.
+
+## Corollary 1.8 and Theorem 1.11 logical checkpoint
+
+At exact code revision `8cdd338f064934f9e3dc1f2af2011cb998705b97`,
+`He2023ADCEnumerativeMain.lean` compiles directly,
+`Bong.Papers.He2023ADC` completes 5,035 jobs, the expanded
+`BongTest.He2023ADCAudit` passes, and `BongTest.AxiomGate` passes. Selected
+dependency reports contain only `propext`, `Classical.choice`, and
+`Quot.sound`. The new module passes the scoped forbidden-token, 100-column,
+and `git diff --check` checks.
+
+This exact local evidence verifies the finite deductions and Table 2 index
+logic, not the external Hanke--Kirschmer--Oh data or the local computations.
+It postdates the latest independently extracted He ADC kit. See report 53.

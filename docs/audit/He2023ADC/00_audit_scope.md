@@ -6,7 +6,7 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `da6fbd41a4dc0323380b1013283bd20f9fa6b729`,
+The current audited code checkpoint is `8cdd338f064934f9e3dc1f2af2011cb998705b97`,
 branch `feat/he-formalization`, Lean 4.32.1, audited on 7 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
@@ -82,6 +82,10 @@ Report 52 assembles the non-dyadic branch of Theorem 1.10 at `d4c56cc` into
 exact seven- and eight-row catalogues, including all three rank branches and
 the exponent-zero count. This conclusion is conditional on an explicit
 non-dyadic catalogue-law package whose concrete instance remains open.
+Report 53 formalizes the finite deductions in Corollary 1.8 and Theorem 1.11
+at `8cdd338`. The 586 and 21 counts and the literal Table 2 source-row
+selection are proved, while the cited Hanke--Kirschmer--Oh catalogues and the
+prime-by-prime local computations remain explicit external inputs.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
@@ -99,4 +103,4 @@ stated scopes. The Section 5 and Section 8 deductions are
 also proved over explicit law packages. The global predicates and logical
 reductions are in scope, with their non-dyadic and arithmetic premises still
 undischarged. This audit does not certify those concrete instances or the
-remaining local and enumerative classifications.
+remaining local classifications and concrete external enumeration inputs.

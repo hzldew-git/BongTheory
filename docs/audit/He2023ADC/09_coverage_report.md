@@ -52,6 +52,10 @@ counted as a concrete arithmetic implementation.
   equal rank and both coranks. Its exact seven-/eight-row counts specialize
   the printed formula at `e=0`; concrete catalogue laws remain open; report
   52.
+- Corollary 1.8's total 586 and every logical conclusion of Theorem 1.11 are
+  proved from explicit external-enumeration laws. The Table 2 source-row
+  selection, injectivity, and exact 21 count are closed; concrete Hanke--
+  Kirschmer--Oh data and prime-by-prime local checks remain open; report 53.
 
 ## Published-source discrepancies
 
@@ -80,7 +84,8 @@ The main unresolved mathematical work is:
 - a repository proof of the O'Meara 63:9 unit-square-class count;
 - any publisher-corrected replacement for the four binary statements and a
   resolution of the printed-strength Lemma 7.13 claim;
-- Corollary 1.8, Theorem 1.11, and the remaining enumerative consequences;
+- concrete Hanke--Kirschmer--Oh catalogue imports, matrix models, and local
+  computations underlying Corollary 1.8 and Theorem 1.11;
 - exact-revision clean Review Kit CI, independent human semantic sign-off,
   merge, and release promotion.
 

@@ -136,6 +136,12 @@ Non-dyadic Theorem 1.10 logical checkpoint:
 rank and both coranks and the printed formulas at ramification index zero.
 This is conditional on the visible `SectionFiveLaws` and `CatalogueLaws`
 parameters; their concrete non-dyadic instances remain pending.
+Corollary 1.8 and Theorem 1.11 logical checkpoint:
+`8cdd338f064934f9e3dc1f2af2011cb998705b97`. Report 53 proves the
+`115+471=586` deduction, the literal 21-row Table 2 source selection and its
+nonrepetition, and every conclusion of Theorem 1.11 from visible external
+enumeration and local-verification inputs. The Hanke--Kirschmer--Oh catalogue
+instances and local computations remain pending.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -146,17 +152,17 @@ Lemma 6.4, both clauses of Lemmas 6.5--6.7, full Theorem 6.1, and volume criteri
 The audited declaration groups and scope limitations are in
 `05_theorem_correspondence.md`. Semantic matches remain provisional. In
 particular, explicit arithmetic premises in the global reductions are not
-proved by their axiom reports. No statement here certifies the unformalized
-classifications, enumeration, or omitted boundary cases.
+proved by their axiom reports. No statement here certifies the uninstantiated
+external classifications, local computations, or omitted boundary cases.
 
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
 through full Lemma 6.7. The exact locally extracted kit at 85772de covers
 the later developments through Reports 47--48 and passes its full build,
-audits, and enforcing gate. The unary and Theorem 1.10 checkpoints postdate
-that kit and have only exact local evidence. Exact commit distinctions are in
-report 11.
+audits, and enforcing gate. The unary, Theorem 1.10, and enumeration
+checkpoints postdate that kit and have only exact local evidence. Exact commit
+distinctions are in report 11.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

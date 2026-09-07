@@ -132,10 +132,10 @@ scanner checks 2,711 tracked Lean files. Section 6 is now completely triaged:
 documented false `n=2` boundary. Downstream theorems still require fresh audit
 instead of inheriting the unqualified published Theorem 6.2.
 
-Global definitions and regularity are present as abstract predicates. The
-global reductions still require arithmetic premises whose concrete proofs
-have not been supplied. Non-dyadic results, most Section 7 ADC
-classifications, global classifications and enumeration remain incomplete.
+At the Report 34 checkpoint, global definitions and regularity were present
+as abstract predicates, while non-dyadic results, most Section 7 ADC
+classifications, global classifications, and enumeration remained
+incomplete. Later reports below supersede that historical coverage state.
 
 Report 35 adds the complete Theorem 7.1 at `c3e6092`. The theorem statement
 is correct, but the publisher's proof is incomplete because it inherits the
@@ -229,6 +229,12 @@ both coranks, together with the published formulas at `e=0`. This remains
 conditional on explicit non-dyadic maximal-lattice classification laws; no
 concrete local-field instance is claimed.
 
+Report 53 closes the finite logical layer of Corollary 1.8 and Theorem 1.11
+at `8cdd338`. It proves `115+471=586`, the literal 21-row Table 2 selection,
+nonrepetition, exact count, and the complete Theorem 1.11 conclusion. The
+cited external catalogues, 48 matrix models, and local checks remain explicit
+inputs, so neither result is yet an unconditional concrete enumeration.
+
 Semantic status: one omitted binary class affects four printed statements
 (Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
 has a separate quantifier mismatch, and the proof of Theorem 7.1 is
@@ -243,8 +249,8 @@ The later additions through Reports 47--48 now have an exact local clean-kit
 receipt at 85772de. A freshly extracted source kit completed all 5,047 build
 jobs, the three He ADC audit entries, and the 60,152-declaration enforcing
 gate; its archive SHA-256 is fixed in Report 49. This is local independent
-extraction evidence, not GitHub CI or a permanent release. The unary and
-Theorem 1.10 commits have exact local evidence but are not
+extraction evidence, not GitHub CI or a permanent release. The unary,
+Theorem 1.10, and enumeration commits have exact local evidence but are not
 covered by that kit. The monolithic run
 33942437720 hit its six-hour timeout; the separate paper-kit run passed for
 all eight papers at f6f7485/c82668b.

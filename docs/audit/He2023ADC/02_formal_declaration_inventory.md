@@ -207,6 +207,11 @@ Additional concrete declaration groups are:
   and assembles all non-dyadic branches with the exponent-zero published
   formulas. Its concrete classification inputs are isolated in
   `CatalogueLaws`; report 52.
+- `He2023ADCEnumerativeMain` proves Corollary 1.8's `115+471=586`
+  deduction from a typed partition of the cited catalogues. It encodes the
+  literal 21 source rows of Table 2, proves selection, injectivity, and the
+  exact cardinality, and derives every conclusion of Theorem 1.11 from an
+  explicit external-catalogue and local-verification law package; report 53.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full
@@ -217,6 +222,7 @@ and regularity. Its `heADCTheorem13`, `heADCTheorem14*`, and the Section 8
 endpoints are conditional logical reductions, not constructions of
 number-field completions or proofs of the global arithmetic inputs. Likewise,
 the Section 5 and catalogue law packages are not concrete non-dyadic
-local-field instances.
+local-field instances. The Corollary 1.8 and Theorem 1.11 law packages are
+likewise not concrete implementations of the cited external catalogues.
 `BongTest.He2023ADCAudit` prints the actual public types and selected
 transitive axiom sets.

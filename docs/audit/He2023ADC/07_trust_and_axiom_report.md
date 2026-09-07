@@ -288,3 +288,12 @@ constructors report only `propext`, `Classical.choice`, and `Quot.sound`.
 `CatalogueLaws` is an explicit proposition-valued hypothesis and introduces
 no Lean axiom, but its concrete mathematical instance remains open. Report
 52 separates that assumption from the proved catalogue and counting logic.
+
+At checkpoint `8cdd338f064934f9e3dc1f2af2011cb998705b97`, the enumeration
+module, canonical paper entry, expanded audit, and main axiom gate compile
+with Lean 4.32.1. The Corollary 1.8 arithmetic, Table 2 selection,
+injectivity, 21-element count, row-10 test, and final Theorem 1.11 dependency
+reports contain only `propext`, `Classical.choice`, and `Quot.sound`.
+`HeADC2025Corollary18EnumerationData` and `HeADC2025Theorem111Laws` are
+explicit proposition-valued inputs, not Lean axioms. Their concrete external
+classification content remains unproved; report 53 records the boundary.

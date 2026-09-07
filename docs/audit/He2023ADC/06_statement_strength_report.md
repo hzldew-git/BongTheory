@@ -244,6 +244,20 @@ cardinality equation because every branch includes rank, `n`-ADC,
 completeness, and irredundancy. It remains `CONDITIONAL_FORMALIZATION`, not an
 unconditional theorem over a concrete non-dyadic local field. See report 52.
 
+At `8cdd338`, Corollary 1.8 is `LOGICALLY_EQUIVALENT` to the published
+addition once the two cited complete catalogues and their disjoint partition
+are supplied. The proof does not reconstruct Hanke's 115 or Kirschmer's 471
+classes, so its status is `FORMALIZED_RELATIVE_TO_EXTERNAL_ENUMERATIONS`.
+
+At the same checkpoint, Theorem 1.11 is `LOGICALLY_EQUIVALENT` to the full
+published conclusion once the Oh catalogue and local table checks are
+supplied. The endpoint is stronger than a bare count: it gives rank, positive
+definiteness, global `2`-ADC, completeness, irredundancy, half-scaling, class
+number one, and maximality exactly away from row 10. The source-row map and
+its 21-element cardinality are proved internally. Because the 48 matrix rows
+and their local computations are not yet constructed, this remains a
+`CONDITIONAL_FORMALIZATION`. See report 53.
+
 At the same checkpoint, Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5
 and 1.7, Lemma 8.4, and Corollary 8.5 reproduce the source-level implications
 and biconditionals in the abstract global/local system. The Meyer--Xu--

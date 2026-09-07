@@ -197,5 +197,14 @@ the fields of `CatalogueLaws` exactly match Proposition 4.2, Remark 4.3,
 Lemmas 4.7--4.8, and Proposition 4.15. A concrete instance of those fields is
 not yet certified.
 
+Report 53 adds the two global enumeration cards. For Corollary 1.8,
+reviewers should confirm that Hanke's 115 rational classes and Kirschmer's
+471 non-rational totally real classes form the stated disjoint exhaustive
+partition. For Theorem 1.11, they should compare the literal selected source
+rows 1--15, 19, 25, 30--32, and 44 against Tables 1--2; verify each omitted
+row's listed local obstruction; verify the 21 retained rows prime by prime;
+and check that only new row `L_10` is nonmaximal. The current formal endpoint
+proves the downstream logic but does not replace those external computations.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

@@ -26,7 +26,7 @@
 | Section 5 numbered logic | CONDITIONAL PASS at d447cd3: Theorem 5.1 and Lemmas 5.2--5.4 follow from explicit `SectionFiveLaws`; concrete non-dyadic Jordan/lattice instance pending; report 47 |
 | Section 8 numbered logic and Theorems 1.5, 1.7 | CONDITIONAL PASS at d447cd3: every deduction follows from explicit `SectionEightLaws`; concrete number-field and Meyer--Xu--O'Meara instances pending; report 47 |
 | Unrestricted Lemma 2.2, non-dyadic Section 4 cases, printed-strength Lemma 7.13, and O'Meara 63:9 counting law | FAIL / pending; dyadic unary boundary is no longer included here |
-| Remaining main theorems and enumeration | FAIL / pending |
+| Remaining concrete arithmetic and external-enumeration instances | FAIL / pending; conditional logical endpoints are not concrete implementations |
 | Clean Review Kit containing published profiles | PASS at merge-test commit `6bf3bdf8bd272109e898335683f05bb76664330c`, tree identical to `db03985`; logs inspected |
 | Clean Review Kit including Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 | PASS at f6f7485/c82668b, run 33942437722; 1934 payload hashes, 4963 build jobs, enforcing gate on 57,480 declarations |
 | Lemma 6.8(i)--(ii), only 2/6 clauses | PASS local and independent checks at b624d40, all 15 new standard-only queries; report 23; its own clean CI and human approval pending |
@@ -61,9 +61,11 @@
 | Theorem 1.10, exact published binary count | `SEMANTIC_MISMATCH`; printed `8(N p)^e+1` is refuted and corrected to `8(N p)^e+2` relative to the same counting law at f7e8fb7; report 48 |
 | Theorem 1.10, all dyadic rank branches | PASS local kernel at 125dcf2: exact complete and irredundant integral-isometry catalogues for equal rank, corank one, stable even corank two, odd corank two, and the corrected binary boundary; numerical formulas retain O'Meara 63:9; report 51 |
 | Theorem 1.10, non-dyadic rank branches | CONDITIONAL PASS local kernel at d4c56cc: exact seven-/eight-row catalogues and exponent-zero counts for equal rank and coranks one/two; concrete `SectionFiveLaws` and `CatalogueLaws` instances pending; report 52 |
+| Corollary 1.8 | CONDITIONAL PASS local kernel at 8cdd338: exact `115+471=586` deduction from a typed partition; concrete Hanke--Kirschmer catalogue instances pending; report 53 |
+| Theorem 1.11 | CONDITIONAL PASS local kernel at 8cdd338: literal 21-row selection, complete and irredundant classification, half-scaling, class number one, and maximality away from row 10; Oh's matrices and local checks remain explicit inputs; report 53 |
 | Section 7 mechanical gate | PASS local through bd0c9a3: seven selected Corollary 7.21 endpoints are standard-only; 59,853-declaration focused gate, 2,742-source scanner, scoped 100-column and diff checks |
 | Exact clean Review Kit through Reports 47--48 | PASS locally at clean checkpoint 85772de: archive hash fixed, 2,038 payload hashes verified after extraction, 5,047-job full build, three He ADC audit entries and 60,152-declaration enforcing gate pass; Report 49; GitHub upload is separate |
-| Exact clean Review Kit containing the unary checkpoint | PENDING; da6fbd4 has exact local build/audit/gate evidence but postdates the 85772de kit |
+| Exact clean Review Kit through the enumeration checkpoint | PENDING; 8cdd338 and preceding unary/Theorem 1.10 checkpoints have exact local build/audit/gate evidence but postdate the 85772de kit |
 | Remaining Section 7 issue | FAIL / source mismatch: printed-strength Lemma 7.13; the proof-supported disjunction is formalized |
 | Independent semantic sign-off | FAIL / pending |
 
