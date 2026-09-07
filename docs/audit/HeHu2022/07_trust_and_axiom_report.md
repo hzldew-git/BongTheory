@@ -16,3 +16,8 @@ paper-specific assumption as a proof of the same paper assertion.
 
 Independent human semantic review remains outside the Lean trust report and
 is not self-certified here.
+
+The independently extracted Review Kit recorded in Report 14 completed a
+4,952-job source build. Its standalone enforcing gate checked 57,843
+declarations and again found only `propext`, `Classical.choice`, and
+`Quot.sound` in the permitted transitive closures.

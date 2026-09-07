@@ -22,3 +22,7 @@ syntax; this is the one explicitly marked equivalent-construction item for
 independent expert review.
 
 Formalization verdict: `COMPLETE_PENDING_INDEPENDENT_SEMANTIC_REVIEW`.
+
+Mechanical reproducibility has additionally been demonstrated from the
+source-only Review Kit for exact clean commit `8bff7e2`; see Report 14. This
+does not change the deliberately separate independent semantic-review status.

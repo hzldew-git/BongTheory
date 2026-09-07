@@ -17,6 +17,9 @@
 | Theorem 1.2 cardinalities | PASS, `4*|U|` and `4*|U|-1` |
 | Theorem 1.2 proper-subset minimality | PASS, using proved row irredundancy |
 | Axiom audit | PASS, only `propext`, `Classical.choice`, and `Quot.sound` |
+| Exact clean Review Kit local extraction | PASS at commit `8bff7e2`; 1,913 payload hashes and 4,952 build jobs checked |
+| Exact extracted-kit paper audit and enforcing gate | PASS; 57,843 declarations checked |
+| GitHub release artifact at the eventual release tag | PENDING; not inferred from the local receipt |
 | Independent expert semantic sign-off | PENDING; intentionally not self-certified |
 
 Completion verdict: `FORMALIZATION_COMPLETE_PENDING_INDEPENDENT_REVIEW`.
