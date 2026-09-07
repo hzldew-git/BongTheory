@@ -52,6 +52,7 @@ import Bong.Bong.He2023ADCTheorem72Published
 import Bong.Bong.He2023ADCRemark73
 import Bong.Bong.He2023ADCCorollary721
 import Bong.Bong.He2023ADCQuaternaryCatalogue
+import Bong.Bong.He2023ADCTheorem110
 import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
@@ -92,6 +93,9 @@ At the binary rank-four boundary, the formalization proves a corrected exact
 catalogue with two nonmaximal classes and count `8 * (N p)^e + 2`; it also
 machine-checks that the single-exception formulations printed in Theorems
 1.9(ii), 1.10, and 6.2 are false.
+All dyadic branches of Theorem 1.10 are assembled as exact, complete, and
+irredundant integral-isometry catalogues, including equal rank, corank one,
+stable even corank two, odd corank two, and the corrected binary boundary.
 It also records the logical local--global
 reductions in Theorems 1.3--1.4.  The complete logical derivations of all four
 numbered Section 5 results and of the Section 8 local--global chain are also

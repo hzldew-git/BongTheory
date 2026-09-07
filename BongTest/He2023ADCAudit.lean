@@ -7,6 +7,8 @@ import Bong.Papers.He2023ADC
 
 /-! Kernel and trust-boundary audit for He's n-ADC paper entry. -/
 
+open Bong.Lattice.QuadraticLatticeModel
+
 #check Bong.Lattice.IsNADC
 #check Bong.Lattice.IsNUniversal.isNADC
 #check Bong.Lattice.RepresentsAllRelevantOMaximalOfRank
@@ -677,6 +679,25 @@ import Bong.Papers.He2023ADC
 #check @Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem19iiBinaryStatement
 #check @Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorem19ii_binary_corrected
 #check @Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorems19iiAnd110BinaryCorrected
+#check @Bong.HeADC2025IsExactNADCIsometryCatalogue
+#check @heADC2025PublishedEven_exactCatalogue_of_isOMaximal
+#check @heADC2025PublishedOdd_exactCatalogue_of_isOMaximal
+#check @Bong.heADC2025Theorem110EqualRankEvenCatalogue
+#check @Bong.heADC2025Theorem110EqualRankOddCatalogue
+#check @Bong.heADC2025Theorem110EvenCorankOneCatalogue
+#check @Bong.heADC2025Theorem110OddCorankOneCatalogue
+#check @Bong.heADC2025Theorem110EvenCorankTwoCatalogue
+#check @Bong.heADC2025Theorem110EqualRankBinaryCount
+#check @Bong.heADC2025Theorem110EvenTableCount
+#check @Bong.heADC2025Theorem110OddTableCount
+#check @Bong.heADC2025Theorem110EqualRankBinary
+#check @Bong.heADC2025Theorem110EqualRankEven
+#check @Bong.heADC2025Theorem110EqualRankOdd
+#check @Bong.heADC2025Theorem110EvenCorankOne
+#check @Bong.heADC2025Theorem110OddCorankOne
+#check @Bong.heADC2025Theorem110EvenCorankTwo
+#check @Bong.HeADC2025Theorem110DyadicCorrectedConclusion
+#check @Bong.heADC2025Theorem110DyadicCorrected
 
 #print axioms Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma718
@@ -733,3 +754,17 @@ import Bong.Papers.He2023ADC
 #print axioms Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem19iiBinaryStatement
 #print axioms Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorem19ii_binary_corrected
 #print axioms Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorems19iiAnd110BinaryCorrected
+#print axioms heADC2025PublishedEven_exactCatalogue_of_isOMaximal
+#print axioms heADC2025PublishedOdd_exactCatalogue_of_isOMaximal
+#print axioms Bong.heADC2025Theorem110EqualRankEvenCatalogue
+#print axioms Bong.heADC2025Theorem110EqualRankOddCatalogue
+#print axioms Bong.heADC2025Theorem110EvenCorankOneCatalogue
+#print axioms Bong.heADC2025Theorem110OddCorankOneCatalogue
+#print axioms Bong.heADC2025Theorem110EvenCorankTwoCatalogue
+#print axioms Bong.heADC2025Theorem110EqualRankBinary
+#print axioms Bong.heADC2025Theorem110EqualRankEven
+#print axioms Bong.heADC2025Theorem110EqualRankOdd
+#print axioms Bong.heADC2025Theorem110EvenCorankOne
+#print axioms Bong.heADC2025Theorem110OddCorankOne
+#print axioms Bong.heADC2025Theorem110EvenCorankTwo
+#print axioms Bong.heADC2025Theorem110DyadicCorrected
