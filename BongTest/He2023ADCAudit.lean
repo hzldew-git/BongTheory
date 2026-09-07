@@ -97,6 +97,28 @@ open Bong.Lattice.QuadraticLatticeModel
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
 
+#check Bong.HeADC2025Corollary18EnumerationData
+#check Bong.HeADC2025Corollary18EnumerationData.heADC2025Corollary18
+#check Bong.heADC2025Theorem111TableTwoSourceIndex
+#check Bong.HeADC2025Theorem111IsSelected
+#check Bong.HeADC2025Theorem111Index
+#check Bong.heADC2025Theorem111TableTwoSourceIndex_selected
+#check Bong.heADC2025Theorem111TableTwoSourceIndex_injective
+#check Bong.card_heADC2025Theorem111Index
+#check Bong.heADC2025Theorem111TableTwoEquiv
+#check Bong.heADC2025Theorem111TableTwoSourceIndex_ne_nine_iff
+#check Bong.HeADC2025Theorem111Data
+#check Bong.HeADC2025Theorem111Laws
+#check Bong.HeADC2025Theorem111Laws.Conclusion
+#check Bong.HeADC2025Theorem111Laws.heADC2025Theorem111
+
+#print axioms Bong.HeADC2025Corollary18EnumerationData.heADC2025Corollary18
+#print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_selected
+#print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_injective
+#print axioms Bong.card_heADC2025Theorem111Index
+#print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_ne_nine_iff
+#print axioms Bong.HeADC2025Theorem111Laws.heADC2025Theorem111
+
 #check Bong.BONG.OrthogonalBasisData.heADC2025Lemma31
 #check Bong.BONG.GoodBONG.heADC2025Corollary32i
 #check Bong.BONG.GoodBONG.heADC2025Corollary32ii

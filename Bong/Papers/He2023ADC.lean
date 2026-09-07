@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 import Bong.Lattice.NADC
 import Bong.Lattice.GlobalNADC
 import Bong.Lattice.He2023ADCSectionEight
+import Bong.Lattice.He2023ADCEnumerativeMain
 import Bong.Bong.He2023ADCSectionThree
 import Bong.Bong.He2023ADCPublishedRepresentation
 import Bong.Bong.He2023ADCSectionFour
@@ -101,12 +102,18 @@ The non-dyadic branch is likewise assembled into exact seven- and eight-row
 catalogues, including all three rank branches and the specialization of the
 printed formula at ramification index zero, relative to an explicit
 non-dyadic maximal-lattice catalogue law package.
+Corollary 1.8 is formalized as the exact finite-cardinality deduction from
+the two cited external catalogues.  Theorem 1.11 is formalized as an exact,
+complete, and irredundant 21-row catalogue: the literal Table 2 selection
+from Oh's 48 candidates is machine-checked, while global `2`-ADC is derived
+from Corollary 8.5 rather than assumed as a table field.
 It also records the logical local--global
 reductions in Theorems 1.3--1.4.  The complete logical derivations of all four
 numbered Section 5 results and of the Section 8 local--global chain are also
 formalized over explicit non-dyadic Jordan and number-field arithmetic law
 packages.  Concrete constructions of the non-dyadic and number-field law
-packages remain open;
+packages, and imports of the Hanke--Kirschmer--Oh external enumerations,
+remain open;
 number-field localization, Meyer--Xu genus separation, and non-dyadic Jordan
 facts are therefore visible proof data rather than hidden axioms.
 -/
