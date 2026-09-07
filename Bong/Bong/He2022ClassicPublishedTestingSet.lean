@@ -233,6 +233,61 @@ noncomputable def heClassicEvenC2Model
     (heClassicEvenC2_adjacentAdmissible pairs c cSharp hc hcSharp)
     (heClassicEvenC2_weakTwoStep pairs c cSharp hc hcSharp)
 
+/-- The volume order of the even first-column model is the order of its
+determinant parameter. -/
+theorem heClassicEvenC1Model_volumeOrder
+    (pairs : Nat) (c : Kˣ) (hc : 0 ≤ ordUnit K c) :
+    let X := heClassicEvenC1Model (K := K) pairs c hc
+    @Lattice.volumeOrder K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice = ordUnit K c := by
+  dsimp only
+  change Lattice.volumeOrder
+      (BONG.coefficientDiagonalSpace (heClassicEvenC1 (K := K) pairs c))
+      (heHuExactRealization
+        (heClassicEvenC1 (K := K) pairs c)
+        (heClassicEvenC1_adjacentAdmissible pairs c hc)
+        (heClassicEvenC1_weakTwoStep pairs c hc)).lattice = ordUnit K c
+  rw [heHuExactModel_volumeOrder]
+  simp_rw [heClassicEvenC1_order]
+  rw [Finset.sum_eq_single (Fin.last (2 * pairs + 1))]
+  · simp
+  · intro i _ hi
+    have hval : i.val ≠ 2 * pairs + 1 := by
+      intro h
+      apply hi
+      exact Fin.ext h
+    simp [hval]
+  · simp
+
+/-- The volume order of the even second-column model is the order of its
+determinant parameter. -/
+theorem heClassicEvenC2Model_volumeOrder
+    (pairs : Nat) (c cSharp : Kˣ) (hc : 0 ≤ ordUnit K c)
+    (hcSharp : ordUnit K cSharp = 0) :
+    let X := heClassicEvenC2Model (K := K) pairs c cSharp hc hcSharp
+    @Lattice.volumeOrder K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice = ordUnit K c := by
+  dsimp only
+  change Lattice.volumeOrder
+      (BONG.coefficientDiagonalSpace
+        (heClassicEvenC2 (K := K) pairs c cSharp))
+      (heHuExactRealization
+        (heClassicEvenC2 (K := K) pairs c cSharp)
+        (heClassicEvenC2_adjacentAdmissible pairs c cSharp hc hcSharp)
+        (heClassicEvenC2_weakTwoStep pairs c cSharp hc hcSharp)).lattice =
+          ordUnit K c
+  rw [heHuExactModel_volumeOrder]
+  simp_rw [heClassicEvenC2_order pairs c cSharp hcSharp]
+  rw [Finset.sum_eq_single (Fin.last (2 * pairs + 1))]
+  · simp
+  · intro i _ hi
+    have hval : i.val ≠ 2 * pairs + 1 := by
+      intro h
+      apply hi
+      exact Fin.ext h
+    simp [hval]
+  · simp
+
 /-- Bundle the exact good-BONG realization of `C_1^(2p+3)(c)`. -/
 noncomputable def heClassicOddC1Model
     (pairs : Nat) (c : Kˣ) (hc : 0 ≤ ordUnit K c) :
@@ -262,6 +317,84 @@ noncomputable def heClassicOddC2EvenModel
     (heClassicOddC2Even_weakTwoStep pairs c omega omegaSharp hc homega
       homegaSharp)
 
+/-- The volume order of the odd first-column model is the order of its
+determinant parameter. -/
+theorem heClassicOddC1Model_volumeOrder
+    (pairs : Nat) (c : Kˣ) (hc : 0 ≤ ordUnit K c) :
+    let X := heClassicOddC1Model (K := K) pairs c hc
+    @Lattice.volumeOrder K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice = ordUnit K c := by
+  dsimp only
+  change Lattice.volumeOrder
+      (BONG.coefficientDiagonalSpace (heClassicOddC1 (K := K) pairs c))
+      (heHuExactRealization
+        (heClassicOddC1 (K := K) pairs c)
+        (heClassicOddC1_adjacentAdmissible pairs c hc)
+        (heClassicOddC1_weakTwoStep pairs c hc)).lattice = ordUnit K c
+  rw [heHuExactModel_volumeOrder]
+  simp_rw [heClassicOddC1_order]
+  rw [Finset.sum_eq_single (Fin.last (2 * pairs + 2))]
+  · simp
+  · intro i _ hi
+    have hval : i.val ≠ 2 * pairs + 2 := by
+      intro h
+      apply hi
+      exact Fin.ext h
+    simp [hval]
+  · simp
+
+/-- The volume order of the odd-order second-column model is likewise the
+order of its determinant parameter. -/
+theorem heClassicOddC2OddModel_volumeOrder
+    (pairs : Nat) (c : Kˣ) (hc : 0 ≤ ordUnit K c) :
+    let X := heClassicOddC2OddModel (K := K) pairs c hc
+    @Lattice.volumeOrder K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice = ordUnit K c := by
+  dsimp only
+  change Lattice.volumeOrder
+      (BONG.coefficientDiagonalSpace (heClassicOddC2Odd (K := K) pairs c))
+      (heHuExactRealization
+        (heClassicOddC2Odd (K := K) pairs c)
+        (heClassicOddC2Odd_adjacentAdmissible pairs c hc)
+        (heClassicOddC2Odd_weakTwoStep pairs c hc)).lattice = ordUnit K c
+  rw [heHuExactModel_volumeOrder]
+  simp_rw [heClassicOddC2Odd_order]
+  rw [Finset.sum_eq_single (Fin.last (2 * pairs + 2))]
+  · simp
+  · intro i _ hi
+    have hval : i.val ≠ 2 * pairs + 2 := by
+      intro h
+      apply hi
+      exact Fin.ext h
+    simp [hval]
+  · simp
+
+/-- Every coefficient in the even-order second-column model has order zero,
+so its lattice volume order is zero. -/
+theorem heClassicOddC2EvenModel_volumeOrder
+    (pairs : Nat) (c omega omegaSharp : Kˣ)
+    (hc : ordUnit K c = 0) (homega : ordUnit K omega = 0)
+    (homegaSharp : ordUnit K omegaSharp = 0) :
+    let X := heClassicOddC2EvenModel (K := K) pairs c omega omegaSharp
+      hc homega homegaSharp
+    @Lattice.volumeOrder K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice = 0 := by
+  dsimp only
+  change Lattice.volumeOrder
+      (BONG.coefficientDiagonalSpace
+        (heClassicOddC2Even (K := K) pairs c omega omegaSharp))
+      (heHuExactRealization
+        (heClassicOddC2Even (K := K) pairs c omega omegaSharp)
+        (heClassicOddC2Even_adjacentAdmissible pairs c omega omegaSharp
+          hc homega homegaSharp)
+        (heClassicOddC2Even_weakTwoStep pairs c omega omegaSharp
+          hc homega homegaSharp)).lattice = 0
+  rw [heHuExactModel_volumeOrder]
+  apply Finset.sum_eq_zero
+  intro i _
+  exact heClassicOddC2Even_order_zero pairs c omega omegaSharp
+    hc homega homegaSharp i
+
 /-- Bundle the exact exceptional `H_e` realization. -/
 noncomputable def heClassicEvenHModel
     (pairs : Nat) (c : Kˣ)
@@ -273,6 +406,40 @@ noncomputable def heClassicEvenHModel
   heHuExactModel (heClassicEvenH (K := K) pairs c)
     (heClassicEvenH_adjacentAdmissible pairs c hcClass)
     (heClassicEvenH_weakTwoStep pairs c hcOrder)
+
+/-- The alternating exceptional model has volume order zero. -/
+theorem heClassicEvenHModel_volumeOrder
+    (pairs : Nat) (c : Kˣ)
+    (hcClass : c = 1 ∨
+      c = (inferInstance :
+        DyadicDiscriminantClassLaws K).discriminantUnit)
+    (hcOrder : ordUnit K c = 0) :
+    let X := heClassicEvenHModel (K := K) pairs c hcClass hcOrder
+    @Lattice.volumeOrder K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice = 0 := by
+  dsimp only
+  change Lattice.volumeOrder
+      (BONG.coefficientDiagonalSpace (heClassicEvenH (K := K) pairs c))
+      (heHuExactRealization
+        (heClassicEvenH (K := K) pairs c)
+        (heClassicEvenH_adjacentAdmissible pairs c hcClass)
+        (heClassicEvenH_weakTwoStep pairs c hcOrder)).lattice = 0
+  rw [heHuExactModel_volumeOrder]
+  simp_rw [heClassicEvenH_order pairs c hcOrder]
+  calc
+    (∑ i : Fin (2 * pairs + 2),
+        if Even i.val then (ramificationIndex K : Int)
+        else -(ramificationIndex K : Int)) =
+        (∑ i : Fin (2 * pairs + 2), (-1 : Int) ^ i.val) *
+          ramificationIndex K := by
+            rw [Finset.sum_mul]
+            apply Finset.sum_congr rfl
+            intro i _
+            rw [neg_one_pow_eq_ite]
+            split <;> ring
+    _ = 0 := by
+      rw [Fin.sum_neg_one_pow, if_pos (by exact ⟨pairs + 1, by omega⟩)]
+      simp
 
 @[simp] theorem heClassicEvenC1Model_rank
     (pairs : Nat) (c : Kˣ) (hc : 0 ≤ ordUnit K c) :
@@ -727,6 +894,110 @@ theorem model_isClassicIntegral {I : Type u} [Fintype I]
       cases column <;>
         simp [model]
 
+/-- Every even published row has volume order at most one. -/
+theorem model_volumeOrder_le_one {I : Type u} [Fintype I]
+    (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat)
+    (i : HeClassicPublishedEvenTestingIndex (K := K) U
+      (ramificationIndex K)) :
+    let X := model (K := K) U hU pairs i
+    @Lattice.volumeOrder K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice ≤ 1 := by
+  rcases i with h | j
+  · let c := HeClassicExceptionalIndex.parameter (K := K) h
+    let hcClass := HeClassicExceptionalIndex.parameter_class (K := K) h
+    let hcOrder := HeClassicExceptionalIndex.parameter_order (K := K) h
+    change @Lattice.volumeOrder K _ _ _ _ _
+        (heClassicEvenHModel (K := K) pairs c hcClass hcOrder).Carrier
+        (heClassicEvenHModel (K := K) pairs c hcClass hcOrder).addCommGroup
+        (heClassicEvenHModel (K := K) pairs c hcClass hcOrder).module
+        (heClassicEvenHModel (K := K) pairs c hcClass hcOrder).form
+        (heClassicEvenHModel (K := K) pairs c hcClass hcOrder).lattice ≤ 1
+    rw [heClassicEvenHModel_volumeOrder pairs c hcClass hcOrder]
+    norm_num
+  · rcases j with j | i
+    · rcases j with ⟨j, column⟩
+      let c := U j.1
+      let hc : ordUnit K c = 0 :=
+        heClassicUnitRepresentative_order_zero U hU j.1
+      let cSharp := heClassicDefectOneSharp (K := K) c j.2
+      let hcSharp : ordUnit K cSharp = 0 :=
+        heClassicDefectOneSharp_order c j.2
+      cases column
+      · change @Lattice.volumeOrder K _ _ _ _ _
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).Carrier
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).addCommGroup
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).module
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).form
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).lattice ≤ 1
+        rw [heClassicEvenC1Model_volumeOrder]
+        omega
+      · change @Lattice.volumeOrder K _ _ _ _ _
+            (heClassicEvenC2Model (K := K) pairs c cSharp
+              (by omega) hcSharp).Carrier
+            (heClassicEvenC2Model (K := K) pairs c cSharp
+              (by omega) hcSharp).addCommGroup
+            (heClassicEvenC2Model (K := K) pairs c cSharp
+              (by omega) hcSharp).module
+            (heClassicEvenC2Model (K := K) pairs c cSharp
+              (by omega) hcSharp).form
+            (heClassicEvenC2Model (K := K) pairs c cSharp
+              (by omega) hcSharp).lattice ≤ 1
+        rw [heClassicEvenC2Model_volumeOrder]
+        omega
+    · rcases i with ⟨i, column⟩
+      let c := U i * uniformizerPowerUnit K (1 : Int)
+      let hc : ordUnit K c = 1 :=
+        heClassicUnitUniformizerParameter_order_one U hU i
+      let delta :=
+        (inferInstance : DyadicDiscriminantClassLaws K).discriminantUnit
+      let hdelta : ordUnit K delta = 0 :=
+        (isValuationUnit_iff_ordUnit_eq_zero K _).1
+          ((inferInstance :
+            DyadicDiscriminantClassLaws K).discriminant_isValuationUnit)
+      cases column
+      · change @Lattice.volumeOrder K _ _ _ _ _
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).Carrier
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).addCommGroup
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).module
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).form
+            (heClassicEvenC1Model (K := K) pairs c (by omega)).lattice ≤ 1
+        rw [heClassicEvenC1Model_volumeOrder]
+        omega
+      · change @Lattice.volumeOrder K _ _ _ _ _
+            (heClassicEvenC2Model (K := K) pairs c delta
+              (by omega) hdelta).Carrier
+            (heClassicEvenC2Model (K := K) pairs c delta
+              (by omega) hdelta).addCommGroup
+            (heClassicEvenC2Model (K := K) pairs c delta
+              (by omega) hdelta).module
+            (heClassicEvenC2Model (K := K) pairs c delta
+              (by omega) hdelta).form
+            (heClassicEvenC2Model (K := K) pairs c delta
+              (by omega) hdelta).lattice ≤ 1
+        rw [heClassicEvenC2Model_volumeOrder]
+        omega
+
+/-- Every even row in the published table is maximal among classic integral
+lattices in its ambient quadratic space. -/
+theorem model_isClassicMaximal {I : Type u} [Fintype I]
+    (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (pairs : Nat)
+    (i : HeClassicPublishedEvenTestingIndex (K := K) U
+      (ramificationIndex K)) :
+    let X := model (K := K) U hU pairs i
+    @Lattice.IsClassicMaximal K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice := by
+  let X := model (K := K) U hU pairs i
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  change Lattice.IsClassicMaximal X.form X.lattice
+  apply Lattice.isClassicMaximal_of_volumeOrder_le_one
+  · exact model_isClassicIntegral U hU pairs i
+  · exact model_volumeOrder_le_one U hU pairs i
+
 end HeClassicPublishedEvenTestingIndex
 
 namespace HeClassicPublishedOddTestingIndex
@@ -777,6 +1048,125 @@ theorem model_isClassicIntegral {I : Type u} [Fintype I]
     (model (K := K) U hU omegaData pairs i).IsClassicIntegral := by
   rcases i with ⟨⟨i, parity⟩, column⟩
   cases parity <;> cases column <;> simp [model]
+
+/-- The volume order of an odd published row is exactly its valuation-parity
+bit: zero on the unit rows and one on the uniformizer rows. -/
+theorem model_volumeOrder {I : Type u} [Fintype I]
+    (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (omegaData : HeClassicOmegaData (K := K)) (pairs : Nat)
+    (i : HeClassicPublishedOddTestingIndex I) :
+    let X := model (K := K) U hU omegaData pairs i
+    @Lattice.volumeOrder K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice = if i.1.2 then 1 else 0 := by
+  rcases i with ⟨⟨i, parity⟩, column⟩
+  cases parity <;> cases column
+  · let hc : 0 ≤ ordUnit K (U i) := by
+      rw [heClassicUnitRepresentative_order_zero U hU i]
+    change Lattice.volumeOrder
+        (BONG.coefficientDiagonalSpace (heClassicOddC1 (K := K) pairs (U i)))
+        (heHuExactRealization
+          (heClassicOddC1 (K := K) pairs (U i))
+          (heClassicOddC1_adjacentAdmissible pairs (U i) hc)
+          (heClassicOddC1_weakTwoStep pairs (U i) hc)).lattice = 0
+    rw [heHuExactModel_volumeOrder]
+    simp_rw [heClassicOddC1_order]
+    rw [Finset.sum_eq_single (Fin.last (2 * pairs + 2))]
+    · rw [heClassicUnitRepresentative_order_zero U hU i]
+      simp
+    · intro j _ hj
+      have hval : j.val ≠ 2 * pairs + 2 := by
+        intro h
+        apply hj
+        exact Fin.ext h
+      simp [hval]
+    · simp
+  · let hc : ordUnit K (U i) = 0 :=
+      heClassicUnitRepresentative_order_zero U hU i
+    change Lattice.volumeOrder
+        (BONG.coefficientDiagonalSpace
+          (heClassicOddC2Even (K := K) pairs (U i)
+            omegaData.omega omegaData.omegaSharp))
+        (heHuExactRealization
+          (heClassicOddC2Even (K := K) pairs (U i)
+            omegaData.omega omegaData.omegaSharp)
+          (heClassicOddC2Even_adjacentAdmissible pairs (U i)
+            omegaData.omega omegaData.omegaSharp hc
+            omegaData.omega_order omegaData.omegaSharp_order)
+          (heClassicOddC2Even_weakTwoStep pairs (U i)
+            omegaData.omega omegaData.omegaSharp hc
+            omegaData.omega_order omegaData.omegaSharp_order)).lattice = 0
+    rw [heHuExactModel_volumeOrder]
+    apply Finset.sum_eq_zero
+    intro j _
+    exact heClassicOddC2Even_order_zero pairs (U i)
+      omegaData.omega omegaData.omegaSharp hc
+      omegaData.omega_order omegaData.omegaSharp_order j
+  · let c := U i * uniformizerPowerUnit K (1 : Int)
+    have hc : ordUnit K c = 1 :=
+      heClassicUnitUniformizerParameter_order_one U hU i
+    let hcNonnegative : 0 ≤ ordUnit K c := by omega
+    change Lattice.volumeOrder
+        (BONG.coefficientDiagonalSpace (heClassicOddC1 (K := K) pairs c))
+        (heHuExactRealization
+          (heClassicOddC1 (K := K) pairs c)
+          (heClassicOddC1_adjacentAdmissible pairs c hcNonnegative)
+          (heClassicOddC1_weakTwoStep pairs c hcNonnegative)).lattice = 1
+    rw [heHuExactModel_volumeOrder]
+    simp_rw [heClassicOddC1_order]
+    rw [Finset.sum_eq_single (Fin.last (2 * pairs + 2))]
+    · have hlast : (Fin.last (2 * pairs + 2)).val = 2 * pairs + 2 := rfl
+      rw [if_pos hlast]
+      exact hc
+    · intro j _ hj
+      have hval : j.val ≠ 2 * pairs + 2 := by
+        intro h
+        apply hj
+        exact Fin.ext h
+      simp [hval]
+    · simp
+  · let c := U i * uniformizerPowerUnit K (1 : Int)
+    have hc : ordUnit K c = 1 :=
+      heClassicUnitUniformizerParameter_order_one U hU i
+    let hcNonnegative : 0 ≤ ordUnit K c := by omega
+    change Lattice.volumeOrder
+        (BONG.coefficientDiagonalSpace (heClassicOddC2Odd (K := K) pairs c))
+        (heHuExactRealization
+          (heClassicOddC2Odd (K := K) pairs c)
+          (heClassicOddC2Odd_adjacentAdmissible pairs c hcNonnegative)
+          (heClassicOddC2Odd_weakTwoStep pairs c hcNonnegative)).lattice = 1
+    rw [heHuExactModel_volumeOrder]
+    simp_rw [heClassicOddC2Odd_order]
+    rw [Finset.sum_eq_single (Fin.last (2 * pairs + 2))]
+    · have hlast : (Fin.last (2 * pairs + 2)).val = 2 * pairs + 2 := rfl
+      rw [if_pos hlast]
+      exact hc
+    · intro j _ hj
+      have hval : j.val ≠ 2 * pairs + 2 := by
+        intro h
+        apply hj
+        exact Fin.ext h
+      simp [hval]
+    · simp
+
+/-- Every odd row in the published table is maximal among classic integral
+lattices in its ambient quadratic space. -/
+theorem model_isClassicMaximal {I : Type u} [Fintype I]
+    (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
+    (omegaData : HeClassicOmegaData (K := K)) (pairs : Nat)
+    (i : HeClassicPublishedOddTestingIndex I) :
+    let X := model (K := K) U hU omegaData pairs i
+    @Lattice.IsClassicMaximal K _ _ _ _ _ X.Carrier X.addCommGroup X.module
+      X.form X.lattice := by
+  let X := model (K := K) U hU omegaData pairs i
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  change Lattice.IsClassicMaximal X.form X.lattice
+  apply Lattice.isClassicMaximal_of_volumeOrder_le_one
+  · exact model_isClassicIntegral U hU omegaData pairs i
+  · rw [model_volumeOrder U hU omegaData pairs i]
+    split <;> omega
 
 end HeClassicPublishedOddTestingIndex
 

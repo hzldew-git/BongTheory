@@ -14,6 +14,7 @@ import Bong.Bong.He2022ClassicLemma79
 #check Bong.Lattice.IsClassicNUniversal
 #check Bong.Lattice.IsClassicMaximal
 #check Bong.Lattice.exists_classicMaximal_superlattice
+#check Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one
 #check Bong.Lattice.RepresentsAllClassicMaximalOfRank
 #check Bong.Lattice.heClassicMaximalTestingReduction
 #check Bong.BONG.GoodBONG.HeClassicEvenConditions
@@ -74,9 +75,13 @@ import Bong.Bong.He2022ClassicLemma79
 #check Bong.HeClassicPublishedEvenTestingIndex.model
 #check Bong.HeClassicPublishedEvenTestingIndex.model_rank
 #check Bong.HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+#check Bong.HeClassicPublishedEvenTestingIndex.model_volumeOrder_le_one
+#check Bong.HeClassicPublishedEvenTestingIndex.model_isClassicMaximal
 #check Bong.HeClassicPublishedOddTestingIndex.model
 #check Bong.HeClassicPublishedOddTestingIndex.model_rank
 #check Bong.HeClassicPublishedOddTestingIndex.model_isClassicIntegral
+#check Bong.HeClassicPublishedOddTestingIndex.model_volumeOrder
+#check Bong.HeClassicPublishedOddTestingIndex.model_isClassicMaximal
 #check Bong.heClassicRamifiedBinary
 #check Bong.heClassicRamifiedBinary_determinant_order
 #check Bong.heClassicRamifiedSnoc_anisotropic
@@ -154,8 +159,13 @@ import Bong.Bong.He2022ClassicLemma79
 #print axioms Bong.he2022ClassicProposition28ii_odd
 #print axioms Bong.heClassicOmega_quadraticDefect
 #print axioms Bong.heClassicCanonicalOmegaData
+#print axioms Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one
 #print axioms Bong.HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+#print axioms Bong.HeClassicPublishedEvenTestingIndex.model_volumeOrder_le_one
+#print axioms Bong.HeClassicPublishedEvenTestingIndex.model_isClassicMaximal
 #print axioms Bong.HeClassicPublishedOddTestingIndex.model_isClassicIntegral
+#print axioms Bong.HeClassicPublishedOddTestingIndex.model_volumeOrder
+#print axioms Bong.HeClassicPublishedOddTestingIndex.model_isClassicMaximal
 #print axioms Bong.heClassicRamifiedBinary_determinant_order
 #print axioms Bong.heClassicRamifiedSnoc_anisotropic
 #print axioms Bong.heClassicHyperbolicPair_represents_iff_isotropic

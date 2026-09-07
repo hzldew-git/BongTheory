@@ -124,6 +124,28 @@ theorem eq_of_le (h : IsClassicMaximal q L) (M : Lattice K V)
 
 end IsClassicMaximal
 
+/-- A classic integral lattice whose volume order is at most one is already
+maximal among classic integral lattices.  Indeed, inclusion changes volume
+order by twice a nonnegative integer, whereas classic integrality forces the
+volume order to remain nonnegative. -/
+theorem isClassicMaximal_of_volumeOrder_le_one
+    (hL : IsClassicIntegral q L) (hvolume : volumeOrder q L ≤ 1) :
+    IsClassicMaximal q L := by
+  refine ⟨hL, ?_⟩
+  intro M hLM hM
+  obtain ⟨k, hk⟩ := exists_volumeOrder_eq_add_two_mul_nat q hLM
+  have hMnonnegative : 0 ≤ volumeOrder q M :=
+    volumeOrder_nonneg_of_scaleIdeal_le_unitIdeal hM
+  have hkzero : k = 0 := by
+    by_contra hkne
+    have hkpositive : 1 ≤ k := Nat.one_le_iff_ne_zero.mpr hkne
+    have htwo : (2 : Int) ≤ 2 * (k : Int) := by omega
+    omega
+  have hvolumeEq : volumeOrder q L = volumeOrder q M := by
+    rw [hk, hkzero]
+    norm_num
+  exact (eq_of_le_of_volumeOrder_eq q L M hLM hvolumeEq).symm
+
 /-- Classic integral over-lattices used in the maximality argument. -/
 structure ClassicMaximalCandidate
     (q : QuadraticSpace K V) (L : Lattice K V) where
