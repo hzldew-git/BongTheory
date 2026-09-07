@@ -161,3 +161,10 @@ classification, maximal-lattice uniqueness, and nonisometric ambient spaces.
 Only the final residue-norm conversion assumes the already disclosed
 O'Meara 63:9 counting law; the unconditional count is `4|U|+2`. See report
 48.
+
+The dyadic Theorem 1.10 endpoint does not infer an isometry-class count from
+the cardinality of an arbitrary parameter list. Each maximal-table branch is
+proved complete and irredundant for integral isometry by using the relevant
+maximality classification and maximal-lattice uniqueness. The final
+residue-norm formulas still require `HeADC2025Corollary721CountingLaw`, and
+the endpoint does not include the non-dyadic branch. See report 51.

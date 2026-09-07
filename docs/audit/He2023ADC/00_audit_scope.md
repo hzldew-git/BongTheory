@@ -74,6 +74,10 @@ Report 49 records the independently extracted clean Review Kit receipt through
 Reports 47--48 at `85772de`. Report 50 closes the later dyadic unary table,
 classification, count, and rank-one minimality boundary at `da6fbd4`; this
 later checkpoint has exact local evidence but is not contained in that kit.
+Report 51 assembles every dyadic branch of Theorem 1.10 at `125dcf2` as an
+exact integral-isometry catalogue. It covers equal rank, corank one, stable
+even corank two, odd corank two, and the corrected binary boundary. The
+non-dyadic branch and the cited O'Meara 63:9 input remain separate gaps.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, Section 3 endpoints, and the
@@ -85,7 +89,8 @@ Definition 7.16, Remark 7.17, full Lemmas 7.18--7.20, and the corrected
 Lemma 7.13 consequence, together with complete Theorem 7.2 and Remark 7.3,
 and the Corollary 7.21 catalogue and conditional numerical wrapper, listed in
 `05_theorem_correspondence.md`. The dyadic unary table and the rank-one case
-of Lemma 4.9(ii) are also complete. The Section 5 and Section 8 deductions are
+of Lemma 4.9(ii), together with every dyadic branch of Theorem 1.10, are also
+complete in their stated scopes. The Section 5 and Section 8 deductions are
 also proved over explicit law packages. The global predicates and logical
 reductions are in scope, with their non-dyadic and arithmetic premises still
 undischarged. This audit does not certify those concrete instances or the

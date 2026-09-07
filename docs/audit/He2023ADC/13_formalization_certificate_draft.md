@@ -124,6 +124,13 @@ excluding ternary space, literal deletion-minimality in Lemma 4.9(ii), and
 the unconditional `2|U|` count. The printed `4(N p)^e` form retains the
 O'Meara premise. Six selected reports are standard-only and the focused gate
 checks 60,154 declarations.
+Dyadic Theorem 1.10 checkpoint:
+`125dcf24f39f0b22a5f69fb33241885169314c06`. Report 51 proves exact
+integral-isometry catalogues for every dyadic rank and parity branch and
+packages them in `heADC2025Theorem110DyadicCorrected`. The binary
+corank-two catalogue retains the formal source refutation and corrected
+`8(N p)^e+2` value. The non-dyadic branch and a generic proof of the cited
+counting law remain pending.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete

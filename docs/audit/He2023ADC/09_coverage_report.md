@@ -44,6 +44,10 @@ counted as a concrete arithmetic implementation.
   and corrected. The exact catalogue has `4|U|+2` classes and, under the
   same O'Meara 63:9 law used by the publisher, `8(N p)^e+2`, rather than the
   printed `+1`; report 48.
+- Every dyadic branch of Theorem 1.10 is now proved through an exact finite
+  integral-isometry catalogue. This includes both parities in equal rank and
+  corank one, stable even corank two, Corollary 7.21's odd corank-two family,
+  and the corrected binary corank-two family; report 51.
 
 ## Published-source discrepancies
 
@@ -66,6 +70,8 @@ The main unresolved mathematical work is:
 
 - a concrete unrestricted Lemma 2.2 and the non-dyadic Section 4 cases;
 - a concrete non-dyadic instance of `SectionFiveLaws`;
+- the concrete non-dyadic catalogue and count required for the unrestricted
+  Theorem 1.10;
 - concrete number-field instances of `SectionEightLaws` and the earlier
   global reduction packages;
 - a repository proof of the O'Meara 63:9 unit-square-class count;

@@ -59,6 +59,7 @@
 | Corrected binary rank-four catalogue | PASS local kernel at f7e8fb7: four maximal rows plus two nonmaximal classes, with exact completeness, irredundancy, and maximality partition; report 48 |
 | Theorem 1.9(ii), exact published binary classification | `SEMANTIC_MISMATCH`; formal negation and corrected three-way biconditional pass at f7e8fb7; report 48 |
 | Theorem 1.10, exact published binary count | `SEMANTIC_MISMATCH`; printed `8(N p)^e+1` is refuted and corrected to `8(N p)^e+2` relative to the same counting law at f7e8fb7; report 48 |
+| Theorem 1.10, all dyadic rank branches | PASS local kernel at 125dcf2: exact complete and irredundant integral-isometry catalogues for equal rank, corank one, stable even corank two, odd corank two, and the corrected binary boundary; numerical formulas retain O'Meara 63:9; non-dyadic branch pending; report 51 |
 | Section 7 mechanical gate | PASS local through bd0c9a3: seven selected Corollary 7.21 endpoints are standard-only; 59,853-declaration focused gate, 2,742-source scanner, scoped 100-column and diff checks |
 | Exact clean Review Kit through Reports 47--48 | PASS locally at clean checkpoint 85772de: archive hash fixed, 2,038 payload hashes verified after extraction, 5,047-job full build, three He ADC audit entries and 60,152-declaration enforcing gate pass; Report 49; GitHub upload is separate |
 | Exact clean Review Kit containing the unary checkpoint | PENDING; da6fbd4 has exact local build/audit/gate evidence but postdates the 85772de kit |

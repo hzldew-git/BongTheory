@@ -271,3 +271,12 @@ cardinality is an explicit proposition-valued premise only in the published
 numerical count; it is neither a Lean axiom nor a proved generic instance.
 Report 50 separates this exact local evidence from a later clean Review Kit,
 GitHub CI, and unsigned human semantic review.
+
+At checkpoint `125dcf24f39f0b22a5f69fb33241885169314c06`, the dyadic
+Theorem 1.10 catalogue module, canonical paper entry, and expanded audit
+compile directly with Lean 4.32.1. Selected dependency reports for both
+generic exact-catalogue constructors, every maximal rank branch, and the
+combined endpoint contain exactly `propext`, `Classical.choice`, and
+`Quot.sound`. The O'Meara 63:9 identity is still a visible theorem premise,
+not an axiom or a proved generic instance. Report 51 separates this local
+evidence from exact-revision clean-kit and human-review gates.

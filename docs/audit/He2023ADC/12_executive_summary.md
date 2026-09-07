@@ -216,6 +216,13 @@ Lemma 4.9(ii). The exact count `2|U|` is unconditional. Its printed
 `4(N p)^e` form retains O'Meara 63:9 as an explicit premise. The 5,032-job
 paper build, expanded audit, and 60,154-declaration focused gate pass locally.
 
+Report 51 closes every dyadic rank branch of Theorem 1.10 at `125dcf2`.
+Each branch is an exact integral-isometry catalogue with rank, `n`-ADC,
+completeness, and irredundancy proofs. The combined endpoint retains the
+formal refutation of the printed binary `+1` value and gives the corrected
+`+2` value. The residue-norm conversion remains conditional on the cited
+O'Meara 63:9 input, and the non-dyadic branch is not yet implemented.
+
 Semantic status: one omitted binary class affects four printed statements
 (Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
 has a separate quantifier mismatch, and the proof of Theorem 7.1 is

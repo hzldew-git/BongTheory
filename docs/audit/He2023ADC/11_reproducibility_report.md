@@ -441,3 +441,17 @@ This evidence is local and exact-revision, but it postdates the clean kit at
 `85772de`. A fresh Review Kit, GitHub CI artifact, permanent release, and
 human semantic approval for this checkpoint remain pending. Report 50 records
 the source correspondence and trust boundary.
+
+## Dyadic Theorem 1.10 local checkpoint
+
+At exact code revision `125dcf24f39f0b22a5f69fb33241885169314c06`,
+`He2023ADCTheorem110.lean` compiles directly and its dependency build
+completes 5,025 jobs. `Bong.Papers.He2023ADC` completes 5,033 jobs, and the
+expanded `BongTest.He2023ADCAudit` passes. Selected dependency reports for
+the catalogue constructors and every exported rank branch contain exactly
+`propext`, `Classical.choice`, and `Quot.sound`. The new source passes the
+scoped forbidden-token, 100-column, and `git diff --check` checks.
+
+This exact local evidence does not replace an independently extracted kit or
+GitHub-hosted CI. Report 51 records the statement correspondence and the
+visible counting-law premise.

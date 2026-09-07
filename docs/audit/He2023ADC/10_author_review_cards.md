@@ -179,5 +179,15 @@ row but not the deleted row. Finally, the unconditional table count `2|U|`
 must be kept separate from the printed `4(N p)^e`, whose conversion uses the
 cited O'Meara 63:9 identity.
 
+Report 51 adds the dyadic Theorem 1.10 card. Reviewers should verify that the
+two generic catalogue constructors prove integral-isometry completeness and
+irredundancy, rather than merely counting table parameters. They should check
+the parity translation for all equal-rank and corank-one branches, the
+`n>=4` boundary in stable even corank two, and the reuse of the exact
+Corollary 7.21 catalogue in odd corank two. The corrected binary catalogue
+and its `+2` value must remain visibly separate from the publisher's formally
+refuted `+1` claim. Finally, they should confirm that O'Meara 63:9 and the
+entire non-dyadic branch remain outside the proved unconditional scope.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

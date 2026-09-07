@@ -195,6 +195,12 @@ Additional concrete declaration groups are:
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the
   corrected `8(N p)^e+2` count relative to O'Meara 63:9, and formal
   refutations of the printed binary Theorems 1.9(ii) and 1.10.
+- `He2023ADCTheorem110` defines a rank-parametrized exact `n`-ADC
+  integral-isometry catalogue, proves the even and odd maximal tables are
+  exact whenever the corresponding classification forces maximality, and
+  instantiates all dyadic equal-rank, corank-one, and corank-two branches.
+  `heADC2025Theorem110DyadicCorrected` combines them with Corollary 7.21 and
+  the corrected binary catalogue; report 51.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full

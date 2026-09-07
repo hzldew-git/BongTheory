@@ -157,6 +157,12 @@ corrected classification and count. The O'Meara cardinality remains an
 explicit premise, exactly as in report 46; report 48 records the new source
 delta.
 
+At `125dcf24f39f0b22a5f69fb33241885169314c06`, report 51 checks that this
+is the only dyadic count discrepancy: every other dyadic rank/parity branch
+is realized by an exact complete and irredundant integral-isometry catalogue
+and has the coefficient printed in Theorem 1.10, relative to the same visible
+O'Meara premise. The non-dyadic branch is not part of that conclusion.
+
 ## Lemma 7.14 determinant parity
 
 The publisher proof on p. 1013 says that the order of the full coefficient
