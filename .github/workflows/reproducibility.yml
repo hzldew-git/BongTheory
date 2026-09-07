@@ -34,7 +34,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 360
     env:
-      LEAN_NUM_THREADS: '4'
+      # Keep clean-clone verification within the memory envelope of both
+      # Ubuntu and Windows hosted runners.
+      LEAN_NUM_THREADS: '1'
 
     steps:
       - name: Check out the exact revision

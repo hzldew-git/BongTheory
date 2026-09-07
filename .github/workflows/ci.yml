@@ -45,6 +45,10 @@ jobs:
         shard: ${{ fromJSON(needs.plan.outputs.matrix) }}
     runs-on: ubuntu-latest
     timeout-minutes: 360
+    env:
+      # A shard may elaborate several large BONG modules at once.  One Lean
+      # worker per process avoids transient runner memory and cache-read faults.
+      LEAN_NUM_THREADS: '1'
 
     steps:
       - name: Check out the exact revision
@@ -85,6 +89,8 @@ jobs:
     needs: plan
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      LEAN_NUM_THREADS: '1'
 
     steps:
       - name: Check out the exact revision
