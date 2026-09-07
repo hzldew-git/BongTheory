@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 import Bong.Bong.BeliUniversalCorollary45
+import Bong.Bong.BeliUniversalPreliminaries
 import Bong.Bong.BeliCorollary44ScaleProof
 import Bong.Bong.Beli2019VolumeOrders
 import Bong.Bong.BeliLemma47Proof

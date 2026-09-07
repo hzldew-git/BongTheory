@@ -1,0 +1,228 @@
+# Formal declaration inventory
+
+- `Bong.Lattice.IsNADC`: local dyadic `n`-ADC predicate.
+- `Bong.Lattice.IsNUniversal.isNADC`: proved implication.
+- `RepresentsAllRelevantOMaximalOfRank`: the restricted maximal test family.
+- `heADCLemma21LocalDyadic`: proved local dyadic specialization of Lemma 2.1.
+
+Additional concrete declaration groups are:
+
+- `isNADC_iff_isNUniversal_of_rank_add_three_le`: dyadic stable-rank equivalence.
+- `He2023ADCSectionThree`: direct endpoints for Lemma 3.1 through Theorem 3.6.
+- `He2023ADCPublishedRepresentation`: `heADC2025Theorem36Published` and
+  `heADC2025Theorem36PublishedFull`, retaining the publisher's exact
+  condition-(iii) sum of capped defects; report 20 distinguishes packages.
+- `He2023ADCSectionFour`: space tables, representation lemmas, maximal table,
+  and rank-at-least-two literal minimal testing sets.
+- `He2023ADCUnaryTesting`: the finite rank-one table, ambient-isometry
+  exhaustion and irredundancy, the exact `W_2^3(c)` excluding witness,
+  literal deletion-minimality, and unconditional and published-form counts.
+- `OMaximalVolume`: maximality and isometry characterized by volume order.
+- `He2023ADCMaximalProfiles`: Remark 4.10 and ten canonical-model branches of
+  the arbitrary-lattice criteria in Lemmas 4.11--4.12.
+- `He2023ADCPublishedProfiles`: whole-space and maximal-lattice transport,
+  the exceptional even rows, all odd rows, and the unary boundary on the
+  published `W/N` families; the auxiliary `kappa` is constructed internally.
+- `He2023ADCGenericProfiles`: both nonexceptional unit and unit-uniformizer
+  columns, with defect parity and the sharp partner derived from the domain.
+- `heADCLemma414LocalDyadic`, `heADCProposition415LocalDyadic`: maximality and ADC.
+- `He2023ADCOddMaximalStructure`: normalized ambient exhaustion, the complete
+  order profile of an arbitrary odd-rank maximal lattice, and
+  `heADC2025Proposition413`, proving all order, alpha, and capped-defect clauses.
+- `He2023ADCQuaternaryMaximal`: maximal isotropic lattices represent the
+  half-hyperbolic plane; the quaternary exception is precisely `N_2^4(1)`;
+  `heADC2025Proposition416Dyadic` includes its integral `A perp A^(pi)` model.
+  `heADCAForm_bilin_apply` verifies the exact published Gram normalization.
+- `He2023ADCEvenRepresentationBounds`: represented endpoint pairs, the strict
+  cross-gap square conclusion including codimension one, and a two-class
+  next-order bound. These are support lemmas, not separate paper results.
+- `He2023ADCEvenFirstTests`: constructed good BONGs on the actual first-column
+  tests, their determinant separation, and `heADC2025Lemma64ii`.
+- `He2023ADCEvenFirstDefects`: `heADC2025Lemma64i`, including exact raw
+  signed-prefix defects and the equal-rank unconditional order conclusion.
+- `He2023ADCEvenSecondTests`: `heADC2025Lemma64iii`, including the empty-head
+  binary discriminant case and the exact three final-pair alternatives.
+- `He2023ADCEvenMixedTests`: the two actual kappa profiles and
+  `heADC2025Lemma64iv` for all five named tests, deriving the strict rank
+  inequality and next order in `{0,1,2}`.
+
+- `He2023ADCEvenTerminalObstruction`: arbitrary actual target profiles and
+  `heADC2025Lemma65i`, with the precise failing index n.
+- `He2023ADCEvenPenultimateObstruction`: capped alternating and mixed-prefix
+  bounds and `heADC2025Lemma65ii`, with the precise failing index n-1.
+- `He2023ADCEvenCorankOneTests`: actual exactly-one maximal tests in
+  Lemma 4.6(i)'s even corank-one specialization and the necessary ADC profile.
+- `He2023ADCCorankOneVolume`: maximal-superlattice volume gap and the
+  standard-tail maximality proof, not a converse of Proposition 4.13.
+- `He2023ADCCorankOneAmbient`: two concrete ambient embeddings and the
+  raised-tail exclusion of all but the second-column unit row.
+- `He2023ADCEvenCorankOne`: `Bong.Lattice.heADC2025Theorem61`, the complete
+  equivalence on arbitrary full lattices, constructing its BONG internally.
+- `He2023ADCEvenCentralTrigger`: three capped-defect inequalities proving
+  the actual published central trigger, including the binary boundary.
+- `He2023ADCEvenCentralPrefix`: five prefix geometry lemmas using arbitrary
+  even next order or raw defect class, then same-parameter non-representation.
+- `He2023ADCEvenCentralObstruction`: target profiles from actual isometries,
+  `heADC2025Lemma66_endpoint`, and both full numbered `heADC2025Lemma66i/ii`.
+- `He2023ADCEvenCentralAlpha`: actual representation bounds the terminal
+  capped defect; alpha alternatives and raw-defect equality are derived;
+  `heADC2025Lemma67_endpoint` and both full `heADC2025Lemma67i/ii` are exported.
+- `He2023ADCEvenCorankTwoTests`: actual hyperbolic/nonexceptional ambient
+  embeddings and n-ADC lifting to the named maximal tests.
+- `He2023ADCSignedDeterminant`: full-product square-class/defect transport
+  from actual ambient isometry, and the raw alternating-head lower bound.
+- `He2023ADCEvenCorankTwoFirst`: arbitrary-lattice endpoints
+  `Bong.Lattice.heADC2025Lemma68i` and `heADC2025Lemma68ii`; these complete
+  only 2/6 clauses of Lemma 6.8, with exact rank restrictions retained.
+- `He2023ADCEvenCorankTwoGenericOrders`, `GenericTests`, and `Generic`
+  prove clauses (v),(vi) on the actual class-exclusion domain, deriving
+  all tests, orders, normalization and original-parameter lattice isometry.
+- `He2023ADCPublishedParameterDomain` proves the normalized square
+  representative equals 1 and bridges the printed exclusion on V with
+  explicit Delta in U. Its `Published` wrappers expose that convention.
+  Together with report 23 this earlier checkpoint supplied 4/6 clauses.
+- `AlternatingEndpointEvenOrders` and `He2023ADCEvenEndpointExclusion`
+  normalize even leading orders only in the ambient quadratic space and
+  exclude both an even-leading endpoint tower and final order -2e.
+- `He2023ADCEvenSecondEndpointOrders` and `He2023ADCEvenSecondEndpointTests`
+  derive the full terminal profile from internally constructed actual tests.
+- `He2023ADCEvenCorankTwoSecond` exports full `heADC2025Lemma68iii` and
+  only the n>=4 endpoint `heADC2025Lemma68iv_of_pos`, on arbitrary actual
+  lattices. Report 25 raises the count to 5/6 whole clauses; n=2 of (iv)
+  is explicitly not asserted.
+- `He2023ADCQuaternaryBoundaryCandidate`, `Conditions`, `Tests`, `Endpoint`,
+  `Generic`, `Normalization`, and `Testing` construct the actual rank-four
+  boundary lattice, prove every finite and exceptional binary test, normalize
+  arbitrary nonexceptional parameters, exhaust the maximal binary catalogue,
+  and conclude that the lattice is 2-ADC but nonmaximal.
+- `He2023ADCQuaternaryBoundaryDiscrepancy` defines the exact binary implication
+  printed in Lemma 6.8(iv), proves that the candidate is not its asserted
+  maximal target, and proves the negation of that implication.
+- `BongTest.He2023ADCQuaternaryBoundaryQ2` supplies a concrete field instance
+  for the 2-ADC, nonmaximality, and discrepancy conclusions.
+- `He2023ADCExceptionalQuaternaryCandidate`, `Conditions`, `Tests`, `Generic`,
+  `Normalization`, `Endpoint`, `Testing`, and `NonThree` construct the actual
+  exceptional Lemma 6.12 lattice, exhaust all relevant maximal binary tests,
+  prove 2-ADC and nonmaximality, and derive the terminal obstruction to 3-ADC.
+- `BongTest.He2023ADCExceptionalQuaternaryQ2` supplies a concrete field
+  instance for all three final Lemma 6.12 conclusions.
+- `He2023ADCLemma69` proves the exact terminal-order dichotomy from the two
+  actual kappa tests, using the literal Theorem 3.6(iii) trigger.
+- `He2023ADCLemma610` verifies all four Beli classification conditions and
+  identifies every exceptional-profile lattice with the constructed model.
+- `He2023ADCLemma611` derives all four binary tests from 2-ADC-ness and exports
+  the published maximal-or-exceptional classification on arbitrary lattices.
+- `He2023ADCTheorem62Discrepancy` freezes the exact published `n=2`
+  biconditional and proves its negation using the actual second-column
+  boundary lattice and the nonisometric ambient-space pair.
+- `He2023ADCTheorem62Stable` transports square-equivalent parameters in both
+  even columns and proves the full `n>=4` restriction of Theorem 6.2 on an
+  arbitrary lattice, with all six Lemma 6.8 branches discharged.
+- `He2023ADCRemark63` identifies the exceptional coefficient when `e=1`,
+  constructs the alternate tail BONG, and proves the actual integral lattice
+  isometry asserted by Remark 6.3.
+- `He2023ADCQuaternaryBoundaryNonThree` proves that the omitted second-column
+  binary boundary lattice is not 3-ADC using an actual maximal ternary target.
+- `He2023ADCQuaternaryBoundaryClassification` proves the complete
+  second-discriminant rank-four classification and exports the corrected
+  three-way binary classification `heADC2025Theorem62_binary_corrected`.
+- `NADCMonotonicity` proves integral-isometry invariance and descent from
+  `(n+1)`-ADC to `n`-ADC by adjoining an integral orthogonal line.
+- `He2023ADCTheorem71` exports `Bong.Lattice.heADC2025Theorem71`, the complete
+  arbitrary-lattice statement with the omitted `n=3` branch repaired.
+- `He2023ADCLemma79` formalizes descent from odd `n`-ADC to the preceding
+  even ADC condition used at the start of the Section 7 characterization.
+- `He2023ADCLemma710`, `He2023ADCLemma76`, `He2023ADCLemma77Initial`,
+  `He2023ADCLemma77`, `He2023ADCLemma78`, and `He2023ADCLemma712` supply the
+  complete order, alpha, truncated-defect, central, and long-condition chain
+  for Lemmas 7.6--7.10 and 7.12.
+- `He2023ADCLemma711` exports the complete normalized two-row theorem
+  `heADC2025Lemma711`, its unit and unit-times-uniformizer components, and the
+  represented-target contradiction needed in the rank-five branch.
+- `He2023ADCLemma713` exports the source-proof-supported per-column
+  simultaneous-failure disjunction and the contradiction used downstream.
+  It does not assert the stronger printed failure of each target separately.
+- `He2023ADCLemma714` exports the determinant-parity comparison, the even
+  initial-prefix sum, and both published conclusions for unit and
+  unit-times-uniformizer ambient parameters in either ambient column.
+- `He2023ADCLemma715` exports the complete integral-isometry biconditional.
+  It derives equality of all orders and alphas, every prefix defect bound,
+  the sole triggered prefix representation, and both maximal and nonmaximal
+  branches without a supplied Beli classification law.
+- `He2023ADCDefinition716` defines the two ambient columns and the exact
+  property denoted by `M_(nu,r)^(n+2)(c)`. It proves both uniqueness by
+  Lemma 7.15 and exhaustion from Theorem 7.4 and normalized odd ambient
+  representatives.
+- `He2023ADCLemma718` excludes the second-column unit endpoint `r=e` and
+  exports the equivalent undefinedness theorem for Definition 7.16.
+- `He2023ADCLemma719Core`, `He2023ADCLemma719Tower`, and
+  `He2023ADCLemma719` construct the unary extension, prove its exact
+  `alpha_n=1`, verify all Theorem 7.4 conditions, and expose the paper's
+  strict unit-defect hypotheses.
+- `He2023ADCLemma719Models` proves integral isometries from the explicit
+  two-column bases to the named `N_1` and `N_2` lattices, lifts them across
+  the unary line, and transports the full `n`-ADC conclusion to the literal
+  products printed in Lemma 7.19.
+- `He2023ADCLemma720Maximal`, `He2023ADCLemma720Ambient`, and
+  `He2023ADCLemma720` prove all parts of Lemma 7.20: the maximal endpoints,
+  exact Hilbert-symbol column selection, determinant completion, both named
+  products, lower-row existence, and the unique undefined triple.
+- `He2023ADCTheorem72` defines the representative-independent product family
+  and proves both directions of the maximal-or-product classification.
+- `He2023ADCTheorem72Published` defines the literal finite base and line
+  parameters, proves equivalence with the intrinsic family by integral
+  isometries, and proves the published maximal-overlap conclusion.
+- `He2023ADCRemark73` proves the exact general-plane normalization for the
+  first two named even lattices and the ordered half-scaled `A` plus unary
+  decomposition for the named odd lattice. It also exports the exact finite
+  representative specialization of the third formula.
+- `He2023ADCCorollary721` constructs the finite maximal/nonmaximal index,
+  proves it is a complete and irredundant integral-isometry catalogue, proves
+  maximality exactly characterizes the left summand, and derives the
+  `(4e+3)|U|` total and `(4e-1)|U|` nonmaximal counts. The two printed
+  residue-norm formulas explicitly retain the O'Meara 63:9 counting premise.
+- `He2023ADCSectionFive` defines the exact four non-dyadic square classes,
+  two maximal columns, and an abstract Jordan/lattice interface. From the
+  explicit `SectionFiveLaws` package it proves Lemmas 5.2--5.4, all four
+  clauses of Lemma 5.3, and the full Theorem 5.1 equivalence.
+- `He2023ADCSectionEight` defines class number one and the distinguishing
+  rank-`n` sublattice property in the global/local interface. From
+  `SectionEightLaws` and the existing Theorem 1.3 laws it proves both clauses
+  of Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5(i)--(ii) and 1.7,
+  Lemma 8.4, and Corollary 8.5.
+- `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
+  both nonmaximal binary boundary classes. It proves exact completeness and
+  irredundancy, the maximality partition, the corrected `4|U|+2` count, the
+  corrected `8(N p)^e+2` count relative to O'Meara 63:9, and formal
+  refutations of the printed binary Theorems 1.9(ii) and 1.10.
+- `He2023ADCTheorem110` defines a rank-parametrized exact `n`-ADC
+  integral-isometry catalogue, proves the even and odd maximal tables are
+  exact whenever the corresponding classification forces maximality, and
+  instantiates all dyadic equal-rank, corank-one, and corank-two branches.
+  `heADC2025Theorem110DyadicCorrected` combines them with Corollary 7.21 and
+  the corrected binary catalogue; report 51.
+- `He2023ADCNonDyadicTheorem110` defines the exact seven-row binary index and
+  eight-row general index, proves both cardinalities, turns the equal-rank
+  and Section 5 maximality implications into complete irredundant catalogues,
+  and assembles all non-dyadic branches with the exponent-zero published
+  formulas. Its concrete classification inputs are isolated in
+  `CatalogueLaws`; report 52.
+- `He2023ADCEnumerativeMain` proves Corollary 1.8's `115+471=586`
+  deduction from a typed partition of the cited catalogues. It encodes the
+  literal 21 source rows of Table 2, proves selection, injectivity, and the
+  exact cardinality, and derives every conclusion of Theorem 1.11 from an
+  explicit external-catalogue and local-verification law package; report 53.
+- `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
+  full four-condition equivalence `heADC2025Lemma75`.
+- `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full
+  necessity, sufficiency, and biconditional endpoints for Theorem 7.4.
+
+`GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
+and regularity. Its `heADCTheorem13`, `heADCTheorem14*`, and the Section 8
+endpoints are conditional logical reductions, not constructions of
+number-field completions or proofs of the global arithmetic inputs. Likewise,
+the Section 5 and catalogue law packages are not concrete non-dyadic
+local-field instances. The Corollary 1.8 and Theorem 1.11 law packages are
+likewise not concrete implementations of the cited external catalogues.
+`BongTest.He2023ADCAudit` prints the actual public types and selected
+transitive axiom sets.

@@ -4,21 +4,34 @@
 (BONGs) for quadratic lattices over dyadic local fields.  Its principal source
 results are five papers by Constantin N. Beli published or circulated in 2003,
 2006, 2009/2010, 2019, and 2020. The two arXiv papers use their frozen 2022
-v2 revisions.
+v2 revisions. Active public extensions cover the published versions of the
+He--Hu `n`-universality paper and He's `n`-ADC paper. The separate He classic
+formalization is deliberately withheld from this GitHub deployment.
 
 ## Current status
 
-- Proof-assistant status: the public theorem endpoints compile without
-  project-specific law parameters and use only `propext`, `Classical.choice`,
-  and `Quot.sound`.
+- Proof-assistant status: the public theorem endpoints compile and use only
+  `propext`, `Classical.choice`, and `Quot.sound`; conditional arithmetic
+  endpoints keep each undischarged mathematical premise visible in their type.
 - Semantic-fidelity status: `PROVISIONAL_MATCH`.
 - Beli 2020 coverage status:
   `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY`; its printed Theorem 3.1
   exponent is kept separate from the exponent derived from Theorem 2.1.
-- Project grade: B.
+- He-paper coverage status: `PARTIAL`. He--Hu has complete formal coverage of
+  its 47 numbered results subject to semantic sign-off; He ADC Section 6 is
+  fully triaged and
+  Section 7 has 19/21 fully formalized numbered items, one documented
+  quantifier mismatch, and a complete Corollary 7.21 catalogue whose final
+  numerical substitution explicitly retains its cited counting premise.
+- Project grade: D because the He ADC audit identifies a substantive
+  theorem-level mismatch; this does not downgrade the separately graded kits.
 - Local reproducibility status:
   `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES` at commit
-  `5befe079dbf3569d1760b8e66bc52aef0de21745`.
+  `5befe079dbf3569d1760b8e66bc52aef0de21745`. He--Hu additionally has an
+  exact independently extracted Review Kit at `8bff7e2`. The corresponding
+  ADC Review Kit at `26dc391` also passes independent extraction: all 5,051
+  build jobs, its canonical audit, both concrete `Q_2` audits, and the
+  60,374-declaration enforcing gate complete successfully.
 - Public hosted reproducibility status: exact-tag Ubuntu and Windows checks
   passed under the scopes and cache boundaries recorded in the public
   `v0.2.0-rc.1` receipt.  The initial Ubuntu build succeeded but its following
@@ -48,13 +61,32 @@ The independent mathematical-review package is under [`docs/audit`](docs/audit).
 See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 [`SOURCES.md`](SOURCES.md) for the exact paper versions used.
 
+## He papers under active formalization
+
+| Published source | Current public endpoint | Honest status |
+|---|---|---|
+| He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
+| He, *Doc. Math.* 30 (2025) | complete Section 6 triage; 19/21 Section 7 items; exact dyadic Theorem 1.10 catalogues; conditional Section 5, Section 8, non-dyadic Theorem 1.10, Corollary 1.8, and Theorem 1.11 deductions | partial Grade-D paper artifact; four binary statements and Lemma 7.13 have recorded source mismatches, while arithmetic and external-enumeration inputs remain explicit |
+
+The ADC paper's Lemma 6.8(iv) is refuted at n=2 by an actual nonmaximal
+2-ADC lattice, with a concrete `Q_2` check. See each paper's fidelity report
+for exact coverage, assumptions, source discrepancies, and missing human
+approval.
+
+For these two publicly deployed papers the publisher version of record is the
+sole semantic authority. Preprints are retained only as separately hashed
+comparison sources.
+The implementation order and promotion gates are recorded in
+[`docs/HePapersRoadmap.md`](docs/HePapersRoadmap.md).
+
 ## Download one paper
 
-Reviewers do not need the complete 2,500-file development tree. The
-[`paper-specific Review Kit index`](papers/INDEX.md) provides one source-only
-ZIP for each paper, together with its canonical Lean entry, axiom audit,
-fidelity package, exact source commit, and checksums. Every kit is generated
-from the local transitive import closure and is built again after extraction.
+Reviewers do not need the complete development tree. The
+[`paper-specific Review Kit index`](papers/INDEX.md) links released source-only
+ZIPs and records pending kits. Each kit contains its canonical Lean entry,
+axiom audit, fidelity package, exact source commit, and checksums. Every kit is
+generated from the local transitive import closure and is built again after
+extraction; unreleased manifests are also built as per-paper CI artifacts.
 
 The metadata-driven procedure in [`papers/SCHEMA.md`](papers/SCHEMA.md) is the
 default distribution requirement for every later BONG-related paper added to
@@ -74,6 +106,8 @@ lake env lean BongTest/Beli2006Audit.lean
 lake env lean BongTest/Beli2009Audit.lean
 lake env lean BongTest/Beli2019Audit.lean
 lake env lean BongTest/Beli2020Audit.lean
+lake env lean BongTest/HeHu2022Audit.lean
+lake env lean BongTest/He2023ADCAudit.lean
 ```
 
 For the complete clean-clone protocol and expected output, see

@@ -9,6 +9,11 @@ param(
 
     [string] $RepositoryRoot = '',
 
+    [ValidatePattern('^[A-Za-z0-9._-]+$')]
+    [string[]] $ExcludePaper = @(),
+
+    [switch] $GitHubDeployableOnly,
+
     [switch] $AllowDirty
 )
 
@@ -23,12 +28,26 @@ if (-not (Test-Path -LiteralPath $OutputDirectory -PathType Container)) {
 }
 
 $manifests = @(
-    Get-ChildItem -LiteralPath (Join-Path $RepositoryRoot 'papers') -Directory |
-        Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName 'paper.json') } |
-        Sort-Object Name
+    foreach ($directory in Get-ChildItem `
+            -LiteralPath (Join-Path $RepositoryRoot 'papers') -Directory) {
+        $manifestPath = Join-Path $directory.FullName 'paper.json'
+        if (-not (Test-Path -LiteralPath $manifestPath) -or
+            $directory.Name -in $ExcludePaper) {
+            continue
+        }
+        if ($GitHubDeployableOnly) {
+            $manifest = Get-Content -LiteralPath $manifestPath -Raw |
+                ConvertFrom-Json
+            if ($manifest.deployment.githubReviewKit -eq $false) {
+                continue
+            }
+        }
+        $directory
+    }
 )
+$manifests = @($manifests | Sort-Object Name)
 if ($manifests.Count -eq 0) {
-    throw 'No paper manifests were discovered.'
+    throw 'No paper manifests remained after applying the exclusions.'
 }
 
 $results = @()

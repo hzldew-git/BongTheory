@@ -11,6 +11,8 @@
 *.obj
 *.out
 *.tmp
+__pycache__/
+*.py[cod]
 /declarations2009.txt
 /law_classes.txt
 /law_inventory_current.txt

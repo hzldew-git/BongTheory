@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.4.0-rc.1 — 2026-09-08
+
+- Add the canonical He--Hu 2022 paper entry, audit entry, publisher-source
+  manifest, complete 47-item coverage package, and an independently extracted
+  Review Kit. Human semantic sign-off remains pending.
+- Add the canonical He 2023 ADC paper entry and its three audit entries. The
+  deployed scope includes complete Section 6 triage, 19/21 Section 7 items,
+  exact dyadic Theorem 1.10 catalogues, and conditional non-dyadic/global
+  finite deductions.
+- Preserve five publisher discrepancies as explicit audit results: four
+  binary claims omit a realized nonmaximal class, and Lemma 7.13 has a
+  quantifier mismatch. The corrected statements are proved separately.
+- Derive Review Kit and release-reproducibility jobs from each paper manifest's
+  deployment policy. The unfinished He classic formalization is absent from
+  this release tree and is not packaged or uploaded.
+- Retain Grade D and `NOT_COMPLETE` for the ADC paper: concrete arithmetic,
+  external catalogue, matrix, local-check, and human-review obligations remain
+  visible rather than being treated as proved by compilation.
+
 ## 0.3.0-rc.1 — 2026-09-01
 
 - Normalize *Universal integral quadratic forms over dyadic local fields* as

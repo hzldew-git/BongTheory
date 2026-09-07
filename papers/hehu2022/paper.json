@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "id": "hehu2022",
+  "canonicalName": "He-Hu 2022",
+  "assetStem": "HeHu2022",
+  "workYear": 2022,
+  "publicationYear": 2024,
+  "title": "On n-universal quadratic forms over dyadic local fields",
+  "author": "Zilong He and Yong Hu",
+  "citation": "Zilong He and Yong Hu, On n-universal quadratic forms over dyadic local fields, Sci. China Math. 67 (2024), 1481-1506",
+  "doi": "https://doi.org/10.1007/s11425-022-2133-0",
+  "authoritativeSource": {
+    "authority": true,
+    "kind": "publisher-version-of-record",
+    "url": "https://link.springer.com/content/pdf/10.1007/s11425-022-2133-0.pdf",
+    "description": "26-page publisher PDF; version of record published online 25 January 2024",
+    "sha256": "32CBF87286B6580B91DCF051CABF3C31C62D65098B7C75177B00C5FBCF1E24E6",
+    "pageCount": 26,
+    "byteCount": 391090,
+    "versionDate": "2024-01-25",
+    "redistributable": false
+  },
+  "comparisonSources": [
+    {
+      "authority": false,
+      "kind": "arxiv-accepted-manuscript",
+      "url": "https://arxiv.org/abs/2204.01997v2",
+      "description": "31-page arXiv v2 comparison copy, revised 21 March 2023",
+      "sha256": "8CA1029624EC42037562CF1367958F9FCBD6AC4796405828BB97F3421246D677"
+    }
+  ],
+  "entryModule": "Bong.Papers.HeHu2022",
+  "auditModules": [
+    "BongTest.HeHu2022Audit"
+  ],
+  "auditDirectory": "docs/audit/HeHu2022",
+  "sourceDelta": "docs/audit/HeHu2022/SOURCE_DELTA.md",
+  "coverageStatus": "FULLY_FORMALIZED",
+  "semanticStatus": "PROVISIONAL_MATCH_PENDING_INDEPENDENT_REVIEW",
+  "grade": "B",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "formalizedScope": [
+    "Theorem 1.1 complete right-hand-side statement layer with one-based to zero-based index translation",
+    "All directly numbered results in Section 2",
+    "Section 3 definitions and propositions through Proposition 3.7, including all Table 1 classification and Table 2 maximality rows",
+    "Lemmas 3.9-3.11 and 3.13-3.14 with literal published endpoint models",
+    "Lemma 4.2 complete equivalence using the exact square/discriminant tests and deep same-rank completion",
+    "Lemma 4.3 complete exceptional N_2^n(Delta) test with both strict defect conclusions and exact nonrepresentation",
+    "Lemmas 4.4-4.5 and Theorem 4.1 complete, together with the exact I1E-I3E condition layer and Theorem 4.7 invariant conversion",
+    "Remark 5.2, Theorems 5.1 and 5.3, Proposition 5.5, and Lemmas 5.4 and 5.6-5.11",
+    "All numbered results in Section 6",
+    "Corollary 4.6 and Theorem 4.7 as direct endpoints",
+    "Full Theorem 1.1 equivalence at the published rank and parity scope",
+    "Theorem 1.2 in the literal finite normalized-U form, including cardinalities, pairwise nonisometry, the unique binary omission, and proper-subset minimality"
+  ],
+  "excludedScope": [
+    "Independent human semantic sign-off"
+  ],
+  "reviewNotice": "All 47 directly numbered publisher items are accounted for and every mathematical assertion has a kernel-checked endpoint. Theorem 1.2 is checked in the literal finite normalized-U form, including table cardinalities and proper-subset minimality. Definition 3.1 uses a canonical equivalent construction characterized by Proposition 3.2 and remains explicitly flagged for independent semantic review; no independent human sign-off is claimed."
+}
