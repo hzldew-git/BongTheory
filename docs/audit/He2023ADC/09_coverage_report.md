@@ -1,121 +1,79 @@
 # Coverage report
 
-Coverage status: `IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCH`.
+Coverage status:
+`IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCHES_AND_CONDITIONAL_ARITHMETIC_LAWS`.
 
-- Publisher inventory: 78/78 directly numbered items identified.
-- Local dyadic definition, maximal testing, maximal-implies-ADC, equal-rank
-  equivalence and stable-rank ADC/universality equivalence are proved.
+The publisher inventory identifies all 78 directly numbered items. Counts
+below refer to paper results, not Lean declarations; a result with several
+formal branches is still one paper item, and a conditional proof is not
+counted as a concrete arithmetic implementation.
+
+## Current proved and audited scope
+
+- The local dyadic ADC definition, maximal testing, maximal-implies-ADC,
+  equal-rank equivalence, and stable-rank ADC/universality equivalence are
+  proved. The global predicates and Theorems 1.3--1.4 are present as logical
+  reductions with explicit arithmetic premises.
 - Section 3 has direct endpoints for all six numbered items.
-- Section 4 has the space and maximal-table endpoints, representation
-  reductions, rank-at-least-two minimal testing sets, the coordinate component
-  of Remark 4.10, ten concrete-model profile criteria, and all thirteen
-  published-family branches covering Lemmas 4.11--4.12. Proposition 4.13 now
-  has a complete endpoint for arbitrary odd-rank maximal lattices, including
-  all alpha and bracketed-defect conclusions and the ternary boundary.
-- Both clauses of Proposition 4.16 have completed dyadic proofs: the
-  hyperbolic representation exception and its explicit integral model.
-  The whole published proposition is `SPECIAL_CASE_ONLY`, since its
-  non-dyadic part is not supplied by the current field context.
-- Section 6 has local kernel-complete proofs of all four clauses of
-  Lemma 6.4, on the actual named tests and including their short-rank
-  boundaries. This is one numbered lemma, not four paper results, and it
-  does not complete either of the even ADC classification theorems.
-- Both clauses of Lemma 6.5 are also locally kernel-complete and independently
-  AI-reviewed. They prove the two exact pointwise obstructions, not merely
-  non-representation.
-- Theorem 6.1 is now locally complete and independently AI-reviewed: every
-  full lattice of rank n+1, for even n >= 2, is n-ADC iff it is maximal.
-  This completes 1/2 of Section 6's numbered classification theorems;
-  Theorem 6.2 remains pending.
-  The needed actual even corank-one case of Lemma 4.6(i) is also proved;
-  it does not complete all of Lemma 4.6.
-- Both Lemma 6.6 clauses are now locally complete and independently
-  AI-reviewed. The exact central trigger and prefix non-representation
-  are proved on arbitrary good BONGs of both actual targets.
-- Both Lemma 6.7 clauses are locally complete and independently AI-reviewed:
-  actual representation gives the exact alpha alternatives and raw/capped
-  defect equalities. At that checkpoint Section 6 totaled 5/12 numbered items,
-  not a whole-paper
-  completion percentage; Theorem 6.2 remains pending.
-- Lemma 6.8(i)--(ii) now passes local and independent checks, with actual
-  lattice isometry and exact n=2/n>=4 boundaries. This is only 2/6 clauses
-  of that lemma; the count of fully complete Section 6 items remains 5/12.
-  Its own clean-kit CI remains pending. The earlier f6f7485/c82668b kit
-  passed clean CI and enforced dependency checks through full Lemma 6.7.
-- Report 24 adds locally proved and independently AI-reviewed clauses
-  (v),(vi) at b728bce, including n=2 and explicit representative alignment
-  for the printed V domain. That checkpoint supplied 4/6 clauses, still partial;
-  Section 6 remains 5/12 fully completed numbered items. These new proofs
-  still need their own clean kit and CI, and do not imply human approval.
-- Report 25 adds full (iii) and the n>=4 part of (iv) at 074f2cd. Reports
-  26--30 construct the missing boundary candidate and independently prove that
-  it is an actual nonmaximal 2-ADC lattice in `W_2^4(Delta)`. Report 31 records
-  the formal negation of the printed n=2 implication and a concrete `Q_2`
-  witness. Lemma 6.8(iv) is therefore a `STATEMENT_MISMATCH` at n=2, rather
-  than a remaining formalization gap. Section 6 still has 5/12 fully matched
-  numbered items; mismatch evidence does not count as a formalized proof of
-  the paper's false clause.
-- Lemma 6.12 is now locally complete at `cf9f83b`. The actual exceptional
-  lattice in `W_1^4(Delta)` is proved 2-ADC, not 3-ADC, and nonmaximal. The
-  proof exhausts the maximal binary catalogue and has a concrete `Q_2`
-  nonvacuity check. Report 32 records the source-first audit, standard-only
-  dependency sets, and the pending exact-revision clean-kit and human gates.
-  At that checkpoint Section 6 reached 6/12 fully matched numbered items.
-- Lemmas 6.9--6.11 are now locally kernel-complete at `382ef7a`. Lemma 6.9
-  proves the exact terminal dichotomy from the two actual kappa tests;
-  Lemma 6.10 checks all four Beli classification conditions and obtains
-  actual exceptional-lattice isometry; Lemma 6.11 derives all four binary
-  tests from 2-ADC-ness and proves the maximal-or-exceptional classification.
-  Report 33 records source correspondence and trust checks. This raised
-  Section 6 to 9/12 fully matched numbered items at that checkpoint.
-- Remark 6.3 is now locally kernel-complete at `70580bb`, raising Section 6
-  to 10/12 fully matched numbered items. The same checkpoint proves the full
-  `n>=4` restriction of Theorem 6.2 and formally refutes its exact published
-  `n=2` biconditional. Together with the earlier Lemma 6.8 analysis, every
-  numbered Section 6 item is now triaged: ten match, while Lemma 6.8 and
-  Theorem 6.2 each contain a formally refuted `n=2` boundary. Report 34 records
-  the source correspondence, trust checks, and downstream audit obligation.
-  Exact-revision package CI and human sign-off remain separate gates.
-- Global predicates and regularity are defined in an abstract system, and
-  the logical reductions are proved with explicit arithmetic premises.
-- Theorem 7.1 is locally kernel-complete at `c3e6092`. Its published statement
-  is recovered without using the false binary form of Theorem 6.2: the formal
-  proof supplies a corrected three-way rank-four classification and proves
-  that both nonmaximal classes fail 3-ADC. At that checkpoint this was 1/21
-  numbered Section 7 items. The published proof, rather than its theorem statement, is marked
-  incomplete; report 35 records the exact repair and local trust checks.
-- Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 are locally kernel-complete at
-  `2417a4f`. Lemma 7.11 is complete in both normalized parameter rows at
-  `832d10c`. Lemma 7.14 is complete at `6c52803`, Lemma 7.15 at `06d2507`,
-  Definition 7.16 through Lemma 7.19 at `7b21fe0`, Lemma 7.20 at `b86a9d4`,
-  Theorem 7.2 at `07cd548`, Remark 7.3 at `287b202`, and Corollary 7.21 at
-  `bd0c9a3`. Nineteen of the 21 Section 7 items are fully formalized,
-  Corollary 7.21 is formalized relative to its cited numerical counting law,
-  and Lemma 7.13 has a source mismatch. The two Lemma 7.19 branches conclude on
-  the literal named products after proved integral-isometry transport. The
-  Lemma 7.11 odd-valuation represented-target contradiction remains the route used by
-  Lemma 7.5. Lemma 7.13's proof-supported simultaneous-failure disjunction is
-  formalized and sufficient downstream; its stronger printed per-target
-  quantifier is recorded as a semantic mismatch. Lemma 7.20 includes every
-  maximal and lower-row named product and its exact unique exception.
-  Theorem 7.2 supplies both the intrinsic and literal finite product families
-  and proves their equivalence and maximal overlap. Remark 7.3 identifies all
-  three named models with the literal printed decompositions by integral
-  lattice isometries. Corollary 7.21 additionally proves a complete and
-  irredundant isometry catalogue, its exact maximal partition, and the counts
-  in terms of `|U|`; only the cited substitution `|U|=2(N p)^e` remains an
-  explicit premise. Reports 36--46 give the exact correspondence and trust
-  checks.
+- Section 4 contains the dyadic space and maximal tables, representation
+  reductions, rank-at-least-two minimal testing sets, all thirteen published
+  `W/N` branches of Lemmas 4.11--4.12, full Proposition 4.13, and the dyadic
+  parts of Lemma 4.14 and Propositions 4.15--4.16. Non-dyadic cases and unary
+  testing-set minimality remain open.
+- Every numbered Section 5 deduction, including all four clauses of Lemma
+  5.3 and Theorem 5.1, is proved from the explicit non-dyadic
+  `SectionFiveLaws` package. A concrete lattice/Jordan instance of that
+  package remains open; report 47.
+- Section 6 is completely triaged. Ten numbered items provisionally match.
+  Lemma 6.8(iv) and Theorem 6.2 are formally refuted at `n=2`; all valid
+  remaining clauses and the full `n>=4` Theorem 6.2 are proved. The corrected
+  binary result classifies rank-four 2-ADC lattices as maximal or one of two
+  realized nonmaximal classes; reports 23--35 and 48.
+- Nineteen of the 21 Section 7 items are fully formalized. Corollary 7.21 has
+  a complete irredundant integral-isometry catalogue and unconditional
+  counts in terms of `|U|`; its printed residue-norm formulas retain the
+  cited O'Meara 63:9 cardinality as an explicit premise. Lemma 7.13 has a
+  source quantifier mismatch: the proof-supported simultaneous-failure
+  disjunction is formalized and suffices downstream; reports 35--46.
+- Every numbered Section 8 deduction, plus Theorems 1.5 and 1.7, is proved
+  from `SectionEightLaws` and the existing Theorem 1.3 package. Concrete
+  localization, class-number, Meyer--Xu--O'Meara, genus-transport, and
+  scaling-stability instances remain open; report 47.
+- The binary cases of Theorem 1.9(ii) and Theorem 1.10 are formally refuted
+  and corrected. The exact catalogue has `4|U|+2` classes and, under the
+  same O'Meara 63:9 law used by the publisher, `8(N p)^e+2`, rather than the
+  printed `+1`; report 48.
 
-The remaining scope includes concrete localization and Lemma 2.2, unrestricted
-local-field results, unary testing-set minimality, remaining Section 4 clauses,
-Section 5, proof of the O'Meara 63:9 counting input, the printed-strength
-Lemma 7.13 claim, Section 8
-global proofs, and the
-enumerative main theorems. The `W/N` correspondence gap for Lemmas 4.11--4.12 is closed
-in code; this does not fill the other boundary cases or provide human approval.
+## Published-source discrepancies
 
-No completed-paper percentage is inferred from the number of declarations:
-one numbered result can have many formal branches, and some current branches
-only cover the dyadic specialization. The whole-paper verdict remains
-`NOT_COMPLETE` and the overall coverage grade is D.
+One omitted second-discriminant class causes four affected printed claims:
+
+1. Lemma 6.8(iv), binary endpoint;
+2. Theorem 6.2, binary biconditional;
+3. Theorem 1.9(ii), binary classification; and
+4. Theorem 1.10, binary count.
+
+These are separately frozen and refuted; the source is never silently
+rewritten. In addition, Lemma 7.13 has a stronger printed quantifier than its
+published proof establishes, and the printed proof of Theorem 7.1 omits the
+second binary boundary class. Theorem 7.1 itself is proved by a repaired
+route that exhausts both exceptions.
+
+## Remaining scope
+
+The main unresolved mathematical work is:
+
+- a concrete unrestricted Lemma 2.2 and remaining Section 4/unary cases;
+- a concrete non-dyadic instance of `SectionFiveLaws`;
+- concrete number-field instances of `SectionEightLaws` and the earlier
+  global reduction packages;
+- a repository proof of the O'Meara 63:9 unit-square-class count;
+- any publisher-corrected replacement for the four binary statements and a
+  resolution of the printed-strength Lemma 7.13 claim;
+- Corollary 1.8, Theorem 1.11, and the remaining enumerative consequences;
+- exact-revision clean Review Kit CI, independent human semantic sign-off,
+  merge, and release promotion.
+
+The whole-paper verdict remains `NOT_COMPLETE`, with grade D because the
+published version contains substantive classification mismatches. That grade
+does not assert that the unformalized remainder is false.

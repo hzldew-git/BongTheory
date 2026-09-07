@@ -21,8 +21,8 @@ additional paper lemmas; the audit packages give the fuller maps.
 | Beli 2020, Theorem 3.1, literal text at first scale zero | `Bong.Lattice.JordanDecomposition.isUniversal_iff_universalTheorem31Conditions_of_firstScaleOrder_eq_zero` | `Bong/Bong/BeliUniversalTheorem31Proof.lean` | `PROVISIONAL_MATCH` |
 | Beli 2020, Lemma 4.9 | `Bong.BONG.GoodBONG.beliUniversalLemma49` | `Bong/Bong/BeliUniversalLemma49.lean` | `PROVISIONAL_MATCH` |
 | Beli 2020, Corollary 4.10 | `Bong.BONG.GoodBONG.beliUniversalCorollary410` | `Bong/Bong/BeliUniversalCorollary410.lean` | `PROVISIONAL_MATCH` |
-| He--Hu, Theorem 1.1 | `Bong.BONG.GoodBONG.HeHuTheorem11Statement` | `Bong/Bong/HeHu2022Conditions.lean` | `STATEMENT_ONLY_UNPROVED` |
-| He--Hu, Theorem 1.2 maximal-testing core | `Bong.Lattice.heHuMaximalTestingReduction` | `Bong/Papers/HeHu2022.lean` | `PROVED_ABSTRACT_CORE_ONLY` |
+| He--Hu, Theorem 1.1 | `Bong.BONG.GoodBONG.heHu2022Theorem11` | `Bong/Bong/HeHu2022Theorem11.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
+| He--Hu, Theorem 1.2 literal finite testing family | `Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedEvenLiteral`, `Bong.Lattice.QuadraticLatticeModel.heHu2022Theorem12PublishedOddLiteral` | `Bong/Bong/HeHu2022PublishedTestingSet.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He classic, Theorem 1.1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11` | `Bong/Bong/He2022ClassicTheorem11.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He classic, Theorem 1.5 local implication, all n >= 1 | `Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks` | `Bong/Bong/He2022ClassicTheorem15.lean` | `FULLY_FORMALIZED_LOCAL_COMPONENT` |
 | He classic, Theorem 1.3 even literal minimality | `Bong.Lattice.QuadraticLatticeModel.he2022ClassicTheorem13_even_literalMinimal` | `Bong/Bong/He2022ClassicSectionSeven.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
@@ -40,10 +40,15 @@ additional paper lemmas; the audit packages give the fuller maps.
 | He ADC, Theorem 7.2 | `Bong.BONG.GoodBONG.heADC2025Theorem72Published`, `heADC2025Theorem72Published_overlap` | `Bong/Bong/He2023ADCTheorem72Published.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He ADC, Remark 7.3 | `Bong.BONG.GoodBONG.heADC2025Remark73_firstPublished`, `heADC2025Remark73_secondPublished`, `heADC2025Remark73_thirdPublishedRepresentative` | `Bong/Bong/He2023ADCRemark73.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He ADC, Corollary 7.21 | `Bong.HeADC2025Corollary721Index.isExactNADCIsometryCatalogue`, `model_isOMaximal_iff`, `heADC2025Corollary721` | `Bong/Bong/He2023ADCCorollary721.lean` | `FORMALIZED_RELATIVE_TO_CITED_COUNTING_LAW` |
+| He ADC, Theorem 5.1 and Lemmas 5.2--5.4 | `Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51`, `heADC2025Lemma52`, `heADC2025Lemma53i`, `heADC2025Lemma53ii`, `heADC2025Lemma53iii`, `heADC2025Lemma53iv`, `heADC2025Lemma54` | `Bong/Bong/He2023ADCSectionFive.lean` | `CONDITIONAL_FORMALIZATION` |
+| He ADC, Theorems 1.5, 1.7 and Section 8 | `Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii`, `heADC2025Theorem17`, `heADC2025Theorem82`, `heADC2025Corollary85` | `Bong/Lattice/He2023ADCSectionEight.lean` | `CONDITIONAL_FORMALIZATION` |
+| He ADC, Theorem 1.9(ii), Theorem 1.10 and Theorem 6.2, binary boundary | `Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem19iiBinaryStatement`, `not_heADC2025Theorem110BinaryCountStatement`, `heADC2025Theorems19iiAnd110BinaryCorrected` | `Bong/Bong/He2023ADCQuaternaryCatalogue.lean` | `PUBLISHED_STATEMENTS_REFUTED_AND_CORRECTED` |
 
-All listed endpoints have zero project-specific law/data parameters in their
-public signatures. The theorem-level status is provisional solely because the
-required independent semantic sign-offs have not yet been recorded.
+Except for rows explicitly marked `CONDITIONAL_FORMALIZATION` or
+`FORMALIZED_RELATIVE_TO_CITED_COUNTING_LAW`, promoted concrete endpoints have
+zero project-specific law/data parameters in their public signatures. The
+conditional rows expose their exact undischarged inputs; the audit packages
+record the separate independent semantic-sign-off status.
 
 For Beli 2020, `PROVISIONAL_MATCH` also records the frozen source
 discrepancy in Theorem 3.1(3.2.1--2): direct substitution gives coefficient

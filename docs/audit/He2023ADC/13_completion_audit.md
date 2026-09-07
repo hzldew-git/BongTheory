@@ -22,7 +22,9 @@
 | No `sorry`, project axiom, or `opaque` declaration in scoped files | PASS, local audit |
 | Global Definition 1.2 and regularity | Abstract definitions present; concrete number-field realization pending |
 | Theorem 1.3 and global parts of 1.4 | Conditional logical reductions; arithmetic premises undischarged |
-| Unrestricted local cases, remaining Section 4, Section 5, printed-strength Lemma 7.13, O'Meara 63:9 counting law, and Section 8 | FAIL / pending |
+| Section 5 numbered logic | CONDITIONAL PASS at d447cd3: Theorem 5.1 and Lemmas 5.2--5.4 follow from explicit `SectionFiveLaws`; concrete non-dyadic Jordan/lattice instance pending; report 47 |
+| Section 8 numbered logic and Theorems 1.5, 1.7 | CONDITIONAL PASS at d447cd3: every deduction follows from explicit `SectionEightLaws`; concrete number-field and Meyer--Xu--O'Meara instances pending; report 47 |
+| Unrestricted Lemma 2.2, remaining Section 4/unary cases, printed-strength Lemma 7.13, and O'Meara 63:9 counting law | FAIL / pending |
 | Remaining main theorems and enumeration | FAIL / pending |
 | Clean Review Kit containing published profiles | PASS at merge-test commit `6bf3bdf8bd272109e898335683f05bb76664330c`, tree identical to `db03985`; logs inspected |
 | Clean Review Kit including Proposition 4.13, dyadic 4.16, Lemmas 6.4--6.7 and Theorem 6.1 | PASS at f6f7485/c82668b, run 33942437722; 1934 payload hashes, 4963 build jobs, enforcing gate on 57,480 declarations |
@@ -53,6 +55,9 @@
 | Remark 7.3 | PASS local kernel at 287b202: all three literal integral-isometry formulas, exact exponent bounds, sharp scale, and ordered ternary tail; report 45 |
 | Corollary 7.21 catalogue and `|U|` counts | PASS local kernel at bd0c9a3: complete and irredundant isometry catalogue, exact maximal partition, `(4e+3)|U|` total and `(4e-1)|U|` nonmaximal; report 46 |
 | Corollary 7.21 printed residue-norm formulas | CONDITIONAL PASS at bd0c9a3: exact formulas proved from explicit `HeADC2025Corollary721CountingLaw`; no generic proof of the cited O'Meara 63:9 input is present; report 46 |
+| Corrected binary rank-four catalogue | PASS local kernel at f7e8fb7: four maximal rows plus two nonmaximal classes, with exact completeness, irredundancy, and maximality partition; report 48 |
+| Theorem 1.9(ii), exact published binary classification | `SEMANTIC_MISMATCH`; formal negation and corrected three-way biconditional pass at f7e8fb7; report 48 |
+| Theorem 1.10, exact published binary count | `SEMANTIC_MISMATCH`; printed `8(N p)^e+1` is refuted and corrected to `8(N p)^e+2` relative to the same counting law at f7e8fb7; report 48 |
 | Section 7 mechanical gate | PASS local through bd0c9a3: seven selected Corollary 7.21 endpoints are standard-only; 59,853-declaration focused gate, 2,742-source scanner, scoped 100-column and diff checks |
 | Remaining Section 7 issue | FAIL / source mismatch: printed-strength Lemma 7.13; the proof-supported disjunction is formalized |
 | Independent semantic sign-off | FAIL / pending |

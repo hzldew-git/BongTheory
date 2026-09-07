@@ -130,3 +130,27 @@ The printed residue-norm formulas separately require
 `|U|=2(N p)^e`. No generic proved instance is currently present. This
 explicit theorem parameter must not be mistaken for a discharged result merely
 because `#print axioms` reports only foundational axioms. See report 46.
+
+Section 5 is proved over `HeADC2025NonDyadicSystem.SectionFiveLaws`. The
+package explicitly contains the non-dyadic Jordan-rank identities, ambient
+representation separations, target integrality/ranks, and maximal-lattice
+facts used by the published proof. Supplying such a structure is a genuine
+mathematical assumption until a concrete non-dyadic instance is built; it is
+not discharged by the theorem bodies or by their standard-only axiom reports.
+None of the numbered Section 5 conclusions occurs as a structure field. See
+report 47.
+
+Section 8 is proved over `HeADC2025GlobalData.SectionEightLaws` together with
+the existing Theorem 1.3 law package. Concrete localization, genus transport,
+class-number-one regularity, the distinguishing-lattice theorem, and scaling
+stability are all visible structure fields. In particular, Theorem 8.2's
+Meyer--Xu--O'Meara content is not reconstructed by returning its field.
+The remaining theorems do prove the source deductions from those inputs. See
+report 47.
+
+The corrected quaternary catalogue does not assume completeness or
+irredundancy. Those properties are proved using the corrected three-way
+classification, maximal-lattice uniqueness, and nonisometric ambient spaces.
+Only the final residue-norm conversion assumes the already disclosed
+O'Meara 63:9 counting law; the unconditional count is `4|U|+2`. See report
+48.

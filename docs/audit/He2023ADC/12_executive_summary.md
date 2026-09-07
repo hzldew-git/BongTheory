@@ -4,7 +4,7 @@ Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
 fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
 
 Proof assistant: Lean 4.32.1. The current proof checkpoint is
-`bd0c9a3f66d3465cd518bae2d75386887f79d5a5`.
+`f7e8fb7e1b8d43b66a62e500f61f7eeba004f136`.
 
 The concrete dyadic development now contains the ADC definition, maximal
 testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
@@ -193,13 +193,33 @@ selected reports are standard-only, the focused gate checks 59,853
 declarations, and the scanner checks 2,742 sources. The cited counting theorem
 still has no proved generic repository instance.
 
-Semantic status: two confirmed theorem-level boundary mismatches plus provisional and
-incomplete material elsewhere; human review cards remain unsigned. Trust status: the new concrete endpoints use only the
-standard logical axioms; conditional global inputs remain explicit.
+Report 47 adds the complete logical deductions of Sections 5 and 8 at
+`d447cd3`. Lemmas 5.2--5.4 and Theorem 5.1 follow from an explicit
+non-dyadic Jordan/lattice law package. Lemma 8.1, Theorem 8.2, Corollary 8.3,
+Theorems 1.5 and 1.7, Lemma 8.4, and Corollary 8.5 follow from an explicit
+global arithmetic law package. All selected endpoints are standard-only.
+These are conditional formalizations: concrete non-dyadic and number-field
+instances of the law packages remain open.
+
+Report 48 propagates the verified binary boundary to Theorems 1.9(ii) and
+1.10 at `f7e8fb7`. A finite family consisting of the four published maximal
+rows and both realized nonmaximal classes is proved rank-correct, 2-ADC,
+complete, and irredundant. It has exactly `4|U|+2` classes and, relative to
+the same O'Meara 63:9 input, `8(N p)^e+2`. The printed two-way
+classification and `+1` count are frozen and formally refuted rather than
+silently replaced.
+
+Semantic status: one omitted binary class affects four printed statements
+(Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
+has a separate quantifier mismatch, and the proof of Theorem 7.1 is
+incomplete as printed. Provisional and conditional material remains
+elsewhere; human review cards remain unsigned. Trust status: the new concrete
+endpoints use only the standard logical axioms; conditional local/global
+inputs remain explicit.
 Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
 in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
 full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
-The later additions through bd0c9a3
+The later additions through f7e8fb7
 still need their own clean run. The monolithic run 33942437720 hit its six-hour timeout; the
 separate paper-kit run passed for all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

@@ -44,14 +44,19 @@ arXiv copies are non-authoritative comparison sources.
 | He ADC Lemma 7.18 | second-column unit endpoint `r=e` is excluded | full local proof at 7b21fe0 on the actual named maximal model; report 41; exact-revision clean CI pending |
 | He ADC Lemma 7.19 | both named products `N_nu^(n+1)(delta) orthogonal-sum <c>` are n-ADC with `R_(n+1)=1-d(delta)` | full local construction and integral-isometry bridge at 7b21fe0; report 42; exact-revision clean CI pending |
 | He ADC Lemma 7.20 | maximal endpoints, the unique undefined triple, and both Hilbert-selected named products | full local classification at b86a9d4; report 43; exact-revision clean CI pending |
+| He ADC Theorem 7.2, Remark 7.3, Corollary 7.21 | full odd rank-`n+2` classification, literal models, exact catalogue and counts | local proofs through bd0c9a3; numerical Corollary 7.21 uses explicit O'Meara 63:9 premise; reports 44--46; clean CI pending |
+| He ADC Section 5 | Theorem 5.1 and Lemmas 5.2--5.4 | all numbered deductions proved at d447cd3 from explicit non-dyadic laws; concrete instance pending; report 47 |
+| He ADC Section 8 and global main logic | Lemma 8.1 through Corollary 8.5, Theorems 1.5 and 1.7 | all deductions proved at d447cd3 from explicit arithmetic laws; concrete number-field instances pending; report 47 |
+| He ADC binary main theorems | exact six-family catalogue and corrected Theorems 1.9(ii), 1.10 | printed binary classification and `+1` count refuted; corrected `+2` count proved at f7e8fb7; report 48; clean CI pending |
 
 The current milestone is not whole-project completion. The Classic publisher
-Lemma 7.1(ii) has a checked refutation when e > 1. ADC Lemma 6.8(iv) also has
-an independently audited counterexample at n=2. Affected downstream statements
-require separately justified routes or corrected formulations. Theorem 7.1 now
-has such a repaired route; the remaining ADC classifications and concrete global consequences
-remain active proof work. Exact-commit clean-kit CI and release publication
-are separate gates from local kernel acceptance.
+Lemma 7.1(ii) has a checked refutation when e > 1. In ADC, one independently
+audited `n=2` counterexample affects Lemma 6.8(iv), Theorem 6.2, Theorem
+1.9(ii), and Theorem 1.10. Theorem 7.1 has a repaired proof, and the binary
+classification/count now has an exact corrected catalogue. Concrete
+non-dyadic and number-field law instances, remaining classifications, and
+enumeration remain active proof work. Exact-commit clean-kit CI and release
+publication are separate gates from local kernel acceptance.
 
 ## Proof order
 
@@ -61,10 +66,11 @@ are separate gates from local kernel acceptance.
    scale integrality distinct from norm integrality and source corrections
    distinct from literal publisher claims. Do not replace a missing odd-rank
    proof with an unproved lower-even condition.
-3. Continue ADC through the remaining Section 4 structural results, local
-   Sections 5-7 classifications, and the concrete number-field consequences.
-   Abstract local-to-global predicates and conditional law packages are not
-   substitutes for proving the arithmetic hypotheses in Sections 1 and 8.
+3. Instantiate the ADC Section 5 non-dyadic laws and Section 8 number-field
+   laws, then complete Lemma 2.2, the remaining Section 4/unary results,
+   cited unit-square-class counting, and enumeration. Conditional law packages
+   record the source logic but are not substitutes for their arithmetic
+   hypotheses.
 
 ## Gate for every promoted theorem
 

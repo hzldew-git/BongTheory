@@ -235,3 +235,20 @@ cardinality law is an explicit theorem premise, not a Lean axiom and not a
 proved repository instance. Report 46 separates the unconditional catalogue
 from the conditional numerical substitution and the remaining clean-CI and
 human-review gates.
+
+At checkpoint `d447cd3af10de9ff176df7f9bb48594d72fc4e44`, the two new
+Section 5 and Section 8 modules, the canonical paper entry, and the expanded
+audit compile directly with Lean 4.32.1. Axiom reports for every exported
+numbered endpoint contain exactly `propext`, `Classical.choice`, and
+`Quot.sound`. `SectionFiveLaws` and `SectionEightLaws` are ordinary
+proposition-valued structures passed as hypotheses; they introduce no Lean
+axiom. Their concrete mathematical instances remain open. See report 47.
+
+At checkpoint `f7e8fb7e1b8d43b66a62e500f61f7eeba004f136`, the corrected
+quaternary catalogue module, canonical paper entry, and expanded audit compile
+directly with Lean 4.32.1. Selected reports for completeness, irredundancy,
+maximality, both source refutations, and the corrected classification/count
+contain exactly `propext`, `Classical.choice`, and `Quot.sound`. The
+O'Meara 63:9 cardinality remains an explicit structure hypothesis, not a Lean
+axiom or a proved instance. Exact-revision clean Review Kit CI remains
+pending at this checkpoint. See report 48.

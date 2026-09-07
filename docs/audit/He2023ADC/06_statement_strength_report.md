@@ -218,3 +218,31 @@ intermediate cardinalities `(4e+3)|U|` and `(4e-1)|U|` are unconditional.
 The endpoint `heADC2025Corollary721` is a `PROVISIONAL_MATCH` relative to the
 explicit O'Meara 63:9 premise `|U|=2(N p)^e`; it does not prove that cited
 arithmetic theorem. See report 46.
+
+At `d447cd3`, the Section 5 endpoints are `LOGICALLY_EQUIVALENT` to the
+publisher's deductions once `SectionFiveLaws` is instantiated. Their public
+types retain `n>=2` and exactly the ranks `n+1` or `n+2`; Lemma 5.3 is split
+into its four printed clauses. The law package contains only the earlier
+non-dyadic Jordan, representation, and maximal-lattice facts used by the
+paper, but no concrete non-dyadic instance has yet been proved. The result is
+therefore `CONDITIONAL_FORMALIZATION`, not an unconditional completion of
+Section 5. See report 47.
+
+At the same checkpoint, Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5
+and 1.7, Lemma 8.4, and Corollary 8.5 reproduce the source-level implications
+and biconditionals in the abstract global/local system. The Meyer--Xu--
+O'Meara distinguishing-lattice input, concrete localization, class-number
+arithmetic, and scaling stability remain visible fields of
+`SectionEightLaws`. These endpoints are likewise
+`CONDITIONAL_FORMALIZATION`; they are not weaker conclusions, but their
+arithmetic hypotheses have not been instantiated. See report 47.
+
+At `f7e8fb7`, the binary specializations of Theorem 1.9(ii) and Theorem 1.10
+are `SEMANTIC_MISMATCH`, not unformalized statements. The former repeats the
+false two-way list of Theorem 6.2, and the latter undercounts the resulting
+isometry classes by one. The corrected formal statement is necessarily
+stronger as a classification: it includes both realized nonmaximal classes,
+proves completeness and irredundancy, and changes `4|U|+1` to `4|U|+2`.
+After the paper's explicit O'Meara 63:9 substitution this is
+`8(N p)^e+2`, not the printed `+1`. Both literal source propositions remain
+separately frozen and formally negated. See report 48.

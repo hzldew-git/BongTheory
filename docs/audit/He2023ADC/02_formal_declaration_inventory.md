@@ -178,13 +178,29 @@ Additional concrete declaration groups are:
   maximality exactly characterizes the left summand, and derives the
   `(4e+3)|U|` total and `(4e-1)|U|` nonmaximal counts. The two printed
   residue-norm formulas explicitly retain the O'Meara 63:9 counting premise.
+- `He2023ADCSectionFive` defines the exact four non-dyadic square classes,
+  two maximal columns, and an abstract Jordan/lattice interface. From the
+  explicit `SectionFiveLaws` package it proves Lemmas 5.2--5.4, all four
+  clauses of Lemma 5.3, and the full Theorem 5.1 equivalence.
+- `He2023ADCSectionEight` defines class number one and the distinguishing
+  rank-`n` sublattice property in the global/local interface. From
+  `SectionEightLaws` and the existing Theorem 1.3 laws it proves both clauses
+  of Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5(i)--(ii) and 1.7,
+  Lemma 8.4, and Corollary 8.5.
+- `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
+  both nonmaximal binary boundary classes. It proves exact completeness and
+  irredundancy, the maximality partition, the corrected `4|U|+2` count, the
+  corrected `8(N p)^e+2` count relative to O'Meara 63:9, and formal
+  refutations of the printed binary Theorems 1.9(ii) and 1.10.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full
   necessity, sufficiency, and biconditional endpoints for Theorem 7.4.
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
-and regularity. Its `heADCTheorem13` and `heADCTheorem14*` are conditional
-logical reductions, not constructions of number-field completions or proofs
-of the global arithmetic inputs. `BongTest.He2023ADCAudit` prints the actual
-public types and selected transitive axiom sets.
+and regularity. Its `heADCTheorem13`, `heADCTheorem14*`, and the Section 8
+endpoints are conditional logical reductions, not constructions of
+number-field completions or proofs of the global arithmetic inputs. Likewise,
+the Section 5 law package is not a concrete non-dyadic local-field instance.
+`BongTest.He2023ADCAudit` prints the actual public types and selected
+transitive axiom sets.

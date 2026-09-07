@@ -105,6 +105,18 @@ residue-norm formulas retain the cited O'Meara 63:9 identity as an explicit
 premise. Seven selected dependency reports are standard-only, the focused
 gate checks 59,853 declarations, and the scanner checks 2,742 tracked Lean
 sources.
+Sections 5 and 8 logical checkpoint:
+`d447cd3af10de9ff176df7f9bb48594d72fc4e44`. Report 47 proves every
+numbered deduction in those sections, together with Theorems 1.5 and 1.7,
+relative to explicit non-dyadic and number-field law packages. Selected
+endpoint reports are standard-only; concrete instances of those packages
+remain pending.
+Binary main-theorem checkpoint:
+`f7e8fb7e1b8d43b66a62e500f61f7eeba004f136`. Report 48 proves an exact
+complete and irredundant rank-four 2-ADC catalogue with two nonmaximal
+classes, formally refutes the printed binary Theorem 1.9(ii) and Theorem
+1.10 count, and proves the corrected `8(N p)^e+2` formula relative to the
+same visible O'Meara 63:9 law. Selected dependency reports are standard-only.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -121,9 +133,9 @@ classifications, enumeration, or omitted boundary cases.
 Independent author approval: pending. Independent domain-expert approval:
 pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
-through full Lemma 6.7. The later developments through bd0c9a3 have
+through full Lemma 6.7. The later developments through f7e8fb7 have
 passed direct local checks; they still require exact-revision clean-kit CI. Exact
 commit distinctions are in report 11. Overall project grade: D because one
-core source lemma and its downstream classification theorem have substantive
-binary-boundary semantic mismatches. Whole-paper
+omitted binary class causes substantive mismatches in four printed claims,
+with a separate quantifier mismatch in Lemma 7.13. Whole-paper
 completion: not achieved.

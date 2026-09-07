@@ -131,6 +131,32 @@ to the cited arithmetic input, not advertised as unconditional repository
 theorems. This is an explicit trust boundary rather than a discrepancy in the
 paper's statement; report 46 gives the full accounting.
 
+## Refuted binary specialization of Theorem 1.9(ii)
+
+Theorem 1.9(ii) on p. 985 inherits the even-rank classification of Theorem
+6.2. At `n=2` it therefore omits the same second-discriminant nonmaximal
+2-ADC class. At `f7e8fb7e1b8d43b66a62e500f61f7eeba004f136`,
+`not_heADC2025Theorem19iiBinaryStatement` proves the negation of the exact
+binary source statement, while `heADC2025Theorem19ii_binary_corrected` proves
+the complete three-way alternative. This is a downstream source mismatch,
+not a new independent counterexample; report 48 gives the catalogue-level
+evidence.
+
+## Refuted binary count in Theorem 1.10
+
+Theorem 1.10 on p. 986 prints `8(N p)^e+1` rank-four 2-ADC isometry classes.
+Its proof on p. 1017 counts only the single nonmaximal class listed by
+Theorem 1.9(ii). The exact formal catalogue has four maximal copies of `U`
+and two distinct nonmaximal classes, hence `4|U|+2`. Under the publisher's
+own O'Meara 63:9 input this is `8(N p)^e+2`.
+
+At the same checkpoint,
+`not_heADC2025Theorem110BinaryCountStatement` formally refutes the printed
+`+1` formula, and `heADC2025Theorems19iiAnd110BinaryCorrected` packages the
+corrected classification and count. The O'Meara cardinality remains an
+explicit premise, exactly as in report 46; report 48 records the new source
+delta.
+
 ## Lemma 7.14 determinant parity
 
 The publisher proof on p. 1013 says that the order of the full coefficient
