@@ -48,6 +48,10 @@ counted as a concrete arithmetic implementation.
   integral-isometry catalogue. This includes both parities in equal rank and
   corank one, stable even corank two, Corollary 7.21's odd corank-two family,
   and the corrected binary corank-two family; report 51.
+- The non-dyadic finite-catalogue deduction of Theorem 1.10 is proved for
+  equal rank and both coranks. Its exact seven-/eight-row counts specialize
+  the printed formula at `e=0`; concrete catalogue laws remain open; report
+  52.
 
 ## Published-source discrepancies
 
@@ -69,9 +73,8 @@ route that exhausts both exceptions.
 The main unresolved mathematical work is:
 
 - a concrete unrestricted Lemma 2.2 and the non-dyadic Section 4 cases;
-- a concrete non-dyadic instance of `SectionFiveLaws`;
-- the concrete non-dyadic catalogue and count required for the unrestricted
-  Theorem 1.10;
+- concrete non-dyadic instances of `SectionFiveLaws` and `CatalogueLaws`,
+  required to discharge the conditional Theorem 1.10 endpoint;
 - concrete number-field instances of `SectionEightLaws` and the earlier
   global reduction packages;
 - a repository proof of the O'Meara 63:9 unit-square-class count;

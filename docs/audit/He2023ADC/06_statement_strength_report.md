@@ -237,6 +237,13 @@ paper, but no concrete non-dyadic instance has yet been proved. The result is
 therefore `CONDITIONAL_FORMALIZATION`, not an unconditional completion of
 Section 5. See report 47.
 
+At `d4c56cc`, the non-dyadic Theorem 1.10 conclusion is
+`LOGICALLY_EQUIVALENT` to the published finite counting deduction once the
+explicit non-dyadic catalogue laws are supplied. It is stronger than a bare
+cardinality equation because every branch includes rank, `n`-ADC,
+completeness, and irredundancy. It remains `CONDITIONAL_FORMALIZATION`, not an
+unconditional theorem over a concrete non-dyadic local field. See report 52.
+
 At the same checkpoint, Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5
 and 1.7, Lemma 8.4, and Corollary 8.5 reproduce the source-level implications
 and biconditionals in the abstract global/local system. The Meyer--Xu--

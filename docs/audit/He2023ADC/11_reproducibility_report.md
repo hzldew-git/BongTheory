@@ -455,3 +455,16 @@ scoped forbidden-token, 100-column, and `git diff --check` checks.
 This exact local evidence does not replace an independently extracted kit or
 GitHub-hosted CI. Report 51 records the statement correspondence and the
 visible counting-law premise.
+
+## Non-dyadic Theorem 1.10 logical checkpoint
+
+At exact code revision `d4c56cc`,
+`He2023ADCNonDyadicTheorem110.lean` compiles directly,
+`Bong.Papers.He2023ADC` completes 5,034 jobs, and the expanded
+`BongTest.He2023ADCAudit` passes. The assembled theorem reports only
+`propext`, `Classical.choice`, and `Quot.sound`. The new source passes the
+scoped forbidden-token, 100-column, and `git diff --check` checks.
+
+This is exact local evidence for the catalogue deduction, not evidence that
+the explicit non-dyadic law package has a concrete instance. It also postdates
+the latest independently extracted He ADC kit. See report 52.

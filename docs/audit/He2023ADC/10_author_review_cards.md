@@ -189,5 +189,13 @@ and its `+2` value must remain visibly separate from the publisher's formally
 refuted `+1` claim. Finally, they should confirm that O'Meara 63:9 and the
 entire non-dyadic branch remain outside the proved unconditional scope.
 
+Report 52 adds the non-dyadic Theorem 1.10 card. Reviewers should verify that
+the binary index omits exactly the undefined row `N_2^2(1)`, that every rank
+at least three has all eight column/square-class pairs, and that Theorem 5.1
+is applied only in coranks one and two. They should separately audit whether
+the fields of `CatalogueLaws` exactly match Proposition 4.2, Remark 4.3,
+Lemmas 4.7--4.8, and Proposition 4.15. A concrete instance of those fields is
+not yet certified.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

@@ -129,8 +129,13 @@ Dyadic Theorem 1.10 checkpoint:
 integral-isometry catalogues for every dyadic rank and parity branch and
 packages them in `heADC2025Theorem110DyadicCorrected`. The binary
 corank-two catalogue retains the formal source refutation and corrected
-`8(N p)^e+2` value. The non-dyadic branch and a generic proof of the cited
-counting law remain pending.
+`8(N p)^e+2` value. A generic proof of the cited counting law remains
+pending.
+Non-dyadic Theorem 1.10 logical checkpoint:
+`d4c56cc`. Report 52 proves exact seven- and eight-row catalogues for equal
+rank and both coranks and the printed formulas at ramification index zero.
+This is conditional on the visible `SectionFiveLaws` and `CatalogueLaws`
+parameters; their concrete non-dyadic instances remain pending.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -149,8 +154,9 @@ pending. Independent formalization-expert approval: pending. Reproducibility:
 the f6f7485/c82668b tree passed clean-kit CI with enforced dependencies
 through full Lemma 6.7. The exact locally extracted kit at 85772de covers
 the later developments through Reports 47--48 and passes its full build,
-audits, and enforcing gate. The unary checkpoint postdates that kit and has
-only exact local evidence. Exact commit distinctions are in report 11.
+audits, and enforcing gate. The unary and Theorem 1.10 checkpoints postdate
+that kit and have only exact local evidence. Exact commit distinctions are in
+report 11.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

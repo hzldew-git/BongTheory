@@ -168,3 +168,11 @@ proved complete and irredundant for integral isometry by using the relevant
 maximality classification and maximal-lattice uniqueness. The final
 residue-norm formulas still require `HeADC2025Corollary721CountingLaw`, and
 the endpoint does not include the non-dyadic branch. See report 51.
+
+The non-dyadic Theorem 1.10 endpoint separately proves the seven- and
+eight-row finite counts and all catalogue deductions. Its
+`CatalogueLaws` parameter still assumes maximality, exhaustion, and
+irredundancy of the published non-dyadic rows, plus the equal-rank
+ADC-implies-maximal implication. Those are genuine undisclosed mathematical
+obligations until a concrete local-field instance is constructed. No count
+or Theorem 1.10 conclusion is a law field. See report 52.

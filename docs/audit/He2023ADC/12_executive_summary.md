@@ -221,7 +221,13 @@ Each branch is an exact integral-isometry catalogue with rank, `n`-ADC,
 completeness, and irredundancy proofs. The combined endpoint retains the
 formal refutation of the printed binary `+1` value and gives the corrected
 `+2` value. The residue-norm conversion remains conditional on the cited
-O'Meara 63:9 input, and the non-dyadic branch is not yet implemented.
+O'Meara 63:9 input.
+
+Report 52 closes the finite-catalogue deduction for the non-dyadic branch at
+`d4c56cc`. It proves exact seven- and eight-row catalogues for equal rank and
+both coranks, together with the published formulas at `e=0`. This remains
+conditional on explicit non-dyadic maximal-lattice classification laws; no
+concrete local-field instance is claimed.
 
 Semantic status: one omitted binary class affects four printed statements
 (Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
@@ -237,8 +243,9 @@ The later additions through Reports 47--48 now have an exact local clean-kit
 receipt at 85772de. A freshly extracted source kit completed all 5,047 build
 jobs, the three He ADC audit entries, and the 60,152-declaration enforcing
 gate; its archive SHA-256 is fixed in Report 49. This is local independent
-extraction evidence, not GitHub CI or a permanent release. The later unary
-commit has exact local evidence but is not covered by that kit. The monolithic run
+extraction evidence, not GitHub CI or a permanent release. The unary and
+Theorem 1.10 commits have exact local evidence but are not
+covered by that kit. The monolithic run
 33942437720 hit its six-hour timeout; the separate paper-kit run passed for
 all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification

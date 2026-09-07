@@ -280,3 +280,11 @@ combined endpoint contain exactly `propext`, `Classical.choice`, and
 `Quot.sound`. The O'Meara 63:9 identity is still a visible theorem premise,
 not an axiom or a proved generic instance. Report 51 separates this local
 evidence from exact-revision clean-kit and human-review gates.
+
+At checkpoint `d4c56cc`, the non-dyadic Theorem 1.10 catalogue module,
+canonical paper entry, and expanded audit compile directly with Lean 4.32.1.
+The binary and general cardinality proofs and both exact-catalogue
+constructors report only `propext`, `Classical.choice`, and `Quot.sound`.
+`CatalogueLaws` is an explicit proposition-valued hypothesis and introduces
+no Lean axiom, but its concrete mathematical instance remains open. Report
+52 separates that assumption from the proved catalogue and counting logic.

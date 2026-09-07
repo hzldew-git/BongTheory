@@ -201,6 +201,12 @@ Additional concrete declaration groups are:
   instantiates all dyadic equal-rank, corank-one, and corank-two branches.
   `heADC2025Theorem110DyadicCorrected` combines them with Corollary 7.21 and
   the corrected binary catalogue; report 51.
+- `He2023ADCNonDyadicTheorem110` defines the exact seven-row binary index and
+  eight-row general index, proves both cardinalities, turns the equal-rank
+  and Section 5 maximality implications into complete irredundant catalogues,
+  and assembles all non-dyadic branches with the exponent-zero published
+  formulas. Its concrete classification inputs are isolated in
+  `CatalogueLaws`; report 52.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full
@@ -210,6 +216,7 @@ Additional concrete declaration groups are:
 and regularity. Its `heADCTheorem13`, `heADCTheorem14*`, and the Section 8
 endpoints are conditional logical reductions, not constructions of
 number-field completions or proofs of the global arithmetic inputs. Likewise,
-the Section 5 law package is not a concrete non-dyadic local-field instance.
+the Section 5 and catalogue law packages are not concrete non-dyadic
+local-field instances.
 `BongTest.He2023ADCAudit` prints the actual public types and selected
 transitive axiom sets.
