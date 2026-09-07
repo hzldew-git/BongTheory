@@ -57,6 +57,7 @@ import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
 import Bong.Bong.He2023ADCSectionFive
+import Bong.Bong.He2023ADCNonDyadicTheorem110
 import Bong.Bong.He2023ADCUnaryTesting
 
 /-!
@@ -96,11 +97,16 @@ machine-checks that the single-exception formulations printed in Theorems
 All dyadic branches of Theorem 1.10 are assembled as exact, complete, and
 irredundant integral-isometry catalogues, including equal rank, corank one,
 stable even corank two, odd corank two, and the corrected binary boundary.
+The non-dyadic branch is likewise assembled into exact seven- and eight-row
+catalogues, including all three rank branches and the specialization of the
+printed formula at ramification index zero, relative to an explicit
+non-dyadic maximal-lattice catalogue law package.
 It also records the logical local--global
 reductions in Theorems 1.3--1.4.  The complete logical derivations of all four
 numbered Section 5 results and of the Section 8 local--global chain are also
 formalized over explicit non-dyadic Jordan and number-field arithmetic law
-packages.  Concrete constructions of those law packages remain open;
+packages.  Concrete constructions of the non-dyadic and number-field law
+packages remain open;
 number-field localization, Meyer--Xu genus separation, and non-dyadic Jordan
 facts are therefore visible proof data rather than hidden axioms.
 -/
