@@ -371,7 +371,7 @@ its former ambient exactly-one fields have been removed. This is a strictly
 smaller conditional boundary, but it is not yet a concrete construction over
 every non-dyadic completion.
 
-Report 71 advances it again at `ae494c5`. Proposition 4.2(ii)--(iii) and
+Report 71 advances it again at `bdc8c29`. Proposition 4.2(ii)--(iii) and
 Lemma 4.4(i)--(iii) now follow from the same lower invariant layer, with the
 Hilbert-symbol parity, omitted rows, negative exception, and uniqueness
 quantifier all explicit. Lemma 4.6(ii) invokes the resulting theorem, so its

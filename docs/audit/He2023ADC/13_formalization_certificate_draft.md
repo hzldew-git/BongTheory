@@ -243,7 +243,7 @@ criteria, and Lemma 4.6 now invokes that proof. The six new endpoints use only
 standard axioms; the concrete invariant package remains outside this draft
 certificate. See Report 70.
 The non-dyadic Proposition 4.2/Lemma 4.4 checkpoint
-`ae494c5f23391e7f84eaaf4a428dcdd6471f7436` derives the full space-table
+`bdc8c2993efc716f9b4edd5d4c4617229fb4e9f4` derives the full space-table
 exhaustion, all three representation biconditionals, the all-other-spaces
 property, failure on the named exception, and uniqueness of the excluding
 space. Lemma 4.6 now reuses these proofs. The focused audit completes 3,001

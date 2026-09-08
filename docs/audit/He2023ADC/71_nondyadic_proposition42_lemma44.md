@@ -2,7 +2,7 @@
 
 ## Status
 
-Checkpoint: `ae494c5f23391e7f84eaaf4a428dcdd6471f7436`.
+Checkpoint: `bdc8c2993efc716f9b4edd5d4c4617229fb4e9f4`.
 
 Classification: `CONDITIONAL_FORMALIZATION` / `SOURCE_LOGIC_MATCH`.
 Proposition 4.2(ii)--(iii) and all three parts of Lemma 4.4 are derived from
@@ -91,7 +91,7 @@ With Lean 4.32.1 at the checkpoint above:
   and `Quot.sound`;
 - the existing Lemma 4.6 endpoints retain only the documented standard
   axioms;
-- the comment-aware scanner checks 2,784 tracked Lean sources;
+- the comment-aware scanner checks 2,786 tracked Lean sources;
 - all 27 CI policy tests pass; and
 - changed Lean lines are at most 100 columns and `git diff --check` passes.
 
