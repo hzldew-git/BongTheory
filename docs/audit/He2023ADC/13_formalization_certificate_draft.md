@@ -242,6 +242,13 @@ are proved from determinant/Hasse classification and codimension-one/two
 criteria, and Lemma 4.6 now invokes that proof. The six new endpoints use only
 standard axioms; the concrete invariant package remains outside this draft
 certificate. See Report 70.
+The non-dyadic Proposition 4.2/Lemma 4.4 checkpoint
+`ae494c5f23391e7f84eaaf4a428dcdd6471f7436` derives the full space-table
+exhaustion, all three representation biconditionals, the all-other-spaces
+property, failure on the named exception, and uniqueness of the excluding
+space. Lemma 4.6 now reuses these proofs. The focused audit completes 3,001
+jobs and the combined build 5,564; the concrete invariant instance and a clean
+kit remain outside this draft certificate. See Report 71.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

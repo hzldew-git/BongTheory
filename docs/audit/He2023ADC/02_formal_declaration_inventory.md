@@ -69,10 +69,16 @@ Additional concrete declaration groups are:
   explicit determinant/Hasse and codimension-criterion interface. Its two
   table-specific endpoints retain the exact low-rank definedness conditions.
   No precisely-one conclusion is a law field; see Report 70.
+- `He2023ADCNonDyadicProposition42`: Proposition 4.2(ii)--(iii) and all three
+  parts of Lemma 4.4 from a determinant--Hasse--Hilbert interface. The
+  endpoints include table exhaustion, both representation criteria, failure
+  on the named exception, and uniqueness of the excluding space. None is a
+  law field; see Report 71.
 - `He2023ADCNonDyadicLemma46`: the full non-dyadic Lemma 4.6 deduction over
   `Lemma46Laws`. Lemma 4.5(i) is now invoked through the invariant derivation;
-  its remaining fields are target-pair invariants, Proposition 4.2(iii), and
-  transport inputs, not ambient or actual-lattice conclusions. Standing
+  target-pair invariants and Proposition 4.2(iii) are now derived by the
+  Proposition 4.2 package. Only that package and actual-to-ambient
+  representation remain, not ambient or actual-lattice conclusions. Standing
   table-definedness, including the binary omitted row, is explicit.
 - `He2023ADCCorankOneVolume`: maximal-superlattice volume gap and the
   standard-tail maximality proof, not a converse of Proposition 4.13.

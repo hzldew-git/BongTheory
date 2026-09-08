@@ -72,13 +72,14 @@ dyadic parities and columns, including both source-rank alternatives in part
 local-field claim. Part (ii)'s equal-rank diagonal premises explicitly encode
 the two ambient-isometry comparisons in the publisher statement.
 
-Report 68 adds the unrestricted non-dyadic logical form of both parts, with
-the source's standing table-definedness convention and the omitted binary row
-made explicit. Its conclusions have the printed strength, including negative
-actual representation and arbitrary integral targets. It is nevertheless a
-`CONDITIONAL_FORMALIZATION`: determinant equality and the ambient results of
-Lemma 4.5(i) and Proposition 4.2(iii) are supplied through explicit laws
-rather than a concrete non-dyadic local-field model.
+Reports 68, 70, and 71 give the unrestricted non-dyadic logical form, with
+the source's standing table-definedness convention and omitted rows explicit.
+Its conclusions include negative actual representation and arbitrary integral
+targets. Proposition 4.2(ii)--(iii), all three Lemma 4.4 biconditionals,
+target-pair invariants, and both directions of Lemma 4.5 are now derived
+rather than final fields. It remains a `CONDITIONAL_FORMALIZATION` because the
+lower determinant--Hasse--Hilbert and representation-criterion package has no
+concrete non-dyadic local-field instance yet.
 
 Both Lemma 6.6 endpoints are `LOGICALLY_EQUIVALENT` to their published
 pointwise obstructions. The conclusion includes the literal trigger and

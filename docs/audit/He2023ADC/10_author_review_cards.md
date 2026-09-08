@@ -269,13 +269,14 @@ endpoints as actual `Lattice.Represents` theorems. Equal-rank diagonal
 representation is used for ambient isometry, and its negation for the unique
 excluded target. Every endpoint has the standard axiom set only.
 
-Non-dyadic continuation: Reports 68 and 70 derive the same complete conclusion
-over `Lemma46Laws`. The determinant class is now a concrete component of
+Non-dyadic continuation: Reports 68, 70, and 71 derive the same complete
+conclusion over `Lemma46Laws`. The determinant class is a component of
 `Lemma45InvariantData`, and both directions of Lemma 4.5 are proved from the
-Hasse classification and four codimension criteria; the former ambient
-exactly-one fields are gone. Reviewers should confirm a concrete instance of
-those criteria, the target-pair facts, and the unique-excluding Proposition
-4.2(iii) field. Until that instance is supplied, the result remains
+Hasse classification and four codimension criteria. Proposition 4.2(ii)--
+(iii), all of Lemma 4.4, target-pair facts, and exact exclusion/uniqueness are
+also derived; the former conclusion-level fields are gone. Reviewers should
+confirm a concrete instance of the determinant--Hasse--Hilbert and
+representation-criterion package. Until that instance is supplied, the result remains
 conditional.
 
 Questions for the paper author and domain expert:

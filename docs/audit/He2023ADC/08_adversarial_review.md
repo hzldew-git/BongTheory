@@ -273,6 +273,9 @@ binary omitted row is excluded by the standing table-definedness premise;
 `nu.other` is definitionally the paper's `3-nu`; and the large rank-`n+2` row
 is proved defined from `n>=2`. Report 70 removes the ambient exactly-one fields:
 Lemma 4.5 is derived from explicit determinant/Hasse classification and four
-codimension criteria. Reviewers must still validate their concrete
-non-dyadic instance, the target-pair determinant/non-isometry facts, and the
-orientation of `spaceRepresents_of_isometric_left`.
+codimension criteria. Report 71 additionally removes the target-pair and
+Proposition 4.2(iii) fields. It checks all omitted-row domains, both directions
+of every Lemma 4.4 biconditional, the negative exception, and the uniqueness
+quantifier in Proposition 4.2(iii). Reviewers must still validate the concrete
+non-dyadic determinant--Hasse--Hilbert package and both representation
+transport orientations.

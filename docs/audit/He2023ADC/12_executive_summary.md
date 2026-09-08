@@ -370,3 +370,11 @@ determinant/Hasse invariant interface. Lemma 4.6(i) invokes this theorem, and
 its former ambient exactly-one fields have been removed. This is a strictly
 smaller conditional boundary, but it is not yet a concrete construction over
 every non-dyadic completion.
+
+Report 71 advances it again at `ae494c5`. Proposition 4.2(ii)--(iii) and
+Lemma 4.4(i)--(iii) now follow from the same lower invariant layer, with the
+Hilbert-symbol parity, omitted rows, negative exception, and uniqueness
+quantifier all explicit. Lemma 4.6(ii) invokes the resulting theorem, so its
+former target-pair, unique-excluding-space, and isometry-transport fields are
+gone. Concrete non-dyadic field/lattice instances and clean-kit evidence are
+still pending.

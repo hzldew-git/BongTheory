@@ -405,3 +405,12 @@ endpoints report only `propext` and `Quot.sound`; the canonical build completes
 5,563 jobs, the scanner checks 2,784 tracked Lean files, and all 27 policy
 tests pass. The interface fields are proposition-valued mathematical inputs,
 not Lean axioms; their concrete non-dyadic local-field instance remains open.
+
+At `ae494c5f23391e7f84eaaf4a428dcdd6471f7436`, Report 71 derives
+Proposition 4.2(ii)--(iii) and Lemma 4.4(i)--(iii) from the lower invariant
+interface. The focused audit completes 3,001 jobs and the combined canonical
+build completes 5,564 jobs. The new endpoints use only `propext`,
+`Classical.choice`, and `Quot.sound` in the subsets recorded in Report 71.
+The scanner checks 2,784 tracked Lean files and all 27 policy tests pass. This
+does not prove the proposition-valued interface or its concrete local-field
+instance, and it is not an exact clean-kit receipt.
