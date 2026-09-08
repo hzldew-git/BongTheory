@@ -179,7 +179,7 @@ theorem target_pair_nonisometric
 
 /-- He (2025), Lemma 4.4(i), table-row uniqueness in the non-dyadic case. -/
 theorem heADC2025Lemma44iNonDyadic
-    (H : S.Proposition42Laws I T) {n : Nat}
+    (H : S.Proposition42Laws I T) {n : Nat} (_hn : 1 ≤ n)
     {nu mu : HeADC2025NonDyadicColumn}
     {c d : HeADC2025NonDyadicSquareClass}
     (hNu : HeADC2025NonDyadicRowIsDefined n nu c)
@@ -205,7 +205,7 @@ theorem heADC2025Lemma44iNonDyadic
 symbol `+1`, so the Boolean xor on the right is exactly the source sign
 `(-1)^(nu' + nu)`. -/
 theorem heADC2025Lemma44iiNonDyadic
-    (H : S.Proposition42Laws I T) (n : Nat)
+    (H : S.Proposition42Laws I T) (n : Nat) (_hn : 1 ≤ n)
     (nu' nu : HeADC2025NonDyadicColumn)
     (c' c : HeADC2025NonDyadicSquareClass)
     (hLarge : HeADC2025NonDyadicRowIsDefined (n + 1) nu' c')
@@ -231,7 +231,7 @@ theorem heADC2025Lemma44iiNonDyadic
 determinant criterion and the displayed hyperbolic stabilization of each
 table column. -/
 theorem heADC2025Lemma44iiiNonDyadic
-    (H : S.Proposition42Laws I T) (n : Nat)
+    (H : S.Proposition42Laws I T) (n : Nat) (_hn : 1 ≤ n)
     (nu' nu : HeADC2025NonDyadicColumn)
     (c' c : HeADC2025NonDyadicSquareClass)
     (hLarge : HeADC2025NonDyadicRowIsDefined (n + 2) nu' c')
@@ -337,7 +337,7 @@ theorem heADC2025Proposition42iiiNonDyadic
   rcases H.heADC2025Proposition42iiNonDyadic Y n hn hRank with
     ⟨mu, d, hDefined, hIso⟩
   apply H.spaceRepresents_of_isometric_right hIso
-  apply (H.heADC2025Lemma44iiiNonDyadic n nu mu c d
+  apply (H.heADC2025Lemma44iiiNonDyadic n hn nu mu c d
     hLarge hDefined).2
   by_cases hd : c ≠ d
   · exact Or.inl hd
@@ -355,7 +355,7 @@ theorem heADC2025Proposition42iiiNonDyadic
 /-- The displayed opposite-column space does not represent the excluded
 space in Proposition 4.2(iii). -/
 theorem heADC2025Proposition42iiiNonDyadic_excludes
-    (H : S.Proposition42Laws I T) (n : Nat)
+    (H : S.Proposition42Laws I T) (n : Nat) (hn : 1 ≤ n)
     (nu : HeADC2025NonDyadicColumn)
     (c : HeADC2025NonDyadicSquareClass)
     (hLarge : HeADC2025NonDyadicRowIsDefined (n + 2) nu c)
@@ -364,7 +364,7 @@ theorem heADC2025Proposition42iiiNonDyadic_excludes
       (S.ambient (S.target nu (n + 2) c))
       (S.ambient (S.target nu.other n c)) := by
   intro hRep
-  rcases (H.heADC2025Lemma44iiiNonDyadic n nu nu.other c c
+  rcases (H.heADC2025Lemma44iiiNonDyadic n hn nu nu.other c c
     hLarge hExcluded).1 hRep with hClass | ⟨hColumns, _⟩
   · exact hClass rfl
   · exact HeADC2025NonDyadicColumn.ne_other nu hColumns
@@ -373,7 +373,7 @@ theorem heADC2025Proposition42iiiNonDyadic_excludes
 which fails to represent the named `n`-space is isometric to the displayed
 opposite-column space. -/
 theorem heADC2025Proposition42iiiNonDyadic_unique
-    (H : S.Proposition42Laws I T) (n : Nat)
+    (H : S.Proposition42Laws I T) (n : Nat) (hn : 1 ≤ n)
     (nu : HeADC2025NonDyadicColumn)
     (c : HeADC2025NonDyadicSquareClass)
     (_hLarge : HeADC2025NonDyadicRowIsDefined (n + 2) nu c)
@@ -396,7 +396,7 @@ theorem heADC2025Proposition42iiiNonDyadic_unique
       ¬ (d ≠ c ∨ (mu = nu.other ∧ d = c)) := by
     intro hCriterion
     exact hTableDoesNotRepresent
-      ((H.heADC2025Lemma44iiiNonDyadic n mu nu.other d c
+      ((H.heADC2025Lemma44iiiNonDyadic n hn mu nu.other d c
         hDefined hExcluded).2 hCriterion)
   have hd : d = c := by
     by_contra hne
