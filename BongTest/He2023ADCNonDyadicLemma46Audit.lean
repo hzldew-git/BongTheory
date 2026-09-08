@@ -12,11 +12,15 @@ import Bong.Bong.He2023ADCNonDyadicLemma46
 #check Bong.HeADC2025NonDyadicSystem.RepresentsExactlyOne
 #check Bong.HeADC2025NonDyadicSystem.SpaceRepresentsExactlyOne
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iNonDyadicTargets
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iiNonDyadicTargets
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iNonDyadic
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadic
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadicMaximal
 
 #print axioms Bong.HeADC2025NonDyadicColumn.other_other
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iNonDyadicTargets
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iiNonDyadicTargets
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iNonDyadic
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadic
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadicMaximal

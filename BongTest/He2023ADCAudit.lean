@@ -65,7 +65,14 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025NonDyadicColumn.other
 #check Bong.HeADC2025NonDyadicSystem.RepresentsExactlyOne
 #check Bong.HeADC2025NonDyadicSystem.SpaceRepresentsExactlyOne
+#check Bong.HeADC2025NonDyadicSystem.SpaceIsRepresentedByExactlyOne
+#check Bong.HeADC2025NonDyadicSystem.Lemma45InvariantData
+#check Bong.HeADC2025NonDyadicSystem.Lemma45Laws
+#check Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iiNonDyadic
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iNonDyadicTargets
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iiNonDyadicTargets
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iNonDyadic
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadic
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadicMaximal
@@ -80,6 +87,10 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma54
 #print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51
 #print axioms Bong.HeADC2025NonDyadicColumn.other_other
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iiNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iNonDyadicTargets
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iiNonDyadicTargets
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iNonDyadic
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadic
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadicMaximal
