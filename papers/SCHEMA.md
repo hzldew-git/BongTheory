@@ -52,6 +52,13 @@ proof status. Set `githubReviewKit` to `false` only for an explicit temporary
 deferral and include a human-readable `reason`; remove the deferral only after
 the user authorizes GitHub deployment.
 
+The optional `verificationFiles` array lists repository-relative Mathematica,
+Sage, or other independent exact-computation files that must be copied into
+this paper's Review Kit. `verificationCommands` records reviewer-facing
+commands for running them. These files corroborate calculations but do not
+expand Lean's axiom allowance or change semantic status. New BONG-related
+papers should use these fields whenever an independent computation is useful.
+
 The publisher version of record is the sole semantic authority. Preprints may
 be listed only as comparison sources. Review Kits never contain publisher
 PDFs; their hashes let reviewers verify an independently obtained copy.

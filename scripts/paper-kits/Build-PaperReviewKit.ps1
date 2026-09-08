@@ -263,6 +263,26 @@ foreach ($relativePath in $fixedFiles) {
     Copy-RepositoryFile $relativePath
 }
 
+$verificationFiles = @()
+if ($metadata.PSObject.Properties.Name -contains 'verificationFiles') {
+    $verificationFiles = @($metadata.verificationFiles | ForEach-Object {
+        [string] $_
+    })
+}
+foreach ($relativePath in $verificationFiles) {
+    if (-not $relativePath) {
+        throw "Paper manifest contains an empty verificationFiles entry: $metadataPath"
+    }
+    Copy-RepositoryFile $relativePath
+}
+
+$verificationCommands = @()
+if ($metadata.PSObject.Properties.Name -contains 'verificationCommands') {
+    $verificationCommands = @($metadata.verificationCommands | ForEach-Object {
+        [string] $_
+    })
+}
+
 $auditRoot = [IO.Path]::GetFullPath((Join-Path $RepositoryRoot ([string] $metadata.auditDirectory)))
 $repositoryPrefix = $RepositoryRoot.TrimEnd([IO.Path]::DirectorySeparatorChar) +
     [IO.Path]::DirectorySeparatorChar
@@ -328,6 +348,22 @@ $authorityNotice = if ($metadata.schemaVersion -eq 2) {
 } else {
     ''
 }
+$verificationSection = if ($verificationFiles.Count -gt 0) {
+    $fileLines = ($verificationFiles | ForEach-Object { "- **$_**" }) -join "`n"
+    $commandBlock = if ($verificationCommands.Count -gt 0) {
+        "`nRun the available independent checks with:`n`n~~~text`n" +
+            ($verificationCommands -join "`n") + "`n~~~`n"
+    } else {
+        ''
+    }
+    "`n## Independent computational cross-checks`n`n" +
+        "The kit includes the following non-Lean verification material:`n`n" +
+        $fileLines + "`n" + $commandBlock +
+        "`nThese checks corroborate finite calculations but do not enlarge the " +
+        "Lean trust boundary or replace semantic review.`n"
+} else {
+    ''
+}
 $readme = @"
 # $($metadata.canonicalName) Lean 4 Review Kit
 
@@ -379,6 +415,7 @@ axiom dependencies exceed **propext, Classical.choice, Quot.sound**. It checks
 module ownership as well as namespaces, including private helpers. This
 enforcing check is separate from the human-readable axiom listings and does
 not claim semantic equivalence to the paper.
+$verificationSection
 $notice
 ## Integrity
 
@@ -428,6 +465,8 @@ $manifest = [ordered]@{
         semanticStatus = $metadata.semanticStatus
         grade = $metadata.grade
         expectedAxioms = @($metadata.expectedAxioms)
+        verificationFiles = $verificationFiles
+        verificationCommands = $verificationCommands
         formalizedScope = if ($metadata.schemaVersion -eq 2) {
             @($metadata.formalizedScope)
         } else {
