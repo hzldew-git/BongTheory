@@ -130,6 +130,10 @@ Report 66 adds the complete Lemma 4.8 representation biconditional for every
 defined Table 4.7 row. Its finite Jordan assertion is internal, while the
 general O'Meara 1958 representation theorem remains an explicit interface
 requiring a concrete non-dyadic instance.
+Report 67 completes both parts of Lemma 4.6 after restricting to the dyadic
+context. All parity, column, and corank-one/corank-two alternatives now end in
+actual lattice representation. The unrestricted non-dyadic specialization
+and independent semantic approval remain open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

@@ -255,6 +255,32 @@ none of those semantic and arithmetic tasks follows from the matrix checks.
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## Lemma 4.6, dyadic actual-lattice specialization
+
+Paper location: pp. 993--994.
+
+Paper statement: an `n`-ADC source of rank `n+1`, or of rank `n+2` with the
+stated determinant, represents exactly one of the two named maximal tests. If
+its ambient space is `W_nu^(n+2)(c)`, it represents every rank-`n` integral
+lattice whose ambient space is not `W_(3-nu)^n(c)`.
+
+Formal finding: Report 67 supplies all eight parity/column/source-rank
+endpoints as actual `Lattice.Represents` theorems. Equal-rank diagonal
+representation is used for ambient isometry, and its negation for the unique
+excluded target. Every endpoint has the standard axiom set only.
+
+Questions for the paper author and domain expert:
+
+1. Does the square-class `IsSquare` determinant premise exactly match the
+   paper's determinant equality convention?
+2. Does equal-rank diagonal representation faithfully encode both ambient
+   isometries in part (ii), with the displayed direction of representation?
+3. Is `HeHuEvenSecondDefined k c` exactly the intended existence boundary for
+   the even second-column row, including the binary edge case?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Lemma 2.2, subspace descent
 
 Paper location: pp. 986--987.

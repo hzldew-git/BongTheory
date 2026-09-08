@@ -89,11 +89,18 @@ published proof establishes, and the printed proof of Theorem 7.1 omits the
 second binary boundary class. Theorem 7.1 itself is proved by a repaired
 route that exhausts both exceptions.
 
+Report 67 closes the dyadic coverage gap in Lemma 4.6. Part (i) now has every
+even/odd corank-one and corank-two exactly-one branch, while part (ii) has both
+columns in both parities and concludes representation of arbitrary integral
+targets outside the unique exceptional ambient space. The unrestricted
+non-dyadic version remains part of the scope below.
+
 ## Remaining scope
 
 The main unresolved mathematical work is:
 
-- actual non-dyadic lattice realization/classification for Lemma 4.7,
+- the unrestricted non-dyadic Lemma 4.6 specialization, actual non-dyadic
+  lattice realization/classification for Lemma 4.7,
   concrete instances of its now-explicit minimal-testing witness laws,
   the generic O'Meara theorem instance underlying Lemma 4.8, and the
   remaining non-dyadic Section 4 cases; this includes instantiating the laws

@@ -65,8 +65,12 @@ Theorem 6.1 is `LOGICALLY_EQUIVALENT` to the complete dyadic published
 equivalence, for every even n >= 2 and arbitrary full lattice of rank n+1.
 No good BONG or order profile is assumed in its public endpoint. The
 alternative volume proof does not weaken the conclusion or assume the
-converse of Proposition 4.13. The supporting actual corank-one even case
-of Lemma 4.6(i) remains `SPECIAL_CASE_ONLY` for that whole lemma.
+converse of Proposition 4.13. Report 67 supersedes the earlier single-branch
+status for Lemma 4.6. Both parts now have actual-lattice endpoints for both
+dyadic parities and columns, including both source-rank alternatives in part
+(i). This is `FULLY_FORMALIZED_DYADIC_SPECIALIZATION`, not an unrestricted
+local-field claim. Part (ii)'s equal-rank diagonal premises explicitly encode
+the two ambient-isometry comparisons in the publisher statement.
 
 Both Lemma 6.6 endpoints are `LOGICALLY_EQUIVALENT` to their published
 pointwise obstructions. The conclusion includes the literal trigger and

@@ -214,6 +214,16 @@ non-dyadic implementation of that general theorem remains an explicit
 assumption boundary.
 Concrete maximal-overlattice and deletion-witness instances remain external.
 
+Report 67 introduces no proposition-valued law package for the dyadic Lemma
+4.6 endpoints. The source ambient-isometry conditions are exposed as
+equal-rank diagonal representation, and the target nonexception condition is
+its negation against the opposite published row. Their interpretation relies
+on the exact BONG diagonalization bridge already proved in the repository.
+The corank-two determinant condition uses the ordinary-determinant square-class
+translation from Lemma 4.5(i); reviewers must not read it as literal equality
+of chosen determinant representatives. The remaining restriction is the
+dyadic context itself.
+
 The two final enumeration results have distinct visible boundaries. For
 Corollary 1.8, the Hanke and Kirschmer class types, their partition, and the
 cardinalities 115 and 471 are supplied; only the total 586 is derived. For

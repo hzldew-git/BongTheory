@@ -378,3 +378,12 @@ only `propext`, `Classical.choice`, and `Quot.sound`; several finite endpoints
 use only `propext`. The scanner checks 2,770 tracked Lean files. Report 59
 records why this trust result does not discharge Oh-catalogue exhaustion,
 prime-by-prime local verification, or human source review.
+
+At checkpoint `bc043fea518a57864f93f22c072352f60f83afc6`, all eight
+dyadic actual-lattice endpoints for Lemma 4.6 compile with Lean 4.32.1. The
+focused 4,946-job audit reports only `propext`, `Classical.choice`, and
+`Quot.sound` for every endpoint. The canonical paper entry, canonical audit,
+and focused audit complete 5,560 jobs; the source scanner checks 2,780 tracked
+Lean files and all 27 CI unit tests pass. Existing dependency worktrees were
+not clean, so this is local kernel evidence rather than a clean Review-Kit
+receipt. See report 67.

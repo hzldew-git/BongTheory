@@ -51,7 +51,8 @@ proved in Lemmas 6.4 and 6.5, force an alternating head, penultimate pair
 
 `heADC2025Lemma46iEvenCorankOne` proves the needed actual exactly-one
 lattice test result, including negative clauses. It is a bounded
-specialization of Lemma 4.6(i), not completion of every part of Lemma 4.6.
+specialization of Lemma 4.6(i), not completion of every part of Lemma 4.6 at
+this historical checkpoint. Report 67 later completes every dyadic branch.
 Ambient representability is derived, not assumed as a replacement for the
 paper's named tests.
 

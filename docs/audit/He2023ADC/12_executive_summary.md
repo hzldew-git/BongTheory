@@ -345,5 +345,13 @@ certificate at exact source `8ead7f4`. The archive verifies 2,064 payload
 hashes, completes all 5,569 fresh-extraction build jobs, passes the canonical
 audit, both concrete `Q_2` audits, and the 60,683-declaration enforcing gate,
 and reruns the Mathematica certificate successfully. It predates Reports
-61--65 and remains distinct from GitHub exact-tag CI, a permanent release,
+61--67 and remains distinct from GitHub exact-tag CI, a permanent release,
 and human semantic approval.
+
+Report 67 completes the dyadic specialization of both parts of Lemma 4.6 at
+`bc043fe`. All parity, column, and corank-one/corank-two alternatives now
+conclude actual lattice representation, and the exactly-one statements retain
+their negative halves. The focused audit is standard-axiom-only and completes
+4,946 jobs; the combined canonical build completes 5,560 jobs and the scanner
+checks 2,780 sources. This does not instantiate the unrestricted non-dyadic
+version, replace exact clean-kit evidence, or supply human semantic approval.

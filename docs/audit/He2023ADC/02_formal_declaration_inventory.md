@@ -58,8 +58,12 @@ Additional concrete declaration groups are:
   `heADC2025Lemma65i`, with the precise failing index n.
 - `He2023ADCEvenPenultimateObstruction`: capped alternating and mixed-prefix
   bounds and `heADC2025Lemma65ii`, with the precise failing index n-1.
-- `He2023ADCEvenCorankOneTests`: actual exactly-one maximal tests in
-  Lemma 4.6(i)'s even corank-one specialization and the necessary ADC profile.
+- `He2023ADCEvenCorankOneTests`: the original actual exactly-one maximal test
+  in Lemma 4.6(i)'s even corank-one branch and the necessary ADC profile.
+- `He2023ADCLemma46`: all remaining dyadic actual-lattice branches of Lemma
+  4.6(i)--(ii): both parities, both columns, coranks one and two, the exact
+  negative alternatives, and arbitrary integral targets outside the unique
+  excluded ambient space. Report 67 records the explicit isometry bridges.
 - `He2023ADCCorankOneVolume`: maximal-superlattice volume gap and the
   standard-tail maximality proof, not a converse of Proposition 4.13.
 - `He2023ADCCorankOneAmbient`: two concrete ambient embeddings and the

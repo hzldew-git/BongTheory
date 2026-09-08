@@ -256,3 +256,14 @@ the actual finite-completion embedding, the selected global quadratic value
 is proved nonzero, and square-equivalence is converted into an actual scaled-
 line isometry. Square-class openness is proved by the inverse function theorem
 rather than hidden in a project axiom. Human source comparison remains open.
+
+Report 67 tests the principal ways the dyadic Lemma 4.6 specialization could
+be weaker than the publisher statement. Each part-(i) result includes one
+positive and one negative actual-lattice conclusion; neither is reduced to
+ambient representation. Part (ii) ranges over an arbitrary integral target,
+not only a named maximal row. Both possible source columns and both parities
+are present, and the exceptional target is the opposite column. The rank
+indices of the large rows are transported by explicit finite-family casts.
+The remaining review questions are the determinant square-class convention,
+the equal-rank diagonal/isometry bridge, and human confirmation that the even
+definedness boundary matches the publisher's notation.
