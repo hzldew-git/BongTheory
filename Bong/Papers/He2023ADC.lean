@@ -114,10 +114,15 @@ catalogues, including all three rank branches and the specialization of the
 printed formula at ramification index zero, relative to an explicit
 non-dyadic maximal-lattice catalogue law package.
 Corollary 1.8 is formalized as the exact finite-cardinality deduction from
-the two cited external catalogues.  Theorem 1.11 is formalized as an exact,
-complete, and irredundant 21-row catalogue: the literal Table 2 selection
-from Oh's 48 candidates is machine-checked, while global `2`-ADC is derived
-from Corollary 8.5 rather than assumed as a table field.
+the two cited external catalogues.  For Theorem 1.11, all 48 integral Gram
+matrices in the publisher's Table 1 are transcribed literally.  Their
+symmetry, printed discriminants, positive definiteness over `ℚ`, and the
+21 occurrences of `None` in the last column are kernel-checked; the last
+column is then identified with the abstract Table 2 selection predicate.
+Relative to the remaining Oh-catalogue and prime-by-prime local-verification
+inputs, Theorem 1.11 is formalized as an exact, complete, and irredundant
+21-row catalogue, while global `2`-ADC is derived from Corollary 8.5 rather
+than assumed as a table field.
 It also records the logical local--global
 reductions in Theorems 1.3--1.4.  The complete logical derivations of all four
 numbered Section 5 results and of the Section 8 local--global chain are also

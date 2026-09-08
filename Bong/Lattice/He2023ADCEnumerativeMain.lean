@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 
 import Mathlib.Tactic
 import Bong.Lattice.He2023ADCSectionEight
+import Bong.Lattice.He2023ADCTableOne
 
 /-!
 # He (2025), Corollary 1.8 and Theorem 1.11
@@ -66,6 +67,15 @@ def heADC2025Theorem111TableTwoSourceIndex : Fin 21 → Fin 48 :=
 def HeADC2025Theorem111IsSelected (i : Fin 48) : Prop :=
   i.val < 15 ∨ i.val = 18 ∨ i.val = 24 ∨ i.val = 29 ∨
     i.val = 30 ∨ i.val = 31 ∨ i.val = 43
+
+/-- The abstract selection predicate is exactly the `None` pattern in the
+last column of the publisher's Table 1. -/
+theorem heADC2025TableOnePassesPublishedLocalCheck_iff_selected
+    (i : Fin 48) :
+    HeADC2025TableOnePassesPublishedLocalCheck i ↔
+      HeADC2025Theorem111IsSelected i := by
+  simpa [HeADC2025Theorem111IsSelected] using
+    heADC2025TableOnePassesPublishedLocalCheck_iff i
 
 /-- The subtype of Oh candidates retained by the published local checks. -/
 abbrev HeADC2025Theorem111Index :=

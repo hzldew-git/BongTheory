@@ -117,6 +117,31 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
 
+#check Bong.heADC2025TableOneCoordinates
+#check Bong.heADC2025TableOneGram
+#check Bong.heADC2025TableOneGram_transpose
+#check Bong.heADC2025TableOneGram_det
+#check Bong.heADC2025TableOnePublishedDiscriminant_pos
+#check Bong.heADC2025TableOneLeadingMinorOne_pos
+#check Bong.heADC2025TableOneLeadingMinorTwo_pos
+#check Bong.heADC2025TableOneLeadingMinorThree_pos
+#check Bong.heADC2025TableOneGramRat_eq_ldl
+#check Bong.heADC2025TableOneGramRat_posDef
+#check Bong.HeADC2025TableOnePassesPublishedLocalCheck
+#check Bong.heADC2025TableOnePassesPublishedLocalCheck_iff
+#check Bong.card_heADC2025TableOnePassesPublishedLocalCheck
+
+#print axioms Bong.heADC2025TableOneGram_transpose
+#print axioms Bong.heADC2025TableOneGram_det
+#print axioms Bong.heADC2025TableOnePublishedDiscriminant_pos
+#print axioms Bong.heADC2025TableOneLeadingMinorOne_pos
+#print axioms Bong.heADC2025TableOneLeadingMinorTwo_pos
+#print axioms Bong.heADC2025TableOneLeadingMinorThree_pos
+#print axioms Bong.heADC2025TableOneGramRat_eq_ldl
+#print axioms Bong.heADC2025TableOneGramRat_posDef
+#print axioms Bong.heADC2025TableOnePassesPublishedLocalCheck_iff
+#print axioms Bong.card_heADC2025TableOnePassesPublishedLocalCheck
+
 #check Bong.HeADC2025Corollary18EnumerationData
 #check Bong.HeADC2025Corollary18EnumerationData.heADC2025Corollary18
 #check Bong.heADC2025Theorem111TableTwoSourceIndex
@@ -131,12 +156,14 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025Theorem111Laws
 #check Bong.HeADC2025Theorem111Laws.Conclusion
 #check Bong.HeADC2025Theorem111Laws.heADC2025Theorem111
+#check Bong.heADC2025TableOnePassesPublishedLocalCheck_iff_selected
 
 #print axioms Bong.HeADC2025Corollary18EnumerationData.heADC2025Corollary18
 #print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_selected
 #print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_injective
 #print axioms Bong.card_heADC2025Theorem111Index
 #print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_ne_nine_iff
+#print axioms Bong.heADC2025TableOnePassesPublishedLocalCheck_iff_selected
 #print axioms Bong.HeADC2025Theorem111Laws.heADC2025Theorem111
 
 #check Bong.BONG.OrthogonalBasisData.heADC2025Lemma31
