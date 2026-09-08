@@ -249,6 +249,13 @@ property, failure on the named exception, and uniqueness of the excluding
 space. Lemma 4.6 now reuses these proofs. The focused audit completes 3,001
 jobs and the combined build 5,564; the concrete invariant instance and a clean
 kit remain outside this draft certificate. See Report 71.
+Non-dyadic Remark 4.3 catalogue checkpoint:
+`5194689170d3287eff67d442d62b3b5ff526cd89`. Report 72 derives maximal-row
+exhaustion from Proposition 4.2(ii), target maximality, and maximal-lattice
+uniqueness, and derives row irredundancy from Lemma 4.4(i) and ambient-isometry
+transport. Neither conclusion remains a `CatalogueLaws` field. The lower
+invariant and lattice-level interfaces, clean-kit evidence, and human review
+remain outside this draft certificate.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

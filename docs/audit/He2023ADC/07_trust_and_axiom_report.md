@@ -414,3 +414,12 @@ build completes 5,564 jobs. The new endpoints use only `propext`,
 The scanner checks 2,786 tracked Lean files and all 27 policy tests pass. This
 does not prove the proposition-valued interface or its concrete local-field
 instance, and it is not an exact clean-kit receipt.
+
+At `5194689170d3287eff67d442d62b3b5ff526cd89`, Report 72 removes maximal-row
+exhaustion and row irredundancy from `CatalogueLaws`. The derived endpoints
+each report only `propext`; the exact binary catalogue reports `propext` and
+`Quot.sound`, while the general catalogue and assembled non-dyadic Theorem
+1.10 report the permitted trio `propext`, `Classical.choice`, and
+`Quot.sound`. The canonical build completes 5,563 jobs, the scanner checks
+2,787 tracked Lean files, and all 27 policy tests pass. This remains local
+cached evidence over proposition-valued inputs, not a clean-kit receipt.

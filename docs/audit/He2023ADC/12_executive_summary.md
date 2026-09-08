@@ -378,3 +378,10 @@ quantifier all explicit. Lemma 4.6(ii) invokes the resulting theorem, so its
 former target-pair, unique-excluding-space, and isometry-transport fields are
 gone. Concrete non-dyadic field/lattice instances and clean-kit evidence are
 still pending.
+
+Report 72 advances the catalogue layer at `5194689`. Maximal-row exhaustion
+is now proved from Proposition 4.2(ii), target maximality, and uniqueness of a
+maximal lattice on an ambient space; row irredundancy is proved from Lemma
+4.4(i) after ambient-isometry transport. These are no longer `CatalogueLaws`
+fields. The conditional status remains because the lower invariant and
+lattice-level interfaces still lack concrete non-dyadic instances.

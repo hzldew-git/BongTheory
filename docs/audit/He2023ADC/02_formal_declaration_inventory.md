@@ -264,8 +264,10 @@ Additional concrete declaration groups are:
   eight-row general index, proves both cardinalities, turns the equal-rank
   and Section 5 maximality implications into complete irredundant catalogues,
   and assembles all non-dyadic branches with the exponent-zero published
-  formulas. Its concrete classification inputs are isolated in
-  `CatalogueLaws`; report 52.
+  formulas. `CatalogueLaws.maximal_complete` is derived from Proposition
+  4.2(ii) and maximal-lattice uniqueness, while `target_irredundant` is
+  derived from Lemma 4.4(i); neither is a structure field. The focused audit
+  is `He2023ADCNonDyadicCatalogueAudit`; reports 52 and 72.
 - `He2023ADCEnumerativeMain` proves Corollary 1.8's `115+471=586`
   deduction from a typed partition of the cited catalogues. It encodes the
   literal 21 source rows of Table 2, proves selection, injectivity, and the

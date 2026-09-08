@@ -111,14 +111,16 @@ The main unresolved mathematical work is:
 - concrete non-dyadic determinant/Hasse/Hilbert classification, expected-sign,
   codimension criterion, and representation-transport instances used by
   Proposition 4.2 and Lemmas 4.4--4.6, actual non-dyadic lattice
-  realization/classification for Lemma 4.7,
+  realization, target maximality, and maximal-lattice uniqueness for Lemma 4.7,
   concrete instances of its now-explicit minimal-testing witness laws,
   the generic O'Meara theorem instance underlying Lemma 4.8, and the
   remaining non-dyadic Section 4 cases; this includes instantiating the laws
   used by the now-complete deductions of Lemma 4.14 and Propositions
   4.15--4.16;
-- concrete non-dyadic instances of `SectionFiveLaws` and `CatalogueLaws`,
-  required to discharge the conditional Theorem 1.10 endpoint;
+- concrete non-dyadic instances of the invariant, target-maximality,
+  maximal-lattice uniqueness, representation, and transfer fields now carried
+  through `CatalogueLaws`, required to discharge Theorem 1.10; maximal-row
+  exhaustion and irredundancy themselves are derived in Report 72;
 - concrete number-field instances of `SectionEightLaws` and the earlier
   global reduction packages;
 - any publisher-corrected replacement for the four binary statements and a

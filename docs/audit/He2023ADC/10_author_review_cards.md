@@ -193,11 +193,13 @@ and keep the entire non-dyadic branch outside the proved unconditional scope.
 Report 52 adds the non-dyadic Theorem 1.10 card. Reviewers should verify that
 the binary index omits exactly the undefined row `N_2^2(1)`, that every rank
 at least three has all eight column/square-class pairs, and that Theorem 5.1
-is applied only in coranks one and two. They should separately audit whether
-the fields of `CatalogueLaws` exactly match Proposition 4.2, Remark 4.3,
-Lemmas 4.7--4.8, maximal-lattice existence, and same-rank maximality
-transfer. Proposition 4.15 is now a derived theorem rather than a field. A
-concrete instance of those fields is not yet certified.
+is applied only in coranks one and two. Report 72 adds the proof that Remark
+4.3's exhaustion follows from Proposition 4.2(ii) and maximal-lattice
+uniqueness, and that irredundancy follows from Lemma 4.4(i). Reviewers should
+audit those bridges and the remaining target-maximality, isometry transport,
+maximal-lattice uniqueness, representation, and transfer fields.
+Proposition 4.15 is also a derived theorem. Concrete instances are not yet
+certified.
 
 Report 61 adds the non-dyadic Lemma 4.7 table-data card. Reviewers should
 compare all 16 ordered symbolic rows with p. 993, including every power of

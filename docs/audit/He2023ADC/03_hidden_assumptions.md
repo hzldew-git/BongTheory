@@ -183,17 +183,16 @@ the non-dyadic branch. See reports 51 and 57.
 
 The non-dyadic Theorem 1.10 endpoint separately proves the seven- and
 eight-row finite counts and all catalogue deductions. Its
-`CatalogueLaws` parameter still assumes maximality, exhaustion, and
-irredundancy of the published non-dyadic rows, plus the equal-rank
-ADC-implies-maximal implication. Those are genuine undisclosed mathematical
-obligations until a concrete local-field instance is constructed. No count
-or Theorem 1.10 conclusion is a law field. The common row-definedness
-predicate is now shared with the concrete symbolic table certificate, so the
-unary and seven-row binary combinatorics are not duplicated. Report 63 also
-removes the rank-four finite case split from the boundary. Its remaining
-`QuaternaryTableRealizationLaws` fields state the actual block-to-lattice
-representation, exceptional isometry, and transport facts. See reports 52
-and 61--63.
+`CatalogueLaws` parameter still assumes target-row maximality, transport from
+integral to ambient isometry, maximal-lattice uniqueness on an ambient space,
+maximal-overlattice existence, same-rank maximality transfer, and the cited
+O'Meara representation interface. Maximal-row exhaustion is now derived from
+Proposition 4.2(ii), and row irredundancy is derived from Lemma 4.4(i); the
+equal-rank ADC-implies-maximal conclusion is also derived. No count or Theorem
+1.10 conclusion is a law field. The common row-definedness predicate is shared
+with the concrete symbolic table certificate. Report 63 removes the rank-four
+finite case split from the boundary; its realization and transport fields
+remain explicit. See reports 52, 61--63, and 72.
 
 Report 64 isolates the additional inputs behind Lemma 4.7(ii). The finite
 defined-row family and its cardinalities are internal, as is the proof that

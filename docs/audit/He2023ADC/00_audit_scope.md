@@ -144,6 +144,9 @@ Hasse, and codimension criteria. Report 71 then derives Proposition 4.2(ii)--
 (iii) and all three parts of Lemma 4.4 from a lower invariant interface. The
 target-pair and unique-excluding-space fields formerly used by Lemma 4.6 have
 been removed. A concrete non-dyadic local-field instance remains open.
+Report 72 derives Remark 4.3's maximal-row exhaustion from Proposition
+4.2(ii) and maximal-lattice uniqueness, and derives row irredundancy from
+Lemma 4.4(i). Neither conclusion remains a `CatalogueLaws` field.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

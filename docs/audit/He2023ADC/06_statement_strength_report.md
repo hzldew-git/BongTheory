@@ -341,3 +341,11 @@ completion and openness of nonzero square classes discharge that hypothesis.
 The concrete endpoint is therefore `FULLY_FORMALIZED` and
 `PROVISIONAL_MATCH`, subject to human source comparison. It is not claimed for
 arbitrary field extensions. See reports 55--56.
+
+At `5194689`, Remark 4.3's maximal-row exhaustion and row irredundancy are
+derived rather than included in `CatalogueLaws`. The first follows from the
+proved Proposition 4.2(ii) space exhaustion plus target maximality and
+maximal-lattice uniqueness; the second follows from Lemma 4.4(i) after
+ambient-isometry transport. The non-dyadic Theorem 1.10 remains
+`CONDITIONAL_FORMALIZATION` because those lower lattice-level and invariant
+interfaces do not yet have concrete local-field instances. See report 72.
