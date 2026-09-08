@@ -110,6 +110,8 @@ firstUnitJ0Checks = Join[
 
 binaryRows = Tuples[{columns, classes}];
 binaryDefinedRows = DeleteCases[binaryRows, {2, "1"}];
+unaryRows = Tuples[{columns, classes}];
+unaryDefinedRows = Select[unaryRows, First[#] == 1 &];
 
 result = <|
   "evenRows" -> And @@ evenRankChecks,
@@ -118,6 +120,10 @@ result = <|
   "uniformizerJ0Ranks" -> And @@ uniformizerJ0Checks,
   "firstUnitJ0Ranks" -> And @@ firstUnitJ0Checks,
   "deltaTwistInvolution" -> And @@ (deltaTwist[deltaTwist[#]] == # & /@ classes),
+  "unarySecondColumnOmitted" ->
+    Sort[Complement[unaryRows, unaryDefinedRows]] ==
+      Sort[({2, #} & /@ classes)],
+  "unaryDefinedCount" -> Length[unaryDefinedRows] == 4,
   "binaryUndefinedRow" -> Complement[binaryRows, binaryDefinedRows] == {{2, "1"}},
   "binaryDefinedCount" -> Length[binaryDefinedRows] == 7
   |>;

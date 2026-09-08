@@ -10,6 +10,7 @@ import Bong.Bong.He2023ADCNonDyadicTable
 
 #check Bong.heADC2025NonDyadicEvenTableRow
 #check Bong.heADC2025NonDyadicOddTableRow
+#check Bong.HeADC2025NonDyadicSquareClass.deltaTwist_involutive
 #check Bong.heADC2025NonDyadicEvenTableRow_rank
 #check Bong.heADC2025NonDyadicOddTableRow_rank
 #check Bong.heADC2025NonDyadicEvenTableRow_jordanZeroOne
@@ -21,10 +22,12 @@ import Bong.Bong.He2023ADCNonDyadicTable
 #check Bong.heADC2025NonDyadicEvenBinaryRow_defined_iff
 #check Bong.heADC2025NonDyadicEvenRowIsDefined_iff
 #check Bong.heADC2025NonDyadicOddRowIsDefined_iff
+#check Bong.card_heADC2025NonDyadicOddUnaryDefinedRows
 #check Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
 
 #print axioms Bong.heADC2025NonDyadicEvenTableRow_rank
 #print axioms Bong.heADC2025NonDyadicOddTableRow_rank
+#print axioms Bong.HeADC2025NonDyadicSquareClass.deltaTwist_involutive
 #print axioms Bong.heADC2025NonDyadicEvenTableRow_jordanZeroOne
 #print axioms Bong.heADC2025NonDyadicOddTableRow_jordanZeroOne
 #print axioms Bong.heADC2025NonDyadicEvenUniformizerRow_jordanZeroRank
@@ -34,4 +37,5 @@ import Bong.Bong.He2023ADCNonDyadicTable
 #print axioms Bong.heADC2025NonDyadicEvenBinaryRow_defined_iff
 #print axioms Bong.heADC2025NonDyadicEvenRowIsDefined_iff
 #print axioms Bong.heADC2025NonDyadicOddRowIsDefined_iff
+#print axioms Bong.card_heADC2025NonDyadicOddUnaryDefinedRows
 #print axioms Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows

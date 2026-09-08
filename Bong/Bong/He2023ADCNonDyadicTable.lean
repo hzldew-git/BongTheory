@@ -71,17 +71,24 @@ def HeADC2025NonDyadicSquareClass.deltaTwist :
   | .uniformizer => .deltaUniformizer
   | .deltaUniformizer => .uniformizer
 
+@[simp]
+theorem HeADC2025NonDyadicSquareClass.deltaTwist_involutive
+    (c : HeADC2025NonDyadicSquareClass) :
+    c.deltaTwist.deltaTwist = c := by
+  cases c <;> rfl
+
 /-- Whether a square class has valuation zero. -/
 def HeADC2025NonDyadicSquareClass.IsUnit :
     HeADC2025NonDyadicSquareClass → Prop
   | .one | .delta => True
   | .uniformizer | .deltaUniformizer => False
 
-/-- The only excluded row in positive ranks at least two is `N_2^2(1)`. -/
+/-- The published table omits the second column in rank one and additionally
+omits `N_2^2(1)` in rank two. -/
 def HeADC2025NonDyadicRowIsDefined (m : Nat)
     (nu : HeADC2025NonDyadicColumn)
     (c : HeADC2025NonDyadicSquareClass) : Prop :=
-  m ≠ 2 ∨ nu ≠ .two ∨ c ≠ .one
+  (m ≠ 1 ∨ nu ≠ .two) ∧ (m ≠ 2 ∨ nu ≠ .two ∨ c ≠ .one)
 
 /-- Symbolic rank of a list of published Jordan blocks. -/
 def heADC2025NonDyadicSymbolicRank
@@ -201,6 +208,11 @@ odd rows are defined. -/
 def HeADC2025NonDyadicOddRowIsDefined
     (k : Nat) (nu : HeADC2025NonDyadicColumn) : Prop :=
   nu = .one ∨ 1 ≤ k
+
+instance (k : Nat) (nu : HeADC2025NonDyadicColumn) :
+    Decidable (HeADC2025NonDyadicOddRowIsDefined k nu) := by
+  unfold HeADC2025NonDyadicOddRowIsDefined
+  infer_instance
 
 @[simp]
 private theorem symbolicRank_hyperbolicPower (k : Nat) :
@@ -394,10 +406,10 @@ theorem heADC2025NonDyadicEvenRowIsDefined_iff
     simp [HeADC2025NonDyadicEvenRowIsDefined,
       HeADC2025NonDyadicRowIsDefined] <;> omega
 
-/-- In every odd rank at least three, all eight rows are defined, agreeing
-with the common catalogue predicate. -/
+/-- The odd-table definedness predicate agrees with the common catalogue
+predicate in every positive odd rank, including the rank-one omission. -/
 theorem heADC2025NonDyadicOddRowIsDefined_iff
-    (k : Nat) (hk : 1 ≤ k) (nu : HeADC2025NonDyadicColumn)
+    (k : Nat) (nu : HeADC2025NonDyadicColumn)
     (c : HeADC2025NonDyadicSquareClass) :
     HeADC2025NonDyadicOddRowIsDefined k nu ↔
       HeADC2025NonDyadicRowIsDefined (2 * k + 1) nu c := by
@@ -405,6 +417,13 @@ theorem heADC2025NonDyadicOddRowIsDefined_iff
     simp [HeADC2025NonDyadicOddRowIsDefined,
       HeADC2025NonDyadicRowIsDefined]
   all_goals omega
+
+/-- The four first-column rows are exactly the defined rank-one rows. -/
+theorem card_heADC2025NonDyadicOddUnaryDefinedRows :
+    (Finset.univ.filter fun
+      p : HeADC2025NonDyadicColumn × HeADC2025NonDyadicSquareClass =>
+        HeADC2025NonDyadicOddRowIsDefined 0 p.1).card = 4 := by
+  decide
 
 /-- There are exactly seven defined rows in rank two. -/
 theorem card_heADC2025NonDyadicEvenBinaryDefinedRows :

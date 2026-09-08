@@ -144,7 +144,7 @@ variable {S : HeADC2025NonDyadicSystem.{u}}
 private theorem generalRow_defined (m : Nat) (hm : 3 ≤ m)
     (i : HeADC2025NonDyadicGeneralIndex) :
     HeADC2025NonDyadicRowIsDefined m i.1 i.2 := by
-  exact Or.inl (by omega)
+  constructor <;> omega
 
 /-- A maximality implication supplies an exact eight-row catalogue in every
 rank at least three. -/
