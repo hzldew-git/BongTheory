@@ -69,6 +69,38 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma54
 #print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51
 
+#check Bong.HeADC2025NonDyadicJordanAtom
+#check Bong.HeADC2025NonDyadicSquareClass.deltaTwist
+#check Bong.heADC2025NonDyadicEvenTableRow
+#check Bong.heADC2025NonDyadicOddTableRow
+#check Bong.HeADC2025NonDyadicEvenRowIsDefined
+#check Bong.HeADC2025NonDyadicOddRowIsDefined
+#check Bong.heADC2025NonDyadicEvenTableRow_rank
+#check Bong.heADC2025NonDyadicOddTableRow_rank
+#check Bong.heADC2025NonDyadicEvenTableRow_jordanZeroOne
+#check Bong.heADC2025NonDyadicOddTableRow_jordanZeroOne
+#check Bong.heADC2025NonDyadicEvenUniformizerRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicOddUniformizerRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicEvenFirstUnitRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicOddFirstUnitRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicEvenBinaryRow_defined_iff
+#check Bong.heADC2025NonDyadicEvenRowIsDefined_iff
+#check Bong.heADC2025NonDyadicOddRowIsDefined_iff
+#check Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
+
+#print axioms Bong.heADC2025NonDyadicEvenTableRow_rank
+#print axioms Bong.heADC2025NonDyadicOddTableRow_rank
+#print axioms Bong.heADC2025NonDyadicEvenTableRow_jordanZeroOne
+#print axioms Bong.heADC2025NonDyadicOddTableRow_jordanZeroOne
+#print axioms Bong.heADC2025NonDyadicEvenUniformizerRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicOddUniformizerRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicEvenFirstUnitRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicOddFirstUnitRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicEvenBinaryRow_defined_iff
+#print axioms Bong.heADC2025NonDyadicEvenRowIsDefined_iff
+#print axioms Bong.heADC2025NonDyadicOddRowIsDefined_iff
+#print axioms Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
+
 #check Bong.HeADC2025NonDyadicBinaryIndex
 #check Bong.HeADC2025NonDyadicGeneralIndex
 #check Bong.HeADC2025NonDyadicRowIsDefined

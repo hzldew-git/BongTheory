@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 
-import Bong.Bong.He2023ADCSectionFive
+import Bong.Bong.He2023ADCNonDyadicTable
 
 /-!
 # He (2025), Theorem 1.10 over non-dyadic local fields
@@ -34,13 +34,6 @@ abbrev HeADC2025NonDyadicBinaryIndex :=
 /-- The eight rows occurring in every non-dyadic rank at least three. -/
 abbrev HeADC2025NonDyadicGeneralIndex :=
   HeADC2025NonDyadicColumn × HeADC2025NonDyadicSquareClass
-
-/-- The only excluded row for ranks covered by Theorem 1.10 is
-`N_2^2(1)`. -/
-def HeADC2025NonDyadicRowIsDefined (m : Nat)
-    (nu : HeADC2025NonDyadicColumn)
-    (c : HeADC2025NonDyadicSquareClass) : Prop :=
-  m ≠ 2 ∨ nu ≠ .two ∨ c ≠ .one
 
 /-- The table coordinates represented by a binary index. -/
 def heADC2025NonDyadicBinaryRow

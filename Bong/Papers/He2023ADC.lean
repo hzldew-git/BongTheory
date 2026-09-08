@@ -64,6 +64,7 @@ import Bong.Bong.He2023ADCExceptionalQuaternaryNonThree
 import Bong.Bong.He2023ADCLemma611
 import Bong.Bong.He2023ADCRemark63
 import Bong.Bong.He2023ADCSectionFive
+import Bong.Bong.He2023ADCNonDyadicTable
 import Bong.Bong.He2023ADCNonDyadicTheorem110
 import Bong.Bong.He2023ADCUnaryTesting
 
@@ -112,7 +113,10 @@ stable even corank two, odd corank two, and the corrected binary boundary.
 The non-dyadic branch is likewise assembled into exact seven- and eight-row
 catalogues, including all three rank branches and the specialization of the
 printed formula at ramification index zero, relative to an explicit
-non-dyadic maximal-lattice catalogue law package.
+non-dyadic maximal-lattice catalogue law package.  The literal block rows of
+Lemma 4.7(i) are transcribed separately: their total ranks, scale-zero and
+scale-one ranks, the missing row `N_2^2(1)`, and the table-level identity
+`J_{0,1}(N)=N` are kernel-checked.
 Corollary 1.8 is formalized as the exact finite-cardinality deduction from
 the two cited external catalogues.  For Theorem 1.11, all 48 integral Gram
 matrices in the publisher's Table 1 are transcribed literally.  Their
@@ -131,7 +135,8 @@ packages.  Concrete constructions of the non-dyadic and number-field law
 packages, and imports of the Hanke--Kirschmer--Oh external enumerations,
 remain open;
 number-field localization, Meyer--Xu genus separation, and non-dyadic Jordan
-facts are therefore visible proof data rather than hidden axioms.
+classification and representation facts are therefore visible proof data
+rather than hidden axioms.
 -/
 
 namespace Bong
