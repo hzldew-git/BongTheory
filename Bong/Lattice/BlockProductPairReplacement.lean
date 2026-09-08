@@ -27,7 +27,7 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
 
 /-- The dependent linear equivalence which applies one map to the first two
 coordinates and independent maps to all later coordinates. -/
-noncomputable def blockProductPairLinearEquiv
+noncomputable def blockProductPairReplacementLinearEquiv
     {n : Nat}
     {C : Fin (n + 2) → Type v} {D : Fin (n + 2) → Type w}
     [∀ i, AddCommGroup (C i)] [∀ i, Module K (C i)]
@@ -97,7 +97,7 @@ noncomputable def blockProductPairLinearEquiv
         | succ i => exact (tail i).map_smul c (x i.succ.succ)
 
 @[simp]
-theorem blockProductPairLinearEquiv_zero
+theorem blockProductPairReplacementLinearEquiv_zero
     {n : Nat}
     {C : Fin (n + 2) → Type v} {D : Fin (n + 2) → Type w}
     [∀ i, AddCommGroup (C i)] [∀ i, Module K (C i)]
@@ -105,11 +105,12 @@ theorem blockProductPairLinearEquiv_zero
     (head : (C 0 × C 1) ≃ₗ[K] (D 0 × D 1))
     (tail : ∀ i : Fin n, C i.succ.succ ≃ₗ[K] D i.succ.succ)
     (x : BlockProductSpace (n + 1) C) :
-    blockProductPairLinearEquiv head tail x 0 = (head (x 0, x 1)).1 :=
+    blockProductPairReplacementLinearEquiv head tail x 0 =
+      (head (x 0, x 1)).1 :=
   rfl
 
 @[simp]
-theorem blockProductPairLinearEquiv_one
+theorem blockProductPairReplacementLinearEquiv_one
     {n : Nat}
     {C : Fin (n + 2) → Type v} {D : Fin (n + 2) → Type w}
     [∀ i, AddCommGroup (C i)] [∀ i, Module K (C i)]
@@ -117,11 +118,12 @@ theorem blockProductPairLinearEquiv_one
     (head : (C 0 × C 1) ≃ₗ[K] (D 0 × D 1))
     (tail : ∀ i : Fin n, C i.succ.succ ≃ₗ[K] D i.succ.succ)
     (x : BlockProductSpace (n + 1) C) :
-    blockProductPairLinearEquiv head tail x 1 = (head (x 0, x 1)).2 :=
+    blockProductPairReplacementLinearEquiv head tail x 1 =
+      (head (x 0, x 1)).2 :=
   rfl
 
 @[simp]
-theorem blockProductPairLinearEquiv_succ_succ
+theorem blockProductPairReplacementLinearEquiv_succ_succ
     {n : Nat}
     {C : Fin (n + 2) → Type v} {D : Fin (n + 2) → Type w}
     [∀ i, AddCommGroup (C i)] [∀ i, Module K (C i)]
@@ -129,7 +131,7 @@ theorem blockProductPairLinearEquiv_succ_succ
     (head : (C 0 × C 1) ≃ₗ[K] (D 0 × D 1))
     (tail : ∀ i : Fin n, C i.succ.succ ≃ₗ[K] D i.succ.succ)
     (x : BlockProductSpace (n + 1) C) (i : Fin n) :
-    blockProductPairLinearEquiv head tail x i.succ.succ =
+    blockProductPairReplacementLinearEquiv head tail x i.succ.succ =
       tail i (x i.succ.succ) :=
   rfl
 
@@ -157,7 +159,7 @@ noncomputable def blockProductPairIsometry
       (blockOrthogonalForm (n + 1) D rs)
       (blockProductLattice (n + 1) C Ls)
       (blockProductLattice (n + 1) D Ms) where
-  toLinearEquiv := blockProductPairLinearEquiv head.toLinearEquiv
+  toLinearEquiv := blockProductPairReplacementLinearEquiv head.toLinearEquiv
     (fun i ↦ (tail i).toLinearEquiv)
   map_bilin x y := by
     rw [blockOrthogonalForm_bilin_apply,
