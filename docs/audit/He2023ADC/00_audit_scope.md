@@ -112,8 +112,8 @@ Report 61 transcribes the 16 parity/column/square-class block formulas in the
 non-dyadic Lemma 4.7(i) table at `ec135d8`. Their total ranks, `J_0` and `J_1`
 ranks, `J_{0,1}=N` table arithmetic, the missing binary row, and the seven-row
 count are concrete. Actual local-field realization, classification,
-representation, minimality, and the remaining non-dyadic Section 4 results
-remain open.
+minimality, the concrete cited-theorem instance behind representation, and the
+remaining non-dyadic Section 4 results remain open.
 Report 62 makes the common table domain exact at rank one as well as rank two.
 Report 63 proves the complete finite rank-four table split used by non-dyadic
 Proposition 4.16 and derives that proposition from explicit catalogue and
@@ -126,6 +126,10 @@ Report 65 adds literal non-dyadic endpoints for Lemma 4.14 and Proposition
 4.15. The latter is now derived from maximal-lattice existence and same-rank
 maximality transfer, rather than stored as a conclusion in `CatalogueLaws`.
 Concrete instances of these lower-level local-lattice laws remain open.
+Report 66 adds the complete Lemma 4.8 representation biconditional for every
+defined Table 4.7 row. Its finite Jordan assertion is internal, while the
+general O'Meara 1958 representation theorem remains an explicit interface
+requiring a concrete non-dyadic instance.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

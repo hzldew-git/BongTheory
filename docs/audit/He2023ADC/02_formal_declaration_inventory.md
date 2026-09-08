@@ -219,6 +219,11 @@ Additional concrete declaration groups are:
   representation, and same-rank maximality transfer; the final proposition
   is no longer a `CatalogueLaws` field. The focused audit is
   `He2023ADCNonDyadicProposition415Audit`; report 65.
+- `He2023ADCNonDyadicTheorem110` also exports the complete defined-row
+  Lemma 4.8 biconditional from the generic O'Meara 1958 representation
+  interface. The first-sentence Jordan property and target maximality are
+  derived separately. The focused audit is
+  `He2023ADCNonDyadicLemma48Audit`; report 66.
 - `He2023ADCSectionEight` defines class number one and the distinguishing
   rank-`n` sublattice property in the global/local interface. From
   `SectionEightLaws` and the existing Theorem 1.3 laws it proves both clauses

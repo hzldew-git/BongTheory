@@ -65,6 +65,9 @@ This paragraph records the historical `d4c56cc` interface. Report 65
 supersedes its Proposition 4.15 boundary: that final necessity conclusion is
 no longer a structure field and is now derived from lower-level
 maximal-lattice existence and same-rank transfer laws.
+Report 66 likewise supersedes the historical missing-Lemma-4.8 boundary: the
+final defined-row biconditional is now derived from the generic cited
+O'Meara 1958 representation interface.
 
 ## Kernel and axiom checks
 

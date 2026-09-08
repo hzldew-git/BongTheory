@@ -273,6 +273,12 @@ catalogue-law conclusion: Lean derives it from maximal-lattice existence,
 `n`-ADC representation, and same-rank maximality transfer. Those lower-level
 local-field laws still require concrete instances.
 
+Report 66 adds the complete non-dyadic Lemma 4.8 endpoint. Its exact
+defined-row `J_{0,1}=N` assertion and representation biconditional are
+kernel-checked; the latter is derived from a generic interface for the cited
+O'Meara 1958 Theorem 1. A concrete instance of that external theorem remains
+pending, so the result is conditional.
+
 Semantic status: one omitted binary class affects four printed statements
 (Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
 has a separate quantifier mismatch, and the proof of Theorem 7.1 is

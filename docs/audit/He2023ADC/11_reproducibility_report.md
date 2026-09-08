@@ -606,6 +606,6 @@ axiom gate were rerun directly and passed; the gate reported
 The extracted kit's Mathematica verifier also reconfirmed all 48 Table 1
 determinants, symmetry, positive definiteness, the literal selected rows, and
 count 21. This receipt covers the source through Report 59 only; it predates
-Reports 61--65. GitHub exact-tag CI, permanent release publication,
+Reports 61--66. GitHub exact-tag CI, permanent release publication,
 uninstantiated mathematical laws, and human semantic approval remain
 separate. See Report 60.

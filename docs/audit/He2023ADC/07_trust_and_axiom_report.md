@@ -327,6 +327,13 @@ audit complete 5,559 jobs; the scanner checks 2,777 tracked Lean
 sources and all 27 policy tests pass. Report 65 records the remaining
 proposition-valued local-lattice inputs separately from these kernel facts.
 
+At checkpoint `7fbb6b9`, both Lemma 4.8 endpoints report no axioms. The
+focused build completes 3,000 jobs, and the canonical entry plus audits
+complete 5,559 jobs. After staging the focused audit, the scanner checks
+2,778 tracked Lean sources and all 27 policy tests pass. The O'Meara 1958
+theorem is a proposition-valued structure field, not a Lean axiom; Report 66
+keeps this semantic trust boundary visible.
+
 At checkpoint `8cdd338f064934f9e3dc1f2af2011cb998705b97`, the enumeration
 module, canonical paper entry, expanded audit, and main axiom gate compile
 with Lean 4.32.1. The Corollary 1.8 arithmetic, Table 2 selection,

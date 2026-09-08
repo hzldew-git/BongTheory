@@ -153,8 +153,10 @@ printed in Lemma 4.7(i), their parity-dependent hyperbolic multiplicities,
 their `J_0`/`J_1` ranks, `J_{0,1}=N` table arithmetic, and the missing binary
 row are now concrete finite data. This does not construct the corresponding
 local lattices. Their maximality, isometry classification, exhaustive and
-minimal testing properties, and Lemma 4.8 representation equivalence remain
-genuine mathematical inputs to `SectionFiveLaws` and `CatalogueLaws`.
+minimal testing properties, and the concrete non-dyadic instance of the
+generic O'Meara representation theorem remain genuine mathematical inputs to
+`SectionFiveLaws` and `CatalogueLaws`. Report 66 derives He's complete Lemma
+4.8 conclusion from that lower-level cited-theorem interface.
 
 Section 8 is proved over `HeADC2025GlobalData.SectionEightLaws` together with
 the existing Theorem 1.3 law package. Concrete localization, genus transport,
@@ -204,6 +206,12 @@ existence of a maximal lattice on the represented ambient space, same-rank
 maximality transfer, and the maximal-lattice representation fact used in
 Lemma 4.14. None of these fields states Proposition 4.15 or the `n`-ADC
 conclusion of Lemma 4.14.
+
+Report 66 replaces the missing final Lemma 4.8 statement by a derived public
+biconditional. Its external field is the cited O'Meara 1958 Theorem 1 for an
+arbitrary `J_{0,1}=N` target, not He's Table 4.7 conclusion. A concrete
+non-dyadic implementation of that general theorem remains an explicit
+assumption boundary.
 Concrete maximal-overlattice and deletion-witness instances remain external.
 
 The two final enumeration results have distinct visible boundaries. For

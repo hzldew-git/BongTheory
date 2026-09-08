@@ -140,8 +140,11 @@ Non-dyadic Lemma 4.7 table-profile checkpoint:
 `ec135d8bdaedb35bf3f29b0518661e23f2251ccf`. Report 61 transcribes all
 16 even/odd symbolic block rows and proves their total rank, `J_0` and `J_1`
 ranks, table-level `J_{0,1}=N`, parity-specific definedness, and seven-row
-binary boundary. Actual local-lattice realization, classification, minimality,
-and Lemma 4.8's representation equivalence remain pending.
+binary boundary. At that checkpoint, actual local-lattice realization,
+classification, minimality, and Lemma 4.8's representation equivalence were
+pending; Report 66 later derives the complete biconditional from the generic
+O'Meara 1958 Theorem 1 interface, whose concrete non-dyadic instance remains
+pending.
 Low-rank and quaternary refinements: `ef4fcf4` and `2cf9133`. Reports 62--63
 make the unary/binary table domain exact, prove the exceptional rank-four row
 as `A perp A(pi)`, prove that every other row contains `H`, and derive the
@@ -158,6 +161,10 @@ retains both published rank ranges and derives Proposition 4.15 from
 lower-level maximal-lattice existence and same-rank representation transfer;
 the final proposition is not a law-package field. Concrete local-field
 instances and human review remain pending.
+Non-dyadic Lemma 4.8 checkpoint: `7fbb6b9`. Report 66 exports the literal
+defined-row Jordan assertion and full representation biconditional. The
+latter is derived from the generic O'Meara 1958 Theorem 1 interface; a
+concrete non-dyadic instance and human review remain pending.
 Corollary 1.8 and Theorem 1.11 logical checkpoint:
 `8cdd338f064934f9e3dc1f2af2011cb998705b97`. Report 53 proves the
 `115+471=586` deduction, the literal 21-row Table 2 source selection and its
@@ -216,7 +223,7 @@ The exact clean kit at `8ead7f4` advances that evidence through the publisher
 Table 1 certificate. It verifies 2,064 payload hashes, completes all 5,569
 fresh-extraction build jobs, passes the canonical audit, both concrete `Q_2`
 audits, and the 60,683-declaration enforcing gate, and independently reruns
-the Mathematica matrix certificate. It predates Reports 61--65; details are
+the Mathematica matrix certificate. It predates Reports 61--66; details are
 in Reports 11 and 60.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,

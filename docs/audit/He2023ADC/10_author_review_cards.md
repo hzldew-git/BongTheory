@@ -227,6 +227,13 @@ For Report 65, reviewers should check the two exact source bounds
 Proposition 4.15 with pp. 995--996. The kernel deduction is separate from the
 still-uninstantiated maximal-space existence and same-rank transfer facts.
 
+For Report 66, reviewers should compare the exact two conjuncts of the
+Lemma 4.8 biconditional with p. 994 and verify that the shared row-definedness
+predicate excludes every invalid low-rank expression. They should separately
+audit whether `omeara1958Theorem1_of_isJordanZeroOne` exactly captures the
+cited O'Meara 1958 Theorem 1 specialization; the field is generic, but its
+concrete non-dyadic instance remains unproved.
+
 Report 53 adds the two global enumeration cards. For Corollary 1.8,
 reviewers should confirm that Hanke's 115 rational classes and Kirschmer's
 471 non-rational totally real classes form the stated disjoint exhaustive

@@ -269,6 +269,13 @@ same-rank maximality transfer still lack concrete local-field instances, the
 result is `CONDITIONAL_FORMALIZATION`, not an unconditional strengthening.
 See report 65.
 
+At `7fbb6b9`, Lemma 4.8 has its exact two-part defined-row endpoint and full
+representation biconditional. The finite `J_{0,1}=N` assertion is internal;
+the biconditional is derived from an arbitrary-target specialization of the
+cited O'Meara 1958 theorem. Since that general interface still lacks a
+concrete non-dyadic instance, this is `CONDITIONAL_FORMALIZATION`, not a
+claim that the cited theorem has itself been formalized. See report 66.
+
 At `d4c56cc`, the non-dyadic Theorem 1.10 conclusion is
 `LOGICALLY_EQUIVALENT` to the published finite counting deduction once the
 explicit non-dyadic catalogue laws are supplied. It is stronger than a bare

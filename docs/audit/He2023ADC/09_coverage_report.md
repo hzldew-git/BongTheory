@@ -34,6 +34,8 @@ counted as a concrete arithmetic implementation.
   64. The non-dyadic Lemma 4.14 and Proposition 4.15 deductions are now
   explicit, with the latter derived from lower-level maximal-existence and
   same-rank transfer laws rather than assumed as a final field; report 65.
+  Lemma 4.8's complete representation biconditional is also derived for each
+  defined row from the cited generic O'Meara theorem interface; report 66.
 - Every numbered Section 5 deduction, including all four clauses of Lemma
   5.3 and Theorem 5.1, is proved from the explicit non-dyadic
   `SectionFiveLaws` package. A concrete lattice/Jordan instance of that
@@ -93,7 +95,7 @@ The main unresolved mathematical work is:
 
 - actual non-dyadic lattice realization/classification for Lemma 4.7,
   concrete instances of its now-explicit minimal-testing witness laws,
-  Lemma 4.8's representation equivalence, and the
+  the generic O'Meara theorem instance underlying Lemma 4.8, and the
   remaining non-dyadic Section 4 cases; this includes instantiating the laws
   used by the now-complete deductions of Lemma 4.14 and Propositions
   4.15--4.16;

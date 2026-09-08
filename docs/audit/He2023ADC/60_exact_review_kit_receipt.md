@@ -82,8 +82,8 @@ definiteness, the literal selected rows
 This closes local mechanical reproducibility for exact clean checkpoint
 `8ead7f4` through Report 59 and supersedes Report 58 for that source closure.
 It does not include the later non-dyadic Table 4.7, low-rank, Proposition
-4.16, minimal-testing, Lemma 4.14, or Proposition 4.15 developments in
-Reports 61--65.
+4.16, minimal-testing, Lemma 4.14, Proposition 4.15, or Lemma 4.8
+representation developments in Reports 61--66.
 
 It also does not certify GitHub-hosted exact-tag CI, a permanent release
 asset, concrete instances of the remaining non-dyadic and global arithmetic
