@@ -53,6 +53,8 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025NonDyadicSystem
 #check Bong.HeADC2025NonDyadicSystem.IsNADC
 #check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma414_represents
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma414
 #check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma52
 #check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53i
 #check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53ii
@@ -62,6 +64,8 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51
 
 #print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma52
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma414_represents
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma414
 #print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53i
 #print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53ii
 #print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iii
@@ -113,6 +117,8 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025NonDyadicSystem.CatalogueLaws
 #check Bong.HeADC2025NonDyadicSystem.nonDyadicBinaryFamily
 #check Bong.HeADC2025NonDyadicSystem.nonDyadicGeneralFamily
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415_isMaximal
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415
 #check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.binary_exactCatalogue
 #check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.general_exactCatalogue_of_isMaximal
 #check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.Theorem110NonDyadicConclusion
@@ -121,6 +127,8 @@ open Bong.QuadraticSpace
 #print axioms Bong.heADC2025NonDyadicBinaryRow_injective
 #print axioms Bong.card_heADC2025NonDyadicBinaryIndex
 #print axioms Bong.card_heADC2025NonDyadicGeneralIndex
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415_isMaximal
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415
 #print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.binary_exactCatalogue
 #print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.general_exactCatalogue_of_isMaximal
 #print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Theorem110NonDyadic

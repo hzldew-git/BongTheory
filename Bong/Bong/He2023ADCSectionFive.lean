@@ -229,12 +229,28 @@ namespace SectionFiveLaws
 
 variable {S : HeADC2025NonDyadicSystem.{u}}
 
+/-- He (2025), Lemma 4.14, first sentence over the non-dyadic interface. -/
+theorem heADC2025Lemma414_represents
+    (H : S.SectionFiveLaws) {M N : S.Lattice}
+    (hMaximal : S.isMaximal M) (hIntegral : S.integral N)
+    (hAmbient : S.spaceRepresents (S.ambient M) (S.ambient N)) :
+    S.represents M N :=
+  H.isMaximal_represents hMaximal hIntegral hAmbient
+
 /-- A maximal lattice is `n`-ADC.  This is the Section 5 use of Lemma 4.14. -/
 theorem isMaximal_isNADC (H : S.SectionFiveLaws) {M : S.Lattice}
     (hM : S.isMaximal M) (n : Nat) : S.IsNADC M n := by
   refine ⟨H.isMaximal_integral hM, ?_⟩
   intro N _ hN hAmbient
   exact H.isMaximal_represents hM hN hAmbient
+
+/-- He (2025), Lemma 4.14, `n`-ADC consequence with the source's literal
+rank range retained. -/
+theorem heADC2025Lemma414
+    (H : S.SectionFiveLaws) {M : S.Lattice} (n : Nat)
+    (_hN : 1 ≤ n) (_hRank : n ≤ S.rank M) (hM : S.isMaximal M) :
+    S.IsNADC M n :=
+  H.isMaximal_isNADC hM n
 
 /-- An `n`-ADC lattice represents any one of the explicit maximal targets
 whose ambient space is represented. -/

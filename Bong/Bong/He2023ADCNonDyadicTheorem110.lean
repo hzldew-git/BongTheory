@@ -16,9 +16,12 @@ row `N_2^2(1)` is removed, giving seven rows; in every rank at least three all
 eight rows occur.
 
 The theorem is stated over `HeADC2025NonDyadicSystem`.  Consequently the
-concrete local-field content of Proposition 4.2, Remark 4.3, Lemmas 4.7--4.8,
-and Proposition 4.15 is isolated in `CatalogueLaws`.  No classification or
-cardinality conclusion is included as a field of that structure.
+concrete local-field content of Proposition 4.2, Remark 4.3, and Lemmas
+4.7--4.8 is isolated in `CatalogueLaws`.  The equal-rank implication of
+Proposition 4.15 is proved below from the maximal-lattice existence and
+same-rank transfer facts used in the published proof.  No classification,
+Proposition 4.15, or cardinality conclusion is included as a field of the
+structure.
 -/
 
 namespace Bong
@@ -123,8 +126,14 @@ structure CatalogueLaws
       HeADC2025NonDyadicRowIsDefined m mu d →
       isometric (S.target nu m c) (S.target mu m d) →
         nu = mu ∧ c = d
-  equalRank_isMaximal (M : S.Lattice) (n : Nat) :
-    S.rank M = n → S.IsNADC M n → S.isMaximal M
+  sameAmbient_has_maximal (M : S.Lattice) (n : Nat) :
+    S.rank M = n →
+      ∃ N : S.Lattice,
+        S.rank N = n ∧ S.isMaximal N ∧
+          S.spaceRepresents (S.ambient M) (S.ambient N)
+  maximal_of_represents_maximal_sameRank {M N : S.Lattice} :
+    S.rank M = S.rank N → S.integral M → S.isMaximal N →
+      S.represents M N → S.isMaximal M
 
 /-- The rank-two family with the undefined row removed. -/
 def nonDyadicBinaryFamily (i : HeADC2025NonDyadicBinaryIndex) : S.Lattice :=
@@ -145,6 +154,32 @@ private theorem generalRow_defined (m : Nat) (hm : 3 ≤ m)
     (i : HeADC2025NonDyadicGeneralIndex) :
     HeADC2025NonDyadicRowIsDefined m i.1 i.2 := by
   constructor <;> omega
+
+/-- He (2025), Proposition 4.15, necessity over a non-dyadic local field.
+Choose a maximal lattice on the source space, use `n`-ADC to represent it,
+and transfer maximality across the resulting same-rank representation. -/
+theorem heADC2025Proposition415_isMaximal
+    (H : S.CatalogueLaws isometric) (M : S.Lattice) (n : Nat)
+    (hRank : S.rank M = n) (hADC : S.IsNADC M n) :
+    S.isMaximal M := by
+  obtain ⟨N, hRankN, hMaximalN, hAmbient⟩ :=
+    H.sameAmbient_has_maximal M n hRank
+  have hMN : S.represents M N :=
+    hADC.2 N hRankN (H.sectionFive.isMaximal_integral hMaximalN) hAmbient
+  exact H.maximal_of_represents_maximal_sameRank
+    (hRank.trans hRankN.symm) hADC.1 hMaximalN hMN
+
+/-- He (2025), Proposition 4.15, full non-dyadic equivalence relative to
+the explicit maximal-lattice construction and representation laws. -/
+theorem heADC2025Proposition415
+    (H : S.CatalogueLaws isometric) (M : S.Lattice) (n : Nat)
+    (_hN : 2 ≤ n) (hRank : S.rank M = n) :
+    S.IsNADC M n ↔ S.isMaximal M := by
+  constructor
+  · intro hADC
+    exact H.heADC2025Proposition415_isMaximal M n hRank hADC
+  · intro hMaximal
+    exact H.sectionFive.isMaximal_isNADC hMaximal n
 
 /-- A maximality implication supplies an exact eight-row catalogue in every
 rank at least three. -/
@@ -180,7 +215,7 @@ theorem binary_exactCatalogue (H : S.CatalogueLaws isometric) :
       (heADC2025NonDyadicBinaryRow_defined i)) 2
   complete M hRank hADC := by
     obtain ⟨nu, c, hDefined, hIso⟩ := H.maximal_complete M 2 hRank
-      (H.equalRank_isMaximal M 2 hRank hADC)
+      (H.heADC2025Proposition415_isMaximal M 2 hRank hADC)
     by_cases hnu : nu = .one
     · subst hnu
       exact ⟨Sum.inl c, hIso⟩
@@ -234,7 +269,8 @@ theorem heADC2025Theorem110NonDyadic
     card_heADC2025NonDyadicBinaryIndex⟩
   equalRank m hm :=
     ⟨H.general_exactCatalogue_of_isMaximal m m hm
-      (fun M hRank hADC => H.equalRank_isMaximal M m hRank hADC),
+      (fun M hRank hADC =>
+        H.heADC2025Proposition415_isMaximal M m hRank hADC),
       card_heADC2025NonDyadicGeneralIndex⟩
   corankOne n hn :=
     ⟨H.general_exactCatalogue_of_isMaximal n (n + 1) (by omega)
