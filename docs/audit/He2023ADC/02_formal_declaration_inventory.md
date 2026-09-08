@@ -64,10 +64,16 @@ Additional concrete declaration groups are:
   4.6(i)--(ii): both parities, both columns, coranks one and two, the exact
   negative alternatives, and arbitrary integral targets outside the unique
   excluded ambient space. Report 67 records the explicit isometry bridges.
+- `He2023ADCNonDyadicLemma45`: both directions of Lemma 4.5 for arbitrary
+  same-rank, same-determinant, non-isometric space pairs, derived from an
+  explicit determinant/Hasse and codimension-criterion interface. Its two
+  table-specific endpoints retain the exact low-rank definedness conditions.
+  No precisely-one conclusion is a law field; see Report 70.
 - `He2023ADCNonDyadicLemma46`: the full non-dyadic Lemma 4.6 deduction over
-  `Lemma46Laws`. Its fields are the ambient Lemma 4.5(i), Proposition 4.2(iii),
-  determinant, and transport inputs, not the actual-lattice conclusions.
-  Standing table-definedness, including the binary omitted row, is explicit.
+  `Lemma46Laws`. Lemma 4.5(i) is now invoked through the invariant derivation;
+  its remaining fields are target-pair invariants, Proposition 4.2(iii), and
+  transport inputs, not ambient or actual-lattice conclusions. Standing
+  table-definedness, including the binary omitted row, is explicit.
 - `He2023ADCCorankOneVolume`: maximal-superlattice volume gap and the
   standard-tail maximality proof, not a converse of Proposition 4.13.
 - `He2023ADCCorankOneAmbient`: two concrete ambient embeddings and the

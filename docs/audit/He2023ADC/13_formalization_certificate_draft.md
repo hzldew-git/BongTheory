@@ -235,6 +235,13 @@ and the maximal-lattice corollary over explicit lower-level laws. Its focused
 audit completes 3,001 jobs and its combined build completes 5,561 jobs. The
 concrete non-dyadic instance remains outside this draft certificate; see
 Report 68.
+The non-dyadic Lemma 4.5 checkpoint
+`b2dba36476d6dea37762bc6b1b00b7d952aafa62` supersedes the Lemma 4.5 input
+boundary in that checkpoint. Both directions and both table-specific clauses
+are proved from determinant/Hasse classification and codimension-one/two
+criteria, and Lemma 4.6 now invokes that proof. The six new endpoints use only
+standard axioms; the concrete invariant package remains outside this draft
+certificate. See Report 70.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

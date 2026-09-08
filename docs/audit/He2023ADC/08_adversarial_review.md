@@ -271,7 +271,8 @@ definedness boundary matches the publisher's notation.
 Report 68 checks the same failure modes in the non-dyadic interface. The
 binary omitted row is excluded by the standing table-definedness premise;
 `nu.other` is definitionally the paper's `3-nu`; and the large rank-`n+2` row
-is proved defined from `n>=2`. The law package contains only the cited ambient
-results and transport facts. Reviewers must still validate a concrete
-non-dyadic instance, especially the meaning of `sameDeterminant` and the
+is proved defined from `n>=2`. Report 70 removes the ambient exactly-one fields:
+Lemma 4.5 is derived from explicit determinant/Hasse classification and four
+codimension criteria. Reviewers must still validate their concrete
+non-dyadic instance, the target-pair determinant/non-isometry facts, and the
 orientation of `spaceRepresents_of_isometric_left`.

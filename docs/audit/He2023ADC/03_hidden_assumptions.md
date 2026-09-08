@@ -224,13 +224,14 @@ translation from Lemma 4.5(i); reviewers must not read it as literal equality
 of chosen determinant representatives. The remaining restriction is the
 dyadic context itself.
 
-Report 68 isolates the non-dyadic counterpart in `Lemma46Laws`. The abstract
-`sameDeterminant` relation has not been instantiated as the determinant class
-of an actual non-dyadic quadratic space. The ambient Lemma 4.5(i), unique
-excluding space of Proposition 4.2(iii), actual-to-ambient representation,
-and isometry transport are visible fields. None states an actual `n`-ADC
-conclusion. Thus the published deduction is proved, but the concrete
-non-dyadic arithmetic remains an explicit assumption boundary.
+Reports 68 and 70 isolate the non-dyadic counterpart. `Lemma45InvariantData`
+now makes the determinant class and Hasse bit explicit, and both directions
+of Lemma 4.5 are derived from its classification and codimension criteria.
+`Lemma46Laws` retains target-pair invariants, the unique excluding space of
+Proposition 4.2(iii), actual-to-ambient representation, and isometry
+transport. No field states an ambient exactly-one or actual `n`-ADC
+conclusion. Thus the published deductions are proved, but construction of
+these laws for a concrete non-dyadic local space/lattice remains explicit.
 
 The two final enumeration results have distinct visible boundaries. For
 Corollary 1.8, the Hanke and Kirschmer class types, their partition, and the

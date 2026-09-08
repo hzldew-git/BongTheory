@@ -36,6 +36,10 @@ counted as a concrete arithmetic implementation.
   same-rank transfer laws rather than assumed as a final field; report 65.
   Lemma 4.8's complete representation biconditional is also derived for each
   defined row from the cited generic O'Meara theorem interface; report 66.
+  Both directions of non-dyadic Lemma 4.5, including its two table-specific
+  clauses, are now derived from determinant/Hasse classification and the four
+  codimension criteria. Lemma 4.6(i) calls this proof rather than ambient
+  exactly-one law fields; report 70.
 - Every numbered Section 5 deduction, including all four clauses of Lemma
   5.3 and Theorem 5.1, is proved from the explicit non-dyadic
   `SectionFiveLaws` package. A concrete lattice/Jordan instance of that
@@ -100,7 +104,9 @@ instance remains part of the scope below.
 
 The main unresolved mathematical work is:
 
-- the concrete non-dyadic Lemma 4.6 law instance, actual non-dyadic lattice
+- concrete non-dyadic determinant/Hasse classification and codimension
+  criterion instances used by Lemma 4.5, the remaining target-pair and
+  Proposition 4.2(iii) inputs used by Lemma 4.6, actual non-dyadic lattice
   realization/classification for Lemma 4.7,
   concrete instances of its now-explicit minimal-testing witness laws,
   the generic O'Meara theorem instance underlying Lemma 4.8, and the

@@ -396,3 +396,12 @@ The part-(i) endpoint has no axioms, while both part-(ii) endpoints use only
 tracked Lean files and all 27 CI tests pass. This axiom result does not prove
 the proposition-valued `Lemma46Laws` fields or their concrete local-field
 instance. See report 68.
+
+At `b2dba36476d6dea37762bc6b1b00b7d952aafa62`, Report 70 replaces the
+non-dyadic ambient Lemma 4.5(i) exactly-one fields by a proof from an explicit
+determinant-class, Hasse-bit, and four-criterion interface. It also proves the
+reverse-direction Lemma 4.5(ii) and both table-specific clauses. The six new
+endpoints report only `propext` and `Quot.sound`; the canonical build completes
+5,563 jobs, the scanner checks 2,784 tracked Lean files, and all 27 policy
+tests pass. The interface fields are proposition-valued mathematical inputs,
+not Lean axioms; their concrete non-dyadic local-field instance remains open.

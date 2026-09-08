@@ -362,3 +362,11 @@ only Lemma 4.5(i), Proposition 4.2(iii), determinant equality, and transport
 facts. The focused audit completes 3,001 jobs, the combined build completes
 5,561 jobs, and the scanner checks 2,782 sources. This closes the missing
 logical deduction, but not the concrete non-dyadic local-field instance.
+
+Report 70 advances that boundary at
+`b2dba36476d6dea37762bc6b1b00b7d952aafa62`. Both directions of Lemma 4.5
+and both table-specific "in particular" statements now follow from a visible
+determinant/Hasse invariant interface. Lemma 4.6(i) invokes this theorem, and
+its former ambient exactly-one fields have been removed. This is a strictly
+smaller conditional boundary, but it is not yet a concrete construction over
+every non-dyadic completion.

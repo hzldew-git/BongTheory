@@ -77,3 +77,12 @@ at most 100 columns, JSON parses, and `git diff --check` passes.
 The exact clean Review Kit in Report 60 predates this checkpoint. A later
 exact kit, the concrete non-dyadic law instance, GitHub exact-tag CI, and
 independent human semantic sign-off remain separate gates.
+
+## Later refinement
+
+Report 70 at `b2dba36` removes the two ambient exactly-one Lemma 4.5(i)
+fields described above. It derives both directions of Lemma 4.5 from a lower
+determinant/Hasse invariant interface, proves both table-specific clauses,
+and makes Lemma 4.6(i) invoke that theorem. The remaining concrete
+non-dyadic-instance boundary is therefore narrower than at this historical
+checkpoint.
