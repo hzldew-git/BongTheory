@@ -212,6 +212,12 @@ the current source closure: it includes Lemma 2.2 and O'Meara 63:9, verifies
 2,060 payload hashes, completes 5,560 build jobs, and passes all direct audits
 plus the 60,594-declaration enforcing gate. Exact dependency-transport and
 build details are in Reports 11 and 58.
+The exact clean kit at `8ead7f4` advances that evidence through the publisher
+Table 1 certificate. It verifies 2,064 payload hashes, completes all 5,569
+fresh-extraction build jobs, passes the canonical audit, both concrete `Q_2`
+audits, and the 60,683-declaration enforcing gate, and independently reruns
+the Mathematica matrix certificate. It predates Reports 61--65; details are
+in Reports 11 and 60.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

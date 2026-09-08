@@ -333,3 +333,11 @@ public network reset encountered during the last dependency clone and the
 exact clean-mirror fallback are disclosed in the receipt. GitHub exact-tag
 CI, publication, remaining mathematical inputs, and human sign-off remain
 separate gates and do not change the Grade-D `NOT_COMPLETE` verdict.
+
+Report 60 advances local clean-kit evidence through the publisher Table 1
+certificate at exact source `8ead7f4`. The archive verifies 2,064 payload
+hashes, completes all 5,569 fresh-extraction build jobs, passes the canonical
+audit, both concrete `Q_2` audits, and the 60,683-declaration enforcing gate,
+and reruns the Mathematica certificate successfully. It predates Reports
+61--65 and remains distinct from GitHub exact-tag CI, a permanent release,
+and human semantic approval.

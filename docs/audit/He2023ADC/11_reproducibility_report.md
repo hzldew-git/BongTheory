@@ -585,3 +585,27 @@ boundary, and unproved external obligations.
 This is exact-commit local evidence, not yet an independently extracted clean
 Review Kit for `e0ef033`, GitHub exact-tag CI, release evidence, or human
 semantic approval.
+
+## Exact clean Review Kit through Report 59
+
+The source-only archive generated from exact clean commit
+`8ead7f470ad0e9b27327dffa11bac2e4854d0609` has SHA-256
+`36F68A93590F669FFE8B0A50F1FE5F613000877442AE2919F0CC86401C446254`
+and size 6,229,631 bytes. Its manifest records 1,983 local Lean sources and
+2,065 packaged files; a separate structure extraction verified all 2,064
+payload hashes and found no build products, Git metadata, or publisher PDF.
+
+All nine dependency worktrees were clean and exactly at their locked
+revisions. In a fresh extraction the build began with eight workers, was
+interrupted after completed job 4,176 only to increase parallelism, and
+resumed in the same tree with twelve workers. It completed all 5,569 jobs.
+The canonical audit, both concrete `Q_2` audits, and the standalone paper
+axiom gate were rerun directly and passed; the gate reported
+`AXIOM_GATE_PASS: 60683 declarations checked`.
+
+The extracted kit's Mathematica verifier also reconfirmed all 48 Table 1
+determinants, symmetry, positive definiteness, the literal selected rows, and
+count 21. This receipt covers the source through Report 59 only; it predates
+Reports 61--65. GitHub exact-tag CI, permanent release publication,
+uninstantiated mathematical laws, and human semantic approval remain
+separate. See Report 60.
