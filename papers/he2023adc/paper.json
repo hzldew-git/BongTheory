@@ -37,6 +37,7 @@
     "BongTest.He2023ADCQuaternaryBoundaryQ2",
     "BongTest.He2023ADCExceptionalQuaternaryQ2",
     "BongTest.He2023ADCNonDyadicTableAudit",
+    "BongTest.He2023ADCNonDyadicLemma48Audit",
     "BongTest.He2023ADCNonDyadicProposition415Audit",
     "BongTest.He2023ADCNonDyadicProposition416Audit",
     "BongTest.He2023ADCNonDyadicMinimalTestingAudit"

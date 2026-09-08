@@ -134,6 +134,12 @@ structure CatalogueLaws
   maximal_of_represents_maximal_sameRank {M N : S.Lattice} :
     S.rank M = S.rank N → S.integral M → S.isMaximal N →
       S.represents M N → S.isMaximal M
+  /-- The specialization of O'Meara (1958), Theorem 1 cited in Lemma 4.8. -/
+  omeara1958Theorem1_of_isJordanZeroOne {M N : S.Lattice} :
+    S.isJordanZeroOne N →
+      (S.represents M N ↔
+        S.spaceRepresents (S.jordanZero M) (S.jordanZero N) ∧
+          S.spaceRepresents (S.jordanZeroOne M) (S.ambient N))
 
 /-- The rank-two family with the undefined row removed. -/
 def nonDyadicBinaryFamily (i : HeADC2025NonDyadicBinaryIndex) : S.Lattice :=
@@ -154,6 +160,37 @@ private theorem generalRow_defined (m : Nat) (hm : 3 ≤ m)
     (i : HeADC2025NonDyadicGeneralIndex) :
     HeADC2025NonDyadicRowIsDefined m i.1 i.2 := by
   constructor <;> omega
+
+/-- He (2025), Lemma 4.8, first sentence for a defined Table 4.7 row.
+The maximality assertion records the source's named maximal lattice, while
+`isJordanZeroOne` is the abstract system's form of `J_{0,1}(N) = N`. -/
+theorem heADC2025Lemma48_jordanZeroOne
+    (H : S.CatalogueLaws isometric) (n : Nat)
+    (nu : HeADC2025NonDyadicColumn)
+    (c : HeADC2025NonDyadicSquareClass)
+    (hDefined : HeADC2025NonDyadicRowIsDefined n nu c) :
+    S.isMaximal (S.target nu n c) ∧
+      S.isJordanZeroOne (S.target nu n c) := by
+  constructor
+  · exact H.target_isMaximal n nu c hDefined
+  · apply (H.sectionFive.isJordanZeroOne_iff_rank _).2
+    rw [H.sectionFive.target_jordanZeroOne_rank,
+      H.sectionFive.target_rank]
+
+/-- He (2025), Lemma 4.8, complete representation equivalence for a defined
+Table 4.7 row, derived from the cited general O'Meara representation theorem. -/
+theorem heADC2025Lemma48
+    (H : S.CatalogueLaws isometric) (M : S.Lattice) (n : Nat)
+    (nu : HeADC2025NonDyadicColumn)
+    (c : HeADC2025NonDyadicSquareClass)
+    (hDefined : HeADC2025NonDyadicRowIsDefined n nu c) :
+    S.represents M (S.target nu n c) ↔
+      S.spaceRepresents (S.jordanZero M)
+          (S.jordanZero (S.target nu n c)) ∧
+        S.spaceRepresents (S.jordanZeroOne M)
+          (S.ambient (S.target nu n c)) :=
+  H.omeara1958Theorem1_of_isJordanZeroOne
+    (H.heADC2025Lemma48_jordanZeroOne n nu c hDefined).2
 
 /-- He (2025), Proposition 4.15, necessity over a non-dyadic local field.
 Choose a maximal lattice on the source space, use `n`-ADC to represent it,
