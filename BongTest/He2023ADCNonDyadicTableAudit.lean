@@ -24,6 +24,8 @@ import Bong.Bong.He2023ADCNonDyadicTable
 #check Bong.heADC2025NonDyadicOddRowIsDefined_iff
 #check Bong.card_heADC2025NonDyadicOddUnaryDefinedRows
 #check Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
+#check Bong.heADC2025NonDyadicExceptionalQuaternaryRow
+#check Bong.heADC2025NonDyadicQuaternaryRow_dichotomy
 
 #print axioms Bong.heADC2025NonDyadicEvenTableRow_rank
 #print axioms Bong.heADC2025NonDyadicOddTableRow_rank
@@ -39,3 +41,5 @@ import Bong.Bong.He2023ADCNonDyadicTable
 #print axioms Bong.heADC2025NonDyadicOddRowIsDefined_iff
 #print axioms Bong.card_heADC2025NonDyadicOddUnaryDefinedRows
 #print axioms Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
+#print axioms Bong.heADC2025NonDyadicExceptionalQuaternaryRow
+#print axioms Bong.heADC2025NonDyadicQuaternaryRow_dichotomy

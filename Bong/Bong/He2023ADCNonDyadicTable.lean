@@ -432,4 +432,39 @@ theorem card_heADC2025NonDyadicEvenBinaryDefinedRows :
         HeADC2025NonDyadicEvenRowIsDefined 1 p.1 p.2).card = 7 := by
   decide
 
+/-- The symbolic block row of the anisotropic unimodular plane `A`. -/
+def heADC2025NonDyadicAnisotropicPlaneRow :
+    List HeADC2025NonDyadicJordanAtom :=
+  [.unary .one, .unary .delta]
+
+/-- The symbolic block row of the uniformizer-scaled plane `A(pi)`. -/
+def heADC2025NonDyadicScaledAnisotropicPlaneRow :
+    List HeADC2025NonDyadicJordanAtom :=
+  [.unary .uniformizer, .unary .deltaUniformizer]
+
+/-- The exceptional quaternary row is exactly `A` followed by `A(pi)`. -/
+theorem heADC2025NonDyadicExceptionalQuaternaryRow :
+    heADC2025NonDyadicEvenTableRow 2 .two .one =
+      heADC2025NonDyadicAnisotropicPlaneRow ++
+        heADC2025NonDyadicScaledAnisotropicPlaneRow := by
+  rfl
+
+/-- Every other quaternary row contains a displayed hyperbolic plane.  This
+is the finite table content used in non-dyadic Proposition 4.16. -/
+theorem heADC2025NonDyadicQuaternaryRow_dichotomy
+    (nu : HeADC2025NonDyadicColumn)
+    (c : HeADC2025NonDyadicSquareClass) :
+    (nu = .two ∧ c = .one ∧
+      heADC2025NonDyadicEvenTableRow 2 nu c =
+        heADC2025NonDyadicAnisotropicPlaneRow ++
+          heADC2025NonDyadicScaledAnisotropicPlaneRow) ∨
+      .hyperbolic ∈ heADC2025NonDyadicEvenTableRow 2 nu c := by
+  cases nu <;> cases c <;>
+    simp [heADC2025NonDyadicEvenTableRow,
+      heADC2025NonDyadicEvenHyperbolicCount,
+      heADC2025NonDyadicHyperbolicPower,
+      heADC2025NonDyadicEvenTail,
+      heADC2025NonDyadicAnisotropicPlaneRow,
+      heADC2025NonDyadicScaledAnisotropicPlaneRow]
+
 end Bong

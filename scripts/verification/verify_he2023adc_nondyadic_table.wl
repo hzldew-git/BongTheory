@@ -112,6 +112,14 @@ binaryRows = Tuples[{columns, classes}];
 binaryDefinedRows = DeleteCases[binaryRows, {2, "1"}];
 unaryRows = Tuples[{columns, classes}];
 unaryDefinedRows = Select[unaryRows, First[#] == 1 &];
+quaternaryRows = Table[{{nu, c},
+    Join[Table["H", {evenHyperbolicCount[2, nu, c]}], evenTail[nu, c]]},
+  {nu, columns}, {c, classes}];
+quaternaryRows = Flatten[quaternaryRows, 1];
+exceptionalQuaternaryTail =
+  {{"1"}, {"Delta"}, {"pi"}, {"DeltaPi"}};
+nonexceptionalQuaternaryRows =
+  Select[quaternaryRows, First[#] != {2, "1"} &];
 
 result = <|
   "evenRows" -> And @@ evenRankChecks,
@@ -125,7 +133,12 @@ result = <|
       Sort[({2, #} & /@ classes)],
   "unaryDefinedCount" -> Length[unaryDefinedRows] == 4,
   "binaryUndefinedRow" -> Complement[binaryRows, binaryDefinedRows] == {{2, "1"}},
-  "binaryDefinedCount" -> Length[binaryDefinedRows] == 7
+  "binaryDefinedCount" -> Length[binaryDefinedRows] == 7,
+  "exceptionalQuaternaryRow" ->
+    Cases[quaternaryRows, {{2, "1"}, row_} :> row] ==
+      {exceptionalQuaternaryTail},
+  "otherQuaternaryRowsContainH" ->
+    And @@ (MemberQ[Last[#], "H"] & /@ nonexceptionalQuaternaryRows)
   |>;
 
 Print[result];
