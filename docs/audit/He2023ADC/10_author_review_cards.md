@@ -207,6 +207,15 @@ row's listed local obstruction; verify the 21 retained rows prime by prime;
 and check that only new row `L_10` is nonmaximal. The current formal endpoint
 proves the downstream logic but does not replace those external computations.
 
+Report 59 now gives reviewers executable models for all 48 Table 1 rows. They
+should compare the ten coordinates, discriminant, and last-column entry of
+every row against p. 1019, paying particular attention to the negative entries
+in rows 38 and 46. Lean and the independent Mathematica script check symmetry,
+determinants, rational positive definiteness, selected rows, and the count 21.
+Reviewers must still verify that these matrices represent the intended global
+lattices, exhaust Oh's catalogue, and satisfy the asserted local `2`-ADC tests;
+none of those semantic and arithmetic tasks follows from the matrix checks.
+
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 

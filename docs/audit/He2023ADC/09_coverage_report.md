@@ -58,8 +58,10 @@ counted as a concrete arithmetic implementation.
   52.
 - Corollary 1.8's total 586 and every logical conclusion of Theorem 1.11 are
   proved from explicit external-enumeration laws. The Table 2 source-row
-  selection, injectivity, and exact 21 count are closed; concrete Hanke--
-  Kirschmer--Oh data and prime-by-prime local checks remain open; report 53.
+  selection, injectivity, and exact 21 count are closed. All 48 Table 1
+  matrices, printed discriminants, rational positive definiteness, and the
+  literal last column are concrete. Hanke--Kirschmer--Oh catalogue exhaustion
+  and prime-by-prime local checks remain open; reports 53 and 59.
 
 ## Published-source discrepancies
 
@@ -87,7 +89,8 @@ The main unresolved mathematical work is:
   global reduction packages;
 - any publisher-corrected replacement for the four binary statements and a
   resolution of the printed-strength Lemma 7.13 claim;
-- concrete Hanke--Kirschmer--Oh catalogue imports, matrix models, and local
+- concrete Hanke--Kirschmer--Oh catalogue imports, the global interpretation
+  and catalogue identity of the now-transcribed matrices, and the local
   computations underlying Corollary 1.8 and Theorem 1.11;
 - GitHub-hosted exact-revision CI, independent human semantic sign-off,
   merge, and release promotion. The current local clean Review Kit through

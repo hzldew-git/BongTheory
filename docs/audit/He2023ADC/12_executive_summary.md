@@ -233,8 +233,17 @@ concrete local-field instance is claimed.
 Report 53 closes the finite logical layer of Corollary 1.8 and Theorem 1.11
 at `8cdd338`. It proves `115+471=586`, the literal 21-row Table 2 selection,
 nonrepetition, exact count, and the complete Theorem 1.11 conclusion. The
-cited external catalogues, 48 matrix models, and local checks remain explicit
-inputs, so neither result is yet an unconditional concrete enumeration.
+cited external catalogues, 48 matrix models, and local checks remained explicit
+inputs at that historical checkpoint.
+
+Report 59 advances the concrete data layer at `e0ef033`: all 48 publisher
+Table 1 matrices, their printed discriminants, exact rational positive
+definiteness, and the literal last-column pattern are now kernel-checked. The
+21 `None` rows are identified with the Table 2 selection, and a separate
+Mathematica program reproduces all finite matrix checks. Oh-catalogue
+exhaustion and the actual prime-by-prime local checks remain explicit inputs,
+so Theorem 1.11 is still conditional rather than an unconditional concrete
+enumeration.
 
 Semantic status: one omitted binary class affects four printed statements
 (Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13

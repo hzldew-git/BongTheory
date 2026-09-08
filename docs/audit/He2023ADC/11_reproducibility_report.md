@@ -566,3 +566,22 @@ comment-aware scanner checked 2,769 tracked Lean files. This supersedes the
 Report 54 local receipt and closes the clean-kit gap noted in Reports 55--57.
 It remains distinct from GitHub-hosted exact-tag CI, release publication,
 uninstantiated mathematical laws, and human semantic approval. See Report 58.
+
+## Publisher Table 1 matrix checkpoint
+
+At exact code revision `e0ef0330a8eaa85c74dfa9b91cc706ce3c81efad`,
+`Bong.Lattice.He2023ADCTableOne`, the enumeration bridge, the canonical paper
+entry, and the expanded audit complete a 5,555-job build. The source scanner
+checks 2,770 tracked Lean files and finds no forbidden proof token. All changed
+Lean lines satisfy the 100-column limit, and `git diff --check` passes.
+
+The checked-in Mathematica program
+`scripts/verification/verify_he2023adc_table1.wl` exits successfully and
+independently confirms all 48 determinant values, symmetry, positive
+definiteness, the selected row numbers, and the cardinality 21 using exact
+integer arithmetic. Report 59 fixes the source locator, endpoints, axiom
+boundary, and unproved external obligations.
+
+This is exact-commit local evidence, not yet an independently extracted clean
+Review Kit for `e0ef033`, GitHub exact-tag CI, release evidence, or human
+semantic approval.

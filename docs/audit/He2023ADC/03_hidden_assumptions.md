@@ -185,8 +185,11 @@ cardinalities 115 and 471 are supplied; only the total 586 is derived. For
 Theorem 1.11, `HeADC2025Theorem111Laws` supplies Oh-catalogue exhaustion,
 the local row checks, and table metadata. The final 21-row classification is
 not a law field: its source-row list, nonrepetition, count, global `2`-ADC
-deduction, completeness, and maximality conclusion are proved. Concrete
-matrix rows and local computations remain open. See report 53.
+deduction, completeness, and maximality conclusion are proved. The 48
+concrete matrix rows, their printed discriminants, positive definiteness, and
+literal last-column pattern are closed in Report 59. Oh-catalogue exhaustion,
+the global-lattice interpretation, and the actual local computations remain
+open.
 
 Lemma 2.2 is not overgeneralized to an arbitrary abstract field extension.
 `HasOneDimensionalSubspaceDescent` still exposes the arithmetic base case in

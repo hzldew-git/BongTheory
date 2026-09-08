@@ -103,6 +103,11 @@ Report 58 records the exact independently extracted clean Review Kit at
 `7d7a4d5`. It contains Reports 55--57, verifies all 2,060 payload hashes,
 completes the 5,560-job build and all four He ADC gates, and therefore
 supersedes Report 54 for the current local reproducibility checkpoint.
+Report 59 advances Theorem 1.11 at `e0ef033`: all 48 publisher Table 1
+coordinate rows, printed discriminants, positive-definiteness certificates,
+and last-column entries are now concrete. The 21 retained rows are identified
+with the existing Table 2 selection. Oh-catalogue exhaustion and the actual
+prime-by-prime local `2`-ADC calculations remain explicit external inputs.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version
@@ -122,3 +127,5 @@ also proved over explicit law packages. The global predicates and logical
 reductions are in scope, with their non-dyadic and arithmetic premises still
 undischarged. This audit does not certify those concrete instances or the
 remaining local classifications and concrete external enumeration inputs.
+The literal Table 1 matrix data are no longer among those remaining inputs;
+their global catalogue interpretation and local arithmetic verification are.

@@ -225,6 +225,11 @@ Additional concrete declaration groups are:
   literal 21 source rows of Table 2, proves selection, injectivity, and the
   exact cardinality, and derives every conclusion of Theorem 1.11 from an
   explicit external-catalogue and local-verification law package; report 53.
+- `He2023ADCTableOne` transcribes all 48 publisher Table 1 coordinate rows,
+  constructs their integral Gram matrices, and kernel-checks symmetry,
+  printed discriminants, exact rational positive definiteness, the literal
+  bad-prime column, and its 21 `None` entries. The enumeration module proves
+  that this column is the abstract Table 2 selection predicate; report 59.
 - `He2023ADCLemma75Sufficiency` and `He2023ADCLemma75Necessity` export the
   full four-condition equivalence `heADC2025Lemma75`.
 - `He2023ADCTheorem74` exports `HeADCTheorem74Conditions` and the full
@@ -237,5 +242,7 @@ number-field completions or proofs of the global arithmetic inputs. Likewise,
 the Section 5 and catalogue law packages are not concrete non-dyadic
 local-field instances. The Corollary 1.8 and Theorem 1.11 law packages are
 likewise not concrete implementations of the cited external catalogues.
+The literal matrices are concrete, but their identification with an exhaustive
+Oh catalogue and the prime-by-prime local checks are still not implemented.
 `BongTest.He2023ADCAudit` prints the actual public types and selected
 transitive axiom sets.

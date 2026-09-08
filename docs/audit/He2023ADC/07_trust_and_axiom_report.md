@@ -331,3 +331,13 @@ four direct gates pass; the enforcing gate checks 60,594 declarations. The
 comment-aware scanner independently checks all 2,769 tracked Lean sources at
 the same clean checkpoint. See report 58. Concrete law-package instances and
 human semantic sign-off remain outside this mechanical trust result.
+
+At checkpoint `e0ef0330a8eaa85c74dfa9b91cc706ce3c81efad`, the
+publisher Table 1 certificate, enumeration bridge, canonical paper entry,
+and expanded audit complete a 5,555-job build. Finite row checks use kernel
+`decide`, not `native_decide`. Selected determinant, minor,
+positive-definiteness, last-column, cardinality, and bridge endpoints report
+only `propext`, `Classical.choice`, and `Quot.sound`; several finite endpoints
+use only `propext`. The scanner checks 2,770 tracked Lean files. Report 59
+records why this trust result does not discharge Oh-catalogue exhaustion,
+prime-by-prime local verification, or human source review.

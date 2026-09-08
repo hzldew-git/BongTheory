@@ -142,6 +142,13 @@ Corollary 1.8 and Theorem 1.11 logical checkpoint:
 nonrepetition, and every conclusion of Theorem 1.11 from visible external
 enumeration and local-verification inputs. The Hanke--Kirschmer--Oh catalogue
 instances and local computations remain pending.
+Publisher Table 1 matrix checkpoint:
+`e0ef0330a8eaa85c74dfa9b91cc706ce3c81efad`. Report 59 transcribes
+all 48 matrices and checks their symmetry, printed discriminants, exact
+rational positive definiteness, literal bad-prime column, and 21 `None` rows.
+It proves that those rows are the Table 2 selection. Oh-catalogue exhaustion,
+global-lattice identification, and the actual local calculations remain
+pending, so the Theorem 1.11 certificate remains conditional.
 Lemma 2.2 algebraic checkpoint:
 `04b721092c911d94932d871ec21815a5286da3d6`. Report 55 proves the
 complete dimension induction and literal descended-subspace conclusion from
