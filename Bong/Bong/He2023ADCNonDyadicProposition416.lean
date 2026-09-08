@@ -46,19 +46,22 @@ structure QuaternaryTableRealizationLaws
 namespace QuaternaryTableRealizationLaws
 
 variable {S : HeADC2025NonDyadicSystem.{u}}
+  {I : S.Lemma45InvariantData}
+  {P : S.Proposition42InvariantData I}
   {isometric : S.Lattice → S.Lattice → Prop}
 
 /-- He (2025), Proposition 4.16 over a non-dyadic local field, with the
 actual realization and maximal-lattice classification inputs explicit. -/
 theorem heADC2025Proposition416NonDyadic
-    (H : S.CatalogueLaws isometric)
+    (H : S.CatalogueLaws I P isometric)
     (R : S.QuaternaryTableRealizationLaws isometric)
     (N : S.Lattice) (hRank : S.rank N = 4) (hMaximal : S.isMaximal N) :
     (isometric N (S.target .two 4 .one) ∧
       isometric N
         (R.orthogonalSum R.anisotropicPlane R.scaledAnisotropicPlane)) ∨
       S.represents N R.hyperbolicPlane := by
-  obtain ⟨nu, c, _, hN⟩ := H.maximal_complete N 4 hRank hMaximal
+  obtain ⟨nu, c, _, hN⟩ :=
+    H.maximal_complete N 4 (by omega) hRank hMaximal
   rcases heADC2025NonDyadicQuaternaryRow_dichotomy nu c with
     hExceptional | hHyperbolic
   · rcases hExceptional with ⟨rfl, rfl, _⟩
@@ -69,7 +72,7 @@ theorem heADC2025Proposition416NonDyadic
 /-- Outside the unique exceptional table class, a maximal quaternary lattice
 represents the hyperbolic plane. -/
 theorem heADC2025Proposition416NonDyadic_represents
-    (H : S.CatalogueLaws isometric)
+    (H : S.CatalogueLaws I P isometric)
     (R : S.QuaternaryTableRealizationLaws isometric)
     (N : S.Lattice) (hRank : S.rank N = 4) (hMaximal : S.isMaximal N)
     (hNotExceptional : ¬ isometric N (S.target .two 4 .one)) :

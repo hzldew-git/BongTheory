@@ -4,7 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
 
-import Bong.Bong.He2023ADCNonDyadicTable
+import Bong.Bong.He2023ADCNonDyadicProposition42
 
 /-!
 # He (2025), Theorem 1.10 over non-dyadic local fields
@@ -102,30 +102,26 @@ structure IsExactNADCIsometryCatalogue
       ∃ j : J, isometric M (family j)
   irredundant {i j : J} : isometric (family i) (family j) → i = j
 
-/-- Concrete non-dyadic classification inputs used to turn Section 5 into
-an exact isometry catalogue.  These are precisely the maximal-row facts of
-Proposition 4.2, Remark 4.3, Lemmas 4.7--4.8, and the equal-rank implication
-of Proposition 4.15. -/
+/-- Remaining non-dyadic inputs used to turn the proved invariant-space
+classification into an exact lattice-isometry catalogue.  Proposition 4.2
+and Lemma 4.4 are carried by `proposition42`; maximal-row exhaustion and row
+irredundancy are derived below rather than stored as fields. -/
 structure CatalogueLaws
+    (I : S.Lemma45InvariantData)
+    (P : S.Proposition42InvariantData I)
     (isometric : S.Lattice → S.Lattice → Prop) : Prop where
-  sectionFive : S.SectionFiveLaws
+  proposition42 : S.Proposition42Laws I P
   target_isMaximal (m : Nat) (nu : HeADC2025NonDyadicColumn)
       (c : HeADC2025NonDyadicSquareClass) :
     HeADC2025NonDyadicRowIsDefined m nu c →
       S.isMaximal (S.target nu m c)
-  maximal_complete (M : S.Lattice) (m : Nat) :
-    S.rank M = m → S.isMaximal M →
-      ∃ nu : HeADC2025NonDyadicColumn,
-        ∃ c : HeADC2025NonDyadicSquareClass,
-          HeADC2025NonDyadicRowIsDefined m nu c ∧
-            isometric M (S.target nu m c)
-  target_irredundant (m : Nat)
-      {nu mu : HeADC2025NonDyadicColumn}
-      {c d : HeADC2025NonDyadicSquareClass} :
-    HeADC2025NonDyadicRowIsDefined m nu c →
-      HeADC2025NonDyadicRowIsDefined m mu d →
-      isometric (S.target nu m c) (S.target mu m d) →
-        nu = mu ∧ c = d
+  isometric_ambient {M N : S.Lattice} :
+    isometric M N →
+      S.spaceIsometric (S.ambient M) (S.ambient N)
+  maximal_isometric_of_ambient {M N : S.Lattice} :
+    S.isMaximal M → S.isMaximal N →
+      S.spaceIsometric (S.ambient M) (S.ambient N) →
+        isometric M N
   sameAmbient_has_maximal (M : S.Lattice) (n : Nat) :
     S.rank M = n →
       ∃ N : S.Lattice,
@@ -154,18 +150,55 @@ def nonDyadicGeneralFamily (m : Nat)
 namespace CatalogueLaws
 
 variable {S : HeADC2025NonDyadicSystem.{u}}
+  {I : S.Lemma45InvariantData}
+  {P : S.Proposition42InvariantData I}
   {isometric : S.Lattice → S.Lattice → Prop}
+
+/-- The shared Section 5 laws carried by the invariant classification
+package. -/
+theorem sectionFive (H : S.CatalogueLaws I P isometric) : S.SectionFiveLaws :=
+  H.proposition42.sectionFive
 
 private theorem generalRow_defined (m : Nat) (hm : 3 ≤ m)
     (i : HeADC2025NonDyadicGeneralIndex) :
     HeADC2025NonDyadicRowIsDefined m i.1 i.2 := by
   constructor <;> omega
 
+/-- Remark 4.3, exhaustion of maximal lattices, derived from Proposition
+4.2(ii) and uniqueness of a maximal lattice on a fixed quadratic space. -/
+theorem maximal_complete
+    (H : S.CatalogueLaws I P isometric) (M : S.Lattice)
+    (m : Nat) (hm : 1 ≤ m) (hRank : S.rank M = m)
+    (hMaximal : S.isMaximal M) :
+    ∃ nu : HeADC2025NonDyadicColumn,
+      ∃ c : HeADC2025NonDyadicSquareClass,
+        HeADC2025NonDyadicRowIsDefined m nu c ∧
+          isometric M (S.target nu m c) := by
+  rcases H.proposition42.heADC2025Proposition42iiNonDyadic
+      (S.ambient M) m hm ((H.sectionFive.ambient_rank M).trans hRank) with
+    ⟨nu, c, hDefined, hAmbient⟩
+  exact ⟨nu, c, hDefined,
+    H.maximal_isometric_of_ambient hMaximal
+      (H.target_isMaximal m nu c hDefined) hAmbient⟩
+
+/-- Remark 4.3, irredundancy of the maximal-lattice rows, derived from
+Lemma 4.4(i) after passing an integral isometry to ambient spaces. -/
+theorem target_irredundant
+    (H : S.CatalogueLaws I P isometric) (m : Nat) (hm : 1 ≤ m)
+    {nu mu : HeADC2025NonDyadicColumn}
+    {c d : HeADC2025NonDyadicSquareClass}
+    (hNu : HeADC2025NonDyadicRowIsDefined m nu c)
+    (hMu : HeADC2025NonDyadicRowIsDefined m mu d)
+    (hIso : isometric (S.target nu m c) (S.target mu m d)) :
+    nu = mu ∧ c = d :=
+  (H.proposition42.heADC2025Lemma44iNonDyadic hm hNu hMu).1
+    (H.isometric_ambient hIso)
+
 /-- He (2025), Lemma 4.8, first sentence for a defined Table 4.7 row.
 The maximality assertion records the source's named maximal lattice, while
 `isJordanZeroOne` is the abstract system's form of `J_{0,1}(N) = N`. -/
 theorem heADC2025Lemma48_jordanZeroOne
-    (H : S.CatalogueLaws isometric) (n : Nat)
+    (H : S.CatalogueLaws I P isometric) (n : Nat)
     (nu : HeADC2025NonDyadicColumn)
     (c : HeADC2025NonDyadicSquareClass)
     (hDefined : HeADC2025NonDyadicRowIsDefined n nu c) :
@@ -180,7 +213,7 @@ theorem heADC2025Lemma48_jordanZeroOne
 /-- He (2025), Lemma 4.8, complete representation equivalence for a defined
 Table 4.7 row, derived from the cited general O'Meara representation theorem. -/
 theorem heADC2025Lemma48
-    (H : S.CatalogueLaws isometric) (M : S.Lattice) (n : Nat)
+    (H : S.CatalogueLaws I P isometric) (M : S.Lattice) (n : Nat)
     (nu : HeADC2025NonDyadicColumn)
     (c : HeADC2025NonDyadicSquareClass)
     (hDefined : HeADC2025NonDyadicRowIsDefined n nu c) :
@@ -196,7 +229,7 @@ theorem heADC2025Lemma48
 Choose a maximal lattice on the source space, use `n`-ADC to represent it,
 and transfer maximality across the resulting same-rank representation. -/
 theorem heADC2025Proposition415_isMaximal
-    (H : S.CatalogueLaws isometric) (M : S.Lattice) (n : Nat)
+    (H : S.CatalogueLaws I P isometric) (M : S.Lattice) (n : Nat)
     (hRank : S.rank M = n) (hADC : S.IsNADC M n) :
     S.isMaximal M := by
   obtain ⟨N, hRankN, hMaximalN, hAmbient⟩ :=
@@ -209,7 +242,7 @@ theorem heADC2025Proposition415_isMaximal
 /-- He (2025), Proposition 4.15, full non-dyadic equivalence relative to
 the explicit maximal-lattice construction and representation laws. -/
 theorem heADC2025Proposition415
-    (H : S.CatalogueLaws isometric) (M : S.Lattice) (n : Nat)
+    (H : S.CatalogueLaws I P isometric) (M : S.Lattice) (n : Nat)
     (_hN : 2 ≤ n) (hRank : S.rank M = n) :
     S.IsNADC M n ↔ S.isMaximal M := by
   constructor
@@ -221,7 +254,7 @@ theorem heADC2025Proposition415
 /-- A maximality implication supplies an exact eight-row catalogue in every
 rank at least three. -/
 theorem general_exactCatalogue_of_isMaximal
-    (H : S.CatalogueLaws isometric) (n m : Nat) (hm : 3 ≤ m)
+    (H : S.CatalogueLaws I P isometric) (n m : Nat) (hm : 3 ≤ m)
     (hMaximal : ∀ M : S.Lattice,
       S.rank M = m → S.IsNADC M n → S.isMaximal M) :
     S.IsExactNADCIsometryCatalogue isometric n m
@@ -231,15 +264,15 @@ theorem general_exactCatalogue_of_isMaximal
     (H.target_isMaximal m i.1 i.2 (generalRow_defined m hm i)) n
   complete M hRank hADC := by
     obtain ⟨nu, c, hDefined, hIso⟩ :=
-      H.maximal_complete M m hRank (hMaximal M hRank hADC)
+      H.maximal_complete M m (by omega) hRank (hMaximal M hRank hADC)
     exact ⟨(nu, c), hIso⟩
   irredundant {i j} hIso := by
-    obtain ⟨hnu, hc⟩ := H.target_irredundant m
+    obtain ⟨hnu, hc⟩ := H.target_irredundant m (by omega)
       (generalRow_defined m hm i) (generalRow_defined m hm j) hIso
     exact Prod.ext hnu hc
 
 /-- The equal-rank binary branch is the exact seven-row catalogue. -/
-theorem binary_exactCatalogue (H : S.CatalogueLaws isometric) :
+theorem binary_exactCatalogue (H : S.CatalogueLaws I P isometric) :
     S.IsExactNADCIsometryCatalogue isometric 2 2
       S.nonDyadicBinaryFamily where
   rank i := H.sectionFive.target_rank
@@ -251,7 +284,7 @@ theorem binary_exactCatalogue (H : S.CatalogueLaws isometric) :
       (heADC2025NonDyadicBinaryRow i).2
       (heADC2025NonDyadicBinaryRow_defined i)) 2
   complete M hRank hADC := by
-    obtain ⟨nu, c, hDefined, hIso⟩ := H.maximal_complete M 2 hRank
+    obtain ⟨nu, c, hDefined, hIso⟩ := H.maximal_complete M 2 (by omega) hRank
       (H.heADC2025Proposition415_isMaximal M 2 hRank hADC)
     by_cases hnu : nu = .one
     · subst hnu
@@ -264,7 +297,7 @@ theorem binary_exactCatalogue (H : S.CatalogueLaws isometric) :
       exact ⟨Sum.inr ⟨c, hc⟩, hIso⟩
   irredundant {i j} hIso := by
     apply heADC2025NonDyadicBinaryRow_injective
-    obtain ⟨hnu, hc⟩ := H.target_irredundant 2
+    obtain ⟨hnu, hc⟩ := H.target_irredundant 2 (by omega)
       (heADC2025NonDyadicBinaryRow_defined i)
       (heADC2025NonDyadicBinaryRow_defined j) hIso
     exact Prod.ext hnu hc
@@ -300,7 +333,7 @@ structure Theorem110NonDyadicConclusion
 /-- Theorem 1.10 over a non-dyadic local field, relative only to the explicit
 catalogue-law boundary above. -/
 theorem heADC2025Theorem110NonDyadic
-    (H : S.CatalogueLaws isometric) :
+    (H : S.CatalogueLaws I P isometric) :
     Theorem110NonDyadicConclusion (S := S) isometric where
   binary := ⟨H.binary_exactCatalogue,
     card_heADC2025NonDyadicBinaryIndex⟩

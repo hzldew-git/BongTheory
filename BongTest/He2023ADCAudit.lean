@@ -165,6 +165,8 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025NonDyadicSystem.CatalogueLaws
 #check Bong.HeADC2025NonDyadicSystem.nonDyadicBinaryFamily
 #check Bong.HeADC2025NonDyadicSystem.nonDyadicGeneralFamily
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.maximal_complete
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.target_irredundant
 #check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415_isMaximal
 #check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415
 #check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Lemma48_jordanZeroOne
@@ -177,6 +179,8 @@ open Bong.QuadraticSpace
 #print axioms Bong.heADC2025NonDyadicBinaryRow_injective
 #print axioms Bong.card_heADC2025NonDyadicBinaryIndex
 #print axioms Bong.card_heADC2025NonDyadicGeneralIndex
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.maximal_complete
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.target_irredundant
 #print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415_isMaximal
 #print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415
 #print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Lemma48_jordanZeroOne

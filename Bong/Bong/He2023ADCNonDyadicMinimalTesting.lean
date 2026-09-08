@@ -98,11 +98,14 @@ structure MinimalTestingLaws
 namespace MinimalTestingLaws
 
 variable {S : HeADC2025NonDyadicSystem.{u}}
+  {I : S.Lemma45InvariantData}
+  {P : S.Proposition42InvariantData I}
   {isometric : S.Lattice → S.Lattice → Prop}
 
 /-- The defined non-dyadic maximal rows test rank-`n` universality. -/
 theorem nonDyadicTestingFamily_isUniversalityTestingFamily
-    (H : S.CatalogueLaws isometric) (T : S.MinimalTestingLaws isometric n) :
+    (H : S.CatalogueLaws I P isometric)
+    (T : S.MinimalTestingLaws isometric n) (hN : 1 ≤ n) :
     S.IsUniversalityTestingFamily (S.nonDyadicTestingFamily n) n := by
   intro L hIntegral hRows
   refine ⟨hIntegral, ?_⟩
@@ -110,7 +113,7 @@ theorem nonDyadicTestingFamily_isUniversalityTestingFamily
   obtain ⟨M, hRankM, hMaximalM, hMN⟩ :=
     T.integral_has_maximal_overlattice N hRankN hIntegralN
   obtain ⟨nu, c, hDefined, hIso⟩ :=
-    H.maximal_complete M n hRankM hMaximalM
+    H.maximal_complete M n hN hRankM hMaximalM
   let i : HeADC2025NonDyadicTestingIndex n :=
     ⟨(nu, c), hDefined⟩
   have hLM : S.represents L M :=
@@ -120,11 +123,11 @@ theorem nonDyadicTestingFamily_isUniversalityTestingFamily
 /-- He (2025), Lemma 4.7(ii), as a literal deletion-minimality theorem with
 the cited maximal-overlattice and deletion-witness inputs exposed. -/
 theorem heADC2025Lemma47ii
-    (H : S.CatalogueLaws isometric) (T : S.MinimalTestingLaws isometric n)
-    (_hN : 1 ≤ n) :
+    (H : S.CatalogueLaws I P isometric)
+    (T : S.MinimalTestingLaws isometric n) (hN : 1 ≤ n) :
     S.IsLiteralMinimalUniversalityTestingFamily
       (S.nonDyadicTestingFamily n) n := by
-  refine ⟨T.nonDyadicTestingFamily_isUniversalityTestingFamily H, ?_⟩
+  refine ⟨T.nonDyadicTestingFamily_isUniversalityTestingFamily H hN, ?_⟩
   exact T.deletion_witness
 
 end MinimalTestingLaws
