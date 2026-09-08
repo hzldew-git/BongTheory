@@ -90,6 +90,12 @@ def HeADC2025NonDyadicRowIsDefined (m : Nat)
     (c : HeADC2025NonDyadicSquareClass) : Prop :=
   (m ≠ 1 ∨ nu ≠ .two) ∧ (m ≠ 2 ∨ nu ≠ .two ∨ c ≠ .one)
 
+instance (m : Nat) (nu : HeADC2025NonDyadicColumn)
+    (c : HeADC2025NonDyadicSquareClass) :
+    Decidable (HeADC2025NonDyadicRowIsDefined m nu c) := by
+  unfold HeADC2025NonDyadicRowIsDefined
+  infer_instance
+
 /-- Symbolic rank of a list of published Jordan blocks. -/
 def heADC2025NonDyadicSymbolicRank
     (blocks : List HeADC2025NonDyadicJordanAtom) : Nat :=

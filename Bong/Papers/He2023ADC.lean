@@ -67,6 +67,7 @@ import Bong.Bong.He2023ADCSectionFive
 import Bong.Bong.He2023ADCNonDyadicTable
 import Bong.Bong.He2023ADCNonDyadicTheorem110
 import Bong.Bong.He2023ADCNonDyadicProposition416
+import Bong.Bong.He2023ADCNonDyadicMinimalTesting
 import Bong.Bong.He2023ADCUnaryTesting
 
 /-!
@@ -117,7 +118,9 @@ printed formula at ramification index zero, relative to an explicit
 non-dyadic maximal-lattice catalogue law package.  The literal block rows of
 Lemma 4.7(i) are transcribed separately: their total ranks, scale-zero and
 scale-one ranks, the missing row `N_2^2(1)`, and the table-level identity
-`J_{0,1}(N)=N` are kernel-checked.
+`J_{0,1}(N)=N` are kernel-checked.  The exact rank-four table dichotomy used
+by non-dyadic Proposition 4.16 is also proved; the proposition itself is
+derived from explicit maximal-catalogue and actual-lattice realization laws.
 Corollary 1.8 is formalized as the exact finite-cardinality deduction from
 the two cited external catalogues.  For Theorem 1.11, all 48 integral Gram
 matrices in the publisher's Table 1 are transcribed literally.  Their
