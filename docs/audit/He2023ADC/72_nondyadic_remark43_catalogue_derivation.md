@@ -63,6 +63,8 @@ With Lean 4.32.1 at the checkpoint above:
 - the binary exact catalogue reports only `propext` and `Quot.sound`;
 - the general exact catalogue and assembled non-dyadic Theorem 1.10 report
   only `propext`, `Classical.choice`, and `Quot.sound`;
+- the focused imported-closure axiom gate reports
+  `AXIOM_GATE_PASS: 61046 declarations checked`;
 - the comment-aware scanner checks 2,787 tracked Lean sources;
 - all 27 CI policy tests pass;
 - the paper manifest parses, every changed Lean line is at most 100 columns,

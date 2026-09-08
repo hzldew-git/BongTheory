@@ -421,5 +421,7 @@ each report only `propext`; the exact binary catalogue reports `propext` and
 `Quot.sound`, while the general catalogue and assembled non-dyadic Theorem
 1.10 report the permitted trio `propext`, `Classical.choice`, and
 `Quot.sound`. The canonical build completes 5,563 jobs, the scanner checks
-2,787 tracked Lean files, and all 27 policy tests pass. This remains local
-cached evidence over proposition-valued inputs, not a clean-kit receipt.
+2,787 tracked Lean files, all 27 policy tests pass, and the focused
+imported-closure gate reports `AXIOM_GATE_PASS: 61046 declarations checked`.
+This remains local cached evidence over proposition-valued inputs, not a
+clean-kit receipt.
