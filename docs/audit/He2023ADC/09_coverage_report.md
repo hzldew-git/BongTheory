@@ -31,7 +31,9 @@ counted as a concrete arithmetic implementation.
   Proposition 4.16 deduction are also proved over explicit realization laws;
   report 63. Lemma 4.7(ii)'s exact finite family and full deletion-minimal
   deduction are formalized over explicit local-lattice witness laws; report
-  64.
+  64. The non-dyadic Lemma 4.14 and Proposition 4.15 deductions are now
+  explicit, with the latter derived from lower-level maximal-existence and
+  same-rank transfer laws rather than assumed as a final field; report 65.
 - Every numbered Section 5 deduction, including all four clauses of Lemma
   5.3 and Theorem 5.1, is proved from the explicit non-dyadic
   `SectionFiveLaws` package. A concrete lattice/Jordan instance of that
@@ -93,7 +95,8 @@ The main unresolved mathematical work is:
   concrete instances of its now-explicit minimal-testing witness laws,
   Lemma 4.8's representation equivalence, and the
   remaining non-dyadic Section 4 cases; this includes instantiating the laws
-  used by the now-complete finite deduction of Proposition 4.16;
+  used by the now-complete deductions of Lemma 4.14 and Propositions
+  4.15--4.16;
 - concrete non-dyadic instances of `SectionFiveLaws` and `CatalogueLaws`,
   required to discharge the conditional Theorem 1.10 endpoint;
 - concrete number-field instances of `SectionEightLaws` and the earlier

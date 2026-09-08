@@ -61,6 +61,11 @@ Remark 4.3, Lemmas 4.7--4.8, and Proposition 4.15.  The structure does not
 contain any exact-catalogue conclusion, cardinality identity, or branch of
 Theorem 1.10 as a field.
 
+This paragraph records the historical `d4c56cc` interface. Report 65
+supersedes its Proposition 4.15 boundary: that final necessity conclusion is
+no longer a structure field and is now derived from lower-level
+maximal-lattice existence and same-rank transfer laws.
+
 ## Kernel and axiom checks
 
 The following checks pass at `d4c56cc`:

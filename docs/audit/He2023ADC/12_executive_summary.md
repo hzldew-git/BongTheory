@@ -267,6 +267,12 @@ proves both testing sufficiency and literal deletion minimality from explicit
 maximal-overlattice and deletion-witness laws. Concrete instances of those
 local-lattice laws remain pending.
 
+Report 65 formalizes the non-dyadic Lemma 4.14 and Proposition 4.15
+deductions with their literal rank bounds. Proposition 4.15 is no longer a
+catalogue-law conclusion: Lean derives it from maximal-lattice existence,
+`n`-ADC representation, and same-rank maximality transfer. Those lower-level
+local-field laws still require concrete instances.
+
 Semantic status: one omitted binary class affects four printed statements
 (Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
 has a separate quantifier mismatch, and the proof of Theorem 7.1 is

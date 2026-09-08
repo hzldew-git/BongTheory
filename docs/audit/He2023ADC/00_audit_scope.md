@@ -122,6 +122,10 @@ the remaining boundary.
 Report 64 gives Lemma 4.7(ii) its literal defined-row family, proves the
 four/seven/eight cardinalities, and derives testing sufficiency plus deletion
 minimality from explicit maximal-overlattice and deletion-witness laws.
+Report 65 adds literal non-dyadic endpoints for Lemma 4.14 and Proposition
+4.15. The latter is now derived from maximal-lattice existence and same-rank
+maximality transfer, rather than stored as a conclusion in `CatalogueLaws`.
+Concrete instances of these lower-level local-lattice laws remain open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

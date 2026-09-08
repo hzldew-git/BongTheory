@@ -213,6 +213,12 @@ Additional concrete declaration groups are:
   deletion-minimal universality testing from separately exposed
   maximal-overlattice, classification, transport, and deletion-witness laws.
   Report 64 records the conditional boundary.
+- `He2023ADCSectionFive` now exports both sentences of non-dyadic Lemma 4.14
+  with the source's literal rank bounds. `He2023ADCNonDyadicTheorem110`
+  derives Proposition 4.15 from maximal-lattice existence, `n`-ADC
+  representation, and same-rank maximality transfer; the final proposition
+  is no longer a `CatalogueLaws` field. The focused audit is
+  `He2023ADCNonDyadicProposition415Audit`; report 65.
 - `He2023ADCSectionEight` defines class number one and the distinguishing
   rank-`n` sublattice property in the global/local interface. From
   `SectionEightLaws` and the existing Theorem 1.3 laws it proves both clauses

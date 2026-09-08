@@ -197,6 +197,13 @@ Report 64 isolates the additional inputs behind Lemma 4.7(ii). The finite
 defined-row family and its cardinalities are internal, as is the proof that
 maximal classification, representation transport/composition, maximal
 overlattices, and row deletion witnesses imply literal minimal testing.
+
+Report 65 removes the final Proposition 4.15 necessity conclusion from the
+catalogue law package. The remaining assumptions are the lower-level
+existence of a maximal lattice on the represented ambient space, same-rank
+maximality transfer, and the maximal-lattice representation fact used in
+Lemma 4.14. None of these fields states Proposition 4.15 or the `n`-ADC
+conclusion of Lemma 4.14.
 Concrete maximal-overlattice and deletion-witness instances remain external.
 
 The two final enumeration results have distinct visible boundaries. For

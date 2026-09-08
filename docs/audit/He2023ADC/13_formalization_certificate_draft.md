@@ -153,6 +153,11 @@ defined-row subtype and its four/seven/eight cardinalities, then proves
 universality-testing sufficiency and literal deletion minimality from visible
 maximal-overlattice, catalogue, transport, and deletion-witness laws. Their
 concrete local-lattice instances remain pending.
+Non-dyadic Lemma 4.14 and Proposition 4.15 checkpoint: `66c6e66`. Report 65
+retains both published rank ranges and derives Proposition 4.15 from
+lower-level maximal-lattice existence and same-rank representation transfer;
+the final proposition is not a law-package field. Concrete local-field
+instances and human review remain pending.
 Corollary 1.8 and Theorem 1.11 logical checkpoint:
 `8cdd338f064934f9e3dc1f2af2011cb998705b97`. Report 53 proves the
 `115+471=586` deduction, the literal 21-row Table 2 source selection and its

@@ -321,6 +321,12 @@ permitted foundational set. The scanner checks 2,776 tracked Lean sources
 and all 27 policy tests pass. Report 64 keeps the concrete deletion-witness
 and maximal-overlattice assumptions visible.
 
+At checkpoint `66c6e66`, the two non-dyadic Lemma 4.14 endpoints and two
+Proposition 4.15 endpoints report no axioms. The canonical entry and focused
+audit complete 5,559 jobs; the scanner checks 2,777 tracked Lean
+sources and all 27 policy tests pass. Report 65 records the remaining
+proposition-valued local-lattice inputs separately from these kernel facts.
+
 At checkpoint `8cdd338f064934f9e3dc1f2af2011cb998705b97`, the enumeration
 module, canonical paper entry, expanded audit, and main axiom gate compile
 with Lean 4.32.1. The Corollary 1.8 arithmetic, Table 2 selection,

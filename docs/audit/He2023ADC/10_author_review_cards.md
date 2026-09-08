@@ -195,8 +195,9 @@ the binary index omits exactly the undefined row `N_2^2(1)`, that every rank
 at least three has all eight column/square-class pairs, and that Theorem 5.1
 is applied only in coranks one and two. They should separately audit whether
 the fields of `CatalogueLaws` exactly match Proposition 4.2, Remark 4.3,
-Lemmas 4.7--4.8, and Proposition 4.15. A concrete instance of those fields is
-not yet certified.
+Lemmas 4.7--4.8, maximal-lattice existence, and same-rank maximality
+transfer. Proposition 4.15 is now a derived theorem rather than a field. A
+concrete instance of those fields is not yet certified.
 
 Report 61 adds the non-dyadic Lemma 4.7 table-data card. Reviewers should
 compare all 16 ordered symbolic rows with p. 993, including every power of
@@ -220,6 +221,11 @@ generic maximal-overlattice deduction from the uninstantiated row-by-row
 deletion witnesses cited through reference [16, Proposition 3.2]. The formal
 endpoint is literal deletion-minimality, but it is conditional until those
 witnesses are constructed for actual non-dyadic local lattices.
+
+For Report 65, reviewers should check the two exact source bounds
+`1 <= n <= rank M` and `n >= 2`, and compare the necessity proof of
+Proposition 4.15 with pp. 995--996. The kernel deduction is separate from the
+still-uninstantiated maximal-space existence and same-rank transfer facts.
 
 Report 53 adds the two global enumeration cards. For Corollary 1.8,
 reviewers should confirm that Hanke's 115 rational classes and Kirschmer's

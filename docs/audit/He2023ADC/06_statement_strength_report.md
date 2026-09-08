@@ -261,6 +261,14 @@ finite family sizes are unconditional. The theorem remains
 `CONDITIONAL_FORMALIZATION`, not an actual non-dyadic lattice instance. See
 report 64.
 
+At `66c6e66`, the non-dyadic Lemma 4.14 endpoint retains its printed
+`1 <= n <= rank M` range, and Proposition 4.15 retains `n >= 2` and equal
+rank. The latter conclusion is derived rather than included as a law-package
+field. Because maximal-space existence, maximal representation, and
+same-rank maximality transfer still lack concrete local-field instances, the
+result is `CONDITIONAL_FORMALIZATION`, not an unconditional strengthening.
+See report 65.
+
 At `d4c56cc`, the non-dyadic Theorem 1.10 conclusion is
 `LOGICALLY_EQUIVALENT` to the published finite counting deduction once the
 explicit non-dyadic catalogue laws are supplied. It is stronger than a bare
