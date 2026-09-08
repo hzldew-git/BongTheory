@@ -223,13 +223,18 @@ The exact clean kit at `8ead7f4` advances that evidence through the publisher
 Table 1 certificate. It verifies 2,064 payload hashes, completes all 5,569
 fresh-extraction build jobs, passes the canonical audit, both concrete `Q_2`
 audits, and the 60,683-declaration enforcing gate, and independently reruns
-the Mathematica matrix certificate. It predates Reports 61--67; details are
+the Mathematica matrix certificate. It predates Reports 61--68; details are
 in Reports 11 and 60.
 The later Lemma 4.6 checkpoint `bc043fe` completes all eight dyadic
 actual-lattice branches. Its focused audit reports only the standard axioms,
 the combined canonical build completes 5,560 jobs, and the source scanner
 checks 2,780 files. Report 67 records its statement bridge and explains why
 this local build is not a clean-kit receipt.
+The non-dyadic Lemma 4.6 checkpoint `b335b1f` derives both published parts
+and the maximal-lattice corollary over explicit lower-level laws. Its focused
+audit completes 3,001 jobs and its combined build completes 5,561 jobs. The
+concrete non-dyadic instance remains outside this draft certificate; see
+Report 68.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

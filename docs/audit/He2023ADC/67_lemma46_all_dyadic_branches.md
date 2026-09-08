@@ -70,3 +70,6 @@ These are local kernel and source-audit results. Existing dependency
 worktrees reported local-change warnings, so this checkpoint is not a clean
 Review-Kit receipt. Exact clean extraction, GitHub exact-tag CI, and
 independent mathematical sign-off remain separate gates.
+
+Later status: Report 68 adds the complete non-dyadic deduction over explicit
+lower-level laws. Its concrete local-field instance remains pending.

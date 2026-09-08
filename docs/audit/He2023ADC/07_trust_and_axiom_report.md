@@ -387,3 +387,12 @@ and focused audit complete 5,560 jobs; the source scanner checks 2,780 tracked
 Lean files and all 27 CI unit tests pass. Existing dependency worktrees were
 not clean, so this is local kernel evidence rather than a clean Review-Kit
 receipt. See report 67.
+
+At checkpoint `b335b1f2fef52e46bac59c8572d0cbdb94007e24`, the complete
+conditional non-dyadic Lemma 4.6 deduction compiles. Its focused audit
+completes 3,001 jobs; the canonical entry and both audits complete 5,561 jobs.
+The part-(i) endpoint has no axioms, while both part-(ii) endpoints use only
+`propext`, `Classical.choice`, and `Quot.sound`. The scanner checks 2,782
+tracked Lean files and all 27 CI tests pass. This axiom result does not prove
+the proposition-valued `Lemma46Laws` fields or their concrete local-field
+instance. See report 68.

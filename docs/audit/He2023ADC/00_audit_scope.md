@@ -134,6 +134,11 @@ Report 67 completes both parts of Lemma 4.6 after restricting to the dyadic
 context. All parity, column, and corank-one/corank-two alternatives now end in
 actual lattice representation. The unrestricted non-dyadic specialization
 and independent semantic approval remain open.
+Report 68 supplies the complete non-dyadic Lemma 4.6 deduction over an
+explicit lower-level law package. Lemma 4.5(i), Proposition 4.2(iii),
+determinant-square-class equality, and representation transport remain visible
+inputs; no actual Lemma 4.6 conclusion is a field. A concrete non-dyadic
+local-field instance of those laws remains open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version
