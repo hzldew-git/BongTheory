@@ -428,10 +428,24 @@ open Bong.QuadraticSpace
 
 #check @Bong.BONG.GoodBONG.heADCMaximal_represents_iff_diagonalRepresents
 #check @Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankOne
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankTwo
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iOddCorankOne
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iOddCorankTwo
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iiEvenFirst
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iiEvenSecond
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iiOddFirst
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iiOddSecond
 #check @Bong.BONG.GoodBONG.heADCCorankOne_uniformizerTest
 #check @Bong.BONG.GoodBONG.heADCEvenCorankOne_orders
 #print axioms Bong.BONG.GoodBONG.heADCMaximal_represents_iff_diagonalRepresents
 #print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankOne
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankTwo
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iOddCorankOne
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iOddCorankTwo
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iiEvenFirst
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iiEvenSecond
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iiOddFirst
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iiOddSecond
 #print axioms Bong.BONG.GoodBONG.heADCCorankOne_uniformizerTest
 #print axioms Bong.BONG.GoodBONG.heADCEvenCorankOne_orders
 
