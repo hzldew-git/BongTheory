@@ -5,6 +5,11 @@ Authors: BONG Theory contributors
 -/
 import Bong.Lattice.NADC
 import Bong.Lattice.GlobalNADC
+import Bong.QuadraticSpace.He2025SubspaceDescentTopology
+import Bong.Dyadic.PowerIdealResidueQuotient
+import Bong.Dyadic.PrincipalUnitResidueQuotient
+import Bong.Dyadic.UnitSquareClassOddLayer
+import Bong.Dyadic.UnitSquareClassCount
 import Bong.Lattice.He2023ADCSectionEight
 import Bong.Lattice.He2023ADCEnumerativeMain
 import Bong.Bong.He2023ADCSectionThree
@@ -51,6 +56,7 @@ import Bong.Bong.He2023ADCLemma718
 import Bong.Bong.He2023ADCLemma719Models
 import Bong.Bong.He2023ADCTheorem72Published
 import Bong.Bong.He2023ADCRemark73
+import Bong.Bong.He2023ADCUnitRepresentativeCount
 import Bong.Bong.He2023ADCCorollary721
 import Bong.Bong.He2023ADCQuaternaryCatalogue
 import Bong.Bong.He2023ADCTheorem110
@@ -70,7 +76,12 @@ integral quadratic lattices over algebraic number fields*, Doc. Math. 30
 semantic authority.
 
 The present layer covers the local dyadic specialization of Definition 1.1,
-Lemma 2.1, and Sections 3--4.  In particular, the rank-one table in
+Lemma 2.1, and Sections 3--4.  It also proves the algebraic induction and
+literal subspace conclusion of Lemma 2.2.  The one-dimensional case is reduced
+to density and open nonzero square classes; mathlib supplies density for every
+number-field finite completion, while the inverse function theorem supplies
+square-class openness.
+In particular, the rank-one table in
 Definition 4.1, Proposition 4.2 and Remark 4.3, together with its literal
 deletion-minimality in Lemma 4.9(ii), is included.  It also covers the
 corrected local classifications in Theorems

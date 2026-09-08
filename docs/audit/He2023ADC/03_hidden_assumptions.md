@@ -23,9 +23,11 @@ rank hypotheses remain part of the mathematical statements.
 The unary table is indexed by a finite complete and irredundant unit
 square-class representative system. Completeness and irredundancy are used
 as mathematical hypotheses, not hidden axioms. The exact count `2 * |U|` is
-unconditional once that index is chosen. Only the conversion to the printed
-`4 * (N p)^e` uses the explicit `HeADC2025Corollary721CountingLaw`, recording
-the cited O'Meara 63:9 input. See report 50.
+unconditional once that index is chosen. The conversion to the printed
+`4 * (N p)^e` now uses the proved theorem
+`HeADC2025Corollary721CountingLaw.card_unit_representatives`; the namespace
+name is retained for compatibility, but there is no counting-law typeclass or
+theorem parameter. See reports 50 and 57.
 
 The publisher's standing convention on page 986 assumes integrality for
 all subsequent lattices. Thus the explicit integrality premise of the new
@@ -132,11 +134,10 @@ that `U` is complete and normalized. See report 45.
 
 Corollary 7.21's finite catalogue, isometry completeness, irredundancy,
 maximality partition, and counts in terms of `|U|` add no counting premise.
-The printed residue-norm formulas separately require
-`HeADC2025Corollary721CountingLaw`, which states the O'Meara 63:9 identity
-`|U|=2(N p)^e`. No generic proved instance is currently present. This
-explicit theorem parameter must not be mistaken for a discharged result merely
-because `#print axioms` reports only foundational axioms. See report 46.
+The printed residue-norm formulas use the internally proved O'Meara 63:9
+identity `|U|=2(N p)^e`. The proof passes through an actual equivalence between
+the representative system and `ValuationUnitClass K`, so completeness and
+irredundancy do not conceal a cardinality premise. See reports 46 and 57.
 
 Section 5 is proved over `HeADC2025NonDyadicSystem.SectionFiveLaws`. The
 package explicitly contains the non-dyadic Jordan-rank identities, ambient
@@ -158,16 +159,17 @@ report 47.
 The corrected quaternary catalogue does not assume completeness or
 irredundancy. Those properties are proved using the corrected three-way
 classification, maximal-lattice uniqueness, and nonisometric ambient spaces.
-Only the final residue-norm conversion assumes the already disclosed
-O'Meara 63:9 counting law; the unconditional count is `4|U|+2`. See report
-48.
+The final residue-norm conversion now uses the proved O'Meara 63:9 theorem;
+both `4|U|+2` and `8(N p)^e+2` are unconditional in the dyadic interface.
+See reports 48 and 57.
 
 The dyadic Theorem 1.10 endpoint does not infer an isometry-class count from
 the cardinality of an arbitrary parameter list. Each maximal-table branch is
 proved complete and irredundant for integral isometry by using the relevant
 maximality classification and maximal-lattice uniqueness. The final
-residue-norm formulas still require `HeADC2025Corollary721CountingLaw`, and
-the endpoint does not include the non-dyadic branch. See report 51.
+residue-norm formulas now use the unconditional theorem in the compatibility
+namespace `HeADC2025Corollary721CountingLaw`; the endpoint does not include
+the non-dyadic branch. See reports 51 and 57.
 
 The non-dyadic Theorem 1.10 endpoint separately proves the seven- and
 eight-row finite counts and all catalogue deductions. Its
@@ -185,3 +187,12 @@ the local row checks, and table metadata. The final 21-row classification is
 not a law field: its source-row list, nonrepetition, count, global `2`-ADC
 deduction, completeness, and maximality conclusion are proved. Concrete
 matrix rows and local computations remain open. See report 53.
+
+Lemma 2.2 is not overgeneralized to an arbitrary abstract field extension.
+`HasOneDimensionalSubspaceDescent` still exposes the arithmetic base case in
+the reusable algebraic theorem, but Report 56 proves its concrete instance
+for every number-field finite completion. Density is supplied by mathlib's
+completion theorem, while square-class openness is proved from the inverse
+function theorem. The final
+`heADC2025Lemma22_numberFieldFiniteCompletion` has no proposition-valued law
+premise. See reports 55--56.

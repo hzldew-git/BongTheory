@@ -182,16 +182,17 @@ checkpoint. Report 45 adds all three literal formulas of Remark 7.3 at
 `287b202`, including the exact negative powers, sharp scale, half-scaled
 `A` normalization, ordered ternary tail, and finite representative domain.
 Eight selected reports are standard-only, the focused gate checks 59,743
-declarations, and the scanner checks 2,741 sources. Section 7 now has 19/21
-fully formalized numbered items and one quantifier-mismatched item. Report 46
-formalizes Corollary 7.21 relative to its cited O'Meara 63:9 numerical input at
+declarations, and the scanner checks 2,741 sources. At that checkpoint,
+Section 7 had 19/21 fully formalized numbered items and one
+quantifier-mismatched item. Report 46
+formalized Corollary 7.21 relative to its cited O'Meara 63:9 numerical input at
 `bd0c9a3`. The code proves a complete and irredundant integral-isometry
 catalogue, exact maximal versus nonmaximal membership, and the unconditional
 counts `(4e+3)|U|` and `(4e-1)|U|`. Under the visible counting premise it
 derives the printed `(8e+6)(N p)^e` and `(8e-2)(N p)^e` formulas. Seven
 selected reports are standard-only, the focused gate checks 59,853
-declarations, and the scanner checks 2,742 sources. The cited counting theorem
-still has no proved generic repository instance.
+declarations, and the scanner checks 2,742 sources. Report 57 later supplies
+the generic repository proof and makes these formulas unconditional.
 
 Report 47 adds the complete logical deductions of Sections 5 and 8 at
 `d447cd3`. Lemmas 5.2--5.4 and Theorem 5.1 follow from an explicit
@@ -204,8 +205,8 @@ instances of the law packages remain open.
 Report 48 propagates the verified binary boundary to Theorems 1.9(ii) and
 1.10 at `f7e8fb7`. A finite family consisting of the four published maximal
 rows and both realized nonmaximal classes is proved rank-correct, 2-ADC,
-complete, and irredundant. It has exactly `4|U|+2` classes and, relative to
-the same O'Meara 63:9 input, `8(N p)^e+2`. The printed two-way
+complete, and irredundant. It has exactly `4|U|+2` classes and, after report
+57's proof of O'Meara 63:9, unconditionally `8(N p)^e+2`. The printed two-way
 classification and `+1` count are frozen and formally refuted rather than
 silently replaced.
 
@@ -213,15 +214,15 @@ Report 50 closes the dyadic unary boundary of Section 4. The finite
 `N_1^1(c)` family is proved complete and irredundant; `W_2^3(c)` is the
 unique excluding ternary space and supplies literal deletion-minimality in
 Lemma 4.9(ii). The exact count `2|U|` is unconditional. Its printed
-`4(N p)^e` form retains O'Meara 63:9 as an explicit premise. The 5,032-job
+`4(N p)^e` form becomes unconditional in report 57. The 5,032-job
 paper build, expanded audit, and 60,154-declaration focused gate pass locally.
 
 Report 51 closes every dyadic rank branch of Theorem 1.10 at `125dcf2`.
 Each branch is an exact integral-isometry catalogue with rank, `n`-ADC,
 completeness, and irredundancy proofs. The combined endpoint retains the
 formal refutation of the printed binary `+1` value and gives the corrected
-`+2` value. The residue-norm conversion remains conditional on the cited
-O'Meara 63:9 input.
+`+2` value. Report 57 makes every dyadic residue-norm conversion
+unconditional.
 
 Report 52 closes the finite-catalogue deduction for the non-dyadic branch at
 `d4c56cc`. It proves exact seven- and eight-row catalogues for equal rank and
@@ -257,3 +258,41 @@ all eight papers at f6f7485/c82668b.
 Project grade: D because a substantive mismatch occurs in a core classification
 lemma. Whole-paper verdict:
 `NOT_COMPLETE`.
+
+Report 55 adds the complete algebraic induction of Lemma 2.2 at `04b7210`.
+It constructs an actual nondegenerate global subspace and proves that its
+scalar extension is isometric to the given local subspace. The sole remaining
+Lemma 2.2 input is the publisher's one-dimensional density and open-square-
+class argument, represented by an explicit proposition rather than a Lean
+axiom. This advances Section 2 but does not change the whole-paper grade or
+completion verdict.
+
+Report 56 discharges that remaining input at `83cc791`. Mathlib supplies the
+dense number-field embedding in every finite-place completion; a general
+inverse-function argument proves openness of the nonzero square classes; and
+the combined theorem returns the literal descended nondegenerate subspace.
+Lemma 2.2 is therefore `FULLY_FORMALIZED` / `PROVISIONAL_MATCH`. The whole-
+paper grade and completion verdict remain unchanged because the documented
+classification mismatches and other concrete arithmetic inputs are separate.
+
+Report 57 proves the O'Meara 63:9 unit square-class count at `4ad37e1`.
+Successive power-ideal and principal-unit quotients are identified with the
+residue field, the odd square-class layers contribute `q`, the even layers
+collapse, and the terminal discriminant layer has two classes. An explicit
+equivalence transports the intrinsic result to every complete irredundant
+representative system. Corollary 7.21 and all other dyadic numerical endpoints
+are now unconditional, raising Section 7 to 20/21 fully formalized items. The
+canonical entry and three audits complete 5,554 build jobs, the scanner checks
+2,769 tracked Lean files, and the focused gate checks 60,573 declarations.
+The whole-paper verdict remains `NOT_COMPLETE` because the non-dyadic,
+global, external-enumeration, source-correction, and human-review gates are
+independent.
+
+Report 58 closes the corresponding current-source local reproducibility gap.
+The exact clean `7d7a4d5` Review Kit verifies 2,060 payload hashes, completes
+all 5,560 build jobs after fresh extraction, and passes the canonical audit,
+both concrete `Q_2` audits, and the 60,594-declaration enforcing gate. The
+public network reset encountered during the last dependency clone and the
+exact clean-mirror fallback are disclosed in the receipt. GitHub exact-tag
+CI, publication, remaining mathematical inputs, and human sign-off remain
+separate gates and do not change the Grade-D `NOT_COMPLETE` verdict.

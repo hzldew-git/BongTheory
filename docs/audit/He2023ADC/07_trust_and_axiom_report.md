@@ -230,11 +230,10 @@ with Lean 4.32.1. Seven selected dependency reports contain exactly
 `propext`, `Classical.choice`, and `Quot.sound`. The focused enforcing gate
 checks 59,853 declarations, and the comment-aware scanner checks 2,742 tracked
 Lean sources without finding a forbidden proof token outside comments. The
-scoped 100-column and `git diff --check` gates pass. The O'Meara 63:9
-cardinality law is an explicit theorem premise, not a Lean axiom and not a
-proved repository instance. Report 46 separates the unconditional catalogue
-from the conditional numerical substitution and the remaining clean-CI and
-human-review gates.
+scoped 100-column and `git diff --check` gates pass. At that historical
+checkpoint, the O'Meara 63:9 cardinality law was an explicit theorem premise,
+not a Lean axiom. Report 57 supersedes that boundary with a proved repository
+theorem; report 46 remains the catalogue checkpoint.
 
 At checkpoint `d447cd3af10de9ff176df7f9bb48594d72fc4e44`, the two new
 Section 5 and Section 8 modules, the canonical paper entry, and the expanded
@@ -248,10 +247,10 @@ At checkpoint `f7e8fb7e1b8d43b66a62e500f61f7eeba004f136`, the corrected
 quaternary catalogue module, canonical paper entry, and expanded audit compile
 directly with Lean 4.32.1. Selected reports for completeness, irredundancy,
 maximality, both source refutations, and the corrected classification/count
-contain exactly `propext`, `Classical.choice`, and `Quot.sound`. The
-O'Meara 63:9 cardinality remains an explicit structure hypothesis, not a Lean
-axiom or a proved instance. Exact-revision clean Review Kit CI remains
-pending at this checkpoint. See report 48.
+contain exactly `propext`, `Classical.choice`, and `Quot.sound`. At this
+historical checkpoint, O'Meara 63:9 remained an explicit structure hypothesis.
+Report 57 removes that parameter from the current endpoint. Exact-revision
+clean Review Kit CI was pending at this checkpoint. See report 48.
 
 The exact clean Review Kit generated from
 `85772de61f14c11e08523130332aeddbe3371a9c` closes that local mechanical
@@ -266,10 +265,10 @@ At checkpoint `da6fbd41a4dc0323380b1013283bd20f9fa6b729`, the unary
 testing module, canonical paper entry, and expanded audit compile directly
 with Lean 4.32.1. The six selected unary dependency reports contain exactly
 `propext`, `Classical.choice`, and `Quot.sound`. The focused transitive gate
-reports `AXIOM_GATE_PASS: 60154 declarations checked`. The O'Meara 63:9
-cardinality is an explicit proposition-valued premise only in the published
-numerical count; it is neither a Lean axiom nor a proved generic instance.
-Report 50 separates this exact local evidence from a later clean Review Kit,
+reports `AXIOM_GATE_PASS: 60154 declarations checked`. At this historical
+checkpoint, O'Meara 63:9 was an explicit proposition-valued premise only in
+the published numerical count. Report 57 supplies the later generic proof.
+Report 50 separates its exact local evidence from a later clean Review Kit,
 GitHub CI, and unsigned human semantic review.
 
 At checkpoint `125dcf24f39f0b22a5f69fb33241885169314c06`, the dyadic
@@ -277,9 +276,18 @@ Theorem 1.10 catalogue module, canonical paper entry, and expanded audit
 compile directly with Lean 4.32.1. Selected dependency reports for both
 generic exact-catalogue constructors, every maximal rank branch, and the
 combined endpoint contain exactly `propext`, `Classical.choice`, and
-`Quot.sound`. The O'Meara 63:9 identity is still a visible theorem premise,
-not an axiom or a proved generic instance. Report 51 separates this local
-evidence from exact-revision clean-kit and human-review gates.
+`Quot.sound`. O'Meara 63:9 was still a visible theorem premise at this
+checkpoint; report 57 proves it and removes the current premise. Report 51
+separates its local evidence from exact-revision clean-kit and human-review
+gates.
+
+At checkpoint `4ad37e1`, the intrinsic unit square-class count, its transport
+to every complete irredundant representative system, and all downstream
+dyadic numerical endpoints compile without a counting-law parameter. Selected
+reports contain exactly `propext`, `Classical.choice`, and `Quot.sound`. The
+focused gate checks 60,573 declarations and the scanner checks 2,769 tracked
+Lean sources. Report 57 records the proof chain and remaining clean-kit and
+human-review gates.
 
 At checkpoint `d4c56cc`, the non-dyadic Theorem 1.10 catalogue module,
 canonical paper entry, and expanded audit compile directly with Lean 4.32.1.
@@ -297,3 +305,29 @@ reports contain only `propext`, `Classical.choice`, and `Quot.sound`.
 `HeADC2025Corollary18EnumerationData` and `HeADC2025Theorem111Laws` are
 explicit proposition-valued inputs, not Lean axioms. Their concrete external
 classification content remains unproved; report 53 records the boundary.
+
+At checkpoint `04b721092c911d94932d871ec21815a5286da3d6`, the new
+field diagonalization, scalar-extension, and Lemma 2.2 descent modules compile
+with Lean 4.32.1. The selected declarations
+`finiteDiagonalSubspaceDescent`, `heADC2025Lemma22_representation`, and
+`heADC2025Lemma22_of_oneDimensionalDescent` report exactly `propext`,
+`Classical.choice`, and `Quot.sound`. The proposition-valued
+`HasOneDimensionalSubspaceDescent` premise is visible in their types; an axiom
+report does not discharge its concrete arithmetic instance. The focused
+He-ADC imported-closure gate reports
+`AXIOM_GATE_PASS: 60455 declarations checked`. See report 55.
+
+At checkpoint `83cc791bf7b2ae80c6d812da7f26f562bf40c859`, the topological
+base case and concrete number-field finite-completion form of Lemma 2.2 compile
+with Lean 4.32.1. The selected openness, density-to-descent, and literal
+subspace endpoints report only `propext`, `Classical.choice`, and
+`Quot.sound`. The concrete theorem has no proposition-valued project law
+premise. The focused He-ADC imported-closure gate reports
+`AXIOM_GATE_PASS: 60485 declarations checked`. See report 56.
+
+The exact clean Review Kit at `7d7a4d5` contains both that Lemma 2.2 closure
+and the later O'Meara 63:9 proof. Its freshly extracted 5,560-job build and all
+four direct gates pass; the enforcing gate checks 60,594 declarations. The
+comment-aware scanner independently checks all 2,769 tracked Lean sources at
+the same clean checkpoint. See report 58. Concrete law-package instances and
+human semantic sign-off remain outside this mechanical trust result.

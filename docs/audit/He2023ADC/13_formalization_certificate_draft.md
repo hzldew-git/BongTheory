@@ -101,8 +101,8 @@ Corollary 7.21 checkpoint:
 `bd0c9a3f66d3465cd518bae2d75386887f79d5a5`. Report 46 proves a complete
 and irredundant integral-isometry catalogue, the exact maximal/nonmaximal
 partition, and the intermediate cardinalities in terms of `|U|`. The printed
-residue-norm formulas retain the cited O'Meara 63:9 identity as an explicit
-premise. Seven selected dependency reports are standard-only, the focused
+residue-norm formulas retained the cited O'Meara 63:9 identity as an explicit
+premise at this checkpoint. Seven selected dependency reports are standard-only, the focused
 gate checks 59,853 declarations, and the scanner checks 2,742 tracked Lean
 sources.
 Sections 5 and 8 logical checkpoint:
@@ -116,21 +116,21 @@ Binary main-theorem checkpoint:
 complete and irredundant rank-four 2-ADC catalogue with two nonmaximal
 classes, formally refutes the printed binary Theorem 1.9(ii) and Theorem
 1.10 count, and proves the corrected `8(N p)^e+2` formula relative to the
-same visible O'Meara 63:9 law. Selected dependency reports are standard-only.
+then-visible O'Meara 63:9 law. Selected dependency reports are standard-only.
 Unary table checkpoint:
 `da6fbd41a4dc0323380b1013283bd20f9fa6b729`. Report 50 proves the finite
 rank-one table's completeness and irredundancy, Proposition 4.2(iii)'s exact
 excluding ternary space, literal deletion-minimality in Lemma 4.9(ii), and
 the unconditional `2|U|` count. The printed `4(N p)^e` form retains the
-O'Meara premise. Six selected reports are standard-only and the focused gate
+O'Meara premise at this checkpoint. Six selected reports are standard-only and the focused gate
 checks 60,154 declarations.
 Dyadic Theorem 1.10 checkpoint:
 `125dcf24f39f0b22a5f69fb33241885169314c06`. Report 51 proves exact
 integral-isometry catalogues for every dyadic rank and parity branch and
 packages them in `heADC2025Theorem110DyadicCorrected`. The binary
 corank-two catalogue retains the formal source refutation and corrected
-`8(N p)^e+2` value. A generic proof of the cited counting law remains
-pending.
+`8(N p)^e+2` value. The generic proof of the cited counting law is supplied
+by the later checkpoint below.
 Non-dyadic Theorem 1.10 logical checkpoint:
 `d4c56cc`. Report 52 proves exact seven- and eight-row catalogues for equal
 rank and both coranks and the printed formulas at ramification index zero.
@@ -142,6 +142,21 @@ Corollary 1.8 and Theorem 1.11 logical checkpoint:
 nonrepetition, and every conclusion of Theorem 1.11 from visible external
 enumeration and local-verification inputs. The Hanke--Kirschmer--Oh catalogue
 instances and local computations remain pending.
+Lemma 2.2 algebraic checkpoint:
+`04b721092c911d94932d871ec21815a5286da3d6`. Report 55 proves the
+complete dimension induction and literal descended-subspace conclusion from
+the explicit one-dimensional premise.
+Lemma 2.2 concrete finite-completion checkpoint:
+`83cc791bf7b2ae80c6d812da7f26f562bf40c859`. Report 56 proves density,
+nonzero square-class openness, and the exact one-dimensional descent premise,
+then combines them with the algebraic checkpoint to obtain the publisher's
+literal subspace conclusion for every number field and finite place.
+O'Meara 63:9 checkpoint:
+`4ad37e1`. Report 57 proves the intrinsic unit square-class cardinality from
+the principal-unit filtration and transports it to every finite complete and
+irredundant representative system. All downstream dyadic numerical endpoints
+are unconditional. The focused gate checks 60,573 declarations, and the
+scanner checks 2,769 tracked Lean sources.
 Toolchain: Lean 4.32.1; dependency revisions are in `lake-manifest.json`.
 The listed concrete dyadic endpoints pass incremental kernel checks. The
 new maximal-profile criteria, thirteen published-family endpoints, complete
@@ -163,6 +178,11 @@ covers the developments through Report 53 and passes its `5,051`-job full
 build, all direct audits, and the `60,374`-declaration enforcing
 gate. It includes the unary, Theorem 1.10, and finite-enumeration checkpoints.
 Exact commit distinctions are in reports 11 and 54.
+The still later exact clean kit at `7d7a4d5` supersedes that local receipt for
+the current source closure: it includes Lemma 2.2 and O'Meara 63:9, verifies
+2,060 payload hashes, completes 5,560 build jobs, and passes all direct audits
+plus the 60,594-declaration enforcing gate. Exact dependency-transport and
+build details are in Reports 11 and 58.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

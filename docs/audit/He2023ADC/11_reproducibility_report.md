@@ -1,6 +1,27 @@
 # Reproducibility report
 
-Latest audited code checkpoint: `cf9f83be635d6e459cfb429ad73b4c7a31f1ddf4`.
+Current Lemma 2.2 concrete checkpoint:
+`83cc791bf7b2ae80c6d812da7f26f562bf40c859`. The finite-place
+density theorem, inverse-function proof of square-class openness,
+one-dimensional descent, and literal all-dimensional subspace endpoint build
+with Lean 4.32.1. The selected endpoint reports contain only the three
+permitted foundational axioms. The source scanner checks 2,764 tracked Lean
+files, and the focused imported-closure gate checks 60,485 declarations.
+This is cached local evidence; Report 56 records the exact commands. A new
+exact source kit and clean extraction remain required for reproducibility
+promotion.
+
+Current Lemma 2.2 algebraic checkpoint:
+`04b721092c911d94932d871ec21815a5286da3d6`. The field diagonalization,
+scalar-extension, and subspace-descent modules build with Lean 4.32.1, as do
+their dedicated audit entries and the canonical He ADC audit. The selected
+new theorem reports contain only the three permitted foundational axioms, and
+the focused imported-closure gate checks 60,455 declarations. This is cached
+local evidence; a new exact source kit and clean extraction are required
+before reproducibility promotion. Report 55 records the earlier conditional
+stage; its one-dimensional premise is discharged by the checkpoint above.
+
+Earlier audited code checkpoint: `cf9f83be635d6e459cfb429ad73b4c7a31f1ddf4`.
 The eight full-Lemma-6.12 modules, canonical entry, expanded paper audit and
 concrete `Q_2` entry pass direct local elaboration. The focused enforcing gate
 checks 57,886 declarations; all 16 new printed dependency sets are standard
@@ -399,9 +420,10 @@ and both published counts, contain exactly `propext`, `Classical.choice`, and
 `git diff --check` and the scoped 100-column check pass.
 
 This remains local evidence until the independently extracted Review Kit for
-this exact revision passes GitHub CI. The numerical endpoints visibly retain
-the cited O'Meara 63:9 cardinality premise. Report 46 records the exact
-catalogue, row count, maximality partition, and trust boundary.
+this exact revision passes GitHub CI. At this historical revision the numerical
+endpoints retained the cited O'Meara 63:9 premise. Report 57 later proves that
+cardinality theorem and removes the premise; report 46 remains the exact
+catalogue and row-accounting checkpoint.
 
 ## Exact clean Review Kit through Reports 47--48
 
@@ -506,3 +528,41 @@ This closes local independent-extraction reproducibility for the exact
 `26dc391` checkpoint through Report 53. It is not GitHub CI, an uploaded or
 tagged release, a concrete implementation of the remaining law packages, or
 human semantic sign-off. Report 54 fixes the full receipt.
+
+## O'Meara 63:9 local checkpoint
+
+At exact code revision `4ad37e1`, the new quotient, filtration, and
+representative-count modules compile with the canonical He ADC entry and all
+three audit entries. The combined build completes 5,554 jobs. The scanner
+checks 2,769 tracked Lean sources, and the focused transitive gate reports
+`AXIOM_GATE_PASS: 60573 declarations checked`. Selected new and downstream
+endpoints use exactly `propext`, `Classical.choice`, and `Quot.sound`.
+
+This is exact-commit local kernel evidence. A newly generated and freshly
+extracted Review Kit for this later checkpoint remains a separate gate and
+will supersede the interrupted e9ebfb4 test attempt. See report 57.
+
+## Exact clean Review Kit through Report 57
+
+The source-only archive generated from exact clean commit
+`7d7a4d5e79a06015fa40ccba464f143d77b6f231` has SHA-256
+`3FD3D6AA8294C67D7FC1719A349B0923B16AB2438A21CCE4AACF910690AC434C`
+and size 6,214,243 bytes. Its manifest records 1,982 local Lean sources and
+2,061 packaged files; a separate structure extraction verified all 2,060
+payload hashes and found no build products.
+
+Public dependency acquisition reached the final locked dependency before a
+GitHub connection reset. The missing repository was restored from a clean
+local mirror, after which all nine dependency worktrees were verified clean
+and exactly equal to their `lake-manifest.json` revisions. In the fresh
+extraction the build began with four workers, was interrupted after job 2,480
+to increase parallelism, and resumed with eight workers using only artifacts
+created during this verification. It completed all 5,560 jobs.
+
+The canonical audit, both concrete `Q_2` boundary audits, and the standalone
+paper axiom gate were rerun directly and passed. The gate reported
+`AXIOM_GATE_PASS: 60594 declarations checked`; the source checkpoint's
+comment-aware scanner checked 2,769 tracked Lean files. This supersedes the
+Report 54 local receipt and closes the clean-kit gap noted in Reports 55--57.
+It remains distinct from GitHub-hosted exact-tag CI, release publication,
+uninstantiated mathematical laws, and human semantic approval. See Report 58.

@@ -6,8 +6,8 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `8cdd338f064934f9e3dc1f2af2011cb998705b97`,
-branch `feat/he-formalization`, Lean 4.32.1, audited on 7 September 2026
+The current audited code checkpoint is `7d7a4d5`, branch
+`feat/he-formalization`, Lean 4.32.1, audited on 8 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
 complete Proposition 4.13 is audited in `15_odd_maximal_structure_checkpoint.md`.
@@ -61,8 +61,9 @@ including the exact exponent range, negative powers of the uniformizer,
 the sharp factor, and the ordered `pi A perp <Delta epsilon>` tail.
 Report 46 constructs the complete and irredundant Corollary 7.21 isometry
 catalogue, proves its exact maximal partition and counts in terms of `|U|`,
-and isolates the cited O'Meara 63:9 numerical substitution as an explicit
-undischarged premise.
+and originally isolated the cited O'Meara 63:9 numerical substitution as an
+explicit undischarged premise. Report 57 supersedes that boundary with an
+internal proof.
 Report 47 proves every numbered logical deduction in Sections 5 and 8,
 together with Theorems 1.5 and 1.7, relative to explicit non-dyadic and
 number-field law packages. Their concrete arithmetic instances remain open.
@@ -77,7 +78,7 @@ later checkpoint has exact local evidence but is not contained in that kit.
 Report 51 assembles every dyadic branch of Theorem 1.10 at `125dcf2` as an
 exact integral-isometry catalogue. It covers equal rank, corank one, stable
 even corank two, odd corank two, and the corrected binary boundary. The
-cited O'Meara 63:9 input remains a separate gap.
+cited O'Meara 63:9 input at that historical checkpoint is closed by report 57.
 Report 52 assembles the non-dyadic branch of Theorem 1.10 at `d4c56cc` into
 exact seven- and eight-row catalogues, including all three rank branches and
 the exponent-zero count. This conclusion is conditional on an explicit
@@ -86,16 +87,33 @@ Report 53 formalizes the finite deductions in Corollary 1.8 and Theorem 1.11
 at `8cdd338`. The 586 and 21 counts and the literal Table 2 source-row
 selection are proved, while the cited Hanke--Kirschmer--Oh catalogues and the
 prime-by-prime local computations remain explicit external inputs.
+Report 55 proves the entire higher-dimensional algebraic argument of Lemma
+2.2 at `04b7210`, including scalar extension, orthogonal-complement descent,
+Witt cancellation, and an actual descended subspace. The publisher's
+one-dimensional density and open-square-class input remains explicit.
+Report 56 closes that input at `83cc791`: mathlib supplies density of the
+number field in its finite-place completion, the inverse function theorem
+proves openness of every nonzero square class, and the resulting endpoint is
+the publisher's literal descended-subspace statement.
+Report 57 proves O'Meara 63:9 at `4ad37e1` from the power-ideal and
+principal-unit quotients, the odd square-class layers, the even collapses,
+and the two-class discriminant endpoint. It removes the counting premise
+from every dyadic numerical conclusion used by He.
+Report 58 records the exact independently extracted clean Review Kit at
+`7d7a4d5`. It contains Reports 55--57, verifies all 2,060 payload hashes,
+completes the 5,560-job build and all four He ADC gates, and therefore
+supersedes Report 54 for the current local reproducibility checkpoint.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
-reduction, the stable-rank local equivalence, Section 3 endpoints, and the
+reduction, the stable-rank local equivalence, the full number-field version
+of Lemma 2.2, Section 3 endpoints, and the
 Section 4 endpoints, Theorem 6.1, Lemmas 6.4--6.7, Lemma 6.8(i),(ii),(iii),(v),(vi),
 the n>=4 part of (iv), the refutation of its printed n=2 boundary, and full
 Lemmas 6.9--6.12, the boundary-complete audit of Theorem 6.2, Remark 6.3,
 Theorem 7.1, Theorem 7.4, complete Lemmas 7.5--7.12, full Lemmas 7.14--7.15,
 Definition 7.16, Remark 7.17, full Lemmas 7.18--7.20, and the corrected
 Lemma 7.13 consequence, together with complete Theorem 7.2 and Remark 7.3,
-and the Corollary 7.21 catalogue and conditional numerical wrapper, listed in
+and the Corollary 7.21 catalogue and unconditional numerical wrapper, listed in
 `05_theorem_correspondence.md`. The dyadic unary table and the rank-one case
 of Lemma 4.9(ii), together with every dyadic branch and the conditional
 non-dyadic catalogue deduction of Theorem 1.10, are also complete in their

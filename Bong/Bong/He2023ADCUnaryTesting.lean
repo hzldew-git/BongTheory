@@ -235,11 +235,10 @@ theorem heADC2025Remark43UnaryCard
       2 * Fintype.card I :=
   HeADC2025PublishedUnaryTestingIndex.card_index I
 
-/-- The printed `4 * (N p)^e` unary count, relative to the same O'Meara
-63:9 cardinality input isolated for Corollary 7.21. -/
+/-- The printed `4 * (N p)^e` unary count, using the proved O'Meara 63:9
+unit square-class formula. -/
 theorem heADC2025Remark43UnaryCardPublished
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     Fintype.card (HeADC2025PublishedUnaryTestingIndex I) =
       4 * heADC2025ResidueNorm (K := K) ^ ramificationIndex K := by

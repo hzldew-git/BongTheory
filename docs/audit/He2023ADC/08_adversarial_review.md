@@ -230,9 +230,11 @@ rank and ADC property, every arbitrary qualifying lattice maps to a model,
 and Lemma 7.15 plus ambient-row uniqueness proves irredundancy. The maximal
 overlap is placed in the maximal summand and proved to be the only maximal
 lower row. The resulting `(4e+3)|U|` and `(4e-1)|U|` counts are unconditional.
-The final substitution `|U|=2(N p)^e` remains visibly conditional on the
-cited O'Meara 63:9 law; a standard-only axiom report does not prove that
-premise. Lemma 7.13's independent source mismatch is unchanged.
+Report 57 later proves the final substitution `|U|=2(N p)^e` from the
+principal-unit filtration and representative equivalence. The reviewer must
+still check its normalization and proof correspondence; a standard-only axiom
+report alone does not establish semantic fidelity. Lemma 7.13's independent
+source mismatch is unchanged.
 
 Report 50 audits the unary boundary directly against Definition 4.1,
 Proposition 4.2, Remark 4.3, and Lemma 4.9(ii). It checks that there is no
@@ -243,3 +245,14 @@ and supplies an integral witness representing all other rows. The exact
 `2|U|` count is unconditional; only the publisher's `4(N p)^e` conversion
 uses the disclosed O'Meara premise. The local kernel and transitive axiom
 checks pass, while clean-kit CI and human review remain pending.
+
+Report 55 tests the main ways a conditional Lemma 2.2 formalization could
+overstate the source. The returned object is an actual submodule of the
+original global space, not an unrelated diagonal model; dimensions are
+preserved by the indexed diagonal list; scalar extension is implemented via
+tensor product; and cancellation removes the same descended line on both
+sides. Report 56 then checks the formerly open base case: density comes from
+the actual finite-completion embedding, the selected global quadratic value
+is proved nonzero, and square-equivalence is converted into an actual scaled-
+line isometry. Square-class openness is proved by the inverse function theorem
+rather than hidden in a project axiom. Human source comparison remains open.

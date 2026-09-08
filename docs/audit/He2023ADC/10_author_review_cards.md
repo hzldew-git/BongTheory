@@ -168,7 +168,8 @@ that the Lemma 7.20(ii) row is included exactly once in the catalogue and is
 the only maximal lower row; and that Lemma 7.15 plus ambient-row uniqueness
 really proves pairwise nonisometry. They should separately verify that
 O'Meara 63:9 gives `|U|=2(N p)^e` under the repository's normalization. That
-last identity remains an explicit premise of the numerical endpoint.
+identity is now proved internally in report 57, so the review question is
+semantic correspondence rather than discharge of a theorem parameter.
 
 Report 50 adds the unary table card. Reviewers should confirm that rank one
 has only the `N_1^1(c)` column; that the normalized parameters `delta` and
@@ -176,8 +177,8 @@ has only the `N_1^1(c)` column; that the normalized parameters `delta` and
 that the exact excluding space is `W_2^3(c)`. They should check that deleting
 any one row leaves an integral ternary witness which represents every other
 row but not the deleted row. Finally, the unconditional table count `2|U|`
-must be kept separate from the printed `4(N p)^e`, whose conversion uses the
-cited O'Meara 63:9 identity.
+should be checked separately from the printed `4(N p)^e`; report 57 proves
+the O'Meara 63:9 conversion internally.
 
 Report 51 adds the dyadic Theorem 1.10 card. Reviewers should verify that the
 two generic catalogue constructors prove integral-isometry completeness and
@@ -186,8 +187,8 @@ the parity translation for all equal-rank and corank-one branches, the
 `n>=4` boundary in stable even corank two, and the reuse of the exact
 Corollary 7.21 catalogue in odd corank two. The corrected binary catalogue
 and its `+2` value must remain visibly separate from the publisher's formally
-refuted `+1` claim. Finally, they should confirm that O'Meara 63:9 and the
-entire non-dyadic branch remain outside the proved unconditional scope.
+refuted `+1` claim. They should confirm the new O'Meara 63:9 filtration proof
+and keep the entire non-dyadic branch outside the proved unconditional scope.
 
 Report 52 adds the non-dyadic Theorem 1.10 card. Reviewers should verify that
 the binary index omits exactly the undefined row `N_2^2(1)`, that every rank
@@ -205,6 +206,34 @@ rows 1--15, 19, 25, 30--32, and 44 against Tables 1--2; verify each omitted
 row's listed local obstruction; verify the 21 retained rows prime by prime;
 and check that only new row `L_10` is nonmaximal. The current formal endpoint
 proves the downstream logic but does not replace those external computations.
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
+## Lemma 2.2, subspace descent
+
+Paper location: pp. 986--987.
+
+Paper statement: for a finite-place completion `F_p`, every nondegenerate
+subspace of the scalar-extended quadratic space `V_p` is the completion of a
+nondegenerate subspace of `V`, up to isometry.
+
+Formal finding: the complete induction on dimension, orthogonal-complement
+step, scalar extension, Witt cancellation, and actual range-submodule
+construction are proved at `04b7210`. At `83cc791`, the one-dimensional step
+is proved for every number-field finite completion: mathlib supplies density,
+and the inverse function theorem proves openness of every nonzero square
+class. The combined endpoint has the publisher's literal subspace conclusion.
+
+Questions for the paper author and domain expert:
+
+1. Does the formal density-plus-openness argument exactly match the use of
+   `[31, 63:1b Corollary, 21:1]` in the publisher proof, despite using the
+   inverse function theorem to prove the required openness?
+2. Is the tensor-product scalar extension definition compatible with the
+   paper's completion notation in every later use of Lemma 2.2?
+3. Does the returned range submodule express the intended global subspace,
+   including nondegeneracy and equality of dimension?
 
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.

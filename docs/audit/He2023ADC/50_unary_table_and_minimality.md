@@ -1,5 +1,9 @@
 # Unary table and minimality checkpoint
 
+Historical-status note: report 57 at `4ad37e1` proves O'Meara 63:9 and makes
+the current printed `4(N p)^e` endpoint unconditional. References below to a
+pending counting proof describe this earlier checkpoint.
+
 ## Source authority and scope
 
 The sole semantic authority is the publisher version of record, pp. 990--994.

@@ -3,6 +3,11 @@
 Status: `FORMALIZED_RELATIVE_TO_CITED_COUNTING_LAW` /
 `PROVISIONAL_MATCH`.
 
+Historical-status note: report 57 at `4ad37e1` proves O'Meara 63:9 and
+removes the counting-law premise from the current endpoint. The statements
+below describe the exact earlier checkpoint and are retained as an audit
+record.
+
 Code checkpoint:
 `bd0c9a3f66d3465cd518bae2d75386887f79d5a5` on
 `feat/he-formalization`.

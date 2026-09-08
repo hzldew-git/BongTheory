@@ -8,6 +8,7 @@ import Bong.Papers.He2023ADC
 /-! Kernel and trust-boundary audit for He's n-ADC paper entry. -/
 
 open Bong.Lattice.QuadraticLatticeModel
+open Bong.QuadraticSpace
 
 #check Bong.Lattice.IsNADC
 #check Bong.Lattice.IsNUniversal.isNADC
@@ -26,6 +27,25 @@ open Bong.Lattice.QuadraticLatticeModel
 #check Bong.GlobalLocalLatticeSystem.heADCTheorem14i
 #check Bong.GlobalLocalLatticeSystem.heADCTheorem14ii
 #check Bong.GlobalLocalLatticeSystem.heADCTheorem14iii
+#check Bong.QuadraticSpace.HasOneDimensionalSubspaceDescent
+#check Bong.QuadraticSpace.finiteDiagonalSubspaceDescent
+#check Bong.QuadraticSpace.heADC2025Lemma22_representation
+#check Bong.QuadraticSpace.heADC2025Lemma22_of_oneDimensionalDescent
+#check HasOpenNonzeroSquareClasses
+#check hasOpenNonzeroSquareClasses_of_complete
+#check hasOneDimensionalSubspaceDescent_of_denseRange_of_openSquareClasses
+#check numberFieldFiniteCompletionHasOneDimensionalSubspaceDescent_of_openSquareClasses
+#check numberFieldFiniteCompletionHasOneDimensionalSubspaceDescent
+#check heADC2025Lemma22_numberFieldFiniteCompletion
+
+#print axioms Bong.QuadraticSpace.finiteDiagonalSubspaceDescent
+#print axioms Bong.QuadraticSpace.heADC2025Lemma22_representation
+#print axioms Bong.QuadraticSpace.heADC2025Lemma22_of_oneDimensionalDescent
+#print axioms hasOpenNonzeroSquareClasses_of_complete
+#print axioms hasOneDimensionalSubspaceDescent_of_denseRange_of_openSquareClasses
+#print axioms numberFieldFiniteCompletionHasOneDimensionalSubspaceDescent_of_openSquareClasses
+#print axioms numberFieldFiniteCompletionHasOneDimensionalSubspaceDescent
+#print axioms heADC2025Lemma22_numberFieldFiniteCompletion
 
 #check Bong.HeADC2025NonDyadicUnitClass
 #check Bong.HeADC2025NonDyadicSquareClass
@@ -705,6 +725,24 @@ open Bong.Lattice.QuadraticLatticeModel
 #check @Bong.BONG.GoodBONG.heADC2025Remark73_secondPublished
 #check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublished
 #check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublishedRepresentative
+#check @Bong.Dyadic.powerIdealQuotientEquivResidueField
+#check @Bong.Dyadic.card_powerIdealQuotient
+#check @Bong.Dyadic.principalUnitQuotientEquivResidueField
+#check @Bong.Dyadic.card_principalUnitQuotient
+#check @Bong.Dyadic.oddUnitSquareClassLayerEquivResidueField
+#check @Bong.Dyadic.card_oddUnitSquareClassLayer
+#check @Bong.Dyadic.principalUnitValuationClassSubgroup_zero_eq_top
+#check @Bong.Dyadic.principalUnitValuationClassSubgroup_one_eq_top
+#check @Bong.Dyadic.card_principalUnitValuationClassSubgroup_two_mul_e
+#check @Bong.Dyadic.card_valuationUnitClass_eq_pow_mul_filtration
+#check @Bong.Dyadic.card_valuationUnitClass
+#check @Bong.heADC2025UnitRepresentativeClass
+#check @Bong.heADC2025UnitRepresentativeClass_injective
+#check @Bong.heADC2025UnitRepresentativeClass_surjective
+#check @Bong.heADC2025UnitRepresentativeEquiv
+#check @Bong.card_heHuCompleteUnitRepresentativeSystem
+#check @Bong.HeADC2025Corollary721CountingLaw.card_unit_square_classes
+#check @Bong.HeADC2025Corollary721CountingLaw.card_unit_representatives
 #check @Bong.HeADC2025Corollary721Index.isExactNADCIsometryCatalogue
 #check @Bong.HeADC2025Corollary721Index.model_isOMaximal_iff
 #check @Bong.HeADC2025Corollary721Index.card_index
@@ -712,6 +750,15 @@ open Bong.Lattice.QuadraticLatticeModel
 #check @Bong.HeADC2025Corollary721Index.card_index_published
 #check @Bong.HeADC2025Corollary721Index.card_nonmaximalIndex_published
 #check @Bong.HeADC2025Corollary721Index.heADC2025Corollary721
+
+#print axioms Bong.heADC2025UnitRepresentativeClass_injective
+#print axioms Bong.heADC2025UnitRepresentativeClass_surjective
+#print axioms Bong.card_heHuCompleteUnitRepresentativeSystem
+#print axioms Bong.Dyadic.card_oddUnitSquareClassLayer
+#print axioms Bong.Dyadic.card_principalUnitValuationClassSubgroup_two_mul_e
+#print axioms Bong.Dyadic.card_valuationUnitClass
+#print axioms Bong.HeADC2025Corollary721CountingLaw.card_unit_square_classes
+#print axioms Bong.HeADC2025Corollary721CountingLaw.card_unit_representatives
 
 #check @Bong.HeADC2025QuaternaryCatalogue.exceptionalModel_rank
 #check @Bong.HeADC2025QuaternaryCatalogue.boundaryModel_rank

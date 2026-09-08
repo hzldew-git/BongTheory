@@ -297,11 +297,10 @@ theorem card_index [Fintype I] :
     card_heHuPublishedEvenTestingIndex_of_pos U (by omega : 0 < 1),
     Fintype.card_bool]
 
-/-- Numerical corrected count after the unit square-class count quoted from
+/-- Numerical corrected count after the proved unit square-class formula of
 O'Meara 63:9. -/
 theorem card_index_corrected
     [Fintype I]
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     Fintype.card (Index (K := K) U) =
       8 * heADC2025ResidueNorm (K := K) ^ ramificationIndex K + 2 := by
@@ -319,7 +318,6 @@ def HeADC2025Theorem110BinaryCountStatement [Fintype I] : Prop :=
 contains two nonmaximal classes. -/
 theorem not_heADC2025Theorem110BinaryCountStatement
     [Fintype I]
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     ¬ HeADC2025Theorem110BinaryCountStatement (K := K) U := by
   rw [HeADC2025Theorem110BinaryCountStatement, card_index_corrected U hU]
@@ -369,7 +367,6 @@ theorem heADC2025Theorem19ii_binary_corrected :
 /-- Corrected binary conclusions: exact classification and exact count. -/
 theorem heADC2025Theorems19iiAnd110BinaryCorrected
     [Fintype I]
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     HeADC2025Theorem19iiBinaryCorrectedStatement (K := K) ∧
       IsExactIsometryCatalogue (K := K) (model (K := K) U) ∧

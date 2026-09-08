@@ -2,6 +2,10 @@
 
 Status: `DYADIC_BRANCHES_FORMALIZED_WITH_BINARY_SOURCE_CORRECTION`.
 
+Historical-status note: report 57 at `4ad37e1` proves O'Meara 63:9 and makes
+all current dyadic numerical endpoints unconditional. References below to a
+visible counting premise describe this earlier checkpoint.
+
 Code checkpoint:
 `125dcf24f39f0b22a5f69fb33241885169314c06` on
 `feat/he-formalization`.

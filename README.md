@@ -20,18 +20,19 @@ formalization is deliberately withheld from this GitHub deployment.
 - He-paper coverage status: `PARTIAL`. He--Hu has complete formal coverage of
   its 47 numbered results subject to semantic sign-off; He ADC Section 6 is
   fully triaged and
-  Section 7 has 19/21 fully formalized numbered items, one documented
+  Section 7 has 20/21 fully formalized numbered items, one documented
   quantifier mismatch, and a complete Corollary 7.21 catalogue whose final
-  numerical substitution explicitly retains its cited counting premise.
+  numerical formulas now use an internal proof of the cited O'Meara 63:9
+  unit-square-class count.
 - Project grade: D because the He ADC audit identifies a substantive
   theorem-level mismatch; this does not downgrade the separately graded kits.
 - Local reproducibility status:
   `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES` at commit
-  `5befe079dbf3569d1760b8e66bc52aef0de21745`. He--Hu additionally has an
-  exact independently extracted Review Kit at `8bff7e2`. The corresponding
-  ADC Review Kit at `26dc391` also passes independent extraction: all 5,051
-  build jobs, its canonical audit, both concrete `Q_2` audits, and the
-  60,374-declaration enforcing gate complete successfully.
+  `7d7a4d5e79a06015fa40ccba464f143d77b6f231` for the current He ADC
+  paper closure; its exact source-only kit passes a fresh 5,560-job build and
+  the 60,594-declaration enforcing gate. He--Hu has its separate exact,
+  independently extracted Review Kit at `8bff7e2`. See He ADC Report 58 and
+  He--Hu Report 16.
 - Public hosted reproducibility status: exact-tag Ubuntu and Windows checks
   passed under the scopes and cache boundaries recorded in the public
   `v0.2.0-rc.1` receipt.  The initial Ubuntu build succeeded but its following
@@ -66,7 +67,7 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 | Published source | Current public endpoint | Honest status |
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
-| He, *Doc. Math.* 30 (2025) | complete Section 6 triage; 19/21 Section 7 items; exact dyadic Theorem 1.10 catalogues; conditional Section 5, Section 8, non-dyadic Theorem 1.10, Corollary 1.8, and Theorem 1.11 deductions | partial Grade-D paper artifact; four binary statements and Lemma 7.13 have recorded source mismatches, while arithmetic and external-enumeration inputs remain explicit |
+| He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1, 7.2 and 7.4, the chain through Remark 7.3, the Corollary 7.21 catalogue, and O'Meara 63:9 | partial paper; Lemma 7.13 has a quantifier mismatch, while all dyadic numerical counts are unconditional in the repository interface |
 
 The ADC paper's Lemma 6.8(iv) is refuted at n=2 by an actual nonmaximal
 2-ADC lattice, with a concrete `Q_2` check. See each paper's fidelity report

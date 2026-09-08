@@ -25,9 +25,9 @@ of Corollary 7.21.  The exceptional binary corank-two case is deliberately
 kept in `He2023ADCQuaternaryCatalogue`, where the printed `+1` is refuted and
 the corrected `+2` is proved.
 
-As elsewhere in the formalization, the final substitution
-`|U| = 2 * (N p)^e` is an explicit `HeADC2025Corollary721CountingLaw`
-premise recording the paper's citation of O'Meara 63:9.
+The final substitution `|U| = 2 * (N p)^e` is supplied by the proved
+principal-unit filtration count corresponding to O'Meara 63:9, so none of
+the numerical conclusions carries an external counting premise.
 -/
 
 namespace Bong
@@ -231,7 +231,6 @@ theorem heADC2025Theorem110EvenCorankTwoCatalogue
 /-- The binary equal-rank branch has `8 * (N p)^e - 1` classes. -/
 theorem heADC2025Theorem110EqualRankBinaryCount
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     Fintype.card (HeHuPublishedEvenTestingIndex (K := K) U 0) =
       8 * heADC2025ResidueNorm (K := K) ^ ramificationIndex K - 1 := by
@@ -243,7 +242,6 @@ theorem heADC2025Theorem110EqualRankBinaryCount
 /-- Every positive even-table level has `8 * (N p)^e` classes. -/
 theorem heADC2025Theorem110EvenTableCount
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (pairs : Nat) (hpairs : 0 < pairs) :
     Fintype.card (HeHuPublishedEvenTestingIndex (K := K) U pairs) =
@@ -256,7 +254,6 @@ theorem heADC2025Theorem110EvenTableCount
 /-- Every odd-table level has `8 * (N p)^e` classes. -/
 theorem heADC2025Theorem110OddTableCount
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     Fintype.card (HeHuPublishedOddTestingIndex I) =
       8 * heADC2025ResidueNorm (K := K) ^ ramificationIndex K := by
@@ -268,7 +265,6 @@ theorem heADC2025Theorem110OddTableCount
 /-- Exact catalogue and printed count in the binary equal-rank branch. -/
 theorem heADC2025Theorem110EqualRankBinary
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     HeADC2025IsExactNADCIsometryCatalogue 2 2
         (HeHuPublishedEvenTestingIndex.model
@@ -281,7 +277,6 @@ theorem heADC2025Theorem110EqualRankBinary
 /-- Exact catalogue and printed count for positive even equal ranks. -/
 theorem heADC2025Theorem110EqualRankEven
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (k : Nat) (hk : 0 < k) :
     HeADC2025IsExactNADCIsometryCatalogue (2 * k + 2) (2 * k + 2)
@@ -295,7 +290,6 @@ theorem heADC2025Theorem110EqualRankEven
 /-- Exact catalogue and printed count for odd equal ranks. -/
 theorem heADC2025Theorem110EqualRankOdd
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (k : Nat) :
     HeADC2025IsExactNADCIsometryCatalogue (2 * k + 3) (2 * k + 3)
@@ -309,7 +303,6 @@ theorem heADC2025Theorem110EqualRankOdd
 /-- Exact catalogue and printed count for even `n` in corank one. -/
 theorem heADC2025Theorem110EvenCorankOne
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (k : Nat) :
     HeADC2025IsExactNADCIsometryCatalogue (2 * k + 2) (2 * k + 3)
@@ -323,7 +316,6 @@ theorem heADC2025Theorem110EvenCorankOne
 /-- Exact catalogue and printed count for odd `n` in corank one. -/
 theorem heADC2025Theorem110OddCorankOne
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (k : Nat) :
     HeADC2025IsExactNADCIsometryCatalogue (2 * k + 3) (2 * k + 4)
@@ -338,7 +330,6 @@ theorem heADC2025Theorem110OddCorankOne
 /-- Exact catalogue and printed count for even `n >= 4` in corank two. -/
 theorem heADC2025Theorem110EvenCorankTwo
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (k : Nat) (hk : 0 < k) :
     HeADC2025IsExactNADCIsometryCatalogue (2 * k + 2) (2 * k + 4)
@@ -422,7 +413,6 @@ structure HeADC2025Theorem110DyadicCorrectedConclusion
 exact integral-isometry catalogue, rather than only a cardinal identity. -/
 theorem heADC2025Theorem110DyadicCorrected
     {I : Type u} [Fintype I] (U : I → Kˣ)
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     HeADC2025Theorem110DyadicCorrectedConclusion U hU where
   equalRankBinary := heADC2025Theorem110EqualRankBinary U hU

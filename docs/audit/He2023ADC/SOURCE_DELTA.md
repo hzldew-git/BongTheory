@@ -116,7 +116,7 @@ quantifier strength, while Theorem 7.4 and Lemma 7.5 remain proved from the
 weaker result actually justified by the published argument. Report 36 records
 the formal correspondence.
 
-## Corollary 7.21 cited cardinality boundary
+## Corollary 7.21 cited cardinality theorem
 
 The publisher's proof on p. 1016 obtains its two numerical formulas by using
 `|U|=[O_F^times:O_F^(times 2)]=2(N p)^e`, citing O'Meara 63:9. At
@@ -124,12 +124,13 @@ The publisher's proof on p. 1016 obtains its two numerical formulas by using
 complete and irredundant isometry catalogue, its exact maximal partition, and
 the intermediate counts `(4e+3)|U|` and `(4e-1)|U|` without that citation.
 
-The final substitution is isolated as
-`HeADC2025Corollary721CountingLaw`. No generic proved instance has been
-located. The published numerical formulas are therefore formalized relative
-to the cited arithmetic input, not advertised as unconditional repository
-theorems. This is an explicit trust boundary rather than a discrepancy in the
-paper's statement; report 46 gives the full accounting.
+At `4ad37e1`, the formalization proves the cited identity from the power-ideal
+and principal-unit filtrations, odd square-class layers, even collapse, and
+the two-class discriminant endpoint. The compatibility namespace
+`HeADC2025Corollary721CountingLaw` now contains unconditional theorems, not a
+law typeclass. The published numerical formulas are therefore unconditional
+repository theorems. Reports 46 and 57 give the catalogue and arithmetic
+accounting.
 
 ## Refuted binary specialization of Theorem 1.9(ii)
 
@@ -150,18 +151,18 @@ Theorem 1.9(ii). The exact formal catalogue has four maximal copies of `U`
 and two distinct nonmaximal classes, hence `4|U|+2`. Under the publisher's
 own O'Meara 63:9 input this is `8(N p)^e+2`.
 
-At the same checkpoint,
+At the catalogue checkpoint,
 `not_heADC2025Theorem110BinaryCountStatement` formally refutes the printed
 `+1` formula, and `heADC2025Theorems19iiAnd110BinaryCorrected` packages the
-corrected classification and count. The O'Meara cardinality remains an
-explicit premise, exactly as in report 46; report 48 records the new source
-delta.
+corrected classification and count. Report 57 subsequently discharges the
+O'Meara cardinality premise, so both the formal refutation and corrected count
+are unconditional at `4ad37e1`.
 
 At `125dcf24f39f0b22a5f69fb33241885169314c06`, report 51 checks that this
 is the only dyadic count discrepancy: every other dyadic rank/parity branch
 is realized by an exact complete and irredundant integral-isometry catalogue
-and has the coefficient printed in Theorem 1.10, relative to the same visible
-O'Meara premise. The non-dyadic branch is not part of that conclusion.
+and has the coefficient printed in Theorem 1.10. Report 57 makes those dyadic
+counts unconditional. The non-dyadic branch is not part of that conclusion.
 
 ## Lemma 7.14 determinant parity
 

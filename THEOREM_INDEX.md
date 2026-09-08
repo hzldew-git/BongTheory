@@ -33,15 +33,15 @@ additional paper lemmas; the audit packages give the fuller maps.
 | He ADC, Lemma 7.20 | `Bong.BONG.GoodBONG.heADC2025Lemma720_defined_iff`, `heADC2025Lemma720iii`, `heADC2025Lemma720iiiFirst_isometricNamed`, `heADC2025Lemma720iiiSecond_isometricNamed` | `Bong/Bong/He2023ADCLemma720.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He ADC, Theorem 7.2 | `Bong.BONG.GoodBONG.heADC2025Theorem72Published`, `heADC2025Theorem72Published_overlap` | `Bong/Bong/He2023ADCTheorem72Published.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He ADC, Remark 7.3 | `Bong.BONG.GoodBONG.heADC2025Remark73_firstPublished`, `heADC2025Remark73_secondPublished`, `heADC2025Remark73_thirdPublishedRepresentative` | `Bong/Bong/He2023ADCRemark73.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
-| He ADC, Corollary 7.21 | `Bong.HeADC2025Corollary721Index.isExactNADCIsometryCatalogue`, `model_isOMaximal_iff`, `heADC2025Corollary721` | `Bong/Bong/He2023ADCCorollary721.lean` | `FORMALIZED_RELATIVE_TO_CITED_COUNTING_LAW` |
+| He ADC, O'Meara 63:9 unit square-class count | `Bong.Dyadic.card_valuationUnitClass`, `Bong.HeADC2025Corollary721CountingLaw.card_unit_representatives` | `Bong/Dyadic/UnitSquareClassCount.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
+| He ADC, Corollary 7.21 | `Bong.HeADC2025Corollary721Index.isExactNADCIsometryCatalogue`, `model_isOMaximal_iff`, `heADC2025Corollary721` | `Bong/Bong/He2023ADCCorollary721.lean` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` |
 | He ADC, Theorem 5.1 and Lemmas 5.2--5.4 | `Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51`, `heADC2025Lemma52`, `heADC2025Lemma53i`, `heADC2025Lemma53ii`, `heADC2025Lemma53iii`, `heADC2025Lemma53iv`, `heADC2025Lemma54` | `Bong/Bong/He2023ADCSectionFive.lean` | `CONDITIONAL_FORMALIZATION` |
 | He ADC, Theorems 1.5, 1.7 and Section 8 | `Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii`, `heADC2025Theorem17`, `heADC2025Theorem82`, `heADC2025Corollary85` | `Bong/Lattice/He2023ADCSectionEight.lean` | `CONDITIONAL_FORMALIZATION` |
 | He ADC, Corollary 1.8 | `Bong.HeADC2025Corollary18EnumerationData.heADC2025Corollary18` | `Bong/Lattice/He2023ADCEnumerativeMain.lean` | `FORMALIZED_RELATIVE_TO_EXTERNAL_ENUMERATIONS` |
 | He ADC, Theorem 1.11 | `Bong.HeADC2025Theorem111Laws.heADC2025Theorem111` | `Bong/Lattice/He2023ADCEnumerativeMain.lean` | `CONDITIONAL_FORMALIZATION` |
 | He ADC, Theorem 1.9(ii), Theorem 1.10 and Theorem 6.2, binary boundary | `Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem19iiBinaryStatement`, `not_heADC2025Theorem110BinaryCountStatement`, `heADC2025Theorems19iiAnd110BinaryCorrected` | `Bong/Bong/He2023ADCQuaternaryCatalogue.lean` | `PUBLISHED_STATEMENTS_REFUTED_AND_CORRECTED` |
 
-Except for rows explicitly marked `CONDITIONAL_FORMALIZATION` or
-`FORMALIZED_RELATIVE_TO_CITED_COUNTING_LAW`, promoted concrete endpoints have
+Except for rows explicitly marked `CONDITIONAL_FORMALIZATION`, promoted concrete endpoints have
 zero project-specific law/data parameters in their public signatures. The
 conditional rows expose their exact undischarged inputs; the audit packages
 record the separate independent semantic-sign-off status.

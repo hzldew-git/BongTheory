@@ -34,9 +34,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 360
     env:
-      # Keep clean-clone verification within the memory envelope of both
-      # Ubuntu and Windows hosted runners.
-      LEAN_NUM_THREADS: '1'
+      # Two workers stay within the memory envelope used by the per-paper
+      # clean builds while keeping the enlarged public closure below the
+      # six-hour Ubuntu and Windows job deadline.
+      LEAN_NUM_THREADS: '2'
 
     steps:
       - name: Check out the exact revision

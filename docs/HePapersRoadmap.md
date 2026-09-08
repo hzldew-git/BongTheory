@@ -15,10 +15,12 @@ The publisher version of record is the sole semantic authority for every
 definition, hypothesis, and theorem. The paper manifests record exact hashes;
 arXiv copies are non-authoritative comparison sources.
 
-The exact independently extracted He ADC Review Kit at `26dc391` passes all
-5,051 build jobs, its canonical audit, both concrete `Q_2` audits, and the
-60,374-declaration enforcing gate. It covers the developments through Report
-53. Rows below retain the first implementation checkpoint, so an older row's
+The exact independently extracted He ADC Review Kit at `7d7a4d5` verifies
+2,060 payload hashes, passes all 5,560 build jobs, its canonical audit, both
+concrete `Q_2` audits, and the 60,594-declaration enforcing gate. It includes
+the completed Lemma 2.2 and the internal proof of O'Meara 63:9 and is recorded
+in Report 58.
+Rows below retain the first implementation checkpoint, so an older row's
 "own clean CI pending" note describes that historical checkpoint, not the
 current aggregate kit. GitHub exact-tag CI, release publication, remaining
 mathematical work, and human semantic sign-off are separate gates.
@@ -51,28 +53,30 @@ mathematical work, and human semantic sign-off are separate gates.
 | He ADC Lemma 7.18 | second-column unit endpoint `r=e` is excluded | full local proof at 7b21fe0 on the actual named maximal model; report 41; exact-revision clean CI pending |
 | He ADC Lemma 7.19 | both named products `N_nu^(n+1)(delta) orthogonal-sum <c>` are n-ADC with `R_(n+1)=1-d(delta)` | full local construction and integral-isometry bridge at 7b21fe0; report 42; exact-revision clean CI pending |
 | He ADC Lemma 7.20 | maximal endpoints, the unique undefined triple, and both Hilbert-selected named products | full local classification at b86a9d4; report 43; exact-revision clean CI pending |
-| He ADC Theorem 7.2, Remark 7.3, Corollary 7.21 | full odd rank-`n+2` classification, literal models, exact catalogue and counts | local proofs through bd0c9a3; numerical Corollary 7.21 uses explicit O'Meara 63:9 premise; reports 44--46; clean CI pending |
+| He ADC Theorem 7.2, Remark 7.3, Corollary 7.21 | full odd rank-`n+2` classification, literal models, exact catalogue and counts | local proofs through 4ad37e1; O'Meara 63:9 is now proved internally, so all numerical formulas are unconditional; reports 44--46 and 57; included in the exact 7d7a4d5 clean kit |
 | He ADC Section 5 | Theorem 5.1 and Lemmas 5.2--5.4 | all numbered deductions proved at d447cd3 from explicit non-dyadic laws; concrete instance pending; report 47 |
 | He ADC Section 8 and global main logic | Lemma 8.1 through Corollary 8.5, Theorems 1.5 and 1.7 | all deductions proved at d447cd3 from explicit arithmetic laws; concrete number-field instances pending; report 47 |
-| He ADC binary main theorems | exact six-family catalogue and corrected Theorems 1.9(ii), 1.10 | printed binary classification and `+1` count refuted; corrected `+2` count proved at f7e8fb7; report 48; clean CI pending |
+| He ADC binary main theorems | exact six-family catalogue and corrected Theorems 1.9(ii), 1.10 | printed binary classification and `+1` count refuted; corrected `8(N p)^e+2` count is unconditional at 4ad37e1; reports 48 and 57; included in the exact 7d7a4d5 clean kit |
+| He ADC Lemma 2.2 | scalar extension, all-dimensional descent, and actual global subspace | fully formalized for every number-field finite completion at 83cc791, including density and square-class openness; included in the exact 7d7a4d5 clean kit; human review pending; reports 55--56 and 58 |
+| O'Meara 63:9 unit square-class count | power-ideal and principal-unit quotients, odd layers, even collapse, and discriminant endpoint | fully formalized at 4ad37e1; every downstream dyadic He ADC numerical formula is unconditional; included in the exact 7d7a4d5 clean kit; reports 57--58 |
 
 The current milestone is not whole-project completion. In ADC, one independently
 audited `n=2` counterexample affects Lemma 6.8(iv), Theorem 6.2, Theorem
 1.9(ii), and Theorem 1.10. Theorem 7.1 has a repaired proof, and the binary
 classification/count now has an exact corrected catalogue. Concrete
 non-dyadic and number-field law instances, remaining classifications, and
-  enumeration remain active proof work. GitHub-hosted exact-tag CI and release
+enumeration remain active proof work. GitHub-hosted exact-tag CI and release
   publication are separate gates from local kernel acceptance.
 
 ## Proof order
 
 1. Preserve the checked He--Hu proof chain and finish its independent-review
    and exact-release-commit reproducibility gates.
-2. Instantiate the ADC Section 5 non-dyadic laws and Section 8 number-field
-   laws, then complete Lemma 2.2, the remaining Section 4/unary results,
-   cited unit-square-class counting, and enumeration. Conditional law packages
-   record the source logic but are not substitutes for their arithmetic
-   hypotheses.
+2. Preserve the completed ADC Lemma 2.2 and unit-square-class proofs, then
+   instantiate the Section 5 non-dyadic laws and Section 8 number-field laws
+   and complete the remaining Section 4 and enumeration inputs. Conditional
+   law packages record the source logic but are not substitutes for their
+   arithmetic hypotheses.
 
 ## Gate for every promoted theorem
 

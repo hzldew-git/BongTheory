@@ -4,6 +4,14 @@
 - `Bong.Lattice.IsNUniversal.isNADC`: proved implication.
 - `RepresentsAllRelevantOMaximalOfRank`: the restricted maximal test family.
 - `heADCLemma21LocalDyadic`: proved local dyadic specialization of Lemma 2.1.
+- `He2025SubspaceDescent`: field-generic diagonalization, scalar extension,
+  representation-form Witt cancellation, and the induction in Lemma 2.2.
+  `heADC2025Lemma22_of_oneDimensionalDescent` returns an actual nondegenerate
+  submodule from the isolated one-dimensional premise.
+- `He2025SubspaceDescentTopology`: open nonzero square classes by the inverse
+  function theorem, density in a number-field finite completion, and the
+  unconditional concrete endpoint
+  `heADC2025Lemma22_numberFieldFiniteCompletion`.
 
 Additional concrete declaration groups are:
 
@@ -180,7 +188,12 @@ Additional concrete declaration groups are:
   proves it is a complete and irredundant integral-isometry catalogue, proves
   maximality exactly characterizes the left summand, and derives the
   `(4e+3)|U|` total and `(4e-1)|U|` nonmaximal counts. The two printed
-  residue-norm formulas explicitly retain the O'Meara 63:9 counting premise.
+  residue-norm formulas use the internally proved O'Meara 63:9 count.
+- `PowerIdealResidueQuotient`, `PrincipalUnitResidueQuotient`,
+  `UnitSquareClassOddLayer`, and `UnitSquareClassCount` prove O'Meara 63:9
+  from the principal-unit filtration. `He2023ADCUnitRepresentativeCount`
+  transports the intrinsic quotient count to every complete irredundant
+  normalized representative system.
 - `He2023ADCSectionFive` defines the exact four non-dyadic square classes,
   two maximal columns, and an abstract Jordan/lattice interface. From the
   explicit `SectionFiveLaws` package it proves Lemmas 5.2--5.4, all four
@@ -193,7 +206,7 @@ Additional concrete declaration groups are:
 - `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
   both nonmaximal binary boundary classes. It proves exact completeness and
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the
-  corrected `8(N p)^e+2` count relative to O'Meara 63:9, and formal
+  unconditional corrected `8(N p)^e+2` count, and formal
   refutations of the printed binary Theorems 1.9(ii) and 1.10.
 - `He2023ADCTheorem110` defines a rank-parametrized exact `n`-ADC
   integral-isometry catalogue, proves the even and odd maximal tables are

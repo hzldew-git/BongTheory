@@ -5,6 +5,11 @@
 | local `n`-ADC | `Bong.Lattice.IsNADC` |
 | integral lattice | `Bong.Lattice.IsIntegral` |
 | ambient space representation | `QuadraticSpace.Represents` |
+| scalar extension from `F` to `E` | `QuadraticSpace.scalarExtension` |
+| one-dimensional arithmetic input in Lemma 2.2 | `QuadraticSpace.HasOneDimensionalSubspaceDescent` |
+| nonzero square-class openness used in Lemma 2.2 | `QuadraticSpace.HasOpenNonzeroSquareClasses`, proved by `hasOpenNonzeroSquareClasses_of_complete` |
+| descended global subspace in Lemma 2.2 | range submodule returned by `QuadraticSpace.heADC2025Lemma22_of_oneDimensionalDescent` |
+| concrete number-field Lemma 2.2 | `QuadraticSpace.heADC2025Lemma22_numberFieldFiniteCompletion` |
 | integral lattice representation | `Bong.Lattice.Represents` |
 | `O_F`-maximal | `Bong.Lattice.IsOMaximal` |
 | global `n`-ADC | `GlobalLocalLatticeSystem.IsGloballyNADC` (abstract system) |

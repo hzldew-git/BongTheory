@@ -1,7 +1,7 @@
 # Coverage report
 
 Coverage status:
-`IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCHES_AND_CONDITIONAL_ARITHMETIC_LAWS`.
+`IN_PROGRESS_WITH_PUBLISHED_BOUNDARY_MISMATCHES_AND_EXTERNAL_CLASSIFICATION_INPUTS`.
 
 The publisher inventory identifies all 78 directly numbered items. Counts
 below refer to paper results, not Lean declarations; a result with several
@@ -14,6 +14,10 @@ counted as a concrete arithmetic implementation.
   equal-rank equivalence, and stable-rank ADC/universality equivalence are
   proved. The global predicates and Theorems 1.3--1.4 are present as logical
   reductions with explicit arithmetic premises.
+- Lemma 2.2 is fully formalized for every number field and finite-place
+  completion. The proof includes density, open nonzero square classes, the
+  all-dimensional algebraic induction, and the literal descended-subspace
+  conclusion; reports 55--56. Human semantic review remains open.
 - Section 3 has direct endpoints for all six numbered items.
 - Section 4 contains the dyadic space and maximal tables, representation
   reductions, literal minimal testing sets in every rank `n>=1`, all thirteen
@@ -30,10 +34,10 @@ counted as a concrete arithmetic implementation.
   remaining clauses and the full `n>=4` Theorem 6.2 are proved. The corrected
   binary result classifies rank-four 2-ADC lattices as maximal or one of two
   realized nonmaximal classes; reports 23--35 and 48.
-- Nineteen of the 21 Section 7 items are fully formalized. Corollary 7.21 has
+- Twenty of the 21 Section 7 items are fully formalized. Corollary 7.21 has
   a complete irredundant integral-isometry catalogue and unconditional
-  counts in terms of `|U|`; its printed residue-norm formulas retain the
-  cited O'Meara 63:9 cardinality as an explicit premise. Lemma 7.13 has a
+  counts both in terms of `|U|` and in the printed residue-norm form, using
+  the repository proof of O'Meara 63:9. Lemma 7.13 has a
   source quantifier mismatch: the proof-supported simultaneous-failure
   disjunction is formalized and suffices downstream; reports 35--46.
 - Every numbered Section 8 deduction, plus Theorems 1.5 and 1.7, is proved
@@ -41,8 +45,8 @@ counted as a concrete arithmetic implementation.
   localization, class-number, Meyer--Xu--O'Meara, genus-transport, and
   scaling-stability instances remain open; report 47.
 - The binary cases of Theorem 1.9(ii) and Theorem 1.10 are formally refuted
-  and corrected. The exact catalogue has `4|U|+2` classes and, under the
-  same O'Meara 63:9 law used by the publisher, `8(N p)^e+2`, rather than the
+  and corrected. The exact catalogue has `4|U|+2` classes and unconditionally
+  `8(N p)^e+2`, rather than the
   printed `+1`; report 48.
 - Every dyadic branch of Theorem 1.10 is now proved through an exact finite
   integral-isometry catalogue. This includes both parities in equal rank and
@@ -76,19 +80,18 @@ route that exhausts both exceptions.
 
 The main unresolved mathematical work is:
 
-- a concrete unrestricted Lemma 2.2 and the non-dyadic Section 4 cases;
+- the non-dyadic Section 4 cases;
 - concrete non-dyadic instances of `SectionFiveLaws` and `CatalogueLaws`,
   required to discharge the conditional Theorem 1.10 endpoint;
 - concrete number-field instances of `SectionEightLaws` and the earlier
   global reduction packages;
-- a repository proof of the O'Meara 63:9 unit-square-class count;
 - any publisher-corrected replacement for the four binary statements and a
   resolution of the printed-strength Lemma 7.13 claim;
 - concrete Hanke--Kirschmer--Oh catalogue imports, matrix models, and local
   computations underlying Corollary 1.8 and Theorem 1.11;
 - GitHub-hosted exact-revision CI, independent human semantic sign-off,
-  merge, and release promotion. The local clean Review Kit through Report 53
-  passes at `26dc391`; see Report 54.
+  merge, and release promotion. The current local clean Review Kit through
+  Report 57 passes at `7d7a4d5`; see Report 58.
 
 The whole-paper verdict remains `NOT_COMPLETE`, with grade D because the
 published version contains substantive classification mismatches. That grade

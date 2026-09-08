@@ -6,8 +6,10 @@ Authors: BONG Theory contributors
 
 import Bong.Bong.He2023ADCLemma720
 import Bong.Bong.He2023ADCTheorem72Published
+import Bong.Bong.He2023ADCUnitRepresentativeCount
 import Bong.Bong.GoodExistence
 import Bong.Bong.StructuralProof
+import Bong.Dyadic.UnitSquareClassCount
 
 /-!
 # He (2025), Corollary 7.21
@@ -23,9 +25,9 @@ the proof of Corollary 7.21:
   classes.
 
 The final substitution `|U| = 2 * (N p)^e`, quoted in the paper from O'Meara
-63:9, is isolated in `HeADC2025Corollary721CountingLaw`.  All classification,
-irredundancy, maximality, and counts in terms of `|U|` are proved without that
-cardinality input.
+63:9, is proved from the principal-unit filtration in
+`Bong.Dyadic.UnitSquareClassCount`.  Thus the numerical conclusions below do
+not require an external counting hypothesis.
 -/
 
 namespace Bong
@@ -42,14 +44,27 @@ noncomputable def heADC2025ResidueNorm : Nat := by
   letI := Fintype.ofFinite (normalizedResidueField K)
   exact Fintype.card (normalizedResidueField K)
 
-/-- The sole external cardinality input in the numerical form of Corollary
-7.21, quoted in the paper from O'Meara 63:9. -/
-class HeADC2025Corollary721CountingLaw : Prop where
-  card_unit_representatives
-      {I : Type u} [Fintype I] (U : I -> Kˣ)
-      (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
+namespace HeADC2025Corollary721CountingLaw
+
+/-- O'Meara's intrinsic unit-square-class cardinality formula in the notation
+of He (2025). -/
+theorem card_unit_square_classes :
+    Nat.card (ValuationUnitClass K) =
+      2 * heADC2025ResidueNorm (K := K) ^ ramificationIndex K := by
+  simpa [heADC2025ResidueNorm, Fintype.card_eq_nat_card] using
+    card_valuationUnitClass K
+
+/-- The intrinsic unit-square-class count transported to any complete
+irredundant normalized representative system. -/
+theorem card_unit_representatives
+    {I : Type u} [Fintype I] (U : I -> Kˣ)
+    (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     Fintype.card I =
-      2 * heADC2025ResidueNorm (K := K) ^ ramificationIndex K
+      2 * heADC2025ResidueNorm (K := K) ^ ramificationIndex K := by
+  rw [card_heHuCompleteUnitRepresentativeSystem U hU]
+  exact HeADC2025Corollary721CountingLaw.card_unit_square_classes
+
+end HeADC2025Corollary721CountingLaw
 
 /-- The three endpoint rows in Lemma 7.20(i): the first ambient column for
 both valuation parities and the second column only for odd valuation. -/
@@ -636,9 +651,8 @@ theorem card_index :
       rw [hcoefficient]
 
 /-- The four maximal rows contribute `8 * (N p)^e` classes after applying
-the unit square-class count quoted from O'Meara 63:9. -/
+the proved unit square-class count of O'Meara 63:9. -/
 theorem card_maximalIndex_published
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     Fintype.card (HeADC2025Corollary721MaximalIndex I) =
       8 * heADC2025ResidueNorm (K := K) ^ ramificationIndex K := by
@@ -649,7 +663,6 @@ theorem card_maximalIndex_published
 
 /-- The nonmaximal rows contribute `(8e-2) * (N p)^e` classes. -/
 theorem card_nonmaximalIndex_published
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     Fintype.card (HeADC2025Corollary721NonmaximalIndex K I) =
       (8 * ramificationIndex K - 2) *
@@ -673,7 +686,6 @@ theorem card_nonmaximalIndex_published
 
 /-- The complete catalogue contains `(8e+6) * (N p)^e` classes. -/
 theorem card_index_published
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U) :
     Fintype.card (HeADC2025Corollary721Index K I) =
       (8 * ramificationIndex K + 6) *
@@ -687,7 +699,6 @@ theorem card_index_published
 maximality is precisely its left summand, and the total and nonmaximal counts
 are the two numerical formulas printed in the paper. -/
 theorem heADC2025Corollary721
-    [HeADC2025Corollary721CountingLaw (K := K)]
     (hU : IsHeHuCompleteUnitRepresentativeSystem (K := K) U)
     (k : Nat) :
     IsExactNADCIsometryCatalogue k (model U hU k) ∧

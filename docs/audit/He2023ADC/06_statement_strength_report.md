@@ -35,9 +35,9 @@ rank-one parts of Definition 4.1, Proposition 4.2, and Lemma 4.9(ii) after
 restricting to the standing dyadic context. The minimality theorem is not
 weakened to pairwise nonisometry: it supplies an integral rank-three witness
 after deleting each table row. The unconditional cardinality is `2|U|`.
-The printed `4(N p)^e` form is a `PROVISIONAL_MATCH` relative to the explicit
-O'Meara 63:9 counting premise, not an unconditional repository theorem.
-See report 50.
+At `4ad37e1`, the printed `4(N p)^e` form is also unconditional, using the
+repository proof of O'Meara 63:9. Its paper-facing normalization remains a
+`PROVISIONAL_MATCH`. See reports 50 and 57.
 
 Proposition 4.16 is fully proved after restricting the field to the dyadic
 context. The exception is a biconditional, not only a sufficient condition
@@ -224,9 +224,10 @@ At `bd0c9a3`, `isExactNADCIsometryCatalogue` and
 maximality content counted in Corollary 7.21. The parameter `k` covers exactly
 odd `n=2k+3>=3`, and the catalogue uses integral lattice isometry. The
 intermediate cardinalities `(4e+3)|U|` and `(4e-1)|U|` are unconditional.
-The endpoint `heADC2025Corollary721` is a `PROVISIONAL_MATCH` relative to the
-explicit O'Meara 63:9 premise `|U|=2(N p)^e`; it does not prove that cited
-arithmetic theorem. See report 46.
+At `4ad37e1`, `heADC2025Corollary721` also derives the printed formulas from
+the proved O'Meara 63:9 identity `|U|=2(N p)^e`; it is an unconditional
+repository theorem with semantic status `PROVISIONAL_MATCH`. See reports 46
+and 57.
 
 At `d447cd3`, the Section 5 endpoints are `LOGICALLY_EQUIVALENT` to the
 publisher's deductions once `SectionFiveLaws` is instantiated. Their public
@@ -273,6 +274,17 @@ false two-way list of Theorem 6.2, and the latter undercounts the resulting
 isometry classes by one. The corrected formal statement is necessarily
 stronger as a classification: it includes both realized nonmaximal classes,
 proves completeness and irredundancy, and changes `4|U|+1` to `4|U|+2`.
-After the paper's explicit O'Meara 63:9 substitution this is
+After the repository's proof of the paper's O'Meara 63:9 substitution this is
 `8(N p)^e+2`, not the printed `+1`. Both literal source propositions remain
-separately frozen and formally negated. See report 48.
+separately frozen and formally negated. See reports 48 and 57.
+
+At `04b7210`, the conclusion of Lemma 2.2 is reproduced literally: the
+formal theorem returns a nondegenerate global submodule whose scalar extension
+is isometric to the prescribed local subspace. This is stronger than merely
+returning a diagonal coefficient list. Its hypothesis
+`HasOneDimensionalSubspaceDescent` is exactly the base case invoked in the
+publisher proof. At `83cc791`, density of the number field in its finite-place
+completion and openness of nonzero square classes discharge that hypothesis.
+The concrete endpoint is therefore `FULLY_FORMALIZED` and
+`PROVISIONAL_MATCH`, subject to human source comparison. It is not claimed for
+arbitrary field extensions. See reports 55--56.

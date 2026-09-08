@@ -2,6 +2,10 @@
 
 Status: `PUBLISHED_STATEMENTS_REFUTED_AND_CORRECTED`.
 
+Historical-status note: report 57 at `4ad37e1` proves O'Meara 63:9 and makes
+the current corrected count and source refutation unconditional. References
+below to a visible counting premise describe this earlier checkpoint.
+
 Code checkpoint:
 `f7e8fb7e1b8d43b66a62e500f61f7eeba004f136` on
 `feat/he-formalization`.
