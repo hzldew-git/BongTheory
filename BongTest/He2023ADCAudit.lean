@@ -70,6 +70,18 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025NonDyadicSystem.Lemma45Laws
 #check Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iNonDyadic
 #check Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42InvariantData
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiNonDyadic
+#check
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic
+#check
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_excludes
+#check
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_unique
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iNonDyadicTargets
 #check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iiNonDyadicTargets
@@ -89,6 +101,20 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025NonDyadicColumn.other_other
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iNonDyadic
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_excludes
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_unique
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iNonDyadicTargets
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iiNonDyadicTargets
 #print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iNonDyadic

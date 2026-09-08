@@ -17,6 +17,7 @@ import Bong.Bong.He2023ADCPublishedRepresentation
 import Bong.Bong.He2023ADCSectionFour
 import Bong.Bong.He2023ADCLemma46
 import Bong.Bong.He2023ADCNonDyadicLemma45
+import Bong.Bong.He2023ADCNonDyadicProposition42
 import Bong.Bong.He2023ADCMaximalProfiles
 import Bong.Bong.He2023ADCGenericProfiles
 import Bong.Bong.He2023ADCOddMaximalStructure

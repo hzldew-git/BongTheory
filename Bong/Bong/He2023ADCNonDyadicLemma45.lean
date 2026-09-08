@@ -57,6 +57,11 @@ variable (I : S.Lemma45InvariantData)
 fields are the invariant forms of the codimension-one and codimension-two
 representation criteria, in the two possible directions. -/
 structure Lemma45Laws : Prop where
+  determinantClass_eq_of_isometric {A B : S.Space} :
+    S.spaceIsometric A B →
+      I.determinantClass A = I.determinantClass B
+  hasseBit_eq_of_isometric {A B : S.Space} :
+    S.spaceIsometric A B → I.hasseBit A = I.hasseBit B
   isometric_of_rank_det_hasse {A B : S.Space} :
     S.spaceRank A = S.spaceRank B →
       I.determinantClass A = I.determinantClass B →

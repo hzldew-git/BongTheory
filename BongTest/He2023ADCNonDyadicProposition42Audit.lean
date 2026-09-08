@@ -1,0 +1,35 @@
+/-
+Copyright (c) 2026 BONG Theory contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BONG Theory contributors
+-/
+
+import Bong.Bong.He2023ADCNonDyadicProposition42
+
+/-! Focused audit for the non-dyadic Proposition 4.2 invariant deduction. -/
+
+#check Bong.HeADC2025NonDyadicColumn.hasseBit
+#check Bong.HeADC2025NonDyadicSystem.Proposition42InvariantData
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.target_pair_determinant_eq
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.target_pair_nonisometric
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_excludes
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_unique
+
+#print axioms Bong.HeADC2025NonDyadicColumn.hasseBit_injective
+#print axioms Bong.HeADC2025NonDyadicSystem.Proposition42Laws.target_pair_determinant_eq
+#print axioms Bong.HeADC2025NonDyadicSystem.Proposition42Laws.target_pair_nonisometric
+#print axioms Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiiNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_excludes
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_unique
