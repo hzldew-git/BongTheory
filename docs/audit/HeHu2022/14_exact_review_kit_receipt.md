@@ -8,8 +8,9 @@ complete He--Hu (2022) paper closure summarized in Reports 12--13.
 
 - generated archive:
   `BongTheory-HeHu2022-ci-8bff7e2-review-kit.zip`;
+- archive size: 5,743,596 bytes;
 - SHA-256:
-  `922339B3185A0BAF6D4C09E58FF3A6C2C1DB9CB9486BA5`;
+  `922339B3185A0BAF6D4C09E58FF3A6C2C1F6D70D8359F40F68C1DB9CB9486BA5`;
 - recorded source commit:
   `8bff7e2298c8fa3a87c5e4ca5e69513ba15532a0`;
 - recorded source-tree state: `clean`;
