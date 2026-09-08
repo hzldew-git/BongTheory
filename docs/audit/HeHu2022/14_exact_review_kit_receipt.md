@@ -19,7 +19,7 @@ complete He--Hu (2022) paper closure summarized in Reports 12--13.
 
 The archive structure verifier checked all 1,913 payload entries after a
 fresh extraction and reported success. The difference between packaged files
-and payload entries is the outer archive itself.
+and payload entries is the unlisted `FILES.sha256` checksum file itself.
 
 ## Independent extraction and build
 
