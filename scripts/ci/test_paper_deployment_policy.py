@@ -1,8 +1,9 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
+import re
 import unittest
+from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -46,6 +47,19 @@ class PaperDeploymentPolicyTests(unittest.TestCase):
         self.assertIn("-GitHubDeployableOnly", review_workflow)
         self.assertIn("deployment.githubReviewKit", release_workflow)
         self.assertIn("GitHubDeployableOnly", build_all)
+
+    def test_exact_review_kit_receipts_have_valid_archive_hashes(self) -> None:
+        receipts = sorted((ROOT / "docs" / "audit").rglob("*review_kit_receipt.md"))
+        self.assertTrue(receipts)
+        digest_pattern = re.compile(r"- SHA-256:\s*`([0-9A-F]+)`")
+        for path in receipts:
+            text = path.read_text(encoding="utf-8")
+            digests = digest_pattern.findall(text)
+            with self.subTest(receipt=path.relative_to(ROOT)):
+                self.assertTrue(digests)
+                for digest in digests:
+                    self.assertRegex(digest, r"^[0-9A-F]{64}$")
+                self.assertNotIn("outer archive itself", text)
 
 
 if __name__ == "__main__":

@@ -24,7 +24,14 @@ counted as a concrete arithmetic implementation.
   published `W/N` branches of Lemmas 4.11--4.12, full Proposition 4.13, and
   the dyadic parts of Lemma 4.14 and Propositions 4.15--4.16. The unary table,
   exhaustion, exact excluding ternary witness, and count are closed in report
-  50. Non-dyadic cases remain open.
+  50. In the non-dyadic branch, Lemma 4.7(i)'s 16 symbolic block rows, their
+  Jordan-rank arithmetic, and the table-level first sentence of Lemma 4.8 are
+  concrete; actual lattice classification and the other cases remain open;
+  reports 61--62. The complete rank-four table split and non-dyadic
+  Proposition 4.16 deduction are also proved over explicit realization laws;
+  report 63. Lemma 4.7(ii)'s exact finite family and full deletion-minimal
+  deduction are formalized over explicit local-lattice witness laws; report
+  64.
 - Every numbered Section 5 deduction, including all four clauses of Lemma
   5.3 and Theorem 5.1, is proved from the explicit non-dyadic
   `SectionFiveLaws` package. A concrete lattice/Jordan instance of that
@@ -82,7 +89,11 @@ route that exhausts both exceptions.
 
 The main unresolved mathematical work is:
 
-- the non-dyadic Section 4 cases;
+- actual non-dyadic lattice realization/classification for Lemma 4.7,
+  concrete instances of its now-explicit minimal-testing witness laws,
+  Lemma 4.8's representation equivalence, and the
+  remaining non-dyadic Section 4 cases; this includes instantiating the laws
+  used by the now-complete finite deduction of Proposition 4.16;
 - concrete non-dyadic instances of `SectionFiveLaws` and `CatalogueLaws`,
   required to discharge the conditional Theorem 1.10 endpoint;
 - concrete number-field instances of `SectionEightLaws` and the earlier

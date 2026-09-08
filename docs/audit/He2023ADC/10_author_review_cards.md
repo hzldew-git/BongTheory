@@ -198,6 +198,29 @@ the fields of `CatalogueLaws` exactly match Proposition 4.2, Remark 4.3,
 Lemmas 4.7--4.8, and Proposition 4.15. A concrete instance of those fields is
 not yet certified.
 
+Report 61 adds the non-dyadic Lemma 4.7 table-data card. Reviewers should
+compare all 16 ordered symbolic rows with p. 993, including every power of
+`H`, the `Delta` twists in the second column, and the invalid low-rank rows.
+They should verify that the scale-zero/scale-one interpretation is exactly the
+one used on pp. 994--997. Lean and Mathematica check the resulting rank
+arithmetic and seven-row binary count. Reviewers must separately assess the
+cited actual-lattice classification and the representation theorem; the
+symbolic certificate does not establish either.
+
+Reports 62--63 add two focused checks. Reviewers should confirm that the
+second column is absent in rank one and that `N_2^2(1)` alone is absent in
+rank two. For Proposition 4.16, they should verify the exact rank-four row
+`<1,Delta,pi,Delta*pi> = A perp A(pi)` and that every other row contains an
+`H` block. They must then assess the separately exposed catalogue,
+realization, and transport laws before treating the conditional endpoint as
+an actual local-lattice theorem.
+
+For Report 64, reviewers should distinguish the proved finite family and
+generic maximal-overlattice deduction from the uninstantiated row-by-row
+deletion witnesses cited through reference [16, Proposition 3.2]. The formal
+endpoint is literal deletion-minimality, but it is conditional until those
+witnesses are constructed for actual non-dyadic local lattices.
+
 Report 53 adds the two global enumeration cards. For Corollary 1.8,
 reviewers should confirm that Hanke's 115 rational classes and Kirschmer's
 471 non-rational totally real classes form the stated disjoint exhaustive

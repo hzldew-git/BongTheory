@@ -77,3 +77,26 @@ proposition-valued structures supplied as theorem hypotheses.
 
 Exact-revision clean Review Kit CI, concrete instances of the two law
 packages, and independent human semantic approval remain separate gates.
+
+## Later boundary refinement
+
+Report 61 now kernel-checks the literal finite data in publisher Table 4.7:
+all sixteen parity rows, their ranks and Jordan ranks, the seven defined
+rank-two rows, and the unique omitted rank-two row.  This removes the table
+transcription and finite-profile arithmetic from the `SectionFiveLaws`
+boundary.  It does not construct the displayed rows as actual local
+quadratic lattices or prove their maximality, exhaustion, irredundancy, and
+representation properties.  Those arithmetic realization and
+classification fields, together with the number-field fields of
+`SectionEightLaws`, remain external inputs.
+
+Reports 62--63 additionally make the low-rank table domain exact and remove
+the finite rank-four case split of Proposition 4.16 from this boundary. The
+new proposition endpoint still depends on visibly named catalogue and
+actual-lattice realization laws; none of those laws states its final
+exceptional-or-hyperbolic conclusion.
+
+Report 64 similarly proves the whole Lemma 4.7(ii) minimal-testing deduction
+over explicit maximal-overlattice and deletion-witness inputs. This advances
+numbered-statement coverage without reclassifying the cited non-dyadic
+local-lattice results as internally proved.

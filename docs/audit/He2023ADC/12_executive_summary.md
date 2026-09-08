@@ -245,6 +245,28 @@ exhaustion and the actual prime-by-prime local checks remain explicit inputs,
 so Theorem 1.11 is still conditional rather than an unconditional concrete
 enumeration.
 
+Report 61 advances the non-dyadic data layer at `ec135d8`. All 16
+parity/column/square-class block formulas from Lemma 4.7(i), their total and
+Jordan-component ranks, table-level `J_{0,1}=N`, the unique missing binary
+row, and the seven-row count are kernel-checked and independently reproduced
+in Mathematica. The common row-definedness predicate is shared with the
+existing Theorem 1.10 catalogue. Actual non-dyadic lattice realization,
+maximality, classification, minimality, and representation remain explicit
+inputs, so the whole non-dyadic branch is still conditional.
+
+Reports 62--63 refine that certificate at `ef4fcf4` and `2cf9133`: the
+rank-one and rank-two row domains are exact, the exceptional quaternary row
+is literally `A perp A(pi)`, and all seven other quaternary rows contain `H`.
+The full non-dyadic Proposition 4.16 deduction is kernel-checked from explicit
+catalogue and realization interfaces. Those concrete local-field instances
+remain open, so this is a conditional rather than unconditional completion.
+
+Report 64 also formalizes the exact non-dyadic minimal-testing statement. The
+displayed family has four, seven, or eight rows according to rank, and Lean
+proves both testing sufficiency and literal deletion minimality from explicit
+maximal-overlattice and deletion-witness laws. Concrete instances of those
+local-lattice laws remain pending.
+
 Semantic status: one omitted binary class affects four printed statements
 (Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
 has a separate quantifier mismatch, and the proof of Theorem 7.1 is

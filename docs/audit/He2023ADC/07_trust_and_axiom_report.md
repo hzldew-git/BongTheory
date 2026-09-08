@@ -297,6 +297,30 @@ constructors report only `propext`, `Classical.choice`, and `Quot.sound`.
 no Lean axiom, but its concrete mathematical instance remains open. Report
 52 separates that assumption from the proved catalogue and counting logic.
 
+At checkpoint `ec135d8bdaedb35bf3f29b0518661e23f2251ccf`, the symbolic
+non-dyadic Lemma 4.7 table module, its focused audit, the non-dyadic Theorem
+1.10 module, canonical paper entry, and full paper audit complete 5,557 build
+jobs. The focused table endpoints report only `propext`, `Classical.choice`,
+and `Quot.sound`, with several using proper subsets. The scanner checks 2,772
+tracked Lean sources and the independent Mathematica table-profile audit
+passes. Existing dependency worktrees reported local changes, so this is
+cached local kernel evidence rather than a clean-kit receipt. Report 61 keeps
+the actual non-dyadic realization and classification boundary explicit.
+
+The later low-rank refinement at `ef4fcf4` rebuilds the canonical entry in
+5,556 jobs. The rank-four table split and conditional Proposition 4.16 at
+`2cf9133` rebuild in 5,557 jobs; its two main endpoints report only `propext`.
+The scanner then checks 2,774 tracked Lean sources, and all 27 policy tests
+pass. Reports 62--63 state why this remains local cached evidence and identify
+the still-uninstantiated actual-lattice laws.
+
+At `5b2c411`, the new minimal-testing logic and its focused audit build with
+the canonical entry. The universality-testing and literal-minimality
+endpoints depend on no axioms; the finite cardinality theorems use only the
+permitted foundational set. The scanner checks 2,776 tracked Lean sources
+and all 27 policy tests pass. Report 64 keeps the concrete deletion-witness
+and maximal-overlattice assumptions visible.
+
 At checkpoint `8cdd338f064934f9e3dc1f2af2011cb998705b97`, the enumeration
 module, canonical paper entry, expanded audit, and main axiom gate compile
 with Lean 4.32.1. The Corollary 1.8 arithmetic, Table 2 selection,

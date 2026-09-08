@@ -89,3 +89,19 @@ Accordingly the unrestricted theorem and the paper remain `NOT_COMPLETE`.
 The whole-paper grade remains D pending concrete non-dyadic and number-field
 instances, the other missing main results, a fresh exact Review Kit, GitHub
 CI, and independent human semantic approval.
+
+## Later table-data refinement
+
+Report 61 supplies a concrete kernel certificate for the literal publisher
+Table 4.7 row data used by this theorem: every even and odd row, the total
+rank and two Jordan-rank identities, the seven defined binary rows, and the
+unique missing binary row.  The finite catalogue theorem therefore no longer
+trusts an informal transcription of the table.  Its remaining conditional
+boundary is mathematical rather than combinatorial: realizing those rows as
+actual non-dyadic local lattices and proving maximality, exhaustion,
+irredundancy, Lemma 4.7(ii), Lemma 4.8, and the required representation laws.
+
+Report 62 corrects the shared predicate at rank one without changing the
+rank-two or rank-at-least-three catalogues. Report 63 uses the same table to
+prove the rank-four Proposition 4.16 split, while keeping its concrete
+realization and transport inputs separate from the finite deduction.

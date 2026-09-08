@@ -108,6 +108,20 @@ coordinate rows, printed discriminants, positive-definiteness certificates,
 and last-column entries are now concrete. The 21 retained rows are identified
 with the existing Table 2 selection. Oh-catalogue exhaustion and the actual
 prime-by-prime local `2`-ADC calculations remain explicit external inputs.
+Report 61 transcribes the 16 parity/column/square-class block formulas in the
+non-dyadic Lemma 4.7(i) table at `ec135d8`. Their total ranks, `J_0` and `J_1`
+ranks, `J_{0,1}=N` table arithmetic, the missing binary row, and the seven-row
+count are concrete. Actual local-field realization, classification,
+representation, minimality, and the remaining non-dyadic Section 4 results
+remain open.
+Report 62 makes the common table domain exact at rank one as well as rank two.
+Report 63 proves the complete finite rank-four table split used by non-dyadic
+Proposition 4.16 and derives that proposition from explicit catalogue and
+realization laws. Those law instances, rather than the finite case split, are
+the remaining boundary.
+Report 64 gives Lemma 4.7(ii) its literal defined-row family, proves the
+four/seven/eight cardinalities, and derives testing sufficiency plus deletion
+minimality from explicit maximal-overlattice and deletion-witness laws.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version
@@ -122,10 +136,13 @@ and the Corollary 7.21 catalogue and unconditional numerical wrapper, listed in
 `05_theorem_correspondence.md`. The dyadic unary table and the rank-one case
 of Lemma 4.9(ii), together with every dyadic branch and the conditional
 non-dyadic catalogue deduction of Theorem 1.10, are also complete in their
-stated scopes. The Section 5 and Section 8 deductions are
+stated scopes. The symbolic non-dyadic Lemma 4.7 table data are concrete,
+while its minimal-testing conclusion is conditional on visible local-lattice
+laws. The Section 5 and Section 8 deductions are
 also proved over explicit law packages. The global predicates and logical
 reductions are in scope, with their non-dyadic and arithmetic premises still
 undischarged. This audit does not certify those concrete instances or the
 remaining local classifications and concrete external enumeration inputs.
-The literal Table 1 matrix data are no longer among those remaining inputs;
-their global catalogue interpretation and local arithmetic verification are.
+The literal Table 1 matrix data and non-dyadic Table 4.7 block/rank data are no
+longer among those remaining inputs; their actual lattice classifications and
+representation consequences are.

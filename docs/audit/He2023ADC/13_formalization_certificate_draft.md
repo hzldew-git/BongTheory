@@ -136,6 +136,23 @@ Non-dyadic Theorem 1.10 logical checkpoint:
 rank and both coranks and the printed formulas at ramification index zero.
 This is conditional on the visible `SectionFiveLaws` and `CatalogueLaws`
 parameters; their concrete non-dyadic instances remain pending.
+Non-dyadic Lemma 4.7 table-profile checkpoint:
+`ec135d8bdaedb35bf3f29b0518661e23f2251ccf`. Report 61 transcribes all
+16 even/odd symbolic block rows and proves their total rank, `J_0` and `J_1`
+ranks, table-level `J_{0,1}=N`, parity-specific definedness, and seven-row
+binary boundary. Actual local-lattice realization, classification, minimality,
+and Lemma 4.8's representation equivalence remain pending.
+Low-rank and quaternary refinements: `ef4fcf4` and `2cf9133`. Reports 62--63
+make the unary/binary table domain exact, prove the exceptional rank-four row
+as `A perp A(pi)`, prove that every other row contains `H`, and derive the
+non-dyadic Proposition 4.16 conclusion from explicit actual-lattice
+realization and transport laws. Concrete instances of those laws remain
+pending.
+Non-dyadic minimal-testing checkpoint: `5b2c411`. Report 64 gives the exact
+defined-row subtype and its four/seven/eight cardinalities, then proves
+universality-testing sufficiency and literal deletion minimality from visible
+maximal-overlattice, catalogue, transport, and deletion-witness laws. Their
+concrete local-lattice instances remain pending.
 Corollary 1.8 and Theorem 1.11 logical checkpoint:
 `8cdd338f064934f9e3dc1f2af2011cb998705b97`. Report 53 proves the
 `115+471=586` deduction, the literal 21-row Table 2 source selection and its

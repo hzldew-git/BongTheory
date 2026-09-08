@@ -198,6 +198,21 @@ Additional concrete declaration groups are:
   two maximal columns, and an abstract Jordan/lattice interface. From the
   explicit `SectionFiveLaws` package it proves Lemmas 5.2--5.4, all four
   clauses of Lemma 5.3, and the full Theorem 5.1 equivalence.
+- `He2023ADCNonDyadicTable` transcribes every even- and odd-rank block row of
+  Lemma 4.7(i) with symbolic hyperbolic and unary Jordan atoms. It proves total
+  rank, `J_0` and `J_1` ranks, table-level `J_{0,1}=N`, parity-specific
+  definedness, the unique missing `N_2^2(1)` row, and the seven-row binary
+  count. Reports 61--62 record its focused axiom audit and exact low-rank
+  domain.
+- `He2023ADCNonDyadicProposition416` proves the rank-four exceptional-or-
+  hyperbolic table split and the full proposition from explicit catalogue,
+  realization, and transport laws. Its focused audit is
+  `He2023ADCNonDyadicProposition416Audit`; report 63.
+- `He2023ADCNonDyadicMinimalTesting` defines the exact subtype of published
+  rows, proves its four/seven/eight cardinalities, and derives literal
+  deletion-minimal universality testing from separately exposed
+  maximal-overlattice, classification, transport, and deletion-witness laws.
+  Report 64 records the conditional boundary.
 - `He2023ADCSectionEight` defines class number one and the distinguishing
   rank-`n` sublattice property in the global/local interface. From
   `SectionEightLaws` and the existing Theorem 1.3 laws it proves both clauses
@@ -240,7 +255,9 @@ and regularity. Its `heADCTheorem13`, `heADCTheorem14*`, and the Section 8
 endpoints are conditional logical reductions, not constructions of
 number-field completions or proofs of the global arithmetic inputs. Likewise,
 the Section 5 and catalogue law packages are not concrete non-dyadic
-local-field instances. The Corollary 1.8 and Theorem 1.11 law packages are
+local-field instances. Their literal Table 4.7 block/rank data are internal,
+but realization, classification, and representation remain external. The
+Corollary 1.8 and Theorem 1.11 law packages are
 likewise not concrete implementations of the cited external catalogues.
 The literal matrices are concrete, but their identification with an exhaustive
 Oh catalogue and the prime-by-prime local checks are still not implemented.

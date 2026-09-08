@@ -148,6 +148,14 @@ not discharged by the theorem bodies or by their standard-only axiom reports.
 None of the numbered Section 5 conclusions occurs as a structure field. See
 report 47.
 
+Report 61 removes a narrower part of this boundary. The 16 block expressions
+printed in Lemma 4.7(i), their parity-dependent hyperbolic multiplicities,
+their `J_0`/`J_1` ranks, `J_{0,1}=N` table arithmetic, and the missing binary
+row are now concrete finite data. This does not construct the corresponding
+local lattices. Their maximality, isometry classification, exhaustive and
+minimal testing properties, and Lemma 4.8 representation equivalence remain
+genuine mathematical inputs to `SectionFiveLaws` and `CatalogueLaws`.
+
 Section 8 is proved over `HeADC2025GlobalData.SectionEightLaws` together with
 the existing Theorem 1.3 law package. Concrete localization, genus transport,
 class-number-one regularity, the distinguishing-lattice theorem, and scaling
@@ -177,7 +185,19 @@ eight-row finite counts and all catalogue deductions. Its
 irredundancy of the published non-dyadic rows, plus the equal-rank
 ADC-implies-maximal implication. Those are genuine undisclosed mathematical
 obligations until a concrete local-field instance is constructed. No count
-or Theorem 1.10 conclusion is a law field. See report 52.
+or Theorem 1.10 conclusion is a law field. The common row-definedness
+predicate is now shared with the concrete symbolic table certificate, so the
+unary and seven-row binary combinatorics are not duplicated. Report 63 also
+removes the rank-four finite case split from the boundary. Its remaining
+`QuaternaryTableRealizationLaws` fields state the actual block-to-lattice
+representation, exceptional isometry, and transport facts. See reports 52
+and 61--63.
+
+Report 64 isolates the additional inputs behind Lemma 4.7(ii). The finite
+defined-row family and its cardinalities are internal, as is the proof that
+maximal classification, representation transport/composition, maximal
+overlattices, and row deletion witnesses imply literal minimal testing.
+Concrete maximal-overlattice and deletion-witness instances remain external.
 
 The two final enumeration results have distinct visible boundaries. For
 Corollary 1.8, the Hanke and Kirschmer class types, their partition, and the

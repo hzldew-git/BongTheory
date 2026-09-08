@@ -238,6 +238,29 @@ paper, but no concrete non-dyadic instance has yet been proved. The result is
 therefore `CONDITIONAL_FORMALIZATION`, not an unconditional completion of
 Section 5. See report 47.
 
+At `ec135d8`, the literal block and Jordan-rank content of non-dyadic Lemma
+4.7(i) and the first sentence of Lemma 4.8 is `EQUIVALENT_AT_THE_SYMBOLIC_TABLE
+LEVEL`. All parity/column/square-class rows and the exceptional definedness
+boundaries are concrete. The result is weaker than the publisher's actual
+lattice statement: it does not prove realization, maximality, isometry
+classification, minimal testing, or the representation equivalence in Lemma
+4.8. It is therefore a `CONCRETE_FINITE_DATA_CERTIFICATE` and partial
+formalization, not a completed non-dyadic Section 4. See report 61.
+
+At `ef4fcf4`, the exact rank-one domain is also internal, with four defined
+unary rows. At `2cf9133`, the non-dyadic rank-four table split needed for
+Proposition 4.16 is concrete and exhaustive. The final proposition is
+`LOGICALLY_EQUIVALENT` once the visible catalogue and row-realization laws are
+supplied, but remains `CONDITIONAL_FORMALIZATION` because those actual-lattice
+instances are not constructed. See reports 62--63.
+
+At `5b2c411`, Lemma 4.7(ii) is `LOGICALLY_EQUIVALENT` to literal deletion
+minimality once the explicitly listed maximal-overlattice, classification,
+transport, and deletion-witness laws are supplied. The four/seven/eight
+finite family sizes are unconditional. The theorem remains
+`CONDITIONAL_FORMALIZATION`, not an actual non-dyadic lattice instance. See
+report 64.
+
 At `d4c56cc`, the non-dyadic Theorem 1.10 conclusion is
 `LOGICALLY_EQUIVALENT` to the published finite counting deduction once the
 explicit non-dyadic catalogue laws are supplied. It is stronger than a bare
