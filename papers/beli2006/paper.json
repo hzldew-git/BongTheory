@@ -3,6 +3,7 @@
   "id": "beli2006",
   "canonicalName": "Beli 2006",
   "assetStem": "Beli2006",
+  "theoremIndexRowPrefix": "Beli 2006,",
   "year": 2006,
   "title": "Representations of integral quadratic forms over dyadic local fields",
   "author": "Constantin N. Beli",

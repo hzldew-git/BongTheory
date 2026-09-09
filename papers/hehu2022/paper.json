@@ -3,6 +3,7 @@
   "id": "hehu2022",
   "canonicalName": "He-Hu 2022",
   "assetStem": "HeHu2022",
+  "theoremIndexRowPrefix": "He--Hu,",
   "workYear": 2022,
   "publicationYear": 2024,
   "title": "On n-universal quadratic forms over dyadic local fields",

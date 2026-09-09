@@ -3,6 +3,7 @@
   "id": "he2023adc",
   "canonicalName": "He 2023 ADC",
   "assetStem": "He2023ADC",
+  "theoremIndexRowPrefix": "He ADC,",
   "workYear": 2023,
   "publicationYear": 2025,
   "title": "On n-ADC integral quadratic lattices over algebraic number fields",

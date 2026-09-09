@@ -17,6 +17,45 @@ def paper_manifests() -> list[tuple[Path, dict[str, object]]]:
 
 
 class PaperDeploymentPolicyTests(unittest.TestCase):
+    def test_every_paper_has_a_unique_theorem_index_prefix(self) -> None:
+        manifests = paper_manifests()
+        theorem_index = (ROOT / "THEOREM_INDEX.md").read_text(encoding="utf-8")
+        prefixes: list[str] = []
+        for path, manifest in manifests:
+            prefix = manifest.get("theoremIndexRowPrefix")
+            with self.subTest(manifest=path.parent.name):
+                self.assertIsInstance(prefix, str)
+                assert isinstance(prefix, str)
+                self.assertTrue(prefix.strip())
+                self.assertNotRegex(prefix, r"[|\r\n]")
+                self.assertIn(f"| {prefix}", theorem_index)
+            prefixes.append(prefix)
+        self.assertEqual(len(prefixes), len(set(prefixes)))
+
+    def test_review_kit_generates_paper_specific_review_materials(self) -> None:
+        generator = (
+            ROOT / "scripts/paper-kits/Build-PaperReviewKit.ps1"
+        ).read_text(encoding="utf-8")
+        fixed_block = generator.split("$fixedFiles = @(", 1)[1].split(")", 1)[0]
+        for global_review_file in (
+            "CITATION.cff",
+            "SOURCES.md",
+            "TRUST.md",
+            "THEOREM_INDEX.md",
+            "REVIEWING.md",
+            "docs/audit/README.md",
+            "docs/audit/IndependentReviewSignoff.md",
+        ):
+            with self.subTest(file=global_review_file):
+                self.assertNotIn(f"'{global_review_file}'", fixed_block)
+        self.assertIn("theoremIndexRowPrefix", generator)
+        self.assertIn("Rows for unrelated papers are intentionally excluded", generator)
+        verifier = (
+            ROOT / "scripts/paper-kits/Test-PaperReviewKit.ps1"
+        ).read_text(encoding="utf-8")
+        self.assertIn("Unrelated theorem-index row", verifier)
+        self.assertIn("exactly its own paper-specific audit directory", verifier)
+
     def test_every_deployment_override_is_typed_and_explained(self) -> None:
         manifests = paper_manifests()
         self.assertTrue(manifests)

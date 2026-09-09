@@ -37,6 +37,10 @@ $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
 if ($manifest.schemaVersion -notin @(1, 2)) {
     throw 'Unsupported Review Kit manifest schema.'
 }
+$paperPrefix = [string] $manifest.paper.theoremIndexRowPrefix
+if ([string]::IsNullOrWhiteSpace($paperPrefix) -or $paperPrefix -match '[|\r\n]') {
+    throw 'Review Kit manifest lacks a valid paper-specific theorem-index prefix.'
+}
 if ($manifest.schemaVersion -eq 2) {
     if ($manifest.paper.authoritativeSource.authority -ne $true) {
         throw 'Schema-2 Review Kit lacks a unique authoritative publisher source.'
@@ -53,6 +57,58 @@ if ($manifest.schemaVersion -eq 2) {
 }
 if ($manifest.provenance.sourceTreeState -ne 'clean' -and -not $AllowDirtyKit) {
     throw 'Review Kit was generated from a dirty source tree.'
+}
+
+$paperDirectory = Join-Path $ExtractionDirectory 'papers'
+$packagedPaperDirectories = @(
+    Get-ChildItem -LiteralPath $paperDirectory -Directory -ErrorAction Stop
+)
+if ($packagedPaperDirectories.Count -ne 1 -or
+    $packagedPaperDirectories[0].Name -ne $manifest.paper.id) {
+    throw 'Review Kit must contain exactly its own papers/<paper-id> directory.'
+}
+$auditDirectory = [IO.Path]::GetFullPath(
+    (Join-Path $ExtractionDirectory ([string] $manifest.formalization.auditDirectory))
+)
+$packagedAuditDirectories = @(
+    Get-ChildItem -LiteralPath (Join-Path $ExtractionDirectory 'docs/audit') `
+        -Directory -ErrorAction Stop
+)
+if ($packagedAuditDirectories.Count -ne 1 -or
+    $packagedAuditDirectories[0].FullName -ne $auditDirectory) {
+    throw 'Review Kit must contain exactly its own paper-specific audit directory.'
+}
+
+foreach ($relativeReviewFile in @(
+    'CITATION.cff',
+    'SOURCES.md',
+    'TRUST.md',
+    'THEOREM_INDEX.md',
+    'REVIEWING.md',
+    'docs/audit/README.md',
+    'docs/audit/IndependentReviewSignoff.md'
+)) {
+    if (-not (Test-Path -LiteralPath (Join-Path $ExtractionDirectory $relativeReviewFile) `
+        -PathType Leaf)) {
+        throw "Review Kit lacks paper-specific review material: $relativeReviewFile"
+    }
+}
+
+$theoremIndexRows = @(
+    Get-Content -LiteralPath (Join-Path $ExtractionDirectory 'THEOREM_INDEX.md') |
+        Where-Object {
+            $_ -match '^\| ' -and
+            -not $_.StartsWith('| Source result', [StringComparison]::Ordinal) -and
+            -not $_.StartsWith('| ---', [StringComparison]::Ordinal)
+        }
+)
+if ($theoremIndexRows.Count -eq 0) {
+    throw 'Paper-specific theorem index has no public entry rows.'
+}
+foreach ($row in $theoremIndexRows) {
+    if (-not $row.StartsWith("| $paperPrefix", [StringComparison]::Ordinal)) {
+        throw "Unrelated theorem-index row in paper-specific Review Kit: $row"
+    }
 }
 
 $listed = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)

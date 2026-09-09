@@ -39,6 +39,9 @@ human-signoff requirements from the authoritative audit package.
 New manifests separate the historical work year from the publication year and
 make source authority machine-readable. Required paper-source fields are:
 
+- `theoremIndexRowPrefix`, the exact start of this paper's rows in the public
+  `THEOREM_INDEX.md`; the Review Kit generator uses it to exclude unrelated
+  papers from the packaged theorem index;
 - `workYear` and `publicationYear`;
 - the complete publisher `citation` and DOI URL in `doi`;
 - `authoritativeSource`, with `authority: true`, URL, description, uppercase
@@ -62,6 +65,15 @@ papers should use these fields whenever an independent computation is useful.
 The publisher version of record is the sole semantic authority. Preprints may
 be listed only as comparison sources. Review Kits never contain publisher
 PDFs; their hashes let reviewers verify an independently obtained copy.
+
+Each generated Review Kit also replaces the repository-wide `CITATION.cff`,
+`SOURCES.md`, `TRUST.md`, `THEOREM_INDEX.md`, `REVIEWING.md`, audit landing
+page, and blank sign-off form with paper-specific versions. This keeps one
+paper's package free of unrelated theorem rows, source records, review targets,
+and historical sign-off requests while retaining the repository-wide files in
+a full clone. Structural verification enforces a single `papers/<paper-id>`
+directory, a single paper audit directory, the presence of all seven generated
+review files, and the declared prefix on every packaged theorem-index row.
 
 ## Enforcing trust gate for every new kit
 

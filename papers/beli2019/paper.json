@@ -3,6 +3,7 @@
   "id": "beli2019",
   "canonicalName": "Beli 2019 v2",
   "assetStem": "Beli2019",
+  "theoremIndexRowPrefix": "Beli 2019 v2,",
   "year": 2019,
   "title": "Representations of quadratic lattices over dyadic local fields",
   "author": "Constantin N. Beli",

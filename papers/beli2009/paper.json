@@ -3,6 +3,7 @@
   "id": "beli2009",
   "canonicalName": "Beli 2009/2010",
   "assetStem": "Beli2009",
+  "theoremIndexRowPrefix": "Beli 2009/2010,",
   "year": 2009,
   "title": "A new approach to classification of integral quadratic forms over dyadic local fields",
   "author": "Constantin N. Beli",
