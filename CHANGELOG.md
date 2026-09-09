@@ -1,14 +1,14 @@
 # Changelog
 
-## 0.4.0-rc.1 — 2026-09-08
+## 0.4.0-rc.1 — 2026-09-10
 
 - Add the canonical He--Hu 2022 paper entry, audit entry, publisher-source
   manifest, complete 47-item coverage package, and an independently extracted
   Review Kit. Human semantic sign-off remains pending.
-- Add the canonical He 2023 ADC paper entry and its three audit entries. The
-  deployed scope includes complete Section 6 triage, 19/21 Section 7 items,
-  exact dyadic Theorem 1.10 catalogues, and conditional non-dyadic/global
-  finite deductions.
+- Add the canonical He 2023 ADC paper entry and its thirteen audit entries.
+  The deployed scope includes complete Section 6 triage, 20/21 Section 7
+  items, exact dyadic Theorem 1.10 catalogues, and conditional
+  non-dyadic/global finite deductions.
 - Preserve five publisher discrepancies as explicit audit results: four
   binary claims omit a realized nonmaximal class, and Lemma 7.13 has a
   quantifier mismatch. The corrected statements are proved separately.
