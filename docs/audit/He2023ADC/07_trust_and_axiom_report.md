@@ -425,3 +425,13 @@ each report only `propext`; the exact binary catalogue reports `propext` and
 imported-closure gate reports `AXIOM_GATE_PASS: 61046 declarations checked`.
 This remains local cached evidence over proposition-valued inputs, not a
 clean-kit receipt.
+
+At exact clean checkpoint `9350ca37181f3275129d16e091e9dd09a7ee5846`,
+the independently extracted historical package through Report 68 completes
+all `5,581` build jobs. Its canonical audit, nine focused He ADC audit
+entries, and the standalone imported-closure gate all pass; the latter reports
+`AXIOM_GATE_PASS: 60948 declarations checked`. Both exact Mathematica
+certificates also pass. Report 69 discloses that the archive's old shared root
+documents mention other papers, so it is proof-closure evidence rather than the
+strictly isolated release asset. It predates Reports 70--72 and does not
+instantiate the remaining arithmetic laws or provide human semantic approval.

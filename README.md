@@ -28,11 +28,13 @@ formalization is deliberately withheld from this GitHub deployment.
   theorem-level mismatch; this does not downgrade the separately graded kits.
 - Local reproducibility status:
   `REPRODUCIBLE_WITH_DOCUMENTED_EXTERNAL_DEPENDENCIES` at commit
-  `7d7a4d5e79a06015fa40ccba464f143d77b6f231` for the current He ADC
-  paper closure; its exact source-only kit passes a fresh 5,560-job build and
-  the 60,594-declaration enforcing gate. He--Hu has its separate exact,
-  independently extracted Review Kit at `8bff7e2`. See He ADC Report 58 and
-  He--Hu Report 16.
+  `9350ca37181f3275129d16e091e9dd09a7ee5846` for the He ADC closure
+  through Report 68; its independently extracted historical package passes a
+  fresh `5,581`-job build and the `60,948`-declaration
+  enforcing gate. Report 69 discloses why its shared root documents do not
+  satisfy the new single-paper packaging rule and are not the final release
+  asset. He--Hu has its separate exact, independently extracted Review Kit at
+  `8bff7e2`. See He ADC Report 69 and He--Hu Report 14.
 - Public hosted reproducibility status: exact-tag Ubuntu and Windows checks
   passed under the scopes and cache boundaries recorded in the public
   `v0.2.0-rc.1` receipt.  The initial Ubuntu build succeeded but its following

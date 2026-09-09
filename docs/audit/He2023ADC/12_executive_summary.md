@@ -363,6 +363,16 @@ facts. The focused audit completes 3,001 jobs, the combined build completes
 5,561 jobs, and the scanner checks 2,782 sources. This closes the missing
 logical deduction, but not the concrete non-dyadic local-field instance.
 
+Report 69 closes exact extracted-package proof reproducibility through Report
+68 at `9350ca3`: all 2,086 payload hashes, `5,581` build jobs, eleven
+direct Lean gates, and both Mathematica certificates pass, with the enforcing
+gate checking `60,948` declarations. It also records that legacy
+shared root documents name other papers even though He classic code, manifest,
+and audits are absent. The stricter release generator and verifier remove this
+documentation-isolation defect; the legacy archive is not a release asset.
+Reports 70--72 and all remaining semantic and arithmetic obligations stay
+outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
+
 Report 70 advances that boundary at
 `b2dba36476d6dea37762bc6b1b00b7d952aafa62`. Both directions of Lemma 4.5
 and both table-specific "in particular" statements now follow from a visible

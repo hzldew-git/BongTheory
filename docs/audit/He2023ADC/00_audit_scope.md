@@ -139,6 +139,12 @@ explicit lower-level law package. Lemma 4.5(i), Proposition 4.2(iii),
 determinant-square-class equality, and representation transport remain visible
 inputs; no actual Lemma 4.6 conclusion is a field. A concrete non-dyadic
 local-field instance of those laws remains open.
+Report 69 records an independently extracted exact package at `9350ca3`
+through Reports 61--68. All 2,086 payload hashes, `5,581` build jobs,
+eleven direct Lean gates, and both Mathematica certificates pass; the enforcing
+gate checks `60,948` declarations. Its shared root documents predate
+the strict single-paper format, so this is historical proof-closure evidence,
+not the final release package.
 Report 70 derives both directions of non-dyadic Lemma 4.5 from determinant,
 Hasse, and codimension criteria. Report 71 then derives Proposition 4.2(ii)--
 (iii) and all three parts of Lemma 4.4 from a lower invariant interface. The

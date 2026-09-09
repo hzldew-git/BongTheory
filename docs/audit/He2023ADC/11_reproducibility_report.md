@@ -609,3 +609,28 @@ count 21. This receipt covers the source through Report 59 only; it predates
 Reports 61--68. GitHub exact-tag CI, permanent release publication,
 uninstantiated mathematical laws, and human semantic approval remain
 separate. See Report 60.
+
+## Exact historical package through Report 68
+
+The source archive generated from exact clean commit
+`9350ca37181f3275129d16e091e9dd09a7ee5846` has SHA-256
+`D0E8EB1D552F1E72C9F9FA93B4E37905E5846057B383C5E0AAF5FC26795C420C`
+and size 6,280,568 bytes. A separate extraction verified all 2,086 payload
+hashes. Every locked dependency worktree was clean and at its manifest
+revision, and no precompiled project artifact entered the extraction.
+
+An unconstrained attempt exhausted host memory with `std::bad_alloc`, without
+a Lean source or proof error. The same extraction was resumed with controlled
+one-, two-, and finally four-worker stages, using only artifacts created there,
+and completed all `5,581` jobs. The canonical audit, nine focused
+He ADC audits, and paper axiom gate passed; the gate checked
+`60,948` declarations. Both Mathematica certificates also passed.
+
+The old generator correctly excluded He classic source, manifest, and audit
+files, but copied shared root documents that still name other papers. The new
+strict verifier intentionally rejects that archive because it lacks a
+paper-specific theorem-index prefix. Report 69 therefore records it as exact
+proof-closure evidence through Report 68, not as the final release package.
+The tagged release regenerates and rechecks a fully isolated package. Reports
+70--72, remaining concrete law instances, GitHub tag CI, and human sign-off are
+separate gates.
