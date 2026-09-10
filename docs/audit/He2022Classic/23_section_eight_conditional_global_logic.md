@@ -13,6 +13,9 @@ from the separate non-dyadic, dyadic unary, and dyadic higher-rank branches.
 Report 32 then proves the discriminant--ramification equivalence for actual
 number fields and constructs the abstract discriminant fields from a typed
 place bridge.
+Report 33 replaces the unrestricted Theorem 1.7 endpoint by an explicit
+even-rank endpoint and a parity-independent final contradiction with the
+missing local-defect calculation stated as a premise.
 
 ## Scope
 
@@ -63,9 +66,12 @@ the abstract local premise with the concrete `GoodBONG` endpoint.
 
 ## Theorems 1.7--1.9 and Lemma 8.3
 
-- `he2022ClassicTheorem17` derives the diagonal rank-`n+3` obstruction from a
-  ramified dyadic place, Proposition 8.2, the local coefficient-profile input,
-  and Theorem 1.5.
+- `he2022ClassicTheorem17_even` derives the diagonal rank-`n+3` obstruction
+  for `n >= 2` even from a ramified dyadic place, Proposition 8.2, the local
+  coefficient-profile input, and Theorem 1.5.
+- `he2022ClassicTheorem17_of_localAdjacentDefectsLarge` retains the common
+  parity-independent contradiction while requiring the local defect profile
+  as an explicit premise. It does not claim the missing odd calculation.
 - `he2022ClassicLemma83_even` exposes the local obstruction under a ramified finite
   extension.  This remains a single premise not only because scalar-extension
   infrastructure is absent, but also because v5 does not justify its opening
@@ -88,9 +94,9 @@ instances for:
 - number-field lattices and their finite localizations;
 - O'Meara 81:14 globalization used in Proposition 8.2;
 - valuation, defect, and good-BONG transport under local field extension;
-- the equivalence between dyadic unramifiedness and odd number-field
-  discriminant;
-- the diagonal integer coefficient argument in Theorem 1.7; and
+- the structural bridge between abstract places and actual number-field prime
+  ideals (the discriminant theorem itself is proved in Report 32);
+- the diagonal integer coefficient argument in odd-rank Theorem 1.7; and
 - all local cases and strong approximation in the sufficiency of Theorem 1.9.
 
 In addition, unconditional Lemma 8.3 and Theorem 1.8 require either a new

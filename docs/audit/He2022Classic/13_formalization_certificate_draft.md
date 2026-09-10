@@ -6,7 +6,8 @@ fields*, manuscripta math. 174 (2024), 559-595, DOI
 in `00_audit_scope.md`; the publisher PDF and later arXiv revision are
 comparison-only.
 
-Code checkpoint: current local v5 working tree on `feat/he-formalization`;
+Code checkpoint: current local v5 working tree on
+`release/heclassic-v0.5.0-rc.1-prep`;
 exact clean release commit pending. Proof assistant: Lean 4.32.1.
 Dependencies: the committed Lake manifest. Date: 2026-09-11. Project grade: D.
 
@@ -14,13 +15,15 @@ Theorem 1.1 has a checked proof and provisional semantic correspondence.
 Theorem 1.3 is checked in both parity branches, including literal minimality.
 Theorem 1.5 has its complete local n >= 1 implication,
 and its final global deduction is conditionally checked over explicit
-number-field laws. Theorems 1.7 and 1.9 and the even-rank part of Theorem 1.8
+number-field laws. Theorem 1.9 and the even-rank parts of Theorems 1.7 and 1.8
 have conditional endpoints; their concrete arithmetic instances are not
-supplied.  The unrestricted odd Lemma 8.3 and Theorem 1.8 are excluded.
+supplied. Theorem 1.7's parity-independent final contradiction is separately
+proved from an explicit local-defect premise. The unrestricted odd Lemma 8.3,
+Theorem 1.7, and Theorem 1.8 endpoints are excluded.
 Corollary 6.3 is checked for even `n`, while a kernel-checked `e=2`, `n=3`
-counterexample refutes its unrestricted odd statement. Lemma 8.3/Theorem 1.8
-therefore require a parity restriction or a replacement odd proof (Reports
-24 and 26).
+counterexample refutes its unrestricted odd statement. Lemma 8.3/Theorem
+1.7/Theorem 1.8 therefore require a parity restriction or a replacement odd
+proof (Reports 24, 26, 28, and 33).
 The even Lemma 7.4 result,
 Lemma 7.7, all three clauses of Lemma 7.10, the even literal-minimal endpoint,
 the corrected v5 Lemma 7.1, both testing equivalences, both literal-minimal

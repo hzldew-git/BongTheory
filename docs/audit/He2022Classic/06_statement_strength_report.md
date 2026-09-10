@@ -21,12 +21,14 @@ discriminant laws. The complete printed theorem therefore has a fully proved
 local component and a `CONDITIONAL_FORMALIZATION` global component; it is not
 an unconditional whole-theorem formalization.
 
-Theorems 1.7 and 1.9 and the valid even-rank part of Theorem 1.8 are stated at
-their logical endpoints in `He2022ClassicSectionEight.lean`. Their extra parameters are
-bundled proof-data structures identifying the cited number-field results.
+Theorem 1.9 and the valid even-rank parts of Theorems 1.7 and 1.8 are stated at
+their logical endpoints in `He2022ClassicSectionEight.lean`. Their extra
+parameters are bundled proof-data structures identifying the cited
+number-field results.
 These hypotheses make the endpoints weaker as formalization evidence than
 unconditional implementations, even though the conclusions and rank/parity
-quantifiers match v5. Report 23 lists the boundary field by field.
+quantifiers match the proof-supported v5 scope. Report 23 lists the boundary
+field by field.
 
 Report 27 narrows that boundary for Proposition 8.2.  The complete local
 universality conclusion is no longer assumed by `SectionEightLaws`; it is
@@ -40,6 +42,13 @@ relative to unrestricted v5 by requiring `n >= 2` and `Even n`.  This is an
 intentional fidelity safeguard: it matches the only case handled by the
 written proof and leaves the unsupported odd branch absent rather than
 encoding it as a supplied conclusion.
+
+Report 33 applies the same policy to Theorem 1.7.  The source-facing theorem
+now requires `n >= 2` and `Even n`.  A separate rank-independent lemma proves
+the final global contradiction once the parity-dependent local-defect profile
+is supplied explicitly.  Thus the common logical tail remains reusable, while
+the missing odd coefficient calculation is neither assumed as a structure
+field nor presented as a theorem of v5.
 
 Report 29 narrows Theorem 1.9's sufficiency boundary.  The implication from
 finite-place local universality to global universality is now proved by

@@ -1,15 +1,17 @@
 # Coverage report
 
 Coverage status:
-`IN_PROGRESS_WITH_V5_ODD_COROLLARY_6_3_COUNTEREXAMPLE`.
+`IN_PROGRESS_WITH_V5_ODD_COUNTEREXAMPLE_AND_EVEN_SECTION_8_SCOPE`.
 
 - Publisher inventory: 66/66 directly numbered items identified.
 - Main theorems: Theorem 1.1 has a complete local equivalence proof;
   Theorem 1.3 is fully formalized from v5; the local-field implication of
-  Theorem 1.5 is proved for every n >= 1. Its global clause and Theorems
-  1.7-1.9 now have conditional source-logic endpoints over explicit arithmetic
-  law packages; several concrete number-field instances are absent, although
-  the discriminant--ramification theorem is now proved in Report 32.
+  Theorem 1.5 is proved for every n >= 1. Its global clause and Theorem 1.9
+  have conditional source-logic endpoints over explicit arithmetic law
+  packages. Theorem 1.7 has such an endpoint only for `n >= 2` even, plus a
+  parity-independent final contradiction with the missing local calculation
+  explicit. Several concrete number-field instances are absent, although the
+  discriminant--ramification theorem is now proved in Report 32.
 - Local numbered results: the Sections 2-6 proof chain includes direct
   representation, invariant, parity-criterion, and conversion endpoints.
   A complete refreshed branch-by-branch denominator audit is not claimed here.
@@ -43,6 +45,8 @@ Coverage status:
   required by Theorem 1.9's unary sufficiency branch is separately exposed in
   Report 31. Both are proved for actual number-field prime ideals and linked
   to the abstract layer by a structural bridge in Report 32.
+  The source-facing Theorem 1.7 endpoint is restricted to `n >= 2` even, and
+  its rank-independent logical tail is separately exposed; Report 33.
   Theorem 1.9's all-finite-place local-universality conclusion is derived from
   the separate non-dyadic, dyadic unary, and dyadic higher-rank laws; Report
   31.

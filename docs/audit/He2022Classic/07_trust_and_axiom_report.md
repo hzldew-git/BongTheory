@@ -90,3 +90,12 @@ ramification-index positivity, and all place-bridge constructions use only
 `propext`, `Classical.choice`, and `Quot.sound`. The combined canonical and
 focused audit build completes 5,660 jobs, and the imported-closure gate checks
 62,721 declarations; Report 32.
+
+At code checkpoint `89714ff`, the unrestricted Theorem 1.7 endpoint is
+removed.  `he2022ClassicTheorem17_even` and the parity-independent
+`he2022ClassicTheorem17_of_localAdjacentDefectsLarge` use only `propext`,
+`Classical.choice`, and `Quot.sound`.  The combined canonical and focused
+audit build completes 5,665 jobs; all 30 policy tests pass; the scanner checks
+2,796 tracked Lean sources; and the full imported-closure gate reports
+`AXIOM_GATE_PASS: 70695 declarations checked`.  These checks certify the
+scope-safe deductions, not the absent odd coefficient calculation; Report 33.

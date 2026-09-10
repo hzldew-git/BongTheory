@@ -32,9 +32,12 @@ superseded by the formal construction in Report 26.
 `Bong/Bong/He2022ClassicCorollary63OddCounterexample.lean` proves
 `exists_he2022ClassicCorollary63_odd_counterexample` at `e=2`, `n=3`.
 
-The Section 8 endpoints for Lemma 8.3 and Theorems 1.7--1.8 remain
-`CONDITIONAL_FORMALIZATION`.  Their law packages are ordinary theorem
-premises rather than Lean axioms, but they do not repair the source failure.
+The source-facing Section 8 endpoints for Lemma 8.3 and Theorems 1.7--1.8 now
+all require `n >= 2` and `Even n`; Reports 28 and 33 record the two scope
+changes. The parity-independent logical tail of Theorem 1.7 remains available
+only with the missing local-defect calculation as an explicit premise. Their
+law packages are ordinary theorem premises rather than Lean axioms, but they
+do not repair the source failure.
 
 ## Required manuscript repair
 

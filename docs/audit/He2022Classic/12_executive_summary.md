@@ -12,9 +12,11 @@ rank. The local proof chain and even-rank testing equivalence are substantial
 advances beyond the earlier statement-only milestone. Theorem 1.5 is proved
 in its full local n >= 1 scope, including the separate unary argument; its
 concrete number-field localization remains excluded.
-The final global deduction, Theorems 1.7 and 1.9, and the even-rank part of
-Theorem 1.8 now have kernel-checked conditional endpoints over explicit
-Section 8 arithmetic packages. Concrete number-field localization,
+The final global deduction, Theorem 1.9, and the even-rank parts of Theorems
+1.7 and 1.8 now have kernel-checked conditional endpoints over explicit
+Section 8 arithmetic packages. Theorem 1.7's parity-independent final
+contradiction is separately proved from an explicit local-defect premise.
+Concrete number-field localization,
 scalar-extension, and strong-approximation instances remain excluded, so this
 is not unconditional global
 coverage.
@@ -48,13 +50,16 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md` and Reports 22--32 are part of the review
+internally proved. `SOURCE_DELTA.md` and Reports 22--33 are part of the review
 scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.
 Report 28 applies that restriction in Lean: the remaining Lemma 8.3 and
 Theorem 1.8 endpoints require `n >= 2` and even rank, and no unrestricted odd
 compatibility theorem remains.
+Report 33 applies the same restriction to the source-facing Theorem 1.7
+endpoint and preserves only its common logical tail behind an explicit
+local-defect premise.
 
 Project grade: D, because the authoritative v5 source contains a refuted
 unrestricted statement, in addition to incomplete global arithmetic coverage.
@@ -67,6 +72,6 @@ Safe claim: a checked local classification, full v5 Theorem 1.3 testing
 development, and checked conditional Section 8 deductions. Unsafe claim:
 complete formalization or final deployment of the whole paper. Next actions
 are a v6 restriction of Corollary 6.3 and a source decision for the affected
-Lemma 8.3/Theorem 1.8 odd branch,
+Lemma 8.3/Theorem 1.7/Theorem 1.8 odd branches,
 remaining concrete global arithmetic instances, independent review, and exact-commit
 release verification.

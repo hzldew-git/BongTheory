@@ -38,12 +38,16 @@ The proposition-valued definition remains separate from its proof:
   from four lower-level arithmetic laws; Report 27.
 - `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd`:
   the final global deduction of Theorem 1.5.
-- `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17` and
+- `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17_even` and
   `he2022ClassicTheorem19`, together with
   `HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even` and
   `he2022ClassicTheorem18_even`: conditional even-scope Section 8 and
   global-main-theorem endpoints.  Their arithmetic package is uninstantiated;
-  Reports 23 and 28.  No unrestricted odd endpoint remains.
+  Reports 23, 28, and 33.  No unrestricted odd endpoint remains.
+- `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17_of_localAdjacentDefectsLarge`:
+  the parity-independent final contradiction in Theorem 1.7, with the omitted
+  local coefficient/defect calculation exposed as a theorem premise rather
+  than hidden in a source-facing endpoint; Report 33.
 - `HeClassic2024GlobalData.SumOfSquaresLocalGlobalLaws.sumOfSquares_local_to_global`:
   derives the local-to-global step of Theorem 1.9 from localization and strong
   approximation; the compatibility endpoint in `SectionEightLaws` and the

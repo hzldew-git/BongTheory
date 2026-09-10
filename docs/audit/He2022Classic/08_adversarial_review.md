@@ -28,6 +28,11 @@ odd proof or a parity restriction. See Reports 24 and 26.
 Report 28 implements the conservative parity restriction in Lean: only the
 `n >= 2`, even-rank Lemma 8.3 and Theorem 1.8 endpoints exist.  Reviewers
 should treat any downstream use in odd rank as unsupported by this project.
+Theorem 1.7 has the same source-evidence problem: v5 calculates only the even
+case and calls the odd case similar. Report 33 therefore leaves only an
+`n >= 2`, even-rank source-facing endpoint. Its parity-independent logical
+tail is available with the omitted local-defect calculation as an explicit
+premise and must not be mistaken for an odd-rank proof.
 
 The broader Lemma 7.1(ii) disjunction in the publisher comparison copy fails
 when `e>1`; the repository retains its checked refutation. Author-corrected v5

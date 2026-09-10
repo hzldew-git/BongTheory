@@ -122,5 +122,9 @@ Lean therefore exposes the valid `he2022ClassicCorollary63_even` together
 with the odd counterexample.  It now also exposes only
 `he2022ClassicLemma83_even` and `he2022ClassicTheorem18_even`, each with
 explicit `n >= 2` and evenness hypotheses.  No unrestricted Lemma 8.3 or
-Theorem 1.8 endpoint remains.  Theorem 1.7 remains conditional on its missing
-odd calculation.  Reports 24, 26, and 28 give the conservative source scope.
+Theorem 1.8 endpoint remains. It exposes `he2022ClassicTheorem17_even` with
+the same parity scope, and separately exposes
+`he2022ClassicTheorem17_of_localAdjacentDefectsLarge` for the common final
+contradiction with the missing local-defect calculation as a premise. No
+unrestricted odd Theorem 1.7 endpoint remains. Reports 24, 26, 28, and 33 give
+the conservative source scope.

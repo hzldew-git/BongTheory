@@ -166,6 +166,14 @@ The formal Lemma 8.3 and Theorem 1.8 endpoints additionally require
 The author should confirm this restriction or provide a replacement odd proof
 before a future source version is treated as complete.
 
+The formal Theorem 1.7 endpoint now has the same `n >= 2`, `Even n`
+restriction.  Its parity-independent final contradiction is retained as
+`he2022ClassicTheorem17_of_localAdjacentDefectsLarge`, whose premise states
+the exact local adjacent-defect profile that the omitted coefficient
+calculation must establish. The author/domain expert should either confirm
+the even restriction or provide a complete odd calculation before any
+unrestricted source-facing endpoint is restored; see Report 33.
+
 For Theorem 1.9, the global-universality conclusion is no longer an input.
 The proof localizes each admissible integral rank-`n` target and then invokes
 an explicit strong-approximation representation law.  The formalization

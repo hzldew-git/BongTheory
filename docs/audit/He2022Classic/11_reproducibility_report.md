@@ -11,8 +11,10 @@ The unary and all-ranks local Theorem 1.5 endpoints, Lemma 7.7, all three
 clauses of Lemma 7.10, Lemma 7.11, both literal-minimal endpoints, the v5
 Lemma 7.1 branches, and the comparison-source regression are audited too.
 The conditional Lemma 8.1, Proposition 8.2, Theorem 1.5 global deduction,
-Theorems 1.7 and 1.9, and the even-rank Lemma 8.3 and Theorem 1.8 endpoints
-are checked and have their axioms printed.
+Theorem 1.9, and the even-rank Lemma 8.3, Theorem 1.7, and Theorem 1.8
+endpoints are checked and have their axioms printed. The parity-independent
+logical tail of Theorem 1.7 is audited separately with its local-defect
+premise visible.
 
 Code checkpoint: `b8c379ad5bebb3f25e57be8c30fd9f01bd7dc78b` on the local
 v5 branch. Lean: 4.32.1; dependency versions: the committed
@@ -54,10 +56,11 @@ correction in `../HePaperDeploymentCheckpoint-20260905.md`.
 The current checkpoint includes the unary branch, a complete local n >= 1
 dispatcher, corrected v5 Lemma 7.1, Lemma 7.7, complete Lemmas 7.10--7.11,
 both literal-minimal halves of Theorem 1.3, and the conditional Section 8
-logic of Report 23, with the v5 source failure separated in Reports 24 and 26. Local build
-and audit evidence has been refreshed by the exact local Review Kit in Report
-25. A GitHub-generated kit for the eventual release commit is still required;
-the historical artifacts below do not certify that future commit.
+logic of Reports 23 and 27--33, with the v5 source failure separated in
+Reports 24 and 26. The exact local Review Kit in Report 25 predates later
+formalization work. A newly generated fresh-extraction kit and GitHub artifact
+for the eventual release commit are still required; the historical artifacts
+below do not certify that future commit.
 
 ## First clean-kit checkpoint with enforced dependencies
 
@@ -138,3 +141,16 @@ completes 5,660 jobs, all 30 policy tests pass, the scanner checks 2,795
 tracked Lean sources, and the imported-closure gate reports
 `AXIOM_GATE_PASS: 62721 declarations checked`. Report 32 records the exact
 boundary. Fresh-extraction Review Kit verification is still pending.
+
+## Theorem 1.7 even-scope checkpoint
+
+Code commit `89714ff139144299a56853131c23725d1b426374` removes the
+unrestricted source-facing Theorem 1.7 endpoint. It adds
+`he2022ClassicTheorem17_even`, requiring `n >= 2` and `Even n`, and separates
+the parity-independent final contradiction as
+`he2022ClassicTheorem17_of_localAdjacentDefectsLarge` with the missing local
+coefficient/defect calculation explicit. The combined canonical and focused
+audit build completes 5,665 jobs, all 30 policy tests pass, the scanner checks
+2,796 tracked Lean sources, and the full imported-closure gate reports
+`AXIOM_GATE_PASS: 70695 declarations checked`. Report 33 records the exact
+scope. Fresh-extraction Review Kit verification is still pending.
