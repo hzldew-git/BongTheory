@@ -210,6 +210,33 @@ theorem sumOfSquares_local_to_global
 
 end SumOfSquaresLocalGlobalLaws
 
+/-- The direction of the discriminant/ramification criterion actually used
+by the global applications. -/
+structure DiscriminantRamificationLaws : Prop where
+  discriminantOdd_of_unramified :
+    (∀ p : S.Place, G.isDyadic p → G.ramificationIndexAt p = 1) →
+      G.discriminantOdd
+
+namespace DiscriminantRamificationLaws
+
+variable {G : HeClassic2024GlobalData S}
+
+/-- An even discriminant forces a dyadic place whose ramification index is
+not one.  Positivity of that index is kept separate in `SectionEightLaws`. -/
+theorem exists_ramifiedDyadic_of_not_discriminantOdd
+    (H : G.DiscriminantRamificationLaws)
+    (hOdd : ¬ G.discriminantOdd) :
+    ∃ p : S.Place,
+      G.isDyadic p ∧ G.ramificationIndexAt p ≠ 1 := by
+  by_contra hExists
+  apply hOdd
+  apply H.discriminantOdd_of_unramified
+  intro p hpDyadic
+  by_contra hpNe
+  exact hExists ⟨p, hpDyadic, hpNe⟩
+
+end DiscriminantRamificationLaws
+
 /-- Arithmetic inputs used in Proposition 8.2 and Theorems 1.5, 1.7 and 1.9.
 Each field corresponds to a specific localization, ramification, or strong-
 approximation step in the v5 proof. -/
@@ -217,9 +244,7 @@ structure SectionEightLaws : Prop where
   positiveDefinite_admissible (M N : S.GlobalLattice) :
     G.positiveDefinite N → S.globalAdmissible M N
   proposition82 : G.Proposition82Laws
-  unramified_iff_discriminantOdd :
-    (∀ p : S.Place, G.isDyadic p → G.ramificationIndexAt p = 1) ↔
-      G.discriminantOdd
+  discriminantRamification : G.DiscriminantRamificationLaws
   ramificationIndexAt_pos (p : S.Place) :
     G.isDyadic p → 0 < G.ramificationIndexAt p
   theorem15_local (M : S.GlobalLattice) (p : S.Place) (n : Nat) :
@@ -295,7 +320,7 @@ theorem he2022ClassicTheorem15_discriminantOdd
     (hDefects : ∀ p : S.Place,
       G.isDyadic p → G.localAdjacentDefectsLarge M p) :
     G.discriminantOdd := by
-  rw [← H.unramified_iff_discriminantOdd]
+  apply H.discriminantRamification.discriminantOdd_of_unramified
   intro p hp
   exact H.he2022ClassicTheorem15_atPlace M p n hp hn hRank
     (hUniversal p hp) (hDefects p hp)
@@ -311,12 +336,9 @@ theorem he2022ClassicTheorem17 (H : G.SectionEightLaws)
     (hDiscriminantEven : ¬ G.discriminantOdd) :
     ¬ S.IsGloballyNUniversal M n := by
   intro hUniversal
-  have hNotUnramified :
-      ¬ ∀ p : S.Place, G.isDyadic p → G.ramificationIndexAt p = 1 := by
-    intro hAll
-    exact hDiscriminantEven (H.unramified_iff_discriminantOdd.mp hAll)
-  push Not at hNotUnramified
-  obtain ⟨p, hpDyadic, hpNe⟩ := hNotUnramified
+  obtain ⟨p, hpDyadic, hpNe⟩ :=
+    DiscriminantRamificationLaws.exists_ramifiedDyadic_of_not_discriminantOdd
+      H.discriminantRamification hDiscriminantEven
   have hpRamified : 1 < G.ramificationIndexAt p := by
     have hpPos := H.ramificationIndexAt_pos p hpDyadic
     omega
@@ -338,7 +360,7 @@ theorem he2022ClassicTheorem19 (H : G.SectionEightLaws)
     S.IsGloballyNUniversal (G.sumOfSquares m) n ↔ G.discriminantOdd := by
   constructor
   · intro hUniversal
-    rw [← H.unramified_iff_discriminantOdd]
+    apply H.discriminantRamification.discriminantOdd_of_unramified
     intro p hp
     have hLocal : S.IsNUniversalAt (G.sumOfSquares m) p n :=
       H.he2022ClassicProposition82 (G.sumOfSquares m) p n hn hUniversal
