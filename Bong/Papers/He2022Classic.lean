@@ -87,8 +87,9 @@ test classic universality.  Thus the even and odd literal-minimality halves of
 Theorem 1.3 are both kernel checked.
 
 Section 8's global--local deductions, including Proposition 8.2, the global
-sentence of Theorem 1.5, Lemmas 8.1 and 8.3, and Theorems 1.7--1.9, are proved
-over explicit arithmetic proof-data packages.  Concrete number-field
+sentence of Theorem 1.5, Lemma 8.1, the even part of Lemma 8.3, Theorems 1.7
+and 1.9, and the even part of Theorem 1.8, are proved over explicit arithmetic
+proof-data packages.  Concrete number-field
 localization, ramification, coefficient-transport, and strong-approximation
 instances remain to be constructed, so these conditional endpoints are not
 reported as full global formalizations.  Proposition 8.2 itself is derived
@@ -107,8 +108,10 @@ The omitted odd clause of Corollary 6.3 is in fact false: a kernel-checked
 ramification-two, `n=3` counterexample is included, with nonisometry to the
 diagonal lattice proved by good-BONG order invariance.  Only the even
 Corollary 6.3 is retained, and the downstream affected claims remain within
-the conditional Section 8 boundary documented in audit Reports 24, 26, and
-27.
+the conditional Section 8 boundary documented in audit Reports 24 and 26.
+Only the explicit `n ≥ 2`, even-rank parts of Lemma 8.3 and Theorem 1.8 are
+exported; no unrestricted odd compatibility endpoint remains.  Reports 27
+and 28 document the lowered Proposition 8.2 interface and this parity scope.
 -/
 
 namespace Bong

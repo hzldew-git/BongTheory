@@ -136,7 +136,8 @@ that is classic `3`-universal but not isometric to the diagonal lattice with
 the same displayed coefficients. Therefore Corollary 6.3 must be restricted
 to even `n >= 2` or replaced by a genuinely different odd conclusion. Lemma
 8.3 and Theorem 1.8 stay conditional and need the same restriction or a new
-odd proof. Reports 24 and 26 give the formal certificate and minimal repair.
+odd proof.  Report 28 applies the even-rank restriction to the Lean endpoints;
+Reports 24 and 26 give the counterexample and source analysis.
 
 Author decision on the v6 repair, reviewer name, date, and signature: not
 provided.
@@ -159,5 +160,10 @@ expert: confirm that Report 23 partitions the cited arithmetic inputs exactly
 as the v5 proofs use them. Question for the formalization expert: construct
 and audit concrete number-field instances before promoting any endpoint to an
 unconditional match.
+
+The formal Lemma 8.3 and Theorem 1.8 endpoints additionally require
+`n >= 2` and `Even n`; their unrestricted odd branches are not present.
+The author should confirm this restriction or provide a replacement odd proof
+before a future source version is treated as complete.
 
 Author decision, reviewer name, date, and signature: not provided.

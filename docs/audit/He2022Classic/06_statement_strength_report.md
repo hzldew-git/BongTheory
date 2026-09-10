@@ -21,8 +21,8 @@ discriminant laws. The complete printed theorem therefore has a fully proved
 local component and a `CONDITIONAL_FORMALIZATION` global component; it is not
 an unconditional whole-theorem formalization.
 
-Theorems 1.7--1.9 and Section 8 are stated at their complete logical
-endpoints in `He2022ClassicSectionEight.lean`. Their extra parameters are
+Theorems 1.7 and 1.9 and the valid even-rank part of Theorem 1.8 are stated at
+their logical endpoints in `He2022ClassicSectionEight.lean`. Their extra parameters are
 bundled proof-data structures identifying the cited number-field results.
 These hypotheses make the endpoints weaker as formalization evidence than
 unconditional implementations, even though the conclusions and rank/parity
@@ -34,6 +34,12 @@ proved for an arbitrary local rank-`n` lattice from positive-definite
 globalization, localization of integrality and representation, and transport
 across local equivalence.  Because those four arithmetic laws still lack
 concrete number-field instances, the semantic status remains conditional.
+
+Report 28 also weakens the formal statement of Lemma 8.3 and Theorem 1.8
+relative to unrestricted v5 by requiring `n >= 2` and `Even n`.  This is an
+intentional fidelity safeguard: it matches the only case handled by the
+written proof and leaves the unsupported odd branch absent rather than
+encoding it as a supplied conclusion.
 
 For Theorem 1.3 the current endpoints prove Lemma 7.4 in both parity branches,
 all of Lemmas 7.7, 7.10, and 7.11, and a literal deletion witness for every

@@ -25,6 +25,9 @@ different terminal hypotheses. The code proves the even Corollary 6.3 and
 constructs an `e=2`, `n=3` counterexample to its odd conclusion. The
 downstream Lemma 8.3/Theorem 1.8 step remains conditional and requires a new
 odd proof or a parity restriction. See Reports 24 and 26.
+Report 28 implements the conservative parity restriction in Lean: only the
+`n >= 2`, even-rank Lemma 8.3 and Theorem 1.8 endpoints exist.  Reviewers
+should treat any downstream use in odd rank as unsupported by this project.
 
 The broader Lemma 7.1(ii) disjunction in the publisher comparison copy fails
 when `e>1`; the repository retains its checked refutation. Author-corrected v5

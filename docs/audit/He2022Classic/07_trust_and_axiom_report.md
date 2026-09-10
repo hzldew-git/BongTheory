@@ -57,3 +57,10 @@ second sentence.  The canonical 5,016-job incremental build succeeds and the
 combined imported-closure gate checks 62,655 declarations.  This empty axiom
 set does not construct the four `Proposition82Laws` premises; Report 27 keeps
 that arithmetic boundary explicit.
+
+At code checkpoint `a5b50fb`, the focused even-extension audit gives an empty
+axiom set for `he2022ClassicLemma83_even` and only `propext` plus `Quot.sound`
+for `he2022ClassicTheorem18_even`.  The 5,017-job canonical build and
+62,656-declaration imported-closure gate pass.  These facts certify the
+conditional deduction, not the uninstantiated obstruction premise or the
+missing odd branch; Report 28.

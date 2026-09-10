@@ -11,7 +11,8 @@ The unary and all-ranks local Theorem 1.5 endpoints, Lemma 7.7, all three
 clauses of Lemma 7.10, Lemma 7.11, both literal-minimal endpoints, the v5
 Lemma 7.1 branches, and the comparison-source regression are audited too.
 The conditional Lemma 8.1, Proposition 8.2, Theorem 1.5 global deduction,
-Lemma 8.3, and Theorems 1.7--1.9 are checked and have their axioms printed.
+Theorems 1.7 and 1.9, and the even-rank Lemma 8.3 and Theorem 1.8 endpoints
+are checked and have their axioms printed.
 
 Code checkpoint: `b8c379ad5bebb3f25e57be8c30fd9f01bd7dc78b` on the local
 v5 branch. Lean: 4.32.1; dependency versions: the committed
@@ -75,6 +76,15 @@ SHA-256 is `079D6DFCFB9982415F0D3271C29C6AF0E2C560111B79FB08828D6131C4F97987`.
 This certifies the new gate for this fixed kit, not complete paper coverage,
 human semantic approval, the separate whole-production CI or a permanent
 release. The source discrepancy and odd/global obligations are unchanged.
+
+## Even-extension scope checkpoint
+
+Code commit `a5b50fbe9fa7648a3a78e6de3cdaf94b46732540` removes the
+unrestricted Lemma 8.3 and Theorem 1.8 endpoints and adds their explicit
+`n >= 2`, even-rank versions.  The focused 5,000-job build, direct audit,
+5,017-job canonical build, 30 policy tests, 2,791-source scan, and
+62,656-declaration imported-closure gate pass locally.  Report 28 records the
+source-fidelity reason.  Exact clean-kit verification remains pending.
 
 ## Proposition 8.2 derivation checkpoint
 

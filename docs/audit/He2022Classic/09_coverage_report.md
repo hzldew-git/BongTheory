@@ -32,6 +32,8 @@ Coverage status:
   8.2 is now derived from lower globalization/localization laws rather than
   assumed as a final field; Report 27.  Examples and the concrete arithmetic
   implementations behind those deductions are not claimed as covered.
+  Lemma 8.3 and Theorem 1.8 are covered only for `n >= 2` even; the
+  unrestricted odd branches are explicitly excluded by Report 28.
 
 The previous 0/66 proof claim was stale and is withdrawn. No replacement
 whole-paper percentage is inferred from filename or declaration counts.

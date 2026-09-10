@@ -1,5 +1,9 @@
 # Section 8 conditional global-logic checkpoint
 
+Historical note: Report 27 later derives Proposition 8.2 from lower laws, and
+Report 28 replaces the unrestricted Lemma 8.3/Theorem 1.8 endpoint names below
+by explicit `n >= 2`, even-rank versions.
+
 ## Scope
 
 `Bong/Lattice/He2022ClassicSectionEight.lean` formalizes the deductions in
@@ -52,12 +56,12 @@ the abstract local premise with the concrete `GoodBONG` endpoint.
 - `he2022ClassicTheorem17` derives the diagonal rank-`n+3` obstruction from a
   ramified dyadic place, Proposition 8.2, the local coefficient-profile input,
   and Theorem 1.5.
-- `he2022ClassicLemma83` exposes the local obstruction under a ramified finite
+- `he2022ClassicLemma83_even` exposes the local obstruction under a ramified finite
   extension.  This remains a single premise not only because scalar-extension
   infrastructure is absent, but also because v5 does not justify its opening
   reduction to even `n` and the invoked odd Corollary 6.3 extension is false;
   see Reports 24 and 26.
-- `he2022ClassicTheorem18` localizes universality on both sides and contradicts
+- `he2022ClassicTheorem18_even` localizes universality on both sides and contradicts
   Lemma 8.3 at the selected pair of places.
 - `he2022ClassicTheorem19` proves the sums-of-squares biconditional. Necessity
   uses Proposition 8.2 and Theorem 1.5 at every dyadic place; sufficiency uses

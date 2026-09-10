@@ -40,9 +40,10 @@ The proposition-valued definition remains separate from its proof:
   the final global deduction of Theorem 1.5.
 - `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17` and
   `he2022ClassicTheorem19`, together with
-  `HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83` and
-  `he2022ClassicTheorem18`: conditional Section 8 and global-main-theorem
-  endpoints. Their arithmetic packages are uninstantiated; Report 23.
+  `HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even` and
+  `he2022ClassicTheorem18_even`: conditional even-scope Section 8 and
+  global-main-theorem endpoints.  Their arithmetic package is uninstantiated;
+  Reports 23 and 28.  No unrestricted odd endpoint remains.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
   testing equivalence.
 - `Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one`: a generic proved
@@ -88,3 +89,5 @@ terminal reduction; Report 22 records its v5 completion and Report 23 records
 the conditional global layer.  The focused
 `BongTest/He2022ClassicProposition82Audit.lean` checks the Report 27
 globalization derivation and its compatibility endpoints.
+`BongTest/He2022ClassicEvenExtensionAudit.lean` checks the Report 28 parity
+restriction and the remaining even deduction.

@@ -119,6 +119,8 @@ Theorem 1.7 writes out only its even case and calls the odd case similar, so
 that odd calculation also remains unsupported.
 
 Lean therefore exposes the valid `he2022ClassicCorollary63_even` together
-with the odd counterexample.  Lemma 8.3 and Theorems 1.7--1.8 remain
-conditional on missing local arithmetic/parity inputs.  Reports 24 and 26
-give the required conservative source repair.
+with the odd counterexample.  It now also exposes only
+`he2022ClassicLemma83_even` and `he2022ClassicTheorem18_even`, each with
+explicit `n >= 2` and evenness hypotheses.  No unrestricted Lemma 8.3 or
+Theorem 1.8 endpoint remains.  Theorem 1.7 remains conditional on its missing
+odd calculation.  Reports 24, 26, and 28 give the conservative source scope.

@@ -37,6 +37,12 @@ equivalence, representation localizes, and representation is invariant under
 equivalence of the represented local lattice.  These are ordinary theorem
 premises, not Lean axioms, and concrete number-field instances remain open.
 
+The local ramified-extension obstruction is not available in unrestricted
+rank.  `Lemma83Laws.local_ramified_obstruction` explicitly requires
+`2 <= n` and `Even n`; these are not implementation conveniences but the
+scope of the argument actually written in v5.  No field or theorem supplies
+the unsupported odd branch; see Report 28.
+
 `card_heClassicUnitRepresentatives` derives O'Meara 63:9 from the proved
 principal-unit filtration, after constructing the explicit equivalence between
 the published representative index and the intrinsic unit square-class

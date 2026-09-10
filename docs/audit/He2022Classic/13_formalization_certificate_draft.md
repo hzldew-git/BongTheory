@@ -14,8 +14,9 @@ Theorem 1.1 has a checked proof and provisional semantic correspondence.
 Theorem 1.3 is checked in both parity branches, including literal minimality.
 Theorem 1.5 has its complete local n >= 1 implication,
 and its final global deduction is conditionally checked over explicit
-number-field laws. Theorems 1.7-1.9 and all numbered Section 8 deductions have
-conditional endpoints; their concrete arithmetic instances are not supplied.
+number-field laws. Theorems 1.7 and 1.9 and the even-rank part of Theorem 1.8
+have conditional endpoints; their concrete arithmetic instances are not
+supplied.  The unrestricted odd Lemma 8.3 and Theorem 1.8 are excluded.
 Corollary 6.3 is checked for even `n`, while a kernel-checked `e=2`, `n=3`
 counterexample refutes its unrestricted odd statement. Lemma 8.3/Theorem 1.8
 therefore require a parity restriction or a replacement odd proof (Reports

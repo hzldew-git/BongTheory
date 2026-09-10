@@ -16,14 +16,17 @@ proof chains, the complete n >= 1 local-field implication underlying Theorem
 literal-minimality branches of Theorem 1.3. It does not complete the
 concrete number-field localization, finite-extension, discriminant, and
 strong-approximation inputs. The final global deduction of Theorem 1.5,
-Lemmas 8.1 and 8.3, Proposition 8.2, and Theorems 1.7--1.9 are checked only
-conditionally over the explicit proof-data packages documented in Report 23.
+Lemma 8.1, Proposition 8.2, Theorems 1.7 and 1.9, and the even-rank parts of
+Lemma 8.3 and Theorem 1.8 are checked only conditionally over the explicit
+proof-data packages documented in Reports 23, 27, and 28.
 Report 27 strengthens this boundary: Proposition 8.2 itself is now derived
 from positive-definite globalization, localization, and representation
 transport laws rather than stored as a final-conclusion field.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.
+Report 28 removes the unrestricted formal endpoints and retains only the
+conditional `n >= 2`, even-rank parts of Lemma 8.3 and Theorem 1.8.
 
 `SOURCE_DELTA.md` records every comparison-source discrepancy. In particular,
 the obsolete broader publisher Lemma 7.1(ii) has a checked refutation for
