@@ -192,7 +192,10 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData
 #check Bong.HeADC2025GlobalData.HasClassNumberOne
 #check Bong.HeADC2025GlobalData.HasDistinguishingRankSublattice
+#check Bong.HeADC2025GlobalData.ClassNumberRegularityLaws
+#check Bong.HeADC2025GlobalData.ClassNumberRegularityLaws.classNumberOne_implies_nRegular
 #check Bong.HeADC2025GlobalData.SectionEightLaws
+#check Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81i
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem82
@@ -204,6 +207,8 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
 
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81i
+#print axioms Bong.HeADC2025GlobalData.ClassNumberRegularityLaws.classNumberOne_implies_nRegular
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem82
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary83

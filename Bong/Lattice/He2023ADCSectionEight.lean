@@ -55,6 +55,38 @@ def HasDistinguishingRankSublattice
         ∀ M' : S.GlobalLattice, G.inGenus M' M →
           S.globalRepresents M' N → G.isIsometric M' M
 
+/-- The lower-level genus and representation-transport facts behind the
+opening sentence of He (2025), Lemma 8.1.
+
+The published proof uses that a lattice locally represented everywhere is
+represented by some lattice in the genus of `M`, and then transports that
+representation across an isometry.  The resulting class-number-one
+regularity statement is proved below rather than stored as a field. -/
+structure ClassNumberRegularityLaws : Prop where
+  genus_lift_of_local_represents (M N : S.GlobalLattice) (n : Nat) :
+    S.globalRank N = n → S.globalIntegral N →
+      (∀ p : S.Place,
+        S.localRepresents (S.localize p M) (S.localize p N)) →
+        ∃ M' : S.GlobalLattice,
+          G.inGenus M' M ∧ S.globalRepresents M' N
+  globalRepresents_of_isometric_source {M M' N : S.GlobalLattice} :
+    G.isIsometric M' M → S.globalRepresents M' N →
+      S.globalRepresents M N
+
+namespace ClassNumberRegularityLaws
+
+/-- A class-number-one lattice is `n`-regular.  This proves the opening
+sentence of He (2025), Lemma 8.1 from the two lower-level genus facts above. -/
+theorem classNumberOne_implies_nRegular
+    (H : G.ClassNumberRegularityLaws) (M : S.GlobalLattice) (n : Nat)
+    (hClass : G.HasClassNumberOne M) : S.IsNRegular M n := by
+  intro N hRank hIntegral hLocal
+  obtain ⟨M', hGenus, hRepresents⟩ :=
+    H.genus_lift_of_local_represents M N n hRank hIntegral hLocal
+  exact H.globalRepresents_of_isometric_source (hClass M' hGenus) hRepresents
+
+end ClassNumberRegularityLaws
+
 /-- The arithmetic inputs used by the Section 8 proofs.  Theorem 8.2 is
 isolated as the `distinguishing_rank_sublattice` field because its proof uses
 Meyer, Xu, spinor genera, and O'Meara 104:5, none of which presently has a
@@ -73,8 +105,7 @@ structure SectionEightLaws : Prop where
       (p : S.Place) (M M' N : S.LocalLattice p) :
     S.localEquivalent M M' → S.localRepresents M N →
       S.localRepresents M' N
-  classNumberOne_implies_nRegular (M : S.GlobalLattice) (n : Nat) :
-    G.HasClassNumberOne M → S.IsNRegular M n
+  classNumberRegularity : G.ClassNumberRegularityLaws
   globalMaximal_iff_localMaximal (M : S.GlobalLattice) :
     G.isGlobalMaximal M ↔
       ∀ p : S.Place, S.localMaximal (S.localize p M)
@@ -98,6 +129,14 @@ structure SectionEightLaws : Prop where
 namespace SectionEightLaws
 
 variable {G : HeADC2025GlobalData S}
+
+/-- The class-number-one regularity input used by Lemma 8.1, now derived from
+the explicit genus-lifting and isometry-transport laws. -/
+theorem classNumberOne_implies_nRegular (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) (n : Nat) :
+    G.HasClassNumberOne M → S.IsNRegular M n :=
+  ClassNumberRegularityLaws.classNumberOne_implies_nRegular
+    (G := G) H.classNumberRegularity M n
 
 /-- He (2025), Lemma 8.1(i). -/
 theorem heADC2025Lemma81i (H : G.SectionEightLaws)
