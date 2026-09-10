@@ -38,6 +38,8 @@ structure HeADC2025GlobalData
   isGlobalMaximal : S.GlobalLattice → Prop
   scaleTwo : S.GlobalLattice → S.GlobalLattice
   isStable : S.GlobalLattice → Prop
+  isStableAt : S.Place → S.GlobalLattice → Prop
+  hasLemma84LocalForm : {p : S.Place} → S.LocalLattice p → Prop
   isHalfScaleOf : S.GlobalLattice → S.GlobalLattice → Prop
 
 namespace HeADC2025GlobalData
@@ -194,6 +196,38 @@ theorem distinguishing_rank_sublattice
 
 end DistinguishingSublatticeLaws
 
+/-- The local classification and localization inputs in the stability half of
+He (2025), Lemma 8.4.
+
+The predicate `hasLemma84LocalForm` records the source disjunction obtained
+from Theorem 6.2 and Proposition 4.16: the localized lattice represents the
+hyperbolic plane, or it is the displayed exceptional quaternary lattice.
+Scaling turns either alternative into stability at that place. -/
+structure ScalingStabilityLaws : Prop where
+  twoADCAt_implies_localForm (M : S.GlobalLattice) (p : S.Place) :
+    S.IsNADCAt M p 2 →
+      G.hasLemma84LocalForm (S.localize p M)
+  localForm_scaleTwo_isStableAt (M : S.GlobalLattice) (p : S.Place) :
+    G.hasLemma84LocalForm (S.localize p M) →
+      G.isStableAt p (G.scaleTwo M)
+  isStable_iff_forall_isStableAt (L : S.GlobalLattice) :
+    G.isStable L ↔ ∀ p : S.Place, G.isStableAt p L
+
+namespace ScalingStabilityLaws
+
+/-- The stability conclusion in He (2025), Lemma 8.4, derived place by
+place from the local normal-form classification used in the printed proof. -/
+theorem locallyTwoADC_scaleTwo_stable
+    (H : G.ScalingStabilityLaws) (M : S.GlobalLattice) :
+    S.IsLocallyNADC M 2 → G.isStable (G.scaleTwo M) := by
+  intro hLocal
+  rw [H.isStable_iff_forall_isStableAt]
+  intro p
+  exact H.localForm_scaleTwo_isStableAt M p
+    (H.twoADCAt_implies_localForm M p (hLocal p))
+
+end ScalingStabilityLaws
+
 /-- The arithmetic inputs used by the Section 8 proofs.  Theorem 8.2 is
 split into the definite Meyer input and the indefinite Xu--O'Meara inputs
 inside `DistinguishingSublatticeLaws`; none presently has a concrete project
@@ -215,13 +249,12 @@ structure SectionEightLaws : Prop where
   classNumberRegularity : G.ClassNumberRegularityLaws
   localMaximality : LocalMaximalityLaws (S := S)
   distinguishingSublattice : G.DistinguishingSublatticeLaws
+  scalingStability : G.ScalingStabilityLaws
   globalMaximal_iff_localMaximal (M : S.GlobalLattice) :
     G.isGlobalMaximal M ↔
       ∀ p : S.Place, S.localMaximal (S.localize p M)
   nRegular_scaleTwo (M : S.GlobalLattice) :
     S.IsNRegular M 2 → S.IsNRegular (G.scaleTwo M) 2
-  locallyTwoADC_scaleTwo_stable (M : S.GlobalLattice) :
-    S.IsLocallyNADC M 2 → G.isStable (G.scaleTwo M)
   scaleTwo_halfScale (M : S.GlobalLattice) :
     G.isHalfScaleOf M (G.scaleTwo M)
   nRegular_of_halfScale {M L : S.GlobalLattice} :
@@ -262,6 +295,13 @@ theorem distinguishing_rank_sublattice (H : G.SectionEightLaws)
       G.HasDistinguishingRankSublattice M n :=
   DistinguishingSublatticeLaws.distinguishing_rank_sublattice
     (G := G) H.distinguishingSublattice M n
+
+/-- The local-classification implication used by Lemma 8.4, now derived
+from its placewise Theorem 6.2/Proposition 4.16 and scaling inputs. -/
+theorem locallyTwoADC_scaleTwo_stable (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) :
+    S.IsLocallyNADC M 2 → G.isStable (G.scaleTwo M) :=
+  H.scalingStability.locallyTwoADC_scaleTwo_stable (G := G) M
 
 /-- He (2025), Lemma 8.1(i). -/
 theorem heADC2025Lemma81i (H : G.SectionEightLaws)

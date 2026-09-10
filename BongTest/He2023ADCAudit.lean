@@ -199,6 +199,8 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData.LocalMaximalityLaws.local_theorem15
 #check Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws
 #check Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws.distinguishing_rank_sublattice
+#check Bong.HeADC2025GlobalData.ScalingStabilityLaws
+#check Bong.HeADC2025GlobalData.ScalingStabilityLaws.locallyTwoADC_scaleTwo_stable
 #check Bong.HeADC2025GlobalData.SectionEightLaws
 #check Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
 #check Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
@@ -210,6 +212,7 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15i
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem17
+#check Bong.HeADC2025GlobalData.SectionEightLaws.locallyTwoADC_scaleTwo_stable
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
 
@@ -219,6 +222,7 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025GlobalData.LocalMaximalityLaws.localMaximal_isNADCAt
 #print axioms Bong.HeADC2025GlobalData.LocalMaximalityLaws.local_theorem15
 #print axioms Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws.distinguishing_rank_sublattice
+#print axioms Bong.HeADC2025GlobalData.ScalingStabilityLaws.locallyTwoADC_scaleTwo_stable
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.local_theorem15
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
@@ -227,6 +231,7 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15i
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem17
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.locallyTwoADC_scaleTwo_stable
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
 
