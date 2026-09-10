@@ -88,6 +88,67 @@ theorem classNumberOne_implies_nRegular
 
 end ClassNumberRegularityLaws
 
+/-- Lower-level local maximality facts behind Lemma 4.14 and Theorem 1.5(i).
+
+The forward implication in Theorem 1.5(i) is the genuinely classification-
+dependent input.  The reverse implication is instead derived below from the
+standard maximal-extension argument: extend an integral target to a maximal
+lattice, represent that maximal lattice, and compose representations. -/
+structure LocalMaximalityLaws : Prop where
+  localMaximal_integral {p : S.Place} {M : S.LocalLattice p} :
+    S.localMaximal M → S.localIntegral M
+  exists_localMaximal_extension {p : S.Place} (N : S.LocalLattice p) :
+    S.localIntegral N →
+      ∃ N' : S.LocalLattice p,
+        S.localMaximal N' ∧ S.localRepresents N' N ∧
+          ∀ M : S.LocalLattice p,
+            S.localAmbientRepresents M N →
+              S.localAmbientRepresents M N'
+  localMaximal_represents_maximal {p : S.Place}
+      {M N : S.LocalLattice p} :
+    S.localMaximal M → S.localMaximal N →
+      S.localAmbientRepresents M N → S.localRepresents M N
+  localRepresents_trans {p : S.Place} {M N P : S.LocalLattice p} :
+    S.localRepresents M N → S.localRepresents N P →
+      S.localRepresents M P
+  nADCAt_implies_localMaximal_of_rank
+      (M : S.GlobalLattice) (p : S.Place) (n : Nat) :
+    2 ≤ n → (S.globalRank M = n ∨ S.globalRank M = n + 1) →
+      S.IsNADCAt M p n → S.localMaximal (S.localize p M)
+
+namespace LocalMaximalityLaws
+
+/-- Lemma 4.14 in the abstract local component: a maximal lattice is
+`n`-ADC.  Unlike the former interface field, this is now a theorem from a
+maximal extension, maximal-to-maximal representation, and transitivity. -/
+theorem localMaximal_isNADCAt
+    (H : LocalMaximalityLaws (S := S))
+    (M : S.GlobalLattice) (p : S.Place) (n : Nat)
+    (hMaximal : S.localMaximal (S.localize p M)) :
+    S.IsNADCAt M p n := by
+  refine ⟨H.localMaximal_integral hMaximal, ?_⟩
+  intro N _hRank hIntegral hAmbient
+  obtain ⟨N', hN'Maximal, hN'N, hAmbientLift⟩ :=
+    H.exists_localMaximal_extension N hIntegral
+  exact H.localRepresents_trans
+    (H.localMaximal_represents_maximal hMaximal hN'Maximal
+      (hAmbientLift (S.localize p M) hAmbient))
+    hN'N
+
+/-- He (2025), Theorem 1.5(i), derived from the classification-dependent
+necessity direction and the proved maximal-lattice sufficiency direction. -/
+theorem local_theorem15
+    (H : LocalMaximalityLaws (S := S))
+    (M : S.GlobalLattice) (p : S.Place) (n : Nat)
+    (hN : 2 ≤ n)
+    (hRank : S.globalRank M = n ∨ S.globalRank M = n + 1) :
+    S.IsNADCAt M p n ↔ S.localMaximal (S.localize p M) := by
+  constructor
+  · exact H.nADCAt_implies_localMaximal_of_rank M p n hN hRank
+  · exact H.localMaximal_isNADCAt M p n
+
+end LocalMaximalityLaws
+
 /-- The arithmetic inputs used by the Section 8 proofs.  Theorem 8.2 is
 isolated as the `distinguishing_rank_sublattice` field because its proof uses
 Meyer, Xu, spinor genera, and O'Meara 104:5, none of which presently has a
@@ -107,14 +168,10 @@ structure SectionEightLaws : Prop where
     S.localEquivalent M M' → S.localRepresents M N →
       S.localRepresents M' N
   classNumberRegularity : G.ClassNumberRegularityLaws
+  localMaximality : LocalMaximalityLaws (S := S)
   globalMaximal_iff_localMaximal (M : S.GlobalLattice) :
     G.isGlobalMaximal M ↔
       ∀ p : S.Place, S.localMaximal (S.localize p M)
-  localMaximal_isNADCAt (M : S.GlobalLattice) (p : S.Place) (n : Nat) :
-    S.localMaximal (S.localize p M) → S.IsNADCAt M p n
-  local_theorem15 (M : S.GlobalLattice) (p : S.Place) (n : Nat) :
-    2 ≤ n → (S.globalRank M = n ∨ S.globalRank M = n + 1) →
-      (S.IsNADCAt M p n ↔ S.localMaximal (S.localize p M))
   distinguishing_rank_sublattice (M : S.GlobalLattice) (n : Nat) :
     S.globalRank M = n + 1 → 3 ≤ S.globalRank M →
       G.HasDistinguishingRankSublattice M n
@@ -138,6 +195,21 @@ theorem classNumberOne_implies_nRegular (H : G.SectionEightLaws)
     G.HasClassNumberOne M → S.IsNRegular M n :=
   ClassNumberRegularityLaws.classNumberOne_implies_nRegular
     (G := G) H.classNumberRegularity M n
+
+/-- The local maximal-lattice implication used by Lemma 8.1(ii), now derived
+from the lower maximal-extension laws. -/
+theorem localMaximal_isNADCAt (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) (p : S.Place) (n : Nat) :
+    S.localMaximal (S.localize p M) → S.IsNADCAt M p n :=
+  H.localMaximality.localMaximal_isNADCAt M p n
+
+/-- The local Theorem 1.5 equivalence used by the global deduction, now
+derived rather than stored as a `SectionEightLaws` field. -/
+theorem local_theorem15 (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) (p : S.Place) (n : Nat) :
+    2 ≤ n → (S.globalRank M = n ∨ S.globalRank M = n + 1) →
+      (S.IsNADCAt M p n ↔ S.localMaximal (S.localize p M)) :=
+  H.localMaximality.local_theorem15 M p n
 
 /-- He (2025), Lemma 8.1(i). -/
 theorem heADC2025Lemma81i (H : G.SectionEightLaws)
