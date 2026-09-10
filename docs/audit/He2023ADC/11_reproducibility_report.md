@@ -632,7 +632,7 @@ strict verifier intentionally rejects that archive because it lacks a
 paper-specific theorem-index prefix. Report 69 therefore records it as exact
 proof-closure evidence through Report 68, not as the final release package.
 The tagged release regenerates and rechecks a fully isolated package. Reports
-70--77, remaining concrete law instances, GitHub tag CI, and human sign-off are
+70--78, remaining concrete law instances, GitHub tag CI, and human sign-off are
 separate gates.
 
 ## Section 8 class-number regularity local checkpoint
@@ -725,3 +725,20 @@ tracked Lean sources, all 30 policy tests pass, and changed Lean lines satisfy
 the 100-column policy. These checks reuse local project artifacts.
 Fresh-extraction verification, concrete scaling laws, exact-tag CI, and human
 review remain open. See Report 77.
+
+## O'Meara 82K global-maximality checkpoint
+
+At exact code checkpoint `0c5211bb0f5a2f1954a0e6b63ceac53a6bb67121`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCGlobalMaximalityAudit` complete a four-job focused build.
+The focused audit runs directly: the lower biconditional, its compatibility
+endpoint, and Lemma 8.1(ii) have empty axiom sets; Theorem 1.5(ii) and Theorem
+1.7 report only the allowed standard axioms.
+
+An incremental paper-entry, canonical-audit, and focused-audit build completes
+all 5,563 planned jobs. The combined imported-closure gate reports
+`AXIOM_GATE_PASS: 61118 declarations checked`. The scanner checks 2,737
+tracked Lean sources, all 30 policy tests pass, and changed Lean lines satisfy
+the 100-column policy. These checks reuse local project artifacts.
+Fresh-extraction verification, concrete O'Meara instances, exact-tag CI, and
+human review remain open. See Report 78.

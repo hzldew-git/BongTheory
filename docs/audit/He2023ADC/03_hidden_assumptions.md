@@ -197,6 +197,13 @@ for concrete quadratic lattices. This makes the two genuine scaling facts,
 rather than their three downstream uses, the remaining boundary. See report
 77.
 
+Report 78 removes the complete global--local maximality biconditional field.
+`GlobalMaximalityLaws` exposes the two O'Meara 82K directions separately;
+neither direction is yet proved for concrete number-field lattices. This
+prevents the proof of Lemma 8.1(ii) from silently relying on the unused reverse
+direction while keeping both directions available for Theorem 1.5(ii). See
+report 78.
+
 The corrected quaternary catalogue does not assume completeness or
 irredundancy. Those properties are proved using the corrected three-way
 classification, maximal-lattice uniqueness, and nonisometric ambient spaces.

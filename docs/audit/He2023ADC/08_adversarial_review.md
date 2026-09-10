@@ -320,3 +320,10 @@ three unrelated implications, the proof must use one rank-uniform
 equivalence `isHalfScaleOf M L <-> L = scaleTwo M`. This prevents silently
 reversing the paper's `L(1/2)` convention. Reviewers must still validate the
 concrete scaling construction and its preservation of regularity.
+
+Report 78 tests directionality in O'Meara 82K. Lemma 8.1(ii) may consume only
+the global-to-local direction, while Theorem 1.5(ii) must use both. The
+biconditional is now synthesized rather than supplied whole. Reviewers must
+still confirm that the concrete localization functor and the paper's notion
+of `O_F`-maximality satisfy each direction under exactly the stated standing
+hypotheses.

@@ -149,6 +149,8 @@ derived placewise from the local Theorem 6.2/Proposition 4.16 form, scaling,
 and local-to-global stability laws.  Its regularity half and the half-scale
 steps in Corollary 8.5 are derived from a rank-uniform scaling biconditional
 and the exact orientation of half-scaling.  Concrete constructions of the
+O'Meara 82K global--local maximality directions are kept separate and their
+biconditional is derived.  Concrete constructions of the
 non-dyadic and number-field law
 packages, and imports of the Hanke--Kirschmer--Oh external enumerations,
 remain open;

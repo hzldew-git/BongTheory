@@ -363,6 +363,12 @@ regularity biconditional and the exact orientation of `isHalfScaleOf`. The
 status remains `CONDITIONAL_FORMALIZATION` because the concrete scaling
 operation and the biconditional are not implemented. See report 77.
 
+At `0c5211b`, the O'Meara 82K global--local maximality equivalence retains
+its exact statement but is no longer a final `SectionEightLaws` field. It is
+assembled from explicit global-to-local and local-to-global directions. The
+status remains `CONDITIONAL_FORMALIZATION`, because neither direction is
+implemented for a concrete number-field lattice model. See report 78.
+
 At `f7e8fb7`, the binary specializations of Theorem 1.9(ii) and Theorem 1.10
 are `SEMANTIC_MISMATCH`, not unformalized statements. The former repeats the
 false two-way list of Theorem 6.2, and the latter undercounts the resulting

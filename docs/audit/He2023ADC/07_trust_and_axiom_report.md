@@ -433,7 +433,7 @@ entries, and the standalone imported-closure gate all pass; the latter reports
 `AXIOM_GATE_PASS: 60948 declarations checked`. Both exact Mathematica
 certificates also pass. Report 69 discloses that the archive's old shared root
 documents mention other papers, so it is proof-closure evidence rather than the
-strictly isolated release asset. It predates Reports 70--77 and does not
+strictly isolated release asset. It predates Reports 70--78 and does not
 instantiate the remaining arithmetic laws or provide human semantic approval.
 
 At `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, Report 73 replaces the
@@ -478,3 +478,11 @@ Corollary 8.5 depend only on `propext`. The combined gate checks 61,108
 declarations, the scanner checks 2,736 tracked Lean sources, and all 30 policy
 tests pass. The biconditional and half-scale definition remain mathematical
 inputs, not Lean axioms. Fresh-extraction verification remains open.
+
+At `0c5211bb0f5a2f1954a0e6b63ceac53a6bb67121`, Report 78 replaces the
+complete global--local maximality field by `GlobalMaximalityLaws`. The
+derived biconditional, compatibility endpoint, and Lemma 8.1(ii) have empty
+axiom sets. Theorem 1.5(ii) reports only `propext`; Theorem 1.7 reports only
+the standard allowed set. The combined gate checks 61,118 declarations, the
+scanner checks 2,737 tracked Lean sources, and all 30 policy tests pass.
+Both O'Meara directions remain mathematical inputs, not Lean axioms.

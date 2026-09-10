@@ -159,3 +159,14 @@ paper's statement that `M` is isometric to `L(1/2)`: formally this means
 `L = scaleTwo M`. Its other field records regularity invariance as a
 biconditional for every rank. The concrete scaling operation and proof of
 these laws remain pending. Status: `PROVISIONAL_MATCH`; see Report 77.
+
+## Section 8 global maximality
+
+Paper terms: `O_F`-maximal and `O_{F_p}`-maximal, connected by O'Meara
+section 82K on pp. 1016--1017.
+
+Formal terms: `HeADC2025GlobalData.isGlobalMaximal`,
+`GlobalLocalLatticeSystem.localMaximal`, and `GlobalMaximalityLaws`. The law
+package separates localization and globalization; Lean derives the exact
+biconditional. Concrete global lattices and finite localizations remain
+pending. Status: `PROVISIONAL_MATCH`; see Report 78.

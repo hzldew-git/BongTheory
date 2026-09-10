@@ -370,7 +370,7 @@ gate checking `60,948` declarations. It also records that legacy
 shared root documents name other papers even though He classic code, manifest,
 and audits are absent. The stricter release generator and verifier remove this
 documentation-isolation defect; the legacy archive is not a release asset.
-Reports 70--77 and all remaining semantic and arithmetic obligations stay
+Reports 70--78 and all remaining semantic and arithmetic obligations stay
 outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
 
 Report 70 advances that boundary at
@@ -438,3 +438,10 @@ regularity half of Lemma 8.4 and both half-scale transports in Corollary 8.5;
 the 61,108-declaration combined gate passes. Concrete scaling laws, fresh
 clean-kit evidence, and human sign-off remain open, so the Grade-D
 `NOT_COMPLETE` verdict is unchanged.
+
+Report 78 advances the O'Meara 82K boundary at `0c5211b`. The finished
+global--local maximality biconditional is replaced by separate localization
+and globalization inputs and is derived before use. The 61,118-declaration
+combined gate passes. Concrete number-field instances, fresh clean-kit
+evidence, and human sign-off remain open, so the Grade-D `NOT_COMPLETE`
+verdict is unchanged.

@@ -337,6 +337,30 @@ Questions for the paper author and domain expert:
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## O'Meara 82K, global and local maximality
+
+Paper locations: Theorem 1.5(ii), pp. 984 and 1016; Lemma 8.1(ii),
+pp. 1016--1017.
+
+Paper statement/use: global maximality is equivalent to maximality at every
+finite localization. Lemma 8.1(ii) explicitly uses the global-to-local
+direction.
+
+Formal finding: Report 78 replaces the complete biconditional field by two
+directional fields in `GlobalMaximalityLaws`; Lean assembles the equivalence
+and all downstream uses.
+
+Questions for the paper author and domain expert:
+
+1. Does O'Meara section 82K give both directions for the paper's integral
+   lattice and maximality conventions without an additional fullness premise?
+2. Are only finite primes quantified, as encoded by `S.Place`?
+3. Does the local-to-global direction require any fractional-ideal or
+   localization compatibility not yet represented in the abstract system?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Theorem 1.5(i) and Lemma 8.1(ii), local maximality
 
 Paper locations: Theorem 1.5 on p. 984; its proof on p. 1016; Lemma 8.1(ii)

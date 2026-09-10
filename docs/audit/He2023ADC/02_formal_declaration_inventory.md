@@ -275,6 +275,11 @@ Additional concrete declaration groups are:
   regularity half of Lemma 8.4 and both half-scale transports used by
   Corollary 8.5; the former three one-way `SectionEightLaws` fields are gone.
   The focused audit is `He2023ADCScalingRegularityAudit`; report 77.
+  `GlobalMaximalityLaws` records the two O'Meara 82K directions separately.
+  Its `globalMaximal_iff_localMaximal` theorem derives the biconditional used
+  by Lemma 8.1(ii), Theorem 1.5(ii), and Theorem 1.7, so the complete
+  equivalence is no longer a `SectionEightLaws` field. The focused audit is
+  `He2023ADCGlobalMaximalityAudit`; report 78.
 - `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
   both nonmaximal binary boundary classes. It proves exact completeness and
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the

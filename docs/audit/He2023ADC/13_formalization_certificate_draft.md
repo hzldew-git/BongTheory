@@ -290,6 +290,13 @@ exact half-scale orientation. The six derived lower and compatibility
 theorems have empty axiom sets, and the combined gate checks 61,108
 declarations. Concrete scaling laws, clean-kit evidence, and human review
 remain outside this draft certificate.
+O'Meara 82K global-maximality checkpoint:
+`0c5211bb0f5a2f1954a0e6b63ceac53a6bb67121`. Report 78 replaces the complete
+global--local maximality field by separate localization and globalization
+inputs, then derives the exact biconditional. The lower result, compatibility
+endpoint, and Lemma 8.1(ii) have empty axiom sets, and the combined gate checks
+61,118 declarations. Concrete number-field instances, clean-kit evidence,
+and human review remain outside this draft certificate.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper
