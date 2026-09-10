@@ -433,7 +433,7 @@ entries, and the standalone imported-closure gate all pass; the latter reports
 `AXIOM_GATE_PASS: 60948 declarations checked`. Both exact Mathematica
 certificates also pass. Report 69 discloses that the archive's old shared root
 documents mention other papers, so it is proof-closure evidence rather than the
-strictly isolated release asset. It predates Reports 70--72 and does not
+strictly isolated release asset. It predates Reports 70--74 and does not
 instantiate the remaining arithmetic laws or provide human semantic approval.
 
 At `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, Report 73 replaces the
@@ -444,3 +444,12 @@ Lean axioms. The derived regularity theorem, its Section 8 compatibility
 endpoint, and Lemma 8.1(i) each report no axioms. The focused audit completes
 four jobs with Lean 4.32.1. This is local cached evidence, not a concrete
 number-field instance or an exact clean-kit receipt.
+
+At `c204de5e938b6dbfc01b9c7483b8ab8ede0a13ba`, Report 74 replaces the
+`SectionEightLaws` fields for local maximal-implies-ADC and the whole local
+Theorem 1.5 equivalence by `LocalMaximalityLaws`. The two derived lower
+theorems, both compatibility endpoints, Lemma 8.1(ii), and Theorem 1.5(i)
+report no axioms; Theorem 1.5(ii) reports only `propext`. The focused gate
+passes with `61070` checked declarations, and the scanner checks 2,733
+tracked Lean sources. The 5,562-job whole-paper run is incremental, not a
+fresh-extraction receipt; concrete instances and human review remain open.

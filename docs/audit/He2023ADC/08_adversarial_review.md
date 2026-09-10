@@ -289,3 +289,12 @@ rank and integrality hypotheses and the universal quantifier over finite
 places remain explicit. The theorem is nonvacuous only after a concrete
 number-field model supplies the genus-lifting law; that construction and
 human confirmation of the genus orientation remain open.
+
+Report 74 adversarially separates the two directions of Theorem 1.5(i).
+Maximal sufficiency may no longer enter as the finished `IsNADCAt` predicate:
+the proof must extend each integral target to a maximal one, represent that
+extension, and compose representations. The reverse direction remains the
+explicit place where Proposition 4.15 and Theorems 5.1, 6.1, and 7.1 must be
+instantiated. Reviewers must still check that the ambient-transport clause of
+the extension law really expresses an extension on the same local quadratic
+space and that the rank hypotheses match localization.

@@ -285,6 +285,29 @@ Questions for the paper author and domain expert:
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## Theorem 1.5(i) and Lemma 8.1(ii), local maximality
+
+Paper locations: Theorem 1.5 on p. 984; its proof on p. 1016; Lemma 8.1(ii)
+and its proof on p. 1017.
+
+Formal finding: `LocalMaximalityLaws.localMaximal_isNADCAt` derives the
+maximal-implies-ADC direction from maximal extension, maximal-to-maximal
+representation, and transitivity. `local_theorem15` combines this with a
+separate classification-dependent necessity input. Neither complete result
+is a field of `SectionEightLaws`.
+
+Questions for the paper author and domain expert:
+
+1. Does the ambient-transport clause attached to the maximal extension match
+   the intended fact that the extension lies on the same local space?
+2. Is Proposition 4.15 together with Theorems 5.1, 6.1, and 7.1 the complete
+   source of the necessity direction in both permitted ranks?
+3. Is O'Meara section 82K the intended exact source for both localization of
+   global maximality and the converse used in Theorem 1.5(ii)?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Lemma 4.6, dyadic actual-lattice specialization
 
 Paper location: pp. 993--994.

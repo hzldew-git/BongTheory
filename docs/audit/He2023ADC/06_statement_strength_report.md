@@ -331,6 +331,15 @@ the genus and transport of representation across an isometry. It remains
 `CONDITIONAL_FORMALIZATION`, not `FULLY_FORMALIZED`, because those two
 number-field genus laws do not yet have concrete instances. See report 73.
 
+At `c204de5`, local maximal-implies-ADC and the full local Theorem 1.5(i)
+retain their exact source conclusions but have lower conditional boundaries.
+The former is proved by a maximal-extension and representation-composition
+argument. The latter is derived from that theorem and the remaining
+classification-dependent necessity law. Neither complete conclusion remains
+a `SectionEightLaws` field. The result is still
+`CONDITIONAL_FORMALIZATION`, because the lower local laws and the concrete
+finite-completion instances are not yet constructed. See report 74.
+
 At `f7e8fb7`, the binary specializations of Theorem 1.9(ii) and Theorem 1.10
 are `SEMANTIC_MISMATCH`, not unformalized statements. The former repeats the
 false two-way list of Theorem 6.2, and the latter undercounts the resulting

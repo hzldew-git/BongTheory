@@ -632,7 +632,7 @@ strict verifier intentionally rejects that archive because it lacks a
 paper-specific theorem-index prefix. Report 69 therefore records it as exact
 proof-closure evidence through Report 68, not as the final release package.
 The tagged release regenerates and rechecks a fully isolated package. Reports
-70--73, remaining concrete law instances, GitHub tag CI, and human sign-off are
+70--74, remaining concrete law instances, GitHub tag CI, and human sign-off are
 separate gates.
 
 ## Section 8 class-number regularity local checkpoint
@@ -651,3 +651,25 @@ derived regularity theorem, the Section 8 compatibility endpoint, or Lemma
 8.1(i). This verifies the changed dependency closure locally. It is not a
 full-project build, exact clean Review Kit, GitHub CI result, concrete
 number-field instance, or human semantic approval. See Report 73.
+
+## Section 8 local maximality checkpoint
+
+At exact code checkpoint `c204de5e938b6dbfc01b9c7483b8ab8ede0a13ba`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCLocalMaximalityAudit` complete a four-job focused build.
+The focused audit runs directly: local maximal-implies-ADC, local Theorem
+1.5(i), their Section 8 compatibility endpoints, Lemma 8.1(ii), and Theorem
+1.5(i) report no axioms; Theorem 1.5(ii) reports only `propext`.
+
+An incremental build of `Bong.Papers.He2023ADC` and
+`BongTest.He2023ADCAudit` completes all 5,562 planned jobs, and the canonical
+audit exits successfully. The focused imported-closure gate reports
+`AXIOM_GATE_PASS: 61070 declarations checked`. The source scanner checks
+2,733 tracked Lean files, all 23 scanner tests, five deployment-policy tests,
+and two shard-planner tests pass, and the diff and JSON checks are clean.
+
+The incremental whole-paper run reused copied artifacts from the earlier
+clean release-preparation worktree. It is not a fresh-extraction or exact
+Review Kit receipt. Concrete local and number-field instances, GitHub CI for
+this later checkpoint, and human semantic approval remain open. See Report
+74.

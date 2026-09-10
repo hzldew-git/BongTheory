@@ -263,6 +263,13 @@ laws; no final-conclusion regularity field remains in `SectionEightLaws`.
 The focused audit reports no axioms for the derived theorem and Lemma 8.1(i).
 Concrete number-field instances of the two lower laws, full clean-kit evidence,
 and human review remain outside this draft certificate.
+Section 8 local maximality checkpoint:
+`c204de5e938b6dbfc01b9c7483b8ab8ede0a13ba`. Report 74 derives local
+maximal-implies-ADC from maximal extension and representation composition,
+then derives local Theorem 1.5(i) from its remaining necessity law. The
+focused gate checks 61,070 declarations. Concrete local and number-field
+instances, full clean-kit evidence, and human review remain outside this
+draft certificate.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

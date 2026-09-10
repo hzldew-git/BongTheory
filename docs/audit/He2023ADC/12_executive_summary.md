@@ -370,7 +370,7 @@ gate checking `60,948` declarations. It also records that legacy
 shared root documents name other papers even though He classic code, manifest,
 and audits are absent. The stricter release generator and verifier remove this
 documentation-isolation defect; the legacy archive is not a release asset.
-Reports 70--73 and all remaining semantic and arithmetic obligations stay
+Reports 70--74 and all remaining semantic and arithmetic obligations stay
 outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
 
 Report 70 advances that boundary at
@@ -404,3 +404,12 @@ Lemma 8.1(i) have empty axiom sets in the focused Lean 4.32.1 audit. Concrete
 number-field instances of the two lower laws, the other global arithmetic
 packages, exact clean-kit evidence for this checkpoint, and human sign-off
 remain open. The Grade-D `NOT_COMPLETE` verdict is unchanged.
+
+Report 74 advances the same boundary at `c204de5`. Local
+maximal-implies-ADC is now a theorem from lower maximal-extension and
+representation laws, and the local Theorem 1.5 equivalence is derived from
+that theorem plus its classification-dependent necessity direction. Neither
+finished conclusion remains a `SectionEightLaws` field. A focused audit and
+the 61,070-declaration gate pass, but concrete finite-completion instances,
+fresh clean-kit evidence, and human sign-off remain open. The Grade-D
+`NOT_COMPLETE` verdict is unchanged.

@@ -63,7 +63,10 @@ counted as a concrete arithmetic implementation.
   from `SectionEightLaws` and the existing Theorem 1.3 package. Concrete
   localization, Meyer--Xu--O'Meara, genus-lifting, isometry-transport, and
   scaling-stability instances remain open. Class-number-one regularity itself
-  is now derived from the two lower genus laws; reports 47 and 73.
+  is now derived from the two lower genus laws. Local maximal-implies-ADC is
+  derived from maximal-extension laws, and local Theorem 1.5(i) is derived
+  from that theorem plus its classification-dependent necessity direction;
+  reports 47, 73, and 74.
 - The binary cases of Theorem 1.9(ii) and Theorem 1.10 are formally refuted
   and corrected. The exact catalogue has `4|U|+2` classes and unconditionally
   `8(N p)^e+2`, rather than the

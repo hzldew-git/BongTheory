@@ -116,3 +116,16 @@ field. Status: `PROVISIONAL_MATCH` for the quantifier and orientation;
 `FORMAL_DEFINITION_AMBIGUITY` until an author or domain expert confirms that
 the abstract relation is instantiated by the publisher's genus convention.
 See Report 73.
+
+## Section 8 local maximality
+
+Paper terms: `O_{F_p}`-maximal, local `n`-ADC, and `O_F`-maximal in Theorem
+1.5 and Lemma 8.1(ii), on pp. 984 and 1016--1017.
+
+Formal terms: `GlobalLocalLatticeSystem.localMaximal`, `IsNADCAt`, and
+`HeADC2025GlobalData.isGlobalMaximal`. `LocalMaximalityLaws` records maximal
+extension and representation transport; its theorem
+`localMaximal_isNADCAt` constructs the full `IsNADCAt` predicate.
+`local_theorem15` adds the classification-dependent necessity direction.
+The relations remain abstract until a concrete number-field localization
+instance is constructed. See Report 74.

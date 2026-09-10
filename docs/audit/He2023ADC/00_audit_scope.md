@@ -157,6 +157,11 @@ Report 73 lowers the Section 8 class-number boundary. The implication from
 class number one to `n`-regularity is now proved from explicit genus-lifting
 and isometry-transport laws rather than stored as a final-conclusion field.
 Concrete number-field instances of those lower laws remain open.
+Report 74 removes two more final-conclusion fields from Section 8. Local
+maximal-implies-ADC is derived from maximal extension, maximal-to-maximal
+representation, and transitivity; local Theorem 1.5(i) is then derived from
+that sufficiency theorem and the remaining classification-dependent
+necessity law. Concrete local and number-field instances remain open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

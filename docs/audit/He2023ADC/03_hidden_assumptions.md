@@ -168,6 +168,14 @@ those lower inputs. In particular, neither that derivation nor Theorem 8.2's
 Meyer--Xu--O'Meara content constructs the still-missing number-field
 arithmetic. See reports 47 and 73.
 
+Report 74 also removes the fields that directly asserted local
+maximal-implies-ADC and the complete local Theorem 1.5 equivalence. The new
+`LocalMaximalityLaws` package exposes the maximal-extension argument and
+retains only the classification-dependent necessity direction as a single
+hard local input. These proposition-valued fields are still uninstantiated;
+O'Meara section 82K also remains the explicit global-local maximality input.
+See report 74.
+
 The corrected quaternary catalogue does not assume completeness or
 irredundancy. Those properties are proved using the corrected three-way
 classification, maximal-lattice uniqueness, and nonisometric ambient spaces.
