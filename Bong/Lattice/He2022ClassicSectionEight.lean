@@ -237,6 +237,46 @@ theorem exists_ramifiedDyadic_of_not_discriminantOdd
 
 end DiscriminantRamificationLaws
 
+/-- The three finite-place arithmetic branches in the sufficiency proof of
+Theorem 1.9.  The dyadic unary branch is separated from the `n >= 2` branch
+because the paper invokes different local criteria. -/
+structure SumOfSquaresLocalUniversalityLaws : Prop where
+  ramificationIndexAt_one_of_discriminantOdd (p : S.Place) :
+    G.isDyadic p → G.discriminantOdd → G.ramificationIndexAt p = 1
+  nonDyadic_localUniversal (m n : Nat) (p : S.Place) :
+    1 ≤ n → n + 3 ≤ m → ¬ G.isDyadic p →
+      S.IsNUniversalAt (G.sumOfSquares m) p n
+  dyadic_unary_localUniversal (m : Nat) (p : S.Place) :
+    4 ≤ m → G.isDyadic p → G.ramificationIndexAt p = 1 →
+      S.IsNUniversalAt (G.sumOfSquares m) p 1
+  dyadic_higherRank_localUniversal (m n : Nat) (p : S.Place) :
+    2 ≤ n → n + 3 ≤ m → G.isDyadic p →
+      G.ramificationIndexAt p = 1 →
+        S.IsNUniversalAt (G.sumOfSquares m) p n
+
+namespace SumOfSquaresLocalUniversalityLaws
+
+variable {G : HeClassic2024GlobalData S}
+
+/-- Finite-place local universality in the sufficiency direction of He
+(2024), Theorem 1.9, derived by the source's dyadic/unary case split. -/
+theorem sumOfSquares_localUniversal_of_oddDiscriminant
+    (H : G.SumOfSquaresLocalUniversalityLaws) (m n : Nat)
+    (hn : 1 ≤ n) (hRank : n + 3 ≤ m) (hOdd : G.discriminantOdd) :
+    ∀ p : S.Place, S.IsNUniversalAt (G.sumOfSquares m) p n := by
+  intro p
+  by_cases hpDyadic : G.isDyadic p
+  · have hpOne : G.ramificationIndexAt p = 1 :=
+      H.ramificationIndexAt_one_of_discriminantOdd p hpDyadic hOdd
+    by_cases hnOne : n = 1
+    · subst n
+      exact H.dyadic_unary_localUniversal m p hRank hpDyadic hpOne
+    · exact H.dyadic_higherRank_localUniversal m n p (by omega)
+        hRank hpDyadic hpOne
+  · exact H.nonDyadic_localUniversal m n p hn hRank hpDyadic
+
+end SumOfSquaresLocalUniversalityLaws
+
 /-- Arithmetic inputs used in Proposition 8.2 and Theorems 1.5, 1.7 and 1.9.
 Each field corresponds to a specific localization, ramification, or strong-
 approximation step in the v5 proof. -/
@@ -260,10 +300,7 @@ structure SectionEightLaws : Prop where
     S.globalRank (G.sumOfSquares m) = m
   sumOfSquares_localAdjacentDefectsLarge (m : Nat) (p : S.Place) :
     G.isDyadic p → G.localAdjacentDefectsLarge (G.sumOfSquares m) p
-  sumOfSquares_localUniversal_of_oddDiscriminant
-      (m n : Nat) :
-    G.notTotallyReal → n + 3 ≤ m → G.discriminantOdd →
-      ∀ p : S.Place, S.IsNUniversalAt (G.sumOfSquares m) p n
+  sumOfSquaresLocalUniversality : G.SumOfSquaresLocalUniversalityLaws
   sumOfSquaresGlobalization : G.SumOfSquaresLocalGlobalLaws
 
 namespace SectionEightLaws
@@ -279,6 +316,15 @@ theorem sumOfSquares_local_to_global (H : G.SectionEightLaws)
     S.IsGloballyNUniversal (G.sumOfSquares m) n :=
   H.sumOfSquaresGlobalization.sumOfSquares_local_to_global
     m n hNotTotallyReal hRank hLocal
+
+/-- Compatibility endpoint for the finite-place analysis in Theorem 1.9. -/
+theorem sumOfSquares_localUniversal_of_oddDiscriminant
+    (H : G.SectionEightLaws) (m n : Nat) (hn : 1 ≤ n)
+    (_hNotTotallyReal : G.notTotallyReal) (hRank : n + 3 ≤ m)
+    (hOdd : G.discriminantOdd) :
+    ∀ p : S.Place, S.IsNUniversalAt (G.sumOfSquares m) p n :=
+  SumOfSquaresLocalUniversalityLaws.sumOfSquares_localUniversal_of_oddDiscriminant
+    H.sumOfSquaresLocalUniversality m n hn hRank hOdd
 
 /-- The first, stronger sentence of He (2024), Proposition 8.2. -/
 theorem he2022ClassicProposition82_positive (H : G.SectionEightLaws)
@@ -372,7 +418,7 @@ theorem he2022ClassicTheorem19 (H : G.SectionEightLaws)
   · intro hOdd
     apply H.sumOfSquares_local_to_global m n hNotTotallyReal hRank
     exact H.sumOfSquares_localUniversal_of_oddDiscriminant m n
-      hNotTotallyReal hRank hOdd
+      hn hNotTotallyReal hRank hOdd
 
 end SectionEightLaws
 

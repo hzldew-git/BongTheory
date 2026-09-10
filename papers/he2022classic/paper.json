@@ -48,6 +48,7 @@
     "BongTest.He2022ClassicAudit",
     "BongTest.He2022ClassicDiscriminantRamificationAudit",
     "BongTest.He2022ClassicEvenExtensionAudit",
+    "BongTest.He2022ClassicLocalUniversalityAudit",
     "BongTest.He2022ClassicProposition82Audit",
     "BongTest.He2022ClassicStrongApproximationAudit"
   ],
