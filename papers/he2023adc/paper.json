@@ -37,6 +37,7 @@
     "BongTest.He2023ADCAudit",
     "BongTest.He2023ADCClassNumberRegularityAudit",
     "BongTest.He2023ADCLocalMaximalityAudit",
+    "BongTest.He2023ADCDistinguishingSublatticeAudit",
     "BongTest.He2023ADCQuaternaryBoundaryQ2",
     "BongTest.He2023ADCExceptionalQuaternaryQ2",
     "BongTest.He2023ADCLemma46Audit",

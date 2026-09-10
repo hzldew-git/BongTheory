@@ -33,6 +33,8 @@ structure HeADC2025GlobalData
     (S : GlobalLocalLatticeSystem.{u, v, w}) where
   inGenus : S.GlobalLattice → S.GlobalLattice → Prop
   isIsometric : S.GlobalLattice → S.GlobalLattice → Prop
+  isDefinite : S.GlobalLattice → Prop
+  inSpinorGenus : S.GlobalLattice → S.GlobalLattice → Prop
   isGlobalMaximal : S.GlobalLattice → Prop
   scaleTwo : S.GlobalLattice → S.GlobalLattice
   isStable : S.GlobalLattice → Prop
@@ -149,10 +151,53 @@ theorem local_theorem15
 
 end LocalMaximalityLaws
 
+/-- The definite and indefinite arithmetic inputs in He (2025), Theorem 8.2.
+
+The definite field records the cited Meyer theorem.  In the indefinite case,
+Xu supplies a rank-`n` sublattice represented by exactly one spinor genus,
+and O'Meara 104:5 turns membership in that spinor genus into integral
+isometry.  Their composition is proved below. -/
+structure DistinguishingSublatticeLaws : Prop where
+  definite_case (M : S.GlobalLattice) (n : Nat) :
+    G.isDefinite M → S.globalRank M = n + 1 →
+      3 ≤ S.globalRank M → G.HasDistinguishingRankSublattice M n
+  indefinite_spinor_case (M : S.GlobalLattice) (n : Nat) :
+    ¬ G.isDefinite M → S.globalRank M = n + 1 →
+      3 ≤ S.globalRank M →
+        ∃ N : S.GlobalLattice,
+          S.globalRank N = n ∧ S.globalIntegral N ∧
+            S.globalRepresents M N ∧
+              ∀ M' : S.GlobalLattice,
+                G.inGenus M' M → S.globalRepresents M' N →
+                  G.inSpinorGenus M' M
+  indefinite_sameSpinorGenus_isometric {M M' : S.GlobalLattice} :
+    ¬ G.isDefinite M → 3 ≤ S.globalRank M →
+      G.inGenus M' M → G.inSpinorGenus M' M →
+        G.isIsometric M' M
+
+namespace DistinguishingSublatticeLaws
+
+/-- He (2025), Theorem 8.2, derived by the definite/indefinite split in the
+published proof. -/
+theorem distinguishing_rank_sublattice
+    (H : G.DistinguishingSublatticeLaws)
+    (M : S.GlobalLattice) (n : Nat)
+    (hRank : S.globalRank M = n + 1) (hThree : 3 ≤ S.globalRank M) :
+    G.HasDistinguishingRankSublattice M n := by
+  by_cases hDefinite : G.isDefinite M
+  · exact H.definite_case M n hDefinite hRank hThree
+  · obtain ⟨N, hNRank, hNIntegral, hMN, hUniqueSpinor⟩ :=
+      H.indefinite_spinor_case M n hDefinite hRank hThree
+    exact ⟨N, hNRank, hNIntegral, hMN, fun M' hGenus hM'N ↦
+      H.indefinite_sameSpinorGenus_isometric hDefinite hThree hGenus
+        (hUniqueSpinor M' hGenus hM'N)⟩
+
+end DistinguishingSublatticeLaws
+
 /-- The arithmetic inputs used by the Section 8 proofs.  Theorem 8.2 is
-isolated as the `distinguishing_rank_sublattice` field because its proof uses
-Meyer, Xu, spinor genera, and O'Meara 104:5, none of which presently has a
-concrete project implementation. -/
+split into the definite Meyer input and the indefinite Xu--O'Meara inputs
+inside `DistinguishingSublatticeLaws`; none presently has a concrete project
+implementation. -/
 structure SectionEightLaws : Prop where
   isIsometric_symm {M N : S.GlobalLattice} :
     G.isIsometric M N → G.isIsometric N M
@@ -169,12 +214,10 @@ structure SectionEightLaws : Prop where
       S.localRepresents M' N
   classNumberRegularity : G.ClassNumberRegularityLaws
   localMaximality : LocalMaximalityLaws (S := S)
+  distinguishingSublattice : G.DistinguishingSublatticeLaws
   globalMaximal_iff_localMaximal (M : S.GlobalLattice) :
     G.isGlobalMaximal M ↔
       ∀ p : S.Place, S.localMaximal (S.localize p M)
-  distinguishing_rank_sublattice (M : S.GlobalLattice) (n : Nat) :
-    S.globalRank M = n + 1 → 3 ≤ S.globalRank M →
-      G.HasDistinguishingRankSublattice M n
   nRegular_scaleTwo (M : S.GlobalLattice) :
     S.IsNRegular M 2 → S.IsNRegular (G.scaleTwo M) 2
   locallyTwoADC_scaleTwo_stable (M : S.GlobalLattice) :
@@ -210,6 +253,15 @@ theorem local_theorem15 (H : G.SectionEightLaws)
     2 ≤ n → (S.globalRank M = n ∨ S.globalRank M = n + 1) →
       (S.IsNADCAt M p n ↔ S.localMaximal (S.localize p M)) :=
   H.localMaximality.local_theorem15 M p n
+
+/-- The distinguishing-sublattice input used by Theorem 8.2, now derived
+from the definite Meyer case and the indefinite Xu--O'Meara argument. -/
+theorem distinguishing_rank_sublattice (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) (n : Nat) :
+    S.globalRank M = n + 1 → 3 ≤ S.globalRank M →
+      G.HasDistinguishingRankSublattice M n :=
+  DistinguishingSublatticeLaws.distinguishing_rank_sublattice
+    (G := G) H.distinguishingSublattice M n
 
 /-- He (2025), Lemma 8.1(i). -/
 theorem heADC2025Lemma81i (H : G.SectionEightLaws)

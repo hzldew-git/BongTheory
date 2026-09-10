@@ -197,6 +197,8 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData.LocalMaximalityLaws
 #check Bong.HeADC2025GlobalData.LocalMaximalityLaws.localMaximal_isNADCAt
 #check Bong.HeADC2025GlobalData.LocalMaximalityLaws.local_theorem15
+#check Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws
+#check Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws.distinguishing_rank_sublattice
 #check Bong.HeADC2025GlobalData.SectionEightLaws
 #check Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
 #check Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
@@ -216,6 +218,7 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
 #print axioms Bong.HeADC2025GlobalData.LocalMaximalityLaws.localMaximal_isNADCAt
 #print axioms Bong.HeADC2025GlobalData.LocalMaximalityLaws.local_theorem15
+#print axioms Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws.distinguishing_rank_sublattice
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.local_theorem15
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
