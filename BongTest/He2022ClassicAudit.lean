@@ -9,6 +9,7 @@ import Bong.Bong.He2022ClassicLemma78
 import Bong.Bong.He2022ClassicLemma79
 import BongTest.He2022ClassicEvenExtensionAudit
 import BongTest.He2022ClassicProposition82Audit
+import BongTest.He2022ClassicStrongApproximationAudit
 
 /-! Kernel and trust-boundary audit for He's classic paper entry. -/
 

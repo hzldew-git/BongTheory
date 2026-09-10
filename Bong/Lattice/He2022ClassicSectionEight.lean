@@ -167,6 +167,49 @@ theorem he2022ClassicProposition82_positive
 
 end Proposition82Laws
 
+/-- The local-to-global inputs used in the sufficiency proof of Theorem 1.9.
+The last field isolates strong approximation after all finite-place
+representations and the real-place compatibility condition have been
+supplied. -/
+structure SumOfSquaresLocalGlobalLaws : Prop where
+  sumOfSquares_integral (m : Nat) :
+    S.globalIntegral (G.sumOfSquares m)
+  rank_localize (p : S.Place) (N : S.GlobalLattice) :
+    S.localRank (S.localize p N) = S.globalRank N
+  integral_localize (p : S.Place) (N : S.GlobalLattice) :
+    S.globalIntegral N → S.localIntegral (S.localize p N)
+  strong_approximation
+      (m n : Nat) (N : S.GlobalLattice) :
+    G.notTotallyReal → n + 3 ≤ m →
+      S.globalAdmissible (G.sumOfSquares m) N →
+        (∀ p : S.Place,
+          S.localRepresents
+            (S.localize p (G.sumOfSquares m)) (S.localize p N)) →
+          S.globalRepresents (G.sumOfSquares m) N
+
+namespace SumOfSquaresLocalGlobalLaws
+
+variable {G : HeClassic2024GlobalData S}
+
+/-- The local-to-global step in the sufficiency direction of He (2024),
+Theorem 1.9, derived from the explicitly separated strong-approximation
+inputs. -/
+theorem sumOfSquares_local_to_global
+    (H : G.SumOfSquaresLocalGlobalLaws) (m n : Nat)
+    (hNotTotallyReal : G.notTotallyReal) (hRank : n + 3 ≤ m)
+    (hLocal : ∀ p : S.Place,
+      S.IsNUniversalAt (G.sumOfSquares m) p n) :
+    S.IsGloballyNUniversal (G.sumOfSquares m) n := by
+  refine ⟨H.sumOfSquares_integral m, ?_⟩
+  intro N hNRank hNIntegral hAdmissible
+  apply H.strong_approximation m n N hNotTotallyReal hRank hAdmissible
+  intro p
+  exact (hLocal p).2 (S.localize p N)
+    ((H.rank_localize p N).trans hNRank)
+    (H.integral_localize p N hNIntegral)
+
+end SumOfSquaresLocalGlobalLaws
+
 /-- Arithmetic inputs used in Proposition 8.2 and Theorems 1.5, 1.7 and 1.9.
 Each field corresponds to a specific localization, ramification, or strong-
 approximation step in the v5 proof. -/
@@ -196,14 +239,21 @@ structure SectionEightLaws : Prop where
       (m n : Nat) :
     G.notTotallyReal → n + 3 ≤ m → G.discriminantOdd →
       ∀ p : S.Place, S.IsNUniversalAt (G.sumOfSquares m) p n
-  sumOfSquares_local_to_global (m n : Nat) :
-    G.notTotallyReal → n + 3 ≤ m →
-      (∀ p : S.Place, S.IsNUniversalAt (G.sumOfSquares m) p n) →
-        S.IsGloballyNUniversal (G.sumOfSquares m) n
+  sumOfSquaresGlobalization : G.SumOfSquaresLocalGlobalLaws
 
 namespace SectionEightLaws
 
 variable {G : HeClassic2024GlobalData S}
+
+/-- Compatibility endpoint for the local-to-global step in Theorem 1.9. -/
+theorem sumOfSquares_local_to_global (H : G.SectionEightLaws)
+    (m n : Nat) (hNotTotallyReal : G.notTotallyReal)
+    (hRank : n + 3 ≤ m)
+    (hLocal : ∀ p : S.Place,
+      S.IsNUniversalAt (G.sumOfSquares m) p n) :
+    S.IsGloballyNUniversal (G.sumOfSquares m) n :=
+  H.sumOfSquaresGlobalization.sumOfSquares_local_to_global
+    m n hNotTotallyReal hRank hLocal
 
 /-- The first, stronger sentence of He (2024), Proposition 8.2. -/
 theorem he2022ClassicProposition82_positive (H : G.SectionEightLaws)

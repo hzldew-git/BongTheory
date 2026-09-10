@@ -47,7 +47,8 @@
   "auditModules": [
     "BongTest.He2022ClassicAudit",
     "BongTest.He2022ClassicEvenExtensionAudit",
-    "BongTest.He2022ClassicProposition82Audit"
+    "BongTest.He2022ClassicProposition82Audit",
+    "BongTest.He2022ClassicStrongApproximationAudit"
   ],
   "auditDirectory": "docs/audit/He2022Classic",
   "sourceDelta": "docs/audit/He2022Classic/SOURCE_DELTA.md",
