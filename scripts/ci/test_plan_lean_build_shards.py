@@ -28,6 +28,20 @@ class LeanBuildShardPlanTests(unittest.TestCase):
             else:
                 self.assertEqual(shard["buildModules"], shard["modules"])
 
+    def test_measured_elaboration_heavy_modules_get_dedicated_shards(self) -> None:
+        shards = planner.plan(72, 24)
+        production = {
+            module: shard
+            for shard in shards
+            if shard["axiomGate"]
+            for module in shard["modules"].split()
+        }
+
+        for path in planner.ELABORATION_HEAVY_PATHS:
+            module = planner.module_name(path)
+            self.assertIn(module, production)
+            self.assertEqual(production[module]["moduleCount"], 1)
+
 
 if __name__ == "__main__":
     unittest.main()

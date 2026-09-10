@@ -16,6 +16,26 @@ SOURCE_ROOTS = {"Bong", "BongTest"}
 UMBRELLAS = {Path("Bong.lean"), Path("BongTest.lean")}
 IMPORT_LINE = re.compile(r"import ([A-Za-z0-9_'.]+)")
 
+# These modules have measured elaboration times of roughly one to four hours
+# on the release workstation, and four cold hosted shards reached GitHub's
+# six-hour limit while one of these closures was still building.  The bonus is
+# deliberately larger than the current aggregate source weight, so a plan with
+# sufficient production bins gives every measured heavyweight its own shard.
+ELABORATION_HEAVY_PATHS = {
+    Path("Bong/Lattice/Omeara9328StepEightCommonData.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightConditions.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightNormalizedCommon.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightNormalizedCommonAmbient.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightNormalizedCommonConditionI.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightNormalizedCommonConditionII.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightNormalizedCommonConditionIII.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightNormalizedCommonConditions.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightNormalizedCommonProperties.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightNormalizedReduced.lean"),
+    Path("Bong/Lattice/Omeara9328StepEightScaleSpread.lean"),
+}
+ELABORATION_HEAVY_WEIGHT = 200_000_000
+
 
 @dataclass(frozen=True)
 class Module:
@@ -84,7 +104,8 @@ def module_name(path: Path) -> str:
 def source_weight(path: Path) -> int:
     text = (ROOT / path).read_text(encoding="utf-8")
     import_count = sum(line.lstrip().startswith("import ") for line in text.splitlines())
-    return len(text.encode("utf-8")) + 20_000 * import_count
+    measured_bonus = ELABORATION_HEAVY_WEIGHT if path in ELABORATION_HEAVY_PATHS else 0
+    return len(text.encode("utf-8")) + 20_000 * import_count + measured_bonus
 
 
 def partition(modules: list[Module], count: int, prefix: str, axiom_gate: bool) -> list[dict]:
