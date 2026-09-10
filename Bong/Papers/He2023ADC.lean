@@ -148,10 +148,12 @@ and O'Meara 104:5 single-class input.  The stability half of Lemma 8.4 is
 derived placewise from the local Theorem 6.2/Proposition 4.16 form, scaling,
 and local-to-global stability laws.  Its regularity half and the half-scale
 steps in Corollary 8.5 are derived from a rank-uniform scaling biconditional
-and the exact orientation of half-scaling.  Concrete constructions of the
-O'Meara 82K global--local maximality directions are kept separate and their
-biconditional is derived.  Concrete constructions of the
-non-dyadic and number-field law
+and the exact orientation of half-scaling.  The O'Meara 82K global--local
+maximality directions are kept separate and their biconditional is derived.
+The genus relation is characterized by local equivalence at every finite
+place; genus symmetry, local-equivalence extraction, and rank preservation
+are derived from that characterization and localization of rank.  Concrete
+constructions of the non-dyadic and number-field law
 packages, and imports of the Hanke--Kirschmer--Oh external enumerations,
 remain open;
 number-field localization, Meyer--Xu genus separation, and non-dyadic Jordan

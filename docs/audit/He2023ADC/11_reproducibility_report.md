@@ -742,3 +742,20 @@ tracked Lean sources, all 30 policy tests pass, and changed Lean lines satisfy
 the 100-column policy. These checks reuse local project artifacts.
 Fresh-extraction verification, concrete O'Meara instances, exact-tag CI, and
 human review remain open. See Report 78.
+
+## Section 8 genus-transport checkpoint
+
+At exact code checkpoint `97068f7f4617b37f69980a056afa7f6e01eab4d3`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCGenusTransportAudit` complete a four-job focused build.
+The focused audit runs directly: local-equivalence extraction and global-rank
+preservation have empty axiom sets, genus symmetry uses only `propext`, and
+Corollary 8.3 and Theorem 1.7 use only the allowed standard axioms.
+
+An incremental paper-entry and canonical-audit build completes all 5,562
+planned jobs. The combined imported-closure gate reports
+`AXIOM_GATE_PASS: 61134 declarations checked`. The scanner checks 2,738
+tracked Lean sources, all 30 policy tests pass, and changed Lean lines satisfy
+the 100-column policy. These checks reuse local project artifacts.
+Fresh-extraction verification, concrete genus and localization instances,
+exact-tag CI, and human review remain open. See Report 79.

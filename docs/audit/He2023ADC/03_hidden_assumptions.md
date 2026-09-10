@@ -204,6 +204,13 @@ prevents the proof of Lemma 8.1(ii) from silently relying on the unused reverse
 direction while keeping both directions available for Theorem 1.5(ii). See
 report 78.
 
+Report 79 makes the genus convention explicit in `GenusTransportLaws`:
+membership is equivalent to local equivalence at every finite place. Genus
+symmetry, extraction of one local equivalence, and global-rank preservation
+are derived. Local-equivalence symmetry and rank invariance, nonemptiness of
+the finite-place type, isometry symmetry, and representation transport remain
+visible inputs until a concrete number-field lattice category is implemented.
+
 The corrected quaternary catalogue does not assume completeness or
 irredundancy. Those properties are proved using the corrected three-way
 classification, maximal-lattice uniqueness, and nonisometric ambient spaces.

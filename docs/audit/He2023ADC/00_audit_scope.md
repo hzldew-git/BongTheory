@@ -171,6 +171,11 @@ Report 78 removes the final O'Meara 82K biconditional field. Global-to-local
 and local-to-global maximality are now separate arithmetic inputs, and their
 biconditional is derived before use in Lemma 8.1(ii), Theorem 1.5(ii), and
 Theorem 1.7. Concrete number-field instances of both directions remain open.
+Report 79 replaces the primitive genus symmetry, local-equivalence extraction,
+and genus rank-preservation fields by the placewise local-equivalence
+definition. Lean now derives all three consequences, using localization of
+rank for the last one. The concrete number-field genus and equivalence
+relations remain open.
 Report 76 removes the final local-2-ADC-to-scaled-stability field used in
 Lemma 8.4. The implication is now derived placewise from the local form
 classified by Theorem 6.2 and Proposition 4.16, its behavior under scaling,

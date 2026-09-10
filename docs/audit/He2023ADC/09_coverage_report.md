@@ -72,7 +72,9 @@ counted as a concrete arithmetic implementation.
   scaling and the half-scale steps are derived from one rank-uniform
   biconditional with explicit orientation. The O'Meara 82K maximality
   equivalence is derived from separate localization and globalization
-  directions; reports 47 and 73--78.
+  directions. Genus symmetry, local-equivalence extraction, and genus rank
+  preservation are derived from the all-places local-equivalence definition;
+  reports 47 and 73--79.
 - The binary cases of Theorem 1.9(ii) and Theorem 1.10 are formally refuted
   and corrected. The exact catalogue has `4|U|+2` classes and unconditionally
   `8(N p)^e+2`, rather than the

@@ -370,7 +370,7 @@ gate checking `60,948` declarations. It also records that legacy
 shared root documents name other papers even though He classic code, manifest,
 and audits are absent. The stricter release generator and verifier remove this
 documentation-isolation defect; the legacy archive is not a release asset.
-Reports 70--78 and all remaining semantic and arithmetic obligations stay
+Reports 70--79 and all remaining semantic and arithmetic obligations stay
 outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
 
 Report 70 advances that boundary at
@@ -445,3 +445,11 @@ and globalization inputs and is derived before use. The 61,118-declaration
 combined gate passes. Concrete number-field instances, fresh clean-kit
 evidence, and human sign-off remain open, so the Grade-D `NOT_COMPLETE`
 verdict is unchanged.
+
+Report 79 advances the Corollary 8.3 genus boundary at `97068f7`. Genus
+membership is now characterized by local equivalence at every finite place;
+Lean derives genus symmetry, local-equivalence extraction, and global-rank
+preservation. The 61,134-declaration combined gate passes. Concrete
+number-field genus/localization instances, fresh clean-kit evidence, and
+human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
+unchanged.

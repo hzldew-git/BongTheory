@@ -397,3 +397,12 @@ maximal-lattice uniqueness; the second follows from Lemma 4.4(i) after
 ambient-isometry transport. The non-dyadic Theorem 1.10 remains
 `CONDITIONAL_FORMALIZATION` because those lower lattice-level and invariant
 interfaces do not yet have concrete local-field instances. See report 72.
+
+At `97068f7`, the Corollary 8.3 genus steps retain the source meaning but are
+no longer final fields. `GenusTransportLaws` identifies genus membership with
+local equivalence at every finite place. Lean derives genus symmetry and local
+equivalence directly, and derives equality of global ranks from local-rank
+invariance plus localization of rank. The status remains
+`CONDITIONAL_FORMALIZATION` because the global lattice, localization,
+equivalence, isometry, and representation relations do not yet have concrete
+number-field instances. See report 79.

@@ -327,3 +327,11 @@ biconditional is now synthesized rather than supplied whole. Reviewers must
 still confirm that the concrete localization functor and the paper's notion
 of `O_F`-maximality satisfy each direction under exactly the stated standing
 hypotheses.
+
+Report 79 tests whether `inGenus` is being used as an opaque shortcut in
+Corollary 8.3. The proof must now obtain each local equivalence from an
+explicit all-places characterization, reverse those equivalences to prove
+genus symmetry, and recover global-rank equality through one finite place and
+the localization rank law. Reviewers must still verify the concrete
+number-field implementation of local equivalence, its rank invariance, and
+both orientations of representation and isometry transport.

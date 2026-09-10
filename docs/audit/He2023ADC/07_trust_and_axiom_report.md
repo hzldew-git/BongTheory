@@ -486,3 +486,12 @@ axiom sets. Theorem 1.5(ii) reports only `propext`; Theorem 1.7 reports only
 the standard allowed set. The combined gate checks 61,118 declarations, the
 scanner checks 2,737 tracked Lean sources, and all 30 policy tests pass.
 Both O'Meara directions remain mathematical inputs, not Lean axioms.
+
+At `97068f7f4617b37f69980a056afa7f6e01eab4d3`, Report 79 introduces
+`GenusTransportLaws`. Local-equivalence extraction and global-rank
+preservation have empty axiom sets; genus symmetry uses only `propext`.
+Corollary 8.3 and Theorem 1.7 report only `propext`, `Classical.choice`, and
+`Quot.sound`. The combined gate checks 61,134 declarations, the scanner
+checks 2,738 tracked Lean sources, and all 30 policy tests pass. The lower
+placewise equivalence, isometry, and representation facts remain ordinary
+structure fields, not Lean axioms.

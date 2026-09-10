@@ -280,6 +280,12 @@ Additional concrete declaration groups are:
   by Lemma 8.1(ii), Theorem 1.5(ii), and Theorem 1.7, so the complete
   equivalence is no longer a `SectionEightLaws` field. The focused audit is
   `He2023ADCGlobalMaximalityAudit`; report 78.
+  `GenusTransportLaws` records the placewise local-equivalence definition of
+  genus, local-equivalence symmetry and rank invariance, existence of a finite
+  place, isometry symmetry, and representation transport. It derives genus
+  symmetry, local-equivalence extraction, and global-rank preservation; those
+  three conclusions are no longer `SectionEightLaws` fields. The focused audit
+  is `He2023ADCGenusTransportAudit`; report 79.
 - `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
   both nonmaximal binary boundary classes. It proves exact completeness and
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the

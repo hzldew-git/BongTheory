@@ -312,6 +312,31 @@ Questions for the paper author and domain expert:
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## Corollary 8.3, genus transport
+
+Paper location: pp. 1017--1018.
+
+Paper statement and proof step: for `M'` in `gen(M)`, the proof uses
+`M'_p \cong M_p` for every finite prime, transports representation of the
+distinguishing rank-`n` lattice, and concludes `M \cong M'`.
+
+Formal finding: Report 79 introduces `GenusTransportLaws`, with
+`inGenus M N` characterized by local equivalence at every finite place.
+Genus symmetry, local-equivalence extraction, and preservation of global rank
+are derived rather than stored as finished Section 8 fields.
+
+Questions for the paper author and domain expert:
+
+1. Does the all-finite-places equivalence used by `inGenus_iff_localEquivalent`
+   exactly match the paper's convention for `gen(M)`?
+2. Is integral isometry the intended terminal relation in Corollary 8.3, with
+   the orientation used by `HasClassNumberOne`?
+3. May rank preservation be recovered from any one finite localization, as in
+   the formal proof, without an omitted archimedean convention?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Lemma 8.4 and Corollary 8.5, regularity scaling
 
 Paper location: p. 1018.
