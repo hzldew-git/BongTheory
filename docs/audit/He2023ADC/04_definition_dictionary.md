@@ -140,3 +140,16 @@ Formal terms: `HeADC2025GlobalData.isDefinite`, `inSpinorGenus`, and
 Xu's indefinite rank-`n` construction, and the O'Meara 104:5 isometry step.
 The predicates remain abstract pending a concrete number-field model. Status:
 `PROVISIONAL_MATCH`; see Report 75.
+
+## Section 8 stability and scaling
+
+Paper terms: stability at every prime, the local alternatives
+`H -> M_p` or `M_p` isometric to `A orthogonal-sum A(p)`, and scaling by two
+in Lemma 8.4 on p. 1018.
+
+Formal terms: `HeADC2025GlobalData.isStableAt`, `hasLemma84LocalForm`, and
+`ScalingStabilityLaws`. The named local-form predicate represents exactly the
+source disjunction, while the law package separates its classification,
+scaling, and placewise-global consequences. These predicates remain abstract
+pending a concrete number-field model. Status: `PROVISIONAL_MATCH`; see
+Report 76.

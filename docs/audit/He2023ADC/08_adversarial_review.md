@@ -305,3 +305,11 @@ which represents it lies in the base spinor genus, and only then use the
 one-class theorem to obtain integral isometry. Reviewers must verify the
 orientation of `inSpinorGenus M' M`, the definite/indefinite split, and the
 rank and signature hypotheses of Meyer, Xu, and O'Meara 104:5.
+
+Report 76 tests the former Lemma 8.4 stability shortcut. The proof no longer
+receives `IsLocallyNADC M 2 -> isStable (scaleTwo M)` as one field. It must
+specialize local 2-ADC at each prime, pass through the precise local form used
+by Theorem 6.2 and Proposition 4.16, transport that form under scaling, and
+only then assemble global stability. Reviewers must still verify that the
+abstract local-form predicate is instantiated by exactly the printed
+hyperbolic-or-exceptional disjunction at every finite prime.

@@ -264,6 +264,12 @@ Additional concrete declaration groups are:
   input. Its `distinguishing_rank_sublattice` theorem derives Theorem 8.2, so
   that final conclusion is no longer a `SectionEightLaws` field. The focused
   audit is `He2023ADCDistinguishingSublatticeAudit`; report 75.
+  `ScalingStabilityLaws` records the Theorem 6.2/Proposition 4.16 local-form
+  implication, its behavior under scaling, and the placewise definition of
+  global stability. Its `locallyTwoADC_scaleTwo_stable` theorem derives the
+  stability half of Lemma 8.4, so that final implication is no longer a
+  `SectionEightLaws` field. The focused audit is
+  `He2023ADCScalingStabilityAudit`; report 76.
 - `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
   both nonmaximal binary boundary classes. It proves exact completeness and
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the

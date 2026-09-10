@@ -370,7 +370,7 @@ gate checking `60,948` declarations. It also records that legacy
 shared root documents name other papers even though He classic code, manifest,
 and audits are absent. The stricter release generator and verifier remove this
 documentation-isolation defect; the legacy archive is not a release asset.
-Reports 70--75 and all remaining semantic and arithmetic obligations stay
+Reports 70--76 and all remaining semantic and arithmetic obligations stay
 outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
 
 Report 70 advances that boundary at
@@ -420,4 +420,13 @@ now performs the source's definite/indefinite split and composes separate
 Meyer, Xu, and O'Meara 104:5 inputs. The 61,083-declaration focused gate
 passes. Concrete instances of the cited results, fresh clean-kit evidence,
 and human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
+unchanged.
+
+Report 76 advances the stability half of Lemma 8.4 at `677c1ae`. The
+finished local-2-ADC-to-scaled-stability implication is no longer a
+`SectionEightLaws` field. The Lean proof now specializes at each prime,
+passes through the local Theorem 6.2/Proposition 4.16 form, transports it
+under scaling, and assembles global stability. The 61,096-declaration
+combined gate passes. Concrete instances, fresh clean-kit evidence, and
+human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
 unchanged.

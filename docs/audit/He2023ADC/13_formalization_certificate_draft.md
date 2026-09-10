@@ -276,6 +276,13 @@ distinguishing-sublattice field and derives it from separate Meyer definite,
 Xu spinor-genus, and O'Meara 104:5 inputs. The focused gate checks 61,083
 declarations. Concrete instances, clean-kit evidence, and human review remain
 outside this draft certificate.
+Lemma 8.4 local-stability checkpoint:
+`677c1ae57a26365c0c0615a7894646851d0ef167`. Report 76 removes the complete
+local-2-ADC-to-scaled-stability field and derives it from separate local-form,
+scaling, and placewise-global stability inputs. The combined gate checks
+61,096 declarations. Concrete number-field instances, scaling invariance of
+regularity, clean-kit evidence, and human review remain outside this draft
+certificate.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

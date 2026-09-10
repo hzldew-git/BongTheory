@@ -167,6 +167,11 @@ sublattice is now derived by the published definite/indefinite split from a
 Meyer definite-case input, Xu's unique-spinor-genus construction, and the
 O'Meara 104:5 one-class input. Concrete instances of those cited results
 remain open.
+Report 76 removes the final local-2-ADC-to-scaled-stability field used in
+Lemma 8.4. The implication is now derived placewise from the local form
+classified by Theorem 6.2 and Proposition 4.16, its behavior under scaling,
+and the definition of global stability. Concrete number-field connections
+to those local forms and scaling invariance of regularity remain open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

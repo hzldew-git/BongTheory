@@ -144,7 +144,9 @@ lifting and isometry transport, while local maximal-implies-ADC and the local
 Theorem 1.5 equivalence are derived from lower maximal-extension,
 representation, and classification laws.  Theorem 8.2 is derived by splitting
 the definite Meyer input from the indefinite Xu spinor-genus construction
-and O'Meara 104:5 single-class input.  Concrete constructions of the
+and O'Meara 104:5 single-class input.  The stability half of Lemma 8.4 is
+derived placewise from the local Theorem 6.2/Proposition 4.16 form, scaling,
+and local-to-global stability laws.  Concrete constructions of the
 non-dyadic and number-field law
 packages, and imports of the Hanke--Kirschmer--Oh external enumerations,
 remain open;

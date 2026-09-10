@@ -67,7 +67,9 @@ counted as a concrete arithmetic implementation.
   derived from maximal-extension laws, and local Theorem 1.5(i) is derived
   from that theorem plus its classification-dependent necessity direction;
   Theorem 8.2 is derived from separate Meyer definite-case, Xu spinor-genus,
-  and O'Meara 104:5 inputs; reports 47 and 73--75.
+  and O'Meara 104:5 inputs. The stability half of Lemma 8.4 is derived from
+  its local-form, scaling, and placewise-global inputs; reports 47 and
+  73--76.
 - The binary cases of Theorem 1.9(ii) and Theorem 1.10 are formally refuted
   and corrected. The exact catalogue has `4|U|+2` classes and unconditionally
   `8(N p)^e+2`, rather than the

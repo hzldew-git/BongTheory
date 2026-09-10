@@ -285,6 +285,33 @@ Questions for the paper author and domain expert:
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## Lemma 8.4, local stability after scaling
+
+Paper location: p. 1018.
+
+Paper statement: if `M` is 2-ADC, then `M(2)` is both 2-regular and stable.
+For stability, the proof applies local 2-ADC at every prime, obtains either a
+hyperbolic-plane representation or the exceptional quaternary form from
+Theorem 6.2 and Proposition 4.16, and scales that alternative.
+
+Formal finding: Report 76 removes the finished stability implication from
+`SectionEightLaws`. `ScalingStabilityLaws` now separates the local-form
+classification, its scaling behavior at one prime, and the equivalence between
+placewise and global stability. The Lean proof composes those laws for every
+prime. Scaling invariance of 2-regularity remains a separate explicit input.
+
+Questions for the paper author and domain expert:
+
+1. Does `hasLemma84LocalForm` have exactly the intended hyperbolic-or-
+   exceptional meaning at dyadic and non-dyadic primes?
+2. Does `isStableAt` include precisely the norm-ideal and local-isometry
+   clauses in the paragraph preceding Lemma 8.4?
+3. Can the scaling-invariance step for 2-regularity be used without any
+   extra integrality or primitivity hypothesis?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Theorem 1.5(i) and Lemma 8.1(ii), local maximality
 
 Paper locations: Theorem 1.5 on p. 984; its proof on p. 1016; Lemma 8.1(ii)

@@ -182,6 +182,14 @@ indefinite spinor-genus uniqueness input, and the O'Meara 104:5 one-class
 input separately. The definite/spinor predicates and all three cited results
 still require actual number-field constructions. See report 75.
 
+Report 76 removes the complete local-2-ADC-to-scaled-stability field.
+`ScalingStabilityLaws` exposes separately the local-form consequence of
+Theorem 6.2 and Proposition 4.16, the scaling step at one place, and the
+local-to-global definition of stability. The local-form predicate and these
+three laws remain abstract until connected to concrete number-field
+localizations. Scaling invariance of 2-regularity is still a separate
+`SectionEightLaws` field. See report 76.
+
 The corrected quaternary catalogue does not assume completeness or
 irredundancy. Those properties are proved using the corrected three-way
 classification, maximal-lattice uniqueness, and nonisometric ambient spaces.

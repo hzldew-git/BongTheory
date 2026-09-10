@@ -347,6 +347,15 @@ genus result with O'Meara 104:5 in the indefinite case. This is still
 `CONDITIONAL_FORMALIZATION`, because the three cited inputs and the concrete
 definite/spinor-genus predicates are not implemented. See report 75.
 
+At `677c1ae`, the stability conjunct of Lemma 8.4 retains its exact source
+conclusion but is no longer a final-conclusion field. The formal proof takes
+the local 2-ADC hypothesis placewise, obtains the Theorem 6.2/Proposition
+4.16 local form, scales it to stability at that place, and applies the
+placewise characterization of global stability. This is still
+`CONDITIONAL_FORMALIZATION`, because those local-form and scaling laws are
+not concretely instantiated and 2-regularity under scaling remains an
+explicit input. See report 76.
+
 At `f7e8fb7`, the binary specializations of Theorem 1.9(ii) and Theorem 1.10
 are `SEMANTIC_MISMATCH`, not unformalized statements. The former repeats the
 false two-way list of Theorem 6.2, and the latter undercounts the resulting

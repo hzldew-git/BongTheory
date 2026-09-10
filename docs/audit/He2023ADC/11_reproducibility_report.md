@@ -632,7 +632,7 @@ strict verifier intentionally rejects that archive because it lacks a
 paper-specific theorem-index prefix. Report 69 therefore records it as exact
 proof-closure evidence through Report 68, not as the final release package.
 The tagged release regenerates and rechecks a fully isolated package. Reports
-70--75, remaining concrete law instances, GitHub tag CI, and human sign-off are
+70--76, remaining concrete law instances, GitHub tag CI, and human sign-off are
 separate gates.
 
 ## Section 8 class-number regularity local checkpoint
@@ -690,3 +690,21 @@ tracked Lean sources. The incremental build reused copied local project
 artifacts, so fresh-extraction verification, concrete Meyer--Xu--O'Meara
 instances, GitHub CI for this checkpoint, and human review remain open. See
 Report 75.
+
+## Lemma 8.4 local-stability checkpoint
+
+At exact code checkpoint `677c1ae57a26365c0c0615a7894646851d0ef167`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCScalingStabilityAudit` complete a four-job focused build.
+The focused audit runs directly and reports only `propext` for the derived
+local-to-global stability theorem, its compatibility endpoint, Lemma 8.4,
+and Corollary 8.5.
+
+The focused imported-closure gate checks 168 declarations. The combined
+paper-entry and focused gate reports `AXIOM_GATE_PASS: 61096 declarations
+checked`. The scanner checks 2,735 tracked Lean sources, all 30 policy tests
+pass, and changed Lean lines satisfy the 100-column policy. An incremental
+paper-entry, canonical-audit, and focused-audit build completes all 5,563
+planned jobs. These checks reuse copied project artifacts. Fresh-extraction
+verification, concrete local-form and scaling instances, exact-tag CI, and
+human review remain open. See Report 76.

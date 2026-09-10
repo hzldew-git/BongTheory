@@ -433,7 +433,7 @@ entries, and the standalone imported-closure gate all pass; the latter reports
 `AXIOM_GATE_PASS: 60948 declarations checked`. Both exact Mathematica
 certificates also pass. Report 69 discloses that the archive's old shared root
 documents mention other papers, so it is proof-closure evidence rather than the
-strictly isolated release asset. It predates Reports 70--75 and does not
+strictly isolated release asset. It predates Reports 70--76 and does not
 instantiate the remaining arithmetic laws or provide human semantic approval.
 
 At `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, Report 73 replaces the
@@ -461,3 +461,12 @@ Theorem 1.7 depend only on `propext`, `Classical.choice`, and `Quot.sound`.
 The focused gate checks 61,083 declarations, and the scanner checks 2,734
 tracked Lean sources. The three external theorem fields remain mathematical
 assumptions of the conditional interface, not project axioms.
+
+At `677c1ae57a26365c0c0615a7894646851d0ef167`, Report 76 replaces the
+finished local-2-ADC-to-scaled-stability input by `ScalingStabilityLaws`.
+The derived stability theorem, compatibility endpoint, Lemma 8.4, and
+Corollary 8.5 depend only on `propext`. The combined imported-closure gate
+checks 61,096 declarations, the scanner checks 2,735 tracked Lean sources,
+and all 30 policy tests pass. The local-form, scaling, and placewise-stability
+fields remain mathematical inputs to an ordinary structure; they are not Lean
+axioms. Fresh-extraction verification and concrete instances remain open.
