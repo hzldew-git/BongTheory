@@ -205,6 +205,8 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_scaleTwo
 #check Bong.HeADC2025GlobalData.ScalingRegularityLaws.scaleTwo_halfScale
 #check Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_of_halfScale
+#check Bong.HeADC2025GlobalData.GlobalMaximalityLaws
+#check Bong.HeADC2025GlobalData.GlobalMaximalityLaws.globalMaximal_iff_localMaximal
 #check Bong.HeADC2025GlobalData.SectionEightLaws
 #check Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
 #check Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
@@ -230,6 +232,7 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_scaleTwo
 #print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.scaleTwo_halfScale
 #print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_of_halfScale
+#print axioms Bong.HeADC2025GlobalData.GlobalMaximalityLaws.globalMaximal_iff_localMaximal
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.local_theorem15
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii

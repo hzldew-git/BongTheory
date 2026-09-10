@@ -262,6 +262,29 @@ theorem nRegular_of_halfScale
 
 end ScalingRegularityLaws
 
+/-- The two directions of the global--local maximality principle cited as
+O'Meara section 82K in He (2025), Lemma 8.1 and Theorem 1.5(ii). -/
+structure GlobalMaximalityLaws : Prop where
+  localMaximal_of_globalMaximal (M : S.GlobalLattice) :
+    G.isGlobalMaximal M →
+      ∀ p : S.Place, S.localMaximal (S.localize p M)
+  globalMaximal_of_forall_localMaximal (M : S.GlobalLattice) :
+    (∀ p : S.Place, S.localMaximal (S.localize p M)) →
+      G.isGlobalMaximal M
+
+namespace GlobalMaximalityLaws
+
+/-- The O'Meara 82K global--local maximality equivalence, assembled from its
+two directional arithmetic inputs. -/
+theorem globalMaximal_iff_localMaximal
+    (H : G.GlobalMaximalityLaws) (M : S.GlobalLattice) :
+    G.isGlobalMaximal M ↔
+      ∀ p : S.Place, S.localMaximal (S.localize p M) :=
+  ⟨H.localMaximal_of_globalMaximal M,
+    H.globalMaximal_of_forall_localMaximal M⟩
+
+end GlobalMaximalityLaws
+
 /-- The arithmetic inputs used by the Section 8 proofs.  Theorem 8.2 is
 split into the definite Meyer input and the indefinite Xu--O'Meara inputs
 inside `DistinguishingSublatticeLaws`; none presently has a concrete project
@@ -285,9 +308,7 @@ structure SectionEightLaws : Prop where
   distinguishingSublattice : G.DistinguishingSublatticeLaws
   scalingStability : G.ScalingStabilityLaws
   scalingRegularity : G.ScalingRegularityLaws
-  globalMaximal_iff_localMaximal (M : S.GlobalLattice) :
-    G.isGlobalMaximal M ↔
-      ∀ p : S.Place, S.localMaximal (S.localize p M)
+  globalMaximality : G.GlobalMaximalityLaws
 
 namespace SectionEightLaws
 
@@ -351,6 +372,14 @@ theorem nRegular_of_halfScale (H : G.SectionEightLaws)
     {M L : S.GlobalLattice} :
     S.IsNRegular L 2 → G.isHalfScaleOf M L → S.IsNRegular M 2 :=
   H.scalingRegularity.nRegular_of_halfScale (G := G) 2
+
+/-- The global--local maximality equivalence, now derived from its two
+O'Meara 82K directions rather than stored as a `SectionEightLaws` field. -/
+theorem globalMaximal_iff_localMaximal (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) :
+    G.isGlobalMaximal M ↔
+      ∀ p : S.Place, S.localMaximal (S.localize p M) :=
+  H.globalMaximality.globalMaximal_iff_localMaximal (G := G) M
 
 /-- He (2025), Lemma 8.1(i). -/
 theorem heADC2025Lemma81i (H : G.SectionEightLaws)
