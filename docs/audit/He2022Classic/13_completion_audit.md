@@ -19,7 +19,8 @@
 | Lemma 7.1 | PASS for the author-corrected v5 statement; obsolete broader publisher clause remains refuted for e > 1 |
 | Odd Lemma 7.4 reduction | PASS unconditionally from the complete v5 odd table; historical conditional factorizations remain checked |
 | Theorem 1.3 explicit list and minimality | PASS for both parity branches, every deletion witness, and all numerical counts; semantic sign-off remains provisional |
-| Lemma 8.1, Proposition 8.2, Lemma 8.3, Theorems 1.7--1.9 | CONDITIONAL PASS for the encoded deductions; Proposition 8.2 is derived from four lower globalization/localization laws rather than assumed as a final field; Lemma 8.3 and Theorem 1.8 are exposed only for `n >= 2` even, with no unrestricted odd endpoint; concrete number-field, extension, and strong-approximation instances remain pending; Theorem 1.7 lacks its written odd calculation; Reports 23--28 |
+| Lemma 8.1, Proposition 8.2, Lemma 8.3, Theorems 1.7--1.9 | CONDITIONAL PASS for the encoded deductions; Proposition 8.2 and Theorem 1.9's local-to-global step are derived from lower laws rather than assumed as final fields; Lemma 8.3 and Theorem 1.8 are exposed only for `n >= 2` even, with no unrestricted odd endpoint; concrete number-field, extension, and strong-approximation instances remain pending; Theorem 1.7 lacks its written odd calculation; Reports 23--29 |
+| Theorem 1.9 local-to-global step | CONDITIONAL PASS: global universality is derived target-by-target from localization and an explicit strong-approximation representation law rather than assumed as a final field; concrete instance pending; Report 29 |
 | Corollary 6.3 | even branch PASS; unrestricted odd statement FAIL by a kernel-checked `e=2`, `n=3` counterexample, Reports 24 and 26 |
 | V5 source suitable for whole-paper completion | FAIL; Corollary 6.3 is false as stated and requires a v6 source repair |
 | Unconditional global main theorems | FAIL / pending concrete instances |

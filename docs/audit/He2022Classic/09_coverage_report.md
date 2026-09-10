@@ -34,6 +34,9 @@ Coverage status:
   implementations behind those deductions are not claimed as covered.
   Lemma 8.3 and Theorem 1.8 are covered only for `n >= 2` even; the
   unrestricted odd branches are explicitly excluded by Report 28.
+  Theorem 1.9's local-to-global step is a derived theorem over lower
+  strong-approximation inputs rather than a supplied global conclusion;
+  Report 29.
 
 The previous 0/66 proof claim was stale and is withdrawn. No replacement
 whole-paper percentage is inferred from filename or declaration counts.

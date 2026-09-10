@@ -3,6 +3,8 @@
 Historical note: Report 27 later derives Proposition 8.2 from lower laws, and
 Report 28 replaces the unrestricted Lemma 8.3/Theorem 1.8 endpoint names below
 by explicit `n >= 2`, even-rank versions.
+Report 29 later derives the Theorem 1.9 local-to-global step from localization
+and a separate strong-approximation representation law.
 
 ## Scope
 

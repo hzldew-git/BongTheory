@@ -44,6 +44,10 @@ The proposition-valued definition remains separate from its proof:
   `he2022ClassicTheorem18_even`: conditional even-scope Section 8 and
   global-main-theorem endpoints.  Their arithmetic package is uninstantiated;
   Reports 23 and 28.  No unrestricted odd endpoint remains.
+- `HeClassic2024GlobalData.SumOfSquaresLocalGlobalLaws.sumOfSquares_local_to_global`:
+  derives the local-to-global step of Theorem 1.9 from localization and strong
+  approximation; the compatibility endpoint in `SectionEightLaws` and the
+  full biconditional use this proof; Report 29.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
   testing equivalence.
 - `Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one`: a generic proved
@@ -91,3 +95,5 @@ the conditional global layer.  The focused
 globalization derivation and its compatibility endpoints.
 `BongTest/He2022ClassicEvenExtensionAudit.lean` checks the Report 28 parity
 restriction and the remaining even deduction.
+`BongTest/He2022ClassicStrongApproximationAudit.lean` checks the Report 29
+local-to-global derivation and Theorem 1.9.

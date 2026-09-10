@@ -64,3 +64,10 @@ for `he2022ClassicTheorem18_even`.  The 5,017-job canonical build and
 62,656-declaration imported-closure gate pass.  These facts certify the
 conditional deduction, not the uninstantiated obstruction premise or the
 missing odd branch; Report 28.
+
+At code checkpoint `7c615fc`, the local-to-global derivation and its public
+compatibility endpoint have empty axiom sets, while the full conditional
+Theorem 1.9 reports only `propext`.  The canonical 5,018-job build and the
+62,668-declaration imported-closure gate pass.  The explicit
+`strong_approximation` premise is still a mathematical implementation
+boundary and is not discharged by these axiom reports; Report 29.

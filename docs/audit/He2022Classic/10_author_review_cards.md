@@ -166,4 +166,11 @@ The formal Lemma 8.3 and Theorem 1.8 endpoints additionally require
 The author should confirm this restriction or provide a replacement odd proof
 before a future source version is treated as complete.
 
+For Theorem 1.9, the global-universality conclusion is no longer an input.
+The proof localizes each admissible integral rank-`n` target and then invokes
+an explicit strong-approximation representation law.  The formalization
+expert should instantiate this law for actual number-field lattices and check
+that finite-place representation plus the encoded real-place admissibility is
+exactly the hypothesis used by the cited theorem; see Report 29.
+
 Author decision, reviewer name, date, and signature: not provided.

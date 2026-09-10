@@ -43,6 +43,13 @@ rank.  `Lemma83Laws.local_ramified_obstruction` explicitly requires
 scope of the argument actually written in v5.  No field or theorem supplies
 the unsupported odd branch; see Report 28.
 
+Report 29 removes the global-universality conclusion from the
+`sumOfSquares_local_to_global` field.  The replacement package still assumes
+global integrality of the sum-of-squares lattice, rank and integrality
+localization, and strong approximation for an admissible global target once
+all finite-place representations are known.  The concrete number-field and
+archimedean interpretation of those premises remains open.
+
 `card_heClassicUnitRepresentatives` derives O'Meara 63:9 from the proved
 principal-unit filtration, after constructing the explicit equivalence between
 the published representative index and the intrinsic unit square-class

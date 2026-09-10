@@ -49,3 +49,9 @@ field and checks the published route through an arbitrary local target,
 positive-definite globalization, global representation, localization, and
 equivalence transport.  Reviewers must still reject any claim that the
 abstract globalization law is already a concrete O'Meara 81:14 instance.
+
+The same circularity test applies to Theorem 1.9: a field asserting global
+universality from local universality would merely restate the target.  Report
+29 replaces it by target-wise rank/integrality localization and an explicit
+strong-approximation representation law.  Reviewers must still require a
+concrete number-field instance of that law.

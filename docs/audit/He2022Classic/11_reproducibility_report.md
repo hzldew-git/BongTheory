@@ -86,6 +86,16 @@ unrestricted Lemma 8.3 and Theorem 1.8 endpoints and adds their explicit
 62,656-declaration imported-closure gate pass locally.  Report 28 records the
 source-fidelity reason.  Exact clean-kit verification remains pending.
 
+## Theorem 1.9 strong-approximation checkpoint
+
+Code commit `7c615fcb35e2d8e85d9ab5883019c1505d27f132` replaces the
+final local-to-global universality field by lower localization and
+strong-approximation inputs.  The focused 5,000-job build, direct audit,
+5,018-job canonical build, 30 policy tests, 2,792-source scan, and
+62,668-declaration imported-closure gate pass locally.  Report 29 records the
+remaining concrete arithmetic boundary.  Exact clean-kit verification is a
+later gate.
+
 ## Proposition 8.2 derivation checkpoint
 
 Code commit `ea0f9f1516d41d18c87b8c0ee0757fd8d5e58e1b` replaces the final

@@ -41,6 +41,12 @@ intentional fidelity safeguard: it matches the only case handled by the
 written proof and leaves the unsupported odd branch absent rather than
 encoding it as a supplied conclusion.
 
+Report 29 narrows Theorem 1.9's sufficiency boundary.  The implication from
+finite-place local universality to global universality is now proved by
+localizing an arbitrary admissible global target and invoking a separate
+strong-approximation representation law.  Since that law and the concrete
+localizations remain uninstantiated, this is still conditional evidence.
+
 For Theorem 1.3 the current endpoints prove Lemma 7.4 in both parity branches,
 all of Lemmas 7.7, 7.10, and 7.11, and a literal deletion witness for every
 table row. The odd proof uses the corrected v5 Lemma 7.1 bridge to derive the
