@@ -31,12 +31,13 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md` and Reports 22--24 are part of the review
-scope. Report 24 records that v5 still does not justify the odd-parity
-reduction in Corollary 6.3 and Lemma 8.3; no counterexample is claimed.
+internally proved. `SOURCE_DELTA.md` and Reports 22--26 are part of the review
+scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
+to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
+therefore need either an even-rank restriction or a replacement odd proof.
 
-Project grade: C, partial whole-paper coverage with a disclosed source-version
-regression.
+Project grade: D, because the authoritative v5 source contains a refuted
+unrestricted statement, in addition to incomplete global arithmetic coverage.
 Theorem 1.1 correspondence remains provisional, not human-approved
 `VERIFIED_MATCH`. Trust reports inspect standard logical axioms separately
 from arithmetic interfaces and restricted theorem premises. Reproducibility
@@ -45,6 +46,7 @@ at this checkpoint is partial until exact-commit clean-kit CI is recorded.
 Safe claim: a checked local classification, full v5 Theorem 1.3 testing
 development, and checked conditional Section 8 deductions. Unsafe claim:
 complete formalization or final deployment of the whole paper. Next actions
-are a source decision or proof for the Corollary 6.3/Lemma 8.3 odd branch,
+are a v6 restriction of Corollary 6.3 and a source decision for the affected
+Lemma 8.3/Theorem 1.8 odd branch,
 concrete global arithmetic instances, independent review, and exact-commit
 release verification.

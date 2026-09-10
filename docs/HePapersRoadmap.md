@@ -36,7 +36,8 @@ mathematical work, and human semantic sign-off are separate gates.
 | He classic Theorem 1.1 | complete local equivalence for n >= 2 | proved; human review pending |
 | He classic Theorem 1.3 | literal even and odd tables, both testing equivalences, all counts, and every row-by-row deletion witness | fully formalized from author-corrected v5; human semantic review pending |
 | He classic Theorem 1.5 | local implication for every n >= 1 plus the all-dyadic-primes deduction | local clause proved; global deduction conditionally proved from explicit localization/discriminant laws; concrete instances remain |
-| He classic Section 8 and Theorems 1.7--1.9 | Lemma 8.1, Proposition 8.2, Lemma 8.3, and all global deductions | conditional source logic proved from explicit number-field, extension, and strong-approximation packages; concrete instances remain, and the Corollary 6.3/Lemma 8.3 odd-parity source gap blocks all-ranks promotion; Classic Reports 23--24 |
+| He classic Corollary 6.3 | even branch plus the unrestricted odd statement | even branch proved; `e=2`, `n=3` counterexample refutes the odd statement; Classic Reports 24 and 26 |
+| He classic Section 8 and Theorems 1.7--1.9 | Lemma 8.1, Proposition 8.2, Lemma 8.3, and all global deductions | conditional source logic proved from explicit number-field, extension, and strong-approximation packages; concrete instances remain, and odd Lemma 8.3 invokes the false Corollary 6.3 extension; Classic Reports 23--26 |
 | He ADC Definition 1.1(ii) | local dyadic predicate | formalized |
 | He ADC Lemma 2.1 | local dyadic maximal-testing reduction | proved specialization |
 | He ADC Lemmas 4.11-4.12 | public W/N families and all maximal order-profile branches | proved; independent AI review completed, human review pending |
@@ -67,7 +68,9 @@ mathematical work, and human semantic sign-off are separate gates.
 
 The current milestone is not whole-project completion. The obsolete broader
 Classic publisher Lemma 7.1(ii) has a checked refutation when `e>1`, while its
-author-corrected v5 replacement and downstream Theorem 1.3 are proved. In ADC, one independently
+author-corrected v5 replacement and downstream Theorem 1.3 are proved. The
+authoritative v5 Corollary 6.3 is also refuted in odd rank, so Classic remains
+undeployable as a complete-paper artifact pending v6. In ADC, one independently
 audited `n=2` counterexample affects Lemma 6.8(iv), Theorem 6.2, Theorem
 1.9(ii), and Theorem 1.10. Theorem 7.1 has a repaired proof, and the binary
 classification/count now has an exact corrected catalogue. Concrete
@@ -79,9 +82,10 @@ publication are separate gates from local kernel acceptance.
 
 1. Preserve the checked He--Hu proof chain and finish its independent-review
    and exact-release-commit reproducibility gates.
-2. Obtain an approved source repair for the Classic Corollary 6.3/Lemma 8.3
-   odd-parity gap, then formalize that branch and instantiate the Section 8
-   arithmetic packages for actual number-field lattices and completions,
+2. Obtain an approved v6 restriction or replacement conclusion for Classic
+   Corollary 6.3, and an independent repair of the Lemma 8.3/Theorem 1.8 odd
+   argument; then instantiate the Section 8 arithmetic packages for actual
+   number-field lattices and completions,
    keeping scale integrality distinct from norm integrality and v5 claims
    distinct from obsolete comparison-source text.
 3. Preserve the completed ADC Lemma 2.2 and unit-square-class proofs, then

@@ -18,9 +18,9 @@ concrete number-field localization, finite-extension, discriminant, and
 strong-approximation inputs. The final global deduction of Theorem 1.5,
 Lemmas 8.1 and 8.3, Proposition 8.2, and Theorems 1.7--1.9 are checked only
 conditionally over the explicit proof-data packages documented in Report 23.
-The odd branch of Corollary 6.3 is also not complete because v5 supplies no
-justification for its reduction to even `n`; the same issue reaches Lemma 8.3
-and Theorem 1.8. See Report 24.
+The unrestricted odd branch of Corollary 6.3 is false: the repository now
+contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
+step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.
 
 `SOURCE_DELTA.md` records every comparison-source discrepancy. In particular,
 the obsolete broader publisher Lemma 7.1(ii) has a checked refutation for
@@ -29,4 +29,5 @@ the obsolete broader publisher Lemma 7.1(ii) has a checked refutation for
 This refresh supersedes the earlier statement-only progress descriptions. It
 is not a fresh item-by-item semantic certificate for all 66 numbered items.
 Independent human approvals and clean-build evidence at the final release
-commit remain required. Overall status: partial coverage, Grade C.
+commit remain required. Overall status: partial coverage with a refuted
+source statement, Grade D.

@@ -91,7 +91,7 @@ The corresponding Lean endpoints live in
 Corollary 7.2 bridge, the odd part of Lemma 7.4, and the odd minimality part of
 Theorem 1.3 without assuming the obsolete publisher statement.
 
-## Corollary 6.3 and Lemma 8.3: unresolved odd-parity reduction
+## Corollary 6.3 and Lemma 8.3: false odd clause and downstream gap
 
 The author-corrected v5 Corollary 6.3 is stated without a parity restriction,
 but its proof begins by saying, without a cited reduction, that one may assume
@@ -101,13 +101,24 @@ but its proof begins by saying, without a cited reduction, that one may assume
 terminal conditions, so the printed monotonicity proof cannot simply be
 replayed in odd rank.
 
-The same issue reappears in Lemma 8.3: its statement has no parity condition,
-while its proof again assumes without a reduction that `n >= 2` is even and
-then invokes Corollary 6.3.  The proof of Theorem 1.7 writes out only its even
-case and says that the odd case is similar.
+The omission is not only a proof-coverage gap.  For `e=2` and `n=3`, Lean
+constructs a classic `3`-universal rank-six lattice with good-BONG order
+sequence `[0,0,0,0,2,0]`.  The diagonal lattice made from the same six
+coefficients, after swapping the final two entries, has good-BONG order
+sequence `[0,0,0,0,0,2]`.  Good-BONG orders are invariant under integral
+isometry, so the two lattices are not isometric.  This kernel-checked
+counterexample is
+`exists_he2022ClassicCorollary63_odd_counterexample`; Report 26 gives its
+complete certificate.
 
-This is a proof-coverage gap, not a machine-checked counterexample to the
-statements.  Lean therefore exposes only `he2022ClassicCorollary63_even`; the
-Lemma 8.3 and Theorems 1.7--1.8 endpoints remain conditional on their missing
-local arithmetic/parity steps.  Report 24 gives the exact conservative source
-repair and the alternative obligation needed to retain the all-ranks claims.
+The same unsupported parity step reappears in Lemma 8.3: its statement has no
+parity condition, while its proof again assumes that `n >= 2` is even and
+then invokes the now-refuted odd extension of Corollary 6.3.  This does not by
+itself disprove Lemma 8.3, but its odd proof must be replaced.  The proof of
+Theorem 1.7 writes out only its even case and calls the odd case similar, so
+that odd calculation also remains unsupported.
+
+Lean therefore exposes the valid `he2022ClassicCorollary63_even` together
+with the odd counterexample.  Lemma 8.3 and Theorems 1.7--1.8 remain
+conditional on missing local arithmetic/parity inputs.  Reports 24 and 26
+give the required conservative source repair.

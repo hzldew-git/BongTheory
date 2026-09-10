@@ -22,6 +22,7 @@ import Bong.Bong.He2022ClassicLemma57
 import Bong.Bong.He2022ClassicLemma58
 import Bong.Bong.He2022ClassicTheorem51
 import Bong.Bong.He2022ClassicCorollary63
+import Bong.Bong.He2022ClassicCorollary63OddCounterexample
 import Bong.Bong.He2022ClassicSectionSeven
 import Bong.Bong.He2022ClassicLemma711
 import Bong.Lattice.He2022ClassicSectionEight
@@ -98,10 +99,12 @@ and adds the `C₁(1)` exceptional row when `e>1`.  Those corrected statements,
 the resulting Corollary 7.2 bridge, unconditional odd Lemma 7.4, and odd
 literal minimality are all proved here.  Kernel acceptance and semantic
 agreement with v5 remain separate from independent human sign-off.  Moreover,
-v5 Corollary 6.3 and Lemma 8.3 invoke an unsupported reduction to even `n`;
-only the even Corollary 6.3 is unconditional here, and the downstream affected
-claims remain within the conditional Section 8 boundary documented in audit
-Report 24.
+v5 Corollary 6.3 and Lemma 8.3 invoke an unsupported reduction to even `n`.
+The omitted odd clause of Corollary 6.3 is in fact false: a kernel-checked
+ramification-two, `n=3` counterexample is included, with nonisometry to the
+diagonal lattice proved by good-BONG order invariance.  Only the even
+Corollary 6.3 is retained, and the downstream affected claims remain within
+the conditional Section 8 boundary documented in audit Reports 24 and 26.
 -/
 
 namespace Bong

@@ -39,11 +39,12 @@ Final verifier result: `CLASSIC_FRESH_KIT_EXIT=0`.
 ## Scope boundary
 
 This result establishes source-package integrity, kernel acceptance, and the
-declared transitive-axiom boundary for the exact commit above. It does not
-repair the author-corrected v5 odd-parity proof gap in Corollary 6.3 and Lemma
-8.3, instantiate the remaining number-field arithmetic packages, or supply an
-independent semantic sign-off. Those limitations remain recorded in Report
-24 and the manifest; the whole-paper grade remains C.
+declared transitive-axiom boundary for the exact commit above. That commit
+predates the kernel-checked counterexample to the author-corrected v5 odd
+Corollary 6.3. It does not instantiate the remaining number-field arithmetic
+packages or supply an independent semantic sign-off. Reports 24 and 26 and
+the current manifest supersede its old gap-only assessment; the current
+whole-paper grade is D.
 
 Because this receipt predates integration into a release branch, the final
 GitHub Review Kit must be regenerated and checked again at its exact release

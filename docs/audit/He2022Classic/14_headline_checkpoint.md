@@ -78,8 +78,9 @@ clean-kit CI and final release verification remain separate obligations.
 
 ## Conclusion
 
-Grade C is appropriate for this partial development with a disclosed source
-obstruction. The refutation is not advertised as a positive proof of the
+Grade C was appropriate at this historical checkpoint. Reports 24 and 26
+subsequently establish a second, v5-specific counterexample and set the
+current grade to D. The earlier refutation is not advertised as a positive proof of the
 literal lemma, and the qualified odd theorem is not advertised as an
 unconditional match. The remaining work includes proof coverage, source
 resolution, clean verification, and human review.

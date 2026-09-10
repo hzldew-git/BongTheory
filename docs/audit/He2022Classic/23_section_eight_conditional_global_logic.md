@@ -55,7 +55,8 @@ the abstract local premise with the concrete `GoodBONG` endpoint.
 - `he2022ClassicLemma83` exposes the local obstruction under a ramified finite
   extension.  This remains a single premise not only because scalar-extension
   infrastructure is absent, but also because v5 does not justify its opening
-  reduction to even `n`; see Report 24.
+  reduction to even `n` and the invoked odd Corollary 6.3 extension is false;
+  see Reports 24 and 26.
 - `he2022ClassicTheorem18` localizes universality on both sides and contradicts
   Lemma 8.3 at the selected pair of places.
 - `he2022ClassicTheorem19` proves the sums-of-squares biconditional. Necessity
@@ -78,8 +79,9 @@ instances for:
 - the diagonal integer coefficient argument in Theorem 1.7; and
 - all local cases and strong approximation in the sufficiency of Theorem 1.9.
 
-In addition, unconditional Lemma 8.3 and Theorem 1.8 require either a proved
-odd-rank local argument or an explicit even-rank restriction in the source.
+In addition, unconditional Lemma 8.3 and Theorem 1.8 require either a new
+odd-rank local argument not using the false Corollary 6.3 extension or an
+explicit even-rank restriction in the source.
 
 No conditional endpoint is promoted to an unconditional source match until
 these fields have concrete instances and have passed independent semantic

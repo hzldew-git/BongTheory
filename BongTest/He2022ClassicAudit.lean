@@ -239,6 +239,7 @@ open Bong.Lattice.QuadraticLatticeModel
 #check Bong.BONG.GoodBONG.he2022ClassicTheorem15_unary
 #check Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks
 #check Bong.BONG.GoodBONG.he2022ClassicCorollary63_even
+#check Bong.BONG.exists_he2022ClassicCorollary63_odd_counterexample
 #check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails
 #check Bong.BONG.GoodBONG.he2022ClassicLemma71v5_ambient_dichotomy
 #check Bong.BONG.GoodBONG.he2022ClassicLemma71v5_C1OneModel_represents_evenHOneModel
@@ -285,6 +286,7 @@ open Bong.Lattice.QuadraticLatticeModel
 #print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15_unary
 #print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks
 #print axioms Bong.BONG.GoodBONG.he2022ClassicCorollary63_even
+#print axioms Bong.BONG.exists_he2022ClassicCorollary63_odd_counterexample
 #print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma71v5_C1OneModel_represents_evenHOneModel
 #print axioms Bong.BONG.GoodBONG.he2022ClassicLemma71v5_lowDefect_represents

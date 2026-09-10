@@ -18,13 +18,13 @@ localization, extension, discriminant, and strong-approximation inputs are
 uninstantiated proof-data packages and must not be reported as unconditional
 theorems.
 
-There is also a source-level parity boundary. V5 Corollary 6.3 and Lemma 8.3
+There is also a source-level parity failure. V5 Corollary 6.3 and Lemma 8.3
 are stated without restricting `n`, but each proof assumes without a supplied
 reduction that `n` is even. The even and odd clauses of Theorem 1.1 have
-different terminal hypotheses, so this is not discharged by renaming an
-index. The code proves only the even Corollary 6.3 and treats the downstream
-Lemma 8.3/Theorem 1.8 step as conditional. This is an unclosed proof gap, not
-a claimed counterexample; see Report 24.
+different terminal hypotheses. The code proves the even Corollary 6.3 and
+constructs an `e=2`, `n=3` counterexample to its odd conclusion. The
+downstream Lemma 8.3/Theorem 1.8 step remains conditional and requires a new
+odd proof or a parity restriction. See Reports 24 and 26.
 
 The broader Lemma 7.1(ii) disjunction in the publisher comparison copy fails
 when `e>1`; the repository retains its checked refutation. Author-corrected v5

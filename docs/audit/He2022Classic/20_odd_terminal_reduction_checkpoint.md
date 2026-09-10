@@ -46,5 +46,6 @@ Lemma 7.1(ii) is neither assumed nor hidden behind a renamed interface.
 
 This obligation is no longer current: v5 Lemma 7.1 yields
 `all_publishedOdd_implies_all_publishedEven_v5`, and Theorem 1.3(ii) plus odd
-literal minimality are now proved. The overall project grade remains C for
-unrelated global and human-review gaps.
+literal minimality are now proved. This sentence records the historical
+checkpoint only; Reports 24 and 26 subsequently lower the current project
+grade to D after refuting the unrestricted odd Corollary 6.3.

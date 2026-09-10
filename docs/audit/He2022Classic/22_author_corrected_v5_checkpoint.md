@@ -58,8 +58,9 @@ the repository as a regression theorem and is not used in the v5 proof.
 
 This checkpoint closes the previously open local odd-testing obligation.  It
 is a historical checkpoint: Report 23 subsequently added conditional Section
-8 logic, and Report 24 records the still unresolved odd-parity reduction in
-Corollary 6.3 and Lemma 8.3.  Concrete number-field instances, independent
+8 logic, and Reports 24 and 26 subsequently upgrade the odd-parity concern
+to a checked counterexample to unrestricted Corollary 6.3. Concrete
+number-field instances, independent
 human semantic sign-off, exact clean-kit reproducibility, and deployment
 remain separate gates. GitHub deployment is still disabled by the paper
 manifest.

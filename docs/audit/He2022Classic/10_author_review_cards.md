@@ -101,21 +101,23 @@ rowwise deletion arguments independently.
 The author's provision of v5 selects the source version but does not itself
 constitute independent semantic or Lean-expert sign-off.
 
-## Corollary 6.3 and Lemma 8.3: parity decision required
+## Corollary 6.3 and Lemma 8.3: v6 repair required
 
 Paper locations: v5 lines 1361--1365 and 1681--1692. Both statements are
 unrestricted in parity, but both proofs begin by assuming that `n` is even
 without a cited reduction. The even proof uses terminal-order conclusions
 which are not the literal odd clause of Theorem 1.1.
 
-Current status: `SOURCE_REPAIR_REQUIRED_FOR_WHOLE_PAPER_COMPLETION`. The
-formal code proves only `he2022ClassicCorollary63_even`; Lemma 8.3 and Theorem
-1.8 stay conditional. Question for the author/domain expert: should the
-statements be restricted to even `n`, or can an explicit odd-rank proof be
-supplied? Report 24 gives the two admissible repair routes. Formalization of
-the affected all-ranks claims should not be promoted before this decision.
+Current status: `SOURCE_STATEMENT_FALSE_IN_ODD_RANK`. The formal code proves
+`he2022ClassicCorollary63_even` and constructs an `e=2`, `n=3` source lattice
+that is classic `3`-universal but not isometric to the diagonal lattice with
+the same displayed coefficients. Therefore Corollary 6.3 must be restricted
+to even `n >= 2` or replaced by a genuinely different odd conclusion. Lemma
+8.3 and Theorem 1.8 stay conditional and need the same restriction or a new
+odd proof. Reports 24 and 26 give the formal certificate and minimal repair.
 
-Author decision, reviewer name, date, and signature: not provided.
+Author decision on the v6 repair, reviewer name, date, and signature: not
+provided.
 
 ## Section 8 and Theorems 1.7--1.9: conditional arithmetic layer
 

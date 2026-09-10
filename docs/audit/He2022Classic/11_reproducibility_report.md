@@ -24,8 +24,9 @@ structural verification of 1,993 payload files, a fresh-extraction 5,028-job
 build, `BongTest.He2022ClassicAudit`, and the enforcing
 `BongTest.PaperAxiomGate` over 62,622 declarations. Report 25 fixes the archive
 hash and complete receipt. This is kernel and local-environment evidence only;
-the v5 source-level parity gap remains a semantic limitation rather than a
-build failure.
+that archive predates the subsequently proved Corollary 6.3 odd
+counterexample. It remains valid evidence for its exact older commit, but it
+is not a current semantic or complete-paper certificate.
 
 ## Subsequent clean-kit CI checkpoint
 
@@ -52,7 +53,7 @@ correction in `../HePaperDeploymentCheckpoint-20260905.md`.
 The current checkpoint includes the unary branch, a complete local n >= 1
 dispatcher, corrected v5 Lemma 7.1, Lemma 7.7, complete Lemmas 7.10--7.11,
 both literal-minimal halves of Theorem 1.3, and the conditional Section 8
-logic of Report 23, with the v5 source gap separated in Report 24. Local build
+logic of Report 23, with the v5 source failure separated in Reports 24 and 26. Local build
 and audit evidence has been refreshed by the exact local Review Kit in Report
 25. A GitHub-generated kit for the eventual release commit is still required;
 the historical artifacts below do not certify that future commit.

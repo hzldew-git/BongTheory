@@ -8,7 +8,7 @@ comparison-only.
 
 Code checkpoint: current local v5 working tree on `feat/he-formalization`;
 exact clean release commit pending. Proof assistant: Lean 4.32.1.
-Dependencies: the committed Lake manifest. Date: 2026-09-09. Project grade: C.
+Dependencies: the committed Lake manifest. Date: 2026-09-11. Project grade: D.
 
 Theorem 1.1 has a checked proof and provisional semantic correspondence.
 Theorem 1.3 is checked in both parity branches, including literal minimality.
@@ -16,8 +16,10 @@ Theorem 1.5 has its complete local n >= 1 implication,
 and its final global deduction is conditionally checked over explicit
 number-field laws. Theorems 1.7-1.9 and all numbered Section 8 deductions have
 conditional endpoints; their concrete arithmetic instances are not supplied.
-Corollary 6.3 is checked only for even `n`; v5 supplies no reduction for its
-odd branch, and Lemma 8.3/Theorem 1.8 inherit this source boundary (Report 24).
+Corollary 6.3 is checked for even `n`, while a kernel-checked `e=2`, `n=3`
+counterexample refutes its unrestricted odd statement. Lemma 8.3/Theorem 1.8
+therefore require a parity restriction or a replacement odd proof (Reports
+24 and 26).
 The even Lemma 7.4 result,
 Lemma 7.7, all three clauses of Lemma 7.10, the even literal-minimal endpoint,
 the corrected v5 Lemma 7.1, both testing equivalences, both literal-minimal
