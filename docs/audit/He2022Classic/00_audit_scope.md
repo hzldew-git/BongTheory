@@ -25,6 +25,9 @@ transport laws rather than stored as a final-conclusion field.
 Report 29 likewise derives the local-to-global half of Theorem 1.9 from
 integrality, localization, and an explicit strong-approximation representation
 law rather than storing global universality as a field.
+Report 30 replaces an unused full discriminant/ramification biconditional by
+the single direction used in the paper and derives the ramified dyadic-place
+witness required by Theorem 1.7.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

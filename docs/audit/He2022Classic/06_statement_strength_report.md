@@ -47,6 +47,12 @@ localizing an arbitrary admissible global target and invoking a separate
 strong-approximation representation law.  Since that law and the concrete
 localizations remain uninstantiated, this is still conditional evidence.
 
+Report 30 further weakens the assumed arithmetic interface without weakening
+any formal conclusion: the former full equivalence between odd discriminant
+and dyadic ramification index one is replaced by the single direction used by
+Theorems 1.5, 1.7, and 1.9.  The existence of a ramified dyadic place under an
+even discriminant is proved by contraposition.
+
 For Theorem 1.3 the current endpoints prove Lemma 7.4 in both parity branches,
 all of Lemmas 7.7, 7.10, and 7.11, and a literal deletion witness for every
 table row. The odd proof uses the corrected v5 Lemma 7.1 bridge to derive the

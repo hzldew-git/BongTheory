@@ -71,3 +71,9 @@ Theorem 1.9 reports only `propext`.  The canonical 5,018-job build and the
 62,668-declaration imported-closure gate pass.  The explicit
 `strong_approximation` premise is still a mathematical implementation
 boundary and is not discharged by these axiom reports; Report 29.
+
+At code checkpoint `46bf941`, the global Theorem 1.5 and conditional Theorem
+1.9 endpoints have empty axiom sets after replacing the discriminant
+biconditional by a one-way law.  The derived ramified-place witness and
+Theorem 1.7 use only the three expected foundational axioms.  The canonical
+5,019-job build and 62,676-declaration imported-closure gate pass; Report 30.

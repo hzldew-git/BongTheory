@@ -173,4 +173,10 @@ expert should instantiate this law for actual number-field lattices and check
 that finite-place representation plus the encoded real-place admissibility is
 exactly the hypothesis used by the cited theorem; see Report 29.
 
+For the discriminant step, the implementation assumes only that ramification
+index one at every dyadic place implies odd discriminant.  It derives the
+ramified-place witness for an even discriminant by contraposition.  The
+number-field expert should confirm this orientation and instantiate it for
+the concrete discriminant convention; see Report 30.
+
 Author decision, reviewer name, date, and signature: not provided.

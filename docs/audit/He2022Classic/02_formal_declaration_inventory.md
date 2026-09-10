@@ -48,6 +48,10 @@ The proposition-valued definition remains separate from its proof:
   derives the local-to-global step of Theorem 1.9 from localization and strong
   approximation; the compatibility endpoint in `SectionEightLaws` and the
   full biconditional use this proof; Report 29.
+- `HeClassic2024GlobalData.DiscriminantRamificationLaws` and
+  `exists_ramifiedDyadic_of_not_discriminantOdd`: the one-way discriminant
+  criterion and its derived contrapositive witness used by Theorems 1.5, 1.7,
+  and 1.9; Report 30.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
   testing equivalence.
 - `Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one`: a generic proved
@@ -97,3 +101,5 @@ globalization derivation and its compatibility endpoints.
 restriction and the remaining even deduction.
 `BongTest/He2022ClassicStrongApproximationAudit.lean` checks the Report 29
 local-to-global derivation and Theorem 1.9.
+`BongTest/He2022ClassicDiscriminantRamificationAudit.lean` checks the Report
+30 directional criterion and its three consumers.

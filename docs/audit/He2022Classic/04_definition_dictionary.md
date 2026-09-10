@@ -12,6 +12,7 @@
 | positive definite global rank-`n` representation hypothesis | `HeClassic2024GlobalData.RepresentsAllPositiveDefiniteClassicAtRank` |
 | Proposition 8.2 globalization/localization inputs | `HeClassic2024GlobalData.Proposition82Laws` |
 | Theorem 1.9 local-to-global inputs | `HeClassic2024GlobalData.SumOfSquaresLocalGlobalLaws` |
+| one-way discriminant/ramification input | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
 on a standing prose convention.

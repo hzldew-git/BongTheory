@@ -37,6 +37,9 @@ Coverage status:
   Theorem 1.9's local-to-global step is a derived theorem over lower
   strong-approximation inputs rather than a supplied global conclusion;
   Report 29.
+  The ramified dyadic-place witness used by Theorem 1.7 is derived from the
+  one-way discriminant criterion; the unused reverse direction is removed;
+  Report 30.
 
 The previous 0/66 proof claim was stale and is withdrawn. No replacement
 whole-paper percentage is inferred from filename or declaration counts.

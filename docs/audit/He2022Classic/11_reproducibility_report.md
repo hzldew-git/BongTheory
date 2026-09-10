@@ -96,6 +96,16 @@ strong-approximation inputs.  The focused 5,000-job build, direct audit,
 remaining concrete arithmetic boundary.  Exact clean-kit verification is a
 later gate.
 
+## Discriminant/ramification direction checkpoint
+
+Code commit `46bf941e3edc83b7dc2fb115bdd8b0215a73653f` replaces the unused
+full biconditional by the direction used in the global proofs and derives the
+ramified dyadic-place witness.  The focused 5,000-job build, direct audit,
+5,019-job canonical build, 30 policy tests, 2,794-source scan, and
+62,676-declaration imported-closure gate pass locally.  Report 30 records the
+remaining concrete number-field premise.  Exact clean-kit verification is a
+later gate.
+
 ## Proposition 8.2 derivation checkpoint
 
 Code commit `ea0f9f1516d41d18c87b8c0ee0757fd8d5e58e1b` replaces the final

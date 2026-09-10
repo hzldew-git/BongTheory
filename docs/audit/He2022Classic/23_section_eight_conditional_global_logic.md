@@ -5,6 +5,8 @@ Report 28 replaces the unrestricted Lemma 8.3/Theorem 1.8 endpoint names below
 by explicit `n >= 2`, even-rank versions.
 Report 29 later derives the Theorem 1.9 local-to-global step from localization
 and a separate strong-approximation representation law.
+Report 30 later replaces the full discriminant/ramification equivalence by
+the one direction actually used and derives its contrapositive witness.
 
 ## Scope
 

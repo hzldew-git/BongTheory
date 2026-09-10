@@ -55,3 +55,8 @@ universality from local universality would merely restate the target.  Report
 29 replaces it by target-wise rank/integrality localization and an explicit
 strong-approximation representation law.  Reviewers must still require a
 concrete number-field instance of that law.
+
+The discriminant interface is also checked for excess strength.  Report 30
+removes the unused reverse implication and derives the ramified-place witness
+by contradiction.  Reviewers must still require a concrete proof that all
+dyadic ramification indices equal to one force odd discriminant.

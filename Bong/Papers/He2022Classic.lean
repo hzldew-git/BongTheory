@@ -97,6 +97,8 @@ from lower positive-definite globalization, localization, and representation-
 transport laws rather than stored as a final-conclusion field.  Theorem 1.9's
 local-to-global step is likewise derived from rank and integrality
 localization plus an explicit strong-approximation representation law.  The
+discriminant layer assumes only the direction used by the applications and
+derives the ramified dyadic-place witness by contraposition.  The
 publisher's broader Lemma 7.1(ii)
 remains false when the ramification index is greater than one;
 its kernel-checked counterexample is retained as a regression result.  The
@@ -113,8 +115,7 @@ Corollary 6.3 is retained, and the downstream affected claims remain within
 the conditional Section 8 boundary documented in audit Reports 24 and 26.
 Only the explicit `n ≥ 2`, even-rank parts of Lemma 8.3 and Theorem 1.8 are
 exported; no unrestricted odd compatibility endpoint remains.  Reports
-27--29 document the lowered Proposition 8.2 interface, this parity scope, and
-the strong-approximation derivation.
+27--30 document these lowered interfaces and the parity scope.
 -/
 
 namespace Bong

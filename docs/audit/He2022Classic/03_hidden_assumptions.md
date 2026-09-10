@@ -50,6 +50,12 @@ localization, and strong approximation for an admissible global target once
 all finite-place representations are known.  The concrete number-field and
 archimedean interpretation of those premises remains open.
 
+Report 30 removes the unused reverse direction of the
+discriminant/ramification equivalence.  The one remaining arithmetic premise
+says that ramification index one at every dyadic place implies odd
+discriminant.  Its contrapositive existence witness is derived in Lean, but a
+concrete number-field instance of the forward direction is still required.
+
 `card_heClassicUnitRepresentatives` derives O'Meara 63:9 from the proved
 principal-unit filtration, after constructing the explicit equivalence between
 the published representative index and the intrinsic unit square-class
