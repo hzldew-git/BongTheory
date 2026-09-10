@@ -326,12 +326,14 @@ variable
 
 variable (X : HeClassic2024ExtensionData Sbase Sextension)
 
-/-- The local scalar-extension obstruction proved as Lemma 8.3.  Its
-implementation requires concrete localization and the good-BONG transport in
-Lemma 8.1, so it is kept as the single arithmetic field of this package. -/
+/-- The even-rank local scalar-extension obstruction proved by the written
+argument of Lemma 8.3.  Its implementation requires concrete localization and
+the good-BONG transport in Lemma 8.1, so it is kept as the single arithmetic
+field of this package.  The unrestricted odd-rank statement is deliberately
+not included. -/
 structure Lemma83Laws : Prop where
   local_ramified_obstruction (L : Sbase.GlobalLattice) (n : Nat) :
-    Sbase.globalRank L = n + 3 →
+    2 ≤ n → Even n → Sbase.globalRank L = n + 3 →
       1 < X.relativeRamificationIndex →
         Sbase.IsNUniversalAt L X.basePlace n →
           ¬ Sextension.IsNUniversalAt
@@ -342,41 +344,45 @@ namespace Lemma83Laws
 variable
   {X : HeClassic2024ExtensionData Sbase Sextension}
 
-/-- He (2024), Lemma 8.3, with the chosen ramified pair of dyadic places
-stored in `X`. -/
-theorem he2022ClassicLemma83 (H : X.Lemma83Laws)
+/-- The even-rank part of He (2024), Lemma 8.3, with the chosen ramified pair
+of dyadic places stored in `X`.  The v5 proof supplies no valid reduction of
+the odd case to this one. -/
+theorem he2022ClassicLemma83_even (H : X.Lemma83Laws)
     (L : Sbase.GlobalLattice) (n : Nat)
+    (hn : 2 ≤ n) (hEven : Even n)
     (hRank : Sbase.globalRank L = n + 3)
     (hRamified : 1 < X.relativeRamificationIndex)
     (hUniversal : Sbase.IsNUniversalAt L X.basePlace n) :
     ¬ Sextension.IsNUniversalAt
       (X.baseChangeGlobal L) X.extensionPlace n :=
-  H.local_ramified_obstruction L n hRank hRamified hUniversal
+  H.local_ramified_obstruction L n hn hEven hRank hRamified hUniversal
 
-/-- He (2024), Theorem 1.8.  Global universality on either side is localized
-by Proposition 8.2, and Lemma 8.3 supplies the contradiction at the selected
-ramified pair of places. -/
-theorem he2022ClassicTheorem18
+/-- The even-rank part of He (2024), Theorem 1.8.  Global universality on
+either side is localized by Proposition 8.2, and the proved-scope part of
+Lemma 8.3 supplies the contradiction at the selected ramified pair of
+places. -/
+theorem he2022ClassicTheorem18_even
     {Gbase : HeClassic2024GlobalData Sbase}
     {Gextension : HeClassic2024GlobalData Sextension}
     (H : X.Lemma83Laws)
     (Hbase : Gbase.SectionEightLaws)
     (Hextension : Gextension.SectionEightLaws)
-    (L : Sbase.GlobalLattice) (n : Nat) (hn : 1 ≤ n)
+    (L : Sbase.GlobalLattice) (n : Nat) (hn : 2 ≤ n) (hEven : Even n)
     (hRank : Sbase.globalRank L = n + 3)
     (hRamified : 1 < X.relativeRamificationIndex)
     (hUniversal : Sbase.IsGloballyNUniversal L n) :
     ¬ Sextension.IsGloballyNUniversal (X.baseChangeGlobal L) n := by
   have hBaseLocal : Sbase.IsNUniversalAt L X.basePlace n :=
-    Hbase.he2022ClassicProposition82 L X.basePlace n hn hUniversal
+    Hbase.he2022ClassicProposition82 L X.basePlace n (by omega) hUniversal
   have hNotExtensionLocal :
       ¬ Sextension.IsNUniversalAt
         (X.baseChangeGlobal L) X.extensionPlace n :=
-    H.he2022ClassicLemma83 L n hRank hRamified hBaseLocal
+    H.he2022ClassicLemma83_even L n hn hEven hRank hRamified hBaseLocal
   intro hExtensionUniversal
   exact hNotExtensionLocal
     (Hextension.he2022ClassicProposition82
-      (X.baseChangeGlobal L) X.extensionPlace n hn hExtensionUniversal)
+      (X.baseChangeGlobal L) X.extensionPlace n (by omega)
+      hExtensionUniversal)
 
 end Lemma83Laws
 

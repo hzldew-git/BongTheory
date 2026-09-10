@@ -7,6 +7,7 @@ import Bong.Papers.He2022Classic
 import Bong.Bong.He2022ClassicLemma75
 import Bong.Bong.He2022ClassicLemma78
 import Bong.Bong.He2022ClassicLemma79
+import BongTest.He2022ClassicEvenExtensionAudit
 import BongTest.He2022ClassicProposition82Audit
 
 /-! Kernel and trust-boundary audit for He's classic paper entry. -/
@@ -386,8 +387,8 @@ proof-data packages. -/
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_atPlace
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17
-#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83
-#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem19
 
 #print axioms Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81iii
@@ -395,5 +396,5 @@ proof-data packages. -/
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17
-#print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18
+#print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem19
