@@ -16,6 +16,8 @@ place bridge.
 Report 33 replaces the unrestricted Theorem 1.7 endpoint by an explicit
 even-rank endpoint and a parity-independent final contradiction with the
 missing local-defect calculation stated as a premise.
+Report 34 derives the discriminant bridge's primality and coverage fields from
+an equivalence with the standard height-one spectrum.
 
 ## Scope
 
@@ -94,8 +96,9 @@ instances for:
 - number-field lattices and their finite localizations;
 - O'Meara 81:14 globalization used in Proposition 8.2;
 - valuation, defect, and good-BONG transport under local field extension;
-- the structural bridge between abstract places and actual number-field prime
-  ideals (the discriminant theorem itself is proved in Report 32);
+- the equivalence and arithmetic compatibility between abstract places and
+  the standard height-one spectrum (the discriminant theorem and bridge
+  coverage are proved in Reports 32 and 34);
 - the diagonal integer coefficient argument in odd-rank Theorem 1.7; and
 - all local cases and strong approximation in the sufficiency of Theorem 1.9.
 

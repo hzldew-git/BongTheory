@@ -67,6 +67,10 @@ by contradiction.  Report 31 reveals and separately names the converse needed
 by the unary sufficiency branch. Report 32 proves both directions for actual
 prime ideals and transports them through an explicit place bridge. Reviewers
 must therefore check the bridge, rather than demand new arithmetic axioms.
+Report 34 removes the bridge's separate primality and coverage fields by
+deriving them from an equivalence with the standard height-one spectrum.
+Reviewers must still inspect that equivalence and the dyadic, ramification,
+and discriminant compatibility statements in a future concrete model.
 
 The same anti-circularity test is applied to the finite-place half of Theorem
 1.9.  Report 31 removes the former field that asserted the complete quantified

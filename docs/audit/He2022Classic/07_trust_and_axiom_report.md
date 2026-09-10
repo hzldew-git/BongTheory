@@ -99,3 +99,12 @@ audit build completes 5,665 jobs; all 30 policy tests pass; the scanner checks
 2,796 tracked Lean sources; and the full imported-closure gate reports
 `AXIOM_GATE_PASS: 70695 declarations checked`.  These checks certify the
 scope-safe deductions, not the absent odd coefficient calculation; Report 33.
+
+At code checkpoint `48956eb`, the height-one-spectrum identification derives
+the older discriminant bridge, including primality and coverage, using only
+`propext`, `Classical.choice`, and `Quot.sound`. The combined canonical and
+focused audit build completes 5,665 jobs; all 30 policy tests and the
+2,796-source scanner pass; and the full imported-closure gate reports
+`AXIOM_GATE_PASS: 70718 declarations checked`. The remaining equivalence and
+compatibility fields are ordinary premises of a future concrete global model;
+Report 34.

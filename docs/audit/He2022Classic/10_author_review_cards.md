@@ -86,12 +86,15 @@ Beli's universal criterion, and proves alpha_1 > 1 by checking every candidate
 in its defining finite minimum. The n >= 2 branch is the previously checked
 Theorem 1.1 argument. The all-dyadic-primes conclusion is separately proved
 by `he2022ClassicTheorem15_discriminantOdd`; Report 32 proves the required
-number-field discriminant theorem and supplies its typed place bridge.
+number-field discriminant theorem and supplies its typed place bridge. Report
+34 derives the bridge's primality and coverage fields from the standard
+height-one-spectrum model.
 
 Common definitions and assumptions: classic integrality, classic
 n-universality, rank bound, unsigned adjacent defects, and dyadic valuation.
-Difference: the concrete localizations and place bridge are not yet
-constructed; the discriminant theorem itself is now proved.
+Difference: the concrete localizations, height-one-spectrum equivalence, and
+three arithmetic compatibility statements are not yet constructed; the
+discriminant theorem, primality, and dyadic-prime coverage are proved.
 
 Current status: `FULLY_FORMALIZED_LOCAL_COMPONENT` plus
 `CONDITIONAL_FORMALIZATION` of the global deduction; relationship to the full
@@ -186,7 +189,9 @@ discriminant is equivalent to ramification index one at every dyadic prime
 ideal. It also proves the even-discriminant witness and positivity. The
 number-field expert should now review only the structural identification of
 the abstract finite places and indices with these prime ideals; see Reports 30
-and 32.
+and 32. Report 34 narrows that review to the height-one-spectrum equivalence
+and compatibility of the dyadic predicate, ramification index, and
+discriminant proposition.
 
 For Theorem 1.9's finite-place step, the all-places conclusion is now derived
 from separate non-dyadic, dyadic unary, and dyadic higher-rank laws.  The

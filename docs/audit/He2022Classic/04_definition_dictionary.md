@@ -16,7 +16,7 @@
 | odd number-field discriminant | `HeClassic2024NumberField.DiscriminantOdd` |
 | dyadic prime ideal | `HeClassic2024NumberField.IsDyadicPrime` |
 | concrete discriminant/ramification equivalence | `HeClassic2024NumberField.discriminantOdd_iff_forall_ramificationIdx_eq_one` |
-| abstract-to-number-field place identification | `HeClassic2024GlobalData.NumberFieldDiscriminantBridge` |
+| abstract-to-number-field place identification | `HeClassic2024GlobalData.HeightOneSpectrumIdentification`, which derives `NumberFieldDiscriminantBridge` |
 | generic one-way discriminant package | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
@@ -35,3 +35,6 @@ The concrete equivalence, its two directions, the ramified-prime witness, and
 ramification-index positivity are proved in Report 32. The generic package is
 constructed from `NumberFieldDiscriminantBridge`; it is no longer a separate
 number-field arithmetic obligation.
+`HeightOneSpectrumIdentification.numberFieldDiscriminantBridge` further
+derives bridge primality and dyadic-prime coverage from the standard
+height-one-spectrum place type; see Report 34.

@@ -154,3 +154,14 @@ audit build completes 5,665 jobs, all 30 policy tests pass, the scanner checks
 2,796 tracked Lean sources, and the full imported-closure gate reports
 `AXIOM_GATE_PASS: 70695 declarations checked`. Report 33 records the exact
 scope. Fresh-extraction Review Kit verification is still pending.
+
+## Height-one-spectrum bridge checkpoint
+
+Code commit `48956eb32d2aa1ba7220ef5d9fb2c8c06904b0c8` derives
+`NumberFieldDiscriminantBridge` from an equivalence with the standard
+height-one spectrum and three arithmetic compatibility statements. Primality
+and dyadic-prime coverage are proved. The combined canonical and focused
+audit build completes 5,665 jobs, all 30 policy tests pass, the scanner checks
+2,796 tracked Lean sources, and the full imported-closure gate reports
+`AXIOM_GATE_PASS: 70718 declarations checked`. Report 34 records the remaining
+concrete-model boundary. Fresh-extraction Review Kit verification is pending.

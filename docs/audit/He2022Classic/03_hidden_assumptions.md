@@ -60,7 +60,10 @@ clear that the converse direction is nevertheless required by the unary
 sufficiency branch of Theorem 1.9; it is now a separate field of the specialized
 local-universality package. Report 32 proves both directions for actual prime
 ideals of a number field and constructs these abstract fields from a typed
-place-to-prime-ideal bridge. Only that structural identification remains open.
+place-to-prime-ideal bridge. Report 34 derives the bridge's primality and
+coverage fields from an equivalence with the standard height-one spectrum.
+The equivalence and compatibility of the dyadic predicate, ramification
+index, and discriminant proposition remain open in the concrete global model.
 
 Report 31 removes the all-finite-places local-universality conclusion from
 `SectionEightLaws`. Its replacement originally exposed four inputs. Report 32

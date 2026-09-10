@@ -38,6 +38,10 @@ ideals of a number field, including both directed uses, the ramified-prime
 witness, and positivity. A structural place-to-prime-ideal bridge now
 constructs the formerly abstract discriminant fields; that bridge remains to
 be instantiated as part of the concrete global lattice model.
+Report 34 lowers this interface further: an equivalence with the standard
+height-one spectrum now proves prime-ideal primality and dyadic-prime coverage
+automatically. The place equivalence and three arithmetic compatibility
+statements remain to be supplied by the concrete global lattice model.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

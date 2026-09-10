@@ -42,6 +42,10 @@ the ideal at a place, primality, the dyadic predicate, equality of the two
 ramification-index functions, equality of the two odd-discriminant
 predicates, and coverage of all dyadic prime ideals.
 
+Supersession note: Report 34 derives primality and dyadic-prime coverage from
+an equivalence with the standard height-one spectrum. Those two items no
+longer need to be supplied independently by a concrete implementation.
+
 From this bridge Lean constructs:
 
 - `DiscriminantRamificationLaws` for the necessity arguments;
@@ -53,7 +57,8 @@ From this bridge Lean constructs:
 Consequently the discriminant theorem itself and both of its logical
 directions are no longer unproved Section 8 arithmetic premises.  What remains
 is the type-level identification of the repository's abstract place data with
-the actual number-field prime ideals.
+the standard height-one spectrum and compatibility of the three arithmetic
+predicates/functions; Report 34 records this reduced interface.
 
 ## Mechanical evidence
 

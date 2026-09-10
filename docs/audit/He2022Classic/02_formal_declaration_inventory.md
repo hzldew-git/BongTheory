@@ -65,6 +65,10 @@ The proposition-valued definition remains separate from its proof:
   theorems: transport the concrete number-field result to the abstract place
   layer and fill both discriminant directions and ramification-index
   positivity; Report 32.
+- `HeClassic2024GlobalData.HeightOneSpectrumIdentification` and
+  `numberFieldDiscriminantBridge`: reduce the abstract-place bridge to an
+  equivalence with the standard height-one spectrum and three compatibility
+  statements; primality and dyadic-prime coverage are proved; Report 34.
 - `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` and
   `sumOfSquares_localUniversal_of_oddDiscriminant`: the non-dyadic, dyadic
   unary, and dyadic higher-rank inputs and their derived all-finite-place

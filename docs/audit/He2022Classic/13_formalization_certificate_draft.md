@@ -34,6 +34,9 @@ Foundational axioms expected by the audit are propositional extensionality,
 classical choice, and quotient soundness. Arithmetic interfaces and all
 additional premises remain disclosed in reports 03 and 07. No source result
 is assumed to bypass the recorded obstruction.
+The discriminant theorem is concrete, and the height-one-spectrum bridge now
+derives primality and dyadic-prime coverage; the concrete global lattice model
+still must supply its place equivalence and compatibility statements.
 
 Reproducibility: `PARTIALLY_REPRODUCIBLE` at this checkpoint, pending its
 exact-commit clean-kit verification. Author approval: not provided. Domain

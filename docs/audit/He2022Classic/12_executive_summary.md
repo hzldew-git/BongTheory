@@ -33,6 +33,10 @@ converse direction at its actual use in Theorem 1.9's unary sufficiency branch.
 Report 32 proves both directions, the ramified-prime witness, and positivity
 for actual number-field prime ideals and transports them through a typed place
 bridge; only that structural identification remains at this step.
+Report 34 derives primality and dyadic-prime coverage from an equivalence with
+the standard height-one spectrum. A concrete global model now needs only that
+equivalence and compatibility of the dyadic predicate, ramification index,
+and discriminant proposition at this bridge layer.
 Report 31 derives Theorem 1.9's finite-place local-universality conclusion from
 the separate non-dyadic, dyadic unary, and dyadic higher-rank laws in v5; the
 all-places conclusion is no longer stored as a package field.
@@ -50,7 +54,7 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md` and Reports 22--33 are part of the review
+internally proved. `SOURCE_DELTA.md` and Reports 22--34 are part of the review
 scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.

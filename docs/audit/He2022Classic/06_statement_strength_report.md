@@ -66,6 +66,12 @@ even-discriminant witness and positivity, and transports them through a typed
 place bridge. Thus they are no longer unproved arithmetic inputs, although the
 global place identification is still conditional.
 
+Report 34 reduces that identification to an equivalence with the standard
+height-one spectrum and three compatibility statements. Primality and
+coverage of dyadic prime ideals are now theorems, not caller-supplied bridge
+fields. The concrete global lattice model still has to supply the equivalence
+and compatibility statements.
+
 Report 31 removes another final-conclusion field from Theorem 1.9.  Instead of
 assuming local universality at every finite place, the formalization assumes
 the three arithmetic cases named in v5 and proves their exhaustive split.  It
