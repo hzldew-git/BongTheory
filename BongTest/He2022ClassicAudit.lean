@@ -384,6 +384,7 @@ proof-data packages. -/
 
 open Bong.HeClassic2024GlobalData
 
+#check HeightOneSpectrumIdentification.numberFieldDiscriminantBridge
 #check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81i
 #check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81ii
 #check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81iii
@@ -398,6 +399,7 @@ open Bong.HeClassic2024GlobalData
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem19
 
 #print axioms Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81iii
+#print axioms HeightOneSpectrumIdentification.numberFieldDiscriminantBridge
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82_positive
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd

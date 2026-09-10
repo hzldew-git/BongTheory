@@ -262,6 +262,55 @@ structure NumberFieldDiscriminantBridge
     P.IsPrime → HeClassic2024NumberField.IsDyadicPrime K P →
       ∃ p : S.Place, idealAt p = P
 
+/-- Identification of the abstract place type with the standard height-one
+spectrum of the ring of integers.  Unlike `NumberFieldDiscriminantBridge`,
+this interface does not ask callers to re-prove primality or coverage of
+prime ideals: those follow from the equivalence and the dyadic condition. -/
+structure HeightOneSpectrumIdentification
+    (K : Type u') [Field K] [NumberField K] where
+  placeEquiv :
+    S.Place ≃
+      IsDedekindDomain.HeightOneSpectrum
+        (NumberField.RingOfIntegers K)
+  isDyadic_iff (p : S.Place) :
+    G.isDyadic p ↔
+      HeClassic2024NumberField.IsDyadicPrime K
+        (placeEquiv p).asIdeal
+  ramificationIndexAt_eq (p : S.Place) :
+    G.ramificationIndexAt p =
+      (placeEquiv p).asIdeal.ramificationIdx ℤ
+  discriminantOdd_iff :
+    G.discriminantOdd ↔
+      HeClassic2024NumberField.DiscriminantOdd K
+
+namespace HeightOneSpectrumIdentification
+
+variable {G : HeClassic2024GlobalData S}
+  {K : Type u'} [Field K] [NumberField K]
+
+/-- Construct the discriminant bridge from the canonical finite-place type.
+The only nontrivial coverage step observes that a prime ideal containing two
+is nonzero, hence is a point of the height-one spectrum. -/
+def numberFieldDiscriminantBridge
+    (I : G.HeightOneSpectrumIdentification K) :
+    G.NumberFieldDiscriminantBridge K where
+  idealAt p := (I.placeEquiv p).asIdeal
+  idealAt_isPrime p := (I.placeEquiv p).isPrime
+  isDyadic_iff p := I.isDyadic_iff p
+  ramificationIndexAt_eq p := I.ramificationIndexAt_eq p
+  discriminantOdd_iff := I.discriminantOdd_iff
+  exists_place_of_dyadicPrime P hP hDyadic := by
+    have hPne : P ≠ ⊥ := by
+      intro hPbot
+      rw [HeClassic2024NumberField.IsDyadicPrime, hPbot] at hDyadic
+      simp at hDyadic
+    let q : IsDedekindDomain.HeightOneSpectrum
+        (NumberField.RingOfIntegers K) := ⟨P, hP, hPne⟩
+    refine ⟨I.placeEquiv.symm q, ?_⟩
+    simp [q]
+
+end HeightOneSpectrumIdentification
+
 namespace NumberFieldDiscriminantBridge
 
 variable {G : HeClassic2024GlobalData S}
