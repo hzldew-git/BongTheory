@@ -32,7 +32,8 @@ open Bong.HeClassic2024GlobalData
 #check NumberFieldDiscriminantBridge.ramificationIndexAt_pos
 #check SumOfSquaresLocalUniversalityLaws.ofNumberFieldDiscriminantBridge
 #check SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
-#check SectionEightLaws.he2022ClassicTheorem17
+#check SectionEightLaws.he2022ClassicTheorem17_of_localAdjacentDefectsLarge
+#check SectionEightLaws.he2022ClassicTheorem17_even
 #check SectionEightLaws.he2022ClassicTheorem19
 
 #print axioms discriminantOdd_iff_forall_ramificationIdx_eq_one
@@ -43,5 +44,6 @@ open Bong.HeClassic2024GlobalData
 #print axioms SumOfSquaresLocalUniversalityLaws.ofNumberFieldDiscriminantBridge
 #print axioms DiscriminantRamificationLaws.exists_ramifiedDyadic_of_not_discriminantOdd
 #print axioms SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
-#print axioms SectionEightLaws.he2022ClassicTheorem17
+#print axioms SectionEightLaws.he2022ClassicTheorem17_of_localAdjacentDefectsLarge
+#print axioms SectionEightLaws.he2022ClassicTheorem17_even
 #print axioms SectionEightLaws.he2022ClassicTheorem19

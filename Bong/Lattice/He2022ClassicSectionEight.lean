@@ -385,9 +385,9 @@ structure SectionEightLaws : Prop where
     G.isDyadic p → 1 ≤ n → n + 3 ≤ S.globalRank M →
       S.IsNUniversalAt M p n → G.localAdjacentDefectsLarge M p →
         G.ramificationIndexAt p = 1
-  diagonal_localAdjacentDefectsLarge_of_universal
+  diagonal_localAdjacentDefectsLarge_of_universal_even
       (M : S.GlobalLattice) (p : S.Place) (n : Nat) :
-    G.isDiagonalIntegerLattice M → G.isDyadic p →
+    Even n → G.isDiagonalIntegerLattice M → G.isDyadic p →
       1 < G.ramificationIndexAt p → S.globalRank M = n + 3 →
         S.IsNUniversalAt M p n → G.localAdjacentDefectsLarge M p
   sumOfSquares_rank (m : Nat) :
@@ -465,14 +465,15 @@ theorem he2022ClassicTheorem15_discriminantOdd
   exact H.he2022ClassicTheorem15_atPlace M p n hp hn hRank
     (hUniversal p hp) (hDefects p hp)
 
-/-- He (2024), Theorem 1.7.  The coefficient calculation which turns a
-diagonal integer lattice into the large-defect local profile is retained as
-the explicit `diagonal_localAdjacentDefectsLarge_of_universal` arithmetic
-input. -/
-theorem he2022ClassicTheorem17 (H : G.SectionEightLaws)
+/-- The rank-independent contradiction at the end of He (2024), Theorem 1.7.
+The omitted parity-dependent coefficient calculation is an explicit premise. -/
+theorem he2022ClassicTheorem17_of_localAdjacentDefectsLarge
+    (H : G.SectionEightLaws)
     (M : S.GlobalLattice) (n : Nat) (hn : 1 ≤ n)
     (hRank : S.globalRank M = n + 3)
-    (hDiagonal : G.isDiagonalIntegerLattice M)
+    (hLocalDefects : ∀ p : S.Place,
+      G.isDyadic p → 1 < G.ramificationIndexAt p →
+        S.IsNUniversalAt M p n → G.localAdjacentDefectsLarge M p)
     (hDiscriminantEven : ¬ G.discriminantOdd) :
     ¬ S.IsGloballyNUniversal M n := by
   intro hUniversal
@@ -485,12 +486,26 @@ theorem he2022ClassicTheorem17 (H : G.SectionEightLaws)
   have hLocal : S.IsNUniversalAt M p n :=
     H.he2022ClassicProposition82 M p n hn hUniversal
   have hDefects : G.localAdjacentDefectsLarge M p :=
-    H.diagonal_localAdjacentDefectsLarge_of_universal M p n hDiagonal
-      hpDyadic hpRamified hRank hLocal
+    hLocalDefects p hpDyadic hpRamified hLocal
   have hpOne : G.ramificationIndexAt p = 1 :=
     H.he2022ClassicTheorem15_atPlace M p n hpDyadic hn (by omega)
       hLocal hDefects
   omega
+
+/-- The even-rank part of He (2024), Theorem 1.7. The v5 proof performs its
+coefficient calculation for even `n`; its unsupported odd sentence is not
+exported as an unconditional endpoint. -/
+theorem he2022ClassicTheorem17_even (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) (n : Nat) (hn : 2 ≤ n) (hnEven : Even n)
+    (hRank : S.globalRank M = n + 3)
+    (hDiagonal : G.isDiagonalIntegerLattice M)
+    (hDiscriminantEven : ¬ G.discriminantOdd) :
+    ¬ S.IsGloballyNUniversal M n := by
+  apply H.he2022ClassicTheorem17_of_localAdjacentDefectsLarge M n
+    (by omega) hRank _ hDiscriminantEven
+  intro p hpDyadic hpRamified hLocal
+  exact H.diagonal_localAdjacentDefectsLarge_of_universal_even
+    M p n hnEven hDiagonal hpDyadic hpRamified hRank hLocal
 
 /-- He (2024), Theorem 1.9 (the generalized sums-of-squares criterion),
 with the paper's non-totally-real and stable-rank hypotheses explicit. -/

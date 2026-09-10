@@ -382,6 +382,8 @@ open Bong.Lattice.QuadraticLatticeModel
 /-! Section 8 and global main-theorem deductions over explicit arithmetic
 proof-data packages. -/
 
+open Bong.HeClassic2024GlobalData
+
 #check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81i
 #check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81ii
 #check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81iii
@@ -389,7 +391,8 @@ proof-data packages. -/
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_atPlace
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
-#check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17
+#check SectionEightLaws.he2022ClassicTheorem17_of_localAdjacentDefectsLarge
+#check SectionEightLaws.he2022ClassicTheorem17_even
 #check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
 #check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
 #check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem19
@@ -398,6 +401,7 @@ proof-data packages. -/
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82_positive
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
-#print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17
+#print axioms SectionEightLaws.he2022ClassicTheorem17_of_localAdjacentDefectsLarge
+#print axioms SectionEightLaws.he2022ClassicTheorem17_even
 #print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
 #print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem19
