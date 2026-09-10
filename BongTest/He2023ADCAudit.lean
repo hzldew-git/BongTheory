@@ -201,6 +201,10 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws.distinguishing_rank_sublattice
 #check Bong.HeADC2025GlobalData.ScalingStabilityLaws
 #check Bong.HeADC2025GlobalData.ScalingStabilityLaws.locallyTwoADC_scaleTwo_stable
+#check Bong.HeADC2025GlobalData.ScalingRegularityLaws
+#check Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_scaleTwo
+#check Bong.HeADC2025GlobalData.ScalingRegularityLaws.scaleTwo_halfScale
+#check Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_of_halfScale
 #check Bong.HeADC2025GlobalData.SectionEightLaws
 #check Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
 #check Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
@@ -223,6 +227,9 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025GlobalData.LocalMaximalityLaws.local_theorem15
 #print axioms Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws.distinguishing_rank_sublattice
 #print axioms Bong.HeADC2025GlobalData.ScalingStabilityLaws.locallyTwoADC_scaleTwo_stable
+#print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_scaleTwo
+#print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.scaleTwo_halfScale
+#print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_of_halfScale
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.local_theorem15
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii

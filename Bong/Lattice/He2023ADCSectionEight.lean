@@ -228,6 +228,40 @@ theorem locallyTwoADC_scaleTwo_stable
 
 end ScalingStabilityLaws
 
+/-- The scaling-invariance input for regularity in Lemma 8.4 and Corollary
+8.5, together with the intended orientation of the half-scale relation. -/
+structure ScalingRegularityLaws : Prop where
+  nRegular_scaleTwo_iff (M : S.GlobalLattice) (n : Nat) :
+    S.IsNRegular (G.scaleTwo M) n ↔ S.IsNRegular M n
+  isHalfScaleOf_iff (M L : S.GlobalLattice) :
+    G.isHalfScaleOf M L ↔ L = G.scaleTwo M
+
+namespace ScalingRegularityLaws
+
+/-- The forward scaling step used in He (2025), Lemma 8.4. -/
+theorem nRegular_scaleTwo
+    (H : G.ScalingRegularityLaws) (M : S.GlobalLattice) (n : Nat) :
+    S.IsNRegular M n → S.IsNRegular (G.scaleTwo M) n :=
+  (H.nRegular_scaleTwo_iff M n).mpr
+
+/-- A lattice is the half-scale of its two-scaled lattice. -/
+theorem scaleTwo_halfScale
+    (H : G.ScalingRegularityLaws) (M : S.GlobalLattice) :
+    G.isHalfScaleOf M (G.scaleTwo M) :=
+  (H.isHalfScaleOf_iff M (G.scaleTwo M)).mpr rfl
+
+/-- Regularity transports from a scaled lattice back to its half-scale, as
+used in the reverse implication of He (2025), Corollary 8.5. -/
+theorem nRegular_of_halfScale
+    (H : G.ScalingRegularityLaws) {M L : S.GlobalLattice} (n : Nat) :
+    S.IsNRegular L n → G.isHalfScaleOf M L → S.IsNRegular M n := by
+  intro hRegular hHalf
+  have hEq : L = G.scaleTwo M := (H.isHalfScaleOf_iff M L).mp hHalf
+  rw [hEq] at hRegular
+  exact (H.nRegular_scaleTwo_iff M n).mp hRegular
+
+end ScalingRegularityLaws
+
 /-- The arithmetic inputs used by the Section 8 proofs.  Theorem 8.2 is
 split into the definite Meyer input and the indefinite Xu--O'Meara inputs
 inside `DistinguishingSublatticeLaws`; none presently has a concrete project
@@ -250,15 +284,10 @@ structure SectionEightLaws : Prop where
   localMaximality : LocalMaximalityLaws (S := S)
   distinguishingSublattice : G.DistinguishingSublatticeLaws
   scalingStability : G.ScalingStabilityLaws
+  scalingRegularity : G.ScalingRegularityLaws
   globalMaximal_iff_localMaximal (M : S.GlobalLattice) :
     G.isGlobalMaximal M ↔
       ∀ p : S.Place, S.localMaximal (S.localize p M)
-  nRegular_scaleTwo (M : S.GlobalLattice) :
-    S.IsNRegular M 2 → S.IsNRegular (G.scaleTwo M) 2
-  scaleTwo_halfScale (M : S.GlobalLattice) :
-    G.isHalfScaleOf M (G.scaleTwo M)
-  nRegular_of_halfScale {M L : S.GlobalLattice} :
-    S.IsNRegular L 2 → G.isHalfScaleOf M L → S.IsNRegular M 2
 
 namespace SectionEightLaws
 
@@ -302,6 +331,26 @@ theorem locallyTwoADC_scaleTwo_stable (H : G.SectionEightLaws)
     (M : S.GlobalLattice) :
     S.IsLocallyNADC M 2 → G.isStable (G.scaleTwo M) :=
   H.scalingStability.locallyTwoADC_scaleTwo_stable (G := G) M
+
+/-- Scaling preserves regularity, now exposed as a consequence of the exact
+scaling-invariance law rather than a `SectionEightLaws` field. -/
+theorem nRegular_scaleTwo (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) :
+    S.IsNRegular M 2 → S.IsNRegular (G.scaleTwo M) 2 :=
+  H.scalingRegularity.nRegular_scaleTwo (G := G) M 2
+
+/-- Compatibility endpoint for the half-scale relation. -/
+theorem scaleTwo_halfScale (H : G.SectionEightLaws)
+    (M : S.GlobalLattice) :
+    G.isHalfScaleOf M (G.scaleTwo M) :=
+  H.scalingRegularity.scaleTwo_halfScale (G := G) M
+
+/-- Compatibility endpoint for transporting regularity from a scaled
+lattice to its half-scale. -/
+theorem nRegular_of_halfScale (H : G.SectionEightLaws)
+    {M L : S.GlobalLattice} :
+    S.IsNRegular L 2 → G.isHalfScaleOf M L → S.IsNRegular M 2 :=
+  H.scalingRegularity.nRegular_of_halfScale (G := G) 2
 
 /-- He (2025), Lemma 8.1(i). -/
 theorem heADC2025Lemma81i (H : G.SectionEightLaws)
