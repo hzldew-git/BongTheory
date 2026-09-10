@@ -283,6 +283,13 @@ scaling, and placewise-global stability inputs. The combined gate checks
 61,096 declarations. Concrete number-field instances, scaling invariance of
 regularity, clean-kit evidence, and human review remain outside this draft
 certificate.
+Lemma 8.4 and Corollary 8.5 scaling-regularity checkpoint:
+`0a94683dd9e1092d4e1e0ed78958b55fc1d65ee5`. Report 77 replaces three
+one-way scaling fields by a rank-uniform regularity biconditional and the
+exact half-scale orientation. The six derived lower and compatibility
+theorems have empty axiom sets, and the combined gate checks 61,108
+declarations. Concrete scaling laws, clean-kit evidence, and human review
+remain outside this draft certificate.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

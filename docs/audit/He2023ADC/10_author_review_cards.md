@@ -312,6 +312,31 @@ Questions for the paper author and domain expert:
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## Lemma 8.4 and Corollary 8.5, regularity scaling
+
+Paper location: p. 1018.
+
+Paper statement: 2-regularity is invariant under scaling, and `M` is the
+half-scale of a stable 2-regular lattice `L` in Corollary 8.5.
+
+Formal finding: Report 77 replaces three one-way conclusion fields by the
+rank-uniform biconditional
+`IsNRegular (scaleTwo M) n <-> IsNRegular M n` and the orientation
+`isHalfScaleOf M L <-> L = scaleTwo M`. Lean derives the forward scaling
+step, the canonical witness, and reverse transport from those two facts.
+
+Questions for the paper author and domain expert:
+
+1. Is regularity invariant under arbitrary nonzero form scaling in the exact
+   global representation convention of Definition 1.2?
+2. Is `L = scaleTwo M` the correct orientation of the phrase that `M` is
+   isometric to `L(1/2)`?
+3. Should `isHalfScaleOf` be equality of the abstract lattice objects, or
+   integral isometry after scaling, in a concrete implementation?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Theorem 1.5(i) and Lemma 8.1(ii), local maximality
 
 Paper locations: Theorem 1.5 on p. 984; its proof on p. 1016; Lemma 8.1(ii)

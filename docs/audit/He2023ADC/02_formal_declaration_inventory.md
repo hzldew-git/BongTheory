@@ -270,6 +270,11 @@ Additional concrete declaration groups are:
   stability half of Lemma 8.4, so that final implication is no longer a
   `SectionEightLaws` field. The focused audit is
   `He2023ADCScalingStabilityAudit`; report 76.
+  `ScalingRegularityLaws` records the rank-uniform scaling biconditional and
+  the orientation `isHalfScaleOf M L <-> L = scaleTwo M`. It derives the
+  regularity half of Lemma 8.4 and both half-scale transports used by
+  Corollary 8.5; the former three one-way `SectionEightLaws` fields are gone.
+  The focused audit is `He2023ADCScalingRegularityAudit`; report 77.
 - `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
   both nonmaximal binary boundary classes. It proves exact completeness and
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the

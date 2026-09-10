@@ -68,8 +68,9 @@ counted as a concrete arithmetic implementation.
   from that theorem plus its classification-dependent necessity direction;
   Theorem 8.2 is derived from separate Meyer definite-case, Xu spinor-genus,
   and O'Meara 104:5 inputs. The stability half of Lemma 8.4 is derived from
-  its local-form, scaling, and placewise-global inputs; reports 47 and
-  73--76.
+  its local-form, scaling, and placewise-global inputs. Regularity under
+  scaling and the half-scale steps are derived from one rank-uniform
+  biconditional with explicit orientation; reports 47 and 73--77.
 - The binary cases of Theorem 1.9(ii) and Theorem 1.10 are formally refuted
   and corrected. The exact catalogue has `4|U|+2` classes and unconditionally
   `8(N p)^e+2`, rather than the

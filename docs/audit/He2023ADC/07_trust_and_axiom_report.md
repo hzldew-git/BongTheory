@@ -433,7 +433,7 @@ entries, and the standalone imported-closure gate all pass; the latter reports
 `AXIOM_GATE_PASS: 60948 declarations checked`. Both exact Mathematica
 certificates also pass. Report 69 discloses that the archive's old shared root
 documents mention other papers, so it is proof-closure evidence rather than the
-strictly isolated release asset. It predates Reports 70--76 and does not
+strictly isolated release asset. It predates Reports 70--77 and does not
 instantiate the remaining arithmetic laws or provide human semantic approval.
 
 At `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, Report 73 replaces the
@@ -470,3 +470,11 @@ checks 61,096 declarations, the scanner checks 2,735 tracked Lean sources,
 and all 30 policy tests pass. The local-form, scaling, and placewise-stability
 fields remain mathematical inputs to an ordinary structure; they are not Lean
 axioms. Fresh-extraction verification and concrete instances remain open.
+
+At `0a94683dd9e1092d4e1e0ed78958b55fc1d65ee5`, Report 77 replaces three
+one-way scaling fields by `ScalingRegularityLaws`. Its three lower theorems
+and the three compatibility endpoints have empty axiom sets; Lemma 8.4 and
+Corollary 8.5 depend only on `propext`. The combined gate checks 61,108
+declarations, the scanner checks 2,736 tracked Lean sources, and all 30 policy
+tests pass. The biconditional and half-scale definition remain mathematical
+inputs, not Lean axioms. Fresh-extraction verification remains open.

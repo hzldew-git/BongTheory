@@ -172,6 +172,11 @@ Lemma 8.4. The implication is now derived placewise from the local form
 classified by Theorem 6.2 and Proposition 4.16, its behavior under scaling,
 and the definition of global stability. Concrete number-field connections
 to those local forms and scaling invariance of regularity remain open.
+Report 77 replaces three remaining one-way scaling fields by a rank-uniform
+regularity biconditional and the exact half-scale orientation. The regularity
+half of Lemma 8.4 and both half-scale transports in Corollary 8.5 are now
+derived. A concrete scaling construction and proof of the biconditional
+remain open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

@@ -356,6 +356,13 @@ placewise characterization of global stability. This is still
 not concretely instantiated and 2-regularity under scaling remains an
 explicit input. See report 76.
 
+At `0a94683`, the regularity scaling step, canonical half-scale witness, and
+reverse half-scale transport retain their source conclusions but are no
+longer one-way `SectionEightLaws` fields. They follow from a rank-uniform
+regularity biconditional and the exact orientation of `isHalfScaleOf`. The
+status remains `CONDITIONAL_FORMALIZATION` because the concrete scaling
+operation and the biconditional are not implemented. See report 77.
+
 At `f7e8fb7`, the binary specializations of Theorem 1.9(ii) and Theorem 1.10
 are `SEMANTIC_MISMATCH`, not unformalized statements. The former repeats the
 false two-way list of Theorem 6.2, and the latter undercounts the resulting

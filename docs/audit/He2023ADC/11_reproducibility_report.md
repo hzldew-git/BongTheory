@@ -632,7 +632,7 @@ strict verifier intentionally rejects that archive because it lacks a
 paper-specific theorem-index prefix. Report 69 therefore records it as exact
 proof-closure evidence through Report 68, not as the final release package.
 The tagged release regenerates and rechecks a fully isolated package. Reports
-70--76, remaining concrete law instances, GitHub tag CI, and human sign-off are
+70--77, remaining concrete law instances, GitHub tag CI, and human sign-off are
 separate gates.
 
 ## Section 8 class-number regularity local checkpoint
@@ -708,3 +708,20 @@ paper-entry, canonical-audit, and focused-audit build completes all 5,563
 planned jobs. These checks reuse copied project artifacts. Fresh-extraction
 verification, concrete local-form and scaling instances, exact-tag CI, and
 human review remain open. See Report 76.
+
+## Lemma 8.4 and Corollary 8.5 scaling-regularity checkpoint
+
+At exact code checkpoint `0a94683dd9e1092d4e1e0ed78958b55fc1d65ee5`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCScalingRegularityAudit` complete a four-job focused build.
+The focused audit runs directly: all six derived scaling compatibility
+theorems have empty axiom sets, while Lemma 8.4 and Corollary 8.5 report only
+`propext`.
+
+An incremental paper-entry, canonical-audit, and focused-audit build completes
+all 5,563 planned jobs. The combined imported-closure gate reports
+`AXIOM_GATE_PASS: 61108 declarations checked`. The scanner checks 2,736
+tracked Lean sources, all 30 policy tests pass, and changed Lean lines satisfy
+the 100-column policy. These checks reuse local project artifacts.
+Fresh-extraction verification, concrete scaling laws, exact-tag CI, and human
+review remain open. See Report 77.

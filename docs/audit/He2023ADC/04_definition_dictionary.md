@@ -153,3 +153,9 @@ source disjunction, while the law package separates its classification,
 scaling, and placewise-global consequences. These predicates remain abstract
 pending a concrete number-field model. Status: `PROVISIONAL_MATCH`; see
 Report 76.
+
+`ScalingRegularityLaws.isHalfScaleOf_iff` fixes the formal orientation of the
+paper's statement that `M` is isometric to `L(1/2)`: formally this means
+`L = scaleTwo M`. Its other field records regularity invariance as a
+biconditional for every rank. The concrete scaling operation and proof of
+these laws remain pending. Status: `PROVISIONAL_MATCH`; see Report 77.

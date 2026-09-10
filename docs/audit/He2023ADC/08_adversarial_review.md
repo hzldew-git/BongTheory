@@ -313,3 +313,10 @@ by Theorem 6.2 and Proposition 4.16, transport that form under scaling, and
 only then assemble global stability. Reviewers must still verify that the
 abstract local-form predicate is instantiated by exactly the printed
 hyperbolic-or-exceptional disjunction at every finite prime.
+
+Report 77 tests directionality in the remaining scaling steps. Instead of
+three unrelated implications, the proof must use one rank-uniform
+`IsNRegular (scaleTwo M) n <-> IsNRegular M n` statement and the explicit
+equivalence `isHalfScaleOf M L <-> L = scaleTwo M`. This prevents silently
+reversing the paper's `L(1/2)` convention. Reviewers must still validate the
+concrete scaling construction and its preservation of regularity.

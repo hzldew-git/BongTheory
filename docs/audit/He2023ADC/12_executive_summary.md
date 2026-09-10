@@ -370,7 +370,7 @@ gate checking `60,948` declarations. It also records that legacy
 shared root documents name other papers even though He classic code, manifest,
 and audits are absent. The stricter release generator and verifier remove this
 documentation-isolation defect; the legacy archive is not a release asset.
-Reports 70--76 and all remaining semantic and arithmetic obligations stay
+Reports 70--77 and all remaining semantic and arithmetic obligations stay
 outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
 
 Report 70 advances that boundary at
@@ -430,3 +430,11 @@ under scaling, and assembles global stability. The 61,096-declaration
 combined gate passes. Concrete instances, fresh clean-kit evidence, and
 human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
 unchanged.
+
+Report 77 advances the remaining scaling boundary at `0a94683`. Three
+one-way finished fields are replaced by a rank-uniform regularity
+biconditional and the exact half-scale orientation. Lean derives the
+regularity half of Lemma 8.4 and both half-scale transports in Corollary 8.5;
+the 61,108-declaration combined gate passes. Concrete scaling laws, fresh
+clean-kit evidence, and human sign-off remain open, so the Grade-D
+`NOT_COMPLETE` verdict is unchanged.
