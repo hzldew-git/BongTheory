@@ -270,6 +270,12 @@ then derives local Theorem 1.5(i) from its remaining necessity law. The
 focused gate checks 61,070 declarations. Concrete local and number-field
 instances, full clean-kit evidence, and human review remain outside this
 draft certificate.
+Theorem 8.2 source-case checkpoint:
+`4565c1218a12d3603bb35d8dc985fcfa2335ef27`. Report 75 removes the complete
+distinguishing-sublattice field and derives it from separate Meyer definite,
+Xu spinor-genus, and O'Meara 104:5 inputs. The focused gate checks 61,083
+declarations. Concrete instances, clean-kit evidence, and human review remain
+outside this draft certificate.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

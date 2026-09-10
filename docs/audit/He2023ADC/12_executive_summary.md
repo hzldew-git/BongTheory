@@ -370,7 +370,7 @@ gate checking `60,948` declarations. It also records that legacy
 shared root documents name other papers even though He classic code, manifest,
 and audits are absent. The stricter release generator and verifier remove this
 documentation-isolation defect; the legacy archive is not a release asset.
-Reports 70--74 and all remaining semantic and arithmetic obligations stay
+Reports 70--75 and all remaining semantic and arithmetic obligations stay
 outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
 
 Report 70 advances that boundary at
@@ -413,3 +413,11 @@ finished conclusion remains a `SectionEightLaws` field. A focused audit and
 the 61,070-declaration gate pass, but concrete finite-completion instances,
 fresh clean-kit evidence, and human sign-off remain open. The Grade-D
 `NOT_COMPLETE` verdict is unchanged.
+
+Report 75 advances Theorem 8.2 at `4565c12`. The final distinguishing-
+sublattice conclusion is no longer a `SectionEightLaws` field. The Lean proof
+now performs the source's definite/indefinite split and composes separate
+Meyer, Xu, and O'Meara 104:5 inputs. The 61,083-declaration focused gate
+passes. Concrete instances of the cited results, fresh clean-kit evidence,
+and human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
+unchanged.

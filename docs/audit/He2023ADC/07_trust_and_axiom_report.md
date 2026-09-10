@@ -433,7 +433,7 @@ entries, and the standalone imported-closure gate all pass; the latter reports
 `AXIOM_GATE_PASS: 60948 declarations checked`. Both exact Mathematica
 certificates also pass. Report 69 discloses that the archive's old shared root
 documents mention other papers, so it is proof-closure evidence rather than the
-strictly isolated release asset. It predates Reports 70--74 and does not
+strictly isolated release asset. It predates Reports 70--75 and does not
 instantiate the remaining arithmetic laws or provide human semantic approval.
 
 At `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, Report 73 replaces the
@@ -453,3 +453,11 @@ report no axioms; Theorem 1.5(ii) reports only `propext`. The focused gate
 passes with `61070` checked declarations, and the scanner checks 2,733
 tracked Lean sources. The 5,562-job whole-paper run is incremental, not a
 fresh-extraction receipt; concrete instances and human review remain open.
+
+At `4565c1218a12d3603bb35d8dc985fcfa2335ef27`, Report 75 replaces the
+complete Theorem 8.2 input by `DistinguishingSublatticeLaws`. The derived
+source-case theorem, compatibility endpoint, Theorem 8.2, Corollary 8.3, and
+Theorem 1.7 depend only on `propext`, `Classical.choice`, and `Quot.sound`.
+The focused gate checks 61,083 declarations, and the scanner checks 2,734
+tracked Lean sources. The three external theorem fields remain mathematical
+assumptions of the conditional interface, not project axioms.

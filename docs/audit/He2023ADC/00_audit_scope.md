@@ -162,6 +162,11 @@ maximal-implies-ADC is derived from maximal extension, maximal-to-maximal
 representation, and transitivity; local Theorem 1.5(i) is then derived from
 that sufficiency theorem and the remaining classification-dependent
 necessity law. Concrete local and number-field instances remain open.
+Report 75 removes the final Theorem 8.2 conclusion field. The distinguishing
+sublattice is now derived by the published definite/indefinite split from a
+Meyer definite-case input, Xu's unique-spinor-genus construction, and the
+O'Meara 104:5 one-class input. Concrete instances of those cited results
+remain open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

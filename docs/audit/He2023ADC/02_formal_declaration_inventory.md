@@ -259,6 +259,11 @@ Additional concrete declaration groups are:
   `localMaximal_isNADCAt` and `local_theorem15`, so neither remains a
   `SectionEightLaws` field. The focused audit is
   `He2023ADCLocalMaximalityAudit`; report 74.
+  `DistinguishingSublatticeLaws` records the definite Meyer theorem, Xu's
+  indefinite unique-spinor-genus construction, and O'Meara 104:5 one-class
+  input. Its `distinguishing_rank_sublattice` theorem derives Theorem 8.2, so
+  that final conclusion is no longer a `SectionEightLaws` field. The focused
+  audit is `He2023ADCDistinguishingSublatticeAudit`; report 75.
 - `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
   both nonmaximal binary boundary classes. It proves exact completeness and
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the

@@ -632,7 +632,7 @@ strict verifier intentionally rejects that archive because it lacks a
 paper-specific theorem-index prefix. Report 69 therefore records it as exact
 proof-closure evidence through Report 68, not as the final release package.
 The tagged release regenerates and rechecks a fully isolated package. Reports
-70--74, remaining concrete law instances, GitHub tag CI, and human sign-off are
+70--75, remaining concrete law instances, GitHub tag CI, and human sign-off are
 separate gates.
 
 ## Section 8 class-number regularity local checkpoint
@@ -673,3 +673,20 @@ clean release-preparation worktree. It is not a fresh-extraction or exact
 Review Kit receipt. Concrete local and number-field instances, GitHub CI for
 this later checkpoint, and human semantic approval remain open. See Report
 74.
+
+## Theorem 8.2 source-case checkpoint
+
+At exact code checkpoint `4565c1218a12d3603bb35d8dc985fcfa2335ef27`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCDistinguishingSublatticeAudit` complete a four-job focused
+build. The focused audit runs directly and reports only `propext`,
+`Classical.choice`, and `Quot.sound` for the derived source-case theorem,
+the compatibility endpoint, Theorem 8.2, Corollary 8.3, and Theorem 1.7.
+
+An incremental build of the paper entry, canonical audit, and focused audit
+completes all 5,563 planned jobs. The imported-closure gate reports
+`AXIOM_GATE_PASS: 61083 declarations checked`, and the scanner checks 2,734
+tracked Lean sources. The incremental build reused copied local project
+artifacts, so fresh-extraction verification, concrete Meyer--Xu--O'Meara
+instances, GitHub CI for this checkpoint, and human review remain open. See
+Report 75.

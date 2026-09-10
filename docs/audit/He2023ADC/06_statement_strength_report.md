@@ -340,6 +340,13 @@ a `SectionEightLaws` field. The result is still
 `CONDITIONAL_FORMALIZATION`, because the lower local laws and the concrete
 finite-completion instances are not yet constructed. See report 74.
 
+At `4565c12`, Theorem 8.2 retains its exact source conclusion but is no
+longer a final-conclusion field. The formal proof splits on definiteness,
+uses the Meyer input in the definite case, and composes Xu's unique-spinor-
+genus result with O'Meara 104:5 in the indefinite case. This is still
+`CONDITIONAL_FORMALIZATION`, because the three cited inputs and the concrete
+definite/spinor-genus predicates are not implemented. See report 75.
+
 At `f7e8fb7`, the binary specializations of Theorem 1.9(ii) and Theorem 1.10
 are `SEMANTIC_MISMATCH`, not unformalized statements. The former repeats the
 false two-way list of Theorem 6.2, and the latter undercounts the resulting

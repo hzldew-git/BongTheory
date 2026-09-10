@@ -129,3 +129,14 @@ extension and representation transport; its theorem
 `local_theorem15` adds the classification-dependent necessity direction.
 The relations remain abstract until a concrete number-field localization
 instance is constructed. See Report 74.
+
+## Section 8 spinor genus
+
+Paper terms: definite, indefinite, spinor genus in `gen(M)`, and the unique
+class representing the selected sublattice in Theorem 8.2 on p. 1017.
+
+Formal terms: `HeADC2025GlobalData.isDefinite`, `inSpinorGenus`, and
+`DistinguishingSublatticeLaws`. The latter separates the definite Meyer case,
+Xu's indefinite rank-`n` construction, and the O'Meara 104:5 isometry step.
+The predicates remain abstract pending a concrete number-field model. Status:
+`PROVISIONAL_MATCH`; see Report 75.

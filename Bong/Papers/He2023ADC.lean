@@ -142,7 +142,9 @@ formalized over explicit non-dyadic Jordan and number-field arithmetic law
 packages.  In Section 8, class-number-one regularity is derived from genus
 lifting and isometry transport, while local maximal-implies-ADC and the local
 Theorem 1.5 equivalence are derived from lower maximal-extension,
-representation, and classification laws.  Concrete constructions of the
+representation, and classification laws.  Theorem 8.2 is derived by splitting
+the definite Meyer input from the indefinite Xu spinor-genus construction
+and O'Meara 104:5 single-class input.  Concrete constructions of the
 non-dyadic and number-field law
 packages, and imports of the Hanke--Kirschmer--Oh external enumerations,
 remain open;

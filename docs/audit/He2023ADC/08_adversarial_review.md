@@ -298,3 +298,10 @@ explicit place where Proposition 4.15 and Theorems 5.1, 6.1, and 7.1 must be
 instantiated. Reviewers must still check that the ambient-transport clause of
 the extension law really expresses an extension on the same local quadratic
 space and that the rank hypotheses match localization.
+
+Report 75 tests the former Theorem 8.2 shortcut. The indefinite branch must
+now exhibit a single rank-`n` lattice, show that every genus representative
+which represents it lies in the base spinor genus, and only then use the
+one-class theorem to obtain integral isometry. Reviewers must verify the
+orientation of `inSpinorGenus M' M`, the definite/indefinite split, and the
+rank and signature hypotheses of Meyer, Xu, and O'Meara 104:5.

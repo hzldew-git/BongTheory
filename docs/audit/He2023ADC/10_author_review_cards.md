@@ -308,6 +308,30 @@ Questions for the paper author and domain expert:
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## Theorem 8.2, definite and indefinite source cases
+
+Paper location: p. 1017.
+
+Formal finding: `DistinguishingSublatticeLaws.distinguishing_rank_sublattice`
+derives the complete distinguishing-sublattice conclusion. The definite
+branch invokes a separate Meyer input. The indefinite branch first uses a Xu
+input to select a rank-`n` sublattice represented by one spinor genus, then
+uses an O'Meara 104:5 input to turn same-spinor-genus membership into integral
+isometry. The complete Theorem 8.2 conclusion is not a structure field.
+
+Questions for the paper author and domain expert:
+
+1. Does the formal definite predicate include exactly the hypotheses of
+   Meyer, Theorem 5.2, used by the source?
+2. Is `inSpinorGenus M' M` the correct orientation and does Xu's theorem
+   prove it for every genus representative representing the selected `N`?
+3. Does O'Meara 104:5 apply with only the displayed indefiniteness and rank
+   hypotheses, or must an additional ambient-space or signature premise be
+   made explicit?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Lemma 4.6, dyadic actual-lattice specialization
 
 Paper location: pp. 993--994.

@@ -176,6 +176,12 @@ hard local input. These proposition-valued fields are still uninstantiated;
 O'Meara section 82K also remains the explicit global-local maximality input.
 See report 74.
 
+Report 75 similarly removes the complete distinguishing-sublattice field.
+`DistinguishingSublatticeLaws` now exposes the definite Meyer input, Xu's
+indefinite spinor-genus uniqueness input, and the O'Meara 104:5 one-class
+input separately. The definite/spinor predicates and all three cited results
+still require actual number-field constructions. See report 75.
+
 The corrected quaternary catalogue does not assume completeness or
 irredundancy. Those properties are proved using the corrected three-way
 classification, maximal-lattice uniqueness, and nonisometric ambient spaces.
