@@ -28,9 +28,10 @@ Coverage status:
   literal-minimality conclusions, is proved. O'Meara 63:5 and 63:9 and all
   three numerical counts are proved internally.
 - Lemma 8.1, Proposition 8.2, Lemma 8.3, and all global main-theorem
-  deductions are conditionally checked as recorded in Report 23. Examples and
-  the concrete arithmetic implementations behind those deductions are not
-  claimed as covered.
+  deductions are conditionally checked as recorded in Report 23.  Proposition
+  8.2 is now derived from lower globalization/localization laws rather than
+  assumed as a final field; Report 27.  Examples and the concrete arithmetic
+  implementations behind those deductions are not claimed as covered.
 
 The previous 0/66 proof claim was stale and is withdrawn. No replacement
 whole-paper percentage is inferred from filename or declaration counts.

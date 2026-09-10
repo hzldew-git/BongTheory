@@ -33,7 +33,9 @@ The proposition-valued definition remains separate from its proof:
   the three conditional finite-extension clauses of Lemma 8.1.
 - `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82_positive`
   and `he2022ClassicProposition82`: the two statements of Proposition 8.2 over
-  an explicit globalization/localization package.
+  an explicit globalization/localization package.  The first is now derived
+  by `HeClassic2024GlobalData.Proposition82Laws.he2022ClassicProposition82_positive`
+  from four lower-level arithmetic laws; Report 27.
 - `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd`:
   the final global deduction of Theorem 1.5.
 - `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17` and
@@ -83,4 +85,6 @@ The proposition-valued definition remains separate from its proof:
 their transitive axiom reports. Both all-indices testing statements and both
 literal-minimality conclusions are proved. Report 20 records the historical
 terminal reduction; Report 22 records its v5 completion and Report 23 records
-the conditional global layer.
+the conditional global layer.  The focused
+`BongTest/He2022ClassicProposition82Audit.lean` checks the Report 27
+globalization derivation and its compatibility endpoints.

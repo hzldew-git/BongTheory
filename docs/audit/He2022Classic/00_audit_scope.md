@@ -6,8 +6,8 @@ The sole semantic authority is the author-corrected v5 TeX manuscript
 The 2024 publisher version of record and the 2025 arXiv v3 revision are
 comparison-only. The source files are author-held and are not redistributed.
 
-Working-tree checkpoint: branch `feat/he-formalization`, reviewed on
-2026-09-09 with Lean 4.32.1 and the repository's pinned
+Working-tree checkpoint: branch `release/heclassic-v0.5.0-rc.1-prep`, updated
+on 2026-09-11 with Lean 4.32.1 and the repository's pinned
 `lake-manifest.json`. An exact clean release commit remains pending.
 
 The checkpoint includes the proved Theorem 1.1 equivalence, local Section 2-6
@@ -18,6 +18,9 @@ concrete number-field localization, finite-extension, discriminant, and
 strong-approximation inputs. The final global deduction of Theorem 1.5,
 Lemmas 8.1 and 8.3, Proposition 8.2, and Theorems 1.7--1.9 are checked only
 conditionally over the explicit proof-data packages documented in Report 23.
+Report 27 strengthens this boundary: Proposition 8.2 itself is now derived
+from positive-definite globalization, localization, and representation
+transport laws rather than stored as a final-conclusion field.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

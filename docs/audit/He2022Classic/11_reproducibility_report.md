@@ -75,3 +75,13 @@ SHA-256 is `079D6DFCFB9982415F0D3271C29C6AF0E2C560111B79FB08828D6131C4F97987`.
 This certifies the new gate for this fixed kit, not complete paper coverage,
 human semantic approval, the separate whole-production CI or a permanent
 release. The source discrepancy and odd/global obligations are unchanged.
+
+## Proposition 8.2 derivation checkpoint
+
+Code commit `ea0f9f1516d41d18c87b8c0ee0757fd8d5e58e1b` replaces the final
+Proposition 8.2 field by four lower globalization/localization inputs.  The
+focused 5,000-job build, canonical 5,016-job build, direct audit, 30 policy
+tests, 2,790-source unfinished-proof scan, and a 62,655-declaration combined
+axiom gate pass locally.  Report 27 records the semantic boundary.  This is
+not yet a fresh-extraction Review Kit receipt or GitHub result for that exact
+commit.

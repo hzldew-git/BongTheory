@@ -91,7 +91,10 @@ sentence of Theorem 1.5, Lemmas 8.1 and 8.3, and Theorems 1.7--1.9, are proved
 over explicit arithmetic proof-data packages.  Concrete number-field
 localization, ramification, coefficient-transport, and strong-approximation
 instances remain to be constructed, so these conditional endpoints are not
-reported as full global formalizations.  The publisher's broader Lemma 7.1(ii)
+reported as full global formalizations.  Proposition 8.2 itself is derived
+from lower positive-definite globalization, localization, and representation-
+transport laws rather than stored as a final-conclusion field.  The
+publisher's broader Lemma 7.1(ii)
 remains false when the ramification index is greater than one;
 its kernel-checked counterexample is retained as a regression result.  The
 author-corrected v5 replaces it by the exact `e=1` or low-defect alternatives
@@ -104,7 +107,8 @@ The omitted odd clause of Corollary 6.3 is in fact false: a kernel-checked
 ramification-two, `n=3` counterexample is included, with nonisometry to the
 diagonal lattice proved by good-BONG order invariance.  Only the even
 Corollary 6.3 is retained, and the downstream affected claims remain within
-the conditional Section 8 boundary documented in audit Reports 24 and 26.
+the conditional Section 8 boundary documented in audit Reports 24, 26, and
+27.
 -/
 
 namespace Bong

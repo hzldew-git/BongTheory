@@ -19,7 +19,7 @@
 | Lemma 7.1 | PASS for the author-corrected v5 statement; obsolete broader publisher clause remains refuted for e > 1 |
 | Odd Lemma 7.4 reduction | PASS unconditionally from the complete v5 odd table; historical conditional factorizations remain checked |
 | Theorem 1.3 explicit list and minimality | PASS for both parity branches, every deletion witness, and all numerical counts; semantic sign-off remains provisional |
-| Lemma 8.1, Proposition 8.2, Lemma 8.3, Theorems 1.7--1.9 | CONDITIONAL PASS for the encoded deductions; concrete number-field, extension, and strong-approximation instances pending; the odd Lemma 8.3 proof invokes the refuted odd extension of Corollary 6.3, and Theorem 1.7 lacks its written odd calculation; Reports 23--26 |
+| Lemma 8.1, Proposition 8.2, Lemma 8.3, Theorems 1.7--1.9 | CONDITIONAL PASS for the encoded deductions; Proposition 8.2 is derived from four lower globalization/localization laws rather than assumed as a final field; concrete number-field, extension, and strong-approximation instances remain pending; the odd Lemma 8.3 proof invokes the refuted odd extension of Corollary 6.3, and Theorem 1.7 lacks its written odd calculation; Reports 23--27 |
 | Corollary 6.3 | even branch PASS; unrestricted odd statement FAIL by a kernel-checked `e=2`, `n=3` counterexample, Reports 24 and 26 |
 | V5 source suitable for whole-paper completion | FAIL; Corollary 6.3 is false as stated and requires a v6 source repair |
 | Unconditional global main theorems | FAIL / pending concrete instances |

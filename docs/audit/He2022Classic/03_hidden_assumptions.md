@@ -29,6 +29,14 @@ obstruction, and strong approximation for sums of squares. These structures
 are theorem premises and have no concrete instances in this checkpoint; a
 standard-only axiom report does not discharge them. See Report 23.
 
+Report 27 removes the complete Proposition 8.2 conclusion from
+`SectionEightLaws`.  Its replacement `Proposition82Laws` still assumes four
+concrete facts: integrality localizes, an arbitrary integral local lattice
+has a positive-definite integral globalization of the same rank up to local
+equivalence, representation localizes, and representation is invariant under
+equivalence of the represented local lattice.  These are ordinary theorem
+premises, not Lean axioms, and concrete number-field instances remain open.
+
 `card_heClassicUnitRepresentatives` derives O'Meara 63:9 from the proved
 principal-unit filtration, after constructing the explicit equivalence between
 the published representative index and the intrinsic unit square-class

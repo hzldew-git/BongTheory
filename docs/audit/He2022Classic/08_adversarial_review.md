@@ -39,3 +39,10 @@ rowwise deletion-minimality, and the numerical counts are proved internally.
 These local results and the conditional Section 8 logic are not a certificate
 for concrete global number-field conclusions or for semantic agreement
 without human review.
+
+For Proposition 8.2, a proof that merely stores local `n`-universality as a
+field would circularly reproduce the proposition.  Report 27 removes that
+field and checks the published route through an arbitrary local target,
+positive-definite globalization, global representation, localization, and
+equivalence transport.  Reviewers must still reject any claim that the
+abstract globalization law is already a concrete O'Meara 81:14 instance.

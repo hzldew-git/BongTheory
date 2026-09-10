@@ -28,6 +28,13 @@ These hypotheses make the endpoints weaker as formalization evidence than
 unconditional implementations, even though the conclusions and rank/parity
 quantifiers match v5. Report 23 lists the boundary field by field.
 
+Report 27 narrows that boundary for Proposition 8.2.  The complete local
+universality conclusion is no longer assumed by `SectionEightLaws`; it is
+proved for an arbitrary local rank-`n` lattice from positive-definite
+globalization, localization of integrality and representation, and transport
+across local equivalence.  Because those four arithmetic laws still lack
+concrete number-field instances, the semantic status remains conditional.
+
 For Theorem 1.3 the current endpoints prove Lemma 7.4 in both parity branches,
 all of Lemmas 7.7, 7.10, and 7.11, and a literal deletion witness for every
 table row. The odd proof uses the corrected v5 Lemma 7.1 bridge to derive the

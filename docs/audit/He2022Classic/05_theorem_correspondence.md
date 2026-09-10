@@ -14,7 +14,7 @@
 | Lemma 7.4 | `he2022ClassicLemma74_even`, `he2022ClassicLemma74_odd_v5` | `FULLY_FORMALIZED_PROVISIONAL_MATCH` to v5 in both parity branches |
 | Lemma 7.7 | `he2022ClassicLemma77_boundary_conditions`, the two condition packages, and the two bundled representation endpoints | `FULLY_FORMALIZED`; correspondence remains provisional pending human review |
 | Lemma 7.10(i)--(iii) | the three exceptional deletion-witness endpoints, `he2022ClassicLemma710iii_publishedC_deletionWitness`, and `he2022ClassicLemma710_publishedEven_deletionWitness` | `FULLY_FORMALIZED` on the literal published even index; correspondence remains provisional pending human review |
-| Lemma 8.1; Proposition 8.2; Lemma 8.3 | the `he2022ClassicLemma81*` endpoints, `he2022ClassicProposition82_positive`, `he2022ClassicProposition82`, and `he2022ClassicLemma83` | `CONDITIONAL_FORMALIZATION`: all deductions and premises are typed, but their concrete local-extension and number-field instances remain pending; the odd proof of Lemma 8.3 invokes the false odd extension of Corollary 6.3 and requires replacement |
+| Lemma 8.1; Proposition 8.2; Lemma 8.3 | the `he2022ClassicLemma81*` endpoints, `Proposition82Laws.he2022ClassicProposition82_positive`, the two `SectionEightLaws` Proposition 8.2 wrappers, and `he2022ClassicLemma83` | `CONDITIONAL_FORMALIZATION`: Proposition 8.2 is derived from the source's lower globalization/localization steps (Report 27), but their concrete number-field instances remain pending; the odd proof of Lemma 8.3 invokes the false odd extension of Corollary 6.3 and requires replacement |
 
 Theorem names in abbreviated rows are resolved by the canonical paper and
 audit modules. Source differences and the distinction between v5 and obsolete

@@ -45,6 +45,28 @@ universes, and transitive dependencies preserve this scope?
 
 Author decision, reviewer name, date, and signature: not provided.
 
+## Proposition 8.2: positive-definite globalization route
+
+Paper location: v5 lines 1660--1674.  Formal derivation:
+`HeClassic2024GlobalData.Proposition82Laws.he2022ClassicProposition82_positive`.
+
+For each finite place and each integral local rank-`n` lattice, the formal
+proof requests a positive-definite integral global lattice of the same rank
+whose localization is equivalent to that local lattice.  It applies the
+paper's global representation hypothesis, localizes the representation, and
+transports it across the local equivalence.  The public statement retains the
+paper's positive-integer hypothesis.
+
+Current status: `CONDITIONAL_FORMALIZATION` / `SOURCE_LOGIC_MATCH`.  The final
+Proposition 8.2 conclusion is proved rather than supplied, but the concrete
+O'Meara 81:14 globalization and localization instances are not constructed.
+Question for the author/domain expert: confirm that the interface matches the
+globalization used for dyadic, unary, and non-dyadic test lattices.  Question
+for the formalization expert: instantiate the four laws for actual
+number-field lattices and verify the orientation of local equivalence.
+
+Author decision, reviewer name, date, and signature: not provided.
+
 ## Theorem 1.5: complete local range, conditional global deduction
 
 Paper location: p. 562; separate unary proof on p. 586. Formal endpoint:

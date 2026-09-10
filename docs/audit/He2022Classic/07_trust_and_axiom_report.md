@@ -50,3 +50,10 @@ and focused audit. Their selected transitive dependency reports contain
 exactly `propext`, `Classical.choice`, and `Quot.sound`. No classification or
 odd-testing premise is hidden in these endpoints; Report 19 records their
 scope.
+
+At code checkpoint `ea0f9f1`, the focused Proposition 8.2 audit reports no
+axioms for the lower derivation, the public compatibility endpoint, or the
+second sentence.  The canonical 5,016-job incremental build succeeds and the
+combined imported-closure gate checks 62,655 declarations.  This empty axiom
+set does not construct the four `Proposition82Laws` premises; Report 27 keeps
+that arithmetic boundary explicit.

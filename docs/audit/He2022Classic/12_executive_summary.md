@@ -17,6 +17,10 @@ conditional endpoints over explicit Section 8 arithmetic packages. Concrete
 number-field localization, scalar-extension, discriminant, and strong-
 approximation instances remain excluded, so this is not unconditional global
 coverage.
+Proposition 8.2 is no longer stored as a final arithmetic field: Report 27
+derives it from positive-definite globalization, localization, and local
+equivalence transport.  Those lower facts still require concrete
+number-field implementations.
 
 Both branches of Theorem 1.3 are complete at the literal table level.
 Author-corrected v5 Lemma 7.1, both branches of Lemma 7.4, Lemma 7.7, all
@@ -31,7 +35,7 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md` and Reports 22--26 are part of the review
+internally proved. `SOURCE_DELTA.md` and Reports 22--27 are part of the review
 scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.
