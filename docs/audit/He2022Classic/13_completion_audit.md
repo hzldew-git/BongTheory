@@ -9,7 +9,7 @@
 | Canonical and audit-module Lean build | PASS |
 | No `sorry`, project axiom, or `opaque` declaration in scoped files | PASS, local audit |
 | Theorem 1.1 proof | PASS at the local n >= 2 scope; semantic sign-off pending |
-| Theorem 1.5 | PASS for the full local n >= 1 implication; global deduction conditionally proved from explicit localization/discriminant laws, whose concrete instances remain pending |
+| Theorem 1.5 | PASS for the full local n >= 1 implication; the discriminant theorem is concrete, while the global deduction still depends on the place/localization bridge; Report 32 |
 | Lemma 7.4 | PASS: even and author-corrected-v5 odd branches checked |
 | Lemma 7.7 | PASS: all boundary indices, stable ranges, and both literal C columns checked |
 | Lemma 7.10 | PASS: clauses (i)--(iii), every exceptional row, and the literal finite-index bridge checked |
@@ -19,9 +19,9 @@
 | Lemma 7.1 | PASS for the author-corrected v5 statement; obsolete broader publisher clause remains refuted for e > 1 |
 | Odd Lemma 7.4 reduction | PASS unconditionally from the complete v5 odd table; historical conditional factorizations remain checked |
 | Theorem 1.3 explicit list and minimality | PASS for both parity branches, every deletion witness, and all numerical counts; semantic sign-off remains provisional |
-| Lemma 8.1, Proposition 8.2, Lemma 8.3, Theorems 1.7--1.9 | CONDITIONAL PASS for the encoded deductions; Proposition 8.2 and both sufficiency stages of Theorem 1.9 are derived from lower laws rather than assumed as final fields; Lemma 8.3 and Theorem 1.8 are exposed only for `n >= 2` even, with no unrestricted odd endpoint; concrete number-field, extension, and strong-approximation instances remain pending; Theorem 1.7 lacks its written odd calculation; Reports 23--31 |
+| Lemma 8.1, Proposition 8.2, Lemma 8.3, Theorems 1.7--1.9 | CONDITIONAL PASS for the encoded deductions; Proposition 8.2 and both sufficiency stages of Theorem 1.9 are derived from lower laws rather than assumed as final fields; the number-field discriminant theorem is concrete; Lemma 8.3 and Theorem 1.8 are exposed only for `n >= 2` even, with no unrestricted odd endpoint; remaining number-field lattice, extension, and strong-approximation instances are pending; Theorem 1.7 lacks its written odd calculation; Reports 23--32 |
 | Theorem 1.9 local-to-global step | CONDITIONAL PASS: global universality is derived target-by-target from localization and an explicit strong-approximation representation law rather than assumed as a final field; concrete instance pending; Report 29 |
-| Discriminant/ramification step | CONDITIONAL PASS: only the required all-dyadic-unramified to odd-discriminant direction remains an input, and the ramified-place witness is derived; concrete number-field instance pending; Report 30 |
+| Discriminant/ramification step | PASS for actual number fields: both directions, the ramified-prime witness, and positivity are proved; transport to the abstract global system requires only `NumberFieldDiscriminantBridge`; Reports 30 and 32 |
 | Theorem 1.9 finite-place step | CONDITIONAL PASS: all-place local universality is derived from the three v5 local branches rather than assumed as a final field; concrete completion instances pending; Report 31 |
 | Corollary 6.3 | even branch PASS; unrestricted odd statement FAIL by a kernel-checked `e=2`, `n=3` counterexample, Reports 24 and 26 |
 | V5 source suitable for whole-paper completion | FAIL; Corollary 6.3 is false as stated and requires a v6 source repair |

@@ -60,11 +60,12 @@ The branch structure now matches v5 line 1700, but the branch laws still need
 concrete number-field/completion instances.  In particular, the present
 formalization does not yet connect the abstract localized sum-of-squares
 lattice to the proved local BONG Theorem 1.1 or Beli unary criterion.  Report
-30's directional discriminant premise is still required for the necessity
-direction; its converse is used here as the separately named ramification law
-required by the sufficiency proof.  This refines Report 30's earlier broad
-description of that converse as unused: it had been hidden inside the former
-all-places field.
+30's directional discriminant premise is required for the necessity direction;
+its converse is used here as the separately named ramification law required by
+the sufficiency proof. Report 32 subsequently proves both for actual
+number-field prime ideals and constructs these fields from a typed place
+bridge. This report still refines Report 30's earlier broad description of the
+converse as unused: it had been hidden inside the former all-places field.
 
 This derivation does not alter the Grade-D whole-paper verdict, repair the
 false odd clause of v5 Corollary 6.3, or supply the missing odd argument in

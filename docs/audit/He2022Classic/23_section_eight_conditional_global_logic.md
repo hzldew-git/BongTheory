@@ -10,6 +10,9 @@ direction and derives its contrapositive witness.  Report 31 records that the
 converse direction is separately required by the unary sufficiency branch.
 Report 31 later derives the finite-place sufficiency conclusion of Theorem 1.9
 from the separate non-dyadic, dyadic unary, and dyadic higher-rank branches.
+Report 32 then proves the discriminant--ramification equivalence for actual
+number fields and constructs the abstract discriminant fields from a typed
+place bridge.
 
 ## Scope
 

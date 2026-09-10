@@ -13,7 +13,11 @@
 | Proposition 8.2 globalization/localization inputs | `HeClassic2024GlobalData.Proposition82Laws` |
 | Theorem 1.9 local-to-global inputs | `HeClassic2024GlobalData.SumOfSquaresLocalGlobalLaws` |
 | Theorem 1.9 finite-place branch inputs | `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` |
-| one-way discriminant/ramification input | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
+| odd number-field discriminant | `HeClassic2024NumberField.DiscriminantOdd` |
+| dyadic prime ideal | `HeClassic2024NumberField.IsDyadicPrime` |
+| concrete discriminant/ramification equivalence | `HeClassic2024NumberField.discriminantOdd_iff_forall_ramificationIdx_eq_one` |
+| abstract-to-number-field place identification | `HeClassic2024GlobalData.NumberFieldDiscriminantBridge` |
+| generic one-way discriminant package | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
 on a standing prose convention.
@@ -27,3 +31,7 @@ see Report 29.
 `SumOfSquaresLocalUniversalityLaws` separates the three finite-place branches
 of v5 line 1700; their all-places conclusion is derived rather than assumed;
 see Report 31.
+The concrete equivalence, its two directions, the ramified-prime witness, and
+ramification-index positivity are proved in Report 32. The generic package is
+constructed from `NumberFieldDiscriminantBridge`; it is no longer a separate
+number-field arithmetic obligation.

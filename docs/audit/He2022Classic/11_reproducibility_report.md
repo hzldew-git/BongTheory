@@ -102,8 +102,9 @@ Code commit `46bf941e3edc83b7dc2fb115bdd8b0215a73653f` replaces the unused
 full biconditional by the direction used in the global proofs and derives the
 ramified dyadic-place witness.  The focused 5,000-job build, direct audit,
 5,019-job canonical build, 30 policy tests, 2,794-source scan, and
-62,676-declaration imported-closure gate pass locally.  Report 30 records the
-remaining concrete number-field premise.  Exact clean-kit verification is a
+62,676-declaration imported-closure gate pass locally. Report 30 records the
+then-remaining concrete number-field premise, later closed by Report 32. Exact
+clean-kit verification is a
 later gate.
 
 ## Theorem 1.9 finite-place checkpoint
@@ -125,3 +126,15 @@ tests, 2,790-source unfinished-proof scan, and a 62,655-declaration combined
 axiom gate pass locally.  Report 27 records the semantic boundary.  This is
 not yet a fresh-extraction Review Kit receipt or GitHub result for that exact
 commit.
+
+## Concrete number-field discriminant checkpoint
+
+Code commit `229343195a243e1f2f946a8c5827d2610fb51f61` proves the
+discriminant--ramification equivalence for actual number fields, its two
+directed consequences, the even-discriminant ramified-prime witness, and
+ramification-index positivity. It also constructs the abstract Section 8 laws
+from a typed place bridge. The combined canonical and focused audit build
+completes 5,660 jobs, all 30 policy tests pass, the scanner checks 2,795
+tracked Lean sources, and the imported-closure gate reports
+`AXIOM_GATE_PASS: 62721 declarations checked`. Report 32 records the exact
+boundary. Fresh-extraction Review Kit verification is still pending.

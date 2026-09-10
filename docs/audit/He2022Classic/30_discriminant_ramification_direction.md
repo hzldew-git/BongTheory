@@ -9,6 +9,11 @@ branch.  The present report remains the checkpoint for the necessity-side
 direction and its contrapositive witness; it is not a claim that the converse
 is absent from the full v5 proof.
 
+Supersession note: Report 32 proves both directions for actual prime ideals of
+a number field, as well as the even-discriminant witness and positivity, and
+constructs this abstract package from a typed place bridge. The present report
+remains the historical interface-lowering checkpoint.
+
 Code checkpoint:
 `46bf941e3edc83b7dc2fb115bdd8b0215a73653f` on
 `release/heclassic-v0.5.0-rc.1-prep`.
@@ -60,8 +65,8 @@ verification remains separate.
 
 ## Fidelity boundary
 
-The project still does not instantiate the discriminant/ramification law for
-a concrete number field.  Theorem 1.7 also retains the independently
+Report 32 closes the concrete number-field discriminant theorem. Theorem 1.7
+still retains the independently
 documented missing odd coefficient calculation.  This reduction therefore
 does not alter the Grade-D whole-paper verdict or repair the false odd clause
 of v5 Corollary 6.3.

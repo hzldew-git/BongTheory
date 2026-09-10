@@ -14,9 +14,9 @@ in its full local n >= 1 scope, including the separate unary argument; its
 concrete number-field localization remains excluded.
 The final global deduction, Theorems 1.7 and 1.9, and the even-rank part of
 Theorem 1.8 now have kernel-checked conditional endpoints over explicit
-Section 8 arithmetic packages. Concrete
-number-field localization, scalar-extension, discriminant, and strong-
-approximation instances remain excluded, so this is not unconditional global
+Section 8 arithmetic packages. Concrete number-field localization,
+scalar-extension, and strong-approximation instances remain excluded, so this
+is not unconditional global
 coverage.
 Proposition 8.2 is no longer stored as a final arithmetic field: Report 27
 derives it from positive-definite globalization, localization, and local
@@ -27,8 +27,10 @@ arbitrary global target and invoking an explicit strong-approximation
 representation law; global universality itself is no longer a package field.
 Report 30 separates the necessity-side discriminant direction and derives the
 ramified dyadic-place witness used by Theorem 1.7.  Report 31 exposes the
-converse direction at its actual use in Theorem 1.9's unary sufficiency branch;
-both directions remain concrete arithmetic obligations overall.
+converse direction at its actual use in Theorem 1.9's unary sufficiency branch.
+Report 32 proves both directions, the ramified-prime witness, and positivity
+for actual number-field prime ideals and transports them through a typed place
+bridge; only that structural identification remains at this step.
 Report 31 derives Theorem 1.9's finite-place local-universality conclusion from
 the separate non-dyadic, dyadic unary, and dyadic higher-rank laws in v5; the
 all-places conclusion is no longer stored as a package field.
@@ -46,7 +48,7 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md` and Reports 22--31 are part of the review
+internally proved. `SOURCE_DELTA.md` and Reports 22--32 are part of the review
 scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.
@@ -66,5 +68,5 @@ development, and checked conditional Section 8 deductions. Unsafe claim:
 complete formalization or final deployment of the whole paper. Next actions
 are a v6 restriction of Corollary 6.3 and a source decision for the affected
 Lemma 8.3/Theorem 1.8 odd branch,
-concrete global arithmetic instances, independent review, and exact-commit
+remaining concrete global arithmetic instances, independent review, and exact-commit
 release verification.

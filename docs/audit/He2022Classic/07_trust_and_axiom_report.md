@@ -83,3 +83,10 @@ compatibility theorem, and the full conditional Theorem 1.9 use only
 `propext`, `Classical.choice`, and `Quot.sound`.  The focused build completes
 5,000 jobs, the canonical build completes 5,020 jobs, and the imported-closure
 gate checks 62,689 declarations; Report 31.
+
+At code checkpoint `2293431`, the concrete number-field
+discriminant--ramification equivalence, its even-discriminant witness,
+ramification-index positivity, and all place-bridge constructions use only
+`propext`, `Classical.choice`, and `Quot.sound`. The combined canonical and
+focused audit build completes 5,660 jobs, and the imported-closure gate checks
+62,721 declarations; Report 32.

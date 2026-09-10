@@ -14,9 +14,9 @@ earlier unary gap in Theorem 1.5 is closed by a separate proof: classic
 1-universality is first converted to scalar universality, and the actual
 finite alpha-candidate set is bounded term by term. The remaining limitation
 is global, not unary: Section 8 deductions now exist, but their number-field
-localization, extension, discriminant, and strong-approximation inputs are
-uninstantiated proof-data packages and must not be reported as unconditional
-theorems.
+localization, extension, and strong-approximation inputs are uninstantiated
+proof-data packages and must not be reported as unconditional theorems. The
+discriminant--ramification theorem itself is concrete after Report 32.
 
 There is also a source-level parity failure. V5 Corollary 6.3 and Lemma 8.3
 are stated without restricting `n`, but each proof assumes without a supplied
@@ -59,8 +59,9 @@ concrete number-field instance of that law.
 The discriminant interface is also checked for excess strength.  Report 30
 separates the necessity-side implication and derives the ramified-place witness
 by contradiction.  Report 31 reveals and separately names the converse needed
-by the unary sufficiency branch.  Reviewers must therefore require concrete
-proofs of both directions at their actual use sites.
+by the unary sufficiency branch. Report 32 proves both directions for actual
+prime ideals and transports them through an explicit place bridge. Reviewers
+must therefore check the bridge, rather than demand new arithmetic axioms.
 
 The same anti-circularity test is applied to the finite-place half of Theorem
 1.9.  Report 31 removes the former field that asserted the complete quantified

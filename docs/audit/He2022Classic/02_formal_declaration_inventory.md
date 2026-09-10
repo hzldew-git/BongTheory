@@ -52,6 +52,15 @@ The proposition-valued definition remains separate from its proof:
   `exists_ramifiedDyadic_of_not_discriminantOdd`: the one-way discriminant
   criterion and its derived contrapositive witness used by Theorems 1.5, 1.7,
   and 1.9; Report 30.
+- `HeClassic2024NumberField.discriminantOdd_iff_forall_ramificationIdx_eq_one`:
+  the concrete number-field equivalence between odd discriminant and
+  ramification index one at every dyadic prime ideal; its two directed
+  consequences, ramified-prime witness, and positivity theorem are proved in
+  the same module; Report 32.
+- `HeClassic2024GlobalData.NumberFieldDiscriminantBridge` and its construction
+  theorems: transport the concrete number-field result to the abstract place
+  layer and fill both discriminant directions and ramification-index
+  positivity; Report 32.
 - `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` and
   `sumOfSquares_localUniversal_of_oddDiscriminant`: the non-dyadic, dyadic
   unary, and dyadic higher-rank inputs and their derived all-finite-place
@@ -105,7 +114,8 @@ globalization derivation and its compatibility endpoints.
 restriction and the remaining even deduction.
 `BongTest/He2022ClassicStrongApproximationAudit.lean` checks the Report 29
 local-to-global derivation and Theorem 1.9.
-`BongTest/He2022ClassicDiscriminantRamificationAudit.lean` checks the Report
-30 directional criterion and its three consumers.
+`BongTest/He2022ClassicDiscriminantRamificationAudit.lean` checks the Reports
+30 and 32 abstract criterion, concrete number-field theorem, bridge
+constructions, and downstream consumers.
 `BongTest/He2022ClassicLocalUniversalityAudit.lean` checks the Report 31
 finite-place case split and the full conditional Theorem 1.9 endpoint.

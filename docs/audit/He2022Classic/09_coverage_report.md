@@ -8,7 +8,8 @@ Coverage status:
   Theorem 1.3 is fully formalized from v5; the local-field implication of
   Theorem 1.5 is proved for every n >= 1. Its global clause and Theorems
   1.7-1.9 now have conditional source-logic endpoints over explicit arithmetic
-  law packages; concrete number-field instances are absent.
+  law packages; several concrete number-field instances are absent, although
+  the discriminant--ramification theorem is now proved in Report 32.
 - Local numbered results: the Sections 2-6 proof chain includes direct
   representation, invariant, parity-criterion, and conversion endpoints.
   A complete refreshed branch-by-branch denominator audit is not claimed here.
@@ -38,9 +39,10 @@ Coverage status:
   strong-approximation inputs rather than a supplied global conclusion;
   Report 29.
   The ramified dyadic-place witness used by Theorem 1.7 is derived from the
-  necessity-side discriminant criterion; Report 30.  The converse direction
+  necessity-side discriminant criterion; Report 30. The converse direction
   required by Theorem 1.9's unary sufficiency branch is separately exposed in
-  Report 31.
+  Report 31. Both are proved for actual number-field prime ideals and linked
+  to the abstract layer by a structural bridge in Report 32.
   Theorem 1.9's all-finite-place local-universality conclusion is derived from
   the separate non-dyadic, dyadic unary, and dyadic higher-rank laws; Report
   31.
@@ -53,5 +55,5 @@ definitions, and examples. Reusable foundations are not extra paper results.
 The obsolete broader publisher Lemma 7.1(ii) is refuted; the author-corrected
 v5 replacement is positively formalized. Overall grade is D because the
 authoritative v5 source contains a false unrestricted Corollary 6.3, while
-the concrete number-field layer and human semantic sign-off also remain
+the remaining concrete number-field lattice layer and human semantic sign-off remain
 outstanding. Whole-paper completion remains `NOT_COMPLETE`.

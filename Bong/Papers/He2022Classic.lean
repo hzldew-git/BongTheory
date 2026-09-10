@@ -89,17 +89,18 @@ Theorem 1.3 are both kernel checked.
 Section 8's global--local deductions, including Proposition 8.2, the global
 sentence of Theorem 1.5, Lemma 8.1, the even part of Lemma 8.3, Theorems 1.7
 and 1.9, and the even part of Theorem 1.8, are proved over explicit arithmetic
-proof-data packages.  Concrete number-field
-localization, ramification, coefficient-transport, and strong-approximation
-instances remain to be constructed, so these conditional endpoints are not
+proof-data packages.  Concrete number-field localization,
+coefficient-transport, and strong-approximation instances remain to be
+constructed, so these conditional endpoints are not
 reported as full global formalizations.  Proposition 8.2 itself is derived
 from lower positive-definite globalization, localization, and representation-
 transport laws rather than stored as a final-conclusion field.  Theorem 1.9's
 local-to-global step is likewise derived from rank and integrality
 localization plus an explicit strong-approximation representation law.  The
-necessity-side discriminant layer derives the ramified dyadic-place witness
-from its directional law by contraposition, while the converse direction
-needed by the unary sufficiency branch is exposed separately.  The finite-place
+number-field discriminant--ramification equivalence is proved for prime ideals,
+including both directions, the even-discriminant witness, and positivity.  A
+typed bridge transports those results to the abstract finite-place layer.  The
+finite-place
 sufficiency part of Theorem 1.9 is also derived from separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
 all-places conclusion.  The
@@ -119,7 +120,7 @@ Corollary 6.3 is retained, and the downstream affected claims remain within
 the conditional Section 8 boundary documented in audit Reports 24 and 26.
 Only the explicit `n ≥ 2`, even-rank parts of Lemma 8.3 and Theorem 1.8 are
 exported; no unrestricted odd compatibility endpoint remains.  Reports
-27--31 document these lowered interfaces and the parity scope.
+27--32 document these lowered interfaces and the parity scope.
 -/
 
 namespace Bong

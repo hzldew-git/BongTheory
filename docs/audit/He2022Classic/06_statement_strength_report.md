@@ -51,9 +51,11 @@ Report 30 factors the former full equivalence by retaining the direction used
 by Theorems 1.5, 1.7, and the necessity half of Theorem 1.9.  The existence of
 a ramified dyadic place under an even discriminant is proved by contraposition.
 Report 31 then exposes the converse direction specifically where v5 uses it,
-in the dyadic unary sufficiency branch of Theorem 1.9.  Thus both directions
-remain mathematical inputs overall, but neither is hidden in a stronger
-final-conclusion field.
+in the dyadic unary sufficiency branch of Theorem 1.9. Report 32 proves both
+directions for actual number-field prime ideals, together with the
+even-discriminant witness and positivity, and transports them through a typed
+place bridge. Thus they are no longer unproved arithmetic inputs, although the
+global place identification is still conditional.
 
 Report 31 removes another final-conclusion field from Theorem 1.9.  Instead of
 assuming local universality at every finite place, the formalization assumes

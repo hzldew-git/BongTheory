@@ -14,7 +14,7 @@ The checkpoint includes the proved Theorem 1.1 equivalence, local Section 2-6
 proof chains, the complete n >= 1 local-field implication underlying Theorem
 1.5, corrected v5 Lemma 7.1, both testing equivalences in Lemma 7.4, and both
 literal-minimality branches of Theorem 1.3. It does not complete the
-concrete number-field localization, finite-extension, discriminant, and
+concrete number-field localization, finite-extension, and
 strong-approximation inputs. The final global deduction of Theorem 1.5,
 Lemma 8.1, Proposition 8.2, Theorems 1.7 and 1.9, and the even-rank parts of
 Lemma 8.3 and Theorem 1.8 are checked only conditionally over the explicit
@@ -33,6 +33,11 @@ sufficiency branch and exposes it there separately.
 Report 31 replaces the all-places local-universality premise in Theorem 1.9 by
 the three finite-place branches actually used in v5 and derives their
 quantified conclusion in Lean.
+Report 32 proves the discriminant--ramification equivalence for actual prime
+ideals of a number field, including both directed uses, the ramified-prime
+witness, and positivity. A structural place-to-prime-ideal bridge now
+constructs the formerly abstract discriminant fields; that bridge remains to
+be instantiated as part of the concrete global lattice model.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.
