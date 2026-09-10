@@ -36,7 +36,7 @@ jobs:
         shell: bash
         run: >-
           python3 -B scripts/ci/plan_lean_build_shards.py
-          --production-shards 48 --test-shards 24
+          --production-shards 72 --test-shards 24
           --github-output "$GITHUB_OUTPUT"
 
   build-and-audit:
@@ -49,11 +49,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
-      # Two workers avoid the default high parallelism that triggered runner
-      # memory faults.  Forty-eight production shards keep the complete-source
-      # coverage jobs below GitHub's six-hour deadline even for the largest
-      # Beli 2019 dependency closures.
-      LEAN_NUM_THREADS: '2'
+      # Four workers are the previously verified bounded setting for hosted
+      # complete builds.  Seventy-two production shards keep the enlarged
+      # complete-source coverage below GitHub's six-hour job deadline without
+      # returning to the unbounded concurrency that caused memory faults.
+      LEAN_NUM_THREADS: '4'
 
     steps:
       - name: Check out the exact revision
