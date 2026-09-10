@@ -370,7 +370,7 @@ gate checking `60,948` declarations. It also records that legacy
 shared root documents name other papers even though He classic code, manifest,
 and audits are absent. The stricter release generator and verifier remove this
 documentation-isolation defect; the legacy archive is not a release asset.
-Reports 70--72 and all remaining semantic and arithmetic obligations stay
+Reports 70--73 and all remaining semantic and arithmetic obligations stay
 outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
 
 Report 70 advances that boundary at
@@ -395,3 +395,12 @@ maximal lattice on an ambient space; row irredundancy is proved from Lemma
 4.4(i) after ambient-isometry transport. These are no longer `CatalogueLaws`
 fields. The conditional status remains because the lower invariant and
 lattice-level interfaces still lack concrete non-dyadic instances.
+
+Report 73 advances the Section 8 boundary at `4ccd9fa`. The opening
+class-number-one-implies-`n`-regular step of Lemma 8.1 is no longer a final
+field of `SectionEightLaws`; it is proved from explicit genus-lifting and
+isometry-transport laws. The derived theorem, compatibility endpoint, and
+Lemma 8.1(i) have empty axiom sets in the focused Lean 4.32.1 audit. Concrete
+number-field instances of the two lower laws, the other global arithmetic
+packages, exact clean-kit evidence for this checkpoint, and human sign-off
+remain open. The Grade-D `NOT_COMPLETE` verdict is unchanged.

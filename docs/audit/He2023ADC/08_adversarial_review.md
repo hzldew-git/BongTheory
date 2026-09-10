@@ -279,3 +279,13 @@ of every Lemma 4.4 biconditional, the negative exception, and the uniqueness
 quantifier in Proposition 4.2(iii). Reviewers must still validate the concrete
 non-dyadic determinant--Hasse--Hilbert package and both representation
 transport orientations.
+
+Report 73 tests the former class-number-one regularity shortcut in Section 8.
+The proof no longer receives `HasClassNumberOne M -> IsNRegular M n` as a
+field. It must obtain one genus representative that globally represents each
+locally represented target, apply class number one to that representative,
+and transport representation in the source-lattice direction. The target
+rank and integrality hypotheses and the universal quantifier over finite
+places remain explicit. The theorem is nonvacuous only after a concrete
+number-field model supplies the genus-lifting law; that construction and
+human confirmation of the genus orientation remain open.

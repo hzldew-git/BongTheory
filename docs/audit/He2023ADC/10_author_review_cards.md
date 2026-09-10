@@ -257,6 +257,34 @@ none of those semantic and arithmetic tasks follows from the matrix checks.
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## Lemma 8.1, class number one implies `n`-regularity
+
+Paper location: p. 1017, opening sentence of the proof of Lemma 8.1.
+
+Paper statement in context: because `M` has class number one, `M` is
+`n`-regular; local `n`-ADC then implies global `n`-ADC by Theorem 1.3.
+
+Formal finding: `ClassNumberRegularityLaws.classNumberOne_implies_nRegular`
+derives the regularity implication. For every integral rank-`n` lattice
+locally represented by `M`, a lower law produces a representing lattice `M'`
+in the genus of `M`; class number one gives an isometry from `M'` to `M`, and
+a second lower law transports the representation. The final implication is
+not a `SectionEightLaws` field. The two lower number-field laws remain
+uninstantiated.
+
+Questions for the paper author and domain expert:
+
+1. Is the genus orientation `M' in gen(M)` the convention intended in the
+   opening sentence of Lemma 8.1?
+2. Which cited local-global or genus theorem should be recorded as the exact
+   source for the existence of `M'` representing an everywhere locally
+   represented `N`?
+3. Does integral isometry of the representing source transport representation
+   in precisely the orientation used by the formal theorem?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Lemma 4.6, dyadic actual-lattice specialization
 
 Paper location: pp. 993--994.

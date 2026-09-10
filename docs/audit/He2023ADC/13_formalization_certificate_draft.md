@@ -256,6 +256,13 @@ uniqueness, and derives row irredundancy from Lemma 4.4(i) and ambient-isometry
 transport. Neither conclusion remains a `CatalogueLaws` field. The lower
 invariant and lattice-level interfaces, clean-kit evidence, and human review
 remain outside this draft certificate.
+Section 8 class-number regularity checkpoint:
+`4ccd9fabf788cc3a8b6a04bb03049409f0bee696`. Report 73 derives the opening
+regularity step of Lemma 8.1 from lower genus-lifting and isometry-transport
+laws; no final-conclusion regularity field remains in `SectionEightLaws`.
+The focused audit reports no axioms for the derived theorem and Lemma 8.1(i).
+Concrete number-field instances of the two lower laws, full clean-kit evidence,
+and human review remain outside this draft certificate.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

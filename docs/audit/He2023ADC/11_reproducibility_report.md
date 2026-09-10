@@ -632,5 +632,22 @@ strict verifier intentionally rejects that archive because it lacks a
 paper-specific theorem-index prefix. Report 69 therefore records it as exact
 proof-closure evidence through Report 68, not as the final release package.
 The tagged release regenerates and rechecks a fully isolated package. Reports
-70--72, remaining concrete law instances, GitHub tag CI, and human sign-off are
+70--73, remaining concrete law instances, GitHub tag CI, and human sign-off are
 separate gates.
+
+## Section 8 class-number regularity local checkpoint
+
+At code checkpoint `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, a fresh
+worktree restored the locked dependencies from `lake-manifest.json` and the
+mathlib cache. With Lean 4.32.1, both
+
+```text
+lake build Bong.Lattice.He2023ADCSectionEight
+lake build BongTest.He2023ADCClassNumberRegularityAudit
+```
+
+succeed. The focused audit completes four jobs and reports no axioms for the
+derived regularity theorem, the Section 8 compatibility endpoint, or Lemma
+8.1(i). This verifies the changed dependency closure locally. It is not a
+full-project build, exact clean Review Kit, GitHub CI result, concrete
+number-field instance, or human semantic approval. See Report 73.

@@ -153,6 +153,10 @@ been removed. A concrete non-dyadic local-field instance remains open.
 Report 72 derives Remark 4.3's maximal-row exhaustion from Proposition
 4.2(ii) and maximal-lattice uniqueness, and derives row irredundancy from
 Lemma 4.4(i). Neither conclusion remains a `CatalogueLaws` field.
+Report 73 lowers the Section 8 class-number boundary. The implication from
+class number one to `n`-regularity is now proved from explicit genus-lifting
+and isometry-transport laws rather than stored as a final-conclusion field.
+Concrete number-field instances of those lower laws remain open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

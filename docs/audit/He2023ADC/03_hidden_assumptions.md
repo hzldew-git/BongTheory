@@ -160,11 +160,13 @@ generic O'Meara representation theorem remain genuine mathematical inputs to
 
 Section 8 is proved over `HeADC2025GlobalData.SectionEightLaws` together with
 the existing Theorem 1.3 law package. Concrete localization, genus transport,
-class-number-one regularity, the distinguishing-lattice theorem, and scaling
-stability are all visible structure fields. In particular, Theorem 8.2's
-Meyer--Xu--O'Meara content is not reconstructed by returning its field.
-The remaining theorems do prove the source deductions from those inputs. See
-report 47.
+the distinguishing-lattice theorem, and scaling stability remain visible
+structure fields. Report 73 replaces the former class-number-one regularity
+field by `ClassNumberRegularityLaws`: a genus-lifting theorem and representation
+transport across an isometry. The regularity implication is now derived from
+those lower inputs. In particular, neither that derivation nor Theorem 8.2's
+Meyer--Xu--O'Meara content constructs the still-missing number-field
+arithmetic. See reports 47 and 73.
 
 The corrected quaternary catalogue does not assume completeness or
 irredundancy. Those properties are proved using the corrected three-way

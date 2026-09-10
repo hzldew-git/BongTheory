@@ -16,8 +16,9 @@ repository's abstract global/local lattice system.
 The number-field arithmetic invoked by the published proofs is kept in the
 proof-data structure `HeADC2025SectionEightLaws`.  Its fields identify the
 precise remaining implementation boundary: localization of maximality,
-class-number-one regularity, the Meyer--Xu distinguishing lattice, transport
-inside a genus, the local rank-`n+1` classification, and scaling stability.
+the genus-lifting and isometry-transport facts from which class-number-one
+regularity is derived, the Meyer--Xu distinguishing lattice, transport inside
+a genus, the local rank-`n+1` classification, and scaling stability.
 None of those facts is introduced as a Lean axiom.  The numbered conclusions
 are theorems from a supplied law package.
 -/

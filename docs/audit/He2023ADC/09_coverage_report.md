@@ -61,8 +61,9 @@ counted as a concrete arithmetic implementation.
   disjunction is formalized and suffices downstream; reports 35--46.
 - Every numbered Section 8 deduction, plus Theorems 1.5 and 1.7, is proved
   from `SectionEightLaws` and the existing Theorem 1.3 package. Concrete
-  localization, class-number, Meyer--Xu--O'Meara, genus-transport, and
-  scaling-stability instances remain open; report 47.
+  localization, Meyer--Xu--O'Meara, genus-lifting, isometry-transport, and
+  scaling-stability instances remain open. Class-number-one regularity itself
+  is now derived from the two lower genus laws; reports 47 and 73.
 - The binary cases of Theorem 1.9(ii) and Theorem 1.10 are formally refuted
   and corrected. The exact catalogue has `4|U|+2` classes and unconditionally
   `8(N p)^e+2`, rather than the
@@ -121,8 +122,9 @@ The main unresolved mathematical work is:
   maximal-lattice uniqueness, representation, and transfer fields now carried
   through `CatalogueLaws`, required to discharge Theorem 1.10; maximal-row
   exhaustion and irredundancy themselves are derived in Report 72;
-- concrete number-field instances of `SectionEightLaws` and the earlier
-  global reduction packages;
+- concrete number-field instances of `SectionEightLaws`, its lower
+  `ClassNumberRegularityLaws` genus-lifting and isometry-transport package,
+  and the earlier global reduction packages;
 - any publisher-corrected replacement for the four binary statements and a
   resolution of the printed-strength Lemma 7.13 claim;
 - concrete Hanke--Kirschmer--Oh catalogue imports, the global interpretation

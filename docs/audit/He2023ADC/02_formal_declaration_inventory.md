@@ -248,7 +248,11 @@ Additional concrete declaration groups are:
   rank-`n` sublattice property in the global/local interface. From
   `SectionEightLaws` and the existing Theorem 1.3 laws it proves both clauses
   of Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5(i)--(ii) and 1.7,
-  Lemma 8.4, and Corollary 8.5.
+  Lemma 8.4, and Corollary 8.5. `ClassNumberRegularityLaws` exposes the
+  genus-lifting and isometry-transport inputs behind the opening sentence of
+  Lemma 8.1; `classNumberOne_implies_nRegular` derives regularity from them,
+  so that final conclusion is no longer a `SectionEightLaws` field. The
+  focused audit is `He2023ADCClassNumberRegularityAudit`; report 73.
 - `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
   both nonmaximal binary boundary classes. It proves exact completeness and
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the

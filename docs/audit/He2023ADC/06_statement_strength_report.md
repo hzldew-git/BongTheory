@@ -315,11 +315,21 @@ See reports 53 and 59.
 At the same checkpoint, Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5
 and 1.7, Lemma 8.4, and Corollary 8.5 reproduce the source-level implications
 and biconditionals in the abstract global/local system. The Meyer--Xu--
-O'Meara distinguishing-lattice input, concrete localization, class-number
-arithmetic, and scaling stability remain visible fields of
-`SectionEightLaws`. These endpoints are likewise
+O'Meara distinguishing-lattice input, concrete localization, genus-lifting,
+isometry transport, and scaling stability remain visible fields of
+`SectionEightLaws` or its nested lower-level law package. Report 73 proves
+class-number-one regularity from the genus-lifting and transport inputs, so
+that full implication is no longer a structure field. These endpoints are
+still
 `CONDITIONAL_FORMALIZATION`; they are not weaker conclusions, but their
 arithmetic hypotheses have not been instantiated. See report 47.
+
+At `4ccd9fa`, the implication from class number one to `n`-regularity retains
+the exact source conclusion but has a strictly lower conditional boundary.
+It is derived from an everywhere-local representation lift to a lattice in
+the genus and transport of representation across an isometry. It remains
+`CONDITIONAL_FORMALIZATION`, not `FULLY_FORMALIZED`, because those two
+number-field genus laws do not yet have concrete instances. See report 73.
 
 At `f7e8fb7`, the binary specializations of Theorem 1.9(ii) and Theorem 1.10
 are `SEMANTIC_MISMATCH`, not unformalized statements. The former repeats the

@@ -99,3 +99,20 @@ model `(1/2)A(2,2rho)`. Thus rescaling it by `pi` is the printed
 literal repeated orthogonal product with the paper's half-hyperbolic `H`.
 The formal conclusions are integral lattice isometries, not coefficient-list
 abbreviations.
+
+## Section 8 genus and class number
+
+Paper terms: `gen(M)` and class number one, used on pp. 1017--1018.
+
+Formal terms: `HeADC2025GlobalData.inGenus` and
+`HeADC2025GlobalData.HasClassNumberOne`. The latter means that every global
+lattice `M'` satisfying `inGenus M' M` is integrally isometric to `M`.
+`ClassNumberRegularityLaws.genus_lift_of_local_represents` uses exactly this
+orientation when lifting an everywhere locally represented target.
+
+The relation `inGenus` remains abstract: the project has not yet constructed
+it from actual localizations of integral quadratic lattices over a number
+field. Status: `PROVISIONAL_MATCH` for the quantifier and orientation;
+`FORMAL_DEFINITION_AMBIGUITY` until an author or domain expert confirms that
+the abstract relation is instantiated by the publisher's genus convention.
+See Report 73.

@@ -435,3 +435,12 @@ certificates also pass. Report 69 discloses that the archive's old shared root
 documents mention other papers, so it is proof-closure evidence rather than the
 strictly isolated release asset. It predates Reports 70--72 and does not
 instantiate the remaining arithmetic laws or provide human semantic approval.
+
+At `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, Report 73 replaces the
+`SectionEightLaws` field that directly asserted class-number-one regularity by
+the lower `ClassNumberRegularityLaws` package. Its genus-lifting and
+isometry-transport fields are proposition-valued mathematical inputs, not
+Lean axioms. The derived regularity theorem, its Section 8 compatibility
+endpoint, and Lemma 8.1(i) each report no axioms. The focused audit completes
+four jobs with Lean 4.32.1. This is local cached evidence, not a concrete
+number-field instance or an exact clean-kit receipt.
