@@ -45,7 +45,8 @@
   },
   "entryModule": "Bong.Papers.He2022Classic",
   "auditModules": [
-    "BongTest.He2022ClassicAudit"
+    "BongTest.He2022ClassicAudit",
+    "BongTest.He2022ClassicProposition82Audit"
   ],
   "auditDirectory": "docs/audit/He2022Classic",
   "sourceDelta": "docs/audit/He2022Classic/SOURCE_DELTA.md",

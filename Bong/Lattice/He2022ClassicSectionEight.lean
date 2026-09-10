@@ -121,15 +121,59 @@ def RepresentsAllPositiveDefiniteClassicAtRank
       S.globalIntegral N → G.positiveDefinite N →
         S.globalRepresents M N
 
+/-- The globalization and localization inputs in the proof of He,
+Proposition 8.2.  The field `positiveDefinite_globalization` isolates the use
+of O'Meara 81:14: a prescribed integral lattice at one finite place is the
+localization of a positive definite integral global lattice. -/
+structure Proposition82Laws : Prop where
+  integral_localize (p : S.Place) (M : S.GlobalLattice) :
+    S.globalIntegral M → S.localIntegral (S.localize p M)
+  positiveDefinite_globalization
+      (p : S.Place) (N : S.LocalLattice p) :
+    S.localIntegral N →
+      ∃ N₀ : S.GlobalLattice,
+        S.globalRank N₀ = S.localRank N ∧
+          S.globalIntegral N₀ ∧ G.positiveDefinite N₀ ∧
+            S.localEquivalent (S.localize p N₀) N
+  representation_localize
+      (p : S.Place) (M N : S.GlobalLattice) :
+    S.globalRepresents M N →
+      S.localRepresents (S.localize p M) (S.localize p N)
+  local_represents_of_equivalent_target
+      (p : S.Place) (M N N' : S.LocalLattice p) :
+    S.localEquivalent N N' → S.localRepresents M N →
+      S.localRepresents M N'
+
+namespace Proposition82Laws
+
+variable {G : HeClassic2024GlobalData S}
+
+/-- The first, stronger sentence of He (2024), Proposition 8.2, derived from
+the positive-definite globalization used in the published proof. -/
+theorem he2022ClassicProposition82_positive
+    (H : G.Proposition82Laws) (M : S.GlobalLattice) (n : Nat)
+    (hPositive : G.RepresentsAllPositiveDefiniteClassicAtRank M n) :
+    ∀ p : S.Place, S.IsNUniversalAt M p n := by
+  intro p
+  refine ⟨H.integral_localize p M hPositive.1, ?_⟩
+  intro N hRank hIntegral
+  obtain ⟨N₀, hGlobalRank, hGlobalIntegral, hGlobalPositive,
+      hEquivalent⟩ := H.positiveDefinite_globalization p N hIntegral
+  have hGlobal : S.globalRepresents M N₀ :=
+    hPositive.2 N₀ (hGlobalRank.trans hRank) hGlobalIntegral hGlobalPositive
+  exact H.local_represents_of_equivalent_target p
+    (S.localize p M) (S.localize p N₀) N hEquivalent
+    (H.representation_localize p M N₀ hGlobal)
+
+end Proposition82Laws
+
 /-- Arithmetic inputs used in Proposition 8.2 and Theorems 1.5, 1.7 and 1.9.
 Each field corresponds to a specific localization, ramification, or strong-
 approximation step in the v5 proof. -/
 structure SectionEightLaws : Prop where
   positiveDefinite_admissible (M N : S.GlobalLattice) :
     G.positiveDefinite N → S.globalAdmissible M N
-  proposition82 (M : S.GlobalLattice) (n : Nat) :
-    1 ≤ n → G.RepresentsAllPositiveDefiniteClassicAtRank M n →
-      ∀ p : S.Place, S.IsNUniversalAt M p n
+  proposition82 : G.Proposition82Laws
   unramified_iff_discriminantOdd :
     (∀ p : S.Place, G.isDyadic p → G.ramificationIndexAt p = 1) ↔
       G.discriminantOdd
@@ -163,10 +207,10 @@ variable {G : HeClassic2024GlobalData S}
 
 /-- The first, stronger sentence of He (2024), Proposition 8.2. -/
 theorem he2022ClassicProposition82_positive (H : G.SectionEightLaws)
-    (M : S.GlobalLattice) (n : Nat) (hn : 1 ≤ n)
+    (M : S.GlobalLattice) (n : Nat) (_hn : 1 ≤ n)
     (hPositive : G.RepresentsAllPositiveDefiniteClassicAtRank M n) :
-    ∀ p : S.Place, S.IsNUniversalAt M p n :=
-  H.proposition82 M n hn hPositive
+    ∀ p : S.Place, S.IsNUniversalAt M p n := by
+  exact H.proposition82.he2022ClassicProposition82_positive M n hPositive
 
 /-- He (2024), Proposition 8.2, for a lattice already known to be globally
 classic `n`-universal.  The stronger positive-definite premise printed first
