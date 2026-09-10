@@ -52,6 +52,10 @@ The proposition-valued definition remains separate from its proof:
   `exists_ramifiedDyadic_of_not_discriminantOdd`: the one-way discriminant
   criterion and its derived contrapositive witness used by Theorems 1.5, 1.7,
   and 1.9; Report 30.
+- `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` and
+  `sumOfSquares_localUniversal_of_oddDiscriminant`: the non-dyadic, dyadic
+  unary, and dyadic higher-rank inputs and their derived all-finite-place
+  conclusion in Theorem 1.9; Report 31.
 - `Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even`: even-rank
   testing equivalence.
 - `Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one`: a generic proved
@@ -103,3 +107,5 @@ restriction and the remaining even deduction.
 local-to-global derivation and Theorem 1.9.
 `BongTest/He2022ClassicDiscriminantRamificationAudit.lean` checks the Report
 30 directional criterion and its three consumers.
+`BongTest/He2022ClassicLocalUniversalityAudit.lean` checks the Report 31
+finite-place case split and the full conditional Theorem 1.9 endpoint.

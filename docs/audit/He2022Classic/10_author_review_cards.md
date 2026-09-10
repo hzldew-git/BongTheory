@@ -152,8 +152,8 @@ The rank bounds, positive-rank convention, selected ramified pair of places,
 and both directions of the sums-of-squares biconditional are explicit. The
 proof-data structures separately name localization/globalization,
 ramification and defect scaling, good-BONG transfer, discriminant parity, the
-diagonal coefficient step, the ramified-extension obstruction, local
-universality at every kind of place, and strong approximation.
+diagonal coefficient step, the ramified-extension obstruction, separate
+finite-place universality branches, and strong approximation.
 
 Current status: `CONDITIONAL_FORMALIZATION`. Question for the author/domain
 expert: confirm that Report 23 partitions the cited arithmetic inputs exactly
@@ -178,5 +178,11 @@ index one at every dyadic place implies odd discriminant.  It derives the
 ramified-place witness for an even discriminant by contraposition.  The
 number-field expert should confirm this orientation and instantiate it for
 the concrete discriminant convention; see Report 30.
+
+For Theorem 1.9's finite-place step, the all-places conclusion is now derived
+from separate non-dyadic, dyadic unary, and dyadic higher-rank laws.  The
+number-field expert should confirm those are exactly the three local cases in
+v5 line 1700 and supply concrete bridges to the cited local theorems; see
+Report 31.
 
 Author decision, reviewer name, date, and signature: not provided.

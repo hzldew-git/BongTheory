@@ -47,11 +47,20 @@ localizing an arbitrary admissible global target and invoking a separate
 strong-approximation representation law.  Since that law and the concrete
 localizations remain uninstantiated, this is still conditional evidence.
 
-Report 30 further weakens the assumed arithmetic interface without weakening
-any formal conclusion: the former full equivalence between odd discriminant
-and dyadic ramification index one is replaced by the single direction used by
-Theorems 1.5, 1.7, and 1.9.  The existence of a ramified dyadic place under an
-even discriminant is proved by contraposition.
+Report 30 factors the former full equivalence by retaining the direction used
+by Theorems 1.5, 1.7, and the necessity half of Theorem 1.9.  The existence of
+a ramified dyadic place under an even discriminant is proved by contraposition.
+Report 31 then exposes the converse direction specifically where v5 uses it,
+in the dyadic unary sufficiency branch of Theorem 1.9.  Thus both directions
+remain mathematical inputs overall, but neither is hidden in a stronger
+final-conclusion field.
+
+Report 31 removes another final-conclusion field from Theorem 1.9.  Instead of
+assuming local universality at every finite place, the formalization assumes
+the three arithmetic cases named in v5 and proves their exhaustive split.  It
+also makes `1 <= n` operational: `n = 1` and `n >= 2` reach distinct local
+criteria, while the non-totally-real hypothesis is reserved for the later
+strong-approximation step.
 
 For Theorem 1.3 the current endpoints prove Lemma 7.4 in both parity branches,
 all of Lemmas 7.7, 7.10, and 7.11, and a literal deletion witness for every

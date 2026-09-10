@@ -25,9 +25,13 @@ number-field implementations.
 Report 29 also derives Theorem 1.9's local-to-global step by localizing an
 arbitrary global target and invoking an explicit strong-approximation
 representation law; global universality itself is no longer a package field.
-Report 30 removes an unused full discriminant/ramification equivalence and
-derives the ramified dyadic-place witness used by Theorem 1.7 from the single
-direction needed by all three global applications.
+Report 30 separates the necessity-side discriminant direction and derives the
+ramified dyadic-place witness used by Theorem 1.7.  Report 31 exposes the
+converse direction at its actual use in Theorem 1.9's unary sufficiency branch;
+both directions remain concrete arithmetic obligations overall.
+Report 31 derives Theorem 1.9's finite-place local-universality conclusion from
+the separate non-dyadic, dyadic unary, and dyadic higher-rank laws in v5; the
+all-places conclusion is no longer stored as a package field.
 
 Both branches of Theorem 1.3 are complete at the literal table level.
 Author-corrected v5 Lemma 7.1, both branches of Lemma 7.4, Lemma 7.7, all
@@ -42,7 +46,7 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md` and Reports 22--30 are part of the review
+internally proved. `SOURCE_DELTA.md` and Reports 22--31 are part of the review
 scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.

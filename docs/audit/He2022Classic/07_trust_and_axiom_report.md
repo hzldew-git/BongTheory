@@ -77,3 +77,9 @@ At code checkpoint `46bf941`, the global Theorem 1.5 and conditional Theorem
 biconditional by a one-way law.  The derived ramified-place witness and
 Theorem 1.7 use only the three expected foundational axioms.  The canonical
 5,019-job build and 62,676-declaration imported-closure gate pass; Report 30.
+
+At code checkpoint `83aec42`, the finite-place branch derivation, its
+compatibility theorem, and the full conditional Theorem 1.9 use only
+`propext`, `Classical.choice`, and `Quot.sound`.  The focused build completes
+5,000 jobs, the canonical build completes 5,020 jobs, and the imported-closure
+gate checks 62,689 declarations; Report 31.

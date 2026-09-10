@@ -12,6 +12,7 @@
 | positive definite global rank-`n` representation hypothesis | `HeClassic2024GlobalData.RepresentsAllPositiveDefiniteClassicAtRank` |
 | Proposition 8.2 globalization/localization inputs | `HeClassic2024GlobalData.Proposition82Laws` |
 | Theorem 1.9 local-to-global inputs | `HeClassic2024GlobalData.SumOfSquaresLocalGlobalLaws` |
+| Theorem 1.9 finite-place branch inputs | `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` |
 | one-way discriminant/ramification input | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
@@ -23,3 +24,6 @@ construct a concrete number-field lattice; see Report 27.
 The `strong_approximation` field in `SumOfSquaresLocalGlobalLaws` is likewise
 an explicit arithmetic interface, not a proved concrete number-field theorem;
 see Report 29.
+`SumOfSquaresLocalUniversalityLaws` separates the three finite-place branches
+of v5 line 1700; their all-places conclusion is derived rather than assumed;
+see Report 31.

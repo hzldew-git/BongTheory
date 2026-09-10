@@ -57,6 +57,13 @@ strong-approximation representation law.  Reviewers must still require a
 concrete number-field instance of that law.
 
 The discriminant interface is also checked for excess strength.  Report 30
-removes the unused reverse implication and derives the ramified-place witness
-by contradiction.  Reviewers must still require a concrete proof that all
-dyadic ramification indices equal to one force odd discriminant.
+separates the necessity-side implication and derives the ramified-place witness
+by contradiction.  Report 31 reveals and separately names the converse needed
+by the unary sufficiency branch.  Reviewers must therefore require concrete
+proofs of both directions at their actual use sites.
+
+The same anti-circularity test is applied to the finite-place half of Theorem
+1.9.  Report 31 removes the former field that asserted the complete quantified
+local conclusion and replaces it by the three source branches.  Reviewers
+must still verify concrete number-field/completion instances of those branch
+laws and their bridge to the local BONG criteria.

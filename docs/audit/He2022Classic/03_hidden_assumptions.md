@@ -24,7 +24,7 @@ equivalence.
 the conditional Section 8 deductions. In particular, they expose O'Meara
 81:14 globalization, localization of universality, the ramification-index and
 defect scaling laws, transfer of a good BONG, the discriminant/unramifiedness
-equivalence, the diagonal coefficient step, the ramified-extension
+directions, the diagonal coefficient step, the ramified-extension
 obstruction, and strong approximation for sums of squares. These structures
 are theorem premises and have no concrete instances in this checkpoint; a
 standard-only axiom report does not discharge them. See Report 23.
@@ -50,11 +50,22 @@ localization, and strong approximation for an admissible global target once
 all finite-place representations are known.  The concrete number-field and
 archimedean interpretation of those premises remains open.
 
-Report 30 removes the unused reverse direction of the
-discriminant/ramification equivalence.  The one remaining arithmetic premise
-says that ramification index one at every dyadic place implies odd
-discriminant.  Its contrapositive existence witness is derived in Lean, but a
-concrete number-field instance of the forward direction is still required.
+Report 30 removes the reverse direction from the general
+`DiscriminantRamificationLaws` package.  Its remaining arithmetic premise says
+that ramification index one at every dyadic place implies odd discriminant,
+and its contrapositive existence witness is derived in Lean.  Report 31 makes
+clear that the converse direction is nevertheless required by the unary
+sufficiency branch of Theorem 1.9; it is now a separate field of the specialized
+local-universality package.  Concrete number-field instances of both directions
+are still required.
+
+Report 31 removes the all-finite-places local-universality conclusion from
+`SectionEightLaws`.  Its replacement exposes four concrete inputs: odd
+discriminant gives ramification index one at a dyadic place; the sum-of-squares
+lattice is locally universal at non-dyadic places; its dyadic unary case holds
+at ramification index one; and its dyadic `n >= 2` case follows from the local
+criterion.  Lean derives the exhaustive case split, but concrete completion
+instances and bridges to the local BONG theorems remain open.
 
 `card_heClassicUnitRepresentatives` derives O'Meara 63:9 from the proved
 principal-unit filtration, after constructing the explicit equivalence between

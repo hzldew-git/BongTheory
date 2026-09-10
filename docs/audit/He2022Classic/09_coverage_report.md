@@ -38,8 +38,12 @@ Coverage status:
   strong-approximation inputs rather than a supplied global conclusion;
   Report 29.
   The ramified dyadic-place witness used by Theorem 1.7 is derived from the
-  one-way discriminant criterion; the unused reverse direction is removed;
-  Report 30.
+  necessity-side discriminant criterion; Report 30.  The converse direction
+  required by Theorem 1.9's unary sufficiency branch is separately exposed in
+  Report 31.
+  Theorem 1.9's all-finite-place local-universality conclusion is derived from
+  the separate non-dyadic, dyadic unary, and dyadic higher-rank laws; Report
+  31.
 
 The previous 0/66 proof claim was stale and is withdrawn. No replacement
 whole-paper percentage is inferred from filename or declaration counts.

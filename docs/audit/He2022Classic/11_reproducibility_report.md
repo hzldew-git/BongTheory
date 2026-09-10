@@ -106,6 +106,16 @@ ramified dyadic-place witness.  The focused 5,000-job build, direct audit,
 remaining concrete number-field premise.  Exact clean-kit verification is a
 later gate.
 
+## Theorem 1.9 finite-place checkpoint
+
+Code commit `83aec42841ecb1b75b010ac15fddd72555939d36` replaces the final
+all-finite-places universality field by the three local branches used in v5
+and derives their quantified conclusion.  The focused 5,000-job build, direct
+audit, 5,020-job canonical build, 30 policy tests, 2,794-source scan, and
+62,689-declaration imported-closure gate pass locally.  Report 31 records the
+remaining concrete local arithmetic interfaces.  Exact clean-kit verification
+is a later gate.
+
 ## Proposition 8.2 derivation checkpoint
 
 Code commit `ea0f9f1516d41d18c87b8c0ee0757fd8d5e58e1b` replaces the final

@@ -2,6 +2,13 @@
 
 Status: `CONDITIONAL_FORMALIZATION` / `SOURCE_LOGIC_MATCH`.
 
+Current-scope note: Report 31 later lowers the formerly opaque finite-place
+universality field and thereby exposes the converse implication, odd
+discriminant to ramification index one, in Theorem 1.9's unary sufficiency
+branch.  The present report remains the checkpoint for the necessity-side
+direction and its contrapositive witness; it is not a claim that the converse
+is absent from the full v5 proof.
+
 Code checkpoint:
 `46bf941e3edc83b7dc2fb115bdd8b0215a73653f` on
 `release/heclassic-v0.5.0-rc.1-prep`.
