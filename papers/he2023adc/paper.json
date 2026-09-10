@@ -41,6 +41,7 @@
     "BongTest.He2023ADCScalingStabilityAudit",
     "BongTest.He2023ADCScalingRegularityAudit",
     "BongTest.He2023ADCGlobalMaximalityAudit",
+    "BongTest.He2023ADCGenusTransportAudit",
     "BongTest.He2023ADCQuaternaryBoundaryQ2",
     "BongTest.He2023ADCExceptionalQuaternaryQ2",
     "BongTest.He2023ADCLemma46Audit",

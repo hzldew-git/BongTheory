@@ -18,7 +18,10 @@ proof-data structure `HeADC2025SectionEightLaws`.  Its fields identify the
 precise remaining implementation boundary: localization of maximality,
 the genus-lifting and isometry-transport facts from which class-number-one
 regularity is derived, the Meyer--Xu distinguishing lattice, transport inside
-a genus, the local rank-`n+1` classification, and scaling stability.
+a genus, the local rank-`n+1` classification, and scaling stability.  The
+genus interface records its defining local-equivalence characterization;
+symmetry of genus and preservation of global rank are derived from local
+equivalence rather than stored as finished Section 8 fields.
 None of those facts is introduced as a Lean axiom.  The numbered conclusions
 are theorems from a supplied law package.
 -/
@@ -285,24 +288,72 @@ theorem globalMaximal_iff_localMaximal
 
 end GlobalMaximalityLaws
 
+/-- The local-equivalence characterization of a genus and the elementary
+transport facts used in Corollary 8.3.
+
+The paper defines a genus by equivalence at every finite place.  Accordingly,
+`inGenus_symm` is derived below from symmetry of local equivalence.  Global
+rank preservation is also derived: choose one finite place, compare local
+ranks there, and use the localization rank law from Theorem 1.3. -/
+structure GenusTransportLaws : Prop where
+  place_nonempty : Nonempty S.Place
+  isIsometric_symm {M N : S.GlobalLattice} :
+    G.isIsometric M N → G.isIsometric N M
+  inGenus_iff_localEquivalent (M N : S.GlobalLattice) :
+    G.inGenus M N ↔ ∀ p : S.Place,
+      S.localEquivalent (S.localize p M) (S.localize p N)
+  localEquivalent_symm {p : S.Place} {M N : S.LocalLattice p} :
+    S.localEquivalent M N → S.localEquivalent N M
+  localRank_eq_of_equivalent {p : S.Place} {M N : S.LocalLattice p} :
+    S.localEquivalent M N → S.localRank M = S.localRank N
+  local_represents_of_equivalent_target
+      (p : S.Place) (M M' N : S.LocalLattice p) :
+    S.localEquivalent M M' → S.localRepresents M N →
+      S.localRepresents M' N
+
+namespace GenusTransportLaws
+
+/-- Membership in the same genus is symmetric because local equivalence is
+symmetric at every finite place. -/
+theorem inGenus_symm (H : G.GenusTransportLaws)
+    {M N : S.GlobalLattice} (hGenus : G.inGenus M N) :
+    G.inGenus N M := by
+  rw [H.inGenus_iff_localEquivalent N M]
+  intro p
+  exact H.localEquivalent_symm
+    ((H.inGenus_iff_localEquivalent M N).mp hGenus p)
+
+/-- A genus relation supplies local equivalence at the requested place. -/
+theorem localEquivalent_of_inGenus (H : G.GenusTransportLaws)
+    {M N : S.GlobalLattice} (hGenus : G.inGenus M N)
+    (p : S.Place) :
+    S.localEquivalent (S.localize p M) (S.localize p N) :=
+  (H.inGenus_iff_localEquivalent M N).mp hGenus p
+
+/-- Lattices in the same genus have the same global rank.  This conclusion is
+assembled from local-rank invariance and the localization rank theorem. -/
+theorem rank_eq_of_inGenus (H : G.GenusTransportLaws)
+    (T : S.Theorem13Laws) {M N : S.GlobalLattice}
+    (hGenus : G.inGenus M N) :
+    S.globalRank M = S.globalRank N := by
+  obtain ⟨p⟩ := H.place_nonempty
+  calc
+    S.globalRank M = S.localRank (S.localize p M) :=
+      (T.rank_localize p M).symm
+    _ = S.localRank (S.localize p N) :=
+      H.localRank_eq_of_equivalent
+        (GenusTransportLaws.localEquivalent_of_inGenus
+          (G := G) H hGenus p)
+    _ = S.globalRank N := T.rank_localize p N
+
+end GenusTransportLaws
+
 /-- The arithmetic inputs used by the Section 8 proofs.  Theorem 8.2 is
 split into the definite Meyer input and the indefinite Xu--O'Meara inputs
 inside `DistinguishingSublatticeLaws`; none presently has a concrete project
 implementation. -/
 structure SectionEightLaws : Prop where
-  isIsometric_symm {M N : S.GlobalLattice} :
-    G.isIsometric M N → G.isIsometric N M
-  inGenus_symm {M N : S.GlobalLattice} :
-    G.inGenus M N → G.inGenus N M
-  rank_eq_of_inGenus {M N : S.GlobalLattice} :
-    G.inGenus M N → S.globalRank M = S.globalRank N
-  localEquivalent_of_inGenus {M N : S.GlobalLattice} :
-    G.inGenus M N → ∀ p : S.Place,
-      S.localEquivalent (S.localize p M) (S.localize p N)
-  local_represents_of_equivalent_target
-      (p : S.Place) (M M' N : S.LocalLattice p) :
-    S.localEquivalent M M' → S.localRepresents M N →
-      S.localRepresents M' N
+  genusTransport : G.GenusTransportLaws
   classNumberRegularity : G.ClassNumberRegularityLaws
   localMaximality : LocalMaximalityLaws (S := S)
   distinguishingSublattice : G.DistinguishingSublatticeLaws
@@ -313,6 +364,41 @@ structure SectionEightLaws : Prop where
 namespace SectionEightLaws
 
 variable {G : HeADC2025GlobalData S}
+
+/-- Compatibility endpoint for symmetry of integral isometry. -/
+theorem isIsometric_symm (H : G.SectionEightLaws)
+    {M N : S.GlobalLattice} :
+    G.isIsometric M N → G.isIsometric N M :=
+  H.genusTransport.isIsometric_symm
+
+/-- Genus symmetry, derived from the defining family of local
+equivalences. -/
+theorem inGenus_symm (H : G.SectionEightLaws)
+    {M N : S.GlobalLattice} :
+    G.inGenus M N → G.inGenus N M :=
+  GenusTransportLaws.inGenus_symm (G := G) H.genusTransport
+
+/-- Global rank preservation in a genus, derived through localization. -/
+theorem rank_eq_of_inGenus (H : G.SectionEightLaws)
+    (T : S.Theorem13Laws) {M N : S.GlobalLattice} :
+    G.inGenus M N → S.globalRank M = S.globalRank N :=
+  GenusTransportLaws.rank_eq_of_inGenus (G := G) H.genusTransport T
+
+/-- A genus relation supplies local equivalence at every finite place. -/
+theorem localEquivalent_of_inGenus (H : G.SectionEightLaws)
+    {M N : S.GlobalLattice} :
+    G.inGenus M N → ∀ p : S.Place,
+      S.localEquivalent (S.localize p M) (S.localize p N) :=
+  GenusTransportLaws.localEquivalent_of_inGenus
+    (G := G) H.genusTransport
+
+/-- Representation is invariant under replacing the representing local
+lattice by an equivalent one. -/
+theorem local_represents_of_equivalent_target (H : G.SectionEightLaws)
+    (p : S.Place) (M M' N : S.LocalLattice p) :
+    S.localEquivalent M M' → S.localRepresents M N →
+      S.localRepresents M' N :=
+  H.genusTransport.local_represents_of_equivalent_target p M M' N
 
 /-- The class-number-one regularity input used by Lemma 8.1, now derived from
 the explicit genus-lifting and isometry-transport laws. -/
@@ -418,9 +504,9 @@ theorem heADC2025Corollary83 (H : G.SectionEightLaws)
     G.HasClassNumberOne M := by
   intro M' hGenus
   have hRankM' : S.globalRank M' = n + 1 :=
-    (H.rank_eq_of_inGenus hGenus).trans hRank
+    (H.rank_eq_of_inGenus T hGenus).trans hRank
   have hThreeM' : 3 ≤ S.globalRank M' := by
-    rw [H.rank_eq_of_inGenus hGenus]
+    rw [H.rank_eq_of_inGenus T hGenus]
     exact hThree
   obtain ⟨N, hNRank, hNIntegral, hM'N, hUnique⟩ :=
     H.heADC2025Theorem82 M' n hRankM' hThreeM'
