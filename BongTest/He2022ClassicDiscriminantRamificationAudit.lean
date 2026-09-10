@@ -8,19 +8,39 @@ import Bong.Lattice.He2022ClassicSectionEight
 /-!
 # Focused audit for discriminant parity and dyadic ramification
 
-Only the direction used by the paper's global applications is an arithmetic
-input.  Existence of a ramified dyadic place when the discriminant is even is
-derived in Lean.
+The discriminant--ramification equivalence is proved for actual prime ideals
+of a number field.  The abstract Section 8 law, its converse use, and
+positivity are then constructed from a typed place-to-prime-ideal bridge.
 -/
 
+open Bong.HeClassic2024NumberField
 open Bong.HeClassic2024GlobalData
+
+#check DiscriminantOdd
+#check IsDyadicPrime
+#check discriminantOdd_iff_forall_ramificationIdx_eq_one
+#check ramificationIdx_eq_one_of_discriminantOdd
+#check discriminantOdd_of_forall_ramificationIdx_eq_one
+#check exists_dyadicPrime_ramificationIdx_ne_one_of_not_discriminantOdd
+#check Bong.HeClassic2024NumberField.ramificationIdx_pos
 
 #check DiscriminantRamificationLaws
 #check DiscriminantRamificationLaws.exists_ramifiedDyadic_of_not_discriminantOdd
+#check NumberFieldDiscriminantBridge
+#check NumberFieldDiscriminantBridge.discriminantRamificationLaws
+#check NumberFieldDiscriminantBridge.ramificationIndexAt_one_of_discriminantOdd
+#check NumberFieldDiscriminantBridge.ramificationIndexAt_pos
+#check SumOfSquaresLocalUniversalityLaws.ofNumberFieldDiscriminantBridge
 #check SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
 #check SectionEightLaws.he2022ClassicTheorem17
 #check SectionEightLaws.he2022ClassicTheorem19
 
+#print axioms discriminantOdd_iff_forall_ramificationIdx_eq_one
+#print axioms exists_dyadicPrime_ramificationIdx_ne_one_of_not_discriminantOdd
+#print axioms NumberFieldDiscriminantBridge.discriminantRamificationLaws
+#print axioms NumberFieldDiscriminantBridge.ramificationIndexAt_one_of_discriminantOdd
+#print axioms NumberFieldDiscriminantBridge.ramificationIndexAt_pos
+#print axioms SumOfSquaresLocalUniversalityLaws.ofNumberFieldDiscriminantBridge
 #print axioms DiscriminantRamificationLaws.exists_ramifiedDyadic_of_not_discriminantOdd
 #print axioms SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
 #print axioms SectionEightLaws.he2022ClassicTheorem17

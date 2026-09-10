@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 
 import Bong.Bong.He2022ClassicTheorem15
 import Bong.Lattice.GlobalNADC
+import Bong.Lattice.He2022ClassicNumberFieldDiscriminant
 
 /-!
 # He (2024), Section 8: global applications
@@ -237,6 +238,75 @@ theorem exists_ramifiedDyadic_of_not_discriminantOdd
 
 end DiscriminantRamificationLaws
 
+/-! ## Concrete number-field realization of the discriminant package -/
+
+/-- Identification of the abstract finite places in `GlobalData` with prime
+ideals of a number field.  Once this structural bridge is supplied, the two
+discriminant directions and positivity of ramification indices follow from
+the concrete theorems in `He2022ClassicNumberFieldDiscriminant`; they are not
+additional arithmetic assumptions. -/
+structure NumberFieldDiscriminantBridge
+    (K : Type u') [Field K] [NumberField K] where
+  idealAt : S.Place → Ideal (NumberField.RingOfIntegers K)
+  idealAt_isPrime (p : S.Place) : (idealAt p).IsPrime
+  isDyadic_iff (p : S.Place) :
+    G.isDyadic p ↔
+      HeClassic2024NumberField.IsDyadicPrime K (idealAt p)
+  ramificationIndexAt_eq (p : S.Place) :
+    G.ramificationIndexAt p = (idealAt p).ramificationIdx ℤ
+  discriminantOdd_iff :
+    G.discriminantOdd ↔
+      HeClassic2024NumberField.DiscriminantOdd K
+  exists_place_of_dyadicPrime
+      (P : Ideal (NumberField.RingOfIntegers K)) :
+    P.IsPrime → HeClassic2024NumberField.IsDyadicPrime K P →
+      ∃ p : S.Place, idealAt p = P
+
+namespace NumberFieldDiscriminantBridge
+
+variable {G : HeClassic2024GlobalData S}
+  {K : Type u'} [Field K] [NumberField K]
+
+/-- The abstract necessity-side law constructed from the actual
+number-field discriminant theorem and the place bridge. -/
+theorem discriminantRamificationLaws
+    (B : G.NumberFieldDiscriminantBridge K) :
+    G.DiscriminantRamificationLaws := by
+  refine ⟨?_⟩
+  intro hUnramified
+  apply B.discriminantOdd_iff.mpr
+  apply
+    HeClassic2024NumberField.discriminantOdd_of_forall_ramificationIdx_eq_one K
+  intro P hP hDyadic
+  obtain ⟨p, hp⟩ := B.exists_place_of_dyadicPrime P hP hDyadic
+  subst P
+  rw [← B.ramificationIndexAt_eq]
+  exact hUnramified p ((B.isDyadic_iff p).mpr hDyadic)
+
+/-- The unary sufficiency-side implication constructed from the actual
+number-field discriminant theorem and the place bridge. -/
+theorem ramificationIndexAt_one_of_discriminantOdd
+    (B : G.NumberFieldDiscriminantBridge K) (p : S.Place)
+    (hpDyadic : G.isDyadic p) (hOdd : G.discriminantOdd) :
+    G.ramificationIndexAt p = 1 := by
+  rw [B.ramificationIndexAt_eq]
+  apply
+    HeClassic2024NumberField.ramificationIdx_eq_one_of_discriminantOdd K
+  · exact B.discriminantOdd_iff.mp hOdd
+  · exact B.idealAt_isPrime p
+  · exact (B.isDyadic_iff p).mp hpDyadic
+
+/-- Positivity of the abstract ramification index follows from the actual
+prime-ideal ramification index. -/
+theorem ramificationIndexAt_pos
+    (B : G.NumberFieldDiscriminantBridge K) (p : S.Place) :
+    0 < G.ramificationIndexAt p := by
+  rw [B.ramificationIndexAt_eq]
+  exact HeClassic2024NumberField.ramificationIdx_pos K
+    (B.idealAt p) (B.idealAt_isPrime p)
+
+end NumberFieldDiscriminantBridge
+
 /-- The three finite-place arithmetic branches in the sufficiency proof of
 Theorem 1.9.  The dyadic unary branch is separated from the `n >= 2` branch
 because the paper invokes different local criteria. -/
@@ -257,6 +327,30 @@ structure SumOfSquaresLocalUniversalityLaws : Prop where
 namespace SumOfSquaresLocalUniversalityLaws
 
 variable {G : HeClassic2024GlobalData S}
+
+/-- Construct the finite-place package from its three genuinely local
+representation branches and the concrete number-field discriminant bridge.
+The odd-discriminant-to-index-one implication is supplied by the proved
+number-field theorem. -/
+theorem ofNumberFieldDiscriminantBridge
+    {K : Type u'} [Field K] [NumberField K]
+    (B : G.NumberFieldDiscriminantBridge K)
+    (hNonDyadic : ∀ (m n : Nat) (p : S.Place),
+      1 ≤ n → n + 3 ≤ m → ¬ G.isDyadic p →
+        S.IsNUniversalAt (G.sumOfSquares m) p n)
+    (hDyadicUnary : ∀ (m : Nat) (p : S.Place),
+      4 ≤ m → G.isDyadic p → G.ramificationIndexAt p = 1 →
+        S.IsNUniversalAt (G.sumOfSquares m) p 1)
+    (hDyadicHigherRank : ∀ (m n : Nat) (p : S.Place),
+      2 ≤ n → n + 3 ≤ m → G.isDyadic p →
+        G.ramificationIndexAt p = 1 →
+          S.IsNUniversalAt (G.sumOfSquares m) p n) :
+    G.SumOfSquaresLocalUniversalityLaws where
+  ramificationIndexAt_one_of_discriminantOdd :=
+    B.ramificationIndexAt_one_of_discriminantOdd
+  nonDyadic_localUniversal := hNonDyadic
+  dyadic_unary_localUniversal := hDyadicUnary
+  dyadic_higherRank_localUniversal := hDyadicHigherRank
 
 /-- Finite-place local universality in the sufficiency direction of He
 (2024), Theorem 1.9, derived by the source's dyadic/unary case split. -/
