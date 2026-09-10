@@ -3,7 +3,7 @@ Copyright (c) 2026 BONG Theory contributors. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: BONG Theory contributors
 -/
-import Bong.Lattice.Omeara9328StepEightSaturated
+import Bong.Lattice.Omeara9328StepEightCommonBundle
 
 /-! # The two common-adjunction Jordan splittings in O'Meara 93:28, Step 8 -/
 
@@ -28,14 +28,12 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   (S : Omeara9328RankFourReductionSystem J H)
 
 /-- Common adjunction on the stable source. -/
-noncomputable def commonSource (E : S.StepEightCase) :=
-  (E.saturatedSource S).commonAdjunctionJordan (E.stableSource S)
-    (E.saturatedToStable S) (E.saturatedSource_isSaturated S)
+noncomputable abbrev commonSource (E : S.StepEightCase) :=
+  (E.commonBundle S).sourceJordan
 
 /-- Common adjunction on the stable target. -/
-noncomputable def commonTarget (E : S.StepEightCase) :=
-  (E.saturatedSource S).commonAdjunctionJordan (E.stableTarget S)
-    (E.saturatedToTarget S) (E.saturatedSource_isSaturated S)
+noncomputable abbrev commonTarget (E : S.StepEightCase) :=
+  (E.commonBundle S).targetJordan
 
 end Omeara9328RankFourReductionSystem.StepEightCase
 end Lattice.JordanDecomposition

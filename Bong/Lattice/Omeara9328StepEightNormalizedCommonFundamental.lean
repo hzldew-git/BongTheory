@@ -28,9 +28,8 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   (S : Omeara9328RankFourReductionSystem J H)
 
 /-- Complete fundamental type of the common-adjunction pair. -/
-noncomputable def commonFundamentalType (E : S.StepEightCase) :=
-  (E.saturatedToStable S).commonAdjunction (E.saturatedToTarget S)
-    (E.stableFundamentalType S) (E.saturatedSource_isSaturated S)
+noncomputable abbrev commonFundamentalType (E : S.StepEightCase) :=
+  (E.commonBundle S).fundamentalType
 
 end Omeara9328RankFourReductionSystem.StepEightCase
 end Lattice.JordanDecomposition

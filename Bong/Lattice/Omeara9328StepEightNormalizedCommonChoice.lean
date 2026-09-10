@@ -28,11 +28,10 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   (S : Omeara9328RankFourReductionSystem J H)
 
 /-- Coherent source norm generators on the common adjunction. -/
-noncomputable def commonChoice
+noncomputable abbrev commonChoice
     (A : FundamentalNormGeneratorChoice S.sourceJordan)
     (E : S.StepEightCase) :=
-  (E.stableChoice S A).commonAdjunction (E.saturatedToStable S)
-    (E.saturatedSource_isSaturated S)
+  (E.commonBundle S).choice A
 
 end Omeara9328RankFourReductionSystem.StepEightCase
 end Lattice.JordanDecomposition
