@@ -1,0 +1,50 @@
+# Executive summary
+
+Paper: Zilong He, *On classic n-universal quadratic forms over dyadic local
+fields*, manuscripta math. 174 (2024), 559-595. Semantic authority:
+author-corrected v5 TeX, SHA-256
+`C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049`.
+Proof assistant: Lean 4.32.1. Review date: 2026-09-09. Exact clean release
+commit: pending.
+
+Theorem 1.1 now has a proof of both directions for n >= 2 and arbitrary source
+rank. The local proof chain and even-rank testing equivalence are substantial
+advances beyond the earlier statement-only milestone. Theorem 1.5 is proved
+in its full local n >= 1 scope, including the separate unary argument; its
+concrete number-field localization remains excluded.
+The final global deduction and Theorems 1.7--1.9 now have kernel-checked
+conditional endpoints over explicit Section 8 arithmetic packages. Concrete
+number-field localization, scalar-extension, discriminant, and strong-
+approximation instances remain excluded, so this is not unconditional global
+coverage.
+
+Both branches of Theorem 1.3 are complete at the literal table level.
+Author-corrected v5 Lemma 7.1, both branches of Lemma 7.4, Lemma 7.7, all
+clauses of Lemma 7.10, the finite-index nonisometry bridge, all exceptional
+`H` rows, and the unified row-by-row deletion theorems are checked. Lemma 7.11
+gives the odd witnesses, and its combined endpoint proves odd literal
+minimality.
+Every literal model in both tables is also proved classic-maximal: its volume
+order is computed as zero or one and the generic volume-index argument rules
+out a proper classic integral over-lattice. This strengthens Proposition 2.8
+but does not supply a classification of all classic-maximal lattices.
+The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
+refutation when `e>1`; it is retained as a regression theorem and is not used
+to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
+internally proved. `SOURCE_DELTA.md` and Reports 22--24 are part of the review
+scope. Report 24 records that v5 still does not justify the odd-parity
+reduction in Corollary 6.3 and Lemma 8.3; no counterexample is claimed.
+
+Project grade: C, partial whole-paper coverage with a disclosed source-version
+regression.
+Theorem 1.1 correspondence remains provisional, not human-approved
+`VERIFIED_MATCH`. Trust reports inspect standard logical axioms separately
+from arithmetic interfaces and restricted theorem premises. Reproducibility
+at this checkpoint is partial until exact-commit clean-kit CI is recorded.
+
+Safe claim: a checked local classification, full v5 Theorem 1.3 testing
+development, and checked conditional Section 8 deductions. Unsafe claim:
+complete formalization or final deployment of the whole paper. Next actions
+are a source decision or proof for the Corollary 6.3/Lemma 8.3 odd branch,
+concrete global arithmetic instances, independent review, and exact-commit
+release verification.

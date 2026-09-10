@@ -36,7 +36,6 @@ ELABORATION_HEAVY_PATHS = {
 }
 ELABORATION_HEAVY_WEIGHT = 200_000_000
 
-
 @dataclass(frozen=True)
 class Module:
     name: str

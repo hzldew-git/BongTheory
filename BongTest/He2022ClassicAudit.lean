@@ -1,0 +1,396 @@
+/-
+Copyright (c) 2026 BONG Theory contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BONG Theory contributors
+-/
+import Bong.Papers.He2022Classic
+import Bong.Bong.He2022ClassicLemma75
+import Bong.Bong.He2022ClassicLemma78
+import Bong.Bong.He2022ClassicLemma79
+
+/-! Kernel and trust-boundary audit for He's classic paper entry. -/
+
+open Bong.Lattice.QuadraticLatticeModel
+
+#check Bong.Lattice.IsClassicIntegral
+#check Bong.Lattice.IsClassicNUniversal
+#check Bong.Lattice.IsClassicMaximal
+#check Bong.Lattice.exists_classicMaximal_superlattice
+#check Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one
+#check Bong.Lattice.RepresentsAllClassicMaximalOfRank
+#check Bong.Lattice.heClassicMaximalTestingReduction
+#check Bong.BONG.GoodBONG.HeClassicEvenConditions
+#check Bong.BONG.GoodBONG.HeClassicOddConditions
+#check Bong.BONG.GoodBONG.HeClassicTheorem11Conditions
+#check Bong.BONG.GoodBONG.HeClassicTheorem11Statement
+#check Bong.BONG.GoodBONG.he2022ClassicProposition22
+#check Bong.BONG.GoodBONG.he2022ClassicProposition23
+#check Bong.BONG.GoodBONG.he2022ClassicProposition24
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem25
+#check Bong.heClassicEvenH
+#check Bong.heClassicEvenC1
+#check Bong.heClassicEvenC2
+#check Bong.heClassicOddC1
+#check Bong.heClassicOddC2Odd
+#check Bong.heClassicOddC2Even
+#check Bong.heClassicEvenC1GoodBONG
+#check Bong.heClassicEvenC2GoodBONG
+#check Bong.heClassicOddC1GoodBONG
+#check Bong.heClassicOddC2OddGoodBONG
+#check Bong.heClassicOddC2EvenGoodBONG
+#check Bong.heClassicEvenHGoodBONG
+#check Bong.heClassicEvenC1_isClassicIntegral
+#check Bong.heClassicEvenC2_isClassicIntegral
+#check Bong.heClassicOddC1_isClassicIntegral
+#check Bong.heClassicOddC2Odd_isClassicIntegral
+#check Bong.heClassicOddC2Even_isClassicIntegral
+#check Bong.heClassicEvenH_isClassicIntegral
+#check Bong.BONG.GoodBONG.he2022ClassicLemma29iii_alpha
+#check Bong.BONG.GoodBONG.he2022ClassicLemma29iii_alpha_of_zero_orders
+#check Bong.heClassicEvenC1_alpha_eq_one
+#check Bong.heClassicEvenC2_alpha_eq_one
+#check Bong.heClassicOddC1_alpha_eq_one
+#check Bong.heClassicOddC2Odd_alpha_eq_one
+#check Bong.heClassicOddC2Even_alpha_eq_one
+#check Bong.he2022ClassicProposition210
+#check Bong.he2022ClassicProposition210_anisotropic
+#check Bong.HeClassicDefectOneIndex
+#check Bong.HeClassicExceptionalIndex
+#check Bong.HeClassicPublishedEvenTestingIndex
+#check Bong.HeClassicPublishedOddTestingIndex
+#check Bong.heClassicUnitRepresentativeClass
+#check Bong.heClassicUnitRepresentativeClass_injective
+#check Bong.heClassicUnitRepresentativeClass_surjective
+#check Bong.card_heClassicUnitRepresentatives
+#check Bong.heClassicUnitRepresentativeClass_mem_two_iff
+#check Bong.heClassicDeeperUnitRepresentativeEquiv
+#check Bong.card_heClassicDefectOne_balance
+#check Bong.card_heClassicExceptionalIndex
+#check Bong.card_heClassicPublishedEvenTestingIndex
+#check Bong.he2022ClassicProposition28ii_even_gt_one
+#check Bong.he2022ClassicProposition28ii_even_eq_one
+#check Bong.he2022ClassicProposition28ii_odd
+#check Bong.HeClassicOmegaData
+#check Bong.heClassicOmega
+#check Bong.heClassicOmega_value
+#check Bong.heClassicOmega_order
+#check Bong.heClassicOmega_quadraticDefect
+#check Bong.heClassicOmega_defect
+#check Bong.heClassicOmegaSharp
+#check Bong.heClassicOmegaSharp_value
+#check Bong.heClassicOmegaSharp_order
+#check Bong.heClassicCanonicalOmegaData
+#check Bong.HeClassicPublishedEvenTestingIndex.model
+#check Bong.HeClassicPublishedEvenTestingIndex.model_rank
+#check Bong.HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+#check Bong.HeClassicPublishedEvenTestingIndex.model_volumeOrder_le_one
+#check Bong.HeClassicPublishedEvenTestingIndex.model_isClassicMaximal
+#check Bong.HeClassicPublishedOddTestingIndex.model
+#check Bong.HeClassicPublishedOddTestingIndex.model_rank
+#check Bong.HeClassicPublishedOddTestingIndex.model_isClassicIntegral
+#check Bong.HeClassicPublishedOddTestingIndex.model_volumeOrder
+#check Bong.HeClassicPublishedOddTestingIndex.model_isClassicMaximal
+#check Bong.heClassicRamifiedBinary
+#check Bong.heClassicRamifiedBinary_determinant_order
+#check Bong.heClassicRamifiedSnoc_anisotropic
+#check Bong.heClassicHyperbolicPair_represents_iff_isotropic
+#check Bong.heClassicRamifiedBinary_represents_iff_anisotropic
+#check Bong.he2022ClassicLemma211i_ternary
+#check Bong.he2022ClassicLemma211ii_ternary
+#check Bong.he2022ClassicLemma211iii_ternary
+#check Bong.heClassicLemma211First
+#check Bong.heClassicLemma211Second
+#check Bong.he2022ClassicLemma211i
+#check Bong.he2022ClassicLemma211ii
+#check Bong.he2022ClassicLemma211iii
+#check Bong.BONG.GoodBONG.HeClassicOrderConditionAt
+#check Bong.BONG.GoodBONG.HeClassicDefectConditionAt
+#check Bong.BONG.GoodBONG.HeClassicCentralConditionAt
+#check Bong.BONG.GoodBONG.HeClassicPublishedCentralConditionAt
+#check Bong.BONG.GoodBONG.HeClassicLongConditionAt
+#check Bong.BONG.GoodBONG.heClassicOrderCondition_iff_forall_at
+#check Bong.BONG.GoodBONG.heClassicDefectCondition_iff_forall_at
+#check Bong.BONG.GoodBONG.heClassicCentralConditions_iff_forall_at
+#check Bong.BONG.GoodBONG.heClassicPublishedCentralConditions_iff_forall_at
+#check Bong.BONG.GoodBONG.heClassicLongConditions_iff_forall_at
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31i
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31ii
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31iii
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31iv_corrected
+#check Bong.BONG.GoodBONG.he2022ClassicLemma31v
+#check Bong.BONG.GoodBONG.HeClassicCurrentEssentialAt
+#check Bong.BONG.GoodBONG.HeClassicNextEssentialAt
+#check Bong.BONG.GoodBONG.representationDefectAt_of_not_heClassicEssential
+#check Bong.BONG.GoodBONG.he2022ClassicLemma32
+#check Bong.BONG.GoodBONG.he2022ClassicLemma33
+#check Bong.BONG.GoodBONG.he2022ClassicLemma34
+#check Bong.BONG.GoodBONG.he2022ClassicLemma34_ramificationOne
+#check Bong.BONG.GoodBONG.he2022ClassicLemma35
+#check Bong.BONG.GoodBONG.he2022ClassicLemma36LongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma36DefectConditionLongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma36
+#check Bong.BONG.GoodBONG.he2022ClassicLemma36DefectCondition
+#check Bong.BONG.GoodBONG.he2022ClassicLemma37BoundsLongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma37Bounds
+#check Bong.BONG.GoodBONG.he2022ClassicLemma37GapLongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma37Gap
+#check Bong.BONG.GoodBONG.he2022ClassicLemma38LongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma38
+#check Bong.BONG.GoodBONG.he2022ClassicLemma39iLongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma39i
+#check Bong.BONG.GoodBONG.he2022ClassicLemma39iiLongSource
+#check Bong.BONG.GoodBONG.he2022ClassicLemma39ii
+
+#print Bong.BONG.GoodBONG.HeClassicTheorem11Statement
+#print axioms Bong.Lattice.exists_classicMaximal_superlattice
+#print axioms Bong.Lattice.heClassicMaximalTestingReduction
+#print axioms Bong.BONG.GoodBONG.he2022ClassicProposition22
+#print axioms Bong.BONG.GoodBONG.he2022ClassicProposition23
+#print axioms Bong.BONG.GoodBONG.he2022ClassicProposition24
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem25
+#print axioms Bong.heClassicEvenC1GoodBONG
+#print axioms Bong.heClassicEvenC2GoodBONG
+#print axioms Bong.heClassicOddC1GoodBONG
+#print axioms Bong.heClassicOddC2OddGoodBONG
+#print axioms Bong.heClassicOddC2EvenGoodBONG
+#print axioms Bong.heClassicEvenHGoodBONG
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma29iii_alpha
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma29iii_alpha_of_zero_orders
+#print axioms Bong.heClassicEvenC1_alpha_eq_one
+#print axioms Bong.heClassicEvenC2_alpha_eq_one
+#print axioms Bong.heClassicOddC1_alpha_eq_one
+#print axioms Bong.heClassicOddC2Odd_alpha_eq_one
+#print axioms Bong.heClassicOddC2Even_alpha_eq_one
+#print axioms Bong.he2022ClassicProposition210
+#print axioms Bong.heClassicUnitRepresentativeClass_injective
+#print axioms Bong.heClassicUnitRepresentativeClass_surjective
+#print axioms Bong.card_heClassicUnitRepresentatives
+#print axioms Bong.heClassicUnitRepresentativeClass_mem_two_iff
+#print axioms Bong.card_heClassicDefectOne_balance
+#print axioms Bong.card_heClassicPublishedEvenTestingIndex
+#print axioms Bong.he2022ClassicProposition28ii_even_gt_one
+#print axioms Bong.he2022ClassicProposition28ii_even_eq_one
+#print axioms Bong.he2022ClassicProposition28ii_odd
+#print axioms Bong.heClassicOmega_quadraticDefect
+#print axioms Bong.heClassicCanonicalOmegaData
+#print axioms Bong.Lattice.isClassicMaximal_of_volumeOrder_le_one
+#print axioms Bong.HeClassicPublishedEvenTestingIndex.model_isClassicIntegral
+#print axioms Bong.HeClassicPublishedEvenTestingIndex.model_volumeOrder_le_one
+#print axioms Bong.HeClassicPublishedEvenTestingIndex.model_isClassicMaximal
+#print axioms Bong.HeClassicPublishedOddTestingIndex.model_isClassicIntegral
+#print axioms Bong.HeClassicPublishedOddTestingIndex.model_volumeOrder
+#print axioms Bong.HeClassicPublishedOddTestingIndex.model_isClassicMaximal
+#print axioms Bong.heClassicRamifiedBinary_determinant_order
+#print axioms Bong.heClassicRamifiedSnoc_anisotropic
+#print axioms Bong.heClassicHyperbolicPair_represents_iff_isotropic
+#print axioms Bong.heClassicRamifiedBinary_represents_iff_anisotropic
+#print axioms Bong.he2022ClassicLemma211i
+#print axioms Bong.he2022ClassicLemma211ii
+#print axioms Bong.he2022ClassicLemma211iii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31i
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31ii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31iii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31iv_corrected
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma31v
+#print axioms Bong.BONG.GoodBONG.representationDefectAt_of_not_heClassicEssential
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma32
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma33
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma34
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma34_ramificationOne
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma35
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma36LongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma36DefectConditionLongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma36
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma36DefectCondition
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma37BoundsLongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma37Bounds
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma37GapLongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma37Gap
+#print axioms Bong.BONG.GoodBONG.heClassicPublishedCentralConditions_iff_forall_at
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma38LongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma38
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39iLongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39i
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39iiLongSource
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma39ii
+
+/-! Direct endpoints beyond Section 3 and the Section 7 source obstruction. -/
+
+#check Bong.BONG.GoodBONG.he2022ClassicLemma314
+#check Bong.BONG.GoodBONG.he2022ClassicLemma315i
+#check Bong.BONG.GoodBONG.he2022ClassicLemma315ii
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem41
+#check Bong.BONG.GoodBONG.he2022ClassicLemma42
+#check Bong.BONG.GoodBONG.he2022ClassicLemma45
+#check Bong.BONG.GoodBONG.he2022ClassicLemma45_j2_of_terminalUpper
+#check Bong.BONG.GoodBONG.he2022ClassicLemma45_j2_of_j2Prime_of_ramification_gt_one
+#check Bong.BONG.GoodBONG.he2022ClassicLemma46
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem51
+#check Bong.BONG.GoodBONG.he2022ClassicLemma53
+#check Bong.BONG.GoodBONG.he2022ClassicLemma54
+#check Bong.BONG.GoodBONG.he2022ClassicLemma55
+#check Bong.BONG.GoodBONG.he2022ClassicLemma56
+#check Bong.BONG.GoodBONG.he2022ClassicLemma57
+#check Bong.BONG.GoodBONG.he2022ClassicLemma58
+#check Bong.BONG.GoodBONG.he2022ClassicLemma61
+#check Bong.BONG.GoodBONG.he2022ClassicLemma62
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem11
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem15
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem15_unary
+#check Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks
+#check Bong.BONG.GoodBONG.he2022ClassicCorollary63_even
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails
+#check Bong.BONG.GoodBONG.he2022ClassicLemma71v5_ambient_dichotomy
+#check Bong.BONG.GoodBONG.he2022ClassicLemma71v5_C1OneModel_represents_evenHOneModel
+#check Bong.BONG.GoodBONG.he2022ClassicLemma71v5_lowDefect_represents
+#check Bong.BONG.GoodBONG.he2022ClassicLemma71v5_ramificationOne_represents
+#check Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_ambientlyUniversal
+#check Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_classicUniversal_of_lowerJ2
+#check all_publishedOdd_implies_classicUniversal_of_lowerTerminalUpper
+#check all_publishedOdd_implies_classicUniversal_of_lowerJ2Prime
+#check Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_all_publishedEven_v5
+#check Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_classicUniversal_v5_auto
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_odd_v5
+#check Bong.Lattice.QuadraticLatticeModel.all_publishedEven_implies_classicUniversal
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even
+#check Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC2_missesExactly_C1
+#check Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_missesExactly_C2
+#check Bong.BONG.GoodBONG.he2022ClassicLemma710iii_C1_represents_of_ambient
+#check Bong.BONG.GoodBONG.he2022ClassicLemma710iii_C2_represents_of_ambient
+#check Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_misses_C2
+#check Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC2_misses_C1
+#check Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_represents_other
+#check Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC2_represents_other
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_defectOne_largeC2_misses_C1
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_defectOne_largeC1_misses_C2
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_oddOrder_largeC2_misses_C1
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_oddOrder_largeC1_misses_C2
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_defectOne_largeC2_represents_other
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_defectOne_largeC1_represents_other
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_oddOrder_largeC2_represents_other
+#check Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_oddOrder_largeC1_represents_other
+#check @Bong.HeClassicPublishedEvenTestingIndex.eq_of_diagonalRepresents_coefficients
+#check @Bong.HeClassicPublishedEvenTestingIndex.not_diagonalRepresents_coefficients_of_ne
+#check @Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_publishedC_deletionWitness
+
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma314
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma315i
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma315ii
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem41
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma45_j2_of_terminalUpper
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma45_j2_of_j2Prime_of_ramification_gt_one
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem51
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem11
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15_unary
+#print axioms Bong.BONG.GoodBONG.he2022ClassicTheorem15_allRanks
+#print axioms Bong.BONG.GoodBONG.he2022ClassicCorollary63_even
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma71ii_literal_disjunction_fails
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma71v5_C1OneModel_represents_evenHOneModel
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma71v5_lowDefect_represents
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma71v5_ramificationOne_represents
+#print axioms Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_classicUniversal_of_lowerJ2
+#print axioms all_publishedOdd_implies_classicUniversal_of_lowerTerminalUpper
+#print axioms all_publishedOdd_implies_classicUniversal_of_lowerJ2Prime
+#print axioms Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_all_publishedEven_v5
+#print axioms Bong.Lattice.QuadraticLatticeModel.all_publishedOdd_implies_classicUniversal_v5_auto
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_odd_v5
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma74_even
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC2_missesExactly_C1
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_missesExactly_C2
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_misses_C2
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC2_misses_C1
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC1_represents_other
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma710iii_largeC2_represents_other
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_defectOne_largeC2_misses_C1
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_oddOrder_largeC2_misses_C1
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_defectOne_largeC2_represents_other
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_oddOrder_largeC2_represents_other
+#print axioms Bong.HeClassicPublishedEvenTestingIndex.eq_of_diagonalRepresents_coefficients
+#print axioms Bong.HeClassicPublishedEvenTestingIndex.not_diagonalRepresents_coefficients_of_ne
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710iii_publishedC_deletionWitness
+
+/-! Published Lemmas 7.5, 7.8, and 7.9. -/
+
+#check Bong.he2022ClassicLemma75iii_evenHDiscriminant_represents_P2Omega
+#check Bong.BONG.GoodBONG.he2022ClassicLemma78i_of_zero_one_profile
+#check Bong.he2022ClassicLemma79iii_P1Omega_represents_HOne
+#check Bong.he2022ClassicLemma79iii_P2Omega_represents_HDiscriminant
+#check Bong.he2022ClassicLemma79iii_P1Omega_not_represents_HDiscriminant
+#check Bong.he2022ClassicLemma79iii_P2Omega_not_represents_HOne
+
+#print axioms Bong.he2022ClassicLemma75iii_evenHDiscriminant_represents_P2Omega
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma78i_of_zero_one_profile
+#print axioms Bong.he2022ClassicLemma79iii_P1Omega_represents_HOne
+#print axioms Bong.he2022ClassicLemma79iii_P2Omega_represents_HDiscriminant
+#print axioms Bong.he2022ClassicLemma79iii_P1Omega_not_represents_HDiscriminant
+#print axioms Bong.he2022ClassicLemma79iii_P2Omega_not_represents_HOne
+
+/-! Published Lemmas 7.7 and 7.10, including literal table minimality. -/
+
+#check Bong.BONG.GoodBONG.he2022ClassicLemma77_boundary_conditions
+#check Bong.BONG.GoodBONG.he2022ClassicLemma77iii_C1_conditions
+#check Bong.BONG.GoodBONG.he2022ClassicLemma77iii_C2_conditions
+#check Bong.he2022ClassicLemma77_C1_represents
+#check Bong.he2022ClassicLemma77_C2_represents
+#check Bong.he2022ClassicLemma710i_P2Discriminant_represents_publishedC
+#check Bong.he2022ClassicLemma710i_publishedHOne_deletionWitness
+#check Bong.he2022ClassicLemma710ii_publishedHDiscriminant_deletionWitness
+#check Bong.he2022ClassicLemma710ii_publishedHOne_deletionWitness
+#check @Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710_publishedEven_deletionWitness
+#check @Bong.Lattice.QuadraticLatticeModel.he2022ClassicTheorem13_even_literalMinimal
+
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma77_boundary_conditions
+#print axioms Bong.he2022ClassicLemma77_C1_represents
+#print axioms Bong.he2022ClassicLemma77_C2_represents
+#print axioms Bong.he2022ClassicLemma710i_P2Discriminant_represents_publishedC
+#print axioms Bong.he2022ClassicLemma710i_publishedHOne_deletionWitness
+#print axioms Bong.he2022ClassicLemma710ii_publishedHDiscriminant_deletionWitness
+#print axioms Bong.he2022ClassicLemma710ii_publishedHOne_deletionWitness
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicLemma710_publishedEven_deletionWitness
+#print axioms Bong.Lattice.QuadraticLatticeModel.he2022ClassicTheorem13_even_literalMinimal
+
+/-! Published Lemma 7.11 and the literal odd-table deletion half. -/
+
+#check Bong.heClassicOddC1BarModel
+#check Bong.heClassicOddC1BarModel_isClassicIntegral
+#check Bong.he2022ClassicLemma711i_barC1_missesExactly_C2
+#check Bong.he2022ClassicLemma711i_C2_missesExactly_C1
+#check Bong.he2022ClassicLemma711ii_C2Odd_missesExactly_C1
+#check Bong.he2022ClassicLemma711ii_C1_missesExactly_C2Odd
+#check Bong.BONG.GoodBONG.he2022ClassicLemma711_represents_other
+#check @Bong.HeClassicPublishedOddTestingIndex.eq_of_diagonalRepresents_coefficients
+#check @Bong.HeClassicPublishedOddTestingIndex.not_diagonalRepresents_coefficients_of_ne
+#check @Bong.he2022ClassicLemma711_publishedOdd_deletionWitness
+#check @Bong.he2022ClassicTheorem13_odd_literalMinimal_v5
+
+#print axioms Bong.heClassicOddC1BarModel_isClassicIntegral
+#print axioms Bong.he2022ClassicLemma711i_barC1_missesExactly_C2
+#print axioms Bong.he2022ClassicLemma711ii_C2Odd_missesExactly_C1
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma711_represents_other
+#print axioms Bong.HeClassicPublishedOddTestingIndex.eq_of_diagonalRepresents_coefficients
+#print axioms Bong.he2022ClassicLemma711_publishedOdd_deletionWitness
+#print axioms Bong.he2022ClassicTheorem13_odd_literalMinimal_v5
+
+/-! Section 8 and global main-theorem deductions over explicit arithmetic
+proof-data packages. -/
+
+#check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81i
+#check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81ii
+#check Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81iii
+#check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82_positive
+#check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82
+#check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_atPlace
+#check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
+#check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18
+#check Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem19
+
+#print axioms Bong.HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81iii
+#print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82_positive
+#print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82
+#print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
+#print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem17
+#print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18
+#print axioms Bong.HeClassic2024GlobalData.SectionEightLaws.he2022ClassicTheorem19
