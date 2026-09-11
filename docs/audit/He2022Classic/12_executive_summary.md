@@ -65,12 +65,19 @@ Report 33 applies the same restriction to the source-facing Theorem 1.7
 endpoint and preserves only its common logical tail behind an explicit
 local-defect premise.
 
+Report 35 records an exact source-only local Review Kit for commit `c1ee018`:
+2,010 payload hashes, a resumed fresh-extraction 5,671-job build, all six
+Classic audits, the 62,746-declaration enforcing axiom gate, and clean exact
+dependency pins all pass. This closes the current local packaging gate, but it
+is not GitHub CI or a release and does not alter the semantic verdict.
+
 Project grade: D, because the authoritative v5 source contains a refuted
 unrestricted statement, in addition to incomplete global arithmetic coverage.
 Theorem 1.1 correspondence remains provisional, not human-approved
 `VERIFIED_MATCH`. Trust reports inspect standard logical axioms separately
 from arithmetic interfaces and restricted theorem premises. Reproducibility
-at this checkpoint is partial until exact-commit clean-kit CI is recorded.
+at this checkpoint has exact local clean-kit evidence; GitHub CI and release
+evidence remain absent by design.
 
 Safe claim: a checked local classification, full v5 Theorem 1.3 testing
 development, and checked conditional Section 8 deductions. Unsafe claim:

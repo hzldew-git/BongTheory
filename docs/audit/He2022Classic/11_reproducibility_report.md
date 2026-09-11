@@ -165,3 +165,17 @@ audit build completes 5,665 jobs, all 30 policy tests pass, the scanner checks
 2,796 tracked Lean sources, and the full imported-closure gate reports
 `AXIOM_GATE_PASS: 70718 declarations checked`. Report 34 records the remaining
 concrete-model boundary. Fresh-extraction Review Kit verification is pending.
+
+## Current exact v5 source-only Review Kit checkpoint
+
+Commit `c1ee018dd9eb6c788165a51fe08bdfe8f9ff7b2e` was packaged from a
+clean tree into a source-only Review Kit. All 2,010 payload hashes and the
+paper-isolation checks pass. A fresh extraction, transparently resumed in the
+same extraction after an external process interruption, completes a
+5,671-job build, all six Classic audit modules, and the generated enforcing
+gate. The gate reports `AXIOM_GATE_PASS: 62746 declarations checked`; all nine
+dependency heads equal their pinned revisions and are clean.
+
+Report 35 fixes the archive identity and complete local receipt. This is an
+exact local reproducibility result, not GitHub CI, a tagged release, whole-paper
+completion, or semantic approval. GitHub deployment remains disabled.

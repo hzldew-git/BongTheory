@@ -27,6 +27,7 @@
 | V5 source suitable for whole-paper completion | FAIL; Corollary 6.3 is false as stated and requires a v6 source repair |
 | Unconditional global main theorems | FAIL / pending concrete instances |
 | Independent semantic sign-off | FAIL / pending |
-| Exact-release-commit clean-kit verification | Pending; older CI is not substituted |
+| Exact current-code clean-kit verification | PASS locally at `c1ee018`: 2,010 payload hashes, resumed fresh-extraction 5,671-job build, seven audit/gate checks, and 62,746-declaration axiom gate; Report 35 |
+| GitHub deployment and exact-release CI | Not performed; disabled until whole-paper completion and separate authorization |
 
 Completion verdict: `NOT_COMPLETE`.
