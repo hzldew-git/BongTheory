@@ -142,8 +142,8 @@ The main unresolved mathematical work is:
   and catalogue identity of the now-transcribed matrices, and the local
   computations underlying Corollary 1.8 and Theorem 1.11;
 - GitHub-hosted exact-revision CI, independent human semantic sign-off,
-  merge, and release promotion. The current local clean Review Kit through
-  Report 57 passes at `7d7a4d5`; see Report 58.
+  merge, and release promotion. The current strict local Review Kit through
+  Report 79 passes at `17fc8c9`; see Report 80.
 
 The whole-paper verdict remains `NOT_COMPLETE`, with grade D because the
 published version contains substantive classification mismatches. That grade

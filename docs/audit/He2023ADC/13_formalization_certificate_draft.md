@@ -297,6 +297,17 @@ inputs, then derives the exact biconditional. The lower result, compatibility
 endpoint, and Lemma 8.1(ii) have empty axiom sets, and the combined gate checks
 61,118 declarations. Concrete number-field instances, clean-kit evidence,
 and human review remain outside this draft certificate.
+Genus-transport checkpoint:
+`97068f7f4617b37f69980a056afa7f6e01eab4d3`. Report 79 derives genus
+symmetry, local-equivalence extraction, and genus rank preservation from the
+placewise definition and localization of rank. The combined gate checks
+61,134 declarations; concrete genus and localization instances remain open.
+Exact local Review Kit checkpoint:
+`17fc8c967ce760745f86d686b4bded48fd8f3a97`. Report 80 records 2,109
+verified payload hashes, a 5,601-job fresh-extraction build, all 21 manifest
+audits, the 61,155-declaration enforcing gate, two successful Mathematica
+certificates, and nine clean dependencies at their locked revisions. Exact
+GitHub deployment and human semantic approval remain outside this draft.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

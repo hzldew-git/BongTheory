@@ -495,3 +495,12 @@ Corollary 8.3 and Theorem 1.7 report only `propext`, `Classical.choice`, and
 checks 2,738 tracked Lean sources, and all 30 policy tests pass. The lower
 placewise equivalence, isometry, and representation facts remain ordinary
 structure fields, not Lean axioms.
+
+At exact clean checkpoint `17fc8c967ce760745f86d686b4bded48fd8f3a97`,
+Report 80 records the strict single-paper archive and a previously empty
+fresh extraction. All 5,601 planned build jobs and all 21 manifest audits
+pass; the enforcing gate reports `AXIOM_GATE_PASS: 61155 declarations
+checked`. The archive verifies 2,109 payload hashes, both Mathematica
+certificates pass, and all nine downloaded dependency repositories are clean
+at the locked revisions. This is exact local mechanical evidence, not proof
+of the still-explicit arithmetic law fields or human semantic approval.

@@ -176,6 +176,11 @@ and genus rank-preservation fields by the placewise local-equivalence
 definition. Lean now derives all three consequences, using localization of
 rank for the last one. The concrete number-field genus and equivalence
 relations remain open.
+Report 80 records a strict single-paper Review Kit from clean commit
+`17fc8c9`: 2,109 payload hashes, a 5,601-job fresh-extraction build, all 21
+manifest audits, the 61,155-declaration enforcing gate, and both Mathematica
+certificates pass. This closes local reproducibility for Reports 70--79, not
+the remaining concrete arithmetic or semantic boundaries.
 Report 76 removes the final local-2-ADC-to-scaled-stability field used in
 Lemma 8.4. The implication is now derived placewise from the local form
 classified by Theorem 6.2 and Proposition 4.16, its behavior under scaling,

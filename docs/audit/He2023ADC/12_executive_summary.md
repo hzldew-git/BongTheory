@@ -453,3 +453,11 @@ preservation. The 61,134-declaration combined gate passes. Concrete
 number-field genus/localization instances, fresh clean-kit evidence, and
 human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
 unchanged.
+
+Report 80 closes the local reproducibility gap through Report 79. The strict
+single-paper archive at clean commit `17fc8c9` verifies 2,109 payload hashes,
+completes 5,601 fresh-extraction build jobs and all 21 manifest audits, passes
+the 61,155-declaration enforcing gate, and passes both Mathematica
+certificates. This does not change the Grade-D `NOT_COMPLETE` verdict because
+the disclosed source mismatches, concrete arithmetic instances, exact
+GitHub deployment, and human semantic sign-off remain separate.
