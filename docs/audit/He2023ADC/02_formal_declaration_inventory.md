@@ -259,6 +259,11 @@ Additional concrete declaration groups are:
   `localMaximal_isNADCAt` and `local_theorem15`, so neither remains a
   `SectionEightLaws` field. The focused audit is
   `He2023ADCLocalMaximalityAudit`; report 74.
+  `He2023ADCDyadicLocalModel` then instantiates this entire lower package for
+  one actual dyadic local field. The rank-`n+1` necessity is discharged by
+  the parity split through the proved Theorems 6.1 and 7.1, so the concrete
+  `localMaximalityLaws` and `local_theorem15` have no proposition-valued
+  premise. The focused audit is `He2023ADCDyadicLocalModelAudit`; report 81.
   `DistinguishingSublatticeLaws` records the definite Meyer theorem, Xu's
   indefinite unique-spinor-genus construction, and O'Meara 104:5 one-class
   input. Its `distinguishing_rank_sublattice` theorem derives Theorem 8.2, so
@@ -322,8 +327,10 @@ Additional concrete declaration groups are:
 
 `GlobalLocalLatticeSystem` defines global ADC, global universality, local ADC,
 and regularity. Its `heADCTheorem13`, `heADCTheorem14*`, and the Section 8
-endpoints are conditional logical reductions, not constructions of
-number-field completions or proofs of the global arithmetic inputs. Likewise,
+global endpoints are conditional logical reductions, not constructions of
+number-field completions or proofs of the global arithmetic inputs. The
+one-place dyadic local-maximality instance is concrete, but it is not an
+all-place number-field construction. Likewise,
 the Section 5 and catalogue law packages are not concrete non-dyadic
 local-field instances. Their literal Table 4.7 block/rank data are internal,
 but realization, classification, and representation remain external. The
