@@ -6,16 +6,19 @@ Authors: BONG Theory contributors
 
 import Bong.Lattice.He2023ADCSectionEight
 import Bong.Lattice.NADC
+import Bong.Bong.He2023ADCEvenCorankOne
+import Bong.Bong.He2023ADCTheorem71
 
 /-!
 # A concrete dyadic local model for He (2025), Section 8
 
 This file instantiates the local objects and relations in
 `GlobalLocalLatticeSystem` with the repository's actual bundled quadratic
-lattices over one dyadic local field.  It proves that four of the five fields
-in `LocalMaximalityLaws` follow from the concrete lattice API.  In the final
-field, the equal-rank case is also proved; only the rank-`n+1` classification
-direction remains an explicit hypothesis.
+lattices over one dyadic local field.  Four fields of `LocalMaximalityLaws`
+follow from the concrete lattice API; the fifth follows in equal rank from
+Proposition 4.15 and in rank `n+1` by the even/odd split through Theorems 6.1
+and 7.1.  Thus the resulting dyadic local law package has no extra
+proposition-valued input.
 
 This is a one-place local model.  It is not a construction of quadratic
 lattices over a number field and does not discharge the global arithmetic
@@ -148,8 +151,39 @@ theorem localMaximalityLaws_of_rank_succ_necessity
       exact Lattice.IsNADC.isOMaximal_of_finrank_eq hConcrete hRank
     · exact hSucc M n hTwo hRank hConcrete
 
-/-- Theorem 1.5(i) in the concrete one-place model, conditional only on its
-rank-`n+1` classification direction. -/
+/-- The rank-`n+1` necessity direction over a dyadic local field.  The parity
+split invokes Theorem 6.1 in even rank and the repaired Theorem 7.1 in odd
+rank. -/
+theorem rank_succ_nADC_implies_oMaximal
+    (X : Model K) (n : Nat) (hTwo : 2 ≤ n)
+    (hRank : X.rank = n + 1) (hNADC : X.IsNADC n) : X.IsOMaximal := by
+  letI : AddCommGroup X.Carrier := X.addCommGroup
+  letI : Module K X.Carrier := X.module
+  rcases Nat.even_or_odd n with hEven | hOdd
+  · exact (Lattice.heADC2025Theorem61 X.form X.lattice n
+      hTwo hEven hRank).mp hNADC
+  · obtain ⟨k, hk⟩ := hOdd
+    have hThree : 3 ≤ n := by omega
+    exact (Lattice.heADC2025Theorem71 X.form X.lattice n
+      hThree ⟨k, hk⟩ hRank).mp hNADC
+
+/-- The fully concrete local maximality law package for one dyadic local
+field. -/
+theorem localMaximalityLaws :
+    HeADC2025GlobalData.LocalMaximalityLaws (S := system K) :=
+  localMaximalityLaws_of_rank_succ_necessity K
+    (rank_succ_nADC_implies_oMaximal K)
+
+/-- Theorem 1.5(i) in the concrete one-place dyadic model. -/
+theorem local_theorem15
+    (M : Model K) (n : Nat) (hTwo : 2 ≤ n)
+    (hRank : M.rank = n ∨ M.rank = n + 1) :
+    (system K).IsNADCAt M () n ↔
+      (system K).localMaximal (p := ()) M :=
+  (localMaximalityLaws K).local_theorem15 M () n hTwo hRank
+
+/-- Compatibility form retaining an explicit rank-`n+1` classification input.
+The unconditional dyadic endpoint is `local_theorem15`. -/
 theorem local_theorem15_of_rank_succ_necessity
     (hSucc : ∀ (X : Model K) (n : Nat),
       2 ≤ n → X.rank = n + 1 → X.IsNADC n → X.IsOMaximal)
