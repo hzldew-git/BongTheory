@@ -1,0 +1,45 @@
+/-
+Copyright (c) 2026 BONG Theory contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BONG Theory contributors
+-/
+
+import Bong.Bong.He2023ADCNonDyadicTable
+
+/-! Focused kernel audit for the publisher's non-dyadic Lemma 4.7(i) table. -/
+
+#check Bong.heADC2025NonDyadicEvenTableRow
+#check Bong.heADC2025NonDyadicOddTableRow
+#check Bong.HeADC2025NonDyadicSquareClass.deltaTwist_involutive
+#check Bong.heADC2025NonDyadicEvenTableRow_rank
+#check Bong.heADC2025NonDyadicOddTableRow_rank
+#check Bong.heADC2025NonDyadicEvenTableRow_jordanZeroOne
+#check Bong.heADC2025NonDyadicOddTableRow_jordanZeroOne
+#check Bong.heADC2025NonDyadicEvenUniformizerRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicOddUniformizerRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicEvenFirstUnitRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicOddFirstUnitRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicEvenBinaryRow_defined_iff
+#check Bong.heADC2025NonDyadicEvenRowIsDefined_iff
+#check Bong.heADC2025NonDyadicOddRowIsDefined_iff
+#check Bong.card_heADC2025NonDyadicOddUnaryDefinedRows
+#check Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
+#check Bong.heADC2025NonDyadicExceptionalQuaternaryRow
+#check Bong.heADC2025NonDyadicQuaternaryRow_dichotomy
+
+#print axioms Bong.heADC2025NonDyadicEvenTableRow_rank
+#print axioms Bong.heADC2025NonDyadicOddTableRow_rank
+#print axioms Bong.HeADC2025NonDyadicSquareClass.deltaTwist_involutive
+#print axioms Bong.heADC2025NonDyadicEvenTableRow_jordanZeroOne
+#print axioms Bong.heADC2025NonDyadicOddTableRow_jordanZeroOne
+#print axioms Bong.heADC2025NonDyadicEvenUniformizerRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicOddUniformizerRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicEvenFirstUnitRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicOddFirstUnitRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicEvenBinaryRow_defined_iff
+#print axioms Bong.heADC2025NonDyadicEvenRowIsDefined_iff
+#print axioms Bong.heADC2025NonDyadicOddRowIsDefined_iff
+#print axioms Bong.card_heADC2025NonDyadicOddUnaryDefinedRows
+#print axioms Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
+#print axioms Bong.heADC2025NonDyadicExceptionalQuaternaryRow
+#print axioms Bong.heADC2025NonDyadicQuaternaryRow_dichotomy

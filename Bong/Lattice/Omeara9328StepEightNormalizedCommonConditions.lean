@@ -34,9 +34,7 @@ theorem commonConditions
     (E : S.StepEightCase) :
     (E.commonSource S).Omeara9328ConditionsWith (E.commonTarget S)
       (E.commonChoice S A) :=
-  ⟨E.commonConditionI S A conditions,
-    E.commonConditionII S A conditions,
-    E.commonConditionIII S A conditions⟩
+  (E.commonBundle S).conditions A conditions
 
 end Omeara9328RankFourReductionSystem.StepEightCase
 end Lattice.JordanDecomposition

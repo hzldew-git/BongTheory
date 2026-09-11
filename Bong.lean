@@ -9,6 +9,10 @@ import Bong.Dyadic.UnitSquareClass
 import Bong.Dyadic.HilbertSymbol
 import Bong.Dyadic.HilbertDuality
 import Bong.Dyadic.CongruenceSubgroup
+import Bong.Dyadic.PowerIdealResidueQuotient
+import Bong.Dyadic.PrincipalUnitResidueQuotient
+import Bong.Dyadic.UnitSquareClassOddLayer
+import Bong.Dyadic.UnitSquareClassCount
 import Bong.Dyadic.BeliGroups
 import Bong.Dyadic.AbsoluteQuadraticDefect
 import Bong.QuadraticSpace.Basic
@@ -740,8 +744,6 @@ import Bong.Bong.Beli2019Lemma93TailDefect
 import Bong.Bong.Beli2019Lemma93TailAlpha
 import Bong.Bong.Beli2019Lemma93TailRepresentation
 import Bong.Bong.Beli2019Lemma93TailCentral
-import Bong.Bong.Beli2019Lemma211Defect
-import Bong.Bong.Beli2019Lemma213Nonessential
 import Bong.Bong.Beli2019Lemma93TailConditions
 import Bong.Bong.Beli2019Lemma93Reduction
 import Bong.Bong.Beli2019RepresentationProblemReindex
@@ -972,6 +974,10 @@ import Bong.Lattice.OmearaUnimodularNormClassification
 import Bong.Lattice.OrthogonalDecompositionPrefix
 import Bong.Lattice.DeterminantIsometry
 import Bong.QuadraticSpace.Diagonalization
+import Bong.QuadraticSpace.FieldDiagonalization
+import Bong.QuadraticSpace.ScalarExtension
+import Bong.QuadraticSpace.He2025SubspaceDescent
+import Bong.QuadraticSpace.He2025SubspaceDescentTopology
 import Bong.QuadraticSpace.DyadicHighRankIsotropy
 import Bong.Bong.JordanDecompositionInvariants
 import Bong.Bong.JordanPropertyAInvariant
@@ -1011,3 +1017,5 @@ import Bong.Papers.Beli2006
 import Bong.Papers.Beli2009
 import Bong.Papers.Beli2019
 import Bong.Papers.Beli2020
+import Bong.Papers.HeHu2022
+import Bong.Papers.He2023ADC

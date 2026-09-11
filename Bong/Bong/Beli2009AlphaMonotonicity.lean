@@ -186,6 +186,44 @@ theorem alphaRightEndpoint_antitone (b : GoodBONG q L (n + 2)) :
   rw [hindex] at h
   exact h.2
 
+/-! The paper applications often keep the ambient length in the form
+`m+1`, without choosing a predecessor for `m`.  These fixed-rank variants
+are propositionally identical to the three monotonicity statements above
+and avoid transport through `m = (m-1)+1`. -/
+
+/-- Fixed-rank form of monotonicity of adjacent order sums. -/
+theorem adjacentOrderSum_monotone_fixedRank {m : Nat}
+    (b : GoodBONG q L (m + 1)) : Monotone b.adjacentOrderSum := by
+  cases m with
+  | zero =>
+      intro i
+      exact Fin.elim0 i
+  | succ m =>
+      simpa only [Nat.succ_eq_add_one, Nat.add_assoc] using
+        (adjacentOrderSum_monotone (n := m) b)
+
+/-- Fixed-rank form of monotonicity of the left alpha endpoints. -/
+theorem alphaLeftEndpoint_monotone_fixedRank {m : Nat}
+    (b : GoodBONG q L (m + 1)) : Monotone b.alphaLeftEndpoint := by
+  cases m with
+  | zero =>
+      intro i
+      exact Fin.elim0 i
+  | succ m =>
+      simpa only [Nat.succ_eq_add_one, Nat.add_assoc] using
+        (alphaLeftEndpoint_monotone (n := m) b)
+
+/-- Fixed-rank form of antitonicity of the right alpha endpoints. -/
+theorem alphaRightEndpoint_antitone_fixedRank {m : Nat}
+    (b : GoodBONG q L (m + 1)) : Antitone b.alphaRightEndpoint := by
+  cases m with
+  | zero =>
+      intro i
+      exact Fin.elim0 i
+  | succ m =>
+      simpa only [Nat.succ_eq_add_one, Nat.add_assoc] using
+        (alphaRightEndpoint_antitone (n := m) b)
+
 /-- The equality case in Corollary 2.3(iii). -/
 noncomputable def AttainsHalfGap
     (b : GoodBONG q L (n + 1)) (i : Fin n) : Prop :=

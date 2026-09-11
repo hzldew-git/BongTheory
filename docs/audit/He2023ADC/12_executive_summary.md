@@ -1,0 +1,397 @@
+# Executive summary
+
+Paper: Zilong He, *On n-ADC integral quadratic lattices over algebraic number
+fields*, Doc. Math. 30 (2025), 981--1022, publisher version of record.
+
+Proof assistant: Lean 4.32.1. The current proof checkpoint is
+`da6fbd41a4dc0323380b1013283bd20f9fa6b729`.
+
+The concrete dyadic development now contains the ADC definition, maximal
+testing, equal-rank and stable-rank equivalences, Section 3 endpoints, and
+substantial Section 4 foundations. The new Lemma 4.11--4.12 endpoints prove
+arbitrary-lattice equivalences for all ten concrete-model branches, and then
+connect them to thirteen published `W/N` branches, including rank one.
+The formerly missing space/lattice correspondence is now proved, and the
+auxiliary defect and unit facts are derived internally. Their focused kernel
+and axiom checks pass. See report 14 for the exact scope.
+
+Proposition 4.13 is now proved in all three parts for arbitrary odd-rank
+maximal lattices. The ternary boundary, the omission of the nonexistent
+leftmost alpha cap, and the finite equality at 2e-1 passed separate AI review.
+See report 15. No unit representative or order-profile premise was added.
+
+Both clauses of Proposition 4.16 are also proved over dyadic fields. The
+exact representation exception is accompanied by the integral isometry
+`N_2^4(1) = A perp A^(pi)`, interpreted up to isometry, with the half-scaled
+Gram matrix verified. Report 16 records this specialization; the published
+proposition also includes non-dyadic fields and is not complete as a whole.
+
+All four clauses of Lemma 6.4 now pass local kernel and axiom checks. They
+use the actual named maximal tests, retain the exact defect/order conclusions,
+and cover the binary boundaries. Report 17 records independent review and
+the remaining clean-kit obligations. Those testing clauses alone do not
+complete either classification theorem.
+
+Both clauses of Lemma 6.5 now also pass local checks and independent AI
+review. The conclusions identify the exact failing Theorem 3.6(ii)
+inequalities at n and n-1, with both named targets and n=2 covered. Report 18
+records the capped-defect argument and pending clean-kit obligations.
+
+Theorem 6.1 is now complete locally and independently AI-reviewed: for
+every even n >= 2 and arbitrary full lattice of rank n+1, n-ADC is
+equivalent to maximality. The endpoint constructs its own good BONG and
+retains no profile or law premise. The necessity proof uses actual tests,
+concrete ambient embeddings and a proved maximal-superlattice volume
+argument. Report 19 records the 12 new standard-only axiom queries and the
+n=2/e=1 checks. This completes 1/2 of Section 6's numbered classification
+theorems, not Theorem 6.2.
+
+Both Lemma 6.6 clauses are also complete locally and independently
+AI-reviewed. They use the exact published central trigger, distinguish
+raw and capped defects, and prove the required prefix-space exclusion
+for arbitrary good BONGs on the actual targets. All 12 new queries have
+the standard-only axiom set. Report 21 records boundaries and pending
+deployment gates.
+
+Both Lemma 6.7 clauses are complete locally and independently AI-reviewed.
+Actual representation gives the terminal alpha alternatives, and the raw
+adjacent defect is proved equal to the capped defect in the alpha-one
+branch. All five new axiom queries have the standard set. Report 22 records
+the n=2/e=1 and omitted-cap checks. Section 6 now has 5/12 numbered items
+with complete local proofs.
+
+Lemma 6.8(i)--(ii) is now also complete clause by clause and independently
+AI-reviewed, using actual tests and full determinant transport. Clause (i)
+includes n=2; clause (ii) retains n>=4. All 15 new queries have exactly
+the standard three dependencies. Report 23 covers only 2/6 clauses;
+the full-Section-6 count remains 5/12 and Theorem 6.2 is not completed.
+
+Report 24 subsequently completes clauses (v),(vi) with independent AI
+review and 16 standard-only new dependency sets. Internal normalization
+returns actual integral isometry with the original parameter. The printed
+V domain explicitly exposes compatible Delta in U; it is not inferred
+from normalization alone. This checkpoint supplied 4/6 clauses.
+
+Report 25 adds full (iii) and the n>=4 special case of (iv), independently
+replayed with twelve standard-only new sets and a focused gate on 57,667
+declarations. Reports 26--30 then construct and independently audit an actual
+nonmaximal 2-ADC lattice in `W_2^4(Delta)`. Report 31 records the formal
+negation of the n=2 implication printed in Lemma 6.8(iv), with a concrete
+`Q_2` nonvacuity check. The source result is `SEMANTIC_MISMATCH` at n=2.
+
+Report 26 independently checks the subsequent 9ec46e6 construction of an
+actual integral nonmaximal lattice in W_2^4(Delta) with good-BONG orders
+(0,-2e,1,3-2e). Its seven new axiom sets are standard-only and its focused
+gate checks 57,679 declarations. No 2-ADC property is asserted, so this
+supporting construction neither refutes the paper nor changes coverage.
+
+Report 27 checks the a074fae representation helper for `0 <= d < 2e`:
+all four literal conditions yield actual binary lattice representation,
+under explicit source and target hypotheses. Twelve new standard-only
+sets and a 57,708-declaration focused gate pass. The `d=2e` endpoint,
+infinite defect, candidate instantiation and full testing reduction are
+outside this checkpoint; no 2-ADC or refutation claim follows from it alone.
+
+Reports 28--29 audit the actual exceptional tests and normalized generic
+families. Report 30 exhausts the full binary maximal-testing catalogue,
+checks square normalization back to the original integral targets, and proves
+the candidate is 2-ADC and nonmaximal. Independent review traversed 80,790
+proof dependencies and found no circular use of Lemma 6.8 or Theorem 6.2.
+Report 31 freezes the exact published binary proposition and its negation.
+
+Report 32 completes Lemma 6.12 at `cf9f83b`. The actual exceptional lattice
+`H perp <1, -Delta * pi^(2 - 2e)>` in `W_1^4(Delta)` is proved integral,
+nonmaximal, 2-ADC, and not 3-ADC. The 2-ADC proof exhausts the maximal binary
+catalogue, including both endpoints and normalized generic families; the
+3-ADC obstruction proves terminal defect zero against comparison alpha at
+least one half. A concrete `Q_2` module establishes nonvacuity. Sixteen new
+axiom reports have exactly the standard three dependencies, the enforcing
+gate checks 57,886 declarations, and the scanner covers 2,705 Lean files.
+This raised Section 6 to 6/12 fully matched numbered items at that checkpoint.
+
+Report 33 adds complete Lemmas 6.9--6.11 at `382ef7a`. Lemma 6.9 derives the
+published terminal-order dichotomy from actual represented kappa lattices;
+Lemma 6.10 verifies the four Beli classification conditions and proves actual
+exceptional-lattice isometry; Lemma 6.11 derives every binary test from the
+2-ADC hypothesis and exports the printed maximal-or-exceptional disjunction.
+The three modules, canonical entry, and full audit compile directly. Ten new
+axiom reports are standard-only, the enforcing gate checks 57,918
+declarations, and the scanner checks 2,708 tracked Lean files. Section 6 now
+had 9/12 fully matched numbered items at that checkpoint. Exact-revision
+package CI and human sign-off remained pending there; Theorem 6.2 and Remark
+6.3 were not yet supplied, and the separate published Lemma 6.8(iv) mismatch
+was unchanged.
+
+Report 34 adds the complete published Remark 6.3 and a boundary-complete
+audit of Theorem 6.2 at `70580bb`. The exact `n=2` biconditional of Theorem
+6.2 is formally refuted by the actual second-column 2-ADC lattice; the full
+`n>=4` restriction is proved for arbitrary lattices. Eight new axiom reports
+are standard-only, the enforcing gate checks 57,933 declarations, and the
+scanner checks 2,711 tracked Lean files. Section 6 is now completely triaged:
+10/12 numbered items match, while Lemma 6.8 and Theorem 6.2 each have a
+documented false `n=2` boundary. Downstream theorems still require fresh audit
+instead of inheriting the unqualified published Theorem 6.2.
+
+At the Report 34 checkpoint, global definitions and regularity were present
+as abstract predicates, while non-dyadic results, most Section 7 ADC
+classifications, global classifications, and enumeration remained
+incomplete. Later reports below supersede that historical coverage state.
+
+Report 35 adds the complete Theorem 7.1 at `c3e6092`. The theorem statement
+is correct, but the publisher's proof is incomplete because it inherits the
+false binary classification and omits the second `W_2^4(Delta)` boundary
+class. The formal proof first establishes the corrected three-way binary
+classification and proves that the omitted class, like the published
+exception, is not 3-ADC. Seven new dependency reports are standard-only, the
+focused gate checks 58,019 declarations, and the scanner checks 2,715 tracked
+Lean sources. At that checkpoint, the other 20 Section 7 items were not
+covered by this result.
+
+Report 36 adds the complete Theorem 7.4 and Lemmas 7.5--7.10 and 7.12 at
+`2417a4f`. The full Lemma 7.5 four-condition equivalence is proved in both
+directions, including the rank-five large-gap branch and the endpoint
+`R_(n+1)=2-2e`. Report 37 completes Lemma 7.11 at `832d10c`: its unit and
+unit-times-uniformizer rows jointly cover every normalized nonzero square
+class, while the latter row remains sufficient for the Lemma 7.5 necessity
+argument. The formalization also detects that Lemma 7.13's printed
+per-target conclusion is stronger than its proof, which establishes only that
+the two targets cannot both be represented. The proof-supported disjunction
+is formalized and suffices downstream. The complete Lemma 7.11 checkpoint has
+standard-only new dependency reports, a 59,204-declaration focused gate, and
+a 2,727-source scanner. Report 38 adds both clauses of Lemma 7.14 at
+`6c52803`: both ambient columns and both parameter parities are retained,
+with a 59,218-declaration gate and 2,728-source scanner. Report 39 adds the
+complete Lemma 7.15 isometry classification at `06d2507`: the maximal branch
+and all four Beli conditions in the nonmaximal branch are proved internally,
+with a 59,348-declaration gate and 2,729-source scanner. Reports 40--42 add
+Definition 7.16, Remark 7.17, and Lemmas 7.18--7.19 at `7b21fe0`. Lemma 7.19
+is proved on both literal named `N` products after explicit maximal-lattice
+isometries. The focused gate checks 59,555 declarations and the scanner checks
+2,735 sources. Report 43 completes Lemma 7.20 at `b86a9d4`: its maximal
+endpoints, all four Hilbert-selected ambient combinations, both named
+products, every lower-row existence statement, and the unique undefined
+triple are proved. The focused gate checks 59,643 declarations and the
+scanner checks 2,738 sources. Section 7 had 17/21 fully formalized numbered
+items at that checkpoint. Report 44 adds the full Theorem 7.2 at `07cd548`:
+both the representative-independent and literal finite maximal-or-product
+biconditionals, integral square normalization, and the published
+maximal-overlap assertion are proved. Six selected reports are standard-only,
+the focused gate checks 59,692 declarations, and the scanner checks 2,740
+sources. Section 7 had 18/21 fully formalized numbered items at that
+checkpoint. Report 45 adds all three literal formulas of Remark 7.3 at
+`287b202`, including the exact negative powers, sharp scale, half-scaled
+`A` normalization, ordered ternary tail, and finite representative domain.
+Eight selected reports are standard-only, the focused gate checks 59,743
+declarations, and the scanner checks 2,741 sources. At that checkpoint,
+Section 7 had 19/21 fully formalized numbered items and one
+quantifier-mismatched item. Report 46
+formalized Corollary 7.21 relative to its cited O'Meara 63:9 numerical input at
+`bd0c9a3`. The code proves a complete and irredundant integral-isometry
+catalogue, exact maximal versus nonmaximal membership, and the unconditional
+counts `(4e+3)|U|` and `(4e-1)|U|`. Under the visible counting premise it
+derives the printed `(8e+6)(N p)^e` and `(8e-2)(N p)^e` formulas. Seven
+selected reports are standard-only, the focused gate checks 59,853
+declarations, and the scanner checks 2,742 sources. Report 57 later supplies
+the generic repository proof and makes these formulas unconditional.
+
+Report 47 adds the complete logical deductions of Sections 5 and 8 at
+`d447cd3`. Lemmas 5.2--5.4 and Theorem 5.1 follow from an explicit
+non-dyadic Jordan/lattice law package. Lemma 8.1, Theorem 8.2, Corollary 8.3,
+Theorems 1.5 and 1.7, Lemma 8.4, and Corollary 8.5 follow from an explicit
+global arithmetic law package. All selected endpoints are standard-only.
+These are conditional formalizations: concrete non-dyadic and number-field
+instances of the law packages remain open.
+
+Report 48 propagates the verified binary boundary to Theorems 1.9(ii) and
+1.10 at `f7e8fb7`. A finite family consisting of the four published maximal
+rows and both realized nonmaximal classes is proved rank-correct, 2-ADC,
+complete, and irredundant. It has exactly `4|U|+2` classes and, after report
+57's proof of O'Meara 63:9, unconditionally `8(N p)^e+2`. The printed two-way
+classification and `+1` count are frozen and formally refuted rather than
+silently replaced.
+
+Report 50 closes the dyadic unary boundary of Section 4. The finite
+`N_1^1(c)` family is proved complete and irredundant; `W_2^3(c)` is the
+unique excluding ternary space and supplies literal deletion-minimality in
+Lemma 4.9(ii). The exact count `2|U|` is unconditional. Its printed
+`4(N p)^e` form becomes unconditional in report 57. The 5,032-job
+paper build, expanded audit, and 60,154-declaration focused gate pass locally.
+
+Report 51 closes every dyadic rank branch of Theorem 1.10 at `125dcf2`.
+Each branch is an exact integral-isometry catalogue with rank, `n`-ADC,
+completeness, and irredundancy proofs. The combined endpoint retains the
+formal refutation of the printed binary `+1` value and gives the corrected
+`+2` value. Report 57 makes every dyadic residue-norm conversion
+unconditional.
+
+Report 52 closes the finite-catalogue deduction for the non-dyadic branch at
+`d4c56cc`. It proves exact seven- and eight-row catalogues for equal rank and
+both coranks, together with the published formulas at `e=0`. This remains
+conditional on explicit non-dyadic maximal-lattice classification laws; no
+concrete local-field instance is claimed.
+
+Report 53 closes the finite logical layer of Corollary 1.8 and Theorem 1.11
+at `8cdd338`. It proves `115+471=586`, the literal 21-row Table 2 selection,
+nonrepetition, exact count, and the complete Theorem 1.11 conclusion. The
+cited external catalogues, 48 matrix models, and local checks remained explicit
+inputs at that historical checkpoint.
+
+Report 59 advances the concrete data layer at `e0ef033`: all 48 publisher
+Table 1 matrices, their printed discriminants, exact rational positive
+definiteness, and the literal last-column pattern are now kernel-checked. The
+21 `None` rows are identified with the Table 2 selection, and a separate
+Mathematica program reproduces all finite matrix checks. Oh-catalogue
+exhaustion and the actual prime-by-prime local checks remain explicit inputs,
+so Theorem 1.11 is still conditional rather than an unconditional concrete
+enumeration.
+
+Report 61 advances the non-dyadic data layer at `ec135d8`. All 16
+parity/column/square-class block formulas from Lemma 4.7(i), their total and
+Jordan-component ranks, table-level `J_{0,1}=N`, the unique missing binary
+row, and the seven-row count are kernel-checked and independently reproduced
+in Mathematica. The common row-definedness predicate is shared with the
+existing Theorem 1.10 catalogue. Actual non-dyadic lattice realization,
+maximality, classification, minimality, and representation remain explicit
+inputs, so the whole non-dyadic branch is still conditional.
+
+Reports 62--63 refine that certificate at `ef4fcf4` and `2cf9133`: the
+rank-one and rank-two row domains are exact, the exceptional quaternary row
+is literally `A perp A(pi)`, and all seven other quaternary rows contain `H`.
+The full non-dyadic Proposition 4.16 deduction is kernel-checked from explicit
+catalogue and realization interfaces. Those concrete local-field instances
+remain open, so this is a conditional rather than unconditional completion.
+
+Report 64 also formalizes the exact non-dyadic minimal-testing statement. The
+displayed family has four, seven, or eight rows according to rank, and Lean
+proves both testing sufficiency and literal deletion minimality from explicit
+maximal-overlattice and deletion-witness laws. Concrete instances of those
+local-lattice laws remain pending.
+
+Report 65 formalizes the non-dyadic Lemma 4.14 and Proposition 4.15
+deductions with their literal rank bounds. Proposition 4.15 is no longer a
+catalogue-law conclusion: Lean derives it from maximal-lattice existence,
+`n`-ADC representation, and same-rank maximality transfer. Those lower-level
+local-field laws still require concrete instances.
+
+Report 66 adds the complete non-dyadic Lemma 4.8 endpoint. Its exact
+defined-row `J_{0,1}=N` assertion and representation biconditional are
+kernel-checked; the latter is derived from a generic interface for the cited
+O'Meara 1958 Theorem 1. A concrete instance of that external theorem remains
+pending, so the result is conditional.
+
+Semantic status: one omitted binary class affects four printed statements
+(Lemma 6.8(iv), Theorem 6.2, Theorem 1.9(ii), and Theorem 1.10); Lemma 7.13
+has a separate quantifier mismatch, and the proof of Theorem 7.1 is
+incomplete as printed. Provisional and conditional material remains
+elsewhere; human review cards remain unsigned. Trust status: the new concrete
+endpoints use only the standard logical axioms; conditional local/global
+inputs remain explicit.
+Reproducibility status: the f6f7485/c82668b source tree passed clean-kit CI
+in run 33942437722, including Proposition 4.13, dyadic 4.16, Theorem 6.1,
+full Lemmas 6.4--6.7 and a real enforcing gate on 57,480 declarations.
+The later additions through Report 53 now have an exact local clean-kit
+receipt at 26dc391. A freshly extracted source kit completed all
+`5,051` build jobs, the three He ADC audit entries, and the
+`60,374`-declaration enforcing gate; its archive SHA-256 is fixed in
+Report 54. This includes the unary, Theorem 1.10, and finite-enumeration
+checkpoints. It is local independent-extraction evidence, not GitHub CI or a
+permanent release. The monolithic run
+33942437720 hit its six-hour timeout; the separate paper-kit run passed for
+all eight papers at f6f7485/c82668b.
+Project grade: D because a substantive mismatch occurs in a core classification
+lemma. Whole-paper verdict:
+`NOT_COMPLETE`.
+
+Report 55 adds the complete algebraic induction of Lemma 2.2 at `04b7210`.
+It constructs an actual nondegenerate global subspace and proves that its
+scalar extension is isometric to the given local subspace. The sole remaining
+Lemma 2.2 input is the publisher's one-dimensional density and open-square-
+class argument, represented by an explicit proposition rather than a Lean
+axiom. This advances Section 2 but does not change the whole-paper grade or
+completion verdict.
+
+Report 56 discharges that remaining input at `83cc791`. Mathlib supplies the
+dense number-field embedding in every finite-place completion; a general
+inverse-function argument proves openness of the nonzero square classes; and
+the combined theorem returns the literal descended nondegenerate subspace.
+Lemma 2.2 is therefore `FULLY_FORMALIZED` / `PROVISIONAL_MATCH`. The whole-
+paper grade and completion verdict remain unchanged because the documented
+classification mismatches and other concrete arithmetic inputs are separate.
+
+Report 57 proves the O'Meara 63:9 unit square-class count at `4ad37e1`.
+Successive power-ideal and principal-unit quotients are identified with the
+residue field, the odd square-class layers contribute `q`, the even layers
+collapse, and the terminal discriminant layer has two classes. An explicit
+equivalence transports the intrinsic result to every complete irredundant
+representative system. Corollary 7.21 and all other dyadic numerical endpoints
+are now unconditional, raising Section 7 to 20/21 fully formalized items. The
+canonical entry and three audits complete 5,554 build jobs, the scanner checks
+2,769 tracked Lean files, and the focused gate checks 60,573 declarations.
+The whole-paper verdict remains `NOT_COMPLETE` because the non-dyadic,
+global, external-enumeration, source-correction, and human-review gates are
+independent.
+
+Report 58 closes the corresponding current-source local reproducibility gap.
+The exact clean `7d7a4d5` Review Kit verifies 2,060 payload hashes, completes
+all 5,560 build jobs after fresh extraction, and passes the canonical audit,
+both concrete `Q_2` audits, and the 60,594-declaration enforcing gate. The
+public network reset encountered during the last dependency clone and the
+exact clean-mirror fallback are disclosed in the receipt. GitHub exact-tag
+CI, publication, remaining mathematical inputs, and human sign-off remain
+separate gates and do not change the Grade-D `NOT_COMPLETE` verdict.
+
+Report 60 advances local clean-kit evidence through the publisher Table 1
+certificate at exact source `8ead7f4`. The archive verifies 2,064 payload
+hashes, completes all 5,569 fresh-extraction build jobs, passes the canonical
+audit, both concrete `Q_2` audits, and the 60,683-declaration enforcing gate,
+and reruns the Mathematica certificate successfully. It predates Reports
+61--68 and remains distinct from GitHub exact-tag CI, a permanent release,
+and human semantic approval.
+
+Report 67 completes the dyadic specialization of both parts of Lemma 4.6 at
+`bc043fe`. All parity, column, and corank-one/corank-two alternatives now
+conclude actual lattice representation, and the exactly-one statements retain
+their negative halves. The focused audit is standard-axiom-only and completes
+4,946 jobs; the combined canonical build completes 5,560 jobs and the scanner
+checks 2,780 sources. This does not instantiate the unrestricted non-dyadic
+version, replace exact clean-kit evidence, or supply human semantic approval.
+
+Report 68 then proves the complete non-dyadic Lemma 4.6 deduction at
+`b335b1f`. Both actual-lattice parts follow from a visible package containing
+only Lemma 4.5(i), Proposition 4.2(iii), determinant equality, and transport
+facts. The focused audit completes 3,001 jobs, the combined build completes
+5,561 jobs, and the scanner checks 2,782 sources. This closes the missing
+logical deduction, but not the concrete non-dyadic local-field instance.
+
+Report 69 closes exact extracted-package proof reproducibility through Report
+68 at `9350ca3`: all 2,086 payload hashes, `5,581` build jobs, eleven
+direct Lean gates, and both Mathematica certificates pass, with the enforcing
+gate checking `60,948` declarations. It also records that legacy
+shared root documents name other papers even though He classic code, manifest,
+and audits are absent. The stricter release generator and verifier remove this
+documentation-isolation defect; the legacy archive is not a release asset.
+Reports 70--72 and all remaining semantic and arithmetic obligations stay
+outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
+
+Report 70 advances that boundary at
+`b2dba36476d6dea37762bc6b1b00b7d952aafa62`. Both directions of Lemma 4.5
+and both table-specific "in particular" statements now follow from a visible
+determinant/Hasse invariant interface. Lemma 4.6(i) invokes this theorem, and
+its former ambient exactly-one fields have been removed. This is a strictly
+smaller conditional boundary, but it is not yet a concrete construction over
+every non-dyadic completion.
+
+Report 71 advances it again at `bdc8c29`. Proposition 4.2(ii)--(iii) and
+Lemma 4.4(i)--(iii) now follow from the same lower invariant layer, with the
+Hilbert-symbol parity, omitted rows, negative exception, and uniqueness
+quantifier all explicit. Lemma 4.6(ii) invokes the resulting theorem, so its
+former target-pair, unique-excluding-space, and isometry-transport fields are
+gone. Concrete non-dyadic field/lattice instances and clean-kit evidence are
+still pending.
+
+Report 72 advances the catalogue layer at `5194689`. Maximal-row exhaustion
+is now proved from Proposition 4.2(ii), target maximality, and uniqueness of a
+maximal lattice on an ambient space; row irredundancy is proved from Lemma
+4.4(i) after ambient-isometry transport. These are no longer `CatalogueLaws`
+fields. The conditional status remains because the lower invariant and
+lattice-level interfaces still lack concrete non-dyadic instances.

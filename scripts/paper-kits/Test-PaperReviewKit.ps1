@@ -10,7 +10,10 @@ param(
 
     [switch] $AllowDirtyKit,
 
-    [string] $LogDirectory = ''
+    [string] $LogDirectory = '',
+
+    [ValidateRange(1, 64)]
+    [int] $LeanThreads = 1
 )
 
 $ErrorActionPreference = 'Stop'
@@ -31,11 +34,81 @@ if (-not (Test-Path -LiteralPath $manifestPath -PathType Leaf) -or
     throw 'Review Kit lacks paper-manifest.json or FILES.sha256.'
 }
 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
-if ($manifest.schemaVersion -ne 1) {
+if ($manifest.schemaVersion -notin @(1, 2)) {
     throw 'Unsupported Review Kit manifest schema.'
+}
+$paperPrefix = [string] $manifest.paper.theoremIndexRowPrefix
+if ([string]::IsNullOrWhiteSpace($paperPrefix) -or $paperPrefix -match '[|\r\n]') {
+    throw 'Review Kit manifest lacks a valid paper-specific theorem-index prefix.'
+}
+if ($manifest.schemaVersion -eq 2) {
+    if ($manifest.paper.authoritativeSource.authority -ne $true) {
+        throw 'Schema-2 Review Kit lacks a unique authoritative publisher source.'
+    }
+    foreach ($comparison in @($manifest.paper.comparisonSources)) {
+        if ($comparison.authority -ne $false) {
+            throw 'Schema-2 comparison sources must be explicitly non-authoritative.'
+        }
+    }
+    if ($manifest.formalization.PSObject.Properties.Name -notcontains 'formalizedScope' -or
+        $manifest.formalization.PSObject.Properties.Name -notcontains 'excludedScope') {
+        throw 'Schema-2 Review Kit lacks formalized/excluded scope accounting.'
+    }
 }
 if ($manifest.provenance.sourceTreeState -ne 'clean' -and -not $AllowDirtyKit) {
     throw 'Review Kit was generated from a dirty source tree.'
+}
+
+$paperDirectory = Join-Path $ExtractionDirectory 'papers'
+$packagedPaperDirectories = @(
+    Get-ChildItem -LiteralPath $paperDirectory -Directory -ErrorAction Stop
+)
+if ($packagedPaperDirectories.Count -ne 1 -or
+    $packagedPaperDirectories[0].Name -ne $manifest.paper.id) {
+    throw 'Review Kit must contain exactly its own papers/<paper-id> directory.'
+}
+$auditDirectory = [IO.Path]::GetFullPath(
+    (Join-Path $ExtractionDirectory ([string] $manifest.formalization.auditDirectory))
+)
+$packagedAuditDirectories = @(
+    Get-ChildItem -LiteralPath (Join-Path $ExtractionDirectory 'docs/audit') `
+        -Directory -ErrorAction Stop
+)
+if ($packagedAuditDirectories.Count -ne 1 -or
+    $packagedAuditDirectories[0].FullName -ne $auditDirectory) {
+    throw 'Review Kit must contain exactly its own paper-specific audit directory.'
+}
+
+foreach ($relativeReviewFile in @(
+    'CITATION.cff',
+    'SOURCES.md',
+    'TRUST.md',
+    'THEOREM_INDEX.md',
+    'REVIEWING.md',
+    'docs/audit/README.md',
+    'docs/audit/IndependentReviewSignoff.md'
+)) {
+    if (-not (Test-Path -LiteralPath (Join-Path $ExtractionDirectory $relativeReviewFile) `
+        -PathType Leaf)) {
+        throw "Review Kit lacks paper-specific review material: $relativeReviewFile"
+    }
+}
+
+$theoremIndexRows = @(
+    Get-Content -LiteralPath (Join-Path $ExtractionDirectory 'THEOREM_INDEX.md') |
+        Where-Object {
+            $_ -match '^\| ' -and
+            -not $_.StartsWith('| Source result', [StringComparison]::Ordinal) -and
+            -not $_.StartsWith('| ---', [StringComparison]::Ordinal)
+        }
+)
+if ($theoremIndexRows.Count -eq 0) {
+    throw 'Paper-specific theorem index has no public entry rows.'
+}
+foreach ($row in $theoremIndexRows) {
+    if (-not $row.StartsWith("| $paperPrefix", [StringComparison]::Ordinal)) {
+        throw "Unrelated theorem-index row in paper-specific Review Kit: $row"
+    }
 }
 
 $listed = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
@@ -79,7 +152,9 @@ $forbidden = @(
     Get-ChildItem -LiteralPath $ExtractionDirectory -Force -Recurse |
         Where-Object {
             $_.Name -eq '.lake' -or
+            $_.Name -eq '.git' -or
             $_.Extension -in @('.olean', '.ilean') -or
+            $_.Extension -eq '.pdf' -or
             $_.FullName -match '[\\/]BongTest[\\/]M\d+\.lean$'
         }
 )
@@ -96,6 +171,11 @@ if ($StructureOnly) {
         structure = 'verified'
     } | ConvertTo-Json
     exit 0
+}
+
+if ($manifest.formalization.enforcingAxiomGate -ne 'BongTest.PaperAxiomGate' -or
+    @($manifest.formalization.auditModules) -notcontains 'BongTest.PaperAxiomGate') {
+    throw 'This older kit lacks the enforcing transitive axiom gate; regenerate it before full verification.'
 }
 
 $lakeCommand = Get-Command lake -ErrorAction SilentlyContinue
@@ -121,10 +201,17 @@ if (-not $LogDirectory) {
 $LogDirectory = [IO.Path]::GetFullPath($LogDirectory)
 [void] (New-Item -ItemType Directory -Path $LogDirectory -Force)
 
+$previousLeanNumThreads = [Environment]::GetEnvironmentVariable(
+    'LEAN_NUM_THREADS',
+    [EnvironmentVariableTarget]::Process
+)
+$env:LEAN_NUM_THREADS = [string] $LeanThreads
 Push-Location $ExtractionDirectory
 try {
-    & $lake build
+    $buildLogPath = Join-Path $LogDirectory 'lake-build.log'
+    & $lake build *> $buildLogPath
     if ($LASTEXITCODE -ne 0) {
+        Get-Content -LiteralPath $buildLogPath -Tail 200
         throw "Review Kit Lake build failed with exit code $LASTEXITCODE."
     }
     foreach ($auditModule in @($manifest.formalization.auditModules)) {
@@ -135,9 +222,18 @@ try {
             Get-Content -LiteralPath $logPath -Tail 200
             throw "Review Kit audit failed for $auditModule with exit code $LASTEXITCODE."
         }
+        if ($auditModule -eq $manifest.formalization.enforcingAxiomGate -and
+            -not (Select-String -LiteralPath $logPath -SimpleMatch 'AXIOM_GATE_PASS:' -Quiet)) {
+            throw 'The enforcing gate returned without its success marker.'
+        }
     }
 } finally {
     Pop-Location
+    if ($null -eq $previousLeanNumThreads) {
+        Remove-Item Env:LEAN_NUM_THREADS -ErrorAction SilentlyContinue
+    } else {
+        $env:LEAN_NUM_THREADS = $previousLeanNumThreads
+    }
 }
 
 [pscustomobject]@{
@@ -147,6 +243,9 @@ try {
     verifiedFileCount = $listed.Count
     structure = 'verified'
     build = 'passed'
+    leanThreads = $LeanThreads
+    buildLog = $buildLogPath
     audits = @($manifest.formalization.auditModules)
+    enforcingAxiomGate = $manifest.formalization.enforcingAxiomGate
     logDirectory = $LogDirectory
 } | ConvertTo-Json -Depth 5

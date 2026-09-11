@@ -27,6 +27,9 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
   {J : JordanDecomposition q L (n + 2)}
   {H : JordanDecomposition r M (n + 2)}
 
+set_option maxHeartbeats 800000 in
+-- Elaborating the dependent stabilized carrier can exceed the default budget
+-- on the two-core Linux CI runner.
 /-- A saturated Jordan splitting of the stabilized Step-8 source, with the
 same complete fundamental type. -/
 structure Omeara9328StepEightSaturationData

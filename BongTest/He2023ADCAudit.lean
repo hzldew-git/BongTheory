@@ -1,0 +1,1000 @@
+/-
+Copyright (c) 2026 BONG Theory contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BONG Theory contributors
+-/
+import Bong.Papers.He2023ADC
+
+/-! Kernel and trust-boundary audit for He's n-ADC paper entry. -/
+
+open Bong.Lattice.QuadraticLatticeModel
+open Bong.QuadraticSpace
+
+#check Bong.Lattice.IsNADC
+#check Bong.Lattice.IsNUniversal.isNADC
+#check Bong.Lattice.RepresentsAllRelevantOMaximalOfRank
+#check Bong.Lattice.heADCLemma21LocalDyadic
+#check Bong.Lattice.IsOMaximal.isNADC
+#check Bong.Lattice.IsNADC.isOMaximal_of_finrank_eq
+#check Bong.Lattice.isNADC_iff_isOMaximal_of_finrank_eq
+#check Bong.Lattice.IsNADC.isNUniversal_of_ambientlyNUniversal
+#check Bong.Lattice.isNADC_iff_isNUniversal_of_rank_add_three_le
+#check Bong.GlobalLocalLatticeSystem.IsGloballyNADC
+#check Bong.GlobalLocalLatticeSystem.IsGloballyNUniversal
+#check Bong.GlobalLocalLatticeSystem.IsNRegular
+#check Bong.GlobalLocalLatticeSystem.Theorem13Laws
+#check Bong.GlobalLocalLatticeSystem.heADCTheorem13
+#check Bong.GlobalLocalLatticeSystem.heADCTheorem14i
+#check Bong.GlobalLocalLatticeSystem.heADCTheorem14ii
+#check Bong.GlobalLocalLatticeSystem.heADCTheorem14iii
+#check Bong.QuadraticSpace.HasOneDimensionalSubspaceDescent
+#check Bong.QuadraticSpace.finiteDiagonalSubspaceDescent
+#check Bong.QuadraticSpace.heADC2025Lemma22_representation
+#check Bong.QuadraticSpace.heADC2025Lemma22_of_oneDimensionalDescent
+#check HasOpenNonzeroSquareClasses
+#check hasOpenNonzeroSquareClasses_of_complete
+#check hasOneDimensionalSubspaceDescent_of_denseRange_of_openSquareClasses
+#check numberFieldFiniteCompletionHasOneDimensionalSubspaceDescent_of_openSquareClasses
+#check numberFieldFiniteCompletionHasOneDimensionalSubspaceDescent
+#check heADC2025Lemma22_numberFieldFiniteCompletion
+
+#print axioms Bong.QuadraticSpace.finiteDiagonalSubspaceDescent
+#print axioms Bong.QuadraticSpace.heADC2025Lemma22_representation
+#print axioms Bong.QuadraticSpace.heADC2025Lemma22_of_oneDimensionalDescent
+#print axioms hasOpenNonzeroSquareClasses_of_complete
+#print axioms hasOneDimensionalSubspaceDescent_of_denseRange_of_openSquareClasses
+#print axioms numberFieldFiniteCompletionHasOneDimensionalSubspaceDescent_of_openSquareClasses
+#print axioms numberFieldFiniteCompletionHasOneDimensionalSubspaceDescent
+#print axioms heADC2025Lemma22_numberFieldFiniteCompletion
+
+#check Bong.HeADC2025NonDyadicUnitClass
+#check Bong.HeADC2025NonDyadicSquareClass
+#check Bong.HeADC2025NonDyadicColumn
+#check Bong.HeADC2025NonDyadicSystem
+#check Bong.HeADC2025NonDyadicSystem.IsNADC
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma414_represents
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma414
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma52
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53i
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53ii
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iii
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iv
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma54
+#check Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51
+#check Bong.HeADC2025NonDyadicColumn.other
+#check Bong.HeADC2025NonDyadicSystem.RepresentsExactlyOne
+#check Bong.HeADC2025NonDyadicSystem.SpaceRepresentsExactlyOne
+#check Bong.HeADC2025NonDyadicSystem.SpaceIsRepresentedByExactlyOne
+#check Bong.HeADC2025NonDyadicSystem.Lemma45InvariantData
+#check Bong.HeADC2025NonDyadicSystem.Lemma45Laws
+#check Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42InvariantData
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiNonDyadic
+#check
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic
+#check
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_excludes
+#check
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_unique
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iNonDyadicTargets
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iiNonDyadicTargets
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadic
+#check Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadicMaximal
+
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma52
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma414_represents
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma414
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53i
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53ii
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iii
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma53iv
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Lemma54
+#print axioms Bong.HeADC2025NonDyadicSystem.SectionFiveLaws.heADC2025Theorem51
+#print axioms Bong.HeADC2025NonDyadicColumn.other_other
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma45Laws.heADC2025Lemma45iiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Lemma44iiiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_excludes
+#print axioms
+  Bong.HeADC2025NonDyadicSystem.Proposition42Laws.heADC2025Proposition42iiiNonDyadic_unique
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iNonDyadicTargets
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma45iiNonDyadicTargets
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadic
+#print axioms Bong.HeADC2025NonDyadicSystem.Lemma46Laws.heADC2025Lemma46iiNonDyadicMaximal
+
+#check Bong.HeADC2025NonDyadicJordanAtom
+#check Bong.HeADC2025NonDyadicSquareClass.deltaTwist
+#check Bong.heADC2025NonDyadicEvenTableRow
+#check Bong.heADC2025NonDyadicOddTableRow
+#check Bong.HeADC2025NonDyadicEvenRowIsDefined
+#check Bong.HeADC2025NonDyadicOddRowIsDefined
+#check Bong.heADC2025NonDyadicEvenTableRow_rank
+#check Bong.heADC2025NonDyadicOddTableRow_rank
+#check Bong.heADC2025NonDyadicEvenTableRow_jordanZeroOne
+#check Bong.heADC2025NonDyadicOddTableRow_jordanZeroOne
+#check Bong.heADC2025NonDyadicEvenUniformizerRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicOddUniformizerRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicEvenFirstUnitRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicOddFirstUnitRow_jordanZeroRank
+#check Bong.heADC2025NonDyadicEvenBinaryRow_defined_iff
+#check Bong.heADC2025NonDyadicEvenRowIsDefined_iff
+#check Bong.heADC2025NonDyadicOddRowIsDefined_iff
+#check Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
+
+#print axioms Bong.heADC2025NonDyadicEvenTableRow_rank
+#print axioms Bong.heADC2025NonDyadicOddTableRow_rank
+#print axioms Bong.heADC2025NonDyadicEvenTableRow_jordanZeroOne
+#print axioms Bong.heADC2025NonDyadicOddTableRow_jordanZeroOne
+#print axioms Bong.heADC2025NonDyadicEvenUniformizerRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicOddUniformizerRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicEvenFirstUnitRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicOddFirstUnitRow_jordanZeroRank
+#print axioms Bong.heADC2025NonDyadicEvenBinaryRow_defined_iff
+#print axioms Bong.heADC2025NonDyadicEvenRowIsDefined_iff
+#print axioms Bong.heADC2025NonDyadicOddRowIsDefined_iff
+#print axioms Bong.card_heADC2025NonDyadicEvenBinaryDefinedRows
+
+#check Bong.HeADC2025NonDyadicBinaryIndex
+#check Bong.HeADC2025NonDyadicGeneralIndex
+#check Bong.HeADC2025NonDyadicRowIsDefined
+#check Bong.heADC2025NonDyadicBinaryRow
+#check Bong.heADC2025NonDyadicBinaryRow_defined
+#check Bong.heADC2025NonDyadicBinaryRow_injective
+#check Bong.card_heADC2025NonDyadicBinaryIndex
+#check Bong.card_heADC2025NonDyadicGeneralIndex
+#check Bong.HeADC2025NonDyadicSystem.IsExactNADCIsometryCatalogue
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws
+#check Bong.HeADC2025NonDyadicSystem.nonDyadicBinaryFamily
+#check Bong.HeADC2025NonDyadicSystem.nonDyadicGeneralFamily
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.maximal_complete
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.target_irredundant
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415_isMaximal
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Lemma48_jordanZeroOne
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Lemma48
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.binary_exactCatalogue
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.general_exactCatalogue_of_isMaximal
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.Theorem110NonDyadicConclusion
+#check Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Theorem110NonDyadic
+
+#print axioms Bong.heADC2025NonDyadicBinaryRow_injective
+#print axioms Bong.card_heADC2025NonDyadicBinaryIndex
+#print axioms Bong.card_heADC2025NonDyadicGeneralIndex
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.maximal_complete
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.target_irredundant
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415_isMaximal
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Proposition415
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Lemma48_jordanZeroOne
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Lemma48
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.binary_exactCatalogue
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.general_exactCatalogue_of_isMaximal
+#print axioms Bong.HeADC2025NonDyadicSystem.CatalogueLaws.heADC2025Theorem110NonDyadic
+
+#check Bong.HeADC2025GlobalData
+#check Bong.HeADC2025GlobalData.HasClassNumberOne
+#check Bong.HeADC2025GlobalData.HasDistinguishingRankSublattice
+#check Bong.HeADC2025GlobalData.SectionEightLaws
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81i
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem82
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary83
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15i
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem17
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
+#check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
+
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81i
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem82
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary83
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15i
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem17
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
+
+#check Bong.heADC2025TableOneCoordinates
+#check Bong.heADC2025TableOneGram
+#check Bong.heADC2025TableOneGram_transpose
+#check Bong.heADC2025TableOneGram_det
+#check Bong.heADC2025TableOnePublishedDiscriminant_pos
+#check Bong.heADC2025TableOneLeadingMinorOne_pos
+#check Bong.heADC2025TableOneLeadingMinorTwo_pos
+#check Bong.heADC2025TableOneLeadingMinorThree_pos
+#check Bong.heADC2025TableOneGramRat_eq_ldl
+#check Bong.heADC2025TableOneGramRat_posDef
+#check Bong.HeADC2025TableOnePassesPublishedLocalCheck
+#check Bong.heADC2025TableOnePassesPublishedLocalCheck_iff
+#check Bong.card_heADC2025TableOnePassesPublishedLocalCheck
+
+#print axioms Bong.heADC2025TableOneGram_transpose
+#print axioms Bong.heADC2025TableOneGram_det
+#print axioms Bong.heADC2025TableOnePublishedDiscriminant_pos
+#print axioms Bong.heADC2025TableOneLeadingMinorOne_pos
+#print axioms Bong.heADC2025TableOneLeadingMinorTwo_pos
+#print axioms Bong.heADC2025TableOneLeadingMinorThree_pos
+#print axioms Bong.heADC2025TableOneGramRat_eq_ldl
+#print axioms Bong.heADC2025TableOneGramRat_posDef
+#print axioms Bong.heADC2025TableOnePassesPublishedLocalCheck_iff
+#print axioms Bong.card_heADC2025TableOnePassesPublishedLocalCheck
+
+#check Bong.HeADC2025Corollary18EnumerationData
+#check Bong.HeADC2025Corollary18EnumerationData.heADC2025Corollary18
+#check Bong.heADC2025Theorem111TableTwoSourceIndex
+#check Bong.HeADC2025Theorem111IsSelected
+#check Bong.HeADC2025Theorem111Index
+#check Bong.heADC2025Theorem111TableTwoSourceIndex_selected
+#check Bong.heADC2025Theorem111TableTwoSourceIndex_injective
+#check Bong.card_heADC2025Theorem111Index
+#check Bong.heADC2025Theorem111TableTwoEquiv
+#check Bong.heADC2025Theorem111TableTwoSourceIndex_ne_nine_iff
+#check Bong.HeADC2025Theorem111Data
+#check Bong.HeADC2025Theorem111Laws
+#check Bong.HeADC2025Theorem111Laws.Conclusion
+#check Bong.HeADC2025Theorem111Laws.heADC2025Theorem111
+#check Bong.heADC2025TableOnePassesPublishedLocalCheck_iff_selected
+
+#print axioms Bong.HeADC2025Corollary18EnumerationData.heADC2025Corollary18
+#print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_selected
+#print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_injective
+#print axioms Bong.card_heADC2025Theorem111Index
+#print axioms Bong.heADC2025Theorem111TableTwoSourceIndex_ne_nine_iff
+#print axioms Bong.heADC2025TableOnePassesPublishedLocalCheck_iff_selected
+#print axioms Bong.HeADC2025Theorem111Laws.heADC2025Theorem111
+
+#check Bong.BONG.OrthogonalBasisData.heADC2025Lemma31
+#check Bong.BONG.GoodBONG.heADC2025Corollary32i
+#check Bong.BONG.GoodBONG.heADC2025Corollary32ii
+#check Bong.BONG.GoodBONG.heADC2025Proposition33
+#check Bong.BONG.GoodBONG.heADC2025Proposition34
+#check Bong.BONG.GoodBONG.heADC2025Proposition35
+#check Bong.BONG.GoodBONG.heADC2025Theorem36
+
+#check Bong.heADC2025Proposition42iOdd
+#check Bong.heADC2025Proposition42iEven
+#check Bong.heADC2025Proposition42iiOdd
+#check Bong.heADC2025Proposition42iiEven
+#check Bong.heADC2025Proposition42iiiOddFirst
+#check Bong.heADC2025Proposition42iiiOddSecond
+#check Bong.heADC2025Proposition42iiiEvenFirst
+#check Bong.heADC2025Proposition42iiiEvenSecond
+#check Bong.heADC2025Remark43OddCard
+#check Bong.heADC2025Remark43EvenCardOfPos
+#check Bong.heADC2025Remark43EvenCardZero
+#check Bong.heADC2025Remark43OddMaximal
+#check Bong.heADC2025Remark43EvenMaximal
+#check Bong.HeADC2025PublishedUnaryTestingIndex
+#check Bong.HeADC2025PublishedUnaryTestingIndex.model
+#check Bong.HeADC2025PublishedUnaryTestingIndex.model_rank
+#check Bong.HeADC2025PublishedUnaryTestingIndex.model_isOMaximal
+#check Bong.Lattice.QuadraticLatticeModel.exists_heADC2025PublishedUnaryIndex_for_model
+#check Bong.Lattice.QuadraticLatticeModel.heADC2025PublishedUnary_model_eq_of_ambientlyIsometric
+#check Bong.Lattice.QuadraticLatticeModel.heADC2025Proposition42iiiUnary
+#check Bong.Lattice.QuadraticLatticeModel.heADC2025Lemma49iiUnary
+#check Bong.heADC2025Remark43UnaryCard
+#check Bong.heADC2025Remark43UnaryCardPublished
+#check Bong.heADC2025Lemma44iOdd
+#check Bong.heADC2025Lemma44iEven
+#check Bong.heADC2025Lemma44ii
+#check Bong.heADC2025Lemma44iii
+#check Bong.heADC2025Lemma45iCodimensionOne
+#check Bong.heADC2025Lemma45iCodimensionTwo
+#check Bong.HeADCIsRepresentedByExactlyOne
+#check Bong.heADC2025Lemma45iiCodimensionOne
+#check Bong.heADC2025Lemma45iiCodimensionTwo
+#check Bong.heADC2025Lemma49EvenFirstOne
+#check Bong.heADC2025Lemma49EvenFirstDelta
+#check Bong.heADC2025Lemma49EvenSecondOne
+#check Bong.heADC2025Lemma49EvenSecondDelta
+#check Bong.heADC2025Lemma49EvenGeneric
+#check Bong.heADC2025Lemma49EvenUnitUniformizer
+#check Bong.heADC2025Lemma49OddFirstUnit
+#check Bong.heADC2025Lemma49OddFirstUnitUniformizer
+#check Bong.heADC2025Lemma49OddSecondUnit
+#check Bong.heADC2025Lemma49OddSecondUnitUniformizer
+#check Bong.heADC2025Lemma49iiEven
+#check Bong.heADC2025Lemma49iiOdd
+#check Bong.Lattice.isOMaximal_iff_volumeOrder_eq_of_ambientlyIsometric
+#check Bong.BONG.GoodBONG.HeADCMaximalProfileCriterion
+#check Bong.BONG.GoodBONG.heADC2025Remark410
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iOne
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iDelta
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiOne
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiDelta
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnit
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitUniformizer
+#check Bong.BONG.GoodBONG.heADC2025Lemma412i
+#check Bong.BONG.GoodBONG.heADC2025Lemma412ii
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iiiFirst
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecond
+#check Bong.heADCW1Unary
+#check Bong.heADCN1Unary
+#check Bong.BONG.GoodBONG.ambientIsometric_of_diagonalRepresents
+#check Bong.BONG.GoodBONG.isIsometric_publishedModel_iff_orderProfile
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iOnePublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iDeltaPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiOnePublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiDeltaPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitFirstPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitSecondPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUniformizerFirstPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma411iiiUniformizerSecondPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iiPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iiiFirstPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecondPublished
+#check Bong.BONG.GoodBONG.heADC2025Lemma412UnaryPublished
+#check Bong.Lattice.QuadraticLatticeModel.IsNADC.representsExactlyOne_of_ambient
+#check Bong.Lattice.QuadraticLatticeModel.IsNADC.represents_every_of_ambient
+#check Bong.Lattice.heADCLemma414LocalDyadic
+#check Bong.Lattice.heADCProposition415LocalDyadic
+#check Bong.Lattice.heADCTheorem14iLocalDyadic
+
+#print axioms Bong.Lattice.heADCLemma21LocalDyadic
+#print axioms Bong.Lattice.heADCLemma414LocalDyadic
+#print axioms Bong.Lattice.heADCProposition415LocalDyadic
+#print axioms Bong.Lattice.heADCTheorem14iLocalDyadic
+#print axioms Bong.GlobalLocalLatticeSystem.heADCTheorem13
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem36
+#print axioms Bong.heADC2025Proposition42iiiEvenFirst
+#print axioms Bong.heADC2025Lemma44iii
+#print axioms Bong.heADC2025Lemma45iCodimensionTwo
+#print axioms Bong.heADC2025Lemma45iiCodimensionTwo
+#print axioms Bong.heADC2025Lemma49EvenFirstOne
+#print axioms Bong.heADC2025Lemma49OddSecondUnit
+#print axioms Bong.heADC2025Lemma49OddSecondUnitUniformizer
+#print axioms Bong.heADC2025Lemma49iiEven
+#print axioms Bong.heADC2025Lemma49iiOdd
+#print axioms Bong.Lattice.QuadraticLatticeModel.exists_heADC2025PublishedUnaryIndex_for_model
+#print axioms
+  Bong.Lattice.QuadraticLatticeModel.heADC2025PublishedUnary_model_eq_of_ambientlyIsometric
+#print axioms Bong.Lattice.QuadraticLatticeModel.heADC2025Proposition42iiiUnary
+#print axioms Bong.Lattice.QuadraticLatticeModel.heADC2025Lemma49iiUnary
+#print axioms Bong.heADC2025Remark43UnaryCard
+#print axioms Bong.heADC2025Remark43UnaryCardPublished
+#print axioms Bong.Lattice.isOMaximal_iff_volumeOrder_eq_of_ambientlyIsometric
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark410
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iOne
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iDelta
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiOne
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiDelta
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnit
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitUniformizer
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412i
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412ii
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiFirst
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecond
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iOnePublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iDeltaPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiOnePublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiDeltaPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitFirstPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUnitSecondPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUniformizerFirstPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma411iiiUniformizerSecondPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiFirstPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412iiiSecondPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma412UnaryPublished
+#print axioms Bong.Lattice.QuadraticLatticeModel.IsNADC.representsExactlyOne_of_ambient
+
+#check @Bong.BONG.GoodBONG.exists_heADCOddNormalizedAmbient
+#check @Bong.BONG.GoodBONG.heADCOddMaximal_orders
+#check @Bong.BONG.GoodBONG.heADC2025Proposition413
+#print Bong.BONG.GoodBONG.HeADCProposition413Conclusions
+#print axioms Bong.BONG.GoodBONG.exists_heADCOddNormalizedAmbient
+#print axioms Bong.BONG.GoodBONG.heADCOddMaximal_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Proposition413
+
+#check @Bong.Lattice.IsOMaximal.represents_halfHyperbolic_iff
+#check @Bong.heADCAForm_bilin_apply
+#check @Bong.heADCN2QuaternaryOne_isIsometric_A_product_scaledA
+#check @Bong.Lattice.heADC2025Proposition416Dyadic
+#print axioms Bong.Lattice.IsOMaximal.represents_halfHyperbolic_iff
+#print axioms Bong.heADCAForm_bilin_apply
+#print axioms Bong.heADCDiscriminantEndpoint_isIsometric_scaledA
+#print axioms Bong.heADCN2QuaternaryOne_isIsometric_A_product_scaledA
+#print axioms Bong.Lattice.IsOMaximal.isAnisotropic_iff_heADCN2QuaternaryOne
+#print axioms Bong.Lattice.heADC2025Proposition416Dyadic
+
+#check @Bong.BONG.GoodBONG.heADCAlternatingPrefix_of_represented_endpoint
+#check @Bong.BONG.GoodBONG.heADCComparisonPrefix_isSquare_of_strict_crossGap
+#check @Bong.BONG.GoodBONG.heADCBoundaryOrder_zero_of_two_represented_classes
+#print axioms Bong.BONG.GoodBONG.heADCAlternatingPrefix_of_represented_endpoint
+#print axioms Bong.BONG.GoodBONG.heADCComparisonPrefix_isSquare_of_strict_crossGap
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryOrder_zero_of_two_represented_classes
+
+#check @Bong.heADCEvenFirstTest_orders
+#check @Bong.heADCEvenFirstTests_prefixProduct_not_square
+#check @Bong.BONG.GoodBONG.heADCEvenFirstTests_rank_gt
+#check @Bong.BONG.GoodBONG.heADC2025Lemma64ii
+#print axioms Bong.heADCMaximalGoodBONG_prefixProduct_det_square
+#print axioms Bong.heADCEvenFirstTest_orders
+#print axioms Bong.heADCEvenFirstTests_det_not_square
+#print axioms Bong.heADCEvenFirstTests_prefixProduct_not_square
+#print axioms Bong.BONG.GoodBONG.heADCEvenFirstTests_rank_gt
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma64ii
+
+#check @Bong.BONG.GoodBONG.heADCEvenFirstTest_alternatingOrders
+#check @Bong.BONG.GoodBONG.heADCEvenFirstTest_signedPrefixDefect
+#check @Bong.BONG.GoodBONG.heADC2025Lemma64i
+#print axioms Bong.heADCEvenFirstTest_parameterDefect
+#print axioms Bong.BONG.GoodBONG.heADCEvenFirstTest_alternatingOrders
+#print axioms Bong.BONG.GoodBONG.heADCEvenFirstTest_signedPrefixDefect
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma64i
+
+#check @Bong.heADCEvenSecondTest_orders
+#check @Bong.BONG.GoodBONG.heADC2025Lemma64iii
+#print axioms Bong.heADCMaximalOrderProfile_raisedFour
+#print axioms Bong.heADCEvenSecondTest_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma64iii
+
+#check @Bong.heADCKappaSharpDomain
+#check @Bong.heADCKappaTest_lastOrders
+#check @Bong.BONG.GoodBONG.heADCEvenMixedTest_bound
+#check @Bong.BONG.GoodBONG.heADC2025Lemma64iv
+#print axioms Bong.heADCKappaSharpDomain
+#print axioms Bong.heADCKappaTest_lastOrders
+#print axioms Bong.heADCEvenFirst_determinantClass
+#print axioms Bong.heADCEvenSecond_determinantClass
+#print axioms Bong.heADCEvenTests_determinants_not_square
+#print axioms Bong.BONG.GoodBONG.heADCEvenMixedTest_bound
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma64iv
+
+#check @Bong.BONG.GoodBONG.heADCTerminalDefectCondition_fails
+#check @Bong.BONG.GoodBONG.heADCUniformizerTest_orders
+#check @Bong.BONG.GoodBONG.heADC2025Lemma65i
+#print axioms Bong.BONG.GoodBONG.heADCTerminalDefectCondition_fails
+#print axioms Bong.BONG.GoodBONG.heADCUniformizerTest_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma65i_of_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma65i
+
+#check @Bong.BONG.GoodBONG.heADCExtremalPairs_prefixDefect
+#check @Bong.BONG.GoodBONG.heADCEvenPenultimate_mixedDefect
+#check @Bong.BONG.GoodBONG.heADC2025Lemma65ii
+#print axioms Bong.BONG.GoodBONG.heADCExtremalPairs_prefixDefect
+#print axioms Bong.BONG.GoodBONG.heADCEvenPenultimate_mixedDefect
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma65ii_of_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma65ii
+
+#check @Bong.BONG.GoodBONG.heADCMaximal_represents_iff_diagonalRepresents
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankOne
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankTwo
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iOddCorankOne
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iOddCorankTwo
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iiEvenFirst
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iiEvenSecond
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iiOddFirst
+#check @Bong.BONG.GoodBONG.heADC2025Lemma46iiOddSecond
+#check @Bong.BONG.GoodBONG.heADCCorankOne_uniformizerTest
+#check @Bong.BONG.GoodBONG.heADCEvenCorankOne_orders
+#print axioms Bong.BONG.GoodBONG.heADCMaximal_represents_iff_diagonalRepresents
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankOne
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iEvenCorankTwo
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iOddCorankOne
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iOddCorankTwo
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iiEvenFirst
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iiEvenSecond
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iiOddFirst
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma46iiOddSecond
+#print axioms Bong.BONG.GoodBONG.heADCCorankOne_uniformizerTest
+#print axioms Bong.BONG.GoodBONG.heADCEvenCorankOne_orders
+
+#check @Bong.heADCIsOMaximal_of_volumeOrder_le_add_one
+#check @Bong.BONG.GoodBONG.heADCCorankOne_standardTail_isOMaximal
+#check @Bong.heADCEvenFirstOne_represents_oddFirst
+#check @Bong.heADCEvenFirstDelta_represents_oddSecondUniformizer
+#check @Bong.BONG.GoodBONG.heADCCorankOne_raisedTail_ambient
+#check @Bong.BONG.GoodBONG.heADC2025Theorem61_of_goodBONG
+#check @Bong.Lattice.heADC2025Theorem61
+#print axioms Bong.heADCIsOMaximal_of_volumeOrder_le_add_one
+#print axioms Bong.BONG.GoodBONG.heADCOdd_volumeOrder_split
+#print axioms Bong.BONG.GoodBONG.heADCOdd_profile_volumeOrder
+#print axioms Bong.BONG.GoodBONG.heADCOdd_prefixSum_eq_of_head_profile
+#print axioms Bong.BONG.GoodBONG.heADCCorankOne_standardTail_isOMaximal
+#print axioms Bong.heADCEvenFirstOne_represents_oddFirst
+#print axioms Bong.heADCEvenFirstDelta_represents_oddSecondUniformizer
+#print axioms Bong.BONG.GoodBONG.heADCRaisedTail_not_represents_first
+#print axioms Bong.BONG.GoodBONG.heADCCorankOne_raisedTail_ambient
+#print axioms Bong.BONG.GoodBONG.heADCCorankOne_raisedTail_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem61_of_goodBONG
+#print axioms Bong.Lattice.heADC2025Theorem61
+
+#check @Bong.BONG.GoodBONG.heADC2025Theorem36Published
+#check @Bong.BONG.GoodBONG.heADC2025Theorem36PublishedFull
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem36Published
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem36PublishedFull
+
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_fullMixedDefect
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_currentDefect_gt
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_defectTrigger
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_fullMixedDefect
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_currentDefect_gt
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_defectTrigger
+
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_prefix_oddFirst
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_signedClass
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_prefix_evenFirst
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_prefix_represents_first
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_prefix_not_represents_second
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_oddFirst
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_signedClass
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_evenFirst
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_represents_first
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_prefix_not_represents_second
+
+#check @Bong.BONG.GoodBONG.heADCEvenSecondTest_isometric_orders
+#check @Bong.BONG.GoodBONG.heADC2025Lemma66_endpoint
+#check @Bong.BONG.GoodBONG.heADC2025Lemma66i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma66ii
+#print axioms Bong.BONG.GoodBONG.heADCEvenSecondTest_isometric_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma66_endpoint
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma66i
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma66ii
+
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_capped_le_of_represents
+#check @Bong.BONG.GoodBONG.heADCEvenCentral_alphaAlternatives_of_capped_le
+#check @Bong.BONG.GoodBONG.heADC2025Lemma67_endpoint
+#check @Bong.BONG.GoodBONG.heADC2025Lemma67i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma67ii
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_capped_le_of_represents
+#print axioms Bong.BONG.GoodBONG.heADCEvenCentral_alphaAlternatives_of_capped_le
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma67_endpoint
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma67i
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma67ii
+
+#check @Bong.Lattice.heADC2025Lemma68i
+#check @Bong.Lattice.heADC2025Lemma68ii
+#print axioms Bong.heADCEvenCodimensionTwo_represents_of_parameter_not_square
+#print axioms Bong.heADCEvenFirst_represents_previous
+#print axioms Bong.Lattice.heADCMaximal_represents_of_ambient_model
+#print axioms Bong.Lattice.heADCEvenCorankTwoFirst_same
+#print axioms Bong.Lattice.heADCEvenCorankTwoFirst_of_not_square
+#print axioms Bong.Lattice.heADCEvenCorankTwoSecond_of_not_square
+#print axioms Bong.BONG.GoodBONG.heADC_prefixProduct_det_square_of_ambient
+#print axioms Bong.BONG.GoodBONG.heADC_signedFullDefect_of_ambient
+#print axioms Bong.BONG.GoodBONG.heADC_signedFullDefectOrder_of_ambient
+#print axioms Bong.BONG.GoodBONG.heADCEvenEndpoint_signedPrefix_defect
+#print axioms Bong.BONG.GoodBONG.heADCEvenCorankTwo_endpoint_orders
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma68i_of_goodBONG
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma68ii_of_goodBONG
+#print axioms Bong.Lattice.heADC2025Lemma68i
+#print axioms Bong.Lattice.heADC2025Lemma68ii
+
+#check @Bong.Lattice.heADC2025Lemma68v
+#check @Bong.Lattice.heADC2025Lemma68vi
+#check @Bong.heADCSharpDomain_publishedParameter_iff
+#check @Bong.Lattice.heADC2025Lemma68vPublished
+#check @Bong.Lattice.heADC2025Lemma68viPublished
+#print axioms Bong.BONG.GoodBONG.heADCSharpDefectData
+#print axioms Bong.BONG.GoodBONG.heADCEvenCorankTwo_orders_of_finite_full_defect
+#print axioms Bong.heADCSharp_mul_discriminant_not_square
+#print axioms Bong.Lattice.heADCEvenCorankTwo_tests_of_sharp_ambient
+#print axioms Bong.BONG.GoodBONG.heADCEvenCorankTwo_sharp_orders
+#print axioms Bong.heADCEvenSharpSpace_determinantClass
+#print axioms Bong.heADCSharpDomain_of_mul_square
+#print axioms Bong.heADCEvenSharpSpace_represents_of_mul_square
+#print axioms Bong.Lattice.heADCEvenCorankTwoSharp_normalized
+#print axioms Bong.Lattice.heADCEvenCorankTwoSharp_isOMaximal
+#print axioms Bong.Lattice.heADC2025Lemma68v
+#print axioms Bong.Lattice.heADC2025Lemma68vi
+#print axioms Bong.heADCNormalizedRepresentative_eq_one_of_isSquare
+#print axioms Bong.heADCSharpDomain_publishedParameter_iff
+#print axioms Bong.Lattice.heADC2025Lemma68vPublished
+#print axioms Bong.Lattice.heADC2025Lemma68viPublished
+
+#check @Bong.Lattice.heADC2025Lemma68iii
+#check @Bong.Lattice.heADC2025Lemma68iv_of_pos
+#print axioms Bong.AlternatingEndpointTower.exists_unitScale_of_even_leadingOrders
+#print axioms Bong.AlternatingEndpointTower.equalDeterminantRepresentation_of_even_leadingOrders
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_not_evenTower
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_last_ne_neg_twoE
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_terminal_lt
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_terminal_pair
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_orders
+#print axioms Bong.BONG.GoodBONG.heADCSecondEndpoint_full_profile
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma68iii_of_goodBONG
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma68iv_of_goodBONG_of_pos
+#print axioms Bong.Lattice.heADC2025Lemma68iii
+#print axioms Bong.Lattice.heADC2025Lemma68iv_of_pos
+
+#check @Bong.BONG.GoodBONG.exists_heADCQuaternaryBoundaryCandidate
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_admissible
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_orders
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_integral
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_orders
+#print axioms Bong.BONG.GoodBONG.heADCBoundaryTail_represents_endpoint
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_second
+#print axioms Bong.BONG.GoodBONG.exists_heADCQuaternaryBoundaryCandidate
+
+#check @Bong.BONG.GoodBONG.heADCBoundary_represents_finite
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_hasOrders
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_orderCondition
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_longConditions
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_firstDefect
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_middleAlpha
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_oddMixedPrefix
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_secondComparisonDefect
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_secondDefect_of_finite
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_terminalMixedDefect
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_terminalTrigger_not_of_finite
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_firstCentralRepresentation
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_represents_finite
+
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N2Delta
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N1One
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_splitHead
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_fullDefect
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_finite
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_represents_endpoint
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_thirdValue
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_firstTwoIsotropic
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_firstThree_represents
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_endpointTarget
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N2Delta
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_halfHyperbolic
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_N1One
+
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_unitFirst
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_uniformizerSecond
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_profiledMaximal
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_unitFirst
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_unitSecond
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_unitUniformizer_defect_zero
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_uniformizerFirst
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_uniformizerSecond
+
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_is2ADC
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_sharp_normalized
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_sharp
+#print axioms Bong.BONG.GoodBONG.heADCBoundary_represents_of_diagonalRepresents
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_misses_N1Delta
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_represents_evenTest
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_representsAllRelevantOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_is2ADC
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isOMaximal
+#check @Bong.BONG.GoodBONG.HeADC2025Lemma68ivBinaryStatement
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isIsometric_N2Delta
+#print axioms Bong.BONG.GoodBONG.not_heADC2025Lemma68ivBinaryStatement
+
+#check @Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC
+#check @Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_is3ADC
+#check @Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_orders
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_represents_first
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_fullDefect
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCExceptional_represents_finite
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_represents_N1Delta
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_represents_sharp
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_misses_N2Delta
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_representsAllRelevantOMaximal
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_is2ADC
+#print axioms Bong.BONG.GoodBONG.heADCExceptional_ternaryTerminalDefect_zero
+#print axioms Bong.BONG.GoodBONG.heADCExceptional_ternaryTerminalAlpha_ge_half
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalQuaternaryCandidate_not_is3ADC
+
+#check @Bong.BONG.GoodBONG.heADC2025Lemma69
+#check @Bong.BONG.GoodBONG.heADC2025Lemma610
+#check @Bong.BONG.GoodBONG.heADC2025Lemma611_of_goodBONG
+#check @Bong.Lattice.heADC2025Lemma611
+#print axioms Bong.BONG.GoodBONG.heADCLemma69_previousDefect
+#print axioms Bong.BONG.GoodBONG.heADCLemma69_terminalTrigger
+#print axioms Bong.BONG.GoodBONG.heADCLemma69_fullTargetPrefix_representation
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma69
+#print axioms Bong.BONG.GoodBONG.heADCLemma610_alphaProfile
+#print axioms Bong.BONG.GoodBONG.heADCLemma610_prefixDefectBounds
+#print axioms Bong.BONG.GoodBONG.heADCLemma610_internalRepresentations
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma610
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma611_of_goodBONG
+#print axioms Bong.Lattice.heADC2025Lemma611
+
+#check @Bong.BONG.GoodBONG.HeADC2025Theorem62BinaryStatement
+#check @Bong.BONG.GoodBONG.not_heADC2025Theorem62BinaryStatement
+#check @Bong.Lattice.heADC2025Theorem62_of_four_le
+#check @Bong.BONG.GoodBONG.heADC2025Remark63
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_isometric_exceptional
+#print axioms Bong.BONG.GoodBONG.not_heADC2025Theorem62BinaryStatement
+#print axioms Bong.Lattice.heADCEvenFirst_ambient_of_parameter_mul_square
+#print axioms Bong.Lattice.heADCEvenSecond_ambient_of_parameter_mul_square
+#print axioms Bong.Lattice.heADC2025Theorem62_of_four_le
+#print axioms Bong.BONG.GoodBONG.heADCExceptionalTail_second_eq_neg_discriminant
+#print axioms Bong.BONG.GoodBONG.heADCRemark63Tail_admissible
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark63
+
+#check @Bong.Lattice.IsNADC.of_latticeIsometry
+#check @Bong.Lattice.IsNADC.of_succ
+#check @Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_is3ADC
+#check @Bong.Lattice.heADCQuaternarySecondDiscriminantClassification
+#check @Bong.Lattice.heADC2025Theorem62_binary_corrected
+#check @Bong.Lattice.heADC2025Theorem71
+#print axioms Bong.Lattice.IsNADC.of_latticeIsometry
+#print axioms Bong.Lattice.IsNADC.of_succ
+#print axioms Bong.BONG.GoodBONG.heADCQuaternaryBoundaryCandidate_not_is3ADC
+#print axioms Bong.BONG.GoodBONG.heADCQuaternarySecondDiscriminant_classification
+#print axioms Bong.Lattice.heADCQuaternarySecondDiscriminantClassification
+#print axioms Bong.Lattice.heADC2025Theorem62_binary_corrected
+#print axioms Bong.Lattice.heADC2025Theorem71
+
+#check @Bong.Lattice.heADC2025Lemma79
+#check @Bong.BONG.GoodBONG.heADC2025Lemma710
+#check @Bong.BONG.GoodBONG.HeADCLemma710Conclusions.oddOrder
+#check @Bong.BONG.GoodBONG.HeADCLemma710Conclusions.evenOrder
+#check @Bong.BONG.GoodBONG.HeADCLemma710Conclusions.alphaAlternative
+#check @Bong.BONG.GoodBONG.HeADCLemma710Conclusions.largeGapConclusion
+#check @Bong.BONG.GoodBONG.heHuLemma58_nextAlpha_gt
+#check @Bong.BONG.GoodBONG.heHu2022Lemma58
+#check @Bong.BONG.GoodBONG.heADC2025Lemma712
+#print axioms Bong.Lattice.heADC2025Lemma79
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma710
+#print axioms Bong.BONG.GoodBONG.HeADCLemma710Conclusions.alphaAlternative
+#print axioms Bong.BONG.GoodBONG.HeADCLemma710Conclusions.largeGapConclusion
+#print axioms Bong.BONG.GoodBONG.heHuLemma58_nextAlpha_gt
+#print axioms Bong.BONG.GoodBONG.heHu2022Lemma58
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma712
+
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76ii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76iii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76iv
+#check @Bong.BONG.GoodBONG.heADC2025Lemma76v
+#check @Bong.BONG.GoodBONG.heADC2025Lemma77i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma77ii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma77iii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma78
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Odd
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even_previousDefect_ge
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even_defectTrigger
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even_not_represents
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711Even_not_centralRepresentationConditionsPrime
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711_exists_represented_oddTarget
+#check @Bong.BONG.GoodBONG.heADC2025Lemma711_badBranch_impossible
+#check @Bong.BONG.GoodBONG.heADC2025Lemma713
+#check @Bong.BONG.GoodBONG.heADC2025Lemma713_trigger_impossible
+#check @Bong.BONG.GoodBONG.heADC2025Lemma714_fullOrderEven_iff
+#check @Bong.BONG.GoodBONG.heADC2025Lemma714_initialPrefixEven
+#check @Bong.BONG.GoodBONG.heADC2025Lemma714i
+#check @Bong.BONG.GoodBONG.heADC2025Lemma714ii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma715_fullComparisonEven
+#check @Bong.BONG.GoodBONG.heADC2025Lemma715_sameOrders
+#check @Bong.BONG.GoodBONG.heADC2025Lemma715_sameAlphas
+#check @Bong.BONG.GoodBONG.heADC2025Lemma715_prefixDefectBounds
+#check @Bong.BONG.GoodBONG.heADC2025Lemma715_internalRepresentations
+#check @Bong.BONG.GoodBONG.heADC2025Lemma715_nonmaximal
+#check @Bong.BONG.GoodBONG.heADC2025Lemma715_isOMaximal_of_penultimate
+#check @Bong.BONG.GoodBONG.heADC2025Lemma715
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75iii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75iv
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75Necessity
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75Sufficiency
+#check @Bong.BONG.GoodBONG.heADC2025Lemma75
+#check @Bong.BONG.GoodBONG.HeADCTheorem74Conditions
+#check @Bong.BONG.GoodBONG.heADC2025Theorem74Necessity
+#check @Bong.BONG.GoodBONG.heADC2025Theorem74Sufficiency
+#check @Bong.BONG.GoodBONG.heADC2025Theorem74
+
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma76v
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma77iii
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma78
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma711Odd
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma711Even
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma711
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma711_badBranch_impossible
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma713
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma713_trigger_impossible
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma714i
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma714ii
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma715_sameAlphas
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma715_prefixDefectBounds
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma715_internalRepresentations
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma715_nonmaximal
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma715_isOMaximal_of_penultimate
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma715
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma75
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem74
+
+#check @Bong.BONG.GoodBONG.HeADC2025Definition716
+#check @Bong.BONG.GoodBONG.heADC2025Remark717_unique
+#check @Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
+#check @Bong.BONG.GoodBONG.heADC2025Lemma718
+#check @Bong.BONG.GoodBONG.heADC2025Lemma718_not_definition716
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719_unitDefectData
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719Append
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719Core
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719_towerBaseConditions
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719ExplicitData
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719FirstBasePublishedData
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719SecondBasePublishedData
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719FirstNamedPublished
+#check @Bong.BONG.GoodBONG.heADC2025Lemma719SecondNamedPublished
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iFirst
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iSecond
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720ii
+#check @Bong.heADC2025Lemma720_columnRepresentation_iff
+#check @Bong.heADC2025Lemma720_productSpaceIsometric
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiFirst
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiSecond
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iii
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iii_defined
+#check @Bong.BONG.GoodBONG.HeADC2025Definition716IsDefined
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720_exceptional_undefined
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720_defined_iff
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiFirst_isometricNamed
+#check @Bong.BONG.GoodBONG.heADC2025Lemma720iiiSecond_isometricNamed
+#check @Bong.BONG.GoodBONG.HeADC2025Theorem72Product
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72Necessity
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72
+#check @Bong.BONG.GoodBONG.HeADC2025Theorem72BaseIndex
+#check @Bong.BONG.GoodBONG.HeADC2025Theorem72PublishedProduct
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72Product_iff_published
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72Published_overlap
+#check @Bong.BONG.GoodBONG.heADC2025Theorem72Published
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_normalized_sub_order
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_binaryTail_isIsometric
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_discriminantBinary_isIsometric_scaledA
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_ternaryTail_isIsometric
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdBasePublishedData
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_firstPublished
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_secondPublished
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublished
+#check @Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublishedRepresentative
+#check @Bong.Dyadic.powerIdealQuotientEquivResidueField
+#check @Bong.Dyadic.card_powerIdealQuotient
+#check @Bong.Dyadic.principalUnitQuotientEquivResidueField
+#check @Bong.Dyadic.card_principalUnitQuotient
+#check @Bong.Dyadic.oddUnitSquareClassLayerEquivResidueField
+#check @Bong.Dyadic.card_oddUnitSquareClassLayer
+#check @Bong.Dyadic.principalUnitValuationClassSubgroup_zero_eq_top
+#check @Bong.Dyadic.principalUnitValuationClassSubgroup_one_eq_top
+#check @Bong.Dyadic.card_principalUnitValuationClassSubgroup_two_mul_e
+#check @Bong.Dyadic.card_valuationUnitClass_eq_pow_mul_filtration
+#check @Bong.Dyadic.card_valuationUnitClass
+#check @Bong.heADC2025UnitRepresentativeClass
+#check @Bong.heADC2025UnitRepresentativeClass_injective
+#check @Bong.heADC2025UnitRepresentativeClass_surjective
+#check @Bong.heADC2025UnitRepresentativeEquiv
+#check @Bong.card_heHuCompleteUnitRepresentativeSystem
+#check @Bong.HeADC2025Corollary721CountingLaw.card_unit_square_classes
+#check @Bong.HeADC2025Corollary721CountingLaw.card_unit_representatives
+#check @Bong.HeADC2025Corollary721Index.isExactNADCIsometryCatalogue
+#check @Bong.HeADC2025Corollary721Index.model_isOMaximal_iff
+#check @Bong.HeADC2025Corollary721Index.card_index
+#check @Bong.HeADC2025Corollary721Index.card_nonmaximalIndex
+#check @Bong.HeADC2025Corollary721Index.card_index_published
+#check @Bong.HeADC2025Corollary721Index.card_nonmaximalIndex_published
+#check @Bong.HeADC2025Corollary721Index.heADC2025Corollary721
+
+#print axioms Bong.heADC2025UnitRepresentativeClass_injective
+#print axioms Bong.heADC2025UnitRepresentativeClass_surjective
+#print axioms Bong.card_heHuCompleteUnitRepresentativeSystem
+#print axioms Bong.Dyadic.card_oddUnitSquareClassLayer
+#print axioms Bong.Dyadic.card_principalUnitValuationClassSubgroup_two_mul_e
+#print axioms Bong.Dyadic.card_valuationUnitClass
+#print axioms Bong.HeADC2025Corollary721CountingLaw.card_unit_square_classes
+#print axioms Bong.HeADC2025Corollary721CountingLaw.card_unit_representatives
+
+#check @Bong.HeADC2025QuaternaryCatalogue.exceptionalModel_rank
+#check @Bong.HeADC2025QuaternaryCatalogue.boundaryModel_rank
+#check @Bong.HeADC2025QuaternaryCatalogue.model_isNADC
+#check @Bong.HeADC2025QuaternaryCatalogue.exists_index_isIntegrallyIsometric
+#check @Bong.HeADC2025QuaternaryCatalogue.model_eq_of_isIntegrallyIsometric
+#check @Bong.HeADC2025QuaternaryCatalogue.isExactIsometryCatalogue
+#check @Bong.HeADC2025QuaternaryCatalogue.model_isOMaximal_iff
+#check @Bong.HeADC2025QuaternaryCatalogue.card_index_corrected
+#check @Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem110BinaryCountStatement
+#check @Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem19iiBinaryStatement
+#check @Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorem19ii_binary_corrected
+#check @Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorems19iiAnd110BinaryCorrected
+#check @Bong.HeADC2025IsExactNADCIsometryCatalogue
+#check @heADC2025PublishedEven_exactCatalogue_of_isOMaximal
+#check @heADC2025PublishedOdd_exactCatalogue_of_isOMaximal
+#check @Bong.heADC2025Theorem110EqualRankEvenCatalogue
+#check @Bong.heADC2025Theorem110EqualRankOddCatalogue
+#check @Bong.heADC2025Theorem110EvenCorankOneCatalogue
+#check @Bong.heADC2025Theorem110OddCorankOneCatalogue
+#check @Bong.heADC2025Theorem110EvenCorankTwoCatalogue
+#check @Bong.heADC2025Theorem110EqualRankBinaryCount
+#check @Bong.heADC2025Theorem110EvenTableCount
+#check @Bong.heADC2025Theorem110OddTableCount
+#check @Bong.heADC2025Theorem110EqualRankBinary
+#check @Bong.heADC2025Theorem110EqualRankEven
+#check @Bong.heADC2025Theorem110EqualRankOdd
+#check @Bong.heADC2025Theorem110EvenCorankOne
+#check @Bong.heADC2025Theorem110OddCorankOne
+#check @Bong.heADC2025Theorem110EvenCorankTwo
+#check @Bong.HeADC2025Theorem110DyadicCorrectedConclusion
+#check @Bong.heADC2025Theorem110DyadicCorrected
+
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark717_exhaustion
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma718
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719_unitDefectData
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719Append
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719Core
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719_towerBaseConditions
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719ExplicitData
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719FirstBasePublishedData
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719SecondBasePublishedData
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719FirstNamedPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma719SecondNamedPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iFirst_isometricNamed
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iSecond_isometricNamed
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720ii_isometricNamed
+#print axioms Bong.heADC2025Lemma720_columnRepresentation_iff
+#print axioms Bong.heADC2025Lemma720_productSpaceIsometric
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iii
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iii_defined
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720_exceptional_undefined
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720_defined_iff
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iiiFirst_isometricNamed
+#print axioms Bong.BONG.GoodBONG.heADC2025Lemma720iiiSecond_isometricNamed
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Necessity
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Product_iff_published
+#print axioms Bong.BONG.GoodBONG.HeADC2025Theorem72Product.isometricSecondUnit_of_isOMaximal
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Published_overlap
+#print axioms Bong.BONG.GoodBONG.heADC2025Theorem72Published
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_binaryTail_isIsometric
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_discriminantBinary_isIsometric_scaledA
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_ternaryTail_isIsometric
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_thirdBasePublishedData
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_firstPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_secondPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublished
+#print axioms Bong.BONG.GoodBONG.heADC2025Remark73_thirdPublishedRepresentative
+#print axioms Bong.HeADC2025Corollary721Index.isExactNADCIsometryCatalogue
+#print axioms Bong.HeADC2025Corollary721Index.model_isOMaximal_iff
+#print axioms Bong.HeADC2025Corollary721Index.card_index
+#print axioms Bong.HeADC2025Corollary721Index.card_nonmaximalIndex
+#print axioms Bong.HeADC2025Corollary721Index.card_index_published
+#print axioms Bong.HeADC2025Corollary721Index.card_nonmaximalIndex_published
+#print axioms Bong.HeADC2025Corollary721Index.heADC2025Corollary721
+#print axioms Bong.HeADC2025QuaternaryCatalogue.exceptionalModel_rank
+#print axioms Bong.HeADC2025QuaternaryCatalogue.boundaryModel_rank
+#print axioms Bong.HeADC2025QuaternaryCatalogue.model_isNADC
+#print axioms Bong.HeADC2025QuaternaryCatalogue.exists_index_isIntegrallyIsometric
+#print axioms Bong.HeADC2025QuaternaryCatalogue.model_eq_of_isIntegrallyIsometric
+#print axioms Bong.HeADC2025QuaternaryCatalogue.isExactIsometryCatalogue
+#print axioms Bong.HeADC2025QuaternaryCatalogue.model_isOMaximal_iff
+#print axioms Bong.HeADC2025QuaternaryCatalogue.card_index_corrected
+#print axioms Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem110BinaryCountStatement
+#print axioms Bong.HeADC2025QuaternaryCatalogue.not_heADC2025Theorem19iiBinaryStatement
+#print axioms Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorem19ii_binary_corrected
+#print axioms Bong.HeADC2025QuaternaryCatalogue.heADC2025Theorems19iiAnd110BinaryCorrected
+#print axioms heADC2025PublishedEven_exactCatalogue_of_isOMaximal
+#print axioms heADC2025PublishedOdd_exactCatalogue_of_isOMaximal
+#print axioms Bong.heADC2025Theorem110EqualRankEvenCatalogue
+#print axioms Bong.heADC2025Theorem110EqualRankOddCatalogue
+#print axioms Bong.heADC2025Theorem110EvenCorankOneCatalogue
+#print axioms Bong.heADC2025Theorem110OddCorankOneCatalogue
+#print axioms Bong.heADC2025Theorem110EvenCorankTwoCatalogue
+#print axioms Bong.heADC2025Theorem110EqualRankBinary
+#print axioms Bong.heADC2025Theorem110EqualRankEven
+#print axioms Bong.heADC2025Theorem110EqualRankOdd
+#print axioms Bong.heADC2025Theorem110EvenCorankOne
+#print axioms Bong.heADC2025Theorem110OddCorankOne
+#print axioms Bong.heADC2025Theorem110EvenCorankTwo
+#print axioms Bong.heADC2025Theorem110DyadicCorrected

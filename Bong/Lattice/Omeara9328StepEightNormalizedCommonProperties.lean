@@ -30,25 +30,17 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
 /-- The source common adjunction is saturated. -/
 theorem commonSource_isSaturated (E : S.StepEightCase) :
     (E.commonSource S).IsSaturated :=
-  (E.saturatedSource S).commonAdjunctionJordan_isSaturated (E.stableSource S)
-    (E.saturatedToStable S) (E.saturatedSource_isSaturated S)
+  (E.commonBundle S).sourceSaturated
 
 /-- The target common adjunction is saturated. -/
 theorem commonTarget_isSaturated (E : S.StepEightCase) :
     (E.commonTarget S).IsSaturated :=
-  (E.saturatedSource S).commonAdjunctionJordan_isSaturated (E.stableTarget S)
-    (E.saturatedToTarget S) (E.saturatedSource_isSaturated S)
+  (E.commonBundle S).targetSaturated
 
 /-- Every common-adjunction source component has rank at least two. -/
 theorem commonSource_componentRank_atLeastTwo (E : S.StepEightCase) :
-    ∀ i, 2 ≤ (E.commonSource S).componentRank i := by
-  intro i
-  change 2 ≤ ((E.saturatedSource S).commonAdjunctionJordan
-    (E.stableSource S) (E.saturatedToStable S)
-      (E.saturatedSource_isSaturated S)).componentRank i
-  rw [commonAdjunctionJordan_componentRank]
-  have hi := E.stableComponentRank_atLeastThree S i
-  omega
+    ∀ i, 2 ≤ (E.commonSource S).componentRank i :=
+  (E.commonBundle S).componentRank_atLeastTwo
 
 end Omeara9328RankFourReductionSystem.StepEightCase
 end Lattice.JordanDecomposition

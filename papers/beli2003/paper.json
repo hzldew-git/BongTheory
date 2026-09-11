@@ -3,6 +3,7 @@
   "id": "beli2003",
   "canonicalName": "Beli 2003",
   "assetStem": "Beli2003",
+  "theoremIndexRowPrefix": "Beli 2003,",
   "year": 2003,
   "title": "Integral spinor norm groups over dyadic local fields",
   "author": "Constantin N. Beli",

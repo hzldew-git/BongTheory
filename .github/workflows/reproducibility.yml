@@ -34,7 +34,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 360
     env:
-      LEAN_NUM_THREADS: '4'
+      # Two workers stay within the memory envelope used by the per-paper
+      # clean builds while keeping the enlarged public closure below the
+      # six-hour Ubuntu and Windows job deadline.
+      LEAN_NUM_THREADS: '2'
 
     steps:
       - name: Check out the exact revision
@@ -42,12 +45,46 @@ jobs:
         with:
           ref: ${{ github.event_name == 'workflow_dispatch' && inputs.checkout_ref || github.sha }}
 
+      - name: Discover the deployable release surface
+        id: modules
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $entryModules = @()
+          $auditModules = @('BongTest.FinalPublicTheoremAudit')
+          foreach ($directory in Get-ChildItem -LiteralPath papers -Directory) {
+            $path = Join-Path $directory.FullName 'paper.json'
+            if (-not (Test-Path -LiteralPath $path)) {
+              continue
+            }
+            $manifest = Get-Content -LiteralPath $path -Raw |
+              ConvertFrom-Json
+            if ($manifest.deployment.githubReviewKit -eq $false) {
+              continue
+            }
+            $entryModules += [string] $manifest.entryModule
+            $auditModules += @($manifest.auditModules | ForEach-Object {
+              [string] $_
+            })
+          }
+          $buildModules = @($entryModules + $auditModules |
+            Where-Object { $_ } | Sort-Object -Unique)
+          $auditPaths = @($auditModules | Where-Object { $_ } |
+            Sort-Object -Unique | ForEach-Object {
+              $_.Replace('.', '/') + '.lean'
+            })
+          if ($buildModules.Count -eq 0 -or $auditPaths.Count -eq 0) {
+            throw 'No deployable release modules were discovered.'
+          }
+          "buildModules=$($buildModules -join ' ')" >> $env:GITHUB_OUTPUT
+          "auditPaths=$($auditPaths -join ' ')" >> $env:GITHUB_OUTPUT
+
       - name: Build without a GitHub project cache
         uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
         with:
           auto-config: false
           build: true
-          build-args: ${{ matrix.os == 'windows-latest' && 'BongTest.FinalPublicTheoremAudit BongTest.Beli2003Audit BongTest.Beli2006Audit BongTest.Beli2009Audit BongTest.Beli2019Audit BongTest.Beli2020Audit' || '' }}
+          build-args: ${{ steps.modules.outputs.buildModules }}
           use-github-cache: false
           use-mathlib-cache: true
 
@@ -73,14 +110,7 @@ jobs:
           }
           $auditDir = Join-Path $env:RUNNER_TEMP 'bong-audit-logs'
           New-Item -ItemType Directory -Force -Path $auditDir | Out-Null
-          $modules = @(
-            'BongTest/FinalPublicTheoremAudit.lean',
-            'BongTest/Beli2003Audit.lean',
-            'BongTest/Beli2006Audit.lean',
-            'BongTest/Beli2009Audit.lean',
-            'BongTest/Beli2019Audit.lean',
-            'BongTest/Beli2020Audit.lean'
-          )
+          $modules = '${{ steps.modules.outputs.auditPaths }}' -split ' '
           foreach ($module in $modules) {
             $name = [IO.Path]::GetFileNameWithoutExtension($module)
             $log = Join-Path $auditDir ($name + '.log')

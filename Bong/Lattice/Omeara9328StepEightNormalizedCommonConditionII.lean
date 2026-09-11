@@ -34,9 +34,7 @@ theorem commonConditionII
     (E : S.StepEightCase) :
     (E.commonSource S).Omeara9328ConditionIIWith (E.commonTarget S)
       (E.commonChoice S A) :=
-  omeara9328ConditionIIWith_commonAdjunction (E.saturatedToStable S)
-    (E.saturatedToTarget S) (E.stableChoice S A)
-      (E.saturatedSource_isSaturated S) (E.stableConditions S A conditions).2.1
+  ((E.commonBundle S).conditions A conditions).2.1
 
 end Omeara9328RankFourReductionSystem.StepEightCase
 end Lattice.JordanDecomposition

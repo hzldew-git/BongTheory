@@ -110,9 +110,15 @@ because GitHub-hosted Windows runners have a hard six-hour job limit.
 
 ## Main-branch CI results
 
+Correction recorded on 5 September 2026: the pinned Lean action does not
+implement the configured `axiom-audit` inputs. These historical jobs do not
+certify an enforcing namespace-wide axiom gate. Their build results and
+individually recorded axiom reports remain distinct evidence. See the
+[deployment correction](../audit/HePaperDeploymentCheckpoint-20260905.md).
+
 The following public **Lean CI** jobs completed successfully, including the
-complete build, namespace axiom audit, unfinished-proof scan, final-public
-signature audit, and clean-generated-state check:
+complete build, unfinished-proof scan, final-public signature reports and
+clean-generated-state check:
 
 | Revision | Run | Job | UTC interval | Job-log SHA-256 |
 |---|---:|---:|---|---|

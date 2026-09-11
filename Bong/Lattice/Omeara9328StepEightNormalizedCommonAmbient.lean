@@ -36,10 +36,9 @@ variable {K : Type u} [Field K] [CharZero K] [ValuativeRel K]
 /-- Ambient isometry of the common-adjunction pair. -/
 theorem commonAmbient
     (ambient : q.IsIsometric r) (E : S.StepEightCase) :
-    (E.commonSource S).space.IsIsometric (E.commonTarget S).space :=
-  (E.saturatedToStable S).commonAdjunctionAmbientIsometry
-    (E.saturatedToTarget S) (E.saturatedSource_isSaturated S)
-      (E.stableAmbient S ambient)
+    (E.commonBundle S).sourceForm.IsIsometric
+      (E.commonBundle S).targetForm :=
+  (E.commonBundle S).ambientOf ambient
 
 end Omeara9328RankFourReductionSystem.StepEightCase
 end Lattice.JordanDecomposition

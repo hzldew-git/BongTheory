@@ -3,6 +3,7 @@
   "id": "beli2020",
   "canonicalName": "Beli 2020",
   "assetStem": "Beli2020",
+  "theoremIndexRowPrefix": "Beli 2020,",
   "year": 2020,
   "title": "Universal integral quadratic forms over dyadic local fields",
   "author": "Constantin N. Beli",

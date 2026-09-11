@@ -35,14 +35,22 @@ jobs:
       - name: Check out the exact revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - name: Discover every paper manifest
+      - name: Discover every deployable paper manifest
         id: matrix
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
           $papers = @(
             Get-ChildItem -LiteralPath papers -Directory |
-              Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName 'paper.json') } |
+              Where-Object {
+                $path = Join-Path $_.FullName 'paper.json'
+                if (-not (Test-Path -LiteralPath $path)) {
+                  return $false
+                }
+                $manifest = Get-Content -LiteralPath $path -Raw |
+                  ConvertFrom-Json
+                $manifest.deployment.githubReviewKit -ne $false
+              } |
               Sort-Object Name |
               ForEach-Object { $_.Name }
           )
@@ -68,7 +76,8 @@ jobs:
           $output = Join-Path $env:RUNNER_TEMP 'paper-review-kits'
           & ./scripts/paper-kits/Build-AllPaperReviewKits.ps1 `
             -OutputDirectory $output `
-            -ReleaseTag $releaseTag
+            -ReleaseTag $releaseTag `
+            -GitHubDeployableOnly
 
       - name: Verify every generated archive structurally
         shell: pwsh
@@ -83,7 +92,7 @@ jobs:
               -StructureOnly
           }
 
-      - name: Upload the complete paper-kit release set
+      - name: Upload the deployable paper-kit release set
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: paper-review-kits-${{ github.sha }}
@@ -102,13 +111,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
-      LEAN_NUM_THREADS: '4'
+      # Two workers keep peak memory bounded while leaving enough throughput
+      # for the largest paper entry to finish inside GitHub's six-hour limit.
+      LEAN_NUM_THREADS: '2'
 
     steps:
       - name: Check out the exact revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Generate and extract this paper's Review Kit
+        id: review
         shell: pwsh
         env:
           PAPER: ${{ matrix.paper }}
@@ -137,15 +149,28 @@ jobs:
             -Archive $archive.FullName `
             -ExtractionDirectory $extract `
             -StructureOnly
+          $manifest = Get-Content `
+            -LiteralPath (Join-Path $extract 'paper-manifest.json') `
+            -Raw | ConvertFrom-Json
+          $buildModules = @([string] $manifest.formalization.entryModule)
+          $buildModules += @($manifest.formalization.auditModules | ForEach-Object {
+            [string] $_
+          })
+          if ($buildModules.Count -eq 0 -or
+              @($buildModules | Where-Object { -not $_ }).Count -ne 0) {
+            throw 'The packaged manifest contains an empty build module.'
+          }
+          "buildModules=$($buildModules -join ' ')" >> $env:GITHUB_OUTPUT
 
       - name: Build the cleanly extracted package
         uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
         with:
           auto-config: false
           build: true
+          build-args: ${{ steps.review.outputs.buildModules }}
           lake-package-directory: ${{ runner.temp }}/review-extract-${{ matrix.paper }}
           use-github-cache: true
-          use-mathlib-cache: false
+          use-mathlib-cache: true
 
       - name: Run every audit listed by the paper manifest
         shell: pwsh

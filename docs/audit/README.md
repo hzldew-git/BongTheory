@@ -26,6 +26,8 @@ comparison. Current theorem cards are `PROVISIONAL_MATCH`; none is
 | Beli 2009/2010 | [`Beli2009/12_executive_summary.md`](Beli2009/12_executive_summary.md) | [`Beli2009/10_author_review_cards.md`](Beli2009/10_author_review_cards.md) | `PROVISIONAL_MATCH` |
 | Beli 2019 v2 | [`Beli2019V2/15_unconditional_completion_audit.md`](Beli2019V2/15_unconditional_completion_audit.md) | [`Beli2019V2/10_author_review_cards.md`](Beli2019V2/10_author_review_cards.md) | `PROVISIONAL_MATCH` |
 | Beli 2020 | [`Beli2020/13_completion_audit.md`](Beli2020/13_completion_audit.md) | [`Beli2020/10_author_review_cards.md`](Beli2020/10_author_review_cards.md) | `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY` |
+| He--Hu 2022 (published 2024) | [`HeHu2022/13_completion_audit.md`](HeHu2022/13_completion_audit.md) | [`HeHu2022/10_author_review_cards.md`](HeHu2022/10_author_review_cards.md) | `FULLY_FORMALIZED`; `PROVISIONAL_MATCH` pending human sign-off |
+| He 2023 ADC (published 2025) | [`He2023ADC/13_completion_audit.md`](He2023ADC/13_completion_audit.md) | [`He2023ADC/10_author_review_cards.md`](He2023ADC/10_author_review_cards.md) | `NOT_COMPLETE`; Grade D with explicit semantic mismatches and conditional inputs |
 
 The two independent reviewer roles, required evidence, and intentionally blank
 approval fields are consolidated in
