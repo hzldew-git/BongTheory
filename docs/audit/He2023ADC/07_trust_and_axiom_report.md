@@ -504,3 +504,12 @@ checked`. The archive verifies 2,109 payload hashes, both Mathematica
 certificates pass, and all nine downloaded dependency repositories are clean
 at the locked revisions. This is exact local mechanical evidence, not proof
 of the still-explicit arithmetic law fields or human semantic approval.
+
+At `c939c9fa80ff455f2b4c13933c720c9ad1fbe76d`, Report 81 constructs the
+one-place dyadic `LocalMaximalityLaws` package from actual lattice theorems.
+Nine focused dependency reports, including the unconditional law package and
+local Theorem 1.5(i), contain exactly `propext`, `Classical.choice`, and
+`Quot.sound`. The scanner checks 2,740 tracked Lean sources and all 30 policy
+tests pass. No proposition-valued local classification input remains in this
+dyadic instance. The all-place number-field model and later clean-kit and CI
+gates remain separate.
