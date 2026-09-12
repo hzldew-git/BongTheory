@@ -315,11 +315,59 @@ See reports 53 and 59.
 At the same checkpoint, Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5
 and 1.7, Lemma 8.4, and Corollary 8.5 reproduce the source-level implications
 and biconditionals in the abstract global/local system. The Meyer--Xu--
-O'Meara distinguishing-lattice input, concrete localization, class-number
-arithmetic, and scaling stability remain visible fields of
-`SectionEightLaws`. These endpoints are likewise
+O'Meara distinguishing-lattice input, concrete localization, genus-lifting,
+isometry transport, and scaling stability remain visible fields of
+`SectionEightLaws` or its nested lower-level law package. Report 73 proves
+class-number-one regularity from the genus-lifting and transport inputs, so
+that full implication is no longer a structure field. These endpoints are
+still
 `CONDITIONAL_FORMALIZATION`; they are not weaker conclusions, but their
 arithmetic hypotheses have not been instantiated. See report 47.
+
+At `4ccd9fa`, the implication from class number one to `n`-regularity retains
+the exact source conclusion but has a strictly lower conditional boundary.
+It is derived from an everywhere-local representation lift to a lattice in
+the genus and transport of representation across an isometry. It remains
+`CONDITIONAL_FORMALIZATION`, not `FULLY_FORMALIZED`, because those two
+number-field genus laws do not yet have concrete instances. See report 73.
+
+At `c204de5`, local maximal-implies-ADC and the full local Theorem 1.5(i)
+retain their exact source conclusions but have lower conditional boundaries.
+The former is proved by a maximal-extension and representation-composition
+argument. The latter is derived from that theorem and the remaining
+classification-dependent necessity law. Neither complete conclusion remains
+a `SectionEightLaws` field. The result is still
+`CONDITIONAL_FORMALIZATION`, because the lower local laws and the concrete
+finite-completion instances are not yet constructed. See report 74.
+
+At `4565c12`, Theorem 8.2 retains its exact source conclusion but is no
+longer a final-conclusion field. The formal proof splits on definiteness,
+uses the Meyer input in the definite case, and composes Xu's unique-spinor-
+genus result with O'Meara 104:5 in the indefinite case. This is still
+`CONDITIONAL_FORMALIZATION`, because the three cited inputs and the concrete
+definite/spinor-genus predicates are not implemented. See report 75.
+
+At `677c1ae`, the stability conjunct of Lemma 8.4 retains its exact source
+conclusion but is no longer a final-conclusion field. The formal proof takes
+the local 2-ADC hypothesis placewise, obtains the Theorem 6.2/Proposition
+4.16 local form, scales it to stability at that place, and applies the
+placewise characterization of global stability. This is still
+`CONDITIONAL_FORMALIZATION`, because those local-form and scaling laws are
+not concretely instantiated and 2-regularity under scaling remains an
+explicit input. See report 76.
+
+At `0a94683`, the regularity scaling step, canonical half-scale witness, and
+reverse half-scale transport retain their source conclusions but are no
+longer one-way `SectionEightLaws` fields. They follow from a rank-uniform
+regularity biconditional and the exact orientation of `isHalfScaleOf`. The
+status remains `CONDITIONAL_FORMALIZATION` because the concrete scaling
+operation and the biconditional are not implemented. See report 77.
+
+At `0c5211b`, the O'Meara 82K global--local maximality equivalence retains
+its exact statement but is no longer a final `SectionEightLaws` field. It is
+assembled from explicit global-to-local and local-to-global directions. The
+status remains `CONDITIONAL_FORMALIZATION`, because neither direction is
+implemented for a concrete number-field lattice model. See report 78.
 
 At `f7e8fb7`, the binary specializations of Theorem 1.9(ii) and Theorem 1.10
 are `SEMANTIC_MISMATCH`, not unformalized statements. The former repeats the
@@ -349,3 +397,12 @@ maximal-lattice uniqueness; the second follows from Lemma 4.4(i) after
 ambient-isometry transport. The non-dyadic Theorem 1.10 remains
 `CONDITIONAL_FORMALIZATION` because those lower lattice-level and invariant
 interfaces do not yet have concrete local-field instances. See report 72.
+
+At `97068f7`, the Corollary 8.3 genus steps retain the source meaning but are
+no longer final fields. `GenusTransportLaws` identifies genus membership with
+local equivalence at every finite place. Lean derives genus symmetry and local
+equivalence directly, and derives equality of global ranks from local-rank
+invariance plus localization of rank. The status remains
+`CONDITIONAL_FORMALIZATION` because the global lattice, localization,
+equivalence, isometry, and representation relations do not yet have concrete
+number-field instances. See report 79.

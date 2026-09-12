@@ -632,5 +632,146 @@ strict verifier intentionally rejects that archive because it lacks a
 paper-specific theorem-index prefix. Report 69 therefore records it as exact
 proof-closure evidence through Report 68, not as the final release package.
 The tagged release regenerates and rechecks a fully isolated package. Reports
-70--72, remaining concrete law instances, GitHub tag CI, and human sign-off are
+70--78, remaining concrete law instances, GitHub tag CI, and human sign-off are
 separate gates.
+
+## Section 8 class-number regularity local checkpoint
+
+At code checkpoint `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, a fresh
+worktree restored the locked dependencies from `lake-manifest.json` and the
+mathlib cache. With Lean 4.32.1, both
+
+```text
+lake build Bong.Lattice.He2023ADCSectionEight
+lake build BongTest.He2023ADCClassNumberRegularityAudit
+```
+
+succeed. The focused audit completes four jobs and reports no axioms for the
+derived regularity theorem, the Section 8 compatibility endpoint, or Lemma
+8.1(i). This verifies the changed dependency closure locally. It is not a
+full-project build, exact clean Review Kit, GitHub CI result, concrete
+number-field instance, or human semantic approval. See Report 73.
+
+## Section 8 local maximality checkpoint
+
+At exact code checkpoint `c204de5e938b6dbfc01b9c7483b8ab8ede0a13ba`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCLocalMaximalityAudit` complete a four-job focused build.
+The focused audit runs directly: local maximal-implies-ADC, local Theorem
+1.5(i), their Section 8 compatibility endpoints, Lemma 8.1(ii), and Theorem
+1.5(i) report no axioms; Theorem 1.5(ii) reports only `propext`.
+
+An incremental build of `Bong.Papers.He2023ADC` and
+`BongTest.He2023ADCAudit` completes all 5,562 planned jobs, and the canonical
+audit exits successfully. The focused imported-closure gate reports
+`AXIOM_GATE_PASS: 61070 declarations checked`. The source scanner checks
+2,733 tracked Lean files, all 23 scanner tests, five deployment-policy tests,
+and two shard-planner tests pass, and the diff and JSON checks are clean.
+
+The incremental whole-paper run reused copied artifacts from the earlier
+clean release-preparation worktree. It is not a fresh-extraction or exact
+Review Kit receipt. Concrete local and number-field instances, GitHub CI for
+this later checkpoint, and human semantic approval remain open. See Report
+74.
+
+## Theorem 8.2 source-case checkpoint
+
+At exact code checkpoint `4565c1218a12d3603bb35d8dc985fcfa2335ef27`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCDistinguishingSublatticeAudit` complete a four-job focused
+build. The focused audit runs directly and reports only `propext`,
+`Classical.choice`, and `Quot.sound` for the derived source-case theorem,
+the compatibility endpoint, Theorem 8.2, Corollary 8.3, and Theorem 1.7.
+
+An incremental build of the paper entry, canonical audit, and focused audit
+completes all 5,563 planned jobs. The imported-closure gate reports
+`AXIOM_GATE_PASS: 61083 declarations checked`, and the scanner checks 2,734
+tracked Lean sources. The incremental build reused copied local project
+artifacts, so fresh-extraction verification, concrete Meyer--Xu--O'Meara
+instances, GitHub CI for this checkpoint, and human review remain open. See
+Report 75.
+
+## Lemma 8.4 local-stability checkpoint
+
+At exact code checkpoint `677c1ae57a26365c0c0615a7894646851d0ef167`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCScalingStabilityAudit` complete a four-job focused build.
+The focused audit runs directly and reports only `propext` for the derived
+local-to-global stability theorem, its compatibility endpoint, Lemma 8.4,
+and Corollary 8.5.
+
+The focused imported-closure gate checks 168 declarations. The combined
+paper-entry and focused gate reports `AXIOM_GATE_PASS: 61096 declarations
+checked`. The scanner checks 2,735 tracked Lean sources, all 30 policy tests
+pass, and changed Lean lines satisfy the 100-column policy. An incremental
+paper-entry, canonical-audit, and focused-audit build completes all 5,563
+planned jobs. These checks reuse copied project artifacts. Fresh-extraction
+verification, concrete local-form and scaling instances, exact-tag CI, and
+human review remain open. See Report 76.
+
+## Lemma 8.4 and Corollary 8.5 scaling-regularity checkpoint
+
+At exact code checkpoint `0a94683dd9e1092d4e1e0ed78958b55fc1d65ee5`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCScalingRegularityAudit` complete a four-job focused build.
+The focused audit runs directly: all six derived scaling compatibility
+theorems have empty axiom sets, while Lemma 8.4 and Corollary 8.5 report only
+`propext`.
+
+An incremental paper-entry, canonical-audit, and focused-audit build completes
+all 5,563 planned jobs. The combined imported-closure gate reports
+`AXIOM_GATE_PASS: 61108 declarations checked`. The scanner checks 2,736
+tracked Lean sources, all 30 policy tests pass, and changed Lean lines satisfy
+the 100-column policy. These checks reuse local project artifacts.
+Fresh-extraction verification, concrete scaling laws, exact-tag CI, and human
+review remain open. See Report 77.
+
+## O'Meara 82K global-maximality checkpoint
+
+At exact code checkpoint `0c5211bb0f5a2f1954a0e6b63ceac53a6bb67121`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCGlobalMaximalityAudit` complete a four-job focused build.
+The focused audit runs directly: the lower biconditional, its compatibility
+endpoint, and Lemma 8.1(ii) have empty axiom sets; Theorem 1.5(ii) and Theorem
+1.7 report only the allowed standard axioms.
+
+An incremental paper-entry, canonical-audit, and focused-audit build completes
+all 5,563 planned jobs. The combined imported-closure gate reports
+`AXIOM_GATE_PASS: 61118 declarations checked`. The scanner checks 2,737
+tracked Lean sources, all 30 policy tests pass, and changed Lean lines satisfy
+the 100-column policy. These checks reuse local project artifacts.
+Fresh-extraction verification, concrete O'Meara instances, exact-tag CI, and
+human review remain open. See Report 78.
+
+## Section 8 genus-transport checkpoint
+
+At exact code checkpoint `97068f7f4617b37f69980a056afa7f6e01eab4d3`,
+`Bong.Lattice.He2023ADCSectionEight` and
+`BongTest.He2023ADCGenusTransportAudit` complete a four-job focused build.
+The focused audit runs directly: local-equivalence extraction and global-rank
+preservation have empty axiom sets, genus symmetry uses only `propext`, and
+Corollary 8.3 and Theorem 1.7 use only the allowed standard axioms.
+
+An incremental paper-entry and canonical-audit build completes all 5,562
+planned jobs. The combined imported-closure gate reports
+`AXIOM_GATE_PASS: 61134 declarations checked`. The scanner checks 2,738
+tracked Lean sources, all 30 policy tests pass, and changed Lean lines satisfy
+the 100-column policy. These checks reuse local project artifacts.
+Fresh-extraction verification, concrete genus and localization instances,
+exact-tag CI, and human review remain open. See Report 79.
+
+## Exact clean Review Kit through Report 79
+
+At exact clean checkpoint `17fc8c967ce760745f86d686b4bded48fd8f3a97`,
+the strict single-paper archive
+`BongTheory-He2023ADC-ci-17fc8c9-review-kit.zip` has SHA-256
+`29438943E04D7165B519E4732C05D582C08FD9F825DB143716115B3AA8603A43`
+and size 6,347,797 bytes. A fresh extraction verifies 2,109 payload hashes
+and completes all 5,601 planned build jobs. All 20 paper audits and the
+enforcing `PaperAxiomGate` pass; the latter checks 61,155 declarations. Both
+Mathematica certificates pass, and the nine dependency repositories are
+clean at the exact locked revisions. Report 80 gives the full receipt.
+
+This closes the local clean-kit gate through Reports 70--79. GitHub CI for a
+later branch or tag, concrete arithmetic instances, source corrections, and
+human semantic review remain separate.

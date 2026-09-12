@@ -279,3 +279,59 @@ of every Lemma 4.4 biconditional, the negative exception, and the uniqueness
 quantifier in Proposition 4.2(iii). Reviewers must still validate the concrete
 non-dyadic determinant--Hasse--Hilbert package and both representation
 transport orientations.
+
+Report 73 tests the former class-number-one regularity shortcut in Section 8.
+The proof no longer receives `HasClassNumberOne M -> IsNRegular M n` as a
+field. It must obtain one genus representative that globally represents each
+locally represented target, apply class number one to that representative,
+and transport representation in the source-lattice direction. The target
+rank and integrality hypotheses and the universal quantifier over finite
+places remain explicit. The theorem is nonvacuous only after a concrete
+number-field model supplies the genus-lifting law; that construction and
+human confirmation of the genus orientation remain open.
+
+Report 74 adversarially separates the two directions of Theorem 1.5(i).
+Maximal sufficiency may no longer enter as the finished `IsNADCAt` predicate:
+the proof must extend each integral target to a maximal one, represent that
+extension, and compose representations. The reverse direction remains the
+explicit place where Proposition 4.15 and Theorems 5.1, 6.1, and 7.1 must be
+instantiated. Reviewers must still check that the ambient-transport clause of
+the extension law really expresses an extension on the same local quadratic
+space and that the rank hypotheses match localization.
+
+Report 75 tests the former Theorem 8.2 shortcut. The indefinite branch must
+now exhibit a single rank-`n` lattice, show that every genus representative
+which represents it lies in the base spinor genus, and only then use the
+one-class theorem to obtain integral isometry. Reviewers must verify the
+orientation of `inSpinorGenus M' M`, the definite/indefinite split, and the
+rank and signature hypotheses of Meyer, Xu, and O'Meara 104:5.
+
+Report 76 tests the former Lemma 8.4 stability shortcut. The proof no longer
+receives `IsLocallyNADC M 2 -> isStable (scaleTwo M)` as one field. It must
+specialize local 2-ADC at each prime, pass through the precise local form used
+by Theorem 6.2 and Proposition 4.16, transport that form under scaling, and
+only then assemble global stability. Reviewers must still verify that the
+abstract local-form predicate is instantiated by exactly the printed
+hyperbolic-or-exceptional disjunction at every finite prime.
+
+Report 77 tests directionality in the remaining scaling steps. Instead of
+three unrelated implications, the proof must use one rank-uniform
+`IsNRegular (scaleTwo M) n <-> IsNRegular M n` statement and the explicit
+equivalence `isHalfScaleOf M L <-> L = scaleTwo M`. This prevents silently
+reversing the paper's `L(1/2)` convention. Reviewers must still validate the
+concrete scaling construction and its preservation of regularity.
+
+Report 78 tests directionality in O'Meara 82K. Lemma 8.1(ii) may consume only
+the global-to-local direction, while Theorem 1.5(ii) must use both. The
+biconditional is now synthesized rather than supplied whole. Reviewers must
+still confirm that the concrete localization functor and the paper's notion
+of `O_F`-maximality satisfy each direction under exactly the stated standing
+hypotheses.
+
+Report 79 tests whether `inGenus` is being used as an opaque shortcut in
+Corollary 8.3. The proof must now obtain each local equivalence from an
+explicit all-places characterization, reverse those equivalences to prove
+genus symmetry, and recover global-rank equality through one finite place and
+the localization rank law. Reviewers must still verify the concrete
+number-field implementation of local equivalence, its rank invariance, and
+both orientations of representation and isometry transport.

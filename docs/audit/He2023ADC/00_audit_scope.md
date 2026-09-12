@@ -153,6 +153,44 @@ been removed. A concrete non-dyadic local-field instance remains open.
 Report 72 derives Remark 4.3's maximal-row exhaustion from Proposition
 4.2(ii) and maximal-lattice uniqueness, and derives row irredundancy from
 Lemma 4.4(i). Neither conclusion remains a `CatalogueLaws` field.
+Report 73 lowers the Section 8 class-number boundary. The implication from
+class number one to `n`-regularity is now proved from explicit genus-lifting
+and isometry-transport laws rather than stored as a final-conclusion field.
+Concrete number-field instances of those lower laws remain open.
+Report 74 removes two more final-conclusion fields from Section 8. Local
+maximal-implies-ADC is derived from maximal extension, maximal-to-maximal
+representation, and transitivity; local Theorem 1.5(i) is then derived from
+that sufficiency theorem and the remaining classification-dependent
+necessity law. Concrete local and number-field instances remain open.
+Report 75 removes the final Theorem 8.2 conclusion field. The distinguishing
+sublattice is now derived by the published definite/indefinite split from a
+Meyer definite-case input, Xu's unique-spinor-genus construction, and the
+O'Meara 104:5 one-class input. Concrete instances of those cited results
+remain open.
+Report 78 removes the final O'Meara 82K biconditional field. Global-to-local
+and local-to-global maximality are now separate arithmetic inputs, and their
+biconditional is derived before use in Lemma 8.1(ii), Theorem 1.5(ii), and
+Theorem 1.7. Concrete number-field instances of both directions remain open.
+Report 79 replaces the primitive genus symmetry, local-equivalence extraction,
+and genus rank-preservation fields by the placewise local-equivalence
+definition. Lean now derives all three consequences, using localization of
+rank for the last one. The concrete number-field genus and equivalence
+relations remain open.
+Report 80 records a strict single-paper Review Kit from clean commit
+`17fc8c9`: 2,109 payload hashes, a 5,601-job fresh-extraction build, all 21
+manifest audits, the 61,155-declaration enforcing gate, and both Mathematica
+certificates pass. This closes local reproducibility for Reports 70--79, not
+the remaining concrete arithmetic or semantic boundaries.
+Report 76 removes the final local-2-ADC-to-scaled-stability field used in
+Lemma 8.4. The implication is now derived placewise from the local form
+classified by Theorem 6.2 and Proposition 4.16, its behavior under scaling,
+and the definition of global stability. Concrete number-field connections
+to those local forms and scaling invariance of regularity remain open.
+Report 77 replaces three remaining one-way scaling fields by a rank-uniform
+regularity biconditional and the exact half-scale orientation. The regularity
+half of Lemma 8.4 and both half-scale transports in Corollary 8.5 are now
+derived. A concrete scaling construction and proof of the biconditional
+remain open.
 
 Current concrete coverage includes the dyadic definition and maximal-testing
 reduction, the stable-rank local equivalence, the full number-field version

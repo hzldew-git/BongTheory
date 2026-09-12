@@ -257,6 +257,182 @@ none of those semantic and arithmetic tasks follows from the matrix checks.
 Author decision: unsigned. Domain-expert decision: unsigned.
 Formalization-expert decision: unsigned.
 
+## Lemma 8.1, class number one implies `n`-regularity
+
+Paper location: p. 1017, opening sentence of the proof of Lemma 8.1.
+
+Paper statement in context: because `M` has class number one, `M` is
+`n`-regular; local `n`-ADC then implies global `n`-ADC by Theorem 1.3.
+
+Formal finding: `ClassNumberRegularityLaws.classNumberOne_implies_nRegular`
+derives the regularity implication. For every integral rank-`n` lattice
+locally represented by `M`, a lower law produces a representing lattice `M'`
+in the genus of `M`; class number one gives an isometry from `M'` to `M`, and
+a second lower law transports the representation. The final implication is
+not a `SectionEightLaws` field. The two lower number-field laws remain
+uninstantiated.
+
+Questions for the paper author and domain expert:
+
+1. Is the genus orientation `M' in gen(M)` the convention intended in the
+   opening sentence of Lemma 8.1?
+2. Which cited local-global or genus theorem should be recorded as the exact
+   source for the existence of `M'` representing an everywhere locally
+   represented `N`?
+3. Does integral isometry of the representing source transport representation
+   in precisely the orientation used by the formal theorem?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
+## Lemma 8.4, local stability after scaling
+
+Paper location: p. 1018.
+
+Paper statement: if `M` is 2-ADC, then `M(2)` is both 2-regular and stable.
+For stability, the proof applies local 2-ADC at every prime, obtains either a
+hyperbolic-plane representation or the exceptional quaternary form from
+Theorem 6.2 and Proposition 4.16, and scales that alternative.
+
+Formal finding: Report 76 removes the finished stability implication from
+`SectionEightLaws`. `ScalingStabilityLaws` now separates the local-form
+classification, its scaling behavior at one prime, and the equivalence between
+placewise and global stability. The Lean proof composes those laws for every
+prime. Scaling invariance of 2-regularity remains a separate explicit input.
+
+Questions for the paper author and domain expert:
+
+1. Does `hasLemma84LocalForm` have exactly the intended hyperbolic-or-
+   exceptional meaning at dyadic and non-dyadic primes?
+2. Does `isStableAt` include precisely the norm-ideal and local-isometry
+   clauses in the paragraph preceding Lemma 8.4?
+3. Can the scaling-invariance step for 2-regularity be used without any
+   extra integrality or primitivity hypothesis?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
+## Corollary 8.3, genus transport
+
+Paper location: pp. 1017--1018.
+
+Paper statement and proof step: for `M'` in `gen(M)`, the proof uses
+`M'_p \cong M_p` for every finite prime, transports representation of the
+distinguishing rank-`n` lattice, and concludes `M \cong M'`.
+
+Formal finding: Report 79 introduces `GenusTransportLaws`, with
+`inGenus M N` characterized by local equivalence at every finite place.
+Genus symmetry, local-equivalence extraction, and preservation of global rank
+are derived rather than stored as finished Section 8 fields.
+
+Questions for the paper author and domain expert:
+
+1. Does the all-finite-places equivalence used by `inGenus_iff_localEquivalent`
+   exactly match the paper's convention for `gen(M)`?
+2. Is integral isometry the intended terminal relation in Corollary 8.3, with
+   the orientation used by `HasClassNumberOne`?
+3. May rank preservation be recovered from any one finite localization, as in
+   the formal proof, without an omitted archimedean convention?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
+## Lemma 8.4 and Corollary 8.5, regularity scaling
+
+Paper location: p. 1018.
+
+Paper statement: 2-regularity is invariant under scaling, and `M` is the
+half-scale of a stable 2-regular lattice `L` in Corollary 8.5.
+
+Formal finding: Report 77 replaces three one-way conclusion fields by the
+rank-uniform biconditional
+`IsNRegular (scaleTwo M) n <-> IsNRegular M n` and the orientation
+`isHalfScaleOf M L <-> L = scaleTwo M`. Lean derives the forward scaling
+step, the canonical witness, and reverse transport from those two facts.
+
+Questions for the paper author and domain expert:
+
+1. Is regularity invariant under arbitrary nonzero form scaling in the exact
+   global representation convention of Definition 1.2?
+2. Is `L = scaleTwo M` the correct orientation of the phrase that `M` is
+   isometric to `L(1/2)`?
+3. Should `isHalfScaleOf` be equality of the abstract lattice objects, or
+   integral isometry after scaling, in a concrete implementation?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
+## O'Meara 82K, global and local maximality
+
+Paper locations: Theorem 1.5(ii), pp. 984 and 1016; Lemma 8.1(ii),
+pp. 1016--1017.
+
+Paper statement/use: global maximality is equivalent to maximality at every
+finite localization. Lemma 8.1(ii) explicitly uses the global-to-local
+direction.
+
+Formal finding: Report 78 replaces the complete biconditional field by two
+directional fields in `GlobalMaximalityLaws`; Lean assembles the equivalence
+and all downstream uses.
+
+Questions for the paper author and domain expert:
+
+1. Does O'Meara section 82K give both directions for the paper's integral
+   lattice and maximality conventions without an additional fullness premise?
+2. Are only finite primes quantified, as encoded by `S.Place`?
+3. Does the local-to-global direction require any fractional-ideal or
+   localization compatibility not yet represented in the abstract system?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
+## Theorem 1.5(i) and Lemma 8.1(ii), local maximality
+
+Paper locations: Theorem 1.5 on p. 984; its proof on p. 1016; Lemma 8.1(ii)
+and its proof on p. 1017.
+
+Formal finding: `LocalMaximalityLaws.localMaximal_isNADCAt` derives the
+maximal-implies-ADC direction from maximal extension, maximal-to-maximal
+representation, and transitivity. `local_theorem15` combines this with a
+separate classification-dependent necessity input. Neither complete result
+is a field of `SectionEightLaws`.
+
+Questions for the paper author and domain expert:
+
+1. Does the ambient-transport clause attached to the maximal extension match
+   the intended fact that the extension lies on the same local space?
+2. Is Proposition 4.15 together with Theorems 5.1, 6.1, and 7.1 the complete
+   source of the necessity direction in both permitted ranks?
+3. Is O'Meara section 82K the intended exact source for both localization of
+   global maximality and the converse used in Theorem 1.5(ii)?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
+## Theorem 8.2, definite and indefinite source cases
+
+Paper location: p. 1017.
+
+Formal finding: `DistinguishingSublatticeLaws.distinguishing_rank_sublattice`
+derives the complete distinguishing-sublattice conclusion. The definite
+branch invokes a separate Meyer input. The indefinite branch first uses a Xu
+input to select a rank-`n` sublattice represented by one spinor genus, then
+uses an O'Meara 104:5 input to turn same-spinor-genus membership into integral
+isometry. The complete Theorem 8.2 conclusion is not a structure field.
+
+Questions for the paper author and domain expert:
+
+1. Does the formal definite predicate include exactly the hypotheses of
+   Meyer, Theorem 5.2, used by the source?
+2. Is `inSpinorGenus M' M` the correct orientation and does Xu's theorem
+   prove it for every genus representative representing the selected `N`?
+3. Does O'Meara 104:5 apply with only the displayed indefiniteness and rank
+   hypotheses, or must an additional ambient-space or signature premise be
+   made explicit?
+
+Author decision: unsigned. Domain-expert decision: unsigned.
+Formalization-expert decision: unsigned.
+
 ## Lemma 4.6, dyadic actual-lattice specialization
 
 Paper location: pp. 993--994.

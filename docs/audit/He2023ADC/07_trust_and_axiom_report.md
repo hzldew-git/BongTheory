@@ -433,5 +433,74 @@ entries, and the standalone imported-closure gate all pass; the latter reports
 `AXIOM_GATE_PASS: 60948 declarations checked`. Both exact Mathematica
 certificates also pass. Report 69 discloses that the archive's old shared root
 documents mention other papers, so it is proof-closure evidence rather than the
-strictly isolated release asset. It predates Reports 70--72 and does not
+strictly isolated release asset. It predates Reports 70--78 and does not
 instantiate the remaining arithmetic laws or provide human semantic approval.
+
+At `4ccd9fabf788cc3a8b6a04bb03049409f0bee696`, Report 73 replaces the
+`SectionEightLaws` field that directly asserted class-number-one regularity by
+the lower `ClassNumberRegularityLaws` package. Its genus-lifting and
+isometry-transport fields are proposition-valued mathematical inputs, not
+Lean axioms. The derived regularity theorem, its Section 8 compatibility
+endpoint, and Lemma 8.1(i) each report no axioms. The focused audit completes
+four jobs with Lean 4.32.1. This is local cached evidence, not a concrete
+number-field instance or an exact clean-kit receipt.
+
+At `c204de5e938b6dbfc01b9c7483b8ab8ede0a13ba`, Report 74 replaces the
+`SectionEightLaws` fields for local maximal-implies-ADC and the whole local
+Theorem 1.5 equivalence by `LocalMaximalityLaws`. The two derived lower
+theorems, both compatibility endpoints, Lemma 8.1(ii), and Theorem 1.5(i)
+report no axioms; Theorem 1.5(ii) reports only `propext`. The focused gate
+passes with `61070` checked declarations, and the scanner checks 2,733
+tracked Lean sources. The 5,562-job whole-paper run is incremental, not a
+fresh-extraction receipt; concrete instances and human review remain open.
+
+At `4565c1218a12d3603bb35d8dc985fcfa2335ef27`, Report 75 replaces the
+complete Theorem 8.2 input by `DistinguishingSublatticeLaws`. The derived
+source-case theorem, compatibility endpoint, Theorem 8.2, Corollary 8.3, and
+Theorem 1.7 depend only on `propext`, `Classical.choice`, and `Quot.sound`.
+The focused gate checks 61,083 declarations, and the scanner checks 2,734
+tracked Lean sources. The three external theorem fields remain mathematical
+assumptions of the conditional interface, not project axioms.
+
+At `677c1ae57a26365c0c0615a7894646851d0ef167`, Report 76 replaces the
+finished local-2-ADC-to-scaled-stability input by `ScalingStabilityLaws`.
+The derived stability theorem, compatibility endpoint, Lemma 8.4, and
+Corollary 8.5 depend only on `propext`. The combined imported-closure gate
+checks 61,096 declarations, the scanner checks 2,735 tracked Lean sources,
+and all 30 policy tests pass. The local-form, scaling, and placewise-stability
+fields remain mathematical inputs to an ordinary structure; they are not Lean
+axioms. Fresh-extraction verification and concrete instances remain open.
+
+At `0a94683dd9e1092d4e1e0ed78958b55fc1d65ee5`, Report 77 replaces three
+one-way scaling fields by `ScalingRegularityLaws`. Its three lower theorems
+and the three compatibility endpoints have empty axiom sets; Lemma 8.4 and
+Corollary 8.5 depend only on `propext`. The combined gate checks 61,108
+declarations, the scanner checks 2,736 tracked Lean sources, and all 30 policy
+tests pass. The biconditional and half-scale definition remain mathematical
+inputs, not Lean axioms. Fresh-extraction verification remains open.
+
+At `0c5211bb0f5a2f1954a0e6b63ceac53a6bb67121`, Report 78 replaces the
+complete global--local maximality field by `GlobalMaximalityLaws`. The
+derived biconditional, compatibility endpoint, and Lemma 8.1(ii) have empty
+axiom sets. Theorem 1.5(ii) reports only `propext`; Theorem 1.7 reports only
+the standard allowed set. The combined gate checks 61,118 declarations, the
+scanner checks 2,737 tracked Lean sources, and all 30 policy tests pass.
+Both O'Meara directions remain mathematical inputs, not Lean axioms.
+
+At `97068f7f4617b37f69980a056afa7f6e01eab4d3`, Report 79 introduces
+`GenusTransportLaws`. Local-equivalence extraction and global-rank
+preservation have empty axiom sets; genus symmetry uses only `propext`.
+Corollary 8.3 and Theorem 1.7 report only `propext`, `Classical.choice`, and
+`Quot.sound`. The combined gate checks 61,134 declarations, the scanner
+checks 2,738 tracked Lean sources, and all 30 policy tests pass. The lower
+placewise equivalence, isometry, and representation facts remain ordinary
+structure fields, not Lean axioms.
+
+At exact clean checkpoint `17fc8c967ce760745f86d686b4bded48fd8f3a97`,
+Report 80 records the strict single-paper archive and a previously empty
+fresh extraction. All 5,601 planned build jobs and all 21 manifest audits
+pass; the enforcing gate reports `AXIOM_GATE_PASS: 61155 declarations
+checked`. The archive verifies 2,109 payload hashes, both Mathematica
+certificates pass, and all nine downloaded dependency repositories are clean
+at the locked revisions. This is exact local mechanical evidence, not proof
+of the still-explicit arithmetic law fields or human semantic approval.

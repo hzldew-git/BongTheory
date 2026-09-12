@@ -139,7 +139,21 @@ It also records the logical local--global
 reductions in Theorems 1.3--1.4.  The complete logical derivations of all four
 numbered Section 5 results and of the Section 8 local--global chain are also
 formalized over explicit non-dyadic Jordan and number-field arithmetic law
-packages.  Concrete constructions of the non-dyadic and number-field law
+packages.  In Section 8, class-number-one regularity is derived from genus
+lifting and isometry transport, while local maximal-implies-ADC and the local
+Theorem 1.5 equivalence are derived from lower maximal-extension,
+representation, and classification laws.  Theorem 8.2 is derived by splitting
+the definite Meyer input from the indefinite Xu spinor-genus construction
+and O'Meara 104:5 single-class input.  The stability half of Lemma 8.4 is
+derived placewise from the local Theorem 6.2/Proposition 4.16 form, scaling,
+and local-to-global stability laws.  Its regularity half and the half-scale
+steps in Corollary 8.5 are derived from a rank-uniform scaling biconditional
+and the exact orientation of half-scaling.  The O'Meara 82K global--local
+maximality directions are kept separate and their biconditional is derived.
+The genus relation is characterized by local equivalence at every finite
+place; genus symmetry, local-equivalence extraction, and rank preservation
+are derived from that characterization and localization of rank.  Concrete
+constructions of the non-dyadic and number-field law
 packages, and imports of the Hanke--Kirschmer--Oh external enumerations,
 remain open;
 number-field localization, Meyer--Xu genus separation, and non-dyadic Jordan

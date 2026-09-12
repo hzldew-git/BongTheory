@@ -370,7 +370,7 @@ gate checking `60,948` declarations. It also records that legacy
 shared root documents name other papers even though He classic code, manifest,
 and audits are absent. The stricter release generator and verifier remove this
 documentation-isolation defect; the legacy archive is not a release asset.
-Reports 70--72 and all remaining semantic and arithmetic obligations stay
+Reports 70--79 and all remaining semantic and arithmetic obligations stay
 outside this receipt, so the Grade-D `NOT_COMPLETE` verdict is unchanged.
 
 Report 70 advances that boundary at
@@ -395,3 +395,69 @@ maximal lattice on an ambient space; row irredundancy is proved from Lemma
 4.4(i) after ambient-isometry transport. These are no longer `CatalogueLaws`
 fields. The conditional status remains because the lower invariant and
 lattice-level interfaces still lack concrete non-dyadic instances.
+
+Report 73 advances the Section 8 boundary at `4ccd9fa`. The opening
+class-number-one-implies-`n`-regular step of Lemma 8.1 is no longer a final
+field of `SectionEightLaws`; it is proved from explicit genus-lifting and
+isometry-transport laws. The derived theorem, compatibility endpoint, and
+Lemma 8.1(i) have empty axiom sets in the focused Lean 4.32.1 audit. Concrete
+number-field instances of the two lower laws, the other global arithmetic
+packages, exact clean-kit evidence for this checkpoint, and human sign-off
+remain open. The Grade-D `NOT_COMPLETE` verdict is unchanged.
+
+Report 74 advances the same boundary at `c204de5`. Local
+maximal-implies-ADC is now a theorem from lower maximal-extension and
+representation laws, and the local Theorem 1.5 equivalence is derived from
+that theorem plus its classification-dependent necessity direction. Neither
+finished conclusion remains a `SectionEightLaws` field. A focused audit and
+the 61,070-declaration gate pass, but concrete finite-completion instances,
+fresh clean-kit evidence, and human sign-off remain open. The Grade-D
+`NOT_COMPLETE` verdict is unchanged.
+
+Report 75 advances Theorem 8.2 at `4565c12`. The final distinguishing-
+sublattice conclusion is no longer a `SectionEightLaws` field. The Lean proof
+now performs the source's definite/indefinite split and composes separate
+Meyer, Xu, and O'Meara 104:5 inputs. The 61,083-declaration focused gate
+passes. Concrete instances of the cited results, fresh clean-kit evidence,
+and human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
+unchanged.
+
+Report 76 advances the stability half of Lemma 8.4 at `677c1ae`. The
+finished local-2-ADC-to-scaled-stability implication is no longer a
+`SectionEightLaws` field. The Lean proof now specializes at each prime,
+passes through the local Theorem 6.2/Proposition 4.16 form, transports it
+under scaling, and assembles global stability. The 61,096-declaration
+combined gate passes. Concrete instances, fresh clean-kit evidence, and
+human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
+unchanged.
+
+Report 77 advances the remaining scaling boundary at `0a94683`. Three
+one-way finished fields are replaced by a rank-uniform regularity
+biconditional and the exact half-scale orientation. Lean derives the
+regularity half of Lemma 8.4 and both half-scale transports in Corollary 8.5;
+the 61,108-declaration combined gate passes. Concrete scaling laws, fresh
+clean-kit evidence, and human sign-off remain open, so the Grade-D
+`NOT_COMPLETE` verdict is unchanged.
+
+Report 78 advances the O'Meara 82K boundary at `0c5211b`. The finished
+global--local maximality biconditional is replaced by separate localization
+and globalization inputs and is derived before use. The 61,118-declaration
+combined gate passes. Concrete number-field instances, fresh clean-kit
+evidence, and human sign-off remain open, so the Grade-D `NOT_COMPLETE`
+verdict is unchanged.
+
+Report 79 advances the Corollary 8.3 genus boundary at `97068f7`. Genus
+membership is now characterized by local equivalence at every finite place;
+Lean derives genus symmetry, local-equivalence extraction, and global-rank
+preservation. The 61,134-declaration combined gate passes. Concrete
+number-field genus/localization instances, fresh clean-kit evidence, and
+human sign-off remain open, so the Grade-D `NOT_COMPLETE` verdict is
+unchanged.
+
+Report 80 closes the local reproducibility gap through Report 79. The strict
+single-paper archive at clean commit `17fc8c9` verifies 2,109 payload hashes,
+completes 5,601 fresh-extraction build jobs and all 21 manifest audits, passes
+the 61,155-declaration enforcing gate, and passes both Mathematica
+certificates. This does not change the Grade-D `NOT_COMPLETE` verdict because
+the disclosed source mismatches, concrete arithmetic instances, exact
+GitHub deployment, and human semantic sign-off remain separate.

@@ -256,6 +256,58 @@ uniqueness, and derives row irredundancy from Lemma 4.4(i) and ambient-isometry
 transport. Neither conclusion remains a `CatalogueLaws` field. The lower
 invariant and lattice-level interfaces, clean-kit evidence, and human review
 remain outside this draft certificate.
+Section 8 class-number regularity checkpoint:
+`4ccd9fabf788cc3a8b6a04bb03049409f0bee696`. Report 73 derives the opening
+regularity step of Lemma 8.1 from lower genus-lifting and isometry-transport
+laws; no final-conclusion regularity field remains in `SectionEightLaws`.
+The focused audit reports no axioms for the derived theorem and Lemma 8.1(i).
+Concrete number-field instances of the two lower laws, full clean-kit evidence,
+and human review remain outside this draft certificate.
+Section 8 local maximality checkpoint:
+`c204de5e938b6dbfc01b9c7483b8ab8ede0a13ba`. Report 74 derives local
+maximal-implies-ADC from maximal extension and representation composition,
+then derives local Theorem 1.5(i) from its remaining necessity law. The
+focused gate checks 61,070 declarations. Concrete local and number-field
+instances, full clean-kit evidence, and human review remain outside this
+draft certificate.
+Theorem 8.2 source-case checkpoint:
+`4565c1218a12d3603bb35d8dc985fcfa2335ef27`. Report 75 removes the complete
+distinguishing-sublattice field and derives it from separate Meyer definite,
+Xu spinor-genus, and O'Meara 104:5 inputs. The focused gate checks 61,083
+declarations. Concrete instances, clean-kit evidence, and human review remain
+outside this draft certificate.
+Lemma 8.4 local-stability checkpoint:
+`677c1ae57a26365c0c0615a7894646851d0ef167`. Report 76 removes the complete
+local-2-ADC-to-scaled-stability field and derives it from separate local-form,
+scaling, and placewise-global stability inputs. The combined gate checks
+61,096 declarations. Concrete number-field instances, scaling invariance of
+regularity, clean-kit evidence, and human review remain outside this draft
+certificate.
+Lemma 8.4 and Corollary 8.5 scaling-regularity checkpoint:
+`0a94683dd9e1092d4e1e0ed78958b55fc1d65ee5`. Report 77 replaces three
+one-way scaling fields by a rank-uniform regularity biconditional and the
+exact half-scale orientation. The six derived lower and compatibility
+theorems have empty axiom sets, and the combined gate checks 61,108
+declarations. Concrete scaling laws, clean-kit evidence, and human review
+remain outside this draft certificate.
+O'Meara 82K global-maximality checkpoint:
+`0c5211bb0f5a2f1954a0e6b63ceac53a6bb67121`. Report 78 replaces the complete
+global--local maximality field by separate localization and globalization
+inputs, then derives the exact biconditional. The lower result, compatibility
+endpoint, and Lemma 8.1(ii) have empty axiom sets, and the combined gate checks
+61,118 declarations. Concrete number-field instances, clean-kit evidence,
+and human review remain outside this draft certificate.
+Genus-transport checkpoint:
+`97068f7f4617b37f69980a056afa7f6e01eab4d3`. Report 79 derives genus
+symmetry, local-equivalence extraction, and genus rank preservation from the
+placewise definition and localization of rank. The combined gate checks
+61,134 declarations; concrete genus and localization instances remain open.
+Exact local Review Kit checkpoint:
+`17fc8c967ce760745f86d686b4bded48fd8f3a97`. Report 80 records 2,109
+verified payload hashes, a 5,601-job fresh-extraction build, all 21 manifest
+audits, the 61,155-declaration enforcing gate, two successful Mathematica
+certificates, and nine clean dependencies at their locked revisions. Exact
+GitHub deployment and human semantic approval remain outside this draft.
 Overall project grade: D because one
 omitted binary class causes substantive mismatches in four printed claims,
 with a separate quantifier mismatch in Lemma 7.13. Whole-paper

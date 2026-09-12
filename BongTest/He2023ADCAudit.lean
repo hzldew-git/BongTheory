@@ -192,7 +192,32 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData
 #check Bong.HeADC2025GlobalData.HasClassNumberOne
 #check Bong.HeADC2025GlobalData.HasDistinguishingRankSublattice
+#check Bong.HeADC2025GlobalData.ClassNumberRegularityLaws
+#check Bong.HeADC2025GlobalData.ClassNumberRegularityLaws.classNumberOne_implies_nRegular
+#check Bong.HeADC2025GlobalData.LocalMaximalityLaws
+#check Bong.HeADC2025GlobalData.LocalMaximalityLaws.localMaximal_isNADCAt
+#check Bong.HeADC2025GlobalData.LocalMaximalityLaws.local_theorem15
+#check Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws
+#check Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws.distinguishing_rank_sublattice
+#check Bong.HeADC2025GlobalData.ScalingStabilityLaws
+#check Bong.HeADC2025GlobalData.ScalingStabilityLaws.locallyTwoADC_scaleTwo_stable
+#check Bong.HeADC2025GlobalData.ScalingRegularityLaws
+#check Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_scaleTwo
+#check Bong.HeADC2025GlobalData.ScalingRegularityLaws.scaleTwo_halfScale
+#check Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_of_halfScale
+#check Bong.HeADC2025GlobalData.GlobalMaximalityLaws
+#check Bong.HeADC2025GlobalData.GlobalMaximalityLaws.globalMaximal_iff_localMaximal
+#check Bong.HeADC2025GlobalData.GenusTransportLaws
+#check Bong.HeADC2025GlobalData.GenusTransportLaws.inGenus_symm
+#check Bong.HeADC2025GlobalData.GenusTransportLaws.localEquivalent_of_inGenus
+#check Bong.HeADC2025GlobalData.GenusTransportLaws.rank_eq_of_inGenus
 #check Bong.HeADC2025GlobalData.SectionEightLaws
+#check Bong.HeADC2025GlobalData.SectionEightLaws.inGenus_symm
+#check Bong.HeADC2025GlobalData.SectionEightLaws.localEquivalent_of_inGenus
+#check Bong.HeADC2025GlobalData.SectionEightLaws.rank_eq_of_inGenus
+#check Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
+#check Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
+#check Bong.HeADC2025GlobalData.SectionEightLaws.local_theorem15
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81i
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem82
@@ -200,16 +225,36 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15i
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem17
+#check Bong.HeADC2025GlobalData.SectionEightLaws.locallyTwoADC_scaleTwo_stable
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
 #check Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
 
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81i
+#print axioms Bong.HeADC2025GlobalData.ClassNumberRegularityLaws.classNumberOne_implies_nRegular
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.classNumberOne_implies_nRegular
+#print axioms Bong.HeADC2025GlobalData.LocalMaximalityLaws.localMaximal_isNADCAt
+#print axioms Bong.HeADC2025GlobalData.LocalMaximalityLaws.local_theorem15
+#print axioms Bong.HeADC2025GlobalData.DistinguishingSublatticeLaws.distinguishing_rank_sublattice
+#print axioms Bong.HeADC2025GlobalData.ScalingStabilityLaws.locallyTwoADC_scaleTwo_stable
+#print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_scaleTwo
+#print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.scaleTwo_halfScale
+#print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_of_halfScale
+#print axioms Bong.HeADC2025GlobalData.GlobalMaximalityLaws.globalMaximal_iff_localMaximal
+#print axioms Bong.HeADC2025GlobalData.GenusTransportLaws.inGenus_symm
+#print axioms Bong.HeADC2025GlobalData.GenusTransportLaws.localEquivalent_of_inGenus
+#print axioms Bong.HeADC2025GlobalData.GenusTransportLaws.rank_eq_of_inGenus
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.inGenus_symm
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.localEquivalent_of_inGenus
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.rank_eq_of_inGenus
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.localMaximal_isNADCAt
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.local_theorem15
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma81ii
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem82
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary83
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15i
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem15ii
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Theorem17
+#print axioms Bong.HeADC2025GlobalData.SectionEightLaws.locallyTwoADC_scaleTwo_stable
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Lemma84
 #print axioms Bong.HeADC2025GlobalData.SectionEightLaws.heADC2025Corollary85
 

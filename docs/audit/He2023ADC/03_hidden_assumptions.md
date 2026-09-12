@@ -160,11 +160,56 @@ generic O'Meara representation theorem remain genuine mathematical inputs to
 
 Section 8 is proved over `HeADC2025GlobalData.SectionEightLaws` together with
 the existing Theorem 1.3 law package. Concrete localization, genus transport,
-class-number-one regularity, the distinguishing-lattice theorem, and scaling
-stability are all visible structure fields. In particular, Theorem 8.2's
-Meyer--Xu--O'Meara content is not reconstructed by returning its field.
-The remaining theorems do prove the source deductions from those inputs. See
-report 47.
+the distinguishing-lattice theorem, and scaling stability remain visible
+structure fields. Report 73 replaces the former class-number-one regularity
+field by `ClassNumberRegularityLaws`: a genus-lifting theorem and representation
+transport across an isometry. The regularity implication is now derived from
+those lower inputs. In particular, neither that derivation nor Theorem 8.2's
+Meyer--Xu--O'Meara content constructs the still-missing number-field
+arithmetic. See reports 47 and 73.
+
+Report 74 also removes the fields that directly asserted local
+maximal-implies-ADC and the complete local Theorem 1.5 equivalence. The new
+`LocalMaximalityLaws` package exposes the maximal-extension argument and
+retains only the classification-dependent necessity direction as a single
+hard local input. These proposition-valued fields are still uninstantiated;
+O'Meara section 82K also remains the explicit global-local maximality input.
+See report 74.
+
+Report 75 similarly removes the complete distinguishing-sublattice field.
+`DistinguishingSublatticeLaws` now exposes the definite Meyer input, Xu's
+indefinite spinor-genus uniqueness input, and the O'Meara 104:5 one-class
+input separately. The definite/spinor predicates and all three cited results
+still require actual number-field constructions. See report 75.
+
+Report 76 removes the complete local-2-ADC-to-scaled-stability field.
+`ScalingStabilityLaws` exposes separately the local-form consequence of
+Theorem 6.2 and Proposition 4.16, the scaling step at one place, and the
+local-to-global definition of stability. The local-form predicate and these
+three laws remain abstract until connected to concrete number-field
+localizations. Scaling invariance of 2-regularity is still a separate
+`SectionEightLaws` field. See report 76.
+
+Report 77 removes the remaining three one-way scaling fields. The replacement
+`ScalingRegularityLaws` still assumes the rank-uniform regularity
+biconditional and the exact meaning of `isHalfScaleOf`; it does not prove them
+for concrete quadratic lattices. This makes the two genuine scaling facts,
+rather than their three downstream uses, the remaining boundary. See report
+77.
+
+Report 78 removes the complete global--local maximality biconditional field.
+`GlobalMaximalityLaws` exposes the two O'Meara 82K directions separately;
+neither direction is yet proved for concrete number-field lattices. This
+prevents the proof of Lemma 8.1(ii) from silently relying on the unused reverse
+direction while keeping both directions available for Theorem 1.5(ii). See
+report 78.
+
+Report 79 makes the genus convention explicit in `GenusTransportLaws`:
+membership is equivalent to local equivalence at every finite place. Genus
+symmetry, extraction of one local equivalence, and global-rank preservation
+are derived. Local-equivalence symmetry and rank invariance, nonemptiness of
+the finite-place type, isometry symmetry, and representation transport remain
+visible inputs until a concrete number-field lattice category is implemented.
 
 The corrected quaternary catalogue does not assume completeness or
 irredundancy. Those properties are proved using the corrected three-way

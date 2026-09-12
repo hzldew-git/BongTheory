@@ -248,7 +248,44 @@ Additional concrete declaration groups are:
   rank-`n` sublattice property in the global/local interface. From
   `SectionEightLaws` and the existing Theorem 1.3 laws it proves both clauses
   of Lemma 8.1, Theorem 8.2, Corollary 8.3, Theorems 1.5(i)--(ii) and 1.7,
-  Lemma 8.4, and Corollary 8.5.
+  Lemma 8.4, and Corollary 8.5. `ClassNumberRegularityLaws` exposes the
+  genus-lifting and isometry-transport inputs behind the opening sentence of
+  Lemma 8.1; `classNumberOne_implies_nRegular` derives regularity from them,
+  so that final conclusion is no longer a `SectionEightLaws` field. The
+  focused audit is `He2023ADCClassNumberRegularityAudit`; report 73.
+  `LocalMaximalityLaws` separately exposes maximal extension,
+  maximal-to-maximal representation, representation transitivity, and the
+  classification-dependent necessity direction. It derives
+  `localMaximal_isNADCAt` and `local_theorem15`, so neither remains a
+  `SectionEightLaws` field. The focused audit is
+  `He2023ADCLocalMaximalityAudit`; report 74.
+  `DistinguishingSublatticeLaws` records the definite Meyer theorem, Xu's
+  indefinite unique-spinor-genus construction, and O'Meara 104:5 one-class
+  input. Its `distinguishing_rank_sublattice` theorem derives Theorem 8.2, so
+  that final conclusion is no longer a `SectionEightLaws` field. The focused
+  audit is `He2023ADCDistinguishingSublatticeAudit`; report 75.
+  `ScalingStabilityLaws` records the Theorem 6.2/Proposition 4.16 local-form
+  implication, its behavior under scaling, and the placewise definition of
+  global stability. Its `locallyTwoADC_scaleTwo_stable` theorem derives the
+  stability half of Lemma 8.4, so that final implication is no longer a
+  `SectionEightLaws` field. The focused audit is
+  `He2023ADCScalingStabilityAudit`; report 76.
+  `ScalingRegularityLaws` records the rank-uniform scaling biconditional and
+  the orientation `isHalfScaleOf M L <-> L = scaleTwo M`. It derives the
+  regularity half of Lemma 8.4 and both half-scale transports used by
+  Corollary 8.5; the former three one-way `SectionEightLaws` fields are gone.
+  The focused audit is `He2023ADCScalingRegularityAudit`; report 77.
+  `GlobalMaximalityLaws` records the two O'Meara 82K directions separately.
+  Its `globalMaximal_iff_localMaximal` theorem derives the biconditional used
+  by Lemma 8.1(ii), Theorem 1.5(ii), and Theorem 1.7, so the complete
+  equivalence is no longer a `SectionEightLaws` field. The focused audit is
+  `He2023ADCGlobalMaximalityAudit`; report 78.
+  `GenusTransportLaws` records the placewise local-equivalence definition of
+  genus, local-equivalence symmetry and rank invariance, existence of a finite
+  place, isometry symmetry, and representation transport. It derives genus
+  symmetry, local-equivalence extraction, and global-rank preservation; those
+  three conclusions are no longer `SectionEightLaws` fields. The focused audit
+  is `He2023ADCGenusTransportAudit`; report 79.
 - `He2023ADCQuaternaryCatalogue` packages the four maximal rank-four rows and
   both nonmaximal binary boundary classes. It proves exact completeness and
   irredundancy, the maximality partition, the corrected `4|U|+2` count, the

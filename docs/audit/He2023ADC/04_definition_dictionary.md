@@ -99,3 +99,77 @@ model `(1/2)A(2,2rho)`. Thus rescaling it by `pi` is the printed
 literal repeated orthogonal product with the paper's half-hyperbolic `H`.
 The formal conclusions are integral lattice isometries, not coefficient-list
 abbreviations.
+
+## Section 8 genus and class number
+
+Paper terms: `gen(M)` and class number one, used on pp. 1017--1018.
+
+Formal terms: `HeADC2025GlobalData.inGenus`,
+`HeADC2025GlobalData.HasClassNumberOne`, and `GenusTransportLaws`. The latter
+package requires
+`inGenus M N <-> forall p, localEquivalent (localize p M) (localize p N)`.
+It derives genus symmetry, local-equivalence extraction, and preservation of
+global rank. `HasClassNumberOne` means that every global lattice `M'`
+satisfying `inGenus M' M` is integrally isometric to `M`.
+`ClassNumberRegularityLaws.genus_lift_of_local_represents` uses exactly this
+orientation when lifting an everywhere locally represented target.
+
+The carrier relations remain abstract: the project has not yet constructed
+them from actual localizations of integral quadratic lattices over a number
+field. Status: `PROVISIONAL_MATCH` for the definition, quantifier, and
+orientation, pending concrete instances and human confirmation. See Reports
+73 and 79.
+
+## Section 8 local maximality
+
+Paper terms: `O_{F_p}`-maximal, local `n`-ADC, and `O_F`-maximal in Theorem
+1.5 and Lemma 8.1(ii), on pp. 984 and 1016--1017.
+
+Formal terms: `GlobalLocalLatticeSystem.localMaximal`, `IsNADCAt`, and
+`HeADC2025GlobalData.isGlobalMaximal`. `LocalMaximalityLaws` records maximal
+extension and representation transport; its theorem
+`localMaximal_isNADCAt` constructs the full `IsNADCAt` predicate.
+`local_theorem15` adds the classification-dependent necessity direction.
+The relations remain abstract until a concrete number-field localization
+instance is constructed. See Report 74.
+
+## Section 8 spinor genus
+
+Paper terms: definite, indefinite, spinor genus in `gen(M)`, and the unique
+class representing the selected sublattice in Theorem 8.2 on p. 1017.
+
+Formal terms: `HeADC2025GlobalData.isDefinite`, `inSpinorGenus`, and
+`DistinguishingSublatticeLaws`. The latter separates the definite Meyer case,
+Xu's indefinite rank-`n` construction, and the O'Meara 104:5 isometry step.
+The predicates remain abstract pending a concrete number-field model. Status:
+`PROVISIONAL_MATCH`; see Report 75.
+
+## Section 8 stability and scaling
+
+Paper terms: stability at every prime, the local alternatives
+`H -> M_p` or `M_p` isometric to `A orthogonal-sum A(p)`, and scaling by two
+in Lemma 8.4 on p. 1018.
+
+Formal terms: `HeADC2025GlobalData.isStableAt`, `hasLemma84LocalForm`, and
+`ScalingStabilityLaws`. The named local-form predicate represents exactly the
+source disjunction, while the law package separates its classification,
+scaling, and placewise-global consequences. These predicates remain abstract
+pending a concrete number-field model. Status: `PROVISIONAL_MATCH`; see
+Report 76.
+
+`ScalingRegularityLaws.isHalfScaleOf_iff` fixes the formal orientation of the
+paper's statement that `M` is isometric to `L(1/2)`: formally this means
+`L = scaleTwo M`. Its other field records regularity invariance as a
+biconditional for every rank. The concrete scaling operation and proof of
+these laws remain pending. Status: `PROVISIONAL_MATCH`; see Report 77.
+
+## Section 8 global maximality
+
+Paper terms: `O_F`-maximal and `O_{F_p}`-maximal, connected by O'Meara
+section 82K on pp. 1016--1017.
+
+Formal terms: `HeADC2025GlobalData.isGlobalMaximal`,
+`GlobalLocalLatticeSystem.localMaximal`, and `GlobalMaximalityLaws`. The law
+package separates localization and globalization; Lean derives the exact
+biconditional. Concrete global lattices and finite localizations remain
+pending. Status: `PROVISIONAL_MATCH`; see Report 78.

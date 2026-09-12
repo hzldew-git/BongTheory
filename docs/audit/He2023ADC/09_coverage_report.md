@@ -61,8 +61,20 @@ counted as a concrete arithmetic implementation.
   disjunction is formalized and suffices downstream; reports 35--46.
 - Every numbered Section 8 deduction, plus Theorems 1.5 and 1.7, is proved
   from `SectionEightLaws` and the existing Theorem 1.3 package. Concrete
-  localization, class-number, Meyer--Xu--O'Meara, genus-transport, and
-  scaling-stability instances remain open; report 47.
+  localization, Meyer--Xu--O'Meara, genus-lifting, isometry-transport, and
+  scaling-stability instances remain open. Class-number-one regularity itself
+  is now derived from the two lower genus laws. Local maximal-implies-ADC is
+  derived from maximal-extension laws, and local Theorem 1.5(i) is derived
+  from that theorem plus its classification-dependent necessity direction;
+  Theorem 8.2 is derived from separate Meyer definite-case, Xu spinor-genus,
+  and O'Meara 104:5 inputs. The stability half of Lemma 8.4 is derived from
+  its local-form, scaling, and placewise-global inputs. Regularity under
+  scaling and the half-scale steps are derived from one rank-uniform
+  biconditional with explicit orientation. The O'Meara 82K maximality
+  equivalence is derived from separate localization and globalization
+  directions. Genus symmetry, local-equivalence extraction, and genus rank
+  preservation are derived from the all-places local-equivalence definition;
+  reports 47 and 73--79.
 - The binary cases of Theorem 1.9(ii) and Theorem 1.10 are formally refuted
   and corrected. The exact catalogue has `4|U|+2` classes and unconditionally
   `8(N p)^e+2`, rather than the
@@ -121,16 +133,17 @@ The main unresolved mathematical work is:
   maximal-lattice uniqueness, representation, and transfer fields now carried
   through `CatalogueLaws`, required to discharge Theorem 1.10; maximal-row
   exhaustion and irredundancy themselves are derived in Report 72;
-- concrete number-field instances of `SectionEightLaws` and the earlier
-  global reduction packages;
+- concrete number-field instances of `SectionEightLaws`, its lower
+  `ClassNumberRegularityLaws` genus-lifting and isometry-transport package,
+  and the earlier global reduction packages;
 - any publisher-corrected replacement for the four binary statements and a
   resolution of the printed-strength Lemma 7.13 claim;
 - concrete Hanke--Kirschmer--Oh catalogue imports, the global interpretation
   and catalogue identity of the now-transcribed matrices, and the local
   computations underlying Corollary 1.8 and Theorem 1.11;
 - GitHub-hosted exact-revision CI, independent human semantic sign-off,
-  merge, and release promotion. The current local clean Review Kit through
-  Report 57 passes at `7d7a4d5`; see Report 58.
+  merge, and release promotion. The current strict local Review Kit through
+  Report 79 passes at `17fc8c9`; see Report 80.
 
 The whole-paper verdict remains `NOT_COMPLETE`, with grade D because the
 published version contains substantive classification mismatches. That grade
