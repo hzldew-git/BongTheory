@@ -159,9 +159,11 @@ Report 76.
 
 `ScalingRegularityLaws.isHalfScaleOf_iff` fixes the formal orientation of the
 paper's statement that `M` is isometric to `L(1/2)`: formally this means
-`L = scaleTwo M`. Its other field records regularity invariance as a
-biconditional for every rank. The concrete scaling operation and proof of
-these laws remain pending. Status: `PROVISIONAL_MATCH`; see Report 77.
+`L = scaleTwo M`. Report 83 adds `ScalingTransportLaws`, from whose primitive
+rank, integrality, local/global representation, and surjectivity clauses Lean
+derives regularity invariance for every rank. The concrete scaling operation,
+its transport laws, and the half-scale identification remain pending. Status:
+`PROVISIONAL_MATCH`; see Reports 77 and 83.
 
 ## Section 8 global maximality
 
