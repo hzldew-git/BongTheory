@@ -6,6 +6,7 @@ Authors: BONG Theory contributors
 import Bong.Lattice.He2022ClassicSectionEight
 import Mathlib.NumberTheory.NumberField.Completion.FinitePlace
 import Mathlib.NumberTheory.RamificationInertia.Valuation
+import Mathlib.Topology.Algebra.UniformRing
 
 /-!
 # Number-field coefficient extension for He (2024), Lemma 8.1
@@ -132,5 +133,95 @@ theorem RemainingCoefficientInputs.lemma81Laws
   order_scale := adicOrder_liesOver p P
   defect_scale := D.defect_scale
   goodBONG_transfer := D.goodBONG_transfer
+
+/-! ## The induced map of finite completions -/
+
+/-- The continuous ring homomorphism from the `p`-adic completion of `K` to
+the `P`-adic completion of `L`, induced by `K → L` when `P` lies over `p`. -/
+noncomputable def completionMap
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    (p : IsDedekindDomain.HeightOneSpectrum (𝓞 K))
+    (P : IsDedekindDomain.HeightOneSpectrum (𝓞 L))
+    [P.asIdeal.LiesOver p.asIdeal] :
+    p.adicCompletion K →+* P.adicCompletion L :=
+  (IsDedekindDomain.HeightOneSpectrum.adicCompletion.equiv L P).symm.toRingHom.comp
+    ((UniformSpace.Completion.mapRingHom
+      (algebraMap (WithVal (p.valuation K)) (WithVal (P.valuation L)))
+      (p.uniformContinuous_algebraMap_liesOver K L P).continuous).comp
+        (IsDedekindDomain.HeightOneSpectrum.adicCompletion.equiv K p).toRingHom)
+
+/-- The completion map agrees with the original number-field embedding on
+the dense subfield `K`. -/
+theorem completionMap_coe
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    (p : IsDedekindDomain.HeightOneSpectrum (𝓞 K))
+    (P : IsDedekindDomain.HeightOneSpectrum (𝓞 L))
+    [P.asIdeal.LiesOver p.asIdeal] (x : K) :
+    completionMap p P (x : p.adicCompletion K) =
+      ((algebraMap K L) x : P.adicCompletion L) := by
+  apply IsDedekindDomain.HeightOneSpectrum.adicCompletion.ext
+  change UniformSpace.Completion.map
+      (algebraMap (WithVal (p.valuation K)) (WithVal (P.valuation L)))
+      (x : (p.valuation K).Completion) =
+    ((algebraMap K L) x : (P.valuation L).Completion)
+  rw [UniformSpace.Completion.map_coe
+    (p.uniformContinuous_algebraMap_liesOver K L P)]
+  congr 1
+
+/-- Continuity of the induced map of completions. -/
+theorem continuous_completionMap
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    (p : IsDedekindDomain.HeightOneSpectrum (𝓞 K))
+    (P : IsDedekindDomain.HeightOneSpectrum (𝓞 L))
+    [P.asIdeal.LiesOver p.asIdeal] :
+    Continuous (completionMap p P) := by
+  exact
+    (IsDedekindDomain.HeightOneSpectrum.adicCompletion.continuous_ofCompletion L P).comp
+      (UniformSpace.Completion.continuous_map.comp
+        (IsDedekindDomain.HeightOneSpectrum.adicCompletion.continuous_toCompletion K p))
+
+/-! The instances are scoped to avoid creating an unconditional global
+instance diamond if mathlib later supplies the same finite-completion map. -/
+
+namespace CompletionLiesOver
+
+/-- The algebra structure on the upper completion induced by
+`completionMap`. -/
+noncomputable scoped instance instAlgebra
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    {p : IsDedekindDomain.HeightOneSpectrum (𝓞 K)}
+    {P : IsDedekindDomain.HeightOneSpectrum (𝓞 L)}
+    [P.asIdeal.LiesOver p.asIdeal] :
+    Algebra (p.adicCompletion K) (P.adicCompletion L) :=
+  (completionMap p P).toAlgebra
+
+/-- The number-field and completed-field embeddings form a scalar tower. -/
+scoped instance instIsScalarTower
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    {p : IsDedekindDomain.HeightOneSpectrum (𝓞 K)}
+    {P : IsDedekindDomain.HeightOneSpectrum (𝓞 L)}
+    [P.asIdeal.LiesOver p.asIdeal] :
+    IsScalarTower K (p.adicCompletion K) (P.adicCompletion L) :=
+  .of_algebraMap_eq fun x => by
+    rw [RingHom.algebraMap_toAlgebra]
+    exact (completionMap_coe p P x).symm
+
+/-- Scalar multiplication through the completed embedding is continuous. -/
+scoped instance instContinuousSMul
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    {p : IsDedekindDomain.HeightOneSpectrum (𝓞 K)}
+    {P : IsDedekindDomain.HeightOneSpectrum (𝓞 L)}
+    [P.asIdeal.LiesOver p.asIdeal] :
+    ContinuousSMul (p.adicCompletion K) (P.adicCompletion L) where
+  continuous_smul :=
+    ((continuous_completionMap p P).comp continuous_fst).mul continuous_snd
+
+end CompletionLiesOver
 
 end Bong.HeClassic2024NumberFieldLocalExtension
