@@ -106,9 +106,12 @@ captures both native streams while treating the native exit code as the sole
 success criterion. PowerShell parsing, all 30 policy tests, the 2,802-source
 forbidden-token scan, and a structure-only run of the corrected verifier pass.
 
-The archive above predates that script correction. Any Review Kit generated
-from a later commit containing this report also contains the corrected
-verifier. The correction changes orchestration only; it does not alter any
+The archive above predates that repository-script correction. The outer
+archive verifier is intentionally maintained in the repository rather than
+copied into source-only Review Kits; each kit instead carries its complete
+`REVIEWING.md` build and audit commands. A reviewer invoking
+`scripts/paper-kits/Test-PaperReviewKit.ps1` from this or a later repository
+commit gets the corrected orchestration. The correction does not alter any
 Lean declaration or proof.
 
 ## Semantic and deployment boundary
