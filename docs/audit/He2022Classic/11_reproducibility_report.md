@@ -56,7 +56,7 @@ correction in `../HePaperDeploymentCheckpoint-20260905.md`.
 The current checkpoint includes the unary branch, a complete local n >= 1
 dispatcher, corrected v5 Lemma 7.1, Lemma 7.7, complete Lemmas 7.10--7.11,
 both literal-minimal halves of Theorem 1.3, and the conditional Section 8
-logic of Reports 23 and 27--33, with the v5 source failure separated in
+logic of Reports 23 and 27--36, with the v5 source failure separated in
 Reports 24 and 26. The exact local Review Kit in Report 25 predates later
 formalization work. A newly generated fresh-extraction kit and GitHub artifact
 for the eventual release commit are still required; the historical artifacts
@@ -163,8 +163,23 @@ height-one spectrum and three arithmetic compatibility statements. Primality
 and dyadic-prime coverage are proved. The combined canonical and focused
 audit build completes 5,665 jobs, all 30 policy tests pass, the scanner checks
 2,796 tracked Lean sources, and the full imported-closure gate reports
-`AXIOM_GATE_PASS: 70718 declarations checked`. Report 34 records the remaining
-concrete-model boundary. Fresh-extraction Review Kit verification is pending.
+`AXIOM_GATE_PASS: 70718 declarations checked`. Report 34 records the
+then-remaining concrete-model boundary, later reduced by Report 36.
+Fresh-extraction Review Kit verification is pending.
+
+## Canonical number-field arithmetic checkpoint
+
+Code commit `129f19e896c38f70b7c63bea9d8b3bd48ed0ffcb` defines the
+dyadic predicate, ramification index, and discriminant proposition directly
+from the standard height-one spectrum and derives the bridge plus the
+arithmetic fields of `SectionEightLaws`. The focused build completes 5,646
+jobs and the combined canonical/audit build completes 5,667 jobs. The audited
+constructors use only `propext`, `Classical.choice`, and `Quot.sound`.
+All 30 policy tests pass, the scanner checks 2,798 tracked Lean sources, and
+the focused imported-closure gate reports
+`AXIOM_GATE_PASS: 62790 declarations checked`. Report 36 records the reduced
+boundary. Fresh-extraction Review Kit evidence for this later checkpoint is
+still pending.
 
 ## Current exact v5 source-only Review Kit checkpoint
 

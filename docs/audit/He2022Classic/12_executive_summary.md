@@ -34,9 +34,10 @@ Report 32 proves both directions, the ramified-prime witness, and positivity
 for actual number-field prime ideals and transports them through a typed place
 bridge; only that structural identification remains at this step.
 Report 34 derives primality and dyadic-prime coverage from an equivalence with
-the standard height-one spectrum. A concrete global model now needs only that
-equivalence and compatibility of the dyadic predicate, ramification index,
-and discriminant proposition at this bridge layer.
+the standard height-one spectrum. Report 36 supplies canonical number-field
+global data in which the dyadic predicate, ramification index, and discriminant
+proposition are standard definitions and all compatibility is definitional.
+A concrete global model still needs the place equivalence at this bridge layer.
 Report 31 derives Theorem 1.9's finite-place local-universality conclusion from
 the separate non-dyadic, dyadic unary, and dyadic higher-rank laws in v5; the
 all-places conclusion is no longer stored as a package field.

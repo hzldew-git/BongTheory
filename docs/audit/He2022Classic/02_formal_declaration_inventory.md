@@ -69,6 +69,10 @@ The proposition-valued definition remains separate from its proof:
   `numberFieldDiscriminantBridge`: reduce the abstract-place bridge to an
   equivalence with the standard height-one spectrum and three compatibility
   statements; primality and dyadic-prime coverage are proved; Report 34.
+- `HeClassic2024NumberFieldGlobalData`, `toGlobalData`, and
+  `sectionEightLaws`: define the three arithmetic fields directly from the
+  height-one spectrum and derive their compatibility plus the Section 8
+  discriminant fields from a place equivalence; Report 36.
 - `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` and
   `sumOfSquares_localUniversal_of_oddDiscriminant`: the non-dyadic, dyadic
   unary, and dyadic higher-rank inputs and their derived all-finite-place
@@ -125,5 +129,7 @@ local-to-global derivation and Theorem 1.9.
 `BongTest/He2022ClassicDiscriminantRamificationAudit.lean` checks the Reports
 30 and 32 abstract criterion, concrete number-field theorem, bridge
 constructions, and downstream consumers.
+`BongTest/He2022ClassicNumberFieldGlobalDataAudit.lean` checks the canonical
+arithmetic adapter and the derived Section 8 package from Report 36.
 `BongTest/He2022ClassicLocalUniversalityAudit.lean` checks the Report 31
 finite-place case split and the full conditional Theorem 1.9 endpoint.

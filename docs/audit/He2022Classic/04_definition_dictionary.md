@@ -17,6 +17,7 @@
 | dyadic prime ideal | `HeClassic2024NumberField.IsDyadicPrime` |
 | concrete discriminant/ramification equivalence | `HeClassic2024NumberField.discriminantOdd_iff_forall_ramificationIdx_eq_one` |
 | abstract-to-number-field place identification | `HeClassic2024GlobalData.HeightOneSpectrumIdentification`, which derives `NumberFieldDiscriminantBridge` |
+| canonical number-field Section 8 arithmetic | `HeClassic2024NumberFieldGlobalData.toGlobalData` and `sectionEightLaws` |
 | generic one-way discriminant package | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
@@ -38,3 +39,6 @@ number-field arithmetic obligation.
 `HeightOneSpectrumIdentification.numberFieldDiscriminantBridge` further
 derives bridge primality and dyadic-prime coverage from the standard
 height-one-spectrum place type; see Report 34.
+`HeClassic2024NumberFieldGlobalData.toGlobalData` fixes the dyadic predicate,
+ramification index, and discriminant proposition to their actual number-field
+definitions, so the three compatibility proofs are reflexivity; see Report 36.

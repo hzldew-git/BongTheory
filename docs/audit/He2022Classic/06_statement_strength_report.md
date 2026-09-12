@@ -70,7 +70,10 @@ Report 34 reduces that identification to an equivalence with the standard
 height-one spectrum and three compatibility statements. Primality and
 coverage of dyadic prime ideals are now theorems, not caller-supplied bridge
 fields. The concrete global lattice model still has to supply the equivalence
-and compatibility statements.
+and compatibility statements. Report 36 removes the compatibility statements
+from the canonical number-field interface: it defines all three arithmetic
+fields from the height-one spectrum and derives the complete discriminant
+package. A future concrete model still has to construct its place equivalence.
 
 Report 31 removes another final-conclusion field from Theorem 1.9.  Instead of
 assuming local universality at every finite place, the formalization assumes

@@ -108,3 +108,13 @@ focused audit build completes 5,665 jobs; all 30 policy tests and the
 `AXIOM_GATE_PASS: 70718 declarations checked`. The remaining equivalence and
 compatibility fields are ordinary premises of a future concrete global model;
 Report 34.
+
+At code checkpoint `129f19e`, the canonical number-field global-data adapter
+defines the dyadic predicate, ramification index, and discriminant proposition
+from the height-one spectrum. Its identification, bridge, and complete
+Section 8 constructor use only `propext`, `Classical.choice`, and `Quot.sound`.
+The focused build completes 5,646 jobs and the combined canonical/audit build
+completes 5,667 jobs. All 30 policy tests pass, the scanner checks 2,798 Lean
+sources, and the focused imported-closure gate checks 62,790 declarations.
+This removes the three compatibility premises but does not construct the
+remaining global lattice and localization laws; Report 36.

@@ -40,8 +40,10 @@ constructs the formerly abstract discriminant fields; that bridge remains to
 be instantiated as part of the concrete global lattice model.
 Report 34 lowers this interface further: an equivalence with the standard
 height-one spectrum now proves prime-ideal primality and dyadic-prime coverage
-automatically. The place equivalence and three arithmetic compatibility
-statements remain to be supplied by the concrete global lattice model.
+automatically. Report 36 supplies canonical number-field global data whose
+dyadic predicate, ramification index, and discriminant proposition are defined
+from that spectrum, so all three compatibility statements are definitional.
+The concrete global lattice model and its place equivalence remain open.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

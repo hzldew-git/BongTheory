@@ -69,8 +69,10 @@ prime ideals and transports them through an explicit place bridge. Reviewers
 must therefore check the bridge, rather than demand new arithmetic axioms.
 Report 34 removes the bridge's separate primality and coverage fields by
 deriving them from an equivalence with the standard height-one spectrum.
-Reviewers must still inspect that equivalence and the dyadic, ramification,
-and discriminant compatibility statements in a future concrete model.
+Report 36 removes the dyadic, ramification, and discriminant compatibility
+statements from the canonical interface by defining them from the spectrum.
+Reviewers must still inspect the place equivalence and the actual global
+lattice/localization model.
 
 The same anti-circularity test is applied to the finite-place half of Theorem
 1.9.  Report 31 removes the former field that asserted the complete quantified

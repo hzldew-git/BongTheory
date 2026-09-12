@@ -46,8 +46,9 @@ Coverage status:
   Report 31. Both are proved for actual number-field prime ideals and linked
   to the abstract layer by a structural bridge in Report 32.
   Report 34 derives that bridge from a height-one-spectrum equivalence,
-  proving primality and dyadic-prime coverage; the equivalence and three
-  arithmetic compatibility statements remain part of the concrete model.
+  proving primality and dyadic-prime coverage. Report 36 defines the three
+  arithmetic fields canonically and derives their compatibility; the place
+  equivalence and concrete lattice/localization model remain.
   The source-facing Theorem 1.7 endpoint is restricted to `n >= 2` even, and
   its rank-independent logical tail is separately exposed; Report 33.
   Theorem 1.9's all-finite-place local-universality conclusion is derived from
