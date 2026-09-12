@@ -53,6 +53,9 @@ Coverage status:
   positivity, and the absolute ramification tower for nonzero coefficients in
   the underlying number field. Arbitrary completion elements, defect scaling,
   and good-BONG scalar extension remain uncovered.
+  Report 39 constructs the continuous finite-dimensional extension between
+  the selected finite completions and proves its dense-subfield compatibility.
+  The arbitrary-completion-element valuation law itself remains uncovered.
   The source-facing Theorem 1.7 endpoint is restricted to `n >= 2` even, and
   its rank-independent logical tail is separately exposed; Report 33.
   Theorem 1.9's all-finite-place local-universality conclusion is derived from

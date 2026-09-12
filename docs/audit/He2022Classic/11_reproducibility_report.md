@@ -210,3 +210,17 @@ This incremental checkpoint is newer than the exact Review Kit described
 above. It therefore requires its own later clean extraction and does not
 inherit exact-kit status from Report 35 or from the in-progress historical
 kit for commit `00629d4`.
+
+## Finite-completion extension checkpoint
+
+At exact code commit `82a2b047f168e6de7a8d0a869bec38ead1f01a8d`, the
+continuous ring homomorphism between the finite completions, its
+dense-subfield compatibility, and scoped algebra, scalar-tower, and
+continuous-scalar instances are kernel checked. The focused audit additionally
+infers `Module.Finite` and `FiniteDimensional` for the completed extension.
+The focused build completes 5,651 jobs and the canonical paper plus combined
+Classic audit completes 5,674 jobs. All 30 policy tests pass, the scanner
+checks 2,800 tracked Lean sources, and the focused imported-closure gate
+reports `AXIOM_GATE_PASS: 62830 declarations checked`. Report 39 records the
+strict semantic boundary. An exact fresh-extraction kit for this newer commit
+remains pending.

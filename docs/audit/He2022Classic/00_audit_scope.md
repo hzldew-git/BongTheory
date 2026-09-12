@@ -49,6 +49,11 @@ in the underlying number field, together with relative ramification positivity
 and the absolute ramification tower. It does not extend the result to every
 element of the completion, and it leaves quadratic-defect scaling and
 good-BONG scalar extension explicit.
+Report 39 constructs the actual continuous ring homomorphism between the two
+finite completions, proves compatibility with the dense number-field
+embedding, and installs scoped algebra, scalar-tower, and continuous-scalar
+structures from which finite-dimensionality is inferred. Valuation scaling
+for arbitrary completion elements remains open.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

@@ -202,6 +202,14 @@ Lemma 8.1(i). The next completion step must extend the statement to `K_pˣ`
 and construct the quadratic-defect and good-BONG scalar-extension arguments;
 none of those is inferred from density alone.
 
+Report 39 now constructs the continuous finite-dimensional map
+`K_p -> L_P` and proves that it agrees with `K -> L` on the dense subfield.
+The author-review question is correspondingly narrower: which normalized
+completed valuation theorem should be used to prove
+`ord_P(x) = e(P/p) ord_p(x)` for every `x : K_p^x`? The formalization does not
+yet claim this equality, the quadratic-defect inequality, or good-BONG
+preservation.
+
 For Theorem 1.9's finite-place step, the all-places conclusion is now derived
 from separate non-dyadic, dyadic unary, and dyadic higher-rank laws.  The
 number-field expert should confirm those are exactly the three local cases in

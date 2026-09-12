@@ -80,6 +80,13 @@ its domain. Reviewers should verify that `adicOrder_liesOver` concerns
 The adapter correctly keeps defect scaling and good-BONG transfer as inputs.
 Any claim that Report 38 proves all of Lemma 8.1 would be a scope error.
 
+Report 39 closes the structural gap that `K_p` and `L_P` must be linked by an
+actual finite continuous extension. Reviewers should still reject an argument
+that infers valuation scaling merely from continuity or density: the map is
+proved, but its discrete-valuation compatibility on arbitrary completion
+elements is not. Likewise, no quadratic-defect or lattice scalar-extension
+claim follows automatically from the new algebra instances.
+
 The same anti-circularity test is applied to the finite-place half of Theorem
 1.9.  Report 31 removes the former field that asserted the complete quantified
 local conclusion and replaces it by the three source branches.  Reviewers

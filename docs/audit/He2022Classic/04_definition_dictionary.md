@@ -20,6 +20,8 @@
 | canonical number-field Section 8 arithmetic | `HeClassic2024NumberFieldGlobalData.toGlobalData` and `sectionEightLaws` |
 | additive order of a nonzero number-field coefficient at a finite prime | `HeClassic2024NumberFieldLocalExtension.adicOrder` |
 | finite-prime order scaling and ramification tower | `adicOrder_liesOver` and `absoluteRamificationIndex_tower` |
+| induced finite-completion embedding | `HeClassic2024NumberFieldLocalExtension.completionMap` |
+| scoped finite completed extension | `HeClassic2024NumberFieldLocalExtension.CompletionLiesOver` |
 | generic one-way discriminant package | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
@@ -48,3 +50,7 @@ definitions, so the three compatibility proofs are reflexivity; see Report 36.
 of mathlib's multiplicative adic valuation on `Kˣ`. Report 38 proves its
 scaling under `P | p` for underlying number-field coefficients. It does not
 define order or quadratic defect on all elements of the completions.
+Report 39 constructs the continuous map between those completions and proves
+that it restricts to the original number-field embedding. The scoped algebra
+and scalar-tower instances make the upper completion finite-dimensional over
+the lower one. No completed-field order or defect is defined by this step.

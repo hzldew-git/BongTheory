@@ -127,3 +127,13 @@ completes 5,674 jobs. All 30 policy tests pass, and the scanner checks 2,800
 Lean sources. The focused imported-closure gate checks 62,819 declarations.
 These reports do not prove the two remaining input fields or extend the
 coefficient type from `Kˣ` to the completion; Report 38.
+
+At code checkpoint `82a2b04`, the map between finite completions, its
+dense-subfield compatibility, and its continuity use only `propext`,
+`Classical.choice`, and `Quot.sound`. Scoped instances additionally allow Lean
+to infer that the upper completion is finite-dimensional over the lower one.
+The focused build completes 5,651 jobs and the combined canonical/audit build
+completes 5,674 jobs. All 30 policy tests pass, the scanner checks 2,800 Lean
+sources, and the focused imported-closure gate checks 62,830 declarations.
+This proves completion-extension infrastructure, not the outstanding
+completed-field valuation or defect laws; Report 39.

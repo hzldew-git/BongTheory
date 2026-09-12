@@ -75,6 +75,13 @@ the source statement for an arbitrary element of `K_pˣ`. Its remaining
 quadratic-defect inequality and good-BONG transfer are still ordinary theorem
 premises and are not discharged by the adapter's axiom report.
 
+Report 39 removes the need to assume that the two selected completions form an
+extension: the ring homomorphism, continuity, scalar tower, and finite
+dimensionality are now constructed. It deliberately does not derive the
+discrete valuation on arbitrary completion elements from continuity alone.
+That valuation-compatibility theorem, the defect inequality, and lattice
+scalar extension remain genuine obligations.
+
 Report 31 removes the all-finite-places local-universality conclusion from
 `SectionEightLaws`. Its replacement originally exposed four inputs. Report 32
 discharges odd-discriminant-to-index-one from the number-field bridge, so the
