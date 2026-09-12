@@ -340,3 +340,8 @@ The literal matrices are concrete, but their identification with an exhaustive
 Oh catalogue and the prime-by-prime local checks are still not implemented.
 `BongTest.He2023ADCAudit` prints the actual public types and selected
 transitive axiom sets.
+
+`BongTest.He2023ADCDyadicLocalModelAudit` independently checks the concrete
+one-place adapter, its abstract/concrete ADC bridge, the unconditional local
+law package, and local Theorem 1.5(i). It is included with all other manifest
+audits in the exact clean Review Kit recorded by Report 82.

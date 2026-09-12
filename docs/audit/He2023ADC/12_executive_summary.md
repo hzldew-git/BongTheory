@@ -471,3 +471,13 @@ the repaired Theorem 7.1 in odd rank. Hence the concrete law package and local
 Theorem 1.5(i) have no additional proposition-valued input. This is not an
 all-place number-field model and does not change the Grade-D `NOT_COMPLETE`
 verdict.
+
+Report 82 closes the replacement local reproducibility gate through the
+concrete dyadic model. The exact clean archive at `f358750` verifies 2,113
+payload hashes, completes a controlled 5,595-job fresh-extraction build and
+all 22 manifest audits, passes the 61,167-declaration enforcing gate, passes
+both Mathematica certificates, and matches all nine locked dependency heads.
+This mechanical result does not repair the disclosed source mismatches,
+instantiate the remaining arithmetic interfaces, provide GitHub exact-head
+evidence, or replace author, domain-expert, and formalization-expert review.
+The project therefore remains Grade D and `NOT_COMPLETE`.
