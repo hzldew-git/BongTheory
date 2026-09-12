@@ -1,6 +1,10 @@
 name: Release reproducibility
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/reproducibility.yml'
   workflow_dispatch:
     inputs:
       checkout_ref:
@@ -34,11 +38,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 360
     env:
-      # Four workers are already used by the complete-source CI shards and
-      # keep the Windows clean build below GitHub's six-hour hard deadline.
-      # The two-worker release job reached that deadline on two consecutive
-      # exact-tag attempts, while the corresponding Ubuntu run succeeded.
-      LEAN_NUM_THREADS: '4'
+      # The exact v0.4.0-rc.1 Windows run exhausted memory with four workers
+      # after 5,514 of 5,668 build jobs.  Two workers had previously reached
+      # the six-hour job limit, so Windows uses the bounded middle setting.
+      # Ubuntu retains the already verified four-worker configuration.
+      LEAN_NUM_THREADS: ${{ matrix.os == 'windows-latest' && '3' || '4' }}
 
     steps:
       - name: Check out the exact revision
@@ -128,7 +132,9 @@ jobs:
         with:
           name: audit-logs-${{ matrix.os }}
           path: ${{ runner.temp }}/bong-audit-logs/*.log
-          if-no-files-found: error
+          # A failed build runs before the audit directory is created.  Do not
+          # mask that primary failure with a second missing-artifact failure.
+          if-no-files-found: warn
 
       - name: Verify exact clean worktree
         shell: pwsh
