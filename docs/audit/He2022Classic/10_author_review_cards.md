@@ -210,6 +210,12 @@ completed valuation theorem should be used to prove
 yet claim this equality, the quadratic-defect inequality, or good-BONG
 preservation.
 
+Report 40 supersedes the valuation question: the completed valuation identity
+and additive order formula are now proved for every `x : K_pˣ` by an explicit
+continuity-and-density argument. Author review should verify the normalization
+of `ord` against v5. The next formalization targets are precisely the defect
+inequality in Lemma 8.1(ii) and good-BONG preservation in Lemma 8.1(iii).
+
 For Theorem 1.9's finite-place step, the all-places conclusion is now derived
 from separate non-dyadic, dyadic unary, and dyadic higher-rank laws.  The
 number-field expert should confirm those are exactly the three local cases in

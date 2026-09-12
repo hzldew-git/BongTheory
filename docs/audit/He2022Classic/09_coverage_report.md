@@ -56,6 +56,9 @@ Coverage status:
   Report 39 constructs the continuous finite-dimensional extension between
   the selected finite completions and proves its dense-subfield compatibility.
   The arbitrary-completion-element valuation law itself remains uncovered.
+  Report 40 proves that remaining valuation law and its additive order form
+  for every nonzero completed-field element. Thus Lemma 8.1(i) is covered;
+  Lemma 8.1(ii)--(iii) remain uncovered at the concrete completion level.
   The source-facing Theorem 1.7 endpoint is restricted to `n >= 2` even, and
   its rank-independent logical tail is separately exposed; Report 33.
   Theorem 1.9's all-finite-place local-universality conclusion is derived from

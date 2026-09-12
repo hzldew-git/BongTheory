@@ -137,3 +137,12 @@ completes 5,674 jobs. All 30 policy tests pass, the scanner checks 2,800 Lean
 sources, and the focused imported-closure gate checks 62,830 declarations.
 This proves completion-extension infrastructure, not the outstanding
 completed-field valuation or defect laws; Report 39.
+
+At code checkpoint `a5c1002`, `completionMap_valuation`,
+`completionAdicOrder_liesOver`, and the completed Lemma 8.1 adapter use only
+`propext`, `Classical.choice`, and `Quot.sound`. The focused build completes
+5,651 jobs and the combined canonical/audit build completes 5,674 jobs. All
+30 policy tests pass, the scanner checks 2,800 Lean sources, and the focused
+imported-closure gate checks 62,857 declarations. Lemma 8.1(i) is now proved
+at completed-field scope; defect scaling and good-BONG transfer remain
+explicit; Report 40.

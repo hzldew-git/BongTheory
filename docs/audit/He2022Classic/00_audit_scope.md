@@ -54,6 +54,11 @@ finite completions, proves compatibility with the dense number-field
 embedding, and installs scoped algebra, scalar-tower, and continuous-scalar
 structures from which finite-dimensionality is inferred. Valuation scaling
 for arbitrary completion elements remains open.
+Report 40 closes that final part of Lemma 8.1(i): continuity of both completed
+valuations and density extend the prime-ideal equality to every element of the
+lower completion, and taking logarithms gives the additive order-scaling law
+on `K_pˣ`. Quadratic-defect scaling and good-BONG scalar extension remain
+explicit.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

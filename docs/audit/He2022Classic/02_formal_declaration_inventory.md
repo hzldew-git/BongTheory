@@ -88,6 +88,14 @@ The proposition-valued definition remains separate from its proof:
   give the completed algebra, scalar tower, continuous scalar multiplication,
   and finite-dimensional extension; Report 39. This does not yet prove
   valuation scaling for arbitrary elements of `K_p`.
+- `completionMap_valuation` and `completionAdicOrder_liesOver`: extend the
+  multiplicative valuation identity by continuity from the dense
+  number-field subfield and deduce the additive order formula for every
+  element of `K_pˣ`; Report 40.
+- `RemainingCompletionInputs.toLocalExtensionData` and `lemma81Laws`: use the
+  actual lower and upper completions and their embedding, discharge all of
+  Lemma 8.1(i) plus ramification positivity and the tower, and retain only the
+  defect inequality and good-BONG transfer as inputs; Report 40.
 - `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` and
   `sumOfSquares_localUniversal_of_oddDiscriminant`: the non-dyadic, dyadic
   unary, and dyadic higher-rank inputs and their derived all-finite-place
@@ -148,6 +156,7 @@ constructions, and downstream consumers.
 arithmetic adapter and the derived Section 8 package from Report 36.
 `BongTest/He2022ClassicNumberFieldLocalExtensionAudit.lean` checks the
 finite-prime order and ramification theorems, their partial Lemma 8.1 adapter,
-the finite-completion map, and finite-dimensionality from Reports 38--39.
+the finite-completion map and finite-dimensionality, and completed-field order
+scaling from Reports 38--40.
 `BongTest/He2022ClassicLocalUniversalityAudit.lean` checks the Report 31
 finite-place case split and the full conditional Theorem 1.9 endpoint.

@@ -82,6 +82,12 @@ discrete valuation on arbitrary completion elements from continuity alone.
 That valuation-compatibility theorem, the defect inequality, and lattice
 scalar extension remain genuine obligations.
 
+Report 40 discharges the valuation-compatibility obligation for all elements
+of the lower completion. The proof explicitly establishes continuity of both
+valuation-valued functions before using density. The only remaining fields in
+the completed Lemma 8.1 adapter are the quadratic-defect inequality and
+good-BONG transfer; neither is inferred from the order theorem.
+
 Report 31 removes the all-finite-places local-universality conclusion from
 `SectionEightLaws`. Its replacement originally exposed four inputs. Report 32
 discharges odd-discriminant-to-index-one from the number-field bridge, so the

@@ -224,3 +224,14 @@ checks 2,800 tracked Lean sources, and the focused imported-closure gate
 reports `AXIOM_GATE_PASS: 62830 declarations checked`. Report 39 records the
 strict semantic boundary. An exact fresh-extraction kit for this newer commit
 remains pending.
+
+## Completed-field order-scaling checkpoint
+
+At exact code commit `a5c100249faf6ef2d10eb1385cd06fd54a1cb1d5`, the
+valuation identity on all completion elements, the additive order formula on
+completion units, and the completed Lemma 8.1 adapter are kernel checked. The
+focused build completes 5,651 jobs and the canonical paper plus combined
+Classic audit completes 5,674 jobs. All 30 policy tests pass, the scanner
+checks 2,800 tracked Lean sources, and the focused imported-closure gate
+reports `AXIOM_GATE_PASS: 62857 declarations checked`. Report 40 records the
+semantic scope. A fresh exact Review Kit for this checkpoint remains pending.

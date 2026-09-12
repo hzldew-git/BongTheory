@@ -87,6 +87,12 @@ proved, but its discrete-valuation compatibility on arbitrary completion
 elements is not. Likewise, no quadratic-defect or lattice scalar-extension
 claim follows automatically from the new algebra instances.
 
+Report 40 supplies the missing argument: both valuation-valued functions are
+proved continuous, their equality on the number-field subfield is transported
+through `completionMap_coe`, and continuous extensionality over the dense
+range gives equality everywhere. Reviewers should now treat Lemma 8.1(i) as
+proved for finite completions, but must keep Lemma 8.1(ii)--(iii) separate.
+
 The same anti-circularity test is applied to the finite-place half of Theorem
 1.9.  Report 31 removes the former field that asserted the complete quantified
 local conclusion and replaces it by the three source branches.  Reviewers

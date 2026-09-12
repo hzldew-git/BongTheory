@@ -22,6 +22,8 @@
 | finite-prime order scaling and ramification tower | `adicOrder_liesOver` and `absoluteRamificationIndex_tower` |
 | induced finite-completion embedding | `HeClassic2024NumberFieldLocalExtension.completionMap` |
 | scoped finite completed extension | `HeClassic2024NumberFieldLocalExtension.CompletionLiesOver` |
+| additive order on a finite completion | `HeClassic2024NumberFieldLocalExtension.completionAdicOrder` |
+| completed-field order scaling | `completionMap_valuation` and `completionAdicOrder_liesOver` |
 | generic one-way discriminant package | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
@@ -54,3 +56,6 @@ Report 39 constructs the continuous map between those completions and proves
 that it restricts to the original number-field embedding. The scoped algebra
 and scalar-tower instances make the upper completion finite-dimensional over
 the lower one. No completed-field order or defect is defined by this step.
+Report 40 defines the completed-field order on `K_pˣ`, proves its scaling under
+the completed embedding, and supplies the order field of the Lemma 8.1
+adapter. A completed-field quadratic-defect definition remains open.
