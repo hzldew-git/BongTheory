@@ -11,6 +11,7 @@ import Bong.Dyadic.PrincipalUnitResidueQuotient
 import Bong.Dyadic.UnitSquareClassOddLayer
 import Bong.Dyadic.UnitSquareClassCount
 import Bong.Lattice.He2023ADCSectionEight
+import Bong.Lattice.He2023ADCDyadicLocalModel
 import Bong.Lattice.He2023ADCEnumerativeMain
 import Bong.Bong.He2023ADCSectionThree
 import Bong.Bong.He2023ADCPublishedRepresentation

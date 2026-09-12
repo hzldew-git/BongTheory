@@ -6,8 +6,9 @@ The sole semantic authority is the 42-page Doc. Math. version of record, DOI
 The 2025 arXiv v3 revision is comparison-only. The publisher hash was checked
 again while validating code commit `2a151a8024d10ae094df958cd3626dbd13c447c2`.
 
-The current audited code checkpoint is `7d7a4d5`, branch
-`feat/he-formalization`, Lean 4.32.1, audited on 8 September 2026
+The current audited code checkpoint is `f358750b10f41f03066d2b3acb31552bad58c15e`,
+branch `feat/he2023adc-dyadic-local-model`, Lean 4.32.1, audited on
+12 September 2026
 (Asia/Shanghai). Its additional published-family endpoints for Lemmas
 4.11--4.12 are detailed in `14_published_profile_checkpoint.md`; the subsequent
 complete Proposition 4.13 is audited in `15_odd_maximal_structure_checkpoint.md`.
@@ -181,6 +182,14 @@ Report 80 records a strict single-paper Review Kit from clean commit
 manifest audits, the 61,155-declaration enforcing gate, and both Mathematica
 certificates pass. This closes local reproducibility for Reports 70--79, not
 the remaining concrete arithmetic or semantic boundaries.
+Report 81 constructs the one-place dyadic local-maximality package from actual
+bundled lattice theorems, with no proposition-valued local classification
+input. Report 82 records its exact replacement Review Kit at clean commit
+`f358750`: 2,113 payload hashes, a controlled 5,595-job fresh-extraction build,
+all 22 manifest audits, the 61,167-declaration enforcing gate, both Mathematica
+certificates, and all nine locked dependency checks pass. GitHub deployment,
+all-place arithmetic instances, source corrections, and human review remain
+separate.
 Report 76 removes the final local-2-ADC-to-scaled-stability field used in
 Lemma 8.4. The implication is now derived placewise from the local form
 classified by Theorem 6.2 and Proposition 4.16, its behavior under scaling,

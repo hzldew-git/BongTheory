@@ -135,7 +135,9 @@ The main unresolved mathematical work is:
   exhaustion and irredundancy themselves are derived in Report 72;
 - concrete number-field instances of `SectionEightLaws`, its lower
   `ClassNumberRegularityLaws` genus-lifting and isometry-transport package,
-  and the earlier global reduction packages;
+  the non-dyadic and all-place assembly of local maximality, and the earlier
+  global reduction packages; Report 81 closes the one-place dyadic
+  local-maximality instance only;
 - any publisher-corrected replacement for the four binary statements and a
   resolution of the printed-strength Lemma 7.13 claim;
 - concrete Hanke--Kirschmer--Oh catalogue imports, the global interpretation
@@ -143,7 +145,8 @@ The main unresolved mathematical work is:
   computations underlying Corollary 1.8 and Theorem 1.11;
 - GitHub-hosted exact-revision CI, independent human semantic sign-off,
   merge, and release promotion. The current strict local Review Kit through
-  Report 79 passes at `17fc8c9`; see Report 80.
+  Report 79 passes at `17fc8c9`; see Report 80. The later Report 81 checkpoint
+  has focused local evidence but not yet a replacement clean Review Kit.
 
 The whole-paper verdict remains `NOT_COMPLETE`, with grade D because the
 published version contains substantive classification mismatches. That grade
