@@ -13,15 +13,17 @@ import Mathlib.Topology.Algebra.UniformRing
 
 This file proves the order-scaling and ramification-tower statements for a
 nonzero coefficient in a number field and two height-one primes in a finite
-extension.  It is the dense global-coefficient specialization of Lemma 8.1(i),
-not yet the statement for every element of the completed local field.
+extension. It then constructs the induced map of finite completions and uses
+continuity and density to prove Lemma 8.1(i) for every nonzero element of the
+completed base field.
 
-The final adapter derives the three arithmetic fields of
-`HeClassic2024LocalExtensionData.Lemma81Laws`.  Quadratic-defect scaling and
+The completed-field adapter derives the three arithmetic fields of
+`HeClassic2024LocalExtensionData.Lemma81Laws`. Quadratic-defect scaling and
 good-BONG scalar extension remain explicit inputs.
 -/
 
 open scoped NumberField
+open WithZeroTopology
 
 namespace Bong.HeClassic2024NumberFieldLocalExtension
 
@@ -182,6 +184,136 @@ theorem continuous_completionMap
     (IsDedekindDomain.HeightOneSpectrum.adicCompletion.continuous_ofCompletion L P).comp
       (UniformSpace.Completion.continuous_map.comp
         (IsDedekindDomain.HeightOneSpectrum.adicCompletion.continuous_toCompletion K p))
+
+/-- The valuation on the upper completion restricts to the ramification-index
+power of the valuation on the lower completion. The equality is first known
+on the dense number-field subfield and is extended by continuity. -/
+theorem completionMap_valuation
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    (p : IsDedekindDomain.HeightOneSpectrum (𝓞 K))
+    (P : IsDedekindDomain.HeightOneSpectrum (𝓞 L))
+    [P.asIdeal.LiesOver p.asIdeal]
+    (x : p.adicCompletion K) :
+    Valued.v (completionMap p P x) =
+      Valued.v x ^ P.asIdeal.ramificationIdx (𝓞 K) := by
+  have hleft :
+      Continuous (fun y : p.adicCompletion K =>
+        Valued.v (completionMap p P y)) :=
+    (Valued.continuous_valuation_of_surjective
+      (P.valuedAdicCompletion_surjective L)).comp
+        (continuous_completionMap p P)
+  have hright :
+      Continuous (fun y : p.adicCompletion K =>
+        Valued.v y ^ P.asIdeal.ramificationIdx (𝓞 K)) :=
+    (Valued.continuous_valuation_of_surjective
+      (p.valuedAdicCompletion_surjective K)).pow _
+  have heq :
+      (fun y : p.adicCompletion K => Valued.v (completionMap p P y)) =
+        (fun y : p.adicCompletion K =>
+          Valued.v y ^ P.asIdeal.ramificationIdx (𝓞 K)) := by
+    apply Continuous.ext_on (p.denseRange_algebraMap K) hleft hright
+    rintro _ ⟨y, rfl⟩
+    change Valued.v (completionMap p P (y : p.adicCompletion K)) =
+      Valued.v (y : p.adicCompletion K) ^
+        P.asIdeal.ramificationIdx (𝓞 K)
+    rw [completionMap_coe]
+    simp only [IsDedekindDomain.HeightOneSpectrum.adicCompletion.valued_coe]
+    simpa [Ideal.ramificationIdx'_eq_ramificationIdx
+      p.asIdeal P.asIdeal p.ne_bot] using
+        (p.valuation_liesOver L P y).symm
+  exact congrFun heq x
+
+/-- The additive order of a nonzero element of a number-field finite
+completion. -/
+noncomputable def completionAdicOrder
+    {K : Type*} [Field K] [NumberField K]
+    (p : IsDedekindDomain.HeightOneSpectrum (𝓞 K))
+    (x : (p.adicCompletion K)ˣ) : Int :=
+  -(Valued.v (x : p.adicCompletion K)).log
+
+/-- The full order-scaling part of He (2024), Lemma 8.1(i), for every nonzero
+element of the completed base field. -/
+theorem completionAdicOrder_liesOver
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    (p : IsDedekindDomain.HeightOneSpectrum (𝓞 K))
+    (P : IsDedekindDomain.HeightOneSpectrum (𝓞 L))
+    [P.asIdeal.LiesOver p.asIdeal]
+    (x : (p.adicCompletion K)ˣ) :
+    completionAdicOrder P (Units.map (completionMap p P) x) =
+      completionAdicOrder p x *
+        (P.asIdeal.ramificationIdx (𝓞 K) : Int) := by
+  unfold completionAdicOrder
+  change
+    -(Valued.v (completionMap p P (x : p.adicCompletion K))).log =
+      -(Valued.v (x : p.adicCompletion K)).log *
+        (P.asIdeal.ramificationIdx (𝓞 K) : Int)
+  rw [completionMap_valuation, WithZero.log_pow]
+  simp only [nsmul_eq_mul]
+  ring
+
+/-- The remaining parts of Lemma 8.1 after the completed-field order and
+ramification formulas have been proved. The extension-side data are evaluated
+on the images of the base coefficients under `completionMap`. -/
+structure RemainingCompletionInputs
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    (p : IsDedekindDomain.HeightOneSpectrum (𝓞 K))
+    (P : IsDedekindDomain.HeightOneSpectrum (𝓞 L))
+    [P.asIdeal.LiesOver p.asIdeal] where
+  baseDefect : (p.adicCompletion K)ˣ → WithTop ℚ
+  extensionDefect : (P.adicCompletion L)ˣ → WithTop ℚ
+  BaseGoodBONG : {m : Nat} → (Fin m → (p.adicCompletion K)ˣ) → Prop
+  ExtensionGoodBONG : {m : Nat} → (Fin m → (P.adicCompletion L)ˣ) → Prop
+  defect_scale (x : (p.adicCompletion K)ˣ) :
+    (((P.asIdeal.ramificationIdx (𝓞 K) : Nat) : ℚ) : WithTop ℚ) *
+        baseDefect x ≤
+      extensionDefect (Units.map (completionMap p P) x)
+  goodBONG_transfer {m : Nat} (a : Fin m → (p.adicCompletion K)ˣ) :
+    BaseGoodBONG a →
+      ExtensionGoodBONG (fun i => Units.map (completionMap p P) (a i))
+
+/-- Interpret the actual finite-completion extension in the abstract
+local-extension interface used by Section 8. -/
+noncomputable def RemainingCompletionInputs.toLocalExtensionData
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    {p : IsDedekindDomain.HeightOneSpectrum (𝓞 K)}
+    {P : IsDedekindDomain.HeightOneSpectrum (𝓞 L)}
+    [P.asIdeal.LiesOver p.asIdeal]
+    (D : RemainingCompletionInputs p P) :
+    HeClassic2024LocalExtensionData where
+  Element := (p.adicCompletion K)ˣ
+  baseOrder := completionAdicOrder p
+  extensionOrder x :=
+    completionAdicOrder P (Units.map (completionMap p P) x)
+  baseDefect := D.baseDefect
+  extensionDefect x :=
+    D.extensionDefect (Units.map (completionMap p P) x)
+  baseRamificationIndex := p.asIdeal.ramificationIdx ℤ
+  extensionRamificationIndex := P.asIdeal.ramificationIdx ℤ
+  relativeRamificationIndex := P.asIdeal.ramificationIdx (𝓞 K)
+  BaseGoodBONG := D.BaseGoodBONG
+  ExtensionGoodBONG a :=
+    D.ExtensionGoodBONG (fun i => Units.map (completionMap p P) (a i))
+
+/-- Derive the completed-field order, positivity, and ramification-tower fields
+of Lemma 8.1; only defect scaling and good-BONG transfer remain supplied by
+the caller. -/
+theorem RemainingCompletionInputs.lemma81Laws
+    {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
+    [Algebra K L] [FiniteDimensional K L]
+    {p : IsDedekindDomain.HeightOneSpectrum (𝓞 K)}
+    {P : IsDedekindDomain.HeightOneSpectrum (𝓞 L)}
+    [P.asIdeal.LiesOver p.asIdeal]
+    (D : RemainingCompletionInputs p P) :
+    D.toLocalExtensionData.Lemma81Laws where
+  relativeRamificationIndex_pos := relativeRamificationIndex_pos p P
+  ramificationIndex_tower := absoluteRamificationIndex_tower p P
+  order_scale := completionAdicOrder_liesOver p P
+  defect_scale := D.defect_scale
+  goodBONG_transfer := D.goodBONG_transfer
 
 /-! The instances are scoped to avoid creating an unconditional global
 instance diamond if mathlib later supplies the same finite-completion map. -/

@@ -21,6 +21,12 @@ open scoped NumberField
 #check completionMap
 #check completionMap_coe
 #check continuous_completionMap
+#check completionMap_valuation
+#check completionAdicOrder
+#check completionAdicOrder_liesOver
+#check RemainingCompletionInputs
+#check RemainingCompletionInputs.toLocalExtensionData
+#check RemainingCompletionInputs.lemma81Laws
 
 #print axioms adicOrder_liesOver
 #print axioms relativeRamificationIndex_pos
@@ -29,6 +35,10 @@ open scoped NumberField
 #print axioms RemainingCoefficientInputs.lemma81Laws
 #print axioms completionMap_coe
 #print axioms continuous_completionMap
+#print axioms completionMap_valuation
+#print axioms completionAdicOrder_liesOver
+#print axioms RemainingCompletionInputs.toLocalExtensionData
+#print axioms RemainingCompletionInputs.lemma81Laws
 
 open scoped CompletionLiesOver in
 example
