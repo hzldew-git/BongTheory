@@ -775,3 +775,20 @@ clean at the exact locked revisions. Report 80 gives the full receipt.
 This closes the local clean-kit gate through Reports 70--79. GitHub CI for a
 later branch or tag, concrete arithmetic instances, source corrections, and
 human semantic review remain separate.
+
+## Exact clean Review Kit through the concrete dyadic local model
+
+At exact clean checkpoint `f358750b10f41f03066d2b3acb31552bad58c15e`,
+`BongTheory-He2023ADC-v0.4.1-rc.1-review-kit.zip` has SHA-256
+`CD0DD5C6E3CD187F1318438653EE8F2871B03C44032EA4279731AF06E3F841C0`
+and size 6,358,627 bytes. A controlled fresh extraction verifies 2,113 payload
+hashes and completes all 5,595 build jobs. All 21 paper-specific audits and
+the enforcing `PaperAxiomGate` pass; the latter checks 61,167 declarations.
+Both Mathematica certificates pass, and all nine dependency repositories are
+clean at their exact locked revisions. The source scanner checks 2,740 Lean
+files and all 30 policy tests pass. Report 82 gives the full staged-resume
+receipt and its limitations.
+
+This closes the local clean-kit gate through Report 81. GitHub exact-head CI,
+concrete non-dyadic and all-place number-field instances, source corrections,
+and independent human semantic review remain separate.
