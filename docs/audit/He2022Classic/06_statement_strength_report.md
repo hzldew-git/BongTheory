@@ -80,7 +80,17 @@ formula and ramification tower for `x : Kˣ` at actual height-one primes in a
 finite number-field extension. This is a genuine specialization of Lemma
 8.1(i) to underlying number-field coefficients, not a strengthening to every
 element of `K_p`. The completed-field extension, defect inequality, and
-good-BONG scalar extension remain explicitly outside the theorem.
+good-BONG scalar extension remain explicitly outside that historical theorem.
+
+Reports 39--41 complete the corresponding finite-completion arithmetic.
+Report 39 constructs the completion map, Report 40 proves order scaling for
+every nonzero completed element, and Report 41 proves both relative-defect
+scaling and preservation of the exact good-BONG coefficient criterion.
+Accordingly `completionLemma81Laws` has no paper-specific arithmetic premise.
+This is stronger formalization evidence than the old conditional adapter, but
+it is still weaker than a theorem about a concrete localized global lattice:
+the carrier, localization, scalar extension, and orthogonal-basis
+identification have not been constructed.
 
 Report 31 removes another final-conclusion field from Theorem 1.9.  Instead of
 assuming local universality at every finite place, the formalization assumes

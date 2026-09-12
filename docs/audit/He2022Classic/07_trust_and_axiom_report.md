@@ -146,3 +146,15 @@ At code checkpoint `a5c1002`, `completionMap_valuation`,
 imported-closure gate checks 62,857 declarations. Lemma 8.1(i) is now proved
 at completed-field scope; defect scaling and good-BONG transfer remain
 explicit; Report 40.
+
+At code checkpoint `c6d22da`, `completionQuadraticDefect_scale`,
+`completionQuadraticDefectQ_scale`,
+`completionGoodBONGCoefficients_map`, and `completionLemma81Laws` use only
+`propext`, `Classical.choice`, and `Quot.sound`. The focused build completes
+5,651 jobs and the canonical paper plus all eight manifest-listed audits
+complete 5,674 jobs. All 30 policy tests pass, the scanner checks 2,800 Lean
+sources, and the focused imported-closure gate reports
+`AXIOM_GATE_PASS: 62850 declarations checked`. This closes every arithmetic
+field of the finite-completion Lemma 8.1 adapter at coefficient-criterion
+scope. It does not discharge the global lattice/localization or orthogonal-
+basis identification boundary; Report 41.

@@ -23,13 +23,13 @@ equivalence.
 `HeClassic2024GlobalData.SectionEightLaws`, and
 `HeClassic2024ExtensionData.Lemma83Laws` expose every arithmetic input used by
 the conditional Section 8 deductions. In particular, they expose O'Meara
-81:14 globalization, localization of universality, the ramification-index and
-defect scaling laws, transfer of a good BONG, the place-identification bridge,
-the diagonal coefficient step, the ramified-extension
+81:14 globalization, localization of universality, the place-identification
+bridge, the diagonal coefficient step, the ramified-extension
 obstruction, and strong approximation for sums of squares. Most remain theorem
-premises without concrete instances; the discriminant arithmetic is the
-exception proved in Report 32. A standard-only axiom report does not discharge
-the remaining premises. See Report 23.
+premises without concrete instances. The discriminant arithmetic is proved in
+Report 32, and the finite-completion order, defect, and good-BONG coefficient
+laws are proved in Reports 38--41. A standard-only axiom report does not
+discharge the remaining global premises. See Report 23.
 
 Report 27 removes the complete Proposition 8.2 conclusion from
 `SectionEightLaws`.  Its replacement `Proposition82Laws` still assumes four
@@ -73,7 +73,7 @@ and the absolute ramification tower are theorems about actual height-one prime
 ideals. The specialization has element type `Kˣ`; it therefore does not prove
 the source statement for an arbitrary element of `K_pˣ`. Its remaining
 quadratic-defect inequality and good-BONG transfer are still ordinary theorem
-premises and are not discharged by the adapter's axiom report.
+premises and are not discharged by that historical adapter's axiom report.
 
 Report 39 removes the need to assume that the two selected completions form an
 extension: the ring homomorphism, continuity, scalar tower, and finite
@@ -84,9 +84,18 @@ scalar extension remain genuine obligations.
 
 Report 40 discharges the valuation-compatibility obligation for all elements
 of the lower completion. The proof explicitly establishes continuity of both
-valuation-valued functions before using density. The only remaining fields in
-the completed Lemma 8.1 adapter are the quadratic-defect inequality and
-good-BONG transfer; neither is inferred from the order theorem.
+valuation-valued functions before using density. At that checkpoint the only
+remaining fields in the completed Lemma 8.1 adapter were the quadratic-defect
+inequality and good-BONG transfer; neither was inferred from the order theorem.
+
+Report 41 constructs both remaining fields. Square-approximation depths define
+the completed relative quadratic defect and map to depths multiplied by the
+relative ramification index. Separately, the exact adjacent and two-step
+coefficient criterion for a good BONG is transported using order scaling,
+defect scaling, and the ramification tower. No caller-supplied arithmetic law
+remains in `completionLemma81Laws`. The still-open premise is structural: a
+concrete global-lattice model must identify its localized scalar extension and
+orthogonal basis with these mapped coefficients.
 
 Report 31 removes the all-finite-places local-universality conclusion from
 `SectionEightLaws`. Its replacement originally exposed four inputs. Report 32

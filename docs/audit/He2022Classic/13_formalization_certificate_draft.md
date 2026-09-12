@@ -9,7 +9,7 @@ comparison-only.
 Code checkpoint: current local v5 working tree on
 `release/heclassic-v0.5.0-rc.1-prep`;
 exact clean release commit pending. Proof assistant: Lean 4.32.1.
-Dependencies: the committed Lake manifest. Date: 2026-09-11. Project grade: D.
+Dependencies: the committed Lake manifest. Date: 2026-09-12. Project grade: D.
 
 Theorem 1.1 has a checked proof and provisional semantic correspondence.
 Theorem 1.3 is checked in both parity branches, including literal minimality.
@@ -29,6 +29,14 @@ Lemma 7.7, all three clauses of Lemma 7.10, the even literal-minimal endpoint,
 the corrected v5 Lemma 7.1, both testing equivalences, both literal-minimal
 endpoints, and the regression refuting the obsolete publisher Lemma 7.1(ii)
 are checked declarations.
+
+Lemma 8.1 is now proved for the actual selected finite completions at its
+numerical and coefficient-criterion scope: completed order scaling, relative
+quadratic-defect scaling, and preservation of the exact He--Hu good-BONG
+coefficient criterion. This does not yet construct the global-lattice
+localization, scalar-extension carrier, or orthogonal-basis identification
+needed to connect those coefficients to the remaining global Section 8
+theorems; see Report 41.
 
 Foundational axioms expected by the audit are propositional extensionality,
 classical choice, and quotient soundness. Arithmetic interfaces and all

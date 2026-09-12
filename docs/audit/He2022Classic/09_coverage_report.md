@@ -1,7 +1,7 @@
 # Coverage report
 
 Coverage status:
-`IN_PROGRESS_WITH_V5_ODD_COUNTEREXAMPLE_AND_EVEN_SECTION_8_SCOPE`.
+`IN_PROGRESS_WITH_COMPLETED_LOCAL_LEMMA_8_1_V5_ODD_COUNTEREXAMPLE_AND_EVEN_SECTION_8_SCOPE`.
 
 - Publisher inventory: 66/66 directly numbered items identified.
 - Main theorems: Theorem 1.1 has a complete local equivalence proof;
@@ -30,11 +30,14 @@ Coverage status:
   literal table index are checked. Thus Theorem 1.3(i)--(iii), including both
   literal-minimality conclusions, is proved. O'Meara 63:5 and 63:9 and all
   three numerical counts are proved internally.
-- Lemma 8.1, Proposition 8.2, Lemma 8.3, and all global main-theorem
-  deductions are conditionally checked as recorded in Report 23.  Proposition
-  8.2 is now derived from lower globalization/localization laws rather than
-  assumed as a final field; Report 27.  Examples and the concrete arithmetic
-  implementations behind those deductions are not claimed as covered.
+- Report 23 initially exposed Lemma 8.1, Proposition 8.2, Lemma 8.3, and all
+  global main-theorem deductions as conditional packages. Lemma 8.1's actual
+  finite-completion arithmetic is now constructed through Report 41, while
+  the global lattice connection and the other global deductions remain
+  conditional. Proposition 8.2 is derived from lower
+  globalization/localization laws rather than assumed as a final field;
+  Report 27. Examples and uninstantiated global arithmetic implementations
+  behind those deductions are not claimed as covered.
   Lemma 8.3 and Theorem 1.8 are covered only for `n >= 2` even; the
   unrestricted odd branches are explicitly excluded by Report 28.
   Theorem 1.9's local-to-global step is a derived theorem over lower
@@ -51,14 +54,20 @@ Coverage status:
   equivalence and concrete lattice/localization model remain.
   Report 38 proves finite-prime order scaling, relative ramification
   positivity, and the absolute ramification tower for nonzero coefficients in
-  the underlying number field. Arbitrary completion elements, defect scaling,
-  and good-BONG scalar extension remain uncovered.
+  the underlying number field. At that historical checkpoint arbitrary
+  completion elements, defect scaling, and good-BONG scalar extension were
+  still uncovered.
   Report 39 constructs the continuous finite-dimensional extension between
   the selected finite completions and proves its dense-subfield compatibility.
   The arbitrary-completion-element valuation law itself remains uncovered.
   Report 40 proves that remaining valuation law and its additive order form
-  for every nonzero completed-field element. Thus Lemma 8.1(i) is covered;
-  Lemma 8.1(ii)--(iii) remain uncovered at the concrete completion level.
+  for every nonzero completed-field element. Thus Lemma 8.1(i) is covered.
+  Report 41 defines completed relative quadratic defect, proves Lemma 8.1(ii),
+  and proves Lemma 8.1(iii) at the exact good-BONG coefficient-criterion
+  level. All fields of the actual finite-completion arithmetic adapter are
+  therefore covered. The global lattice carrier, localization, scalar-
+  extension basis identification, and downstream concrete instances remain
+  uncovered.
   The source-facing Theorem 1.7 endpoint is restricted to `n >= 2` even, and
   its rank-independent logical tail is separately exposed; Report 33.
   Theorem 1.9's all-finite-place local-universality conclusion is derived from

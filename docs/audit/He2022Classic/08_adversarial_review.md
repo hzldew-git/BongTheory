@@ -93,6 +93,15 @@ through `completionMap_coe`, and continuous extensionality over the dense
 range gives equality everywhere. Reviewers should now treat Lemma 8.1(i) as
 proved for finite completions, but must keep Lemma 8.1(ii)--(iii) separate.
 
+Report 41 proves those two remaining arithmetic clauses without importing
+them as assumptions. Reviewers should check that the supremum definition of
+relative defect handles exact squares and that the valuation inequality has
+the correct multiplicative direction. For part (iii), the theorem transports
+the exact He--Hu adjacent and two-step coefficient criterion. It must not be
+silently upgraded to a construction of a localized global lattice or an
+orthogonal basis of its scalar extension; those structures are not arguments
+of the theorem.
+
 The same anti-circularity test is applied to the finite-place half of Theorem
 1.9.  Report 31 removes the former field that asserted the complete quantified
 local conclusion and replaces it by the three source branches.  Reviewers

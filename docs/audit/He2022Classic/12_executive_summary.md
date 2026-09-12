@@ -16,10 +16,9 @@ The final global deduction, Theorem 1.9, and the even-rank parts of Theorems
 1.7 and 1.8 now have kernel-checked conditional endpoints over explicit
 Section 8 arithmetic packages. Theorem 1.7's parity-independent final
 contradiction is separately proved from an explicit local-defect premise.
-Concrete number-field localization,
-scalar-extension, and strong-approximation instances remain excluded, so this
-is not unconditional global
-coverage.
+Concrete global number-field lattice/localization, orthogonal-basis scalar-
+extension identification, and strong-approximation instances remain excluded,
+so this is not unconditional global coverage.
 Proposition 8.2 is no longer stored as a final arithmetic field: Report 27
 derives it from positive-definite globalization, localization, and local
 equivalence transport.  Those lower facts still require concrete
@@ -40,17 +39,19 @@ proposition are standard definitions and all compatibility is definitional.
 A concrete global model still needs the place equivalence at this bridge layer.
 Report 38 proves finite-prime order scaling, relative ramification positivity,
 and the absolute ramification tower for nonzero coefficients in the underlying
-number field. This is a concrete part of Lemma 8.1(i), but not its full
-completed-field statement; defect scaling and good-BONG scalar extension
-remain open.
+number field. This is the first concrete part of Lemma 8.1(i).
 Report 39 constructs the actual continuous finite-dimensional extension
 between the two finite completions and proves compatibility with the dense
-number-field embedding. Valuation scaling for arbitrary completion elements
-is still not proved.
+number-field embedding.
 Report 40 proves that remaining equality by continuous extensionality and
-deduces the additive order formula on all `K_pˣ`. Lemma 8.1(i) is therefore
-proved for the actual finite-completion extension; only parts (ii)--(iii)
-remain conditional.
+deduces the additive order formula on all `K_pˣ`.
+Report 41 defines completed relative quadratic defect and proves its
+ramification-scaled inequality, then transports the exact He--Hu good-BONG
+coefficient criterion under the completed embedding. All three clauses of
+Lemma 8.1 are therefore proved at actual finite-completion numerical and
+coefficient-criterion scope. The still-open boundary is the concrete global
+lattice/localization and orthogonal-basis identification, not a remaining
+order or defect law.
 Report 31 derives Theorem 1.9's finite-place local-universality conclusion from
 the separate non-dyadic, dyadic unary, and dyadic higher-rank laws in v5; the
 all-places conclusion is no longer stored as a package field.
@@ -68,7 +69,7 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md`, Reports 22--36, and Reports 38--40 are part of
+internally proved. `SOURCE_DELTA.md`, Reports 22--36, and Reports 38--41 are part of
 the review scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.
@@ -90,13 +91,15 @@ unrestricted statement, in addition to incomplete global arithmetic coverage.
 Theorem 1.1 correspondence remains provisional, not human-approved
 `VERIFIED_MATCH`. Trust reports inspect standard logical axioms separately
 from arithmetic interfaces and restricted theorem premises. Reproducibility
-at this checkpoint has exact local clean-kit evidence; GitHub CI and release
-evidence remain absent by design.
+has historical exact local clean-kit evidence at `c1ee018`; the newer
+`c6d22da` code-and-audit checkpoint still requires a fresh clean-kit run.
+GitHub CI and release evidence remain absent by design.
 
 Safe claim: a checked local classification, full v5 Theorem 1.3 testing
 development, and checked conditional Section 8 deductions. Unsafe claim:
 complete formalization or final deployment of the whole paper. Next actions
 are a v6 restriction of Corollary 6.3 and a source decision for the affected
 Lemma 8.3/Theorem 1.7/Theorem 1.8 odd branches,
-remaining concrete global arithmetic instances, independent review, and exact-commit
-release verification.
+the concrete global lattice/localization, local sum-of-squares, and strong-
+approximation instances, independent review, and exact-commit release
+verification.

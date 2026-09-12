@@ -14,11 +14,12 @@ The checkpoint includes the proved Theorem 1.1 equivalence, local Section 2-6
 proof chains, the complete n >= 1 local-field implication underlying Theorem
 1.5, corrected v5 Lemma 7.1, both testing equivalences in Lemma 7.4, and both
 literal-minimality branches of Theorem 1.3. It does not complete the
-concrete number-field localization, finite-extension, and
-strong-approximation inputs. The final global deduction of Theorem 1.5,
-Lemma 8.1, Proposition 8.2, Theorem 1.9, and the even-rank parts of Lemma 8.3,
-Theorem 1.7, and Theorem 1.8 are checked only conditionally over the explicit
-proof-data packages documented in Reports 23, 27, 28, and 33.
+concrete global number-field lattice/localization and strong-approximation
+inputs. The final global deduction of Theorem 1.5, Proposition 8.2, Theorem
+1.9, and the even-rank parts of Lemma 8.3, Theorem 1.7, and Theorem 1.8 are
+checked only conditionally over the explicit proof-data packages documented
+in Reports 23, 27, 28, and 33. Lemma 8.1 is now concrete at the actual
+finite-completion numerical and coefficient-criterion scope; Report 41.
 Report 27 strengthens this boundary: Proposition 8.2 itself is now derived
 from positive-definite globalization, localization, and representation
 transport laws rather than stored as a final-conclusion field.
@@ -48,7 +49,7 @@ Report 38 proves the finite-prime order-scaling law for nonzero coefficients
 in the underlying number field, together with relative ramification positivity
 and the absolute ramification tower. It does not extend the result to every
 element of the completion, and it leaves quadratic-defect scaling and
-good-BONG scalar extension explicit.
+good-BONG scalar extension explicit at that historical checkpoint.
 Report 39 constructs the actual continuous ring homomorphism between the two
 finite completions, proves compatibility with the dense number-field
 embedding, and installs scoped algebra, scalar-tower, and continuous-scalar
@@ -58,7 +59,13 @@ Report 40 closes that final part of Lemma 8.1(i): continuity of both completed
 valuations and density extend the prime-ideal equality to every element of the
 lower completion, and taking logarithms gives the additive order-scaling law
 on `K_pˣ`. Quadratic-defect scaling and good-BONG scalar extension remain
-explicit.
+explicit at that historical checkpoint.
+Report 41 defines the relative quadratic defect on the actual finite
+completion, proves its ramification-scaled inequality, and proves preservation
+of the exact He--Hu good-BONG coefficient criterion. Thus all fields of the
+local Lemma 8.1 arithmetic adapter are constructed. The result does not yet
+identify mapped coefficients with an orthogonal basis of a localized global
+lattice; the global lattice/localization bridge remains open.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

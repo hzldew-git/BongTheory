@@ -24,6 +24,12 @@
 | scoped finite completed extension | `HeClassic2024NumberFieldLocalExtension.CompletionLiesOver` |
 | additive order on a finite completion | `HeClassic2024NumberFieldLocalExtension.completionAdicOrder` |
 | completed-field order scaling | `completionMap_valuation` and `completionAdicOrder_liesOver` |
+| square approximation of depth `n` in a finite completion | `HeClassic2024NumberFieldLocalExtension.CompletionIsQuadraticApproximation` |
+| relative quadratic defect in a finite completion | `HeClassic2024NumberFieldLocalExtension.completionQuadraticDefect` |
+| completed-field quadratic-defect scaling | `completionQuadraticDefect_scale` and `completionQuadraticDefectQ_scale` |
+| BONG adjacent coefficient conditions | `HeClassic2024NumberFieldLocalExtension.CompletionBONGConditions` |
+| good-BONG coefficient criterion | `HeClassic2024NumberFieldLocalExtension.CompletionGoodBONGCoefficients` |
+| completed Lemma 8.1 arithmetic adapter | `HeClassic2024NumberFieldLocalExtension.completionLocalExtensionData` and `completionLemma81Laws` |
 | generic one-way discriminant package | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
@@ -58,4 +64,7 @@ and scalar-tower instances make the upper completion finite-dimensional over
 the lower one. No completed-field order or defect is defined by this step.
 Report 40 defines the completed-field order on `K_pˣ`, proves its scaling under
 the completed embedding, and supplies the order field of the Lemma 8.1
-adapter. A completed-field quadratic-defect definition remains open.
+adapter. Report 41 defines the completed relative quadratic defect, proves its
+ramification-scaled inequality, and proves preservation of the exact good-BONG
+coefficient criterion. The latter criterion is not itself an actual lattice,
+orthogonal basis, or localization construction; that bridge remains open.

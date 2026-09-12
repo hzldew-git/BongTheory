@@ -89,11 +89,11 @@ test classic universality.  Thus the even and odd literal-minimality halves of
 Theorem 1.3 are both kernel checked.
 
 Section 8's global--local deductions, including Proposition 8.2, the global
-sentence of Theorem 1.5, Lemma 8.1, the even part of Lemma 8.3, Theorems 1.7
-and 1.9, and the even part of Theorem 1.8, are proved over explicit arithmetic
-proof-data packages.  Concrete number-field localization,
-coefficient-transport, and strong-approximation instances remain to be
-constructed, so these conditional endpoints are not
+sentence of Theorem 1.5, the even part of Lemma 8.3, Theorems 1.7 and 1.9,
+and the even part of Theorem 1.8, are proved over explicit arithmetic
+proof-data packages. Concrete global number-field lattice/localization and
+strong-approximation instances remain to be constructed, so these conditional
+endpoints are not
 reported as full global formalizations.  Proposition 8.2 itself is derived
 from lower positive-definite globalization, localization, and representation-
 transport laws rather than stored as a final-conclusion field.  Theorem 1.9's
@@ -108,8 +108,14 @@ standard height-one spectrum, so their compatibility is definitional once a
 place equivalence is supplied.  For nonzero coefficients in the underlying
 number field, order scaling at a prime lying over another prime, relative
 ramification positivity, and the absolute ramification tower are also proved.
-Their extension to arbitrary completion elements, quadratic-defect scaling,
-and good-BONG scalar extension remain open.  The
+The actual continuous finite-completion embedding is constructed; order
+scaling and relative quadratic-defect scaling are proved for every nonzero
+completed element. The exact He--Hu adjacent and two-step good-BONG
+coefficient criterion is also proved to survive the completed embedding.
+Thus all three fields of the local Lemma 8.1 arithmetic adapter are proved at
+finite-completion coefficient-criterion scope. The global lattice carrier,
+localization, and identification of its scalar-extended orthogonal basis with
+those mapped coefficients remain open. The
 finite-place
 sufficiency part of Theorem 1.9 is also derived from separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
@@ -130,7 +136,7 @@ Corollary 6.3 is retained, and the downstream affected claims remain within
 the conditional Section 8 boundary documented in audit Reports 24 and 26.
 Only the explicit `n ≥ 2`, even-rank parts of Lemma 8.3 and Theorem 1.8 are
 exported; no unrestricted odd compatibility endpoint remains.  Reports
-27--38 document these lowered interfaces and the parity scope.
+27--41 document these lowered interfaces and the parity scope.
 -/
 
 namespace Bong

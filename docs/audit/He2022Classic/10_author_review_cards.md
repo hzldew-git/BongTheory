@@ -198,23 +198,29 @@ lattice/localization data.
 Report 38 proves the valuation-scaling and ramification-tower calculations at
 actual height-one primes for coefficients in `Kˣ`. The author should confirm
 that this is recorded only as the underlying-number-field specialization of
-Lemma 8.1(i). The next completion step must extend the statement to `K_pˣ`
-and construct the quadratic-defect and good-BONG scalar-extension arguments;
-none of those is inferred from density alone.
+Lemma 8.1(i). At that historical checkpoint the statement had not yet been
+extended to `K_pˣ`; none of the later conclusions is inferred from density
+alone.
 
 Report 39 now constructs the continuous finite-dimensional map
 `K_p -> L_P` and proves that it agrees with `K -> L` on the dense subfield.
-The author-review question is correspondingly narrower: which normalized
-completed valuation theorem should be used to prove
-`ord_P(x) = e(P/p) ord_p(x)` for every `x : K_p^x`? The formalization does not
-yet claim this equality, the quadratic-defect inequality, or good-BONG
-preservation.
+This structural checkpoint did not yet claim the completed valuation equality,
+the quadratic-defect inequality, or good-BONG preservation.
 
 Report 40 supersedes the valuation question: the completed valuation identity
 and additive order formula are now proved for every `x : K_pˣ` by an explicit
 continuity-and-density argument. Author review should verify the normalization
-of `ord` against v5. The next formalization targets are precisely the defect
+of `ord` against v5. At that checkpoint the remaining targets were the defect
 inequality in Lemma 8.1(ii) and good-BONG preservation in Lemma 8.1(iii).
+
+Report 41 completes both targets at finite-completion coefficient scope. The
+author/domain expert should verify that `CompletionIsQuadraticApproximation`
+is the relative defect convention intended in v5, including exact squares,
+and that `CompletionGoodBONGCoefficients` reproduces precisely the two
+adjacent inequalities and `R_i <= R_(i+2)` from He--Hu, Lemma 2.2. The
+formalization expert should separately review the still-missing bridge from a
+localized global lattice and its scalar-extended orthogonal basis to this
+coefficient sequence; Report 41 makes no carrier-level claim.
 
 For Theorem 1.9's finite-place step, the all-places conclusion is now derived
 from separate non-dyadic, dyadic unary, and dyadic higher-rank laws.  The

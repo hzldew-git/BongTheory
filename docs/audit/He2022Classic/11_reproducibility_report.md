@@ -10,19 +10,21 @@ proof `he2022ClassicTheorem11`, and print the latter's transitive axioms.
 The unary and all-ranks local Theorem 1.5 endpoints, Lemma 7.7, all three
 clauses of Lemma 7.10, Lemma 7.11, both literal-minimal endpoints, the v5
 Lemma 7.1 branches, and the comparison-source regression are audited too.
-The conditional Lemma 8.1, Proposition 8.2, Theorem 1.5 global deduction,
-Theorem 1.9, and the even-rank Lemma 8.3, Theorem 1.7, and Theorem 1.8
-endpoints are checked and have their axioms printed. The parity-independent
-logical tail of Theorem 1.7 is audited separately with its local-defect
-premise visible.
+The actual finite-completion arithmetic for all three clauses of Lemma 8.1,
+the conditional Proposition 8.2, Theorem 1.5 global deduction, Theorem 1.9,
+and the even-rank Lemma 8.3, Theorem 1.7, and Theorem 1.8 endpoints are checked
+and have their axioms printed. The parity-independent logical tail of Theorem
+1.7 is audited separately with its local-defect premise visible.
 
-Code checkpoint: `b8c379ad5bebb3f25e57be8c30fd9f01bd7dc78b` on the local
-v5 branch. Lean: 4.32.1; dependency versions: the committed
+Current code checkpoint: `c6d22da9282e112597f805e9104eae1cb88fb938`
+on the local v5 branch. Lean: 4.32.1; dependency versions: the committed
 `lake-manifest.json`. Reproducibility status for this exact checkpoint:
-`LOCALLY_REPRODUCIBLE_WITH_DOCUMENTED_SEMANTIC_EXCLUSIONS`. Successful local
-verification is not GitHub CI or evidence for a later release commit.
+`INCREMENTAL_LOCAL_CHECKS_PASS_FRESH_KIT_PENDING`. Successful local
+verification is not GitHub CI or clean-extraction evidence for a later
+release commit.
 
-On 10 September 2026, the exact source-only Review Kit for that commit passed
+On 10 September 2026, the exact source-only Review Kit for the older
+`b8c379a` commit passed
 structural verification of 1,993 payload files, a fresh-extraction 5,028-job
 build, `BongTest.He2022ClassicAudit`, and the enforcing
 `BongTest.PaperAxiomGate` over 62,622 declarations. Report 25 fixes the archive
@@ -235,3 +237,22 @@ Classic audit completes 5,674 jobs. All 30 policy tests pass, the scanner
 checks 2,800 tracked Lean sources, and the focused imported-closure gate
 reports `AXIOM_GATE_PASS: 62857 declarations checked`. Report 40 records the
 semantic scope. A fresh exact Review Kit for this checkpoint remains pending.
+
+## Completed defect and good-BONG coefficient-scaling checkpoint
+
+At exact code commit `c6d22da9282e112597f805e9104eae1cb88fb938`, the
+completed relative quadratic-defect definition, its ramification-scaled
+inequality, the exact good-BONG coefficient criterion, its transfer under the
+completed embedding, and the fully constructed local Lemma 8.1 arithmetic
+adapter are kernel checked. The focused completion build completes 5,651 jobs,
+and the canonical paper plus all eight manifest-listed Classic audits complete
+5,674 jobs. The new audited declarations use only `propext`,
+`Classical.choice`, and `Quot.sound`. All 30 policy tests pass, the scanner
+checks 2,800 tracked Lean sources, and the focused imported-closure gate
+reports `AXIOM_GATE_PASS: 62850 declarations checked`. Report 41 records the
+semantic scope.
+
+This count is not expected to be monotone: the checkpoint replaces the former
+caller-supplied completed adapter and removes declarations as well as adding
+proofs. A fresh exact Review Kit for this code-and-audit checkpoint remains
+pending.

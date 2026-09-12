@@ -80,7 +80,8 @@ The proposition-valued definition remains separate from its proof:
 - `RemainingCoefficientInputs.toLocalExtensionData` and `lemma81Laws`:
   populate the order, positivity, and ramification-tower parts of Lemma 8.1
   while retaining only defect scaling and good-BONG transfer as inputs;
-  Report 38. This is not yet the arbitrary-completion-element statement.
+  Report 38. This underlying-number-field specialization is retained for
+  reference but is superseded at the actual completion scope by Report 41.
 - `HeClassic2024NumberFieldLocalExtension.completionMap`,
   `completionMap_coe`, and `continuous_completionMap`: construct the actual
   map `K_p -> L_P`, prove its compatibility with the dense number-field
@@ -92,10 +93,20 @@ The proposition-valued definition remains separate from its proof:
   multiplicative valuation identity by continuity from the dense
   number-field subfield and deduce the additive order formula for every
   element of `K_pˣ`; Report 40.
-- `RemainingCompletionInputs.toLocalExtensionData` and `lemma81Laws`: use the
-  actual lower and upper completions and their embedding, discharge all of
-  Lemma 8.1(i) plus ramification positivity and the tower, and retain only the
-  defect inequality and good-BONG transfer as inputs; Report 40.
+- `CompletionIsQuadraticApproximation`, `completionQuadraticDefect`, and
+  `completionQuadraticDefect_scale`: define the relative quadratic defect on
+  an actual finite completion, including infinite defect, and prove the full
+  inequality in Lemma 8.1(ii); Report 41.
+- `CompletionBONGConditions`, `CompletionGoodBONGCoefficients`, and
+  `completionGoodBONGCoefficients_map`: state the exact adjacent and two-step
+  coefficient criterion from He--Hu, Lemma 2.2, and prove its preservation
+  under the completed embedding; this is Lemma 8.1(iii) at coefficient-
+  criterion scope; Report 41.
+- `completionLocalExtensionData` and `completionLemma81Laws`: use the actual
+  lower and upper completions and their embedding and discharge every field
+  of the abstract Lemma 8.1 package without caller-supplied arithmetic laws;
+  Report 41. The separate global-lattice carrier, localization, and basis
+  scalar-extension bridge remain outside this adapter.
 - `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` and
   `sumOfSquares_localUniversal_of_oddDiscriminant`: the non-dyadic, dyadic
   unary, and dyadic higher-rank inputs and their derived all-finite-place
@@ -157,6 +168,7 @@ arithmetic adapter and the derived Section 8 package from Report 36.
 `BongTest/He2022ClassicNumberFieldLocalExtensionAudit.lean` checks the
 finite-prime order and ramification theorems, their partial Lemma 8.1 adapter,
 the finite-completion map and finite-dimensionality, and completed-field order
-scaling from Reports 38--40.
+scaling, defect scaling, and good-BONG coefficient-criterion transfer from
+Reports 38--41.
 `BongTest/He2022ClassicLocalUniversalityAudit.lean` checks the Report 31
 finite-place case split and the full conditional Theorem 1.9 endpoint.
