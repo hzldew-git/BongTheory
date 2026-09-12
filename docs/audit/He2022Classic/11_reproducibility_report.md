@@ -10,13 +10,14 @@ proof `he2022ClassicTheorem11`, and print the latter's transitive axioms.
 The unary and all-ranks local Theorem 1.5 endpoints, Lemma 7.7, all three
 clauses of Lemma 7.10, Lemma 7.11, both literal-minimal endpoints, the v5
 Lemma 7.1 branches, and the comparison-source regression are audited too.
-The actual finite-completion arithmetic for all three clauses of Lemma 8.1,
+The actual finite-completion arithmetic for Lemma 8.1(i)--(ii), the
+proof-supported good-BONG realization for part (iii),
 the conditional Proposition 8.2, Theorem 1.5 global deduction, Theorem 1.9,
 and the even-rank Lemma 8.3, Theorem 1.7, and Theorem 1.8 endpoints are checked
 and have their axioms printed. The parity-independent logical tail of Theorem
 1.7 is audited separately with its local-defect premise visible.
 
-Current code checkpoint: `c6d22da9282e112597f805e9104eae1cb88fb938`
+Current code checkpoint: `e3b18be95c813885a421b83fe0a0148d6b561ae0`
 on the local v5 branch. Lean: 4.32.1; dependency versions: the committed
 `lake-manifest.json`. Reproducibility status for this exact checkpoint:
 `INCREMENTAL_LOCAL_CHECKS_PASS_FRESH_KIT_PENDING`. Successful local
@@ -256,3 +257,26 @@ This count is not expected to be monotone: the checkpoint replaces the former
 caller-supplied completed adapter and removes declarations as well as adding
 proofs. A fresh exact Review Kit for this code-and-audit checkpoint remains
 pending.
+
+## Concrete dyadic completion and actual-realization checkpoint
+
+At exact code commit `e3b18be95c813885a421b83fe0a0148d6b561ae0`, every
+number-field finite completion receives the concrete local-field structure
+needed by the BONG library, and every dyadic prime receives its normalized
+`DyadicContext`. The direct completed order, relative defect, and absolute
+ramification index are proved equal to the corresponding BONG notions. The
+coefficient criterion is proved necessary for every actual lower good BONG
+and sufficient for an actual upper integral-lattice realization. Consequently
+`goodBONG_mappedValues_haveRealization` proves exactly the existential
+good-BONG conclusion supported by the proof of v5 Lemma 8.1(iii).
+
+The focused build completes 5,653 jobs, and the canonical paper plus all eight
+manifest-listed Classic audits complete 5,676 jobs. The audited declarations
+use only `propext`, `Classical.choice`, and `Quot.sound`. All 30 policy tests
+pass, the scanner checks 2,802 tracked Lean sources, and the focused imported-
+closure gate reports `AXIOM_GATE_PASS: 62917 declarations checked`.
+
+This checkpoint does not identify the constructed upper lattice with the
+preassigned localized scalar-extension lattice `L_P`; Report 42 records that
+the written source proof also omits this identification. A fresh exact Review
+Kit for the newer code-and-audit commit remains pending.

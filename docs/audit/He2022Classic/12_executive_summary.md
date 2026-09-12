@@ -4,7 +4,7 @@ Paper: Zilong He, *On classic n-universal quadratic forms over dyadic local
 fields*, manuscripta math. 174 (2024), 559-595. Semantic authority:
 author-corrected v5 TeX, SHA-256
 `C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049`.
-Proof assistant: Lean 4.32.1. Review date: 2026-09-09. Exact clean release
+Proof assistant: Lean 4.32.1. Review date: 2026-09-13. Exact clean release
 commit: pending.
 
 Theorem 1.1 now has a proof of both directions for n >= 2 and arbitrary source
@@ -47,11 +47,15 @@ Report 40 proves that remaining equality by continuous extensionality and
 deduces the additive order formula on all `K_pˣ`.
 Report 41 defines completed relative quadratic defect and proves its
 ramification-scaled inequality, then transports the exact He--Hu good-BONG
-coefficient criterion under the completed embedding. All three clauses of
-Lemma 8.1 are therefore proved at actual finite-completion numerical and
-coefficient-criterion scope. The still-open boundary is the concrete global
-lattice/localization and orthogonal-basis identification, not a remaining
-order or defect law.
+coefficient criterion under the completed embedding. Report 42 constructs the
+actual dyadic local-field structures on both completions, identifies their
+BONG orders, defects, and ramification indices with those numerical notions,
+and realizes the mapped coefficient row as an actual upper good BONG. Hence
+Lemma 8.1(i)--(ii), together with the existence conclusion supported by the
+written proof of part (iii), are proved. The literal claim in part (iii) that
+the resulting vectors form a good BONG of the preassigned localized scalar-
+extension lattice `L_P` remains open: the cited He--Hu Lemma 2.2 produces
+"some lattice" and the v5 proof supplies no carrier-identification argument.
 Report 31 derives Theorem 1.9's finite-place local-universality conclusion from
 the separate non-dyadic, dyadic unary, and dyadic higher-rank laws in v5; the
 all-places conclusion is no longer stored as a package field.
@@ -69,7 +73,7 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md`, Reports 22--36, and Reports 38--41 are part of
+internally proved. `SOURCE_DELTA.md`, Reports 22--36, and Reports 38--42 are part of
 the review scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.
@@ -92,7 +96,8 @@ Theorem 1.1 correspondence remains provisional, not human-approved
 `VERIFIED_MATCH`. Trust reports inspect standard logical axioms separately
 from arithmetic interfaces and restricted theorem premises. Reproducibility
 has historical exact local clean-kit evidence at `c1ee018`; the newer
-`c6d22da` code-and-audit checkpoint still requires a fresh clean-kit run.
+`e3b18be` code checkpoint and its Report 42 audit update still require a fresh
+clean-kit run after the audit documents are committed.
 GitHub CI and release evidence remain absent by design.
 
 Safe claim: a checked local classification, full v5 Theorem 1.3 testing

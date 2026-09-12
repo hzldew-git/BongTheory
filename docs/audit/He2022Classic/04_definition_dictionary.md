@@ -30,6 +30,10 @@
 | BONG adjacent coefficient conditions | `HeClassic2024NumberFieldLocalExtension.CompletionBONGConditions` |
 | good-BONG coefficient criterion | `HeClassic2024NumberFieldLocalExtension.CompletionGoodBONGCoefficients` |
 | completed Lemma 8.1 arithmetic adapter | `HeClassic2024NumberFieldLocalExtension.completionLocalExtensionData` and `completionLemma81Laws` |
+| finite completion as a dyadic local field | `Bong.NumberFieldCompletion.dyadicContext` |
+| equality of direct and BONG completed orders | `HeClassic2024NumberFieldBONGBridge.ordUnit_eq_completionAdicOrder` |
+| equality of direct and BONG quadratic defects | `HeClassic2024NumberFieldBONGBridge.quadraticDefect_eq_completionQuadraticDefect` |
+| actual good-BONG realization of mapped values | `HeClassic2024NumberFieldBONGBridge.goodBONG_mappedValues_haveRealization` |
 | generic one-way discriminant package | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
@@ -66,5 +70,9 @@ Report 40 defines the completed-field order on `K_pˣ`, proves its scaling under
 the completed embedding, and supplies the order field of the Lemma 8.1
 adapter. Report 41 defines the completed relative quadratic defect, proves its
 ramification-scaled inequality, and proves preservation of the exact good-BONG
-coefficient criterion. The latter criterion is not itself an actual lattice,
-orthogonal basis, or localization construction; that bridge remains open.
+coefficient criterion. Report 42 supplies a concrete dyadic local-field
+instance, identifies these definitions with the BONG normalization, and turns
+the mapped criterion into an actual upper integral lattice carrying an actual
+good BONG with the mapped values. This realization is not identified with the
+preassigned localized scalar-extension lattice `L_P`; that carrier bridge
+remains open.

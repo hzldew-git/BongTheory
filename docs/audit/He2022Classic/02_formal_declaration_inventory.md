@@ -30,7 +30,9 @@ The proposition-valued definition remains separate from its proof:
   number-field conclusion.
 - `Bong.BONG.GoodBONG.he2022ClassicCorollary63_even`: even branch only.
 - `HeClassic2024LocalExtensionData.Lemma81Laws.he2022ClassicLemma81i`--`iii`:
-  the three conditional finite-extension clauses of Lemma 8.1.
+  the conditional order, defect, and good-BONG coefficient-criterion
+  consequences used in the written proof of Lemma 8.1. The third endpoint is
+  not the literal scalar-extension carrier statement.
 - `HeClassic2024GlobalData.SectionEightLaws.he2022ClassicProposition82_positive`
   and `he2022ClassicProposition82`: the two statements of Proposition 8.2 over
   an explicit globalization/localization package.  The first is now derived
@@ -107,6 +109,26 @@ The proposition-valued definition remains separate from its proof:
   of the abstract Lemma 8.1 package without caller-supplied arithmetic laws;
   Report 41. The separate global-lattice carrier, localization, and basis
   scalar-extension bridge remain outside this adapter.
+- `Bong.NumberFieldCompletion.residueMap_surjective`,
+  `finiteResidueField`, `isNonarchimedeanLocalField`, `adicOrder`, and
+  `dyadicContext`: construct the finite residue field, local compactness,
+  normalized valuation, uniformizer, and concrete dyadic local-field context
+  for every dyadic number-field completion; Report 42.
+- `HeClassic2024NumberFieldBONGBridge.ordUnit_eq_completionAdicOrder`,
+  `quadraticDefect_eq_completionQuadraticDefect`,
+  `defectOrder_eq_completionQuadraticDefectQ`, and
+  `ramificationIndex_eq_idealRamificationIdx`: prove that the direct
+  finite-completion invariants are exactly the BONG library invariants;
+  Report 42.
+- `goodBONG_completionGoodBONGCoefficients` and
+  `completionGoodBONGCoefficients_hasGoodBONG`: prove necessity of the
+  concrete coefficient criterion for every actual good BONG and sufficiency
+  by constructing an actual integral-lattice realization; Report 42.
+- `completionGoodBONGCoefficients_map_hasGoodBONG` and
+  `goodBONG_mappedValues_haveRealization`: construct an actual upper good-BONG
+  realization with the mapped values. They deliberately do not identify that
+  realization with a separately supplied localized scalar-extension lattice;
+  this is the literal v5 Lemma 8.1(iii) gap recorded in Report 42.
 - `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` and
   `sumOfSquares_localUniversal_of_oddDiscriminant`: the non-dyadic, dyadic
   unary, and dyadic higher-rank inputs and their derived all-finite-place
@@ -168,7 +190,8 @@ arithmetic adapter and the derived Section 8 package from Report 36.
 `BongTest/He2022ClassicNumberFieldLocalExtensionAudit.lean` checks the
 finite-prime order and ramification theorems, their partial Lemma 8.1 adapter,
 the finite-completion map and finite-dimensionality, and completed-field order
-scaling, defect scaling, and good-BONG coefficient-criterion transfer from
-Reports 38--41.
+scaling, defect scaling, the concrete dyadic context, equality with the BONG
+normalization, coefficient-criterion transfer, and actual realization from
+Reports 38--42.
 `BongTest/He2022ClassicLocalUniversalityAudit.lean` checks the Report 31
 finite-place case split and the full conditional Theorem 1.9 endpoint.

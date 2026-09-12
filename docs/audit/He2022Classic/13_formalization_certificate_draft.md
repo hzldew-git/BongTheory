@@ -6,10 +6,10 @@ fields*, manuscripta math. 174 (2024), 559-595, DOI
 in `00_audit_scope.md`; the publisher PDF and later arXiv revision are
 comparison-only.
 
-Code checkpoint: current local v5 working tree on
-`release/heclassic-v0.5.0-rc.1-prep`;
-exact clean release commit pending. Proof assistant: Lean 4.32.1.
-Dependencies: the committed Lake manifest. Date: 2026-09-12. Project grade: D.
+Code checkpoint: `e3b18be95c813885a421b83fe0a0148d6b561ae0` on
+`release/heclassic-v0.5.0-rc.1-prep`; the associated audit-document commit and
+exact clean release commit remain pending. Proof assistant: Lean 4.32.1.
+Dependencies: the committed Lake manifest. Date: 2026-09-13. Project grade: D.
 
 Theorem 1.1 has a checked proof and provisional semantic correspondence.
 Theorem 1.3 is checked in both parity branches, including literal minimality.
@@ -30,13 +30,15 @@ the corrected v5 Lemma 7.1, both testing equivalences, both literal-minimal
 endpoints, and the regression refuting the obsolete publisher Lemma 7.1(ii)
 are checked declarations.
 
-Lemma 8.1 is now proved for the actual selected finite completions at its
-numerical and coefficient-criterion scope: completed order scaling, relative
-quadratic-defect scaling, and preservation of the exact He--Hu good-BONG
-coefficient criterion. This does not yet construct the global-lattice
-localization, scalar-extension carrier, or orthogonal-basis identification
-needed to connect those coefficients to the remaining global Section 8
-theorems; see Report 41.
+Lemma 8.1(i)--(ii) are proved over actual dyadic local-field structures on the
+selected finite completions. Their BONG orders, defects, and ramification
+indices are identified with the completion-side invariants. For part (iii),
+every actual lower good BONG is sent to a coefficient row realized by an
+actual upper integral lattice and good BONG. This is the strongest conclusion
+supported by the written v5 proof. The literal claim that these vectors form a
+good BONG of the preassigned localized scalar-extension lattice `L_P` remains
+unproved: the cited He--Hu Lemma 2.2 concludes only "for some lattice," and v5
+provides no carrier-identification lemma. See Report 42.
 
 Foundational axioms expected by the audit are propositional extensionality,
 classical choice, and quotient soundness. Arithmetic interfaces and all
@@ -52,6 +54,8 @@ exact-commit clean-kit verification. Author approval: not provided. Domain
 expert approval: not provided. Independent human formalization-expert
 approval: not provided. No theorem is marked `VERIFIED_MATCH` here.
 
-This draft applies only to the explicitly delimited results above. It is not
-a certificate of the entire paper, bibliographic accuracy, novelty, or
+This draft applies only to the explicitly delimited results above. The false
+odd Corollary 6.3 and the Lemma 8.1(iii) carrier gap prevent a whole-paper
+certificate. It is not a certificate of the entire paper, bibliographic
+accuracy, novelty, or
 unformalized prose. Whole-paper completion remains `NOT_COMPLETE`.

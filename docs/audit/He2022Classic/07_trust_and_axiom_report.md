@@ -158,3 +158,16 @@ sources, and the focused imported-closure gate reports
 field of the finite-completion Lemma 8.1 adapter at coefficient-criterion
 scope. It does not discharge the global lattice/localization or orthogonal-
 basis identification boundary; Report 41.
+
+At code checkpoint `e3b18be`, the concrete finite-residue-field and local-
+compactness construction, the normalized dyadic context, all bridges between
+the direct completion invariants and BONG invariants, both directions of the
+good-BONG coefficient criterion at realization level, and the mapped upper
+realization use only `propext`, `Classical.choice`, and `Quot.sound`. The
+focused build completes 5,653 jobs and the canonical paper plus all eight
+manifest-listed audits complete 5,676 jobs. All 30 policy tests pass, the
+scanner checks 2,802 tracked Lean sources, and the focused imported-closure
+gate reports `AXIOM_GATE_PASS: 62917 declarations checked`. These checks prove
+existence of an actual upper realization; they do not prove that it is the
+preassigned localized scalar-extension lattice in v5 Lemma 8.1(iii). The
+carrier gap is semantic and remains visible in Report 42.

@@ -31,10 +31,12 @@ Coverage status:
   literal-minimality conclusions, is proved. O'Meara 63:5 and 63:9 and all
   three numerical counts are proved internally.
 - Report 23 initially exposed Lemma 8.1, Proposition 8.2, Lemma 8.3, and all
-  global main-theorem deductions as conditional packages. Lemma 8.1's actual
-  finite-completion arithmetic is now constructed through Report 41, while
-  the global lattice connection and the other global deductions remain
-  conditional. Proposition 8.2 is derived from lower
+  global main-theorem deductions as conditional packages. Lemma 8.1(i)--(ii),
+  its actual finite-completion arithmetic, and the proof-supported good-BONG
+  realization are now constructed through Report 42, while the literal
+  scalar-extension carrier claim in part (iii), the global lattice connection,
+  and the other global deductions remain conditional. Proposition 8.2 is
+  derived from lower
   globalization/localization laws rather than assumed as a final field;
   Report 27. Examples and uninstantiated global arithmetic implementations
   behind those deductions are not claimed as covered.
@@ -68,6 +70,14 @@ Coverage status:
   therefore covered. The global lattice carrier, localization, scalar-
   extension basis identification, and downstream concrete instances remain
   uncovered.
+  Report 42 proves that the finite completions themselves satisfy the dyadic
+  local-field interface, identifies all direct invariants with the BONG
+  normalization, and proves that every lower actual good BONG yields an actual
+  upper good-BONG realization with its mapped values. This covers the
+  existential conclusion established by the written proof. It does not cover
+  the stronger literal assertion that the realization is the preassigned
+  localized scalar-extension lattice `L_P`; the source citation also supplies
+  only "some lattice".
   The source-facing Theorem 1.7 endpoint is restricted to `n >= 2` even, and
   its rank-independent logical tail is separately exposed; Report 33.
   Theorem 1.9's all-finite-place local-universality conclusion is derived from
@@ -82,6 +92,6 @@ definitions, and examples. Reusable foundations are not extra paper results.
 The obsolete broader publisher Lemma 7.1(ii) is refuted; the author-corrected
 v5 replacement is positively formalized. Overall grade is D because the
 authoritative v5 source contains a false unrestricted Corollary 6.3, while
-the remaining concrete number-field lattice and completed-extension layers,
-and human semantic sign-off, remain outstanding. Whole-paper completion
+the remaining concrete number-field lattice/localization and carrier-
+identification layers, and human semantic sign-off, remain outstanding. Whole-paper completion
 remains `NOT_COMPLETE`.

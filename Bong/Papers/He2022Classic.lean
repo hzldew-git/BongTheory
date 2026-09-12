@@ -109,16 +109,19 @@ standard height-one spectrum, so their compatibility is definitional once a
 place equivalence is supplied.  For nonzero coefficients in the underlying
 number field, order scaling at a prime lying over another prime, relative
 ramification positivity, and the absolute ramification tower are also proved.
-The actual continuous finite-completion embedding is constructed; order
-scaling and relative quadratic-defect scaling are proved for every nonzero
-completed element. The exact He--Hu adjacent and two-step good-BONG
-coefficient criterion is also proved to survive the completed embedding.
-Thus all three fields of the local Lemma 8.1 arithmetic adapter are proved at
-finite-completion coefficient-criterion scope. The global lattice carrier,
-localization, and identification of its scalar-extended orthogonal basis with
-those mapped coefficients remain open. The
-finite-place
-sufficiency part of Theorem 1.9 is also derived from separate non-dyadic,
+The actual continuous finite-completion embedding and dyadic local-field
+structures are constructed; order scaling and relative quadratic-defect
+scaling are proved for every nonzero completed element, and the completion
+invariants are identified with the BONG normalization. The exact He--Hu
+adjacent and two-step coefficient criterion survives the embedding, and the
+mapped row is realized by an actual upper integral lattice with an actual good
+BONG. This proves Lemma 8.1(i)--(ii) and the existence conclusion supported by
+the written proof of part (iii). The literal part-(iii) claim for the
+preassigned localized scalar-extension lattice remains open: the cited
+He--Hu lemma constructs some lattice, while v5 supplies no carrier
+identification. The global lattice carrier and localization therefore remain
+open. The finite-place sufficiency part of Theorem 1.9 is also derived from
+separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
 all-places conclusion.  The
 publisher's broader Lemma 7.1(ii)

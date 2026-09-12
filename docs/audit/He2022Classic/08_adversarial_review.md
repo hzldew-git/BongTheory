@@ -102,6 +102,16 @@ silently upgraded to a construction of a localized global lattice or an
 orthogonal basis of its scalar extension; those structures are not arguments
 of the theorem.
 
+Report 42 strengthens this checkpoint but also exposes a source-level gap.
+The finite completions now carry actual dyadic local-field instances, the
+direct invariants are proved equal to the BONG invariants, and the mapped row
+is realized by an actual upper integral lattice and actual good BONG.
+Nevertheless, an adversarial reviewer must ask which lattice was constructed.
+He--Hu Lemma 2.2 says only "for some lattice", while v5 Lemma 8.1(iii) names
+the preassigned `L_P`. No equality or isometry between those two lattices is
+proved. The endpoint `goodBONG_mappedValues_haveRealization` intentionally
+states only the supported existential conclusion.
+
 The same anti-circularity test is applied to the finite-place half of Theorem
 1.9.  Report 31 removes the former field that asserted the complete quantified
 local conclusion and replaces it by the three source branches.  Reviewers

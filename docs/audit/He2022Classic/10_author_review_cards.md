@@ -222,6 +222,16 @@ formalization expert should separately review the still-missing bridge from a
 localized global lattice and its scalar-extended orthogonal basis to this
 coefficient sequence; Report 41 makes no carrier-level claim.
 
+Report 42 now proves that this criterion is both necessary for every actual
+lower good BONG and sufficient to construct an actual upper integral lattice
+with an actual good BONG having the mapped values. It also constructs the
+dyadic local-field instance and identifies the order and defect normalizations.
+The remaining author question is therefore precise: v5 Lemma 8.1(iii) names
+`L_P`, but the cited He--Hu Lemma 2.2 concludes only "for some lattice". Please
+either weaken part (iii) to the existential realization now formalized, or add
+the missing proof that this realization is the preassigned localized scalar-
+extension lattice.
+
 For Theorem 1.9's finite-place step, the all-places conclusion is now derived
 from separate non-dyadic, dyadic unary, and dyadic higher-rank laws.  The
 number-field expert should confirm those are exactly the three local cases in

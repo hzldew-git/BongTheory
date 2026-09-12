@@ -6,9 +6,10 @@ The sole semantic authority is the author-corrected v5 TeX manuscript
 The 2024 publisher version of record and the 2025 arXiv v3 revision are
 comparison-only. The source files are author-held and are not redistributed.
 
-Working-tree checkpoint: branch `release/heclassic-v0.5.0-rc.1-prep`, updated
-on 2026-09-12 with Lean 4.32.1 and the repository's pinned
-`lake-manifest.json`. An exact clean release commit remains pending.
+Code checkpoint: `e3b18be95c813885a421b83fe0a0148d6b561ae0` on branch
+`release/heclassic-v0.5.0-rc.1-prep`, audited on 2026-09-13 with Lean 4.32.1
+and the repository's pinned `lake-manifest.json`. An exact release commit
+remains pending.
 
 The checkpoint includes the proved Theorem 1.1 equivalence, local Section 2-6
 proof chains, the complete n >= 1 local-field implication underlying Theorem
@@ -18,8 +19,10 @@ concrete global number-field lattice/localization and strong-approximation
 inputs. The final global deduction of Theorem 1.5, Proposition 8.2, Theorem
 1.9, and the even-rank parts of Lemma 8.3, Theorem 1.7, and Theorem 1.8 are
 checked only conditionally over the explicit proof-data packages documented
-in Reports 23, 27, 28, and 33. Lemma 8.1 is now concrete at the actual
-finite-completion numerical and coefficient-criterion scope; Report 41.
+in Reports 23, 27, 28, and 33. Lemma 8.1(i)--(ii) are concrete on the actual
+finite completions. For part (iii), the coefficient criterion and an actual
+upper good-BONG realization are proved, but identification with the named
+localized scalar-extension lattice is not; Reports 41--42.
 Report 27 strengthens this boundary: Proposition 8.2 itself is now derived
 from positive-definite globalization, localization, and representation
 transport laws rather than stored as a final-conclusion field.
@@ -62,10 +65,19 @@ on `K_pˣ`. Quadratic-defect scaling and good-BONG scalar extension remain
 explicit at that historical checkpoint.
 Report 41 defines the relative quadratic defect on the actual finite
 completion, proves its ramification-scaled inequality, and proves preservation
-of the exact He--Hu good-BONG coefficient criterion. Thus all fields of the
-local Lemma 8.1 arithmetic adapter are constructed. The result does not yet
+of the exact He--Hu good-BONG coefficient criterion. Thus all numerical fields
+of the local Lemma 8.1 arithmetic adapter are constructed. The result does not yet
 identify mapped coefficients with an orthogonal basis of a localized global
 lattice; the global lattice/localization bridge remains open.
+Report 42 constructs the finite completion as an actual nonarchimedean dyadic
+local field, identifies its order, defect, and absolute ramification index with
+the BONG normalization, and proves both directions between actual good-BONG
+rows and the He--Hu coefficient criterion at the realization level. It follows
+that every lower good BONG has an actual upper good-BONG realization with the
+mapped values. V5 Lemma 8.1(iii), however, names the preassigned lattice
+`L_P`, while its proof invokes a lemma producing a good BONG only for "some
+lattice". The missing identification is therefore a source-proof gap as well
+as an unformalized carrier theorem.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

@@ -19,10 +19,12 @@ paper. Their distinct coverage and semantic-audit grades are stated below.
   exponent is kept separate from the exponent derived from Theorem 2.1.
 - He-paper coverage status: `PARTIAL`. He--Hu has complete formal coverage of
   its 47 numbered results subject to semantic sign-off; He Classic has both v5
-  testing families and all three finite-completion Lemma 8.1 arithmetic
-  clauses proved, but retains a disclosed Corollary 6.3/Lemma 8.3 odd-parity
-  source gap and uninstantiated global lattice/localization and strong-
-  approximation inputs; He ADC Section 6
+  testing families, Lemma 8.1(i)--(ii), and an actual upper good-BONG
+  realization with mapped values proved, but literal Lemma 8.1(iii) still lacks
+  identification with its specified localized scalar-extension lattice. It
+  also retains a disclosed Corollary 6.3/Lemma 8.3 odd-parity source gap and
+  uninstantiated global lattice/localization and strong-approximation inputs;
+  He ADC Section 6
   is fully triaged and
   Section 7 has 20/21 fully formalized numbered items, one documented
   quantifier mismatch, and a complete Corollary 7.21 catalogue whose final
@@ -73,7 +75,7 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 | Published source | Current public endpoint | Honest status |
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
-| He, *manuscripta math.* 174 (2024), author-corrected v5, Theorems 1.1, 1.3, 1.5, and 1.7--1.9 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11`, both `he2022ClassicTheorem13_*_literalMinimal` endpoints, `he2022ClassicTheorem15_allRanks`, `HeClassic2024NumberFieldLocalExtension.completionLemma81Laws`, and the `HeClassic2024*SectionEightLaws` endpoints | local classification, both minimal testing families, and Lemma 8.1 finite-completion arithmetic proved; global lattice deductions are conditional, and v5 still lacks the odd-parity reduction used in Corollary 6.3/Lemma 8.3 |
+| He, *manuscripta math.* 174 (2024), author-corrected v5, Theorems 1.1, 1.3, 1.5, and 1.7--1.9 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11`, both `he2022ClassicTheorem13_*_literalMinimal` endpoints, `he2022ClassicTheorem15_allRanks`, `HeClassic2024NumberFieldBONGBridge.goodBONG_mappedValues_haveRealization`, and the `HeClassic2024*SectionEightLaws` endpoints | local classification, both minimal testing families, Lemma 8.1(i)--(ii), and its proof-supported good-BONG realization are proved; literal part (iii) has a carrier-identification gap, global lattice deductions are conditional, and v5 lacks the odd-parity reduction used in Corollary 6.3/Lemma 8.3 |
 | He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1, 7.2 and 7.4, the chain through Remark 7.3, the Corollary 7.21 catalogue, and O'Meara 63:9 | partial paper; Lemma 7.13 has a quantifier mismatch, while all dyadic numerical counts are unconditional in the repository interface |
 
 The obsolete broader Classic publisher Lemma 7.1(ii) is refuted for

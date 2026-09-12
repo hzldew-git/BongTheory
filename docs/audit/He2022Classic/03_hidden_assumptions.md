@@ -97,6 +97,17 @@ remains in `completionLemma81Laws`. The still-open premise is structural: a
 concrete global-lattice model must identify its localized scalar extension and
 orthogonal basis with these mapped coefficients.
 
+Report 42 removes two possible hidden assumptions from that description.
+First, it constructs the actual local-field and dyadic-context instances for
+number-field finite completions and proves that the direct order, defect, and
+ramification definitions coincide with the BONG library definitions. Second,
+it proves that the criterion is necessary for an actual lower good BONG and
+sufficient for an actual upper integral-lattice realization. The remaining
+carrier identification cannot be discharged by citing He--Hu Lemma 2.2 alone:
+that lemma concludes "for some lattice", whereas v5 Lemma 8.1(iii) names the
+preassigned `L_P`. Any future literal endpoint must take or prove a theorem
+identifying these two lattices; no such premise is hidden in the current code.
+
 Report 31 removes the all-finite-places local-universality conclusion from
 `SectionEightLaws`. Its replacement originally exposed four inputs. Report 32
 discharges odd-discriminant-to-index-one from the number-field bridge, so the

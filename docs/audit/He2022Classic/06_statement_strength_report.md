@@ -82,15 +82,20 @@ finite number-field extension. This is a genuine specialization of Lemma
 element of `K_p`. The completed-field extension, defect inequality, and
 good-BONG scalar extension remain explicitly outside that historical theorem.
 
-Reports 39--41 complete the corresponding finite-completion arithmetic.
+Reports 39--42 complete the corresponding finite-completion arithmetic and
+the proof-supported realization statement.
 Report 39 constructs the completion map, Report 40 proves order scaling for
 every nonzero completed element, and Report 41 proves both relative-defect
 scaling and preservation of the exact good-BONG coefficient criterion.
 Accordingly `completionLemma81Laws` has no paper-specific arithmetic premise.
-This is stronger formalization evidence than the old conditional adapter, but
-it is still weaker than a theorem about a concrete localized global lattice:
-the carrier, localization, scalar extension, and orthogonal-basis
-identification have not been constructed.
+Report 42 proves that the finite completions are actual dyadic local fields,
+identifies the direct invariants with the BONG normalization, and constructs
+an actual upper integral lattice carrying a good BONG with exactly the mapped
+values of every actual lower good BONG. This is stronger than the old
+coefficient-only adapter, but still weaker than the literal v5 part (iii): the
+constructed upper lattice has not been identified with the preassigned
+localized scalar-extension lattice `L_P`. The written proof has the same
+logical gap because its cited criterion concludes only "for some lattice".
 
 Report 31 removes another final-conclusion field from Theorem 1.9.  Instead of
 assuming local universality at every finite place, the formalization assumes
