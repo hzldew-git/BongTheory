@@ -51,7 +51,10 @@ variable (D : HeClassic2024LocalExtensionData)
 
 /-- The three arithmetic inputs in the proof of He, Lemma 8.1.  The first
 field also records the tower identity for the absolute ramification index,
-which is used in the good-BONG calculation. -/
+which is used in the good-BONG calculation.  Here `goodBONG_transfer` is the
+coefficient-criterion consequence proved in the manuscript; it does not by
+itself identify the resulting lattice with a separately specified scalar
+extension. -/
 structure Lemma81Laws : Prop where
   relativeRamificationIndex_pos : 0 < D.relativeRamificationIndex
   ramificationIndex_tower :
@@ -82,7 +85,9 @@ theorem he2022ClassicLemma81ii (H : D.Lemma81Laws) (a : D.Element) :
       D.extensionDefect a :=
   H.defect_scale a
 
-/-- He (2024), Lemma 8.1(iii). -/
+/-- The good-BONG coefficient-criterion consequence used in the written proof
+of He (2024), Lemma 8.1(iii).  The literal carrier-identification conclusion
+requires additional lattice scalar-extension data. -/
 theorem he2022ClassicLemma81iii (H : D.Lemma81Laws)
     {m : Nat} (a : Fin m → D.Element) (hGood : D.BaseGoodBONG a) :
     D.ExtensionGoodBONG a :=

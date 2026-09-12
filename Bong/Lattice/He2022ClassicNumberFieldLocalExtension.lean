@@ -528,8 +528,10 @@ noncomputable def completionLocalExtensionData
     CompletionGoodBONGCoefficients P
       (fun i => Units.map (completionMap p P) (a i))
 
-/-- All three parts of He (2024), Lemma 8.1, on the actual finite completions
-and the exact coefficient criterion used to recognize good BONGs. -/
+/-- All arithmetic fields used in the written proof of He (2024), Lemma 8.1,
+on the actual finite completions and the exact coefficient criterion used to
+recognize good BONGs.  This adapter does not assert that the lattice supplied
+by that criterion is a preassigned scalar-extension lattice. -/
 theorem completionLemma81Laws
     {K L : Type*} [Field K] [Field L] [NumberField K] [NumberField L]
     [Algebra K L] [FiniteDimensional K L]
