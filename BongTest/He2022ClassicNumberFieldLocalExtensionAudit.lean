@@ -24,9 +24,18 @@ open scoped NumberField
 #check completionMap_valuation
 #check completionAdicOrder
 #check completionAdicOrder_liesOver
-#check RemainingCompletionInputs
-#check RemainingCompletionInputs.toLocalExtensionData
-#check RemainingCompletionInputs.lemma81Laws
+#check CompletionIsQuadraticApproximation
+#check completionQuadraticDefect
+#check natCast_le_completionQuadraticDefect
+#check completionIsQuadraticApproximation_map
+#check completionQuadraticDefect_scale
+#check completionQuadraticDefectQ
+#check completionQuadraticDefectQ_scale
+#check CompletionBONGConditions
+#check CompletionGoodBONGCoefficients
+#check completionGoodBONGCoefficients_map
+#check completionLocalExtensionData
+#check completionLemma81Laws
 
 #print axioms adicOrder_liesOver
 #print axioms relativeRamificationIndex_pos
@@ -37,8 +46,13 @@ open scoped NumberField
 #print axioms continuous_completionMap
 #print axioms completionMap_valuation
 #print axioms completionAdicOrder_liesOver
-#print axioms RemainingCompletionInputs.toLocalExtensionData
-#print axioms RemainingCompletionInputs.lemma81Laws
+#print axioms natCast_le_completionQuadraticDefect
+#print axioms completionIsQuadraticApproximation_map
+#print axioms completionQuadraticDefect_scale
+#print axioms completionQuadraticDefectQ_scale
+#print axioms completionGoodBONGCoefficients_map
+#print axioms completionLocalExtensionData
+#print axioms completionLemma81Laws
 
 open scoped CompletionLiesOver in
 example
