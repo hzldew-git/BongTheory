@@ -34,10 +34,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 360
     env:
-      # Two workers stay within the memory envelope used by the per-paper
-      # clean builds while keeping the enlarged public closure below the
-      # six-hour Ubuntu and Windows job deadline.
-      LEAN_NUM_THREADS: '2'
+      # Four workers are already used by the complete-source CI shards and
+      # keep the Windows clean build below GitHub's six-hour hard deadline.
+      # The two-worker release job reached that deadline on two consecutive
+      # exact-tag attempts, while the corresponding Ubuntu run succeeded.
+      LEAN_NUM_THREADS: '4'
 
     steps:
       - name: Check out the exact revision
