@@ -4,8 +4,8 @@ Paper: Zilong He, *On classic n-universal quadratic forms over dyadic local
 fields*, manuscripta math. 174 (2024), 559-595. Semantic authority:
 author-corrected v5 TeX, SHA-256
 `C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049`.
-Proof assistant: Lean 4.32.1. Review date: 2026-09-13. Exact clean release
-commit: pending.
+Proof assistant: Lean 4.32.1. Review date: 2026-09-13. Exact locally verified
+code-and-audit package commit: `ab1901a`; exact public release commit: pending.
 
 Theorem 1.1 now has a proof of both directions for n >= 2 and arbitrary source
 rank. The local proof chain and even-rank testing equivalence are substantial
@@ -73,7 +73,7 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md`, Reports 22--36, and Reports 38--42 are part of
+internally proved. `SOURCE_DELTA.md`, Reports 22--36, and Reports 38--43 are part of
 the review scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.
@@ -84,20 +84,21 @@ Report 33 applies the same restriction to the source-facing Theorem 1.7
 endpoint and preserves only its common logical tail behind an explicit
 local-defect premise.
 
-Report 35 records an exact source-only local Review Kit for commit `c1ee018`:
-2,010 payload hashes, a resumed fresh-extraction 5,671-job build, all six
-Classic audits, the 62,746-declaration enforcing axiom gate, and clean exact
-dependency pins all pass. This closes the current local packaging gate, but it
-is not GitHub CI or a release and does not alter the semantic verdict.
+Report 35 records the historical exact source-only local Review Kit for commit
+`c1ee018`. Report 43 records the current package for commit `ab1901a`:
+2,023 payload hashes, a resumed new-extraction 5,682-job build, all nine
+manifest-selected audits, the 62,917-declaration enforcing axiom gate, and
+clean exact dependency pins all pass. This closes the current local packaging
+gate, but it is not GitHub CI or a release and does not alter the semantic
+verdict.
 
 Project grade: D, because the authoritative v5 source contains a refuted
 unrestricted statement, in addition to incomplete global arithmetic coverage.
 Theorem 1.1 correspondence remains provisional, not human-approved
 `VERIFIED_MATCH`. Trust reports inspect standard logical axioms separately
 from arithmetic interfaces and restricted theorem premises. Reproducibility
-has historical exact local clean-kit evidence at `c1ee018`; the newer
-`e3b18be` code checkpoint and its Report 42 audit update still require a fresh
-clean-kit run after the audit documents are committed.
+has exact local Review Kit evidence at packaged commit `ab1901a` for code
+checkpoint `e3b18be`; Report 43 records the full receipt.
 GitHub CI and release evidence remain absent by design.
 
 Safe claim: a checked local classification, full v5 Theorem 1.3 testing

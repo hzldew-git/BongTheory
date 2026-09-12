@@ -20,9 +20,9 @@ and have their axioms printed. The parity-independent logical tail of Theorem
 Current code checkpoint: `e3b18be95c813885a421b83fe0a0148d6b561ae0`
 on the local v5 branch. Lean: 4.32.1; dependency versions: the committed
 `lake-manifest.json`. Reproducibility status for this exact checkpoint:
-`INCREMENTAL_LOCAL_CHECKS_PASS_FRESH_KIT_PENDING`. Successful local
-verification is not GitHub CI or clean-extraction evidence for a later
-release commit.
+`FRESH_EXTRACTION_RESUMED_LOCAL_PASS` at packaged source-and-audit commit
+`ab1901a`; see Report 43. Successful local verification is not GitHub CI or
+clean-extraction evidence for a later release commit.
 
 On 10 September 2026, the exact source-only Review Kit for the older
 `b8c379a` commit passed
@@ -280,3 +280,21 @@ This checkpoint does not identify the constructed upper lattice with the
 preassigned localized scalar-extension lattice `L_P`; Report 42 records that
 the written source proof also omits this identification. A fresh exact Review
 Kit for the newer code-and-audit commit remains pending.
+
+## Current v5 code-and-audit Review Kit
+
+Report 43 supersedes the pending exact-kit sentence immediately above. The
+source-only archive for packaged commit
+`ab1901ac9df3e659a40a8cd4e1c0590997622217`, containing Lean code checkpoint
+`e3b18be95c813885a421b83fe0a0148d6b561ae0`, has SHA-256
+`92AD5F18A70386948D970C627BC7C94835B3B380ADBF1FE9265949BFF09A336A`.
+All 2,023 payload hashes and all structural-isolation checks pass. A resumed
+new-extraction build completes 5,682 jobs, all nine manifest-selected audits
+pass separately, and the enforcing gate reports
+`AXIOM_GATE_PASS: 62917 declarations checked`. All nine dependency heads equal
+their clean pinned revisions.
+
+The corrected Windows verifier now treats a native command's exit code, rather
+than ordinary Git/Lake stderr progress, as the success criterion. This exact
+local receipt remains distinct from GitHub CI, a release asset, whole-paper
+completion, and semantic approval.

@@ -108,8 +108,9 @@ At the stated code checkpoint:
 - every newly audited declaration uses only `propext`, `Classical.choice`,
   and `Quot.sound`.
 
-These are local code-checkpoint results. Fresh source-only Review Kit
-verification and GitHub CI are separate gates.
+These are local code-checkpoint results. Report 43 supplies exact source-only
+Review Kit verification for the subsequent audit commit; GitHub CI remains a
+separate, unperformed gate.
 
 ## Remaining boundary
 

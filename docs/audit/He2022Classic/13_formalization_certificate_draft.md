@@ -7,8 +7,9 @@ in `00_audit_scope.md`; the publisher PDF and later arXiv revision are
 comparison-only.
 
 Code checkpoint: `e3b18be95c813885a421b83fe0a0148d6b561ae0` on
-`release/heclassic-v0.5.0-rc.1-prep`; the associated audit-document commit and
-exact clean release commit remain pending. Proof assistant: Lean 4.32.1.
+`release/heclassic-v0.5.0-rc.1-prep`; packaged audit commit `ab1901a` has the
+exact local Review Kit receipt in Report 43, while an exact public release
+commit remains pending. Proof assistant: Lean 4.32.1.
 Dependencies: the committed Lake manifest. Date: 2026-09-13. Project grade: D.
 
 Theorem 1.1 has a checked proof and provisional semantic correspondence.
@@ -49,10 +50,11 @@ derives primality and dyadic-prime coverage. Canonical number-field global data
 makes the arithmetic compatibility statements definitional; the concrete
 global lattice model still must supply its place equivalence and lattice laws.
 
-Reproducibility: `PARTIALLY_REPRODUCIBLE` at this checkpoint, pending its
-exact-commit clean-kit verification. Author approval: not provided. Domain
-expert approval: not provided. Independent human formalization-expert
-approval: not provided. No theorem is marked `VERIFIED_MATCH` here.
+Reproducibility: `FRESH_EXTRACTION_RESUMED_LOCAL_PASS` for packaged commit
+`ab1901a`, with the exact receipt in Report 43. GitHub exact-tag CI and release
+verification remain pending. Author approval: not provided. Domain expert
+approval: not provided. Independent human formalization-expert approval: not
+provided. No theorem is marked `VERIFIED_MATCH` here.
 
 This draft applies only to the explicitly delimited results above. The false
 odd Corollary 6.3 and the Lemma 8.1(iii) carrier gap prevent a whole-paper

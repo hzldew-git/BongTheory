@@ -8,8 +8,9 @@ comparison-only. The source files are author-held and are not redistributed.
 
 Code checkpoint: `e3b18be95c813885a421b83fe0a0148d6b561ae0` on branch
 `release/heclassic-v0.5.0-rc.1-prep`, audited on 2026-09-13 with Lean 4.32.1
-and the repository's pinned `lake-manifest.json`. An exact release commit
-remains pending.
+and the repository's pinned `lake-manifest.json`. Packaged audit commit
+`ab1901a` has the exact local receipt in Report 43; an exact public release
+commit remains pending.
 
 The checkpoint includes the proved Theorem 1.1 equivalence, local Section 2-6
 proof chains, the complete n >= 1 local-field implication underlying Theorem

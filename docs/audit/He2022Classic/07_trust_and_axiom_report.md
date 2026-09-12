@@ -171,3 +171,11 @@ gate reports `AXIOM_GATE_PASS: 62917 declarations checked`. These checks prove
 existence of an actual upper realization; they do not prove that it is the
 preassigned localized scalar-extension lattice in v5 Lemma 8.1(iii). The
 carrier gap is semantic and remains visible in Report 42.
+
+At packaged source-and-audit commit `ab1901a`, a resumed new-extraction build
+completes 5,682 jobs, all nine manifest-selected checks pass separately, and
+the enforcing imported-closure gate reports
+`AXIOM_GATE_PASS: 62917 declarations checked`. The allowed set remains exactly
+`propext`, `Classical.choice`, and `Quot.sound`; Report 43 records the archive,
+payload, dependency, and Windows-verifier receipt. This mechanical result does
+not change either v5 semantic blocker.
