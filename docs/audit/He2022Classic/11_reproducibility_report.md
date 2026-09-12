@@ -194,3 +194,19 @@ dependency heads equal their pinned revisions and are clean.
 Report 35 fixes the archive identity and complete local receipt. This is an
 exact local reproducibility result, not GitHub CI, a tagged release, whole-paper
 completion, or semantic approval. GitHub deployment remains disabled.
+
+## Number-field coefficient extension checkpoint
+
+At exact code commit `6d5c434a76afc46bed1904516d33c9c8fd6f811b`, the new
+finite-prime order and ramification module plus its focused audit complete a
+5,651-job build. The canonical paper entry and combined audit complete 5,674
+jobs. The five audited declarations report only `propext`,
+`Classical.choice`, and `Quot.sound`. All 30 policy tests and the scan of 2,800
+tracked Lean sources pass. The focused imported-closure gate reports
+`AXIOM_GATE_PASS: 62819 declarations checked`. Report 38 records the semantic
+scope.
+
+This incremental checkpoint is newer than the exact Review Kit described
+above. It therefore requires its own later clean extraction and does not
+inherit exact-kit status from Report 35 or from the in-progress historical
+kit for commit `00629d4`.

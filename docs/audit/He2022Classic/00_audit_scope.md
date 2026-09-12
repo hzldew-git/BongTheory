@@ -7,7 +7,7 @@ The 2024 publisher version of record and the 2025 arXiv v3 revision are
 comparison-only. The source files are author-held and are not redistributed.
 
 Working-tree checkpoint: branch `release/heclassic-v0.5.0-rc.1-prep`, updated
-on 2026-09-11 with Lean 4.32.1 and the repository's pinned
+on 2026-09-12 with Lean 4.32.1 and the repository's pinned
 `lake-manifest.json`. An exact clean release commit remains pending.
 
 The checkpoint includes the proved Theorem 1.1 equivalence, local Section 2-6
@@ -44,6 +44,11 @@ automatically. Report 36 supplies canonical number-field global data whose
 dyadic predicate, ramification index, and discriminant proposition are defined
 from that spectrum, so all three compatibility statements are definitional.
 The concrete global lattice model and its place equivalence remain open.
+Report 38 proves the finite-prime order-scaling law for nonzero coefficients
+in the underlying number field, together with relative ramification positivity
+and the absolute ramification tower. It does not extend the result to every
+element of the completion, and it leaves quadratic-defect scaling and
+good-BONG scalar extension explicit.
 The unrestricted odd branch of Corollary 6.3 is false: the repository now
 contains a kernel-checked `e=2`, `n=3` counterexample. The same unsupported
 step reaches Lemma 8.3 and Theorem 1.8. See Reports 24 and 26.

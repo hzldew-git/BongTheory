@@ -67,6 +67,14 @@ proposition canonically from that spectrum, making their compatibility
 definitional. Only the place equivalence and the concrete lattice/localization
 model remain open at this bridge layer.
 
+Report 38 removes three further fields from the number-field-coefficient
+specialization of Lemma 8.1: order scaling, relative ramification positivity,
+and the absolute ramification tower are theorems about actual height-one prime
+ideals. The specialization has element type `Kˣ`; it therefore does not prove
+the source statement for an arbitrary element of `K_pˣ`. Its remaining
+quadratic-defect inequality and good-BONG transfer are still ordinary theorem
+premises and are not discharged by the adapter's axiom report.
+
 Report 31 removes the all-finite-places local-universality conclusion from
 `SectionEightLaws`. Its replacement originally exposed four inputs. Report 32
 discharges odd-discriminant-to-index-one from the number-field bridge, so the

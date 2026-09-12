@@ -74,6 +74,12 @@ statements from the canonical interface by defining them from the spectrum.
 Reviewers must still inspect the place equivalence and the actual global
 lattice/localization model.
 
+Report 38 lowers part of the finite-extension interface without overstating
+its domain. Reviewers should verify that `adicOrder_liesOver` concerns
+`x : Kˣ`, whereas v5 Lemma 8.1(i) quantifies over the completed local field.
+The adapter correctly keeps defect scaling and good-BONG transfer as inputs.
+Any claim that Report 38 proves all of Lemma 8.1 would be a scope error.
+
 The same anti-circularity test is applied to the finite-place half of Theorem
 1.9.  Report 31 removes the former field that asserted the complete quantified
 local conclusion and replaces it by the three source branches.  Reviewers

@@ -75,6 +75,13 @@ from the canonical number-field interface: it defines all three arithmetic
 fields from the height-one spectrum and derives the complete discriminant
 package. A future concrete model still has to construct its place equivalence.
 
+Report 38 treats a different Section 8 interface. It proves the order-scaling
+formula and ramification tower for `x : Kˣ` at actual height-one primes in a
+finite number-field extension. This is a genuine specialization of Lemma
+8.1(i) to underlying number-field coefficients, not a strengthening to every
+element of `K_p`. The completed-field extension, defect inequality, and
+good-BONG scalar extension remain explicitly outside the theorem.
+
 Report 31 removes another final-conclusion field from Theorem 1.9.  Instead of
 assuming local universality at every finite place, the formalization assumes
 the three arithmetic cases named in v5 and proves their exhaustive split.  It

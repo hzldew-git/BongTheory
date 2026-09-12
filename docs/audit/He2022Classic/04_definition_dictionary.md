@@ -18,6 +18,8 @@
 | concrete discriminant/ramification equivalence | `HeClassic2024NumberField.discriminantOdd_iff_forall_ramificationIdx_eq_one` |
 | abstract-to-number-field place identification | `HeClassic2024GlobalData.HeightOneSpectrumIdentification`, which derives `NumberFieldDiscriminantBridge` |
 | canonical number-field Section 8 arithmetic | `HeClassic2024NumberFieldGlobalData.toGlobalData` and `sectionEightLaws` |
+| additive order of a nonzero number-field coefficient at a finite prime | `HeClassic2024NumberFieldLocalExtension.adicOrder` |
+| finite-prime order scaling and ramification tower | `adicOrder_liesOver` and `absoluteRamificationIndex_tower` |
 | generic one-way discriminant package | `HeClassic2024GlobalData.DiscriminantRamificationLaws` |
 
 The formal definition includes source classic integrality rather than relying
@@ -42,3 +44,7 @@ height-one-spectrum place type; see Report 34.
 `HeClassic2024NumberFieldGlobalData.toGlobalData` fixes the dyadic predicate,
 ramification index, and discriminant proposition to their actual number-field
 definitions, so the three compatibility proofs are reflexivity; see Report 36.
+`HeClassic2024NumberFieldLocalExtension.adicOrder` is the negative logarithm
+of mathlib's multiplicative adic valuation on `Kˣ`. Report 38 proves its
+scaling under `P | p` for underlying number-field coefficients. It does not
+define order or quadratic defect on all elements of the completions.

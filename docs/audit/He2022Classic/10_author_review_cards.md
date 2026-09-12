@@ -195,6 +195,13 @@ and Report 36 removes the three arithmetic compatibility obligations from the
 canonical adapter. The remaining review target is the equivalence and actual
 lattice/localization data.
 
+Report 38 proves the valuation-scaling and ramification-tower calculations at
+actual height-one primes for coefficients in `Kˣ`. The author should confirm
+that this is recorded only as the underlying-number-field specialization of
+Lemma 8.1(i). The next completion step must extend the statement to `K_pˣ`
+and construct the quadratic-defect and good-BONG scalar-extension arguments;
+none of those is inferred from density alone.
+
 For Theorem 1.9's finite-place step, the all-places conclusion is now derived
 from separate non-dyadic, dyadic unary, and dyadic higher-rank laws.  The
 number-field expert should confirm those are exactly the three local cases in

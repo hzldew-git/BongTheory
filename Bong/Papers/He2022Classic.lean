@@ -105,7 +105,11 @@ typed bridge transports those results to the abstract finite-place layer.  The
 canonical number-field global-data adapter further defines the dyadic
 predicate, ramification index, and discriminant proposition directly from the
 standard height-one spectrum, so their compatibility is definitional once a
-place equivalence is supplied.  The
+place equivalence is supplied.  For nonzero coefficients in the underlying
+number field, order scaling at a prime lying over another prime, relative
+ramification positivity, and the absolute ramification tower are also proved.
+Their extension to arbitrary completion elements, quadratic-defect scaling,
+and good-BONG scalar extension remain open.  The
 finite-place
 sufficiency part of Theorem 1.9 is also derived from separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
@@ -126,7 +130,7 @@ Corollary 6.3 is retained, and the downstream affected claims remain within
 the conditional Section 8 boundary documented in audit Reports 24 and 26.
 Only the explicit `n ≥ 2`, even-rank parts of Lemma 8.3 and Theorem 1.8 are
 exported; no unrestricted odd compatibility endpoint remains.  Reports
-27--36 document these lowered interfaces and the parity scope.
+27--38 document these lowered interfaces and the parity scope.
 -/
 
 namespace Bong

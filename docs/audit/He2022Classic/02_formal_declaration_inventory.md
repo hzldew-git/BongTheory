@@ -73,6 +73,14 @@ The proposition-valued definition remains separate from its proof:
   `sectionEightLaws`: define the three arithmetic fields directly from the
   height-one spectrum and derive their compatibility plus the Section 8
   discriminant fields from a place equivalence; Report 36.
+- `HeClassic2024NumberFieldLocalExtension.adicOrder_liesOver`,
+  `relativeRamificationIndex_pos`, and `absoluteRamificationIndex_tower`:
+  actual finite-prime arithmetic for nonzero underlying number-field
+  coefficients; Report 38.
+- `RemainingCoefficientInputs.toLocalExtensionData` and `lemma81Laws`:
+  populate the order, positivity, and ramification-tower parts of Lemma 8.1
+  while retaining only defect scaling and good-BONG transfer as inputs;
+  Report 38. This is not yet the arbitrary-completion-element statement.
 - `HeClassic2024GlobalData.SumOfSquaresLocalUniversalityLaws` and
   `sumOfSquares_localUniversal_of_oddDiscriminant`: the non-dyadic, dyadic
   unary, and dyadic higher-rank inputs and their derived all-finite-place
@@ -131,5 +139,8 @@ local-to-global derivation and Theorem 1.9.
 constructions, and downstream consumers.
 `BongTest/He2022ClassicNumberFieldGlobalDataAudit.lean` checks the canonical
 arithmetic adapter and the derived Section 8 package from Report 36.
+`BongTest/He2022ClassicNumberFieldLocalExtensionAudit.lean` checks the
+finite-prime order and ramification theorems and their partial Lemma 8.1
+adapter from Report 38.
 `BongTest/He2022ClassicLocalUniversalityAudit.lean` checks the Report 31
 finite-place case split and the full conditional Theorem 1.9 endpoint.

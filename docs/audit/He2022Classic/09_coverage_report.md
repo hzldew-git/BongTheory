@@ -49,6 +49,10 @@ Coverage status:
   proving primality and dyadic-prime coverage. Report 36 defines the three
   arithmetic fields canonically and derives their compatibility; the place
   equivalence and concrete lattice/localization model remain.
+  Report 38 proves finite-prime order scaling, relative ramification
+  positivity, and the absolute ramification tower for nonzero coefficients in
+  the underlying number field. Arbitrary completion elements, defect scaling,
+  and good-BONG scalar extension remain uncovered.
   The source-facing Theorem 1.7 endpoint is restricted to `n >= 2` even, and
   its rank-independent logical tail is separately exposed; Report 33.
   Theorem 1.9's all-finite-place local-universality conclusion is derived from
@@ -63,5 +67,6 @@ definitions, and examples. Reusable foundations are not extra paper results.
 The obsolete broader publisher Lemma 7.1(ii) is refuted; the author-corrected
 v5 replacement is positively formalized. Overall grade is D because the
 authoritative v5 source contains a false unrestricted Corollary 6.3, while
-the remaining concrete number-field lattice layer and human semantic sign-off remain
-outstanding. Whole-paper completion remains `NOT_COMPLETE`.
+the remaining concrete number-field lattice and completed-extension layers,
+and human semantic sign-off, remain outstanding. Whole-paper completion
+remains `NOT_COMPLETE`.

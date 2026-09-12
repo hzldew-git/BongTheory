@@ -38,6 +38,11 @@ the standard height-one spectrum. Report 36 supplies canonical number-field
 global data in which the dyadic predicate, ramification index, and discriminant
 proposition are standard definitions and all compatibility is definitional.
 A concrete global model still needs the place equivalence at this bridge layer.
+Report 38 proves finite-prime order scaling, relative ramification positivity,
+and the absolute ramification tower for nonzero coefficients in the underlying
+number field. This is a concrete part of Lemma 8.1(i), but not its full
+completed-field statement; defect scaling and good-BONG scalar extension
+remain open.
 Report 31 derives Theorem 1.9's finite-place local-universality conclusion from
 the separate non-dyadic, dyadic unary, and dyadic higher-rank laws in v5; the
 all-places conclusion is no longer stored as a package field.
@@ -55,8 +60,8 @@ but does not supply a classification of all classic-maximal lattices.
 The obsolete broader publisher Lemma 7.1(ii) disjunction has a kernel-checked
 refutation when `e>1`; it is retained as a regression theorem and is not used
 to prove v5. O'Meara 63:5 and 63:9 and all three numerical counts are
-internally proved. `SOURCE_DELTA.md` and Reports 22--34 are part of the review
-scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
+internally proved. `SOURCE_DELTA.md`, Reports 22--36, and Report 38 are part of
+the review scope. Reports 24 and 26 record a kernel-checked `e=2`, `n=3` counterexample
 to the unrestricted odd statement of Corollary 6.3. Lemma 8.3 and Theorem 1.8
 therefore need either an even-rank restriction or a replacement odd proof.
 Report 28 applies that restriction in Lean: the remaining Lemma 8.3 and

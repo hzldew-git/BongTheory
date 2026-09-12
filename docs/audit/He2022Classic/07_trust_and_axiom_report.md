@@ -118,3 +118,12 @@ completes 5,667 jobs. All 30 policy tests pass, the scanner checks 2,798 Lean
 sources, and the focused imported-closure gate checks 62,790 declarations.
 This removes the three compatibility premises but does not construct the
 remaining global lattice and localization laws; Report 36.
+
+At code checkpoint `6d5c434`, the finite-prime order-scaling theorem,
+relative ramification positivity, absolute ramification tower, and partial
+Lemma 8.1 adapter use only `propext`, `Classical.choice`, and `Quot.sound`.
+The focused build completes 5,651 jobs and the combined canonical/audit build
+completes 5,674 jobs. All 30 policy tests pass, and the scanner checks 2,800
+Lean sources. The focused imported-closure gate checks 62,819 declarations.
+These reports do not prove the two remaining input fields or extend the
+coefficient type from `Kˣ` to the completion; Report 38.
