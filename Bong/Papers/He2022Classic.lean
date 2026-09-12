@@ -26,6 +26,7 @@ import Bong.Bong.He2022ClassicCorollary63OddCounterexample
 import Bong.Bong.He2022ClassicSectionSeven
 import Bong.Bong.He2022ClassicLemma711
 import Bong.Lattice.He2022ClassicSectionEight
+import Bong.Lattice.He2022ClassicNumberFieldGlobalData
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
