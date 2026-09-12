@@ -135,9 +135,11 @@ The main unresolved mathematical work is:
   exhaustion and irredundancy themselves are derived in Report 72;
 - concrete number-field instances of `SectionEightLaws`, its lower
   `ClassNumberRegularityLaws` genus-lifting and isometry-transport package,
-  the non-dyadic and all-place assembly of local maximality, and the earlier
+  the non-dyadic and all-place assembly of local maximality, concrete
+  `ScalingTransportLaws` and half-scale identification, and the earlier
   global reduction packages; Report 81 closes the one-place dyadic
-  local-maximality instance only;
+  local-maximality instance, while Report 83 derives regularity invariance
+  from the still-abstract primitive scaling transport;
 - any publisher-corrected replacement for the four binary statements and a
   resolution of the printed-strength Lemma 7.13 claim;
 - concrete Hanke--Kirschmer--Oh catalogue imports, the global interpretation

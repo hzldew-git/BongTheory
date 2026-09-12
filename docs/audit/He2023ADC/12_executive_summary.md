@@ -481,3 +481,11 @@ This mechanical result does not repair the disclosed source mismatches,
 instantiate the remaining arithmetic interfaces, provide GitHub exact-head
 evidence, or replace author, domain-expert, and formalization-expert review.
 The project therefore remains Grade D and `NOT_COMPLETE`.
+
+Report 83 lowers the remaining regularity-scaling premise. Lean now derives
+`IsNRegular (scaleTwo M) n <-> IsNRegular M n` from surjectivity of scaling
+and transport of rank, integrality, and simultaneous local/global
+representation. The derived theorem and interface construction have empty
+axiom sets. Concrete number-field scaling transport, the half-scale
+identification, a replacement exact Review Kit, and human review remain open,
+so the Grade-D `NOT_COMPLETE` verdict is unchanged.

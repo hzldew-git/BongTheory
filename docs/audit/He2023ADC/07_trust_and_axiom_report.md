@@ -479,6 +479,14 @@ declarations, the scanner checks 2,736 tracked Lean sources, and all 30 policy
 tests pass. The biconditional and half-scale definition remain mathematical
 inputs, not Lean axioms. Fresh-extraction verification remains open.
 
+At `9ebf43c8d1c5ead35a1865435ff1e166fc89b7e3`, Report 83 derives the
+rank-uniform regularity biconditional from `ScalingTransportLaws`. Both the
+derived biconditional and the construction of `ScalingRegularityLaws` have
+empty axiom sets. Surjectivity of scaling and the concrete transport of rank,
+integrality, and representation remain fields of an ordinary structure, not
+Lean axioms. Exact clean-kit and GitHub-hosted checks remain open for this
+checkpoint.
+
 At `0c5211bb0f5a2f1954a0e6b63ceac53a6bb67121`, Report 78 replaces the
 complete global--local maximality field by `GlobalMaximalityLaws`. The
 derived biconditional, compatibility endpoint, and Lemma 8.1(ii) have empty

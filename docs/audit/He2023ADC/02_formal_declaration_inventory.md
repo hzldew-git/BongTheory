@@ -280,6 +280,12 @@ Additional concrete declaration groups are:
   regularity half of Lemma 8.4 and both half-scale transports used by
   Corollary 8.5; the former three one-way `SectionEightLaws` fields are gone.
   The focused audit is `He2023ADCScalingRegularityAudit`; report 77.
+  `He2023ADCScalingTransport` lowers the regularity biconditional further.
+  Its `ScalingTransportLaws` records only surjectivity of scaling and
+  preservation/reflection of rank, integrality, and simultaneous local/global
+  representation. The theorem `nRegular_scaleTwo_iff` derives the finished
+  biconditional, and `toScalingRegularityLaws` reconstructs the former
+  interface. The focused audit is `He2023ADCScalingTransportAudit`; report 83.
   `GlobalMaximalityLaws` records the two O'Meara 82K directions separately.
   Its `globalMaximal_iff_localMaximal` theorem derives the biconditional used
   by Lemma 8.1(ii), Theorem 1.5(ii), and Theorem 1.7, so the complete
