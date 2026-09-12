@@ -205,6 +205,9 @@ open Bong.QuadraticSpace
 #check Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_scaleTwo
 #check Bong.HeADC2025GlobalData.ScalingRegularityLaws.scaleTwo_halfScale
 #check Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_of_halfScale
+#check Bong.HeADC2025GlobalData.ScalingTransportLaws
+#check Bong.HeADC2025GlobalData.ScalingTransportLaws.nRegular_scaleTwo_iff
+#check Bong.HeADC2025GlobalData.ScalingTransportLaws.toScalingRegularityLaws
 #check Bong.HeADC2025GlobalData.GlobalMaximalityLaws
 #check Bong.HeADC2025GlobalData.GlobalMaximalityLaws.globalMaximal_iff_localMaximal
 #check Bong.HeADC2025GlobalData.GenusTransportLaws
@@ -239,6 +242,8 @@ open Bong.QuadraticSpace
 #print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_scaleTwo
 #print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.scaleTwo_halfScale
 #print axioms Bong.HeADC2025GlobalData.ScalingRegularityLaws.nRegular_of_halfScale
+#print axioms Bong.HeADC2025GlobalData.ScalingTransportLaws.nRegular_scaleTwo_iff
+#print axioms Bong.HeADC2025GlobalData.ScalingTransportLaws.toScalingRegularityLaws
 #print axioms Bong.HeADC2025GlobalData.GlobalMaximalityLaws.globalMaximal_iff_localMaximal
 #print axioms Bong.HeADC2025GlobalData.GenusTransportLaws.inGenus_symm
 #print axioms Bong.HeADC2025GlobalData.GenusTransportLaws.localEquivalent_of_inGenus

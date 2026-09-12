@@ -11,6 +11,7 @@ import Bong.Dyadic.PrincipalUnitResidueQuotient
 import Bong.Dyadic.UnitSquareClassOddLayer
 import Bong.Dyadic.UnitSquareClassCount
 import Bong.Lattice.He2023ADCSectionEight
+import Bong.Lattice.He2023ADCScalingTransport
 import Bong.Lattice.He2023ADCDyadicLocalModel
 import Bong.Lattice.He2023ADCEnumerativeMain
 import Bong.Bong.He2023ADCSectionThree
@@ -148,8 +149,10 @@ the definite Meyer input from the indefinite Xu spinor-genus construction
 and O'Meara 104:5 single-class input.  The stability half of Lemma 8.4 is
 derived placewise from the local Theorem 6.2/Proposition 4.16 form, scaling,
 and local-to-global stability laws.  Its regularity half and the half-scale
-steps in Corollary 8.5 are derived from a rank-uniform scaling biconditional
-and the exact orientation of half-scaling.  The O'Meara 82K global--local
+steps in Corollary 8.5 are derived from the exact orientation of half-scaling
+and a rank-uniform scaling biconditional; that biconditional is itself proved
+from surjectivity of scaling and transport of rank, integrality, and local
+and global representation.  The O'Meara 82K global--local
 maximality directions are kept separate and their biconditional is derived.
 The genus relation is characterized by local equivalence at every finite
 place; genus symmetry, local-equivalence extraction, and rank preservation
