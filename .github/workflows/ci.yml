@@ -39,7 +39,7 @@ jobs:
           --production-shards 72 --test-shards 24
           --github-output "$GITHUB_OUTPUT"
 
-  build-and-audit:
+  build_shards:
     needs: plan
     name: Build and audit ${{ matrix.shard.name }} (${{ matrix.shard.moduleCount }} modules)
     strategy:
@@ -112,3 +112,26 @@ jobs:
       - name: Run actual positive and negative fixtures
         shell: bash
         run: python3 -B scripts/ci/check_axiom_gate_fixtures.py
+
+  build-and-audit:
+    name: build-and-audit
+    needs:
+      - plan
+      - build_shards
+      - axiom-gate-fixtures
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Require every source shard and axiom gate
+        shell: bash
+        env:
+          PLAN_RESULT: ${{ needs.plan.result }}
+          SHARDS_RESULT: ${{ needs.build_shards.result }}
+          FIXTURES_RESULT: ${{ needs.axiom-gate-fixtures.result }}
+        run: |
+          set -euo pipefail
+          test "$PLAN_RESULT" = success
+          test "$SHARDS_RESULT" = success
+          test "$FIXTURES_RESULT" = success
