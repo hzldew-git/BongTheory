@@ -191,11 +191,13 @@ localizations. Scaling invariance of 2-regularity is still a separate
 `SectionEightLaws` field. See report 76.
 
 Report 77 removes the remaining three one-way scaling fields. The replacement
-`ScalingRegularityLaws` still assumes the rank-uniform regularity
-biconditional and the exact meaning of `isHalfScaleOf`; it does not prove them
-for concrete quadratic lattices. This makes the two genuine scaling facts,
-rather than their three downstream uses, the remaining boundary. See report
-77.
+`ScalingRegularityLaws` initially still assumed the rank-uniform regularity
+biconditional and the exact meaning of `isHalfScaleOf`; it did not prove them
+for concrete quadratic lattices. Report 83 lowers the biconditional to
+surjectivity of `scaleTwo` and transport of rank, integrality, and simultaneous
+local/global representation. Those primitive transport facts and the exact
+meaning of `isHalfScaleOf`, rather than regularity itself or its downstream
+uses, are now the remaining boundary. See reports 77 and 83.
 
 Report 78 removes the complete global--local maximality biconditional field.
 `GlobalMaximalityLaws` exposes the two O'Meara 82K directions separately;
