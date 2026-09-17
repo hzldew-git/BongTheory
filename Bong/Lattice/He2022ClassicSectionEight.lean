@@ -13,7 +13,7 @@ import Bong.Lattice.He2022ClassicNumberFieldDiscriminant
 
 This file formalizes the global--local deductions in Section 8 of Zilong He,
 *On classic n-universal quadratic forms over dyadic local fields*, using the
-author-corrected v5 manuscript as semantic authority.
+author-corrected v6 manuscript as semantic authority.
 
 The repository does not yet identify its dyadic `Lattice` type with lattices
 over number fields and all their completions.  Accordingly, the arithmetic
@@ -85,9 +85,9 @@ theorem he2022ClassicLemma81ii (H : D.Lemma81Laws) (a : D.Element) :
       D.extensionDefect a :=
   H.defect_scale a
 
-/-- The good-BONG coefficient-criterion consequence used in the written proof
-of He (2024), Lemma 8.1(iii).  The literal carrier-identification conclusion
-requires additional lattice scalar-extension data. -/
+/-- The coefficient-criterion interface for revised v6 Lemma 8.1(iii).
+Its concrete realization is in `He2022ClassicNumberFieldBONGBridge`; this
+abstract predicate alone does not identify an ambient scalar extension. -/
 theorem he2022ClassicLemma81iii (H : D.Lemma81Laws)
     {m : Nat} (a : Fin m → D.Element) (hGood : D.BaseGoodBONG a) :
     D.ExtensionGoodBONG a :=
@@ -546,9 +546,8 @@ theorem he2022ClassicTheorem17_of_localAdjacentDefectsLarge
       hLocal hDefects
   omega
 
-/-- The even-rank part of He (2024), Theorem 1.7. The v5 proof performs its
-coefficient calculation for even `n`; its unsupported odd sentence is not
-exported as an unconditional endpoint. -/
+/-- The even-rank scope now stated in v6 Theorem 1.7. The local coefficient
+calculation remains an explicit package premise, not a concrete global proof. -/
 theorem he2022ClassicTheorem17_even (H : G.SectionEightLaws)
     (M : S.GlobalLattice) (n : Nat) (hn : 2 ≤ n) (hnEven : Even n)
     (hRank : S.globalRank M = n + 3)
@@ -607,11 +606,10 @@ variable
 
 variable (X : HeClassic2024ExtensionData Sbase Sextension)
 
-/-- The even-rank local scalar-extension obstruction proved by the written
-argument of Lemma 8.3.  Its implementation requires concrete localization and
-the good-BONG transport in Lemma 8.1, so it is kept as the single arithmetic
-field of this package.  The unrestricted odd-rank statement is deliberately
-not included. -/
+/-- The even-rank local scalar-extension obstruction sought by v6 Lemma 8.3.
+Its concrete implementation requires localization, transport of the mapped
+good BONG into the scalar-extension ambient, and the new carrier equality;
+these are represented by this explicit field, not claimed as proved here. -/
 structure Lemma83Laws : Prop where
   local_ramified_obstruction (L : Sbase.GlobalLattice) (n : Nat) :
     2 ≤ n → Even n → Sbase.globalRank L = n + 3 →
@@ -625,9 +623,8 @@ namespace Lemma83Laws
 variable
   {X : HeClassic2024ExtensionData Sbase Sextension}
 
-/-- The even-rank part of He (2024), Lemma 8.3, with the chosen ramified pair
-of dyadic places stored in `X`.  The v5 proof supplies no valid reduction of
-the odd case to this one. -/
+/-- The even-rank statement of v6 Lemma 8.3, with the chosen ramified pair
+of dyadic places stored in `X`. Its local obstruction is an explicit premise. -/
 theorem he2022ClassicLemma83_even (H : X.Lemma83Laws)
     (L : Sbase.GlobalLattice) (n : Nat)
     (hn : 2 ≤ n) (hEven : Even n)

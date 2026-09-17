@@ -1,12 +1,14 @@
 # Audit scope
 
-The sole semantic authority is the author-corrected v5 TeX manuscript
-`classic_dyadic-n-uni-v5.tex`, SHA-256
-`C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049`.
-The 2024 publisher version of record and the 2025 arXiv v3 revision are
-comparison-only. The source files are author-held and are not redistributed.
+**Current v6 scope:** The user-approved semantic authority is the
+author-corrected `classic_dyadic-n-uni-v6.tex`, SHA-256
+`4D3903083188E2823CCA930477A43F82A1FC3C69AD96056ADB099D924B14EC5A`.
+The v5 manuscript, 2024 publisher version, and 2025 arXiv v3 revision are
+comparison-only. The author-held sources are not redistributed. Report 44 is
+the current v6 source-first map. The remainder of this report records the
+**historical v5 code-and-kit checkpoint**, not a v6 build or release receipt.
 
-Code checkpoint: `e3b18be95c813885a421b83fe0a0148d6b561ae0` on branch
+Historical v5 code checkpoint: `e3b18be95c813885a421b83fe0a0148d6b561ae0` on branch
 `release/heclassic-v0.5.0-rc.1-prep`, audited on 2026-09-13 with Lean 4.32.1
 and the repository's pinned `lake-manifest.json`. Packaged audit commit
 `ab1901a` has the exact local receipt in Report 43; an exact public release

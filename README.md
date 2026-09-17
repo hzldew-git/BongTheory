@@ -18,12 +18,12 @@ paper. Their distinct coverage and semantic-audit grades are stated below.
   `FORMALIZATION_COMPLETE_WITH_SOURCE_DISCREPANCY`; its printed Theorem 3.1
   exponent is kept separate from the exponent derived from Theorem 2.1.
 - He-paper coverage status: `PARTIAL`. He--Hu has complete formal coverage of
-  its 47 numbered results subject to semantic sign-off; He Classic has both v5
-  testing families, Lemma 8.1(i)--(ii), and an actual upper good-BONG
-  realization with mapped values proved, but literal Lemma 8.1(iii) still lacks
-  identification with its specified localized scalar-extension lattice. It
-  also retains a disclosed Corollary 6.3/Lemma 8.3 odd-parity source gap and
-  uninstantiated global lattice/localization and strong-approximation inputs;
+  its 47 numbered results subject to semantic sign-off; He Classic is being
+  synchronized with user-approved v6. Its testing families, Lemma 8.1(i)--(ii),
+  and an actual upper good-BONG realization are proved. The v6 parity repair
+  matches the existing even-rank signatures, but the literal scalar-extension
+  ambient and v6 Lemma 8.3 carrier proof remain unformalized, as do global
+  lattice/localization and strong-approximation instances;
   He ADC Section 6
   is fully triaged and
   Section 7 has 20/21 fully formalized numbered items, one documented
@@ -75,20 +75,20 @@ See [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for a fuller source-to-code map and
 | Published source | Current public endpoint | Honest status |
 |---|---|---|
 | He--Hu, *Sci. China Math.* 67 (2024), Theorems 1.1-1.2 | `heHu2022Theorem11`, `heHu2022Theorem12PublishedEvenLiteral`, `heHu2022Theorem12PublishedOddLiteral` | proved; semantic review remains provisional |
-| He, *manuscripta math.* 174 (2024), author-corrected v5, Theorems 1.1, 1.3, 1.5, and 1.7--1.9 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11`, both `he2022ClassicTheorem13_*_literalMinimal` endpoints, `he2022ClassicTheorem15_allRanks`, `HeClassic2024NumberFieldBONGBridge.goodBONG_mappedValues_haveRealization`, and the `HeClassic2024*SectionEightLaws` endpoints | local classification, both minimal testing families, Lemma 8.1(i)--(ii), and its proof-supported good-BONG realization are proved; literal part (iii) has a carrier-identification gap, global lattice deductions are conditional, and v5 lacks the odd-parity reduction used in Corollary 6.3/Lemma 8.3 |
+| He, *manuscripta math.* 174 (2024), author-corrected v6, Theorems 1.1, 1.3, 1.5, and 1.7--1.9 | `Bong.BONG.GoodBONG.he2022ClassicTheorem11`, both `he2022ClassicTheorem13_*_literalMinimal` endpoints, `he2022ClassicTheorem15_allRanks`, `HeClassic2024NumberFieldBONGBridge.goodBONG_mappedValues_haveRealization`, and the `HeClassic2024*SectionEightLaws` endpoints | local classification, both minimal testing families, Lemma 8.1(i)--(ii), and its proof-supported good-BONG realization are proved; v6 part (iii) has an upper realization in standard diagonal ambient, and the abstract v6 Lemma 8.3 carrier equality is checked, but concrete scalar-extension basis transport and its local obstruction remain unformalized; global deductions are conditional; the parity scopes now match v6 |
 | He, *Doc. Math.* 30 (2025), local Sections 4, 6, and 7 | published-family profiles, complete Section 6 triage, Theorems 7.1, 7.2 and 7.4, the chain through Remark 7.3, the Corollary 7.21 catalogue, and O'Meara 63:9 | partial paper; Lemma 7.13 has a quantifier mismatch, while all dyadic numerical counts are unconditional in the repository interface |
 
 The obsolete broader Classic publisher Lemma 7.1(ii) is refuted for
-ramification index greater than one; author-corrected v5 replaces it by the
+ramification index greater than one; author-corrected v5/v6 replaces it by the
 proved restricted statement and closes odd testing. The ADC paper's Lemma
 6.8(iv) is also refuted at n=2 by an
 actual nonmaximal 2-ADC lattice, with a concrete `Q_2` check. The local
 Theorem 1.5 endpoint covers every n >= 1 locally. He Classic audit Report 24
-records the remaining v5 parity gap. See each paper's fidelity report for exact
+records the obsolete v5 parity gap repaired in v6. See each paper's fidelity report for exact
 coverage, assumptions, source discrepancies, and missing human approval.
 
 For He--Hu and He ADC, the publisher version of record is the semantic
-authority. For He Classic, the author-corrected v5 manuscript frozen in its
+authority. For He Classic, the author-corrected v6 manuscript frozen in its
 manifest is authoritative; the publisher and arXiv versions are comparison
 sources.
 The implementation order and promotion gates are recorded in

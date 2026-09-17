@@ -10,11 +10,10 @@ import Bong.Bong.MonotoneDiagonalization
 /-!
 # He (2024), Corollary 6.3
 
-The author-corrected v5 proof treats the even-rank branch explicitly and says
-only "without loss of generality" before imposing even parity.  No parity
-reduction is supplied there, and the odd clause of Theorem 1.1 has different
-terminal order conditions.  This file therefore records only the justified
-even branch, with the exact rank `n + 3`: Theorem 1.1 makes all but the last
+The author-corrected v6 statement explicitly assumes even `n ≥ 2`, matching
+the branch proved below. Its v5 predecessor did not have that restriction;
+the odd clause is refuted separately. At the exact rank `n + 3`, Theorem 1.1
+makes all but the last
 two orders zero, Proposition 2.4 makes every order nonnegative, and
 Proposition 2.2(iv) excludes the only possible drop from one to zero.  See
 audit Report 24; no odd conclusion is inferred from the omitted argument.

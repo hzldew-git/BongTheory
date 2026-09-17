@@ -29,6 +29,7 @@ import Bong.Lattice.He2022ClassicSectionEight
 import Bong.Lattice.He2022ClassicNumberFieldGlobalData
 import Bong.Lattice.He2022ClassicNumberFieldLocalExtension
 import Bong.Lattice.He2022ClassicNumberFieldBONGBridge
+import Bong.Lattice.He2022ClassicLemma83Carrier
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -36,9 +37,9 @@ import Bong.Lattice.He2022ClassicNumberFieldBONGBridge
 Canonical review and distribution entry point for Zilong He, *On classic
 n-universal quadratic forms over dyadic local fields*, manuscripta math. 174
 (2024), 559--595.  The semantic authority for this formalization is the
-author-corrected v5 TeX manuscript `classic_dyadic-n-uni-v5.tex`, frozen at
+user-approved author-corrected v6 TeX manuscript `classic_dyadic-n-uni-v6.tex`, frozen at
 SHA-256
-`C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049`.
+`4D3903083188E2823CCA930477A43F82A1FC3C69AD96056ADB099D924B14EC5A`.
 The publisher version of record and later arXiv revision are retained as
 comparison sources.
 
@@ -115,12 +116,14 @@ scaling are proved for every nonzero completed element, and the completion
 invariants are identified with the BONG normalization. The exact He--Hu
 adjacent and two-step coefficient criterion survives the embedding, and the
 mapped row is realized by an actual upper integral lattice with an actual good
-BONG. This proves Lemma 8.1(i)--(ii) and the existence conclusion supported by
-the written proof of part (iii). The literal part-(iii) claim for the
-preassigned localized scalar-extension lattice remains open: the cited
-He--Hu lemma constructs some lattice, while v5 supplies no carrier
-identification. The global lattice carrier and localization therefore remain
-open. The finite-place sufficiency part of Theorem 1.9 is also derived from
+BONG. This proves Lemma 8.1(i)--(ii) and realizes the existential lattice
+conclusion of revised v6 part (iii) in a standard diagonal ambient space. The
+isometry to the literal scalar-extension ambient is not yet formalized. V6
+moves identification with the specified localized scalar-extension lattice
+into Lemma 8.3. The carrier-equality deduction from lower Corollary 6.3,
+upper order monotonicity, and explicit basis transport is proved separately;
+the concrete basis transport and local obstruction remain open.
+The finite-place sufficiency part of Theorem 1.9 is also derived from
 separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
 all-places conclusion.  The
@@ -131,16 +134,16 @@ author-corrected v5 replaces it by the exact `e=1` or low-defect alternatives
 and adds the `C₁(1)` exceptional row when `e>1`.  Those corrected statements,
 the resulting Corollary 7.2 bridge, unconditional odd Lemma 7.4, and odd
 literal minimality are all proved here.  Kernel acceptance and semantic
-agreement with v5 remain separate from independent human sign-off.  Moreover,
-v5 Corollary 6.3 and Lemma 8.3 invoke an unsupported reduction to even `n`.
-The omitted odd clause of Corollary 6.3 is in fact false: a kernel-checked
+agreement with v6 remain separate from independent human sign-off. V6
+Corollary 6.3 and Lemma 8.3 explicitly assume even `n ≥ 2`. The obsolete
+unrestricted v5 odd clause of Corollary 6.3 is false: a kernel-checked
 ramification-two, `n=3` counterexample is included, with nonisometry to the
 diagonal lattice proved by good-BONG order invariance.  Only the even
 Corollary 6.3 is retained, and the downstream affected claims remain within
 the conditional Section 8 boundary documented in audit Reports 24 and 26.
-Only the explicit `n ≥ 2`, even-rank parts of Lemma 8.3 and Theorem 1.8 are
-exported; no unrestricted odd compatibility endpoint remains.  Reports
-27--41 document these lowered interfaces and the parity scope.
+Only the explicit `n ≥ 2`, even-rank parts of Lemma 8.3 and Theorems 1.7--1.8
+are exported; no unrestricted odd compatibility endpoint remains. Reports
+27--44 document the interface, parity scope, and v6 source transition.
 -/
 
 namespace Bong

@@ -1,5 +1,19 @@
 # Executive summary
 
+**Current v6 verdict (2026-09-17): Grade D / `NOT_COMPLETE`.** The approved
+semantic authority is author-corrected `classic_dyadic-n-uni-v6.tex`, SHA-256
+`4D3903083188E2823CCA930477A43F82A1FC3C69AD96056ADB099D924B14EC5A`.
+V6 repairs the v5 odd-parity statement and Lemma 8.1(iii) source boundaries.
+Lean now checks mapped upper-order monotonicity and the abstract carrier
+equality from explicit basis transport, but concrete scalar-extension basis
+transport, Lemma 8.3's local obstruction, and Section 8 global arithmetic
+instances remain. No full v6 source build, clean Review Kit, CI, release, or
+human semantic sign-off is claimed. Report 44 is the current v6 map.
+
+The remainder of this summary is preserved as the **historical v5 checkpoint**
+and its former Grade-D rationale; it must not be read as the current v6 source
+or release status.
+
 Paper: Zilong He, *On classic n-universal quadratic forms over dyadic local
 fields*, manuscripta math. 174 (2024), 559-595. Semantic authority:
 author-corrected v5 TeX, SHA-256

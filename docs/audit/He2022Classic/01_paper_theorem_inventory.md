@@ -1,7 +1,7 @@
 # Paper theorem inventory
 
-Authority: the author-corrected v5 manuscript, identified in
-`00_audit_scope.md`. The numbering is unchanged from the published version in
+Current authority: the author-corrected v6 manuscript, identified in
+`00_audit_scope.md` and mapped against v5 in Report 44. The numbering is unchanged from the published version in
 *manuscripta mathematica* 174 (2024), 559--595.
 
 | Section | Publisher results | Count |

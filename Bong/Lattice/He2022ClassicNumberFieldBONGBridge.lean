@@ -483,4 +483,48 @@ theorem goodBONG_mappedValues_haveRealization
   exact completionGoodBONGCoefficients_map_hasGoodBONG p P hp b.valueUnit
     (goodBONG_completionGoodBONGCoefficients p hp b)
 
+/-- The order sequence on the realized upper BONG is monotone whenever the
+lower order sequence is monotone. This is the order-scaling step used by the
+revised v6 Lemma 8.3 before its carrier-identification argument. The theorem
+does not assert that the upper realization is the scalar extension of the
+lower lattice; that still needs an ambient basis-transport construction. -/
+theorem mappedValues_order_monotone_of_lower
+    {E : Type*} [Field E] [NumberField E]
+    [Algebra K E] [FiniteDimensional K E]
+    (p : IsDedekindDomain.HeightOneSpectrum (𝓞 K))
+    (P : IsDedekindDomain.HeightOneSpectrum (𝓞 E))
+    [P.asIdeal.LiesOver p.asIdeal]
+    (hp : NumberFieldCompletion.IsDyadic p) :
+    letI := NumberFieldCompletion.dyadicContext p hp
+    let hpP := isDyadic_of_liesOver p P hp
+    letI := NumberFieldCompletion.dyadicContext P hpP
+    ∀ {V : Type v} [AddCommGroup V] [Module (Completion p) V]
+      {q : QuadraticSpace (Completion p) V}
+      {M : Lattice (Completion p) V} {m : Nat}
+      (b : BONG.GoodBONG q M m)
+      (R : BONG.DiagonalBONGRealization (K := P.adicCompletion E)
+        (fun i => Units.map
+          (HeClassic2024NumberFieldLocalExtension.completionMap p P)
+            (b.valueUnit i))),
+      Monotone (fun i : Fin m => b.order i) →
+        Monotone (fun i : Fin m => R.bong.order i) := by
+  letI := NumberFieldCompletion.dyadicContext p hp
+  let hpP := isDyadic_of_liesOver p P hp
+  letI := NumberFieldCompletion.dyadicContext P hpP
+  intro _ V _ _ q M m b R hbase i j hij
+  change R.bong.order i ≤ R.bong.order j
+  rw [R.order_eq, R.order_eq]
+  rw [ordUnit_eq_completionAdicOrder P hpP,
+    ordUnit_eq_completionAdicOrder P hpP]
+  rw [HeClassic2024NumberFieldLocalExtension.completionAdicOrder_liesOver p P,
+    HeClassic2024NumberFieldLocalExtension.completionAdicOrder_liesOver p P]
+  rw [← ordUnit_eq_completionAdicOrder p hp,
+    ← ordUnit_eq_completionAdicOrder p hp]
+  have hOrders : ordUnit (Completion p) (b.valueUnit i) ≤
+      ordUnit (Completion p) (b.valueUnit j) := by
+    simpa only [BONG.GoodBONG.order, BONG.GoodBONG.valueUnit,
+      BONG.order_eq_ordUnit] using hbase hij
+  exact mul_le_mul_of_nonneg_right hOrders (by exact_mod_cast
+    (Nat.zero_le (P.asIdeal.ramificationIdx (𝓞 K))))
+
 end Bong.HeClassic2024NumberFieldBONGBridge

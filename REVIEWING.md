@@ -14,7 +14,7 @@ For Beli 2020, explicitly decide whether the `r_1` coefficient printed in
 Theorem 3.1(3.2.1--2) agrees with the `2r_1` coefficient obtained by direct
 substitution into Theorem 2.1, or should be recorded as a source correction.
 For He--Hu and He ADC, use the publisher version of record named and hashed in
-`papers/<paper-id>/paper.json`. For He Classic, use the author-corrected v5
+`papers/<paper-id>/paper.json`. For He Classic, use the author-corrected v6
 manuscript frozen there; its publisher and arXiv copies are comparison sources.
 No comparison source may silently amend the authoritative text.
 

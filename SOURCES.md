@@ -14,7 +14,7 @@ extraction and semantic audit.
 | Beli 2019 v2 source | Same work and version | arXiv v2 TeX source | `00D58B232A331E559D175C2DF383DE82A49BC7B044E035092B7AC96015858292` |
 | Beli 2020 | Constantin N. Beli, “Universal integral quadratic forms over dyadic local fields,” [arXiv:2008.10113v2](https://arxiv.org/abs/2008.10113v2), first submitted 23 August 2020 and revised 26 June 2022 | 19-page arXiv v2 PDF | `35ECB7CB20A42768A6F55D80E69D4699837419854FAB021515020CCC7488986C` |
 | He--Hu 2022 / published 2024 | Zilong He and Yong Hu, “On n-universal quadratic forms over dyadic local fields,” *Sci. China Math.* 67 (2024), 1481--1506, DOI [10.1007/s11425-022-2133-0](https://doi.org/10.1007/s11425-022-2133-0) | 26-page publisher version of record | `32CBF87286B6580B91DCF051CABF3C31C62D65098B7C75177B00C5FBCF1E24E6` |
-| He 2022 Classic / published 2024 | Zilong He, “On classic n-universal quadratic forms over dyadic local fields,” *manuscripta math.* 174 (2024), 559--595, DOI [10.1007/s00229-023-01516-0](https://doi.org/10.1007/s00229-023-01516-0) | Author-corrected v5 TeX `classic_dyadic-n-uni-v5.tex`, approved 9 September 2026; author-held and not redistributed | `C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049` |
+| He 2022 Classic / published 2024 | Zilong He, “On classic n-universal quadratic forms over dyadic local fields,” *manuscripta math.* 174 (2024), 559--595, DOI [10.1007/s00229-023-01516-0](https://doi.org/10.1007/s00229-023-01516-0) | User-approved author-corrected v6 TeX `classic_dyadic-n-uni-v6.tex`, dated 13 September 2026; author-held and not redistributed | `4D3903083188E2823CCA930477A43F82A1FC3C69AD96056ADB099D924B14EC5A` |
 | He 2023 ADC / published 2025 | Zilong He, “On n-ADC integral quadratic lattices over algebraic number fields,” *Doc. Math.* 30 (2025), no. 4, 981--1022, DOI [10.4171/DM/1003](https://doi.org/10.4171/DM/1003) | 42-page publisher version of record | `E26190C88B16624DCCB7F269C6C3FFDA02BC6830677A5BC0C8E0AD48A36E72D6` |
 
 The revised condition `(iii')` following Theorem 2.1 occurs in the audited
@@ -33,7 +33,7 @@ chain are formalized; their locations and roles are documented in source
 comments and the audit reports.
 
 For He--Hu and He ADC, publisher versions of record are the semantic
-authority. For He Classic, the author-corrected v5 file above is authoritative;
+authority. For He Classic, the author-corrected v6 file above is authoritative;
 its publisher PDF (SHA-256
 `51F3626A15692E2FF0BAAE62F0EBCC4B8BEE02052C4D3CB1EA579B02E17480C1`)
 and arXiv:2206.04885v3 are comparison sources. All comparison-source hashes are

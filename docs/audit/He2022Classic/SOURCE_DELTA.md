@@ -1,11 +1,12 @@
 # Source-version delta
 
-Authority is assigned to the author-corrected v5 TeX manuscript
-`classic_dyadic-n-uni-v5.tex`, SHA-256
-`C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049`.
-The publisher version and arXiv:2206.04885v3 are comparison sources. Every v5
-change is recorded here rather than silently transferred from one version to
-another. See Report 22 for the v5 and latexdiff hashes.
+Current authority is the user-approved author-corrected v6 TeX manuscript
+`classic_dyadic-n-uni-v6.tex`, SHA-256
+`4D3903083188E2823CCA930477A43F82A1FC3C69AD96056ADB099D924B14EC5A`.
+The former v5 authority, publisher version, and arXiv:2206.04885v3 are now
+comparison sources. The sections below preserve the historical publisher-to-v5
+audit; Report 44 gives the source-first v5-to-v6 theorem map and hashes of the
+v6 PDF and latexdiff. No manuscript file is redistributed.
 
 ## Lemma 2.9(iii): odd-rank `C_2`, even-order branch
 
@@ -91,7 +92,7 @@ The corresponding Lean endpoints live in
 Corollary 7.2 bridge, the odd part of Lemma 7.4, and the odd minimality part of
 Theorem 1.3 without assuming the obsolete publisher statement.
 
-## Corollary 6.3 and Lemma 8.3: false odd clause and downstream gap
+## Historical v5 Corollary 6.3 and Lemma 8.3: false odd clause and downstream gap
 
 The author-corrected v5 Corollary 6.3 is stated without a parity restriction,
 but its proof begins by saying, without a cited reduction, that one may assume
@@ -127,4 +128,21 @@ the same parity scope, and separately exposes
 `he2022ClassicTheorem17_of_localAdjacentDefectsLarge` for the common final
 contradiction with the missing local-defect calculation as a premise. No
 unrestricted odd Theorem 1.7 endpoint remains. Reports 24, 26, 28, and 33 give
-the conservative source scope.
+the conservative source scope. V6 subsequently makes the even-rank restriction
+explicit in the affected statements; Report 44 is the current-authority map.
+
+## Current v6 correction and remaining formalization boundary
+
+V6 states `n >= 2` even in Corollary 6.3, Lemma 8.3, and Theorems 1.7--1.8.
+It weakens Lemma 8.1(iii) to a good BONG for *some* upper lattice on the
+extended quadratic space. In Lemma 8.3, monotone upper orders and Beli's
+diagonalization criterion are then used to identify that lattice with the
+preassigned scalar extension. The local even-rank Lean signatures match the
+new quantifiers, and the concrete upper diagonal-space realization matches the
+new existence direction. The precise scalar-extension ambient isometry and
+the concrete basis transport for the Lemma 8.3 carrier equality has not yet
+been formalized. `HeClassic2024Carrier.he2022ClassicLemma83_carrier_eq_of_basisTransport`
+proves the abstract carrier deduction, while `Lemma83Laws` still assumes its
+local obstruction field. Thus
+the v5 source errors have been corrected in v6, but the Lean formalization
+must not be labeled whole-paper complete on that basis alone.

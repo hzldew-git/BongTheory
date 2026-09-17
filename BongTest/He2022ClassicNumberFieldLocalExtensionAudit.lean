@@ -54,6 +54,7 @@ open scoped NumberField
 #check isDyadic_of_liesOver
 #check completionGoodBONGCoefficients_map_hasGoodBONG
 #check goodBONG_mappedValues_haveRealization
+#check mappedValues_order_monotone_of_lower
 
 #print axioms adicOrder_liesOver
 #print axioms relativeRamificationIndex_pos
@@ -87,6 +88,7 @@ open scoped NumberField
 #print axioms isDyadic_of_liesOver
 #print axioms completionGoodBONGCoefficients_map_hasGoodBONG
 #print axioms goodBONG_mappedValues_haveRealization
+#print axioms mappedValues_order_monotone_of_lower
 
 open scoped CompletionLiesOver in
 example

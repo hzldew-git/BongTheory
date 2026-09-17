@@ -1,5 +1,12 @@
 # Coverage report
 
+Current v6 coverage is Grade D / `NOT_COMPLETE`. The v6 source repairs the
+obsolete unrestricted odd clauses and weakens Lemma 8.1(iii), but concrete
+scalar-extension basis transport, Lemma 8.3 local obstruction, and global
+arithmetic instances remain open. Report 44 supersedes the historical v5
+source-gap verdict below; the detailed checkpoint evidence below is retained
+as a v5 development record, not a v6 clean-kit receipt.
+
 Coverage status:
 `IN_PROGRESS_WITH_COMPLETED_LOCAL_LEMMA_8_1_V5_ODD_COUNTEREXAMPLE_AND_EVEN_SECTION_8_SCOPE`.
 
