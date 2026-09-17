@@ -42,6 +42,5 @@ class LeanBuildShardPlanTests(unittest.TestCase):
             self.assertIn(module, production)
             self.assertEqual(production[module]["moduleCount"], 1)
 
-
 if __name__ == "__main__":
     unittest.main()

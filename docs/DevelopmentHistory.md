@@ -2775,3 +2775,19 @@ The current reproducibility classification is therefore
 The final verification command `lake --log-level=error build` completed
 successfully with all 5,555 jobs after the transient high-concurrency Windows
 failures were rebuilt sequentially.
+
+## He classic Lemma 7.10(iii) checkpoint (6 September 2026)
+
+The C-row deletion-witness mechanism from the publisher version of He's
+Lemma 7.10(iii) is now formalized at both the ambient coefficient-space and
+integral lattice levels.  The proof separates He--Hu Proposition 3.5(iii),
+which supplies the unique ambient exception, from He's Lemma 3.15(i), whose
+terminal order, alpha, and defect hypotheses upgrade the remaining ambient
+representations to classic integral representations.  Both defect-one unit
+rows and odd-order `U_i*pi` rows in Definition 2.6 have concrete endpoints.
+
+The checkpoint deliberately does not claim the literal finite-table clause:
+the index-inequality-to-nonisometry bridge, the exceptional H-row witnesses,
+and hence Theorem 1.3 minimality remain open.  The new public declarations
+have the same standard axiom footprint as the existing project endpoints,
+and the focused dependency gate and unfinished-proof scan pass.

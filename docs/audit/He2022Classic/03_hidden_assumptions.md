@@ -1,0 +1,143 @@
+# Hidden assumptions
+
+Classic integrality is stronger than norm integrality under the repository
+normalization `Q(x)=B(x,x)`: every bilinear pairing must be integral. The local
+field interface, finite-dimensionality, lattice fullness, and source classic
+integrality are explicit. The new global layer types localization and extension
+of scalars abstractly. The number-field discriminant--ramification theorem is
+now concrete, while the place-identification bridge and the remaining global
+lattice instances stay outside the proved scope.
+
+Theorem 1.1 and the all-ranks local Theorem 1.5 endpoint visibly take
+`QuadraticDefectLaws`, `HilbertSymbolLaws`, and
+`DyadicDiscriminantClassLaws`. These arithmetic interfaces must be read along
+with their proved instances; their presence is not erased by a standard-only
+axiom report. Neither endpoint assumes the classic-universality criterion as
+a new law. The unary branch derives scalar universality from classic
+1-universality and invokes the proved Beli universal criterion; it does not
+postulate the unary conclusion. The local endpoint itself contains no
+number-field localization, all-dyadic-primes quantifier, or discriminant
+equivalence.
+
+`HeClassic2024LocalExtensionData.Lemma81Laws`,
+`HeClassic2024GlobalData.SectionEightLaws`, and
+`HeClassic2024ExtensionData.Lemma83Laws` expose every arithmetic input used by
+the conditional Section 8 deductions. In particular, they expose O'Meara
+81:14 globalization, localization of universality, the place-identification
+bridge, the diagonal coefficient step, the ramified-extension
+obstruction, and strong approximation for sums of squares. Most remain theorem
+premises without concrete instances. The discriminant arithmetic is proved in
+Report 32, and the finite-completion order, defect, and good-BONG coefficient
+laws are proved in Reports 38--41. A standard-only axiom report does not
+discharge the remaining global premises. See Report 23.
+
+Report 27 removes the complete Proposition 8.2 conclusion from
+`SectionEightLaws`.  Its replacement `Proposition82Laws` still assumes four
+concrete facts: integrality localizes, an arbitrary integral local lattice
+has a positive-definite integral globalization of the same rank up to local
+equivalence, representation localizes, and representation is invariant under
+equivalence of the represented local lattice.  These are ordinary theorem
+premises, not Lean axioms, and concrete number-field instances remain open.
+
+The local ramified-extension obstruction is not available in unrestricted
+rank.  `Lemma83Laws.local_ramified_obstruction` explicitly requires
+`2 <= n` and `Even n`; these are not implementation conveniences but the
+scope of the argument actually written in v5.  No field or theorem supplies
+the unsupported odd branch; see Report 28.
+
+Report 29 removes the global-universality conclusion from the
+`sumOfSquares_local_to_global` field.  The replacement package still assumes
+global integrality of the sum-of-squares lattice, rank and integrality
+localization, and strong approximation for an admissible global target once
+all finite-place representations are known.  The concrete number-field and
+archimedean interpretation of those premises remains open.
+
+Report 30 removes the reverse direction from the general
+`DiscriminantRamificationLaws` package.  Its remaining arithmetic premise says
+that ramification index one at every dyadic place implies odd discriminant,
+and its contrapositive existence witness is derived in Lean.  Report 31 makes
+clear that the converse direction is nevertheless required by the unary
+sufficiency branch of Theorem 1.9; it is now a separate field of the specialized
+local-universality package. Report 32 proves both directions for actual prime
+ideals of a number field and constructs these abstract fields from a typed
+place-to-prime-ideal bridge. Report 34 derives the bridge's primality and
+coverage fields from an equivalence with the standard height-one spectrum.
+Report 36 defines the dyadic predicate, ramification index, and discriminant
+proposition canonically from that spectrum, making their compatibility
+definitional. Only the place equivalence and the concrete lattice/localization
+model remain open at this bridge layer.
+
+Report 38 removes three further fields from the number-field-coefficient
+specialization of Lemma 8.1: order scaling, relative ramification positivity,
+and the absolute ramification tower are theorems about actual height-one prime
+ideals. The specialization has element type `Kˣ`; it therefore does not prove
+the source statement for an arbitrary element of `K_pˣ`. Its remaining
+quadratic-defect inequality and good-BONG transfer are still ordinary theorem
+premises and are not discharged by that historical adapter's axiom report.
+
+Report 39 removes the need to assume that the two selected completions form an
+extension: the ring homomorphism, continuity, scalar tower, and finite
+dimensionality are now constructed. It deliberately does not derive the
+discrete valuation on arbitrary completion elements from continuity alone.
+That valuation-compatibility theorem, the defect inequality, and lattice
+scalar extension remain genuine obligations.
+
+Report 40 discharges the valuation-compatibility obligation for all elements
+of the lower completion. The proof explicitly establishes continuity of both
+valuation-valued functions before using density. At that checkpoint the only
+remaining fields in the completed Lemma 8.1 adapter were the quadratic-defect
+inequality and good-BONG transfer; neither was inferred from the order theorem.
+
+Report 41 constructs both remaining fields. Square-approximation depths define
+the completed relative quadratic defect and map to depths multiplied by the
+relative ramification index. Separately, the exact adjacent and two-step
+coefficient criterion for a good BONG is transported using order scaling,
+defect scaling, and the ramification tower. No caller-supplied arithmetic law
+remains in `completionLemma81Laws`. The still-open premise is structural: a
+concrete global-lattice model must identify its localized scalar extension and
+orthogonal basis with these mapped coefficients.
+
+Report 42 removes two possible hidden assumptions from that description.
+First, it constructs the actual local-field and dyadic-context instances for
+number-field finite completions and proves that the direct order, defect, and
+ramification definitions coincide with the BONG library definitions. Second,
+it proves that the criterion is necessary for an actual lower good BONG and
+sufficient for an actual upper integral-lattice realization. The remaining
+carrier identification cannot be discharged by citing He--Hu Lemma 2.2 alone:
+that lemma concludes "for some lattice", whereas v5 Lemma 8.1(iii) names the
+preassigned `L_P`. Any future literal endpoint must take or prove a theorem
+identifying these two lattices; no such premise is hidden in the current code.
+
+Report 31 removes the all-finite-places local-universality conclusion from
+`SectionEightLaws`. Its replacement originally exposed four inputs. Report 32
+discharges odd-discriminant-to-index-one from the number-field bridge, so the
+remaining representation inputs are: the sum-of-squares lattice is locally
+universal at non-dyadic places; its dyadic unary case holds
+at ramification index one; and its dyadic `n >= 2` case follows from the local
+criterion.  Lean derives the exhaustive case split, but concrete completion
+instances and bridges to the local BONG theorems remain open.
+
+`card_heClassicUnitRepresentatives` derives O'Meara 63:9 from the proved
+principal-unit filtration, after constructing the explicit equivalence between
+the published representative index and the intrinsic unit square-class
+quotient. The same equivalence restricts non-defect-one representatives to the
+depth-two principal-unit subgroup; its proved cardinality gives O'Meara 63:5.
+Consequently all three `he2022ClassicProposition28ii_*` numerical endpoints are
+unconditional and no paper-specific counting-law interface remains.
+
+The older auxiliary endpoint named
+`all_publishedOdd_implies_classicUniversal_of_lowerJ2` retains the lower-even
+J2 premise explicitly. It remains useful as a factored proof step but is not
+the v5 source endpoint.
+
+Report 20 historically sharpened this dependency. The endpoint
+`all_publishedOdd_implies_classicUniversal_of_lowerTerminalUpper` needs only
+the single lower-even terminal inequality; for `e > 1`,
+`all_publishedOdd_implies_classicUniversal_of_lowerJ2Prime` needs lower
+`J2'_E`. Author-corrected v5 now removes any external premise at the public
+endpoint: `all_publishedOdd_implies_all_publishedEven_v5` derives the complete
+even table directly, and
+`all_publishedOdd_implies_classicUniversal_v5_auto` obtains lower `J2_E` from
+the already proved even necessity theorem. All field-law interfaces remain
+visible theorem assumptions; no paper-specific v5 bridge is introduced as an
+axiom.
