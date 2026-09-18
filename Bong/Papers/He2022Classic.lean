@@ -32,6 +32,7 @@ import Bong.Lattice.He2022ClassicNumberFieldBONGBridge
 import Bong.Lattice.He2022ClassicLemma83Carrier
 import Bong.Lattice.He2022ClassicCompletionLatticeScalarExtension
 import Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry
+import Bong.Lattice.He2022ClassicCompletionBONGIsometry
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -120,14 +121,17 @@ adjacent and two-step coefficient criterion survives the embedding, and the
 mapped row is realized by an actual upper integral lattice with an actual good
 BONG. This proves Lemma 8.1(i)--(ii) and realizes the existential lattice
 conclusion of revised v6 part (iii) in a standard diagonal ambient space. A
-generic mapped-BONG isometry is proved below explicit lattice hypotheses,
-but its concrete finite-completion instance is not yet formalized. V6
+mapped-BONG isometry is proved both abstractly and over actual finite
+completions, under explicit lower integral-basis and upper monotone-order
+hypotheses. V6
 moves identification with the specified localized scalar-extension lattice
 into Lemma 8.3. The carrier-equality deduction from lower Corollary 6.3,
 upper order monotonicity, and explicit basis transport is proved separately.
 Corollary 6.3 supplies the lower integral-basis hypothesis in the corrected
-even-rank classic-universal scope; the actual upper-lattice identification
-and local obstruction remain open.
+even-rank classic-universal scope. Joining this to the concrete upper
+realization and identifying its lattice with the paper's separately
+specified scalar-extension lattice, as well as the local obstruction,
+remain open.
 The finite-place sufficiency part of Theorem 1.9 is also derived from
 separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
