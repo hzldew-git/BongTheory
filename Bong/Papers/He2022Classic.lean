@@ -31,6 +31,7 @@ import Bong.Lattice.He2022ClassicNumberFieldLocalExtension
 import Bong.Lattice.He2022ClassicNumberFieldBONGBridge
 import Bong.Lattice.He2022ClassicLemma83Carrier
 import Bong.Lattice.He2022ClassicCompletionLatticeScalarExtension
+import Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -123,7 +124,9 @@ isometry to the literal scalar-extension ambient is not yet formalized. V6
 moves identification with the specified localized scalar-extension lattice
 into Lemma 8.3. The carrier-equality deduction from lower Corollary 6.3,
 upper order monotonicity, and explicit basis transport is proved separately;
-the concrete basis transport and local obstruction remain open.
+the isometry between a mapped diagonal realization and the literal scalar
+extension is proved when both BONGs are integral bases.  Identification of
+the separately specified upper lattice, and the local obstruction, remain open.
 The finite-place sufficiency part of Theorem 1.9 is also derived from
 separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
