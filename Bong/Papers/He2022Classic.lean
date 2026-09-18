@@ -30,6 +30,7 @@ import Bong.Lattice.He2022ClassicNumberFieldGlobalData
 import Bong.Lattice.He2022ClassicNumberFieldLocalExtension
 import Bong.Lattice.He2022ClassicNumberFieldBONGBridge
 import Bong.Lattice.He2022ClassicLemma83Carrier
+import Bong.Lattice.He2022ClassicCompletionLatticeScalarExtension
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
