@@ -34,6 +34,7 @@ and global extension results remain conditional on their arithmetic data.
 #check Bong.Lattice.scalarExtension_basisLattice_isIsometric_of_mappedValues
 #check Bong.Lattice.scalarExtension_isIsometric_of_mappedValues
 #check Bong.Lattice.scalarExtension_isIsometric_diagonalRealization
+#check Bong.Lattice.he2022ClassicLemma83_isIsometric_of_lowerUniversal
 
 #print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
 #print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
@@ -46,3 +47,4 @@ and global extension results remain conditional on their arithmetic data.
 #print axioms Bong.Lattice.scalarExtension_basisLattice_isIsometric_of_mappedValues
 #print axioms Bong.Lattice.scalarExtension_isIsometric_of_mappedValues
 #print axioms Bong.Lattice.scalarExtension_isIsometric_diagonalRealization
+#print axioms Bong.Lattice.he2022ClassicLemma83_isIsometric_of_lowerUniversal

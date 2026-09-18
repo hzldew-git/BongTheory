@@ -9,6 +9,7 @@ import Bong.Lattice.He2022ClassicScalarExtensionLattice
 import Bong.Bong.Basis
 import Bong.Bong.BeliLemma43ConstructionProof
 import Bong.Bong.MonotoneDiagonalization
+import Bong.Bong.He2022ClassicCorollary63
 
 /-!
 # BONG bases and the scalar-extension lattice
@@ -101,5 +102,30 @@ theorem scalarExtension_isIsometric_diagonalRealization
   exact scalarExtension_isIsometric_of_mappedValues b R.bong
     R.valueUnit_eq hIntegral hLower
     (R.bong.lattice_eq_basisLattice_of_order_monotone hUpperMonotone)
+
+/-- In the even-rank classic-universal situation, Corollary 6.3 supplies
+the lower integral-basis hypothesis for the mapped diagonal isometry.
+This still does not identify a separately specified upper lattice. -/
+theorem he2022ClassicLemma83_isIsometric_of_lowerUniversal
+    [QuadraticDefectLaws F] [HilbertSymbolLaws F]
+    [DyadicDiscriminantClassLaws F]
+    {n : Nat} {q : QuadraticSpace F V} {L : Lattice F V}
+    (lower : BONG.GoodBONG q L (n + 3))
+    (R : BONG.DiagonalBONGRealization (K := E)
+      (fun i ↦ Units.map (algebraMap F E) (lower.toBONG.valueUnit i)))
+    (hn : 2 ≤ n) (hnEven : Even n)
+    (hClassic : Lattice.IsClassicIntegral q L)
+    (hUniversal : Lattice.IsClassicNUniversal.{u, w, u} q L n)
+    (hIntegral : ∀ a : IntegerRing F,
+      Dyadic.IsIntegral E (algebraMap F E (a : F)))
+    (hUpperMonotone : Monotone (fun i : Fin (n + 3) ↦ R.bong.order i)) :
+    IsIsometric (q.scalarExtension (E := E))
+      (BONG.coefficientDiagonalSpace
+        (fun i ↦ Units.map (algebraMap F E) (lower.toBONG.valueUnit i)))
+      (scalarExtension (E := E) L) R.lattice := by
+  apply scalarExtension_isIsometric_diagonalRealization lower.toBONG R hIntegral
+  · exact lower.he2022ClassicCorollary63_even hn hnEven hClassic hUniversal
+  · intro i j hij
+    exact hUpperMonotone hij
 
 end Bong.Lattice

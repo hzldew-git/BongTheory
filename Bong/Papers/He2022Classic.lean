@@ -119,14 +119,15 @@ invariants are identified with the BONG normalization. The exact He--Hu
 adjacent and two-step coefficient criterion survives the embedding, and the
 mapped row is realized by an actual upper integral lattice with an actual good
 BONG. This proves Lemma 8.1(i)--(ii) and realizes the existential lattice
-conclusion of revised v6 part (iii) in a standard diagonal ambient space. The
-isometry to the literal scalar-extension ambient is not yet formalized. V6
+conclusion of revised v6 part (iii) in a standard diagonal ambient space. A
+generic mapped-BONG isometry is proved below explicit lattice hypotheses,
+but its concrete finite-completion instance is not yet formalized. V6
 moves identification with the specified localized scalar-extension lattice
 into Lemma 8.3. The carrier-equality deduction from lower Corollary 6.3,
-upper order monotonicity, and explicit basis transport is proved separately;
-the isometry between a mapped diagonal realization and the literal scalar
-extension is proved when both BONGs are integral bases.  Identification of
-the separately specified upper lattice, and the local obstruction, remain open.
+upper order monotonicity, and explicit basis transport is proved separately.
+Corollary 6.3 supplies the lower integral-basis hypothesis in the corrected
+even-rank classic-universal scope; the actual upper-lattice identification
+and local obstruction remain open.
 The finite-place sufficiency part of Theorem 1.9 is also derived from
 separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an

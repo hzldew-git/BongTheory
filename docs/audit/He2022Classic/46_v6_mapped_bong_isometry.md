@@ -11,7 +11,7 @@ but does not close, the bridge left open in Report 45.
 
 ## Proven bridge
 
-`Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry` contains three
+`Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry` contains four
 kernel-checked theorems:
 
 | Declaration | Exact conclusion and premises |
@@ -19,6 +19,7 @@ kernel-checked theorems:
 | `scalarExtension_basisLattice_isIsometric_of_mappedValues` | The literal scalar extension of a lower BONG **basis lattice** is isometric to an upper BONG basis lattice if their exact value units match under the field map and the lower valuation ring maps into the upper one. The proof compares the two Gram matrices, including off-diagonal entries. |
 | `scalarExtension_isIsometric_of_mappedValues` | The same result for specified lattices, assuming separately that each lattice equals the integral span of its BONG basis. |
 | `scalarExtension_isIsometric_diagonalRealization` | For a standard diagonal realization of the mapped values, upper-order monotonicity supplies the upper basis-lattice equality. Lower basis-lattice equality and valuation-ring preservation are still explicit premises. |
+| `he2022ClassicLemma83_isIsometric_of_lowerUniversal` | In the corrected even-rank scope, proved Corollary 6.3 supplies the lower basis-lattice equality from classic integrality and classic universality. The upper-order monotonicity and ring-preservation premises remain explicit. |
 
 This proves a **quadratic-lattice isometry** under stated hypotheses, not
 equality of lattices in one ambient space. In particular, matching BONG
@@ -32,9 +33,9 @@ literal scalar extension needed in v6 Lemma 8.3.
 On the G worktree, direct Lean source checking, the isolated module target,
 the canonical paper entry, and the focused even-extension audit all exited
 zero with Lean 4.32.1. The focused audit's `#print axioms` reported only
-`propext`, `Classical.choice`, and `Quot.sound` for all three new declarations;
+`propext`, `Classical.choice`, and `Quot.sound` for the new declarations;
 no custom axiom or `sorry` is used. All eight manifest audit modules built;
-the focused enforcing gate reported `AXIOM_GATE_PASS: 63031 declarations
+the focused enforcing gate reported `AXIOM_GATE_PASS: 63032 declarations
 checked`. The comment-aware scan of 2,817 staged/tracked Lean sources found
 no forbidden proof token, all five deployment-policy tests passed, and the
 staged diff passed `git diff --check`.
