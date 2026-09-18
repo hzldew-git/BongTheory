@@ -46,16 +46,17 @@ private theorem heClassicOrder_eq_zero_through_evenBoundary
     simpa only [show i = (⟨n, by omega⟩ : Fin (n + 3)) by
       ext; exact hieq] using hBoundary
 
-/-- The even-parity case of He, Corollary 6.3, with the displayed BONG
-itself shown to be an integral orthogonal basis. -/
-theorem he2022ClassicCorollary63_even
+/-- In the even-parity classic-universal case, every adjacent order in the
+displayed good BONG is nondecreasing. This is the order fact behind the
+integral-basis conclusion of Corollary 6.3. -/
+theorem he2022ClassicCorollary63_even_order_monotone
     [QuadraticDefectLaws K] [HilbertSymbolLaws K]
     [DyadicDiscriminantClassLaws K]
     {n : Nat} (a : GoodBONG q L (n + 3))
     (hn : 2 ≤ n) (hnEven : Even n)
     (hClassic : Lattice.IsClassicIntegral q L)
     (hUniversal : Lattice.IsClassicNUniversal.{u, v, u} q L n) :
-    L = Lattice.basisLattice a.toBONG.basis := by
+    Monotone (fun i : Fin (n + 3) ↦ a.order i) := by
   have hConditions :=
     (a.he2022ClassicTheorem11 hn hClassic).mp hUniversal
   obtain hEven | hOdd := hConditions.parity_branch
@@ -115,17 +116,25 @@ theorem he2022ClassicCorollary63_even
                 exact odd_neg.mpr odd_one)).2
             rw [hGap] at hPositive
             omega
-    apply a.toBONG.lattice_eq_basisLattice_of_order_monotone
-    have hMonotone : Monotone (fun i : Fin (n + 3) ↦ a.order i) := by
-      rw [Fin.monotone_iff_le_succ]
-      exact hAdjacent
-    intro i j hij
-    let i' : Fin (n + 3) := ⟨i.1, by omega⟩
-    let j' : Fin (n + 3) := ⟨j.1, by omega⟩
-    have hij' : i' ≤ j' := Fin.mk_le_mk.mpr (Fin.mk_le_mk.mp hij)
-    have h := hMonotone hij'
-    simpa only [i', j', GoodBONG.order] using h
+    rw [Fin.monotone_iff_le_succ]
+    exact hAdjacent
   · exact False.elim ((Nat.not_even_iff_odd.mpr hOdd.parity) hnEven)
+
+/-- The even-parity case of He, Corollary 6.3, with the displayed BONG
+itself shown to be an integral orthogonal basis. -/
+theorem he2022ClassicCorollary63_even
+    [QuadraticDefectLaws K] [HilbertSymbolLaws K]
+    [DyadicDiscriminantClassLaws K]
+    {n : Nat} (a : GoodBONG q L (n + 3))
+    (hn : 2 ≤ n) (hnEven : Even n)
+    (hClassic : Lattice.IsClassicIntegral q L)
+    (hUniversal : Lattice.IsClassicNUniversal.{u, v, u} q L n) :
+    L = Lattice.basisLattice a.toBONG.basis := by
+  apply a.toBONG.lattice_eq_basisLattice_of_order_monotone
+  intro i j hij
+  simpa only [GoodBONG.order] using
+    (a.he2022ClassicCorollary63_even_order_monotone
+      hn hnEven hClassic hUniversal hij)
 
 end BONG.GoodBONG
 

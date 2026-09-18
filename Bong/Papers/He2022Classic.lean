@@ -127,11 +127,13 @@ hypotheses. V6
 moves identification with the specified localized scalar-extension lattice
 into Lemma 8.3. The carrier-equality deduction from lower Corollary 6.3,
 upper order monotonicity, and explicit basis transport is proved separately.
-Corollary 6.3 supplies the lower integral-basis hypothesis in the corrected
-even-rank classic-universal scope. Joining this to the concrete upper
-realization and identifying its lattice with the paper's separately
-specified scalar-extension lattice, as well as the local obstruction,
-remain open.
+In the corrected even-rank classic-universal scope, Corollary 6.3 supplies
+both the lower integral-basis equality and lower order monotonicity. The
+proved finite-completion order-scaling bridge supplies the upper monotonicity,
+so the diagonal realization is isometric to the literal scalar extension
+without those two extra premises. Identifying this separately realized upper
+lattice with the paper's specified scalar-extension lattice in a common
+ambient space, as well as the local obstruction, remain open.
 The finite-place sufficiency part of Theorem 1.9 is also derived from
 separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an

@@ -16,11 +16,11 @@ The author-corrected v6 statements explicitly assume even `n >= 2`. The
 carrier lemma proves the orthogonal-basis equality deduction.  The new
 finite-completion theorems identify the specified scalar-extension lattice
 with the pure-tensor span and transport every integral basis to its base
-change.  A mapped diagonal realization is isometric to the literal scalar
-extension under explicit BONG basis-lattice hypotheses, including at actual
-finite completions. Establishing the concrete lower/upper basis premises and
-identifying the independently constructed upper lattice with the paper's
-specified scalar extension remain open. The local obstruction
+change. In the corrected even classic-universal range, Corollary 6.3 and
+mapped-order scaling discharge both basis and monotonicity premises for an
+isometry to the standard upper diagonal realization at actual completions.
+Identifying the independently constructed upper lattice with the paper's
+specified scalar extension remains open. The local obstruction
 and global extension results remain conditional on their arithmetic data.
 -/
 
@@ -38,6 +38,8 @@ and global extension results remain conditional on their arithmetic data.
 #check Bong.Lattice.scalarExtension_isIsometric_diagonalRealization
 #check Bong.Lattice.he2022ClassicLemma83_isIsometric_of_lowerUniversal
 #check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization
+#check Bong.BONG.GoodBONG.he2022ClassicCorollary63_even_order_monotone
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization_of_evenUniversal
 
 #print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
 #print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
@@ -52,3 +54,5 @@ and global extension results remain conditional on their arithmetic data.
 #print axioms Bong.Lattice.scalarExtension_isIsometric_diagonalRealization
 #print axioms Bong.Lattice.he2022ClassicLemma83_isIsometric_of_lowerUniversal
 #print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization
+#print axioms Bong.BONG.GoodBONG.he2022ClassicCorollary63_even_order_monotone
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization_of_evenUniversal
