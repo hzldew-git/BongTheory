@@ -8,6 +8,7 @@ import Bong.Lattice.He2022ClassicLemma83Carrier
 import Bong.Lattice.He2022ClassicCompletionLatticeScalarExtension
 import Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry
 import Bong.Lattice.He2022ClassicCompletionBONGIsometry
+import Bong.Lattice.He2022ClassicCompletionScalarExtensionGoodBONG
 
 /-!
 # Focused audit for the proved even scope of Lemma 8.3 and Theorem 1.8
@@ -19,8 +20,10 @@ with the pure-tensor span and transport every integral basis to its base
 change. In the corrected even classic-universal range, Corollary 6.3 and
 mapped-order scaling discharge both basis and monotonicity premises for an
 isometry to the standard upper diagonal realization at actual completions.
-Identifying the independently constructed upper lattice with the paper's
-specified scalar extension remains open. The local obstruction
+Transporting its good BONG back along this isometry gives an actual good
+BONG on the literal scalar extension with all mapped exact values.
+Identifying these vectors with the canonical pure tensors of the lower
+BONG vectors remains open. The local obstruction
 and global extension results remain conditional on their arithmetic data.
 -/
 
@@ -40,6 +43,7 @@ and global extension results remain conditional on their arithmetic data.
 #check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization
 #check Bong.BONG.GoodBONG.he2022ClassicCorollary63_even_order_monotone
 #check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization_of_evenUniversal
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_hasGoodBONG_of_evenUniversal
 
 #print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
 #print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
@@ -56,3 +60,4 @@ and global extension results remain conditional on their arithmetic data.
 #print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization
 #print axioms Bong.BONG.GoodBONG.he2022ClassicCorollary63_even_order_monotone
 #print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization_of_evenUniversal
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_hasGoodBONG_of_evenUniversal

@@ -33,6 +33,7 @@ import Bong.Lattice.He2022ClassicLemma83Carrier
 import Bong.Lattice.He2022ClassicCompletionLatticeScalarExtension
 import Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry
 import Bong.Lattice.He2022ClassicCompletionBONGIsometry
+import Bong.Lattice.He2022ClassicCompletionScalarExtensionGoodBONG
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -131,9 +132,12 @@ In the corrected even-rank classic-universal scope, Corollary 6.3 supplies
 both the lower integral-basis equality and lower order monotonicity. The
 proved finite-completion order-scaling bridge supplies the upper monotonicity,
 so the diagonal realization is isometric to the literal scalar extension
-without those two extra premises. Identifying this separately realized upper
-lattice with the paper's specified scalar-extension lattice in a common
-ambient space, as well as the local obstruction, remain open.
+without those two extra premises. Transporting the realized good BONG across
+that integral isometry now gives a good BONG on the literal scalar-extension
+lattice with the mapped exact coefficients. This does not identify its
+vectors with the canonical pure tensors of the lower good-BONG vectors, or
+identify the separately realized upper lattice by equality in a common
+ambient space. The ramified local obstruction remains open.
 The finite-place sufficiency part of Theorem 1.9 is also derived from
 separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
