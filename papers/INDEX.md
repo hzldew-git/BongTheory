@@ -13,16 +13,22 @@ PDF, unrelated milestone test, or Git history.
 | Beli 2019 v2 | [`Bong.Papers.Beli2019`](../Bong/Papers/Beli2019.lean) | [`BongTest.Beli2019Audit`](../BongTest/Beli2019Audit.lean) | [`Beli2019V2`](../docs/audit/Beli2019V2) | [`Beli2019 review kit`](https://github.com/hzldew-git/BongTheory/releases/download/v0.3.0-rc.1/BongTheory-Beli2019-v0.3.0-rc.1-review-kit.zip) |
 | Beli 2020 | [`Bong.Papers.Beli2020`](../Bong/Papers/Beli2020.lean) | [`BongTest.Beli2020Audit`](../BongTest/Beli2020Audit.lean) | [`Beli2020`](../docs/audit/Beli2020) | [`Beli2020 review kit`](https://github.com/hzldew-git/BongTheory/releases/download/v0.3.0-rc.1/BongTheory-Beli2020-v0.3.0-rc.1-review-kit.zip) |
 | He--Hu 2022 (published 2024) | [`Bong.Papers.HeHu2022`](../Bong/Papers/HeHu2022.lean) | [`BongTest.HeHu2022Audit`](../BongTest/HeHu2022Audit.lean) | [`HeHu2022`](../docs/audit/HeHu2022) | [`HeHu2022 review kit`](https://github.com/hzldew-git/BongTheory/releases/download/v0.4.0-rc.1/BongTheory-HeHu2022-v0.4.0-rc.1-review-kit.zip); complete formal coverage, human sign-off pending |
-| He 2023 ADC (published 2025) | [`Bong.Papers.He2023ADC`](../Bong/Papers/He2023ADC.lean) | [`BongTest.He2023ADCAudit`](../BongTest/He2023ADCAudit.lean), [`Section 8 class-number regularity`](../BongTest/He2023ADCClassNumberRegularityAudit.lean), [`Section 8 local maximality`](../BongTest/He2023ADCLocalMaximalityAudit.lean), [`Theorem 8.2 source cases`](../BongTest/He2023ADCDistinguishingSublatticeAudit.lean), [`Lemma 8.4 stability`](../BongTest/He2023ADCScalingStabilityAudit.lean), [`scaling regularity`](../BongTest/He2023ADCScalingRegularityAudit.lean), [`O'Meara 82K`](../BongTest/He2023ADCGlobalMaximalityAudit.lean), [`genus transport`](../BongTest/He2023ADCGenusTransportAudit.lean), [`Q2 boundary`](../BongTest/He2023ADCQuaternaryBoundaryQ2.lean), [`Q2 Lemma 6.12`](../BongTest/He2023ADCExceptionalQuaternaryQ2.lean), [`dyadic Lemma 4.6`](../BongTest/He2023ADCLemma46Audit.lean), [`non-dyadic Proposition 4.2`](../BongTest/He2023ADCNonDyadicProposition42Audit.lean), [`non-dyadic catalogue`](../BongTest/He2023ADCNonDyadicCatalogueAudit.lean), [`non-dyadic Lemma 4.5`](../BongTest/He2023ADCNonDyadicLemma45Audit.lean), [`non-dyadic Lemma 4.6`](../BongTest/He2023ADCNonDyadicLemma46Audit.lean), [`non-dyadic table`](../BongTest/He2023ADCNonDyadicTableAudit.lean), [`non-dyadic Lemma 4.8`](../BongTest/He2023ADCNonDyadicLemma48Audit.lean), [`non-dyadic Proposition 4.15`](../BongTest/He2023ADCNonDyadicProposition415Audit.lean), [`non-dyadic Proposition 4.16`](../BongTest/He2023ADCNonDyadicProposition416Audit.lean), [`non-dyadic minimal testing`](../BongTest/He2023ADCNonDyadicMinimalTestingAudit.lean) | [`He2023ADC`](../docs/audit/He2023ADC) | [`He2023ADC review kit`](https://github.com/hzldew-git/BongTheory/releases/download/v0.4.0-rc.1/BongTheory-He2023ADC-v0.4.0-rc.1-review-kit.zip); in-progress Grade-D artifact: all dyadic Lemma 4.6 branches are actual-lattice theorems; non-dyadic Proposition 4.2(ii)--(iii), Lemma 4.4, Lemma 4.5, Remark 4.3 catalogue exhaustion/irredundancy, and the complete Lemma 4.6 deduction follow from explicit lower-level laws; in Section 8, class-number-one regularity, genus symmetry, local-equivalence extraction, genus rank preservation, local maximal-implies-ADC, local Theorem 1.5, Theorem 8.2's source-case composition, both scaling components of Lemma 8.4/Corollary 8.5, and the O'Meara 82K biconditional are derived from lower laws; publisher Table 1 and non-dyadic Table 4.7 finite data are concrete; remaining actual-lattice instances, published mismatches, and global/external-classification inputs remain explicit |
+| He 2022 Classic (published 2024; author-corrected v6 authority) | [`Bong.Papers.He2022Classic`](../Bong/Papers/He2022Classic.lean) | [`BongTest.He2022ClassicAudit`](../BongTest/He2022ClassicAudit.lean), [`Proposition 8.2`](../BongTest/He2022ClassicProposition82Audit.lean), [`even extension scope`](../BongTest/He2022ClassicEvenExtensionAudit.lean), [`strong approximation`](../BongTest/He2022ClassicStrongApproximationAudit.lean), [`finite-place branches`](../BongTest/He2022ClassicLocalUniversalityAudit.lean), [`number-field discriminant`](../BongTest/He2022ClassicDiscriminantRamificationAudit.lean), [`finite completion extension`](../BongTest/He2022ClassicNumberFieldLocalExtensionAudit.lean) | [`He2022Classic`](../docs/audit/He2022Classic) | v6 sync in progress; not yet an independently verified v6 kit: Theorem 1.3 and the number-field discriminant theorem are complete; Lemma 8.1(i)--(ii) and an actual upper good-BONG realization with the mapped values are proved, v6 Lemma 8.1(iii) states only existence of an upper lattice; the abstract v6 Lemma 8.3 carrier equality is Lean-checked from explicit basis transport, but its concrete scalar-extension basis transport and local obstruction are still missing; remaining Section 8 conclusions require concrete global lattice/localization, local sum-of-squares, and strong-approximation instances; Lemma 8.3 and Theorem 1.8 are only for `n >= 2` even; Reports 24 and 26 give a checked `e=2`, `n=3` counterexample to the obsolete unrestricted v5 Corollary 6.3 |
+| He 2023 ADC (published 2025) | [`Bong.Papers.He2023ADC`](../Bong/Papers/He2023ADC.lean) | [`BongTest.He2023ADCAudit`](../BongTest/He2023ADCAudit.lean), [`Section 8 class-number regularity`](../BongTest/He2023ADCClassNumberRegularityAudit.lean), [`Section 8 local maximality`](../BongTest/He2023ADCLocalMaximalityAudit.lean), [`Theorem 8.2 source cases`](../BongTest/He2023ADCDistinguishingSublatticeAudit.lean), [`Lemma 8.4 stability`](../BongTest/He2023ADCScalingStabilityAudit.lean), [`scaling regularity`](../BongTest/He2023ADCScalingRegularityAudit.lean), [`O'Meara 82K`](../BongTest/He2023ADCGlobalMaximalityAudit.lean), [`genus transport`](../BongTest/He2023ADCGenusTransportAudit.lean), [`Q2 boundary`](../BongTest/He2023ADCQuaternaryBoundaryQ2.lean), [`Q2 Lemma 6.12`](../BongTest/He2023ADCExceptionalQuaternaryQ2.lean), [`dyadic Lemma 4.6`](../BongTest/He2023ADCLemma46Audit.lean), [`non-dyadic Proposition 4.2`](../BongTest/He2023ADCNonDyadicProposition42Audit.lean), [`non-dyadic catalogue`](../BongTest/He2023ADCNonDyadicCatalogueAudit.lean), [`non-dyadic Lemma 4.5`](../BongTest/He2023ADCNonDyadicLemma45Audit.lean), [`non-dyadic Lemma 4.6`](../BongTest/He2023ADCNonDyadicLemma46Audit.lean), [`non-dyadic table`](../BongTest/He2023ADCNonDyadicTableAudit.lean), [`non-dyadic Lemma 4.8`](../BongTest/He2023ADCNonDyadicLemma48Audit.lean), [`non-dyadic Proposition 4.15`](../BongTest/He2023ADCNonDyadicProposition415Audit.lean), [`non-dyadic Proposition 4.16`](../BongTest/He2023ADCNonDyadicProposition416Audit.lean), [`non-dyadic minimal testing`](../BongTest/He2023ADCNonDyadicMinimalTestingAudit.lean) | [`He2023ADC`](../docs/audit/He2023ADC) | [`He2023ADC review kit`](https://github.com/hzldew-git/BongTheory/releases/download/v0.4.1-rc.2/BongTheory-He2023ADC-v0.4.1-rc.2-review-kit.zip); in-progress Grade-D artifact: all dyadic Lemma 4.6 branches are actual-lattice theorems; non-dyadic Proposition 4.2(ii)--(iii), Lemma 4.4, Lemma 4.5, Remark 4.3 catalogue exhaustion/irredundancy, and the complete Lemma 4.6 deduction follow from explicit lower-level laws; in Section 8, class-number-one regularity, genus symmetry, local-equivalence extraction, genus rank preservation, local maximal-implies-ADC, local Theorem 1.5, Theorem 8.2's source-case composition, both scaling components of Lemma 8.4/Corollary 8.5, and the O'Meara 82K biconditional are derived from lower laws; publisher Table 1 and non-dyadic Table 4.7 finite data are concrete; remaining actual-lattice instances, published mismatches, and global/external-classification inputs remain explicit |
 
 The Beli 2020 row denotes the paper first submitted in 2020. Its frozen source
 is arXiv:2008.10113v2, revised in 2022. The paper year and revision year are
 recorded separately throughout the repository.
 
-For the two deployed He papers, the historical work year remains in the implementation
-name, while `publicationYear`, the full journal citation, DOI, and publisher PDF
-hash are recorded separately. Only the publisher version of record is
-authoritative; arXiv files are comparison sources.
+For the three He papers, the historical work year remains in the implementation
+name, while `publicationYear`, the full journal citation, DOI, and source hashes
+are recorded separately. He--Hu and He ADC use the publisher version of record;
+He Classic uses the user-approved author-corrected v6 manuscript as its new
+semantic authority, with publisher/arXiv copies retained only for comparison.
+The existing Lean and kit checkpoint is still v5 until the v6 statement map,
+proof audit, full build, and independent Review Kit verification are complete.
+Reports 24 and 26 refute the obsolete unrestricted v5 Corollary 6.3; the v6
+source explicitly restricts the affected claims to even n >= 2.
 The current proof order and promotion gates are in
 [`docs/HePapersRoadmap.md`](../docs/HePapersRoadmap.md).
 
@@ -30,12 +36,13 @@ The current proof order and promotion gates are in
 
 ### New checkpoint with an enforcing axiom gate: 2026-09-05
 
-This independently verified ADC kit uses actual merge-test source
+These two independently verified kits use actual merge-test source
 `c82668b97ed80f0cead4493206cb6483c4e8d77d`, whose tree is identical to
 branch head `f6f7485b6a3acabedbec5a7facce46f8ee7365ab`.
 
 | Paper | Download | Verified scope |
 |---|---|---|
+| He 2022 Classic | [Historical Classic kit with enforcing gate](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/artifacts/9962386381) | Superseded publisher-source checkpoint; it does not certify the author-corrected v5 code or the now-closed odd branch |
 | He 2023 ADC | [ADC kit through full Lemma 6.7](https://github.com/hzldew-git/BongTheory/actions/runs/33942437722/artifacts/9962394872) | Partial paper, including Proposition 4.13, dyadic 4.16, Theorem 6.1 and Lemmas 6.4--6.7; enforced dependency check on 57,480 declarations; later Lemma 6.8 additions are not included |
 
 The logs and exact revision/hash receipts are in the
@@ -54,12 +61,14 @@ branch commit `db0398506b2e242288bc979217972c6a1d175674`.
 | Paper | Independently verified CI artifact | Scope of this checkpoint |
 |---|---|---|
 | He--Hu 2022 | [Download He--Hu checkpoint](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783/artifacts/9958197730) | Published-paper development and audit; human semantic sign-off remains pending |
+| He 2022 Classic | [Download historical Classic checkpoint](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783/artifacts/9961760603) | Superseded publisher-source checkpoint; it predates v5 odd testing and current counting proofs, while global clauses were incomplete |
 | He 2023 ADC | [Download ADC checkpoint](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783/artifacts/9958233657) | Partial paper, including all published Lemma 4.11-4.12 profiles; does not include later Proposition 4.13, dyadic Proposition 4.16, Lemmas 6.4-6.7 or Theorem 6.1 |
 
 These are temporary workflow artifacts with 30-day retention, not permanent
 Release assets. Consult the [workflow run](https://github.com/hzldew-git/BongTheory/actions/runs/33929872783)
 for the separate paper jobs. A green job for one paper does not certify the
-others or a later commit. Tagged releases remain the permanent download
+others or a later commit. All eight paper jobs completed successfully at this
+fixed checkpoint, with Classic last at 03:05:13 UTC. Tagged releases remain the permanent download
 channel above.
 
 These older artifacts predate the enforcing transitive-axiom gate added on

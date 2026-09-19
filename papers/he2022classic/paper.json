@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "id": "he2022classic",
+  "canonicalName": "He 2022 Classic",
+  "assetStem": "He2022Classic",
+  "theoremIndexRowPrefix": "He classic,",
+  "workYear": 2022,
+  "publicationYear": 2024,
+  "title": "On classic n-universal quadratic forms over dyadic local fields",
+  "author": "Zilong He",
+  "citation": "Zilong He, On classic n-universal quadratic forms over dyadic local fields, manuscripta math. 174 (2024), 559-595",
+  "doi": "https://doi.org/10.1007/s00229-023-01516-0",
+  "authoritativeSource": {
+    "authority": true,
+    "kind": "author-corrected-manuscript-v6",
+    "authorityLabel": "author-corrected v6 manuscript",
+    "url": "urn:sha256:4D3903083188E2823CCA930477A43F82A1FC3C69AD96056ADB099D924B14EC5A",
+    "description": "User-approved author-corrected v6 TeX manuscript classic_dyadic-n-uni-v6.tex; see He Classic audit Report 44 for PDF and diff hashes",
+    "sha256": "4D3903083188E2823CCA930477A43F82A1FC3C69AD96056ADB099D924B14EC5A",
+    "fileName": "classic_dyadic-n-uni-v6.tex",
+    "byteCount": 140696,
+    "versionDate": "2026-09-13",
+    "access": "Author-held source; excluded from Review Kits and public repository history",
+    "redistributable": false
+  },
+  "comparisonSources": [
+    {
+      "authority": false,
+      "kind": "superseded-author-corrected-manuscript-v5",
+      "url": "urn:sha256:C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049",
+      "description": "Author-held v5 TeX comparison copy; not redistributed",
+      "sha256": "C334676733163C7A521824E1F00C782A7BF0FD1ABE5366BF76D838238EDCA049"
+    },
+    {
+      "authority": false,
+      "kind": "publisher-version-of-record",
+      "url": "https://link.springer.com/content/pdf/10.1007/s00229-023-01516-0.pdf",
+      "description": "37-page publisher PDF; version of record published online 24 October 2023",
+      "sha256": "51F3626A15692E2FF0BAAE62F0EBCC4B8BEE02052C4D3CB1EA579B02E17480C1"
+    },
+    {
+      "authority": false,
+      "kind": "post-publication-arxiv-revision",
+      "url": "https://arxiv.org/abs/2206.04885v3",
+      "description": "33-page arXiv v3 comparison copy, revised 25 December 2025 after publication",
+      "sha256": "5D1D24B13BDA98223B71A6857D1FD3708255A2158F9A14FEA826A5365646A052"
+    }
+  ],
+  "deployment": {
+    "githubReviewKit": true,
+    "reason": "The user authorized staged publication of a v6 source-only Review Kit after exact-head CI and independent merged-commit verification; Grade D / NOT_COMPLETE boundaries must remain explicit"
+  },
+  "entryModule": "Bong.Papers.He2022Classic",
+  "auditModules": [
+    "BongTest.He2022ClassicAudit",
+    "BongTest.He2022ClassicDiscriminantRamificationAudit",
+    "BongTest.He2022ClassicNumberFieldGlobalDataAudit",
+    "BongTest.He2022ClassicNumberFieldLocalExtensionAudit",
+    "BongTest.He2022ClassicEvenExtensionAudit",
+    "BongTest.He2022ClassicLocalUniversalityAudit",
+    "BongTest.He2022ClassicProposition82Audit",
+    "BongTest.He2022ClassicStrongApproximationAudit"
+  ],
+  "auditDirectory": "docs/audit/He2022Classic",
+  "sourceDelta": "docs/audit/He2022Classic/SOURCE_DELTA.md",
+  "coverageStatus": "IN_PROGRESS_V6_SOURCE_SYNC_WITH_LOCAL_THEOREM_1_3_AND_CONDITIONAL_SECTION_8_BOUNDARIES",
+  "semanticStatus": "AUTHORITATIVE_V6_RESTRICTED_PARITY_AND_EXISTENTIAL_LEMMA_8_1_III__CONCRETE_SCALAR_EXTENSION_LEMMA_8_3_AND_GLOBAL_INSTANCES_INCOMPLETE",
+  "grade": "D",
+  "expectedAxioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "formalizedScope": [
+    "At actual dyadic finite number-field completions in the corrected even n >= 2 classic-universal scope, the literal tensor scalar-extension lattice itself has a transported good BONG with exactly the mapped lower coefficient values. The vectors are not yet proved to be the canonical pure tensors of the lower BONG vectors, and the ramified local obstruction remains open; report 49",
+    "In the corrected even n >= 2 classic-universal scope, the actual finite-completion mapped-value diagonal realization is proved isometric to the literal tensor scalar extension without separate lower basis-equality or upper order-monotonicity premises: Corollary 6.3 and the proved completion order-scaling bridge discharge them. This does not identify the separately specified upper lattice in a common ambient or close Lemma 8.3; report 48",
+    "Classic integrality and classic n-universality",
+    "Theorem 1.1 proved equivalence for every source rank and n >= 2, with both parity branches",
+    "Classic maximality and existence of classic-maximal over-lattices",
+    "Abstract classic-maximal testing reduction",
+    "Local BONG proof chain in Sections 2-6, with source differences recorded separately",
+    "Theorem 1.5 local implication for every n >= 1 and Corollary 6.3 even branch",
+    "Author-corrected v6 (inherited from v5) Lemma 7.1, Corollary 7.2 bridge, and Section 7 ambient exhaustion",
+    "Lemma 7.4 testing equivalence in both even and odd rank",
+    "Lemma 7.7 and all three clauses of Lemma 7.10 on the literal published even table",
+    "Theorem 1.3(i)-(iii), including even and odd literal deletion minimality",
+    "Lemma 7.11 row-by-row deletion witnesses for every literal odd-table index and the combined odd minimality endpoint",
+    "Every literal even and odd published table row is classic-maximal, via explicit volume order zero or one and the generic volume-index criterion; report 19",
+    "Kernel-checked refutation of the obsolete broader publisher Lemma 7.1(ii) disjunction when e > 1, retained as a regression result",
+    "Kernel-checked e=2, n=3 counterexample to the obsolete unrestricted odd clause of v5 Corollary 6.3, including nonisometry to the diagonal lattice with the same coefficients",
+    "Unconditional v6 odd testing sufficiency obtained by representing the complete even table one rank lower",
+    "O'Meara 63:5 and 63:9, including all three Proposition 2.8(ii) numerical formulas, are internally proved from the principal-unit filtration and finite representative equivalences; report 21",
+    "The revised v6 Lemma 8.3 upper-order monotonicity is proved for mapped finite-completion coefficients; carrier equality is proved from lower Corollary 6.3, upper monotone-order diagonalization, and an explicit transport of the lower basis lattice to the separately realized upper good-BONG lattice; this last identification is not yet established",
+    "For the literal scalar extension of a specified dyadic lattice, the carrier is proved equal to the upper valuation-ring span of pure tensors. At actual finite number-field completions, the completed embedding preserves the valuation ring and any integral basis is carried to its base-changed integral basis. This supplies the basis transport for the literal scalar-extension lattice, but does not identify the separately realized upper good-BONG lattice with it",
+    "A mapped-value BONG basis-lattice isometry is proved from equality of full Gram matrices and valuation-ring preservation. For a standard diagonal realization, monotone upper orders provide its basis-lattice equality; in the corrected even-rank classic-universal scope, proved Corollary 6.3 provides the lower basis-lattice equality. The actual finite-completion upper realization has not yet been identified with the literal scalar extension; report 46",
+    "At actual dyadic number-field completions, the completion embedding's proved valuation-ring preservation specializes the mapped-value quadratic-lattice isometry to the literal tensor scalar extension and an upper standard diagonal BONG realization, still assuming lower BONG basis-lattice equality and upper-order monotonicity. This is not carrier equality or the complete Lemma 8.3 conclusion; report 47",
+"Lemma 8.1(i)-(ii) are proved for actual dyadic local-field structures on the selected finite completions: the continuous finite-dimensional extension is constructed, order scaling holds for every nonzero completed-base-field element, relative quadratic-defect scaling is proved from mapped square approximations, and the completion order, defect, and ramification normalizations are identified with the BONG notions. The exact He--Hu adjacent and two-step coefficient criterion is preserved, and every actual lower good BONG has an actual upper integral-lattice good-BONG realization with precisely the mapped values. This realizes the existential lattice conclusion newly stated in v6 Lemma 8.1(iii) in a standard diagonal ambient space; the concrete isometry and a good BONG on the literal scalar extension are now proved in the corrected even scope; the canonical same-vector/common-ambient identity and the ramified local obstruction in v6 Lemma 8.3 remain to be formalized. Proposition 8.2, the global deduction in Theorem 1.5, and Theorem 1.9 are proved conditionally from explicit number-field arithmetic proof-data packages; Proposition 8.2 is derived from positive-definite globalization, localization of integrality and representation, and local-equivalence transport rather than assumed as a final field; Theorem 1.9's finite-place conclusion is derived from separate non-dyadic, dyadic unary, and dyadic higher-rank laws, and its local-to-global step is derived target-by-target from rank and integrality localization plus an explicit strong-approximation representation law; the number-field discriminant/ramification equivalence, both directed uses, the ramified dyadic-prime witness, and positivity are proved; canonical number-field global data defines the dyadic predicate, ramification index, and discriminant proposition from the standard height-one spectrum and derives all arithmetic compatibility fields from a place equivalence; Lemma 8.3, Theorem 1.7, and Theorem 1.8 have only n >= 2 even source-facing endpoints, while Theorem 1.7's rank-independent final contradiction is separately proved from an explicit local-defect premise; no unrestricted odd endpoint is exported; reports 23 and 27-44"
+  ],
+  "excludedScope": [
+    "Concrete number-field instances for the global lattice system, localization, positive-definite globalization at a selected finite place, representation transport across local equivalence, construction of the place equivalence with the standard height-one spectrum, the concrete ambient isometry identifying the v6 Lemma 8.1(iii) upper good-BONG realization with the literal scalar-extension ambient and lattice in v6 Lemma 8.3, the local ramified obstruction, non-dyadic and dyadic sum-of-squares local universality, and strong approximation in Section 8",
+    "The obsolete broader Lemma 7.1(ii) from the publisher and arXiv comparison copies",
+    "The obsolete v5 unrestricted odd Corollary 6.3 is refuted at e=2 and n=3; v6 explicitly excludes it. No v6 odd endpoint is asserted for Lemma 8.3 or Theorems 1.7-1.8. The even n >= 2 endpoints remain conditional where the concrete scalar-extension/global data are absent (reports 24, 26, 28, 33, and 44)",
+    "Independent human semantic sign-off"
+  ],
+"reviewNotice": "The semantic basis is the user-approved author-corrected v6 TeX manuscript identified by filename and SHA-256; it is not redistributed. Report 44 maps the v5-to-v6 changes, Report 45 proves literal scalar-extension lattice transport, Report 46 proves mapped-BONG isometry under explicit basis premises, Report 47 specializes it to actual finite completions, and Report 48 discharges both lower-basis and upper-order premises in the corrected even classic-universal scope. The local Theorem 1.1 and Theorem 1.3 endpoints retain checked v5 proofs because their v6 statements did not change. Corollary 6.3 and affected Section 8 statements assume even n >= 2, matching the existing Lean endpoints. Lemma 8.1(i)-(ii) are proved on actual dyadic completions, and part (iii)'s mapped-value upper good-BONG lattice exists in a standard diagonal ambient. The specified scalar-extension lattice is the pure-tensor valuation-ring span and carries every base-changed lower integral basis. In the corrected even classic-universal scope, its isometry to a mapped-value diagonal realization at actual finite completions now follows without separate lower basis-lattice equality or upper-order monotonicity premises. Report 49 proves that the literal scalar-extension lattice itself has a good BONG with exactly the mapped lower values, but its vectors are not yet identified with the canonical pure tensors of the lower BONG vectors, and equality with the separately realized upper lattice in a common ambient remains open. The revised v6 Lemma 8.3 local obstruction remains conditional. Global Theorem 1.5, Proposition 8.2, and Theorems 1.7-1.9 still require concrete arithmetic and approximation instances. The e=2, n=3 counterexample refutes only obsolete unrestricted v5 Corollary 6.3. Historical v5 Review Kit Report 43 does not certify this v6 sync. Grade D / NOT_COMPLETE remains; no all-green exact-head CI, independent merged-commit Review Kit, release, or human semantic sign-off is claimed."
+}

@@ -1,0 +1,63 @@
+/-
+Copyright (c) 2026 BONG Theory contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BONG Theory contributors
+-/
+import Bong.Lattice.He2022ClassicSectionEight
+import Bong.Lattice.He2022ClassicLemma83Carrier
+import Bong.Lattice.He2022ClassicCompletionLatticeScalarExtension
+import Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry
+import Bong.Lattice.He2022ClassicCompletionBONGIsometry
+import Bong.Lattice.He2022ClassicCompletionScalarExtensionGoodBONG
+
+/-!
+# Focused audit for the proved even scope of Lemma 8.3 and Theorem 1.8
+
+The author-corrected v6 statements explicitly assume even `n >= 2`. The
+carrier lemma proves the orthogonal-basis equality deduction.  The new
+finite-completion theorems identify the specified scalar-extension lattice
+with the pure-tensor span and transport every integral basis to its base
+change. In the corrected even classic-universal range, Corollary 6.3 and
+mapped-order scaling discharge both basis and monotonicity premises for an
+isometry to the standard upper diagonal realization at actual completions.
+Transporting its good BONG back along this isometry gives an actual good
+BONG on the literal scalar extension with all mapped exact values.
+Identifying these vectors with the canonical pure tensors of the lower
+BONG vectors remains open. The local obstruction
+and global extension results remain conditional on their arithmetic data.
+-/
+
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
+#check Bong.HeClassic2024Carrier.he2022ClassicLemma83_carrier_eq_of_basisTransport
+#check Bong.Lattice.scalarExtension_toSubmodule_eq_span
+#check Bong.Lattice.scalarExtension_basisLattice
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionMap_preserves_integerRing
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_toSubmodule_eq_span
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_basisLattice
+#check Bong.Lattice.scalarExtension_basisLattice_isIsometric_of_mappedValues
+#check Bong.Lattice.scalarExtension_isIsometric_of_mappedValues
+#check Bong.Lattice.scalarExtension_isIsometric_diagonalRealization
+#check Bong.Lattice.he2022ClassicLemma83_isIsometric_of_lowerUniversal
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization
+#check Bong.BONG.GoodBONG.he2022ClassicCorollary63_even_order_monotone
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization_of_evenUniversal
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_hasGoodBONG_of_evenUniversal
+
+#print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
+#print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
+#print axioms Bong.HeClassic2024Carrier.he2022ClassicLemma83_carrier_eq_of_basisTransport
+#print axioms Bong.Lattice.scalarExtension_toSubmodule_eq_span
+#print axioms Bong.Lattice.scalarExtension_basisLattice
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionMap_preserves_integerRing
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_toSubmodule_eq_span
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_basisLattice
+#print axioms Bong.Lattice.scalarExtension_basisLattice_isIsometric_of_mappedValues
+#print axioms Bong.Lattice.scalarExtension_isIsometric_of_mappedValues
+#print axioms Bong.Lattice.scalarExtension_isIsometric_diagonalRealization
+#print axioms Bong.Lattice.he2022ClassicLemma83_isIsometric_of_lowerUniversal
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization
+#print axioms Bong.BONG.GoodBONG.he2022ClassicCorollary63_even_order_monotone
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization_of_evenUniversal
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_hasGoodBONG_of_evenUniversal
