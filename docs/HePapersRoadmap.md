@@ -1,19 +1,26 @@
-# He--Hu and He ADC deployment roadmap
+# He-paper formalization roadmap
 
-This public roadmap governs the deployment of two published papers:
+This roadmap governs the formalization of three published papers:
 
 1. Zilong He and Yong Hu, *On n-universal quadratic forms over dyadic local
    fields*, Sci. China Math. 67 (2024), 1481--1506.
-2. Zilong He, *On n-ADC integral quadratic lattices over algebraic number
+2. Zilong He, *On classic n-universal quadratic forms over dyadic local
+   fields*, manuscripta math. 174 (2024), 559--595.
+3. Zilong He, *On n-ADC integral quadratic lattices over algebraic number
    fields*, Doc. Math. 30 (2025), no. 4, 981--1022.
 
-The He classic formalization is maintained outside this deployment branch and
-will not be uploaded as a GitHub Review Kit or Release asset until the user
-authorizes a later deployment.
+The publisher version of record is the semantic authority for He--Hu and He
+ADC. For He Classic, the user-approved author-corrected v6 manuscript is authoritative. The
+paper manifests record exact hashes; all superseded publisher or arXiv copies
+are non-authoritative comparison sources.
 
-The publisher version of record is the sole semantic authority for every
-definition, hypothesis, and theorem. The paper manifests record exact hashes;
-arXiv copies are non-authoritative comparison sources.
+Current deployment: He ADC
+[`v0.4.1-rc.2`](https://github.com/hzldew-git/BongTheory/releases/tag/v0.4.1-rc.2)
+is a publicly verified, exact-merge-commit, Grade-D / `NOT_COMPLETE`
+prerelease. Its separate fresh extraction completed all 5,597 build jobs, 23
+individual audits including the enforcing axiom gate, both computational
+certificates, and exact dependency checks. He Classic v6 is now in source and
+Lean synchronization; its historical v5 kit is not v6 release evidence.
 
 The independently extracted historical He ADC package at `9350ca3` verifies
 2,086 payload hashes and passes all `5,581` build jobs, eleven direct
@@ -39,6 +46,11 @@ mathematical work, and human semantic sign-off are separate gates.
 | Shared representation API | inclusion representations and maximal extensions | proved |
 | He--Hu Theorem 1.1 | complete published equivalence | proved; provisional semantic review |
 | He--Hu Theorem 1.2 | literal finite normalized-unit table, counts, and deletion-minimality | proved; human review pending |
+| He classic Theorem 1.1 | complete local equivalence for n >= 2 | proved; human review pending |
+| He classic Theorem 1.3 | literal even and odd tables, both testing equivalences, all counts, and every row-by-row deletion witness | fully formalized from author-corrected v6 (unchanged statement); human semantic review pending |
+| He classic Theorem 1.5 | local implication for every n >= 1 plus the all-dyadic-primes deduction | local clause and concrete discriminant theorem proved; canonical height-one-spectrum arithmetic makes all compatibility definitional once a place equivalence is supplied; global lattice/localization and the equivalence remain; Classic Reports 32, 34, and 36 |
+| He classic Corollary 6.3 | v6 even `n >= 2` branch only | v6 statement proved; `e=2`, `n=3` counterexample refutes only obsolete v5 odd extension; Classic Reports 24 and 26 |
+| He classic Section 8 and Theorems 1.7--1.9 | Lemma 8.1, Proposition 8.2, even Lemma 8.3/Theorems 1.7--1.8, and the remaining global deductions | conditional source logic proved from explicit number-field, extension, and strong-approximation packages; canonical height-one-spectrum arithmetic derives the discriminant laws and Section 8 arithmetic fields from a place equivalence; Lemma 8.1(i)--(ii) are proved on actual dyadic completions and every lower good BONG has an actual upper good-BONG realization with mapped values; v6 Lemma 8.1(iii) now concludes existence for some upper lattice; the standard diagonal-space realization is concrete, but the scalar-extension ambient bridge and v6 Lemma 8.3 carrier equality remain open; the other global lattice/localization bridges remain explicit; no unrestricted odd Lemma 8.3/Theorem 1.7/Theorem 1.8 endpoint is exported, while Theorem 1.7's common logical tail has its missing local-defect premise explicit; the historical v5 package passed Report 43; v6 has not yet passed independent kit verification |
 | He ADC Definition 1.1(ii) | local dyadic predicate | formalized |
 | He ADC Lemma 2.1 | local dyadic maximal-testing reduction | proved specialization |
 | He ADC Lemmas 4.11-4.12 | public W/N families and all maximal order-profile branches | proved; independent AI review completed, human review pending |
@@ -67,23 +79,36 @@ mathematical work, and human semantic sign-off are separate gates.
 | He ADC Lemma 2.2 | scalar extension, all-dimensional descent, and actual global subspace | fully formalized for every number-field finite completion at 83cc791, including density and square-class openness; included in the exact 7d7a4d5 clean kit; human review pending; reports 55--56 and 58 |
 | O'Meara 63:9 unit square-class count | power-ideal and principal-unit quotients, odd layers, even collapse, and discriminant endpoint | fully formalized at 4ad37e1; every downstream dyadic He ADC numerical formula is unconditional; included in the exact 7d7a4d5 clean kit; reports 57--58 |
 
-The current milestone is not whole-project completion. In ADC, one independently
+The current milestone is not whole-project completion. The obsolete broader
+Classic publisher Lemma 7.1(ii) has a checked refutation when `e>1`, while its
+author-corrected v5/v6 replacement and downstream Theorem 1.3 are proved. V6
+restricts Corollary 6.3 to the even rank already proved; the checked odd-rank
+counterexample is a historical v5 regression test. Classic remains Grade D
+because concrete scalar-extension and global arithmetic bridges are open,
+and its v6 release gates have not run. In ADC, one independently
 audited `n=2` counterexample affects Lemma 6.8(iv), Theorem 6.2, Theorem
 1.9(ii), and Theorem 1.10. Theorem 7.1 has a repaired proof, and the binary
 classification/count now has an exact corrected catalogue. Concrete
 non-dyadic and number-field law instances, remaining classifications, and
 enumeration remain active proof work. GitHub-hosted exact-tag CI and release
-  publication are separate gates from local kernel acceptance.
+publication are separate gates from local kernel acceptance.
 
 ## Proof order
 
 1. Preserve the checked He--Hu proof chain and finish its independent-review
    and exact-release-commit reproducibility gates.
-2. Preserve the completed ADC Lemma 2.2 and unit-square-class proofs, then
+2. Synchronize the approved v6 parity restrictions and existential Lemma
+   8.1(iii) with the Lean theorem map. Construct the scalar-extension ambient
+   bridge and prove the new v6 Lemma 8.3 carrier equality before promoting its
+   conditional endpoint; then instantiate the remaining Section 8 packages for actual
+   number-field lattices and completions,
+   keeping scale integrality distinct from norm integrality and historical v5 claims
+   distinct from obsolete comparison-source text.
+3. Preserve the completed ADC Lemma 2.2 and unit-square-class proofs, then
    instantiate the Section 5 non-dyadic laws and Section 8 number-field laws
-   and complete the remaining Section 4 and enumeration inputs. Conditional
-   law packages record the source logic but are not substitutes for their
-   arithmetic hypotheses.
+   and complete the remaining Section 4 and enumeration inputs. Conditional law packages
+   record the source logic but are not substitutes for their arithmetic
+   hypotheses.
 
 ## Gate for every promoted theorem
 
@@ -92,7 +117,7 @@ A theorem may move from `STATEMENT_ONLY_UNPROVED` to a proved status only when:
 - the Lean declaration has no `sorry`, project axiom, or opaque proof;
 - its transitive axiom report contains only the declared foundational axioms;
 - its hypotheses, quantifiers, indices, exceptional cases, and conclusion have
-  been compared line by line with the publisher version;
+  been compared line by line with the manifest's authoritative source;
 - the paper-specific Review Kit builds after clean extraction; and
 - the audit package records remaining exclusions and independent-review status.
 

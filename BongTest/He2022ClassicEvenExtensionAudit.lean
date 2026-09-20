@@ -1,0 +1,85 @@
+/-
+Copyright (c) 2026 BONG Theory contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BONG Theory contributors
+-/
+import Bong.Lattice.He2022ClassicSectionEight
+import Bong.Lattice.He2022ClassicLemma83Carrier
+import Bong.Lattice.He2022ClassicCompletionLatticeScalarExtension
+import Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry
+import Bong.Lattice.He2022ClassicScalarExtensionBasisPreservingIsometry
+import Bong.Lattice.He2022ClassicCompletionBONGIsometry
+import Bong.Lattice.He2022ClassicCompletionScalarExtensionGoodBONG
+import Bong.Lattice.He2022ClassicCompletionDefectGrowth
+
+/-!
+# Focused audit for the proved even scope of Lemma 8.3 and Theorem 1.8
+
+The author-corrected v6 statements explicitly assume even `n >= 2`. The
+carrier lemma proves the orthogonal-basis equality deduction.  The new
+finite-completion theorems identify the specified scalar-extension lattice
+with the pure-tensor span and transport every integral basis to its base
+change. In the corrected even classic-universal range, Corollary 6.3 and
+mapped-order scaling discharge both basis and monotonicity premises for an
+isometry to the standard upper diagonal realization at actual completions.
+Transporting its good BONG back along this isometry gives an actual good
+BONG on the literal scalar extension with all mapped exact values.
+The actual finite-completion order and defect bridges now prove the
+ramified even-rank local obstruction for that specified lattice, given an
+explicit lower good BONG. General existence of that lower good BONG for every
+lattice in the source claim has not yet been connected. The
+abstract global extension results remain conditional on their arithmetic
+and localization data.
+A generic basis-lattice comparison now fixes the image of every pure tensor
+under an integral isometry. The author confirmed that the lattice-level
+comparison is by integral isometry class, not literal ambient equality.
+-/
+
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
+#check Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
+#check Bong.HeClassic2024Carrier.he2022ClassicLemma83_carrier_eq_of_basisTransport
+#check Bong.Lattice.scalarExtension_toSubmodule_eq_span
+#check Bong.Lattice.scalarExtension_basisLattice
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionMap_preserves_integerRing
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_toSubmodule_eq_span
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_basisLattice
+#check Bong.Lattice.scalarExtension_basisLattice_isIsometric_of_mappedValues
+#check Bong.Lattice.scalarExtension_basisLattice_isIsometric_of_mappedValues_with_vectors
+#check Bong.Lattice.scalarExtension_isIsometric_of_mappedValues
+#check Bong.Lattice.scalarExtension_isIsometric_diagonalRealization
+#check Bong.Lattice.he2022ClassicLemma83_isIsometric_of_lowerUniversal
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization
+#check Bong.BONG.GoodBONG.he2022ClassicCorollary63_even_order_monotone
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization_of_evenUniversal
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_hasGoodBONG_of_evenUniversal
+#check Bong.BONG.GoodBONG.he2022ClassicLemma83_initialOrders_zero_of_scaled_evenUniversal
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionDefectOrder_gt_one_of_zero_order
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionMappedSignedPrefix_gt_one_of_initialOrders_zero
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionMappedUnsignedAdjacent_gt_one_of_lowerOrders_zero
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionMappedGoodBONG_evenUniversal_contradiction_of_ramified
+#check Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_not_evenUniversal_of_ramified
+
+#print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicLemma83_even
+#print axioms Bong.HeClassic2024ExtensionData.Lemma83Laws.he2022ClassicTheorem18_even
+#print axioms Bong.HeClassic2024Carrier.he2022ClassicLemma83_carrier_eq_of_basisTransport
+#print axioms Bong.Lattice.scalarExtension_toSubmodule_eq_span
+#print axioms Bong.Lattice.scalarExtension_basisLattice
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionMap_preserves_integerRing
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_toSubmodule_eq_span
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_basisLattice
+#print axioms Bong.Lattice.scalarExtension_basisLattice_isIsometric_of_mappedValues
+#print axioms Bong.Lattice.scalarExtension_basisLattice_isIsometric_of_mappedValues_with_vectors
+#print axioms Bong.Lattice.scalarExtension_isIsometric_of_mappedValues
+#print axioms Bong.Lattice.scalarExtension_isIsometric_diagonalRealization
+#print axioms Bong.Lattice.he2022ClassicLemma83_isIsometric_of_lowerUniversal
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization
+#print axioms Bong.BONG.GoodBONG.he2022ClassicCorollary63_even_order_monotone
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_isIsometric_diagonalRealization_of_evenUniversal
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_hasGoodBONG_of_evenUniversal
+#print axioms Bong.BONG.GoodBONG.he2022ClassicLemma83_initialOrders_zero_of_scaled_evenUniversal
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionDefectOrder_gt_one_of_zero_order
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionMappedSignedPrefix_gt_one_of_initialOrders_zero
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionMappedUnsignedAdjacent_gt_one_of_lowerOrders_zero
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionMappedGoodBONG_evenUniversal_contradiction_of_ramified
+#print axioms Bong.HeClassic2024NumberFieldScalarExtension.completionScalarExtension_not_evenUniversal_of_ramified

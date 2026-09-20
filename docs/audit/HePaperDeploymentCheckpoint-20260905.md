@@ -5,10 +5,10 @@ At this historical checkpoint, the three papers had separate canonical
 entries, audit folders, manifests and source-only Review Kits in the shared
 repository.
 
-Current deployment policy supersedes that historical layout: He Classic is
-kept on a separate local continuation branch and is excluded from the GitHub
-deployment tree, workflow matrix, artifacts, and releases. References below
-to Classic describe already-existing temporary CI history only.
+The staged release policy later separated He--Hu/ADC deployment from the
+author-corrected-v5 Classic continuation. References below remain historical
+evidence; every later integrated commit and release must obtain its own clean
+CI and Review Kit results.
 
 ## Later workflow and boundary status
 

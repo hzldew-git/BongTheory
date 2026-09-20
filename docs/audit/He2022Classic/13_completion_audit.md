@@ -1,0 +1,35 @@
+# Completion audit
+
+| Requirement | Result |
+|---|---|
+| Author-corrected v5 source frozen by hash | PASS; source remains author-held and non-redistributed |
+| Canonical and audit modules | PASS |
+| Foundational classic definitions | PASS, semantic review pending |
+| Theorem 1.1 proposition and condition transcription | PASS, independent semantic sign-off pending |
+| Canonical and audit-module Lean build | PASS |
+| No `sorry`, project axiom, or `opaque` declaration in scoped files | PASS, local audit |
+| Theorem 1.1 proof | PASS at the local n >= 2 scope; semantic sign-off pending |
+| Theorem 1.5 | PASS for the full local n >= 1 implication; the discriminant theorem is concrete, while the global deduction still depends on the place/localization bridge; Report 32 |
+| Lemma 7.4 | PASS: even and author-corrected-v5 odd branches checked |
+| Lemma 7.7 | PASS: all boundary indices, stable ranges, and both literal C columns checked |
+| Lemma 7.10 | PASS: clauses (i)--(iii), every exceptional row, and the literal finite-index bridge checked |
+| Lemma 7.11 | PASS: every literal odd-table row has a checked deletion witness |
+| Proposition 2.8 published rows | PASS: every literal even and odd table model is classic integral and classic-maximal by an explicit volume-order calculation; Report 19 |
+| Proposition 2.8 numerical counts | PASS: O'Meara 63:9 is derived from the principal-unit filtration; restricting the finite equivalence to depth two proves the O'Meara 63:5 defect-one balance and both even formulas; Report 21 |
+| Lemma 7.1 | PASS for the author-corrected v5 statement; obsolete broader publisher clause remains refuted for e > 1 |
+| Odd Lemma 7.4 reduction | PASS unconditionally from the complete v5 odd table; historical conditional factorizations remain checked |
+| Theorem 1.3 explicit list and minimality | PASS for both parity branches, every deletion witness, and all numerical counts; semantic sign-off remains provisional |
+| Lemma 8.1(i)--(ii) and proof-supported part of (iii) | PASS: both finite completions are actual dyadic local fields; order, defect, and ramification normalizations are identified; order scaling and the relative-defect inequality are proved; and an actual upper integral lattice with a good BONG having the mapped values is constructed from every actual lower good BONG; Reports 38--42 |
+| Literal Lemma 8.1(iii) carrier identity | FAIL / source proof gap: v5 names the preassigned localized scalar-extension lattice `L_P`, but its citation to He--Hu Lemma 2.2 only produces a good BONG for some lattice and gives no identification with `L_P`; Report 42 |
+| Proposition 8.2, Lemma 8.3, Theorems 1.7--1.9 | MIXED: Proposition 8.2 and both sufficiency stages of Theorem 1.9 are derived from lower laws rather than assumed as final fields; the number-field discriminant theorem and canonical global arithmetic adapter are concrete. Lemma 8.3, Theorem 1.7, and Theorem 1.8 are exposed only for `n >= 2` even, with no unrestricted odd endpoint; Theorem 1.7's parity-independent final contradiction is separately proved from an explicit local-defect premise; remaining number-field lattice/localization, place-equivalence, local sum-of-squares, and strong-approximation instances are pending; Reports 23--43 |
+| Theorem 1.9 local-to-global step | CONDITIONAL PASS: global universality is derived target-by-target from localization and an explicit strong-approximation representation law rather than assumed as a final field; concrete instance pending; Report 29 |
+| Discriminant/ramification step | PASS for actual number fields: both directions, the ramified-prime witness, and positivity are proved; canonical height-one-spectrum arithmetic derives bridge primality, dyadic-prime coverage, and all compatibility fields from a place equivalence; the concrete global model must still supply that equivalence; Reports 30, 32, 34, and 36 |
+| Theorem 1.9 finite-place step | CONDITIONAL PASS: all-place local universality is derived from the three v5 local branches rather than assumed as a final field; concrete completion instances pending; Report 31 |
+| Corollary 6.3 | even branch PASS; unrestricted odd statement FAIL by a kernel-checked `e=2`, `n=3` counterexample, Reports 24 and 26 |
+| V5 source suitable for whole-paper completion | FAIL; Corollary 6.3 is false as stated, and Lemma 8.1(iii) lacks the carrier-identification step needed for its literal statement |
+| Unconditional global main theorems | FAIL / pending concrete instances |
+| Independent semantic sign-off | FAIL / pending |
+| Exact clean-kit verification | PASS locally at packaged commit `ab1901a` for code checkpoint `e3b18be`: 2,023 payload hashes, resumed new-extraction 5,682-job build, nine manifest-selected audit/gate checks, and 62,917-declaration axiom gate; Report 43 |
+| GitHub deployment and exact-release CI | Not performed; disabled until whole-paper completion and separate authorization |
+
+Completion verdict: `NOT_COMPLETE`.

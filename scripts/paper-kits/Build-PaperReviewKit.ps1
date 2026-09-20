@@ -106,6 +106,20 @@ $sourceSha256 = if ($metadata.schemaVersion -eq 1) {
 } else {
     [string] $metadata.authoritativeSource.sha256
 }
+$authorityLabel = if ($metadata.schemaVersion -eq 2 -and
+    $metadata.authoritativeSource.PSObject.Properties.Name -contains 'authorityLabel') {
+    [string] $metadata.authoritativeSource.authorityLabel
+} elseif ($metadata.schemaVersion -eq 2) {
+    'publisher version of record'
+} else {
+    'frozen source identified by this manifest'
+}
+$sourceAccessText = if ($metadata.schemaVersion -eq 2 -and
+    $metadata.authoritativeSource.PSObject.Properties.Name -contains 'access') {
+    "- Access: $($metadata.authoritativeSource.access)`n"
+} else {
+    ''
+}
 
 if ($metadata.schemaVersion -eq 2) {
     foreach ($property in @('url', 'description', 'sha256', 'authority', 'redistributable')) {
@@ -342,7 +356,7 @@ $comparisonSourceText = if ($metadata.schemaVersion -eq 2 -and
 $sourceAuthorityText = if ($metadata.schemaVersion -eq 2) {
     "- Citation: $($metadata.citation)`n" +
         "- DOI: $($metadata.doi)`n" +
-        "- Authority: publisher version of record`n"
+        "- Authority: $authorityLabel`n"
 } else {
     "- Authority: frozen source identified by this manifest`n"
 }
@@ -352,8 +366,8 @@ $sources = @"
 $sourceAuthorityText- Source: $sourceUrl
 - Description: $sourceDescription
 - SHA-256: **$sourceSha256**
-$comparisonSourceText
-The source PDF is not bundled. Reviewers must obtain it independently and
+$sourceAccessText$comparisonSourceText
+The authoritative source artifact is not bundled. Reviewers must obtain it independently and
 verify the hash before auditing statement fidelity. No source listed as a
 comparison copy may silently override the authoritative source.
 "@
@@ -551,7 +565,7 @@ $comparisonLines = if ($metadata.schemaVersion -eq 2 -and @($metadata.comparison
     ''
 }
 $authorityNotice = if ($metadata.schemaVersion -eq 2) {
-    "- Semantic authority: **publisher version of record only**`n- DOI: $($metadata.doi)`n- Work year / publication year: **$workYear / $paperYear**`n"
+    "- Semantic authority: **$authorityLabel only**`n- DOI: $($metadata.doi)`n- Work year / publication year: **$workYear / $paperYear**`n"
 } else {
     ''
 }
@@ -584,7 +598,8 @@ $authorityNotice$comparisonLines- Canonical Lean entry: **$($metadata.entryModul
 $coverageLine
 This source-only package contains the repository-local transitive import
 closure of the paper entry and audit modules. It contains no compiled Lean
-artifact, **.lake** directory, publisher PDF, Git history, or unrelated
+artifact, **.lake** directory, non-redistributable manuscript or publisher
+PDF, Git history, or unrelated
 **BongTest/M*.lean** milestone file.
 
 ## Fast verification

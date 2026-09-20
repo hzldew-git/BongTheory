@@ -226,4 +226,34 @@ theorem card_valuationUnitClass :
     card_principalUnitValuationClassSubgroup_two_mul_e]
   ring
 
+/-- The depth-two subgroup contains exactly the unit square classes of
+quadratic defect greater than one.  Its cardinality is the second term in
+O'Meara 63:5. -/
+theorem card_principalUnitValuationClassSubgroup_two :
+    Nat.card (principalUnitValuationClassSubgroup K 2) =
+      2 * Nat.card (normalizedResidueField K) ^
+        (ramificationIndex K - 1) := by
+  have hePos : 0 < ramificationIndex K := ramificationIndex_pos (K := K)
+  obtain ⟨r, hr⟩ := Nat.exists_eq_succ_of_ne_zero (Nat.ne_of_gt hePos)
+  have hfiltration :=
+    card_valuationUnitClass_eq_pow_mul_filtration K 1 hePos
+  rw [card_valuationUnitClass] at hfiltration
+  simp only [pow_one] at hfiltration
+  rw [hr] at hfiltration ⊢
+  simp only [Nat.succ_sub_one]
+  have hfactor :
+      Nat.card (normalizedResidueField K) *
+          (2 * Nat.card (normalizedResidueField K) ^ r) =
+        Nat.card (normalizedResidueField K) *
+          Nat.card (principalUnitValuationClassSubgroup K 2) := by
+    calc
+      Nat.card (normalizedResidueField K) *
+          (2 * Nat.card (normalizedResidueField K) ^ r) =
+          2 * Nat.card (normalizedResidueField K) ^ (r + 1) := by ring
+      _ = Nat.card (normalizedResidueField K) *
+          Nat.card (principalUnitValuationClassSubgroup K 2) := hfiltration
+  exact (Nat.eq_of_mul_eq_mul_left
+    (Nat.card_pos : 0 < Nat.card (normalizedResidueField K))
+    hfactor).symm
+
 end Bong.Dyadic

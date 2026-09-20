@@ -21,5 +21,6 @@ abstract: >-
   generators, classification, representation, universality, and integral
   spinor norm groups over dyadic local fields, together with complete formal
   coverage of the published He--Hu n-universality paper pending human semantic
-  sign-off, and a discrepancy-audited partial formalization of He's n-ADC
-  paper.
+  sign-off, an author-corrected-v5 formalization of He's classic n-universality
+  paper with its parity gap disclosed, and a discrepancy-audited partial
+  formalization of He's n-ADC paper.

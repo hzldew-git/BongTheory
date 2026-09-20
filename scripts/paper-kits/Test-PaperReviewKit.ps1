@@ -17,6 +17,34 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+function Invoke-NativeCommandToLog {
+    param(
+        [Parameter(Mandatory)]
+        [string] $Executable,
+
+        [Parameter(Mandatory)]
+        [string[]] $Arguments,
+
+        [Parameter(Mandatory)]
+        [string] $LogPath
+    )
+
+    # Git and Lake may emit ordinary progress (for example, dependency-clone
+    # notices) on stderr.  Under Windows PowerShell, ErrorActionPreference=Stop
+    # can turn those records into terminating errors before LASTEXITCODE is
+    # inspected.  Capture both streams while letting the native exit code be
+    # the sole success criterion.
+    $previousErrorActionPreference = $ErrorActionPreference
+    try {
+        $ErrorActionPreference = 'Continue'
+        & $Executable @Arguments *> $LogPath
+        return [int] $LASTEXITCODE
+    } finally {
+        $ErrorActionPreference = $previousErrorActionPreference
+    }
+}
+
 $Archive = [IO.Path]::GetFullPath($Archive)
 $ExtractionDirectory = [IO.Path]::GetFullPath($ExtractionDirectory)
 if (-not (Test-Path -LiteralPath $Archive -PathType Leaf)) {
@@ -209,18 +237,24 @@ $env:LEAN_NUM_THREADS = [string] $LeanThreads
 Push-Location $ExtractionDirectory
 try {
     $buildLogPath = Join-Path $LogDirectory 'lake-build.log'
-    & $lake build *> $buildLogPath
-    if ($LASTEXITCODE -ne 0) {
+    $buildExitCode = Invoke-NativeCommandToLog `
+        -Executable $lake `
+        -Arguments @('build') `
+        -LogPath $buildLogPath
+    if ($buildExitCode -ne 0) {
         Get-Content -LiteralPath $buildLogPath -Tail 200
-        throw "Review Kit Lake build failed with exit code $LASTEXITCODE."
+        throw "Review Kit Lake build failed with exit code $buildExitCode."
     }
     foreach ($auditModule in @($manifest.formalization.auditModules)) {
         $auditPath = ([string] $auditModule).Replace('.', '/') + '.lean'
         $logPath = Join-Path $LogDirectory (([string] $auditModule).Replace('.', '-') + '.log')
-        & $lake env lean $auditPath *> $logPath
-        if ($LASTEXITCODE -ne 0) {
+        $auditExitCode = Invoke-NativeCommandToLog `
+            -Executable $lake `
+            -Arguments @('env', 'lean', $auditPath) `
+            -LogPath $logPath
+        if ($auditExitCode -ne 0) {
             Get-Content -LiteralPath $logPath -Tail 200
-            throw "Review Kit audit failed for $auditModule with exit code $LASTEXITCODE."
+            throw "Review Kit audit failed for $auditModule with exit code $auditExitCode."
         }
         if ($auditModule -eq $manifest.formalization.enforcingAxiomGate -and
             -not (Select-String -LiteralPath $logPath -SimpleMatch 'AXIOM_GATE_PASS:' -Quiet)) {

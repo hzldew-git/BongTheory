@@ -44,8 +44,11 @@ make source authority machine-readable. Required paper-source fields are:
   papers from the packaged theorem index;
 - `workYear` and `publicationYear`;
 - the complete publisher `citation` and DOI URL in `doi`;
-- `authoritativeSource`, with `authority: true`, URL, description, uppercase
-  SHA-256, and redistribution status;
+- `authoritativeSource`, with `authority: true`, a URL or stable content
+  locator, description, uppercase SHA-256, and redistribution status. When an
+  author-approved corrected manuscript supersedes the publication for the
+  formalization, record its exact filename, hash, access status, and an
+  explicit `authorityLabel`; do not label the publisher copy authoritative;
 - `comparisonSources`, each with `authority: false` and its own SHA-256;
 - `formalizedScope` and `excludedScope`, so packaging cannot turn partial
   coverage into a completion claim.
@@ -62,9 +65,12 @@ commands for running them. These files corroborate calculations but do not
 expand Lean's axiom allowance or change semantic status. New BONG-related
 papers should use these fields whenever an independent computation is useful.
 
-The publisher version of record is the sole semantic authority. Preprints may
-be listed only as comparison sources. Review Kits never contain publisher
-PDFs; their hashes let reviewers verify an independently obtained copy.
+The publisher version of record is the default semantic authority. An exact
+author-approved corrected version may replace it only when the manifest and
+audit package freeze that version by hash and explain the change; the
+publisher version then becomes a comparison source. Review Kits never contain
+non-redistributable manuscripts or publisher PDFs; their hashes let reviewers
+verify an independently obtained copy.
 
 Each generated Review Kit also replaces the repository-wide `CITATION.cff`,
 `SOURCES.md`, `TRUST.md`, `THEOREM_INDEX.md`, `REVIEWING.md`, audit landing

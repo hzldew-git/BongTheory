@@ -1,0 +1,52 @@
+/-
+Copyright (c) 2026 BONG Theory contributors. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: BONG Theory contributors
+-/
+import Bong.Lattice.He2022ClassicSectionEight
+
+/-!
+# Focused audit for discriminant parity and dyadic ramification
+
+The discriminant--ramification equivalence is proved for actual prime ideals
+of a number field.  The abstract Section 8 law, its converse use, and
+positivity are then constructed from a typed place-to-prime-ideal bridge.
+-/
+
+open Bong.HeClassic2024NumberField
+open Bong.HeClassic2024GlobalData
+
+#check DiscriminantOdd
+#check IsDyadicPrime
+#check discriminantOdd_iff_forall_ramificationIdx_eq_one
+#check ramificationIdx_eq_one_of_discriminantOdd
+#check discriminantOdd_of_forall_ramificationIdx_eq_one
+#check exists_dyadicPrime_ramificationIdx_ne_one_of_not_discriminantOdd
+#check Bong.HeClassic2024NumberField.ramificationIdx_pos
+
+#check DiscriminantRamificationLaws
+#check DiscriminantRamificationLaws.exists_ramifiedDyadic_of_not_discriminantOdd
+#check NumberFieldDiscriminantBridge
+#check HeightOneSpectrumIdentification
+#check HeightOneSpectrumIdentification.numberFieldDiscriminantBridge
+#check NumberFieldDiscriminantBridge.discriminantRamificationLaws
+#check NumberFieldDiscriminantBridge.ramificationIndexAt_one_of_discriminantOdd
+#check NumberFieldDiscriminantBridge.ramificationIndexAt_pos
+#check SumOfSquaresLocalUniversalityLaws.ofNumberFieldDiscriminantBridge
+#check SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
+#check SectionEightLaws.he2022ClassicTheorem17_of_localAdjacentDefectsLarge
+#check SectionEightLaws.he2022ClassicTheorem17_even
+#check SectionEightLaws.he2022ClassicTheorem19
+
+#print axioms discriminantOdd_iff_forall_ramificationIdx_eq_one
+#print axioms exists_dyadicPrime_ramificationIdx_ne_one_of_not_discriminantOdd
+#print axioms HeightOneSpectrumIdentification.numberFieldDiscriminantBridge
+#print axioms NumberFieldDiscriminantBridge.discriminantRamificationLaws
+#print axioms NumberFieldDiscriminantBridge.ramificationIndexAt_one_of_discriminantOdd
+#print axioms NumberFieldDiscriminantBridge.ramificationIndexAt_pos
+#print axioms SumOfSquaresLocalUniversalityLaws.ofNumberFieldDiscriminantBridge
+#print axioms DiscriminantRamificationLaws.exists_ramifiedDyadic_of_not_discriminantOdd
+#print axioms SectionEightLaws.he2022ClassicTheorem15_discriminantOdd
+#print axioms SectionEightLaws.he2022ClassicTheorem17_of_localAdjacentDefectsLarge
+#print axioms SectionEightLaws.he2022ClassicTheorem17_even
+#print axioms SectionEightLaws.he2022ClassicTheorem19

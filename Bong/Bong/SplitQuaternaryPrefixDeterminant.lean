@@ -11,9 +11,9 @@ import Bong.Bong.Beli2009AmbientDeterminantProof
 /-!
 # Full BONG determinant of the split quaternary space
 
-This paper-independent bridge records the determinant fact used by He--Hu's
-exceptional binary case: the full product of any length-four BONG on
-`H ⊥ H` is a square.
+This paper-independent bridge records the determinant fact used by both
+He--Hu's exceptional binary case and He's classic-universality criterion:
+the full product of any length-four BONG on `H ⊥ H` is a square.
 -/
 
 namespace Bong
