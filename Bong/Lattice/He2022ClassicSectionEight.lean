@@ -607,9 +607,10 @@ variable
 variable (X : HeClassic2024ExtensionData Sbase Sextension)
 
 /-- The even-rank local scalar-extension obstruction sought by v6 Lemma 8.3.
-Its concrete implementation requires localization, transport of the mapped
-good BONG into the scalar-extension ambient, and the new carrier equality;
-these are represented by this explicit field, not claimed as proved here. -/
+For this global interface, localization, scalar-extension compatibility,
+and lower good-BONG existence remain to be instantiated. The local completed-
+field obstruction with a supplied lower good BONG is proved separately;
+this global field is not claimed as constructed for every lattice here. -/
 structure Lemma83Laws : Prop where
   local_ramified_obstruction (L : Sbase.GlobalLattice) (n : Nat) :
     2 ≤ n → Even n → Sbase.globalRank L = n + 3 →

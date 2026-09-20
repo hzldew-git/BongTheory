@@ -32,8 +32,10 @@ import Bong.Lattice.He2022ClassicNumberFieldBONGBridge
 import Bong.Lattice.He2022ClassicLemma83Carrier
 import Bong.Lattice.He2022ClassicCompletionLatticeScalarExtension
 import Bong.Lattice.He2022ClassicScalarExtensionBONGIsometry
+import Bong.Lattice.He2022ClassicScalarExtensionBasisPreservingIsometry
 import Bong.Lattice.He2022ClassicCompletionBONGIsometry
 import Bong.Lattice.He2022ClassicCompletionScalarExtensionGoodBONG
+import Bong.Lattice.He2022ClassicCompletionDefectGrowth
 
 /-!
 # He: classic n-universal quadratic forms over dyadic local fields
@@ -134,10 +136,20 @@ proved finite-completion order-scaling bridge supplies the upper monotonicity,
 so the diagonal realization is isometric to the literal scalar extension
 without those two extra premises. Transporting the realized good BONG across
 that integral isometry now gives a good BONG on the literal scalar-extension
-lattice with the mapped exact coefficients. This does not identify its
-vectors with the canonical pure tensors of the lower good-BONG vectors, or
-identify the separately realized upper lattice by equality in a common
-ambient space. The ramified local obstruction remains open.
+lattice with the mapped exact coefficients. At actual ramified finite
+completions, the order and quadratic-defect scaling laws now prove the even
+`n ≥ 2` Lemma 8.3 non-universality conclusion for this literal scalar
+extension, given a lower good BONG, without assuming a local obstruction
+law. Existence of such a lower BONG for every lattice in the unqualified
+source claim remains to be connected. The author has confirmed
+that the paper compares integral isometry classes, not literal equality of
+separately realized lattices in one ambient space.
+For arbitrary matching BONG basis lattices, a separate integral isometry is
+proved to send each pure tensor of a lower BONG vector to its corresponding
+upper vector. It is stronger than the class-level comparison required for
+the local conclusion, but it does not identify two ambient types literally.
+The concrete Section 8 global lattice/localization adapters and approximation
+instances remain open; the abstract global endpoint still depends on them.
 The finite-place sufficiency part of Theorem 1.9 is also derived from
 separate non-dyadic,
 dyadic unary, and dyadic higher-rank laws instead of being stored as an
