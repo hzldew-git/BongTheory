@@ -234,4 +234,4 @@ import Bong.QuadraticSpace.SpinorNormReflectionMultiplication
 import Bong.QuadraticSpace.WallForm
 import Bong.QuadraticSpace.WallReflectionReduction
 
-/-! Public aggregate for the reusable local quadratic-lattice and BONG foundation -/
+/-! Package root for the reusable local quadratic-lattice and BONG foundation -/

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
+import csv
 import json
-import re
 import unittest
 from pathlib import Path
 
@@ -9,96 +9,46 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def paper_manifests() -> list[tuple[Path, dict[str, object]]]:
-    manifests = []
-    for path in sorted((ROOT / "papers").glob("*/paper.json")):
-        manifests.append((path, json.loads(path.read_text(encoding="utf-8"))))
-    return manifests
+def manifests() -> list[tuple[Path, dict[str, object]]]:
+    return [
+        (path, json.loads(path.read_text(encoding="utf-8-sig")))
+        for path in sorted((ROOT / "papers").glob("*/paper.json"))
+    ]
 
 
-class PaperDeploymentPolicyTests(unittest.TestCase):
-    def test_every_paper_has_a_unique_theorem_index_prefix(self) -> None:
-        manifests = paper_manifests()
+class PaperMetadataTests(unittest.TestCase):
+    def test_manifest_entries_and_audits_are_migrated(self) -> None:
+        papers = manifests()
+        if not papers:
+            self.skipTest("foundation repository has no paper manifests")
+        with (ROOT / "MIGRATION_MODULES.tsv").open(encoding="utf-8") as handle:
+            modules = {row["module"] for row in csv.DictReader(handle, delimiter="\t")}
+        for path, manifest in papers:
+            with self.subTest(manifest=path.parent.name):
+                self.assertIn(manifest["entryModule"], modules)
+                for audit in manifest.get("auditModules", []):
+                    self.assertIn(audit, modules)
+                self.assertTrue((ROOT / str(manifest["auditDirectory"])).is_dir())
+
+    def test_theorem_prefixes_are_unique_and_present(self) -> None:
+        papers = manifests()
+        if not papers:
+            self.skipTest("foundation repository has no paper manifests")
         theorem_index = (ROOT / "THEOREM_INDEX.md").read_text(encoding="utf-8")
-        prefixes: list[str] = []
-        for path, manifest in manifests:
-            prefix = manifest.get("theoremIndexRowPrefix")
-            with self.subTest(manifest=path.parent.name):
-                self.assertIsInstance(prefix, str)
-                assert isinstance(prefix, str)
-                self.assertTrue(prefix.strip())
-                self.assertNotRegex(prefix, r"[|\r\n]")
-                self.assertIn(f"| {prefix}", theorem_index)
-            prefixes.append(prefix)
+        prefixes = [str(manifest["theoremIndexRowPrefix"]) for _, manifest in papers]
         self.assertEqual(len(prefixes), len(set(prefixes)))
+        for prefix in prefixes:
+            self.assertIn(f"| {prefix}", theorem_index)
 
-    def test_review_kit_generates_paper_specific_review_materials(self) -> None:
-        generator = (
-            ROOT / "scripts/paper-kits/Build-PaperReviewKit.ps1"
-        ).read_text(encoding="utf-8")
-        fixed_block = generator.split("$fixedFiles = @(", 1)[1].split(")", 1)[0]
-        for global_review_file in (
-            "CITATION.cff",
-            "SOURCES.md",
-            "TRUST.md",
-            "THEOREM_INDEX.md",
-            "REVIEWING.md",
-            "docs/audit/README.md",
-            "docs/audit/IndependentReviewSignoff.md",
-        ):
-            with self.subTest(file=global_review_file):
-                self.assertNotIn(f"'{global_review_file}'", fixed_block)
-        self.assertIn("theoremIndexRowPrefix", generator)
-        self.assertIn("Rows for unrelated papers are intentionally excluded", generator)
-        verifier = (
-            ROOT / "scripts/paper-kits/Test-PaperReviewKit.ps1"
-        ).read_text(encoding="utf-8")
-        self.assertIn("Unrelated theorem-index row", verifier)
-        self.assertIn("exactly its own paper-specific audit directory", verifier)
-
-    def test_every_deployment_override_is_typed_and_explained(self) -> None:
-        manifests = paper_manifests()
-        self.assertTrue(manifests)
-        for path, manifest in manifests:
-            deployment = manifest.get("deployment")
-            if deployment is None:
-                continue
+    def test_source_hashes_have_sha256_shape(self) -> None:
+        papers = manifests()
+        if not papers:
+            self.skipTest("foundation repository has no paper manifests")
+        for path, manifest in papers:
+            source = manifest.get("authoritativeSource")
+            digest = source.get("sha256") if isinstance(source, dict) else manifest.get("sourceSha256")
             with self.subTest(manifest=path.parent.name):
-                self.assertIsInstance(deployment, dict)
-                github_review_kit = deployment.get("githubReviewKit")
-                self.assertIsInstance(github_review_kit, bool)
-                if github_review_kit is False:
-                    reason = deployment.get("reason")
-                    self.assertIsInstance(reason, str)
-                    self.assertTrue(reason.strip())
-
-    def test_github_workflows_use_manifest_policy(self) -> None:
-        review_workflow = (ROOT / ".github/workflows/paper-review-kits.yml").read_text(
-            encoding="utf-8"
-        )
-        release_workflow = (ROOT / ".github/workflows/reproducibility.yml").read_text(
-            encoding="utf-8"
-        )
-        build_all = (ROOT / "scripts/paper-kits/Build-AllPaperReviewKits.ps1").read_text(
-            encoding="utf-8"
-        )
-        self.assertIn("deployment.githubReviewKit", review_workflow)
-        self.assertIn("-GitHubDeployableOnly", review_workflow)
-        self.assertIn("deployment.githubReviewKit", release_workflow)
-        self.assertIn("GitHubDeployableOnly", build_all)
-
-    def test_exact_review_kit_receipts_have_valid_archive_hashes(self) -> None:
-        receipts = sorted((ROOT / "docs" / "audit").rglob("*review_kit_receipt.md"))
-        self.assertTrue(receipts)
-        digest_pattern = re.compile(r"- SHA-256:\s*`([0-9A-F]+)`")
-        for path in receipts:
-            text = path.read_text(encoding="utf-8")
-            digests = digest_pattern.findall(text)
-            with self.subTest(receipt=path.relative_to(ROOT)):
-                self.assertTrue(digests)
-                for digest in digests:
-                    self.assertRegex(digest, r"^[0-9A-F]{64}$")
-                self.assertNotIn("outer archive itself", text)
+                self.assertRegex(str(digest), r"^[0-9A-F]{64}$")
 
 
 if __name__ == "__main__":

@@ -42,4 +42,4 @@ import BongTest.M79
 import BongTest.Q2
 import BongTest.ScalarExtensionAudit
 
-/-! Aggregate for the foundation verification modules -/
+/-! Package root for the foundation verification modules -/

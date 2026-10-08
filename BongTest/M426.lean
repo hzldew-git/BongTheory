@@ -1,4 +1,0 @@
-import Bong.Bong.Beli2019Lemma79RightTailAssembly
-
-#check Bong.BONG.GoodBONG.beli2019Lemma79_ii_caseEight_of_beta_bound
-#print axioms Bong.BONG.GoodBONG.beli2019Lemma79_ii_caseEight_of_beta_bound

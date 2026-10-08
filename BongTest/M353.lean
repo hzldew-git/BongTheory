@@ -1,5 +1,0 @@
-import Bong.Bong.Beli2019Proposition62EvenCandidates
-
-#check Bong.BONG.GoodBONG.representationWeightEven_direct_or_pair_or_primary
-
-#print axioms Bong.BONG.GoodBONG.representationWeightEven_direct_or_pair_or_primary

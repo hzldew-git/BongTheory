@@ -1,6 +1,0 @@
-import Bong.Bong.Beli2019Lemma29TargetReduction
-
-#check Bong.BONG.GoodBONG.representationSecondaryTargetAlpha
-#check Bong.BONG.GoodBONG.representationSecondaryTargetAlpha_le_of_previous_le_comparison
-
-#print axioms Bong.BONG.GoodBONG.representationSecondaryTargetAlpha_le_of_previous_le_comparison

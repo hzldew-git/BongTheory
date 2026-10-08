@@ -1,6 +1,0 @@
-import Bong.Bong.Beli2019Proposition62PrimaryDescent
-
-#check Bong.BONG.GoodBONG.primaryCrossDefect_eq_previousComparison_of_lt_adjacent
-#check Bong.BONG.GoodBONG.representationAlpha_previous_le_primaryCross
-
-#print axioms Bong.BONG.GoodBONG.representationAlpha_previous_le_primaryCross

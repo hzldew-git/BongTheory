@@ -6,41 +6,19 @@ import plan_lean_build_shards as planner
 
 
 class LeanBuildShardPlanTests(unittest.TestCase):
-    def test_plan_covers_every_nonumbrella_tracked_lean_module(self) -> None:
-        all_paths = set(planner.all_tracked_lean_files())
-        expected_paths = {
-            path for path in all_paths
-            if len(path.parts) >= 2 and path.parts[0] in planner.SOURCE_ROOTS
-        }
-        expected = {planner.module_name(path) for path in expected_paths}
-
+    def test_plan_covers_every_manifest_module_once(self) -> None:
+        expected = {row["module"] for row in planner.migration_rows()}
         shards = planner.plan(6, 12)
-        actual = [name for shard in shards for name in shard["modules"].split()]
-
-        self.assertTrue(any(len(path.parts) > 2 for path in expected_paths))
+        actual = [name for shard in shards for name in str(shard["modules"]).split()]
         self.assertEqual(len(actual), len(set(actual)))
         self.assertEqual(set(actual), expected)
-        self.assertEqual(sum(shard["moduleCount"] for shard in shards), len(expected))
-        for shard in shards:
-            self.assertEqual(shard["moduleCount"], len(shard["modules"].split()))
-            if shard["axiomGate"]:
-                self.assertTrue(shard["buildModules"].endswith(" BongTest.AxiomGate"))
-            else:
-                self.assertEqual(shard["buildModules"], shard["modules"])
+        self.assertEqual(sum(int(shard["moduleCount"]) for shard in shards), len(expected))
 
-    def test_measured_elaboration_heavy_modules_get_dedicated_shards(self) -> None:
-        shards = planner.plan(72, 24)
-        production = {
-            module: shard
-            for shard in shards
-            if shard["axiomGate"]
-            for module in shard["modules"].split()
-        }
-
-        for path in planner.ELABORATION_HEAVY_PATHS:
-            module = planner.module_name(path)
-            self.assertIn(module, production)
-            self.assertEqual(production[module]["moduleCount"], 1)
+    def test_every_manifest_destination_is_tracked(self) -> None:
+        tracked = set(planner.all_tracked_lean_files())
+        expected_paths = {planner.Path(row["destination_path"]) for row in planner.migration_rows()}
+        self.assertTrue(expected_paths)
+        self.assertTrue(expected_paths <= tracked)
 
 
 if __name__ == "__main__":

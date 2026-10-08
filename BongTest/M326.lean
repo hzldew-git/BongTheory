@@ -1,6 +1,0 @@
-import Bong.Bong.Beli2019Lemma29SourceReduction
-
-#check Bong.BONG.GoodBONG.representationSecondarySourceAlpha
-#check Bong.BONG.GoodBONG.representationSecondarySourceAlpha_le_of_current_le_comparison
-
-#print axioms Bong.BONG.GoodBONG.representationSecondarySourceAlpha_le_of_current_le_comparison
