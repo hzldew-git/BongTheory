@@ -12,4 +12,6 @@ The required order is `BongTheory`, then `BeliPapers`, then `HePapers`. For `Bon
 6. run the manuscript/privacy scan before push; do not publish paper TeX, PDFs, local snapshots, build products, or opaque archives;
 7. tag only the exact commit validated from the fresh clone, and attach any Review Kit with its SHA-256 and exact source commit.
 
-The current local split uses sibling paths so all three candidates can be validated before any remote exists. A repository is independently downloadable only after its sibling path has been replaced with the pinned Git dependency and that configuration has passed a fresh-clone build.
+Each downstream repository must pin the exact reviewed Git commit of its
+upstream dependency and pass a fresh-clone build before tagging. `BongTheory`
+itself has no dependency on either paper repository.
