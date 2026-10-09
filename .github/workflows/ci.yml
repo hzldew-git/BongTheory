@@ -1,0 +1,140 @@
+name: Lean CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.shards.outputs.matrix }}
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Check repository policy and CI tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -B -m unittest discover -s scripts/ci -p 'test_*.py'
+          python3 -B scripts/ci/check_lean_proof_commands.py
+          python3 -B scripts/ci/check_public_boundary.py
+
+      - name: Plan complete Lean source coverage
+        id: shards
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "${GITHUB_REPOSITORY##*/}" in
+            BeliPapers) production_shards=72; test_shards=24 ;;
+            *) production_shards=24; test_shards=12 ;;
+          esac
+          python3 -B scripts/ci/plan_lean_build_shards.py \
+            --production-shards "$production_shards" \
+            --test-shards "$test_shards" \
+            --github-output "$GITHUB_OUTPUT"
+
+  build_shards:
+    needs: plan
+    name: Build and audit ${{ matrix.shard.name }} (${{ matrix.shard.moduleCount }} modules)
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: '4'
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Build every module in this shard
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          auto-config: false
+          build: true
+          build-args: ${{ matrix.shard.buildModules }} @BongTheory/+BongTest.AxiomGate
+          use-mathlib-cache: true
+
+      - name: Enforce transitive axiom bounds
+        if: ${{ matrix.shard.axiomGate }}
+        shell: pwsh
+        env:
+          SHARD_MODULES: ${{ matrix.shard.modules }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $arguments = @('scripts/ci/run_axiom_gate.py')
+          foreach ($module in ($env:SHARD_MODULES -split ' ')) {
+            if ($module) {
+              $arguments += '--entry'
+              $arguments += $module
+            }
+          }
+          python3 -B @arguments
+          if ($LASTEXITCODE -ne 0) {
+            exit $LASTEXITCODE
+          }
+
+      - name: Verify clean generated state
+        shell: bash
+        run: test -z "$(git status --porcelain)"
+
+  axiom-gate-fixtures:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      LEAN_NUM_THREADS: '1'
+
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+
+      - name: Build the shared enforcing gate
+        uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9 # v1.5.0
+        with:
+          auto-config: false
+          build: true
+          build-args: '@BongTheory/+BongTest.AxiomGate'
+          use-mathlib-cache: true
+
+      - name: Run positive and negative gate fixtures
+        shell: bash
+        run: python3 -B scripts/ci/check_axiom_gate_fixtures.py
+
+  build-and-audit:
+    name: build-and-audit
+    needs:
+      - plan
+      - build_shards
+      - axiom-gate-fixtures
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Require every source shard and axiom gate
+        shell: bash
+        env:
+          PLAN_RESULT: ${{ needs.plan.result }}
+          SHARDS_RESULT: ${{ needs.build_shards.result }}
+          FIXTURES_RESULT: ${{ needs.axiom-gate-fixtures.result }}
+        run: |
+          set -euo pipefail
+          test "$PLAN_RESULT" = success
+          test "$SHARDS_RESULT" = success
+          test "$FIXTURES_RESULT" = success

@@ -72,15 +72,21 @@ def partition(modules: list[Module], count: int, prefix: str) -> list[dict[str, 
         target = min(range(count), key=lambda index: (loads[index], index))
         bins[target].append(module)
         loads[target] += module.weight
-    return [
-        {
-            "name": f"{prefix}-{index:02d}",
-            "modules": " ".join(sorted(item.name for item in items)),
-            "moduleCount": len(items),
-        }
-        for index, items in enumerate(bins, start=1)
-        if items
-    ]
+    shards: list[dict[str, object]] = []
+    for index, items in enumerate(bins, start=1):
+        if not items:
+            continue
+        names = sorted(item.name for item in items)
+        shards.append(
+            {
+                "name": f"{prefix}-{index:02d}",
+                "modules": " ".join(names),
+                "buildModules": " ".join(f"+{name}" for name in names),
+                "moduleCount": len(names),
+                "axiomGate": prefix == "production",
+            }
+        )
+    return shards
 
 
 def plan(production_shards: int, test_shards: int) -> list[dict[str, object]]:
